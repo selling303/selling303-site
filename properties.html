@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog | Selling 303 — South Denver Real Estate Insights</title>
-  <meta name="description" content="Market updates, neighborhood guides, buyer and seller advice for South Denver Metro. Data-driven insights from Jacob Stark at 8z Real Estate.">
+  <title>Properties | Selling 303 &mdash; Jacob Stark Listings</title>
+  <meta name="description" content="Browse Jacob Stark's current and recent listings across South Denver Metro. View homes for sale, in contract, and sold properties in Littleton, Highlands Ranch, Centennial, and beyond.">
+  <meta property="og:title" content="Properties | Selling 303">
+  <meta property="og:description" content="Jacob Stark's current and recent listings in South Denver Metro.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://selling303.com/properties.html">
+  <meta property="og:image" content="https://selling303.com/images/og-properties.jpg">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WLGW57VN8C"></script>
@@ -25,6 +30,13 @@
   window.widgetTracker("send", "pageview");
   </script>
   <!-- end Widget Tracker Code -->
+  <script src="https://em.realscout.com/widgets/realscout-web-components.umd.js" type="module"></script>
+  <style>
+    realscout-your-listings {
+      --rs-listing-divider-color: #c8965a;
+      width: 100%;
+    }
+  </style>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -52,102 +64,20 @@
     <div class="nav-overlay" id="navOverlay"></div>
   </header>
 
-
-  <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="container">
-      <span class="section-label">Blog</span>
-      <h1>Latest Insights</h1>
-      <p>Market data, neighborhood deep-dives, and practical advice for South Denver buyers and sellers.</p>
+      <span class="section-label">Listings</span>
+      <h1>My Properties</h1>
+      <p>Current, in-contract, and recent sales across the South Denver Metro</p>
     </div>
   </section>
 
-  <!-- BLOG FILTERS + GRID -->
   <section class="section section--white">
     <div class="container">
-      <div class="blog-filters">
-        <button class="blog-filter blog-filter--active">All</button>
-        <button class="blog-filter">Buying</button>
-        <button class="blog-filter">Selling</button>
-        <button class="blog-filter">Market Updates</button>
-        <button class="blog-filter">Neighborhoods</button>
-      </div>
-
-      <div class="card-grid">
-        <a href="blog-post-template.html" class="card">
-          <div class="card__image" style="background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop&q=80');" role="img" aria-label="South Denver Metro housing market data and trends"></div>
-          <div class="card__body">
-            <span class="card__tag">Market Updates</span>
-            <h3 class="card__title">South Denver Metro Market Update — Spring 2026</h3>
-            <p class="card__text">Inventory is climbing but not evenly. Here's what the numbers say about pricing, absorption, and buyer behavior right now.</p>
-            <span class="card__meta">March 20, 2026 &middot; 5 min read</span>
-          </div>
-        </a>
-
-        <a href="blog-post-template.html" class="card">
-          <div class="card__image" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=500&fit=crop&q=80');" role="img" aria-label="Home exterior prepared for listing in South Denver"></div>
-          <div class="card__body">
-            <span class="card__tag">Selling</span>
-            <h3 class="card__title">The 5 Repairs That Actually Move the Needle Before Listing</h3>
-            <p class="card__text">Not every fix adds value. These are the upgrades that consistently reduce DOM and increase net proceeds in our market.</p>
-            <span class="card__meta">March 12, 2026 &middot; 4 min read</span>
-          </div>
-        </a>
-
-        <a href="blog-post-template.html" class="card">
-          <div class="card__image" style="background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=500&fit=crop&q=80');" role="img" aria-label="Residential neighborhood with multiple offer activity"></div>
-          <div class="card__body">
-            <span class="card__tag">Buying</span>
-            <h3 class="card__title">How to Win a Multiple-Offer Situation Without Waiving Inspection</h3>
-            <p class="card__text">Competitive offers don't require reckless concessions. Here's the approach I use with clients to stay strong and stay protected.</p>
-            <span class="card__meta">March 4, 2026 &middot; 6 min read</span>
-          </div>
-        </a>
-
-        <a href="blog-post-template.html" class="card">
-          <div class="card__image" style="background-image: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=500&fit=crop&q=80');" role="img" aria-label="Suburban homes in Littleton and Highlands Ranch comparison"></div>
-          <div class="card__body">
-            <span class="card__tag">Neighborhoods</span>
-            <h3 class="card__title">Littleton vs. Highlands Ranch: Which South Denver Suburb Fits Your Family?</h3>
-            <p class="card__text">Two popular choices, very different personalities. A side-by-side look at commute times, price trends, lifestyle, and resale data.</p>
-            <span class="card__meta">February 25, 2026 &middot; 7 min read</span>
-          </div>
-        </a>
-
-        <a href="blog-post-template.html" class="card">
-          <div class="card__image" style="background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=500&fit=crop&q=80');" role="img" aria-label="South Denver home with for-sale sign and seasonal timing"></div>
-          <div class="card__body">
-            <span class="card__tag">Selling</span>
-            <h3 class="card__title">When Is the Right Time to Sell in South Denver? The Data Behind Timing</h3>
-            <p class="card__text">Conventional wisdom says spring. But the numbers tell a more nuanced story depending on your zip code and price point.</p>
-            <span class="card__meta">February 14, 2026 &middot; 5 min read</span>
-          </div>
-        </a>
-
-        <a href="blog-post-template.html" class="card">
-          <div class="card__image" style="background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=500&fit=crop&q=80');" role="img" aria-label="Modern home interior showcasing affordability analysis"></div>
-          <div class="card__body">
-            <span class="card__tag">Buying</span>
-            <h3 class="card__title">How Much Home Can You Actually Afford? A Realistic Framework</h3>
-            <p class="card__text">Pre-approval tells you what the bank will lend. This framework tells you what you should actually spend — and why those numbers differ.</p>
-            <span class="card__meta">February 5, 2026 &middot; 6 min read</span>
-          </div>
-        </a>
-      </div>
+      <realscout-your-listings agent-encoded-id="QWdlbnQtMjg5MjYw" sort-order="STATUS_AND_SIGNIFICANT_CHANGE" listing-status="For Sale,In Contract,Sold" property-types="SFR,MF,TC,LAL,MOBILE,OTHER" include-co-listings include-seller-listings></realscout-your-listings>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta-banner">
-    <div class="container">
-      <h2>Have a Question?</h2>
-      <p>If you're thinking about buying or selling in South Denver, I'm happy to talk through your situation — no strings attached.</p>
-      <a href="contact.html" class="btn btn--primary btn--lg">Schedule a Call</a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  
   <footer class="footer">
     <div class="container">
       <div class="footer__grid">

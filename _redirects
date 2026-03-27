@@ -1,0 +1,14 @@
+# Netlify redirects for selling303.com
+# Clean URLs
+/index       /           301
+/home        /           301
+
+# Common patterns
+/neighborhoods/*  /neighborhoods.html  200
+/search      /neighborhoods.html  301
+/listings    /properties.html     301
+/schedule    https://calendly.com/jacob-realtor  302
+/call        https://calendly.com/jacob-realtor  302
+
+# SPA-style fallback (optional, for future use)
+# /*          /index.html   200
