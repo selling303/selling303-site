@@ -410,7 +410,6 @@ p:last-child {
     padding: var(--space-sm) 0;
     font-size: 1rem;
     width: 100%;
-    border-bottom: 1px solid var(--color-border);
   }
 
   .header__nav-link:hover {
