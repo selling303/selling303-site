@@ -391,6 +391,7 @@ p:last-child {
     gap: 0;
     transition: right var(--transition);
     box-shadow: var(--shadow-lg);
+    z-index: 1000;
   }
 
   .header__nav.active {
