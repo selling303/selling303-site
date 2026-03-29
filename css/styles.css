@@ -1735,3 +1735,6 @@ p:last-child {
 .footer__brokerage-logo img {
   height: auto;
 }
+
+/* --- Widget Visibility (hide WidgetBe visible element, keep tracking) --- */
+[class*="widget-be"], [id*="widget-be"], .wb-widget { display: none !important; }

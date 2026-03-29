@@ -31,6 +31,364 @@
   </script>
   <!-- end Widget Tracker Code -->
   <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    /* ── Match Me Quiz ── */
+    .quiz-section {
+      background: var(--color-primary);
+      padding: var(--space-3xl) 0;
+    }
+    .quiz-section .section-label {
+      color: var(--color-accent);
+    }
+    .quiz-section h2 {
+      color: #fff;
+      font-family: var(--font-heading);
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      margin-bottom: var(--space-sm);
+    }
+    .quiz-section .quiz-intro {
+      color: rgba(255,255,255,0.65);
+      margin-bottom: var(--space-xl);
+      max-width: 560px;
+    }
+
+    .quiz-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+      padding: var(--space-xl) var(--space-xl);
+      max-width: 680px;
+    }
+
+    .quiz-step { display: none; }
+    .quiz-step.active { display: block; }
+
+    .quiz-progress {
+      display: flex;
+      gap: 8px;
+      margin-bottom: var(--space-lg);
+    }
+    .quiz-progress__dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.2);
+      transition: background 0.2s;
+    }
+    .quiz-progress__dot.filled { background: var(--color-accent); }
+
+    .quiz-question {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: var(--space-md);
+    }
+
+    .quiz-options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .quiz-option {
+      background: rgba(255,255,255,0.05);
+      border: 1.5px solid rgba(255,255,255,0.15);
+      border-radius: 10px;
+      padding: 12px 16px;
+      color: rgba(255,255,255,0.85);
+      font-size: 0.92rem;
+      cursor: pointer;
+      text-align: left;
+      transition: border-color 0.15s, background 0.15s;
+      width: 100%;
+    }
+    .quiz-option:hover {
+      border-color: var(--color-accent);
+      background: rgba(200,150,90,0.1);
+    }
+    .quiz-option.selected {
+      border-color: var(--color-accent);
+      background: rgba(200,150,90,0.15);
+      color: #fff;
+    }
+
+    .quiz-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: var(--space-lg);
+      gap: var(--space-sm);
+    }
+    .quiz-btn-back {
+      background: transparent;
+      border: 1.5px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.6);
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .quiz-btn-back:hover {
+      border-color: rgba(255,255,255,0.5);
+      color: #fff;
+    }
+    .quiz-btn-next {
+      background: var(--color-accent);
+      border: none;
+      color: #fff;
+      border-radius: 8px;
+      padding: 10px 24px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+    .quiz-btn-next:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+
+    /* Results */
+    .quiz-results { display: none; }
+    .quiz-results.active { display: block; }
+    .quiz-results__heading {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: var(--space-md);
+    }
+    .quiz-results__picks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: var(--space-lg);
+    }
+    .quiz-result-chip {
+      background: var(--color-accent);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.85rem;
+      border-radius: 24px;
+      padding: 8px 18px;
+    }
+    .quiz-results__note {
+      color: rgba(255,255,255,0.55);
+      font-size: 0.85rem;
+      margin-top: var(--space-sm);
+    }
+    .quiz-restart-btn {
+      background: transparent;
+      border: 1.5px solid rgba(255,255,255,0.25);
+      color: rgba(255,255,255,0.6);
+      border-radius: 8px;
+      padding: 8px 18px;
+      font-size: 0.82rem;
+      cursor: pointer;
+      margin-top: var(--space-md);
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .quiz-restart-btn:hover {
+      border-color: rgba(255,255,255,0.5);
+      color: #fff;
+    }
+
+    /* ── Neighborhood Cards ── */
+    .neighborhoods-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: var(--space-lg);
+    }
+
+    .nbhd-card {
+      background: #fff;
+      border: 1px solid var(--color-border);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .nbhd-card:hover {
+      box-shadow: 0 8px 32px rgba(0,42,58,0.1);
+      transform: translateY(-2px);
+    }
+    .nbhd-card.highlighted {
+      border-color: var(--color-accent);
+      box-shadow: 0 0 0 2px rgba(200,150,90,0.3), 0 8px 32px rgba(0,42,58,0.1);
+    }
+    .nbhd-card__match-badge {
+      display: none;
+      background: var(--color-accent);
+      color: #fff;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 5px 14px;
+      text-align: center;
+    }
+    .nbhd-card.highlighted .nbhd-card__match-badge {
+      display: block;
+    }
+
+    .nbhd-card__image {
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .nbhd-card__body {
+      padding: var(--space-lg);
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      gap: var(--space-sm);
+    }
+
+    .nbhd-card__county {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-accent);
+    }
+
+    .nbhd-card__name {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      color: var(--color-primary);
+      line-height: 1.2;
+    }
+
+    .nbhd-card__personality {
+      font-size: 0.92rem;
+      color: var(--color-text);
+      font-style: italic;
+      line-height: 1.5;
+      border-left: 3px solid var(--color-accent);
+      padding-left: var(--space-sm);
+      margin: var(--space-xs) 0;
+    }
+
+    .nbhd-card__stats {
+      display: flex;
+      gap: var(--space-md);
+      padding: var(--space-sm) 0;
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .nbhd-card__stat {
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+    }
+    .nbhd-card__stat strong {
+      color: var(--color-primary);
+      font-weight: 700;
+    }
+
+    .nbhd-card__actions {
+      display: flex;
+      gap: 10px;
+      margin-top: auto;
+      padding-top: var(--space-sm);
+    }
+    .nbhd-card__btn-explore {
+      flex: 1;
+      background: var(--color-primary);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .nbhd-card__btn-explore:hover { opacity: 0.85; }
+    .nbhd-card__btn-search {
+      flex: 1;
+      background: transparent;
+      color: var(--color-primary);
+      border: 1.5px solid var(--color-primary);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nbhd-card__btn-search:hover {
+      background: var(--color-primary);
+      color: #fff;
+    }
+
+    /* ── Matched section header ── */
+    .match-header {
+      display: none;
+      margin-bottom: var(--space-md);
+      padding: var(--space-md) var(--space-lg);
+      background: rgba(200,150,90,0.08);
+      border: 1px solid rgba(200,150,90,0.25);
+      border-radius: 10px;
+    }
+    .match-header.visible { display: block; }
+    .match-header p {
+      font-size: 0.9rem;
+      color: var(--color-text);
+      margin: 0;
+    }
+    .match-header strong { color: var(--color-accent); }
+
+    /* ── Service area map ── */
+    .service-area {
+      background: var(--color-primary);
+      padding: var(--space-3xl) 0;
+    }
+    .service-area .section-label {
+      color: var(--color-accent);
+    }
+    .service-area h2 {
+      color: #fff;
+      font-family: var(--font-heading);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      margin-bottom: var(--space-sm);
+    }
+    .service-area__intro {
+      color: rgba(255,255,255,0.6);
+      max-width: 580px;
+      margin-bottom: var(--space-2xl);
+    }
+    .service-area__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: var(--space-sm);
+    }
+    .service-area__city {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: var(--space-md) var(--space-lg);
+    }
+    .service-area__city-name {
+      font-weight: 700;
+      color: #fff;
+      font-size: 0.95rem;
+      margin-bottom: 4px;
+    }
+    .service-area__city-context {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.4;
+    }
+    .service-area__map-note {
+      margin-top: var(--space-xl);
+      color: rgba(255,255,255,0.3);
+      font-size: 0.8rem;
+      font-style: italic;
+    }
+  </style>
 </head>
 <body>
 
@@ -69,6 +427,7 @@
             <ul class="dropdown-menu">
               <li><a href="about.html" class="dropdown-item">About Jacob</a></li>
               <li><a href="contact.html" class="dropdown-item">Contact</a></li>
+              <li><a href="success-stories/time-for-more-space.html" class="dropdown-item">Success Stories</a></li>
             </ul>
           </li>
         </ul>
@@ -78,146 +437,348 @@
     <div class="nav-overlay" id="navOverlay"></div>
   </header>
 
+  <!-- ========== PAGE HERO ========== -->
   <section class="page-hero">
     <div class="container">
       <span class="section-label">South Denver Metro</span>
-      <h1>Explore Neighborhoods</h1>
-      <p>Market data, lifestyle details, and active listings for the communities where I help families buy and sell.</p>
+      <h1>Find Your Neighborhood</h1>
+      <p>Answer three quick questions and we'll match you to the South Denver communities that fit your life &mdash; or browse all nine below.</p>
     </div>
   </section>
 
-  <section class="section section--white">
+  <!-- ========== LAYER 1: MATCH ME QUIZ ========== -->
+  <section class="quiz-section" id="quiz">
     <div class="container">
-      <div class="card-grid">
-        <a href="neighborhood-littleton.html" class="card">
-          <div class="card__image" style="background-image: url('images/neighborhood-littleton.jpg');" role="img" aria-label="Suburban home in Littleton, Colorado"></div>
-          <div class="card__body">
-            <span class="card__tag">Arapahoe County</span>
-            <h3 class="card__title">Littleton</h3>
-            <p class="card__text">Historic downtown charm meets suburban convenience. Walkable Main Street, light rail access, and a strong sense of community.</p>
-            <div class="card__stats">
-              <div class="card__stat"><strong>$585K</strong> Median</div>
-              <div class="card__stat"><strong>18</strong> Avg DOM</div>
-            </div>
-            <span class="card__link" style="margin-top: var(--space-sm); display: inline-flex;">Explore Littleton</span>
+      <span class="section-label">Match Me</span>
+      <h2>Which South Denver Neighborhood Is Right for You?</h2>
+      <p class="quiz-intro">Three questions. Real recommendations based on what actually matters to buyers in this market.</p>
+
+      <div class="quiz-card">
+        <!-- Step 1 -->
+        <div class="quiz-step active" id="step-1">
+          <div class="quiz-progress">
+            <div class="quiz-progress__dot filled" id="dot-1"></div>
+            <div class="quiz-progress__dot" id="dot-2"></div>
+            <div class="quiz-progress__dot" id="dot-3"></div>
           </div>
-        </a>
-        <a href="neighborhood-highlands-ranch.html" class="card">
-          <div class="card__image" style="background-image: url('images/neighborhood-highlands-ranch.jpg');" role="img" aria-label="Modern home in Highlands Ranch, Colorado"></div>
-          <div class="card__body">
-            <span class="card__tag">Douglas County</span>
-            <h3 class="card__title">Highlands Ranch</h3>
-            <p class="card__text">Master-planned with 70+ miles of trails, four rec centers, and strong resale values across a wide range of price points.</p>
-            <div class="card__stats">
-              <div class="card__stat"><strong>$660K</strong> Median</div>
-              <div class="card__stat"><strong>14</strong> Avg DOM</div>
-            </div>
-            <span class="card__link" style="margin-top: var(--space-sm); display: inline-flex;">Explore Highlands Ranch</span>
+          <p class="quiz-question">What matters most to you in a location?</p>
+          <div class="quiz-options" id="q1-options">
+            <button class="quiz-option" data-q="q1" data-val="commute-dtc">Short commute to the DTC</button>
+            <button class="quiz-option" data-q="q1" data-val="mountain-access">Mountain access &amp; outdoor lifestyle</button>
+            <button class="quiz-option" data-q="q1" data-val="walkable-downtown">Walkable downtown &amp; local shops</button>
+            <button class="quiz-option" data-q="q1" data-val="space-privacy">Space, privacy, and room to spread out</button>
+            <button class="quiz-option" data-q="q1" data-val="newer-construction">Newer construction and modern amenities</button>
           </div>
-        </a>
-        <a href="neighborhood-centennial.html" class="card">
-          <div class="card__image" style="background-image: url('images/neighborhood-centennial.jpg');" role="img" aria-label="Residential home in Centennial, Colorado"></div>
-          <div class="card__body">
-            <span class="card__tag">Arapahoe County</span>
-            <h3 class="card__title">Centennial</h3>
-            <p class="card__text">Central location with easy I-25 and E-470 access. Larger lots, established neighborhoods, and consistent appreciation.</p>
-            <div class="card__stats">
-              <div class="card__stat"><strong>$620K</strong> Median</div>
-              <div class="card__stat"><strong>16</strong> Avg DOM</div>
-            </div>
-            <span class="card__link" style="margin-top: var(--space-sm); display: inline-flex;">Explore Centennial</span>
+          <div class="quiz-nav">
+            <span></span>
+            <button class="quiz-btn-next" id="next-1" disabled>Next &rarr;</button>
           </div>
-        </a>
-        <a href="neighborhood-englewood.html" class="card">
-          <div class="card__image" style="background-image: url('images/neighborhood-englewood.jpg');" role="img" aria-label="Residential neighborhood in Englewood, Colorado"></div>
-          <div class="card__body">
-            <span class="card__tag">Arapahoe County</span>
-            <h3 class="card__title">Englewood</h3>
-            <p class="card__text">Close-in convenience with a lower entry point. Light rail, walkable pockets, and strong value for first-time buyers and investors.</p>
-            <div class="card__stats">
-              <div class="card__stat"><strong>$475K</strong> Median</div>
-              <div class="card__stat"><strong>20</strong> Avg DOM</div>
-            </div>
-            <span class="card__link" style="margin-top: var(--space-sm); display: inline-flex;">Explore Englewood</span>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="quiz-step" id="step-2">
+          <div class="quiz-progress">
+            <div class="quiz-progress__dot filled"></div>
+            <div class="quiz-progress__dot filled" id="dot-2b"></div>
+            <div class="quiz-progress__dot" id="dot-3b"></div>
           </div>
-        </a>
-        <a href="neighborhood-parker.html" class="card">
-          <div class="card__image" style="background-image: url('images/neighborhood-parker.jpg');" role="img" aria-label="Suburban home in Parker, Colorado"></div>
-          <div class="card__body">
-            <span class="card__tag">Douglas County</span>
-            <h3 class="card__title">Parker</h3>
-            <p class="card__text">Small-town feel on Denver's southeast edge. Newer construction, active downtown, and room to spread out at competitive prices.</p>
-            <div class="card__stats">
-              <div class="card__stat"><strong>$615K</strong> Median</div>
-              <div class="card__stat"><strong>15</strong> Avg DOM</div>
-            </div>
-            <span class="card__link" style="margin-top: var(--space-sm); display: inline-flex;">Explore Parker</span>
+          <p class="quiz-question">What&rsquo;s your budget for a single-family home?</p>
+          <div class="quiz-options" id="q2-options">
+            <button class="quiz-option" data-q="q2" data-val="under-650k">Under $650K</button>
+            <button class="quiz-option" data-q="q2" data-val="650k-750k">$650K &ndash; $750K</button>
+            <button class="quiz-option" data-q="q2" data-val="750k-950k">$750K &ndash; $950K</button>
+            <button class="quiz-option" data-q="q2" data-val="950k-plus">$950K+</button>
           </div>
-        </a>
-        <a href="neighborhood-lakewood.html" class="card">
-          <div class="card__image" style="background-image: url('images/neighborhood-lakewood.jpg');" role="img" aria-label="Mountain foothills view near Lakewood, Colorado"></div>
-          <div class="card__body">
-            <span class="card__tag">Jefferson County</span>
-            <h3 class="card__title">Lakewood</h3>
-            <p class="card__text">West-side access to the foothills and Red Rocks. Diverse housing stock from mid-century ranches to newer townhome developments.</p>
-            <div class="card__stats">
-              <div class="card__stat"><strong>$545K</strong> Median</div>
-              <div class="card__stat"><strong>19</strong> Avg DOM</div>
-            </div>
-            <span class="card__link" style="margin-top: var(--space-sm); display: inline-flex;">Explore Lakewood</span>
+          <div class="quiz-nav">
+            <button class="quiz-btn-back" id="back-2">&larr; Back</button>
+            <button class="quiz-btn-next" id="next-2" disabled>Next &rarr;</button>
           </div>
-        </a>
-        <a href="neighborhood-lone-tree.html" class="card">
-          <div class="card__image" style="background-image: url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&h=500&fit=crop&q=80');" role="img" aria-label="Modern home in Lone Tree, Colorado"></div>
-          <div class="card__body">
-            <span class="card__tag">Douglas County</span>
-            <h3 class="card__title">Lone Tree</h3>
-            <p class="card__text">Park Meadows proximity, RidgeGate development, and Lincoln Station light rail. A mix of luxury and mid-range in Douglas County.</p>
-            <div class="card__stats">
-              <div class="card__stat"><strong>$725K</strong> Median</div>
-              <div class="card__stat"><strong>17</strong> Avg DOM</div>
-            </div>
-            <span class="card__link" style="margin-top: var(--space-sm); display: inline-flex;">Explore Lone Tree</span>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="quiz-step" id="step-3">
+          <div class="quiz-progress">
+            <div class="quiz-progress__dot filled"></div>
+            <div class="quiz-progress__dot filled"></div>
+            <div class="quiz-progress__dot filled"></div>
           </div>
-        </a>
-        <a href="neighborhood-castle-pines.html" class="card">
-          <div class="card__image" style="background-image: url('https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&h=500&fit=crop&q=80');" role="img" aria-label="Large home among pine trees in Castle Pines, Colorado"></div>
-          <div class="card__body">
-            <span class="card__tag">Douglas County</span>
-            <h3 class="card__title">Castle Pines</h3>
-            <p class="card__text">Golf course living, mountain views, and a semi-rural feel &mdash; all within 25 minutes of the Denver Tech Center.</p>
-            <div class="card__stats">
-              <div class="card__stat"><strong>$785K</strong> Median</div>
-              <div class="card__stat"><strong>22</strong> Avg DOM</div>
-            </div>
-            <span class="card__link" style="margin-top: var(--space-sm); display: inline-flex;">Explore Castle Pines</span>
+          <p class="quiz-question">What&rsquo;s your vibe?</p>
+          <div class="quiz-options" id="q3-options">
+            <button class="quiz-option" data-q="q3" data-val="established-character">Established neighborhoods with real character</button>
+            <button class="quiz-option" data-q="q3" data-val="master-planned">Master-planned with trails, rec centers, and HOA perks</button>
+            <button class="quiz-option" data-q="q3" data-val="small-town">Small-town feel without the long drive to Denver</button>
+            <button class="quiz-option" data-q="q3" data-val="luxury-exclusive">Luxury, exclusivity, and prestige address</button>
           </div>
-        </a>
-        <a href="neighborhood-greenwood-village.html" class="card">
-          <div class="card__image" style="background-image: url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=500&fit=crop&q=80');" role="img" aria-label="Luxury home in Greenwood Village, Colorado"></div>
-          <div class="card__body">
-            <span class="card__tag">Arapahoe County</span>
-            <h3 class="card__title">Greenwood Village</h3>
-            <p class="card__text">Established luxury neighborhoods, large lots, and DTC proximity. Some of the highest property values in South Denver.</p>
-            <div class="card__stats">
-              <div class="card__stat"><strong>$1.15M</strong> Median</div>
-              <div class="card__stat"><strong>24</strong> Avg DOM</div>
-            </div>
-            <span class="card__link" style="margin-top: var(--space-sm); display: inline-flex;">Explore Greenwood Village</span>
+          <div class="quiz-nav">
+            <button class="quiz-btn-back" id="back-3">&larr; Back</button>
+            <button class="quiz-btn-next" id="next-3" disabled>See My Matches &rarr;</button>
           </div>
-        </a>
+        </div>
+
+        <!-- Results -->
+        <div class="quiz-results" id="quiz-results">
+          <div class="quiz-progress">
+            <div class="quiz-progress__dot filled"></div>
+            <div class="quiz-progress__dot filled"></div>
+            <div class="quiz-progress__dot filled"></div>
+          </div>
+          <p class="quiz-results__heading">Based on your answers, here are your top matches &mdash; highlighted below:</p>
+          <div class="quiz-results__picks" id="results-chips"></div>
+          <p class="quiz-results__note">Scroll down to explore your matches in detail, or browse all nine neighborhoods.</p>
+          <button class="quiz-restart-btn" id="restart-quiz">&#x21BA; Start over</button>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="cta-banner">
+  <!-- ========== LAYER 2: NEIGHBORHOOD CARDS ========== -->
+  <section class="section section--white" id="neighborhoods">
     <div class="container">
-      <h2>Not Sure Which Area Fits?</h2>
-      <p>Tell me your priorities &mdash; commute, budget, lifestyle &mdash; and I'll give you an honest recommendation based on the data.</p>
-      <a href="https://calendly.com/jacob-realtor" class="btn btn--primary btn--lg" target="_blank" rel="noopener">Schedule a Call</a>
+      <span class="section-label">All Communities</span>
+      <h2 class="section-heading">Explore the South Denver Metro</h2>
+      <p class="section-subtext">Market data, lifestyle details, and active listings for the communities where families buy and sell with us. Stats: DMAR / REcolorado MLS, Q1 2026.</p>
+
+      <div class="match-header" id="match-header">
+        <p>Your quiz results are highlighted. <strong id="match-names"></strong> best match your priorities &mdash; but all nine are worth a look.</p>
+      </div>
+
+      <div class="neighborhoods-grid" id="neighborhoods-grid">
+
+        <!-- Littleton -->
+        <div class="nbhd-card" data-id="littleton">
+          <div class="nbhd-card__match-badge">&#x2605; Your Match</div>
+          <div class="nbhd-card__image" style="background-image: url('images/neighborhood-littleton.jpg');" role="img" aria-label="Suburban street in Littleton, Colorado"></div>
+          <div class="nbhd-card__body">
+            <span class="nbhd-card__county">Arapahoe County</span>
+            <h3 class="nbhd-card__name">Littleton</h3>
+            <p class="nbhd-card__personality">Littleton is the Saturday-morning-farmers-market town &mdash; a walkable Main Street, light rail, and mountain views without losing your Denver connection.</p>
+            <div class="nbhd-card__stats">
+              <div class="nbhd-card__stat"><strong>$703,000</strong> Median SFH</div>
+              <div class="nbhd-card__stat"><strong>51</strong> Avg DOM</div>
+            </div>
+            <div class="nbhd-card__actions">
+              <a href="neighborhood-littleton.html" class="nbhd-card__btn-explore">Explore Littleton</a>
+              <a href="https://selling303.realscout.com/search?city=Littleton" class="nbhd-card__btn-search" target="_blank" rel="noopener">Search Homes</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Highlands Ranch -->
+        <div class="nbhd-card" data-id="highlands-ranch">
+          <div class="nbhd-card__match-badge">&#x2605; Your Match</div>
+          <div class="nbhd-card__image" style="background-image: url('images/neighborhood-highlands-ranch.jpg');" role="img" aria-label="Modern home in Highlands Ranch, Colorado"></div>
+          <div class="nbhd-card__body">
+            <span class="nbhd-card__county">Douglas County</span>
+            <h3 class="nbhd-card__name">Highlands Ranch</h3>
+            <p class="nbhd-card__personality">Highlands Ranch is the family command center &mdash; 70+ miles of trails, four rec centers, top-rated schools, and resale values that hold.</p>
+            <div class="nbhd-card__stats">
+              <div class="nbhd-card__stat"><strong>$718,500</strong> Median SFH</div>
+              <div class="nbhd-card__stat"><strong>52</strong> Avg DOM</div>
+            </div>
+            <div class="nbhd-card__actions">
+              <a href="neighborhood-highlands-ranch.html" class="nbhd-card__btn-explore">Explore Highlands Ranch</a>
+              <a href="https://selling303.realscout.com/search?city=Highlands+Ranch" class="nbhd-card__btn-search" target="_blank" rel="noopener">Search Homes</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Centennial -->
+        <div class="nbhd-card" data-id="centennial">
+          <div class="nbhd-card__match-badge">&#x2605; Your Match</div>
+          <div class="nbhd-card__image" style="background-image: url('images/neighborhood-centennial.jpg');" role="img" aria-label="Residential home in Centennial, Colorado"></div>
+          <div class="nbhd-card__body">
+            <span class="nbhd-card__county">Arapahoe County</span>
+            <h3 class="nbhd-card__name">Centennial</h3>
+            <p class="nbhd-card__personality">Centennial is where DTC commuters put down roots &mdash; central, established, larger lots, and quietly appreciating year over year.</p>
+            <div class="nbhd-card__stats">
+              <div class="nbhd-card__stat"><strong>$699,000</strong> Median SFH</div>
+              <div class="nbhd-card__stat"><strong>48</strong> Avg DOM</div>
+            </div>
+            <div class="nbhd-card__actions">
+              <a href="neighborhood-centennial.html" class="nbhd-card__btn-explore">Explore Centennial</a>
+              <a href="https://selling303.realscout.com/search?city=Centennial" class="nbhd-card__btn-search" target="_blank" rel="noopener">Search Homes</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Englewood -->
+        <div class="nbhd-card" data-id="englewood">
+          <div class="nbhd-card__match-badge">&#x2605; Your Match</div>
+          <div class="nbhd-card__image" style="background-image: url('images/neighborhood-englewood.jpg');" role="img" aria-label="Residential neighborhood in Englewood, Colorado"></div>
+          <div class="nbhd-card__body">
+            <span class="nbhd-card__county">Arapahoe County</span>
+            <h3 class="nbhd-card__name">Englewood</h3>
+            <p class="nbhd-card__personality">Englewood is South Denver&rsquo;s best-kept secret &mdash; light rail, walkable pockets, and the lowest entry point in the metro with room to grow.</p>
+            <div class="nbhd-card__stats">
+              <div class="nbhd-card__stat"><strong>$655,800</strong> Median SFH</div>
+              <div class="nbhd-card__stat"><strong>60</strong> Avg DOM</div>
+            </div>
+            <div class="nbhd-card__actions">
+              <a href="neighborhood-englewood.html" class="nbhd-card__btn-explore">Explore Englewood</a>
+              <a href="https://selling303.realscout.com/search?city=Englewood" class="nbhd-card__btn-search" target="_blank" rel="noopener">Search Homes</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Parker -->
+        <div class="nbhd-card" data-id="parker">
+          <div class="nbhd-card__match-badge">&#x2605; Your Match</div>
+          <div class="nbhd-card__image" style="background-image: url('images/neighborhood-parker.jpg');" role="img" aria-label="Suburban home in Parker, Colorado"></div>
+          <div class="nbhd-card__body">
+            <span class="nbhd-card__county">Douglas County</span>
+            <h3 class="nbhd-card__name">Parker</h3>
+            <p class="nbhd-card__personality">Parker is the small town that didn&rsquo;t get swallowed by the suburbs &mdash; an active Main Street, elbow room, newer homes, and a real sense of community.</p>
+            <div class="nbhd-card__stats">
+              <div class="nbhd-card__stat"><strong>$706,324</strong> Median SFH</div>
+              <div class="nbhd-card__stat"><strong>62</strong> Avg DOM</div>
+            </div>
+            <div class="nbhd-card__actions">
+              <a href="neighborhood-parker.html" class="nbhd-card__btn-explore">Explore Parker</a>
+              <a href="https://selling303.realscout.com/search?city=Parker" class="nbhd-card__btn-search" target="_blank" rel="noopener">Search Homes</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lakewood -->
+        <div class="nbhd-card" data-id="lakewood">
+          <div class="nbhd-card__match-badge">&#x2605; Your Match</div>
+          <div class="nbhd-card__image" style="background-image: url('images/neighborhood-lakewood.jpg');" role="img" aria-label="Mountain foothills view near Lakewood, Colorado"></div>
+          <div class="nbhd-card__body">
+            <span class="nbhd-card__county">Jefferson County</span>
+            <h3 class="nbhd-card__name">Lakewood</h3>
+            <p class="nbhd-card__personality">Lakewood is your gateway to Red Rocks and the foothills &mdash; without leaving Denver behind. Diverse housing stock at the metro&rsquo;s most accessible price point.</p>
+            <div class="nbhd-card__stats">
+              <div class="nbhd-card__stat"><strong>$636,900</strong> Median SFH</div>
+              <div class="nbhd-card__stat"><strong>39</strong> Avg DOM</div>
+            </div>
+            <div class="nbhd-card__actions">
+              <a href="neighborhood-lakewood.html" class="nbhd-card__btn-explore">Explore Lakewood</a>
+              <a href="https://selling303.realscout.com/search?city=Lakewood" class="nbhd-card__btn-search" target="_blank" rel="noopener">Search Homes</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lone Tree -->
+        <div class="nbhd-card" data-id="lone-tree">
+          <div class="nbhd-card__match-badge">&#x2605; Your Match</div>
+          <div class="nbhd-card__image" style="background-image: url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&h=500&fit=crop&q=80');" role="img" aria-label="Modern home in Lone Tree, Colorado"></div>
+          <div class="nbhd-card__body">
+            <span class="nbhd-card__county">Douglas County</span>
+            <h3 class="nbhd-card__name">Lone Tree</h3>
+            <p class="nbhd-card__personality">Lone Tree is where executive living meets light rail &mdash; Park Meadows, RidgeGate, Lincoln Station, and a fast commute to anywhere in the metro.</p>
+            <div class="nbhd-card__stats">
+              <div class="nbhd-card__stat"><strong>$918,485</strong> Median SFH</div>
+              <div class="nbhd-card__stat"><strong>61</strong> Avg DOM</div>
+            </div>
+            <div class="nbhd-card__actions">
+              <a href="neighborhood-lone-tree.html" class="nbhd-card__btn-explore">Explore Lone Tree</a>
+              <a href="https://selling303.realscout.com/search?city=Lone+Tree" class="nbhd-card__btn-search" target="_blank" rel="noopener">Search Homes</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Castle Pines -->
+        <div class="nbhd-card" data-id="castle-pines">
+          <div class="nbhd-card__match-badge">&#x2605; Your Match</div>
+          <div class="nbhd-card__image" style="background-image: url('https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&h=500&fit=crop&q=80');" role="img" aria-label="Large home among pine trees in Castle Pines, Colorado"></div>
+          <div class="nbhd-card__body">
+            <span class="nbhd-card__county">Douglas County</span>
+            <h3 class="nbhd-card__name">Castle Pines</h3>
+            <p class="nbhd-card__personality">Castle Pines is the neighborhood where the pine trees are real, the golf isn&rsquo;t a metaphor, and the DTC is still only 25 minutes away.</p>
+            <div class="nbhd-card__stats">
+              <div class="nbhd-card__stat"><strong>$959,000</strong> Median SFH</div>
+              <div class="nbhd-card__stat"><strong>77</strong> Avg DOM</div>
+            </div>
+            <div class="nbhd-card__actions">
+              <a href="neighborhood-castle-pines.html" class="nbhd-card__btn-explore">Explore Castle Pines</a>
+              <a href="https://selling303.realscout.com/search?city=Castle+Pines" class="nbhd-card__btn-search" target="_blank" rel="noopener">Search Homes</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Greenwood Village -->
+        <div class="nbhd-card" data-id="greenwood-village">
+          <div class="nbhd-card__match-badge">&#x2605; Your Match</div>
+          <div class="nbhd-card__image" style="background-image: url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=500&fit=crop&q=80');" role="img" aria-label="Luxury home in Greenwood Village, Colorado"></div>
+          <div class="nbhd-card__body">
+            <span class="nbhd-card__county">Arapahoe County</span>
+            <h3 class="nbhd-card__name">Greenwood Village</h3>
+            <p class="nbhd-card__personality">Greenwood Village is old-money South Denver &mdash; large lots, landmark estates, and a DTC address that speaks for itself at the metro&rsquo;s highest price point.</p>
+            <div class="nbhd-card__stats">
+              <div class="nbhd-card__stat"><strong>$1,847,000</strong> Median SFH</div>
+              <div class="nbhd-card__stat"><strong>40</strong> Avg DOM</div>
+            </div>
+            <div class="nbhd-card__actions">
+              <a href="neighborhood-greenwood-village.html" class="nbhd-card__btn-explore">Explore Greenwood Village</a>
+              <a href="https://selling303.realscout.com/search?city=Greenwood+Village" class="nbhd-card__btn-search" target="_blank" rel="noopener">Search Homes</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
+  <!-- ========== CTA BANNER ========== -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Still Not Sure Which Area Fits?</h2>
+      <p>Tell me your priorities &mdash; commute, budget, lifestyle &mdash; and I'll give you an honest recommendation based on the data.</p>
+      <a href="https://calendly.com/jacob-realtor" class="btn btn--primary btn--lg" target="_blank" rel="noopener">Schedule a Free Call</a>
+    </div>
+  </section>
+
+  <!-- ========== LAYER 3: SERVICE AREA ========== -->
+  <section class="service-area" id="service-area">
+    <div class="container">
+      <span class="section-label">Where We Work</span>
+      <h2>Our South Denver Service Area</h2>
+      <p class="service-area__intro">Jacob Stark serves buyers and sellers across nine South Denver Metro communities &mdash; from Jefferson County in the west to Douglas County in the south, and Arapahoe County in between.</p>
+
+      <div class="service-area__grid">
+        <div class="service-area__city">
+          <div class="service-area__city-name">Littleton</div>
+          <div class="service-area__city-context">Arapahoe &amp; Jefferson County. Along the South Platte River corridor, C-470 and US-85.</div>
+        </div>
+        <div class="service-area__city">
+          <div class="service-area__city-name">Highlands Ranch</div>
+          <div class="service-area__city-context">Douglas County. South of Lone Tree, anchored by the HRCA rec centers and E-470.</div>
+        </div>
+        <div class="service-area__city">
+          <div class="service-area__city-name">Centennial</div>
+          <div class="service-area__city-context">Arapahoe County. Bordered by Greenwood Village (north), Parker (east), and Highlands Ranch (south).</div>
+        </div>
+        <div class="service-area__city">
+          <div class="service-area__city-name">Englewood</div>
+          <div class="service-area__city-context">Arapahoe County. Immediately south of Denver, close-in with light rail running through Broadway.</div>
+        </div>
+        <div class="service-area__city">
+          <div class="service-area__city-name">Parker</div>
+          <div class="service-area__city-context">Douglas County. Southeast of the metro along E-470, adjacent to Castle Rock.</div>
+        </div>
+        <div class="service-area__city">
+          <div class="service-area__city-name">Lakewood</div>
+          <div class="service-area__city-context">Jefferson County. West side of the metro, bordering Denver and running up to the foothills near Red Rocks.</div>
+        </div>
+        <div class="service-area__city">
+          <div class="service-area__city-name">Lone Tree</div>
+          <div class="service-area__city-context">Douglas County. Just north of Highlands Ranch, anchored by Park Meadows and Lincoln Station light rail.</div>
+        </div>
+        <div class="service-area__city">
+          <div class="service-area__city-name">Castle Pines</div>
+          <div class="service-area__city-context">Douglas County. South of Lone Tree, east of Castle Rock, surrounded by the namesake pine forests.</div>
+        </div>
+        <div class="service-area__city">
+          <div class="service-area__city-name">Greenwood Village</div>
+          <div class="service-area__city-context">Arapahoe County. Sits inside the Denver Tech Center, bordered by Centennial, Englewood, and Cherry Hills Village.</div>
+        </div>
+      </div>
+
+      <p class="service-area__map-note">Interactive map coming soon &mdash; for now, schedule a call and Jacob will walk you through exactly where each community sits relative to your workplace and priorities.</p>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
   <footer class="footer">
     <div class="container">
       <div class="footer__grid">
@@ -292,5 +853,167 @@
   </a>
 
   <script src="js/main.js"></script>
+  <script>
+  (function () {
+    // ── Scoring map: each answer value → { neighborhoodId: points }
+    var scoring = {
+      q1: {
+        'commute-dtc':        { centennial: 3, englewood: 2, 'greenwood-village': 2, 'lone-tree': 1 },
+        'mountain-access':    { lakewood: 3, 'castle-pines': 2, littleton: 1 },
+        'walkable-downtown':  { littleton: 3, parker: 2, englewood: 1 },
+        'space-privacy':      { 'castle-pines': 3, parker: 2, 'highlands-ranch': 1 },
+        'newer-construction': { 'highlands-ranch': 2, 'lone-tree': 2, parker: 2, centennial: 1 }
+      },
+      q2: {
+        'under-650k':  { englewood: 3, lakewood: 3 },
+        '650k-750k':   { littleton: 2, centennial: 2, englewood: 1, parker: 2, lakewood: 1 },
+        '750k-950k':   { 'highlands-ranch': 2, 'lone-tree': 2, parker: 1, centennial: 1 },
+        '950k-plus':   { 'castle-pines': 3, 'greenwood-village': 3, 'lone-tree': 1 }
+      },
+      q3: {
+        'established-character': { littleton: 3, englewood: 2, centennial: 1 },
+        'master-planned':        { 'highlands-ranch': 3, 'lone-tree': 2 },
+        'small-town':            { parker: 3, littleton: 2 },
+        'luxury-exclusive':      { 'greenwood-village': 3, 'castle-pines': 2, 'lone-tree': 1 }
+      }
+    };
+
+    var displayNames = {
+      'littleton': 'Littleton',
+      'highlands-ranch': 'Highlands Ranch',
+      'centennial': 'Centennial',
+      'englewood': 'Englewood',
+      'parker': 'Parker',
+      'lakewood': 'Lakewood',
+      'lone-tree': 'Lone Tree',
+      'castle-pines': 'Castle Pines',
+      'greenwood-village': 'Greenwood Village'
+    };
+
+    var answers = { q1: null, q2: null, q3: null };
+
+    // ── Option selection
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest('.quiz-option');
+      if (!btn) return;
+      var q = btn.dataset.q;
+      var container = btn.closest('.quiz-options');
+      container.querySelectorAll('.quiz-option').forEach(function (b) { b.classList.remove('selected'); });
+      btn.classList.add('selected');
+      answers[q] = btn.dataset.val;
+      // Enable next button for this step
+      var stepNum = q.replace('q', '');
+      var nextBtn = document.getElementById('next-' + stepNum);
+      if (nextBtn) nextBtn.disabled = false;
+    });
+
+    // ── Navigation
+    function showStep(n) {
+      document.querySelectorAll('.quiz-step').forEach(function (s) { s.classList.remove('active'); });
+      var step = document.getElementById('step-' + n);
+      if (step) step.classList.add('active');
+    }
+
+    document.getElementById('next-1').addEventListener('click', function () {
+      if (!answers.q1) return;
+      showStep(2);
+    });
+    document.getElementById('back-2').addEventListener('click', function () { showStep(1); });
+    document.getElementById('next-2').addEventListener('click', function () {
+      if (!answers.q2) return;
+      showStep(3);
+    });
+    document.getElementById('back-3').addEventListener('click', function () { showStep(2); });
+    document.getElementById('next-3').addEventListener('click', function () {
+      if (!answers.q3) return;
+      showResults();
+    });
+    document.getElementById('restart-quiz').addEventListener('click', function () {
+      answers = { q1: null, q2: null, q3: null };
+      document.querySelectorAll('.quiz-option').forEach(function (b) { b.classList.remove('selected'); });
+      ['next-1','next-2','next-3'].forEach(function (id) {
+        var btn = document.getElementById(id);
+        if (btn) btn.disabled = true;
+      });
+      document.querySelectorAll('.quiz-step').forEach(function (s) { s.classList.remove('active'); });
+      document.getElementById('quiz-results').classList.remove('active');
+      document.getElementById('step-1').classList.add('active');
+      clearHighlights();
+    });
+
+    function showResults() {
+      // Tally scores
+      var scores = {};
+      Object.keys(displayNames).forEach(function (id) { scores[id] = 0; });
+      ['q1','q2','q3'].forEach(function (q) {
+        var val = answers[q];
+        if (!val || !scoring[q][val]) return;
+        var map = scoring[q][val];
+        Object.keys(map).forEach(function (id) { scores[id] += map[id]; });
+      });
+
+      // Sort and pick top 3
+      var sorted = Object.keys(scores).sort(function (a, b) { return scores[b] - scores[a]; });
+      var top = sorted.slice(0, 3).filter(function (id) { return scores[id] > 0; });
+
+      // Show results panel
+      document.querySelectorAll('.quiz-step').forEach(function (s) { s.classList.remove('active'); });
+      var resultsEl = document.getElementById('quiz-results');
+      resultsEl.classList.add('active');
+
+      var chipsEl = document.getElementById('results-chips');
+      chipsEl.innerHTML = '';
+      top.forEach(function (id) {
+        var chip = document.createElement('span');
+        chip.className = 'quiz-result-chip';
+        chip.textContent = displayNames[id];
+        chipsEl.appendChild(chip);
+      });
+
+      // Highlight cards
+      highlightCards(top);
+
+      // Scroll to neighborhoods section
+      setTimeout(function () {
+        var nbSection = document.getElementById('neighborhoods');
+        if (nbSection) nbSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 400);
+    }
+
+    function highlightCards(topIds) {
+      var cards = document.querySelectorAll('.nbhd-card');
+      cards.forEach(function (card) {
+        var id = card.dataset.id;
+        if (topIds.indexOf(id) !== -1) {
+          card.classList.add('highlighted');
+        } else {
+          card.classList.remove('highlighted');
+        }
+      });
+
+      // Reorder: highlighted first
+      var grid = document.getElementById('neighborhoods-grid');
+      var highlighted = [], rest = [];
+      cards.forEach(function (card) {
+        if (card.classList.contains('highlighted')) highlighted.push(card);
+        else rest.push(card);
+      });
+      highlighted.concat(rest).forEach(function (card) { grid.appendChild(card); });
+
+      // Show match header
+      var header = document.getElementById('match-header');
+      var namesEl = document.getElementById('match-names');
+      header.classList.add('visible');
+      namesEl.textContent = topIds.map(function (id) { return displayNames[id]; }).join(', ');
+    }
+
+    function clearHighlights() {
+      document.querySelectorAll('.nbhd-card').forEach(function (card) {
+        card.classList.remove('highlighted');
+      });
+      document.getElementById('match-header').classList.remove('visible');
+    }
+  })();
+  </script>
 </body>
 </html>
