@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog | Selling 303 — South Denver Real Estate Insights</title>
-  <meta name="description" content="Market updates, neighborhood guides, buyer and seller advice for South Denver Metro. Data-driven insights from Jacob Stark at 8z Real Estate.">
+  <meta name="description" content="Market updates, neighborhood guides, buyer and seller advice for South Denver Metro. Honest, informed insights from Jacob Stark at 8z Real Estate.">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WLGW57VN8C"></script>
@@ -37,15 +37,35 @@
       </button>
       <nav class="header__nav" id="nav">
         <ul class="header__nav-links">
-          <li><a href="neighborhoods.html" class="header__nav-link">Search Homes</a></li>
-          <li><a href="properties.html" class="header__nav-link">Properties</a></li>
-          <li><a href="neighborhoods.html" class="header__nav-link">Neighborhoods</a></li>
-          <li><a href="index.html#home-value" class="header__nav-link">Home Value</a></li>
-          <li><a href="blog.html" class="header__nav-link">Blog</a></li>
-          <li><a href="about.html" class="header__nav-link">About</a></li>
-          <li><a href="contact.html" class="header__nav-link">Contact</a></li>
-          <li><a href="https://showingnew.com/jacobstark" class="header__nav-link" target="_blank" rel="noopener noreferrer">New Construction</a></li>
-          <li><a href="investor-tools.html" class="header__nav-link">Investor Tools</a></li>
+          <li class="has-dropdown">
+            <button class="header__nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">Buy <span class="dropdown-arrow">&#x25BE;</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="neighborhoods.html" class="dropdown-item">Search Homes</a></li>
+              <li><a href="neighborhoods.html" class="dropdown-item">Neighborhoods</a></li>
+              <li><a href="https://showingnew.com/jacobstark" class="dropdown-item" target="_blank" rel="noopener noreferrer">New Construction</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <button class="header__nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">Sell <span class="dropdown-arrow">&#x25BE;</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="index.html#home-value" class="dropdown-item">Home Value</a></li>
+              <li><a href="properties.html" class="dropdown-item">Properties</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <button class="header__nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">Resources <span class="dropdown-arrow">&#x25BE;</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="blog.html" class="dropdown-item">Blog</a></li>
+              <li><a href="investor-tools.html" class="dropdown-item">Investor Tools</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <button class="header__nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">About <span class="dropdown-arrow">&#x25BE;</span></button>
+            <ul class="dropdown-menu">
+              <li><a href="about.html" class="dropdown-item">About Jacob</a></li>
+              <li><a href="contact.html" class="dropdown-item">Contact</a></li>
+            </ul>
+          </li>
         </ul>
         <a href="https://calendly.com/jacob-realtor" class="btn btn--primary btn--sm header__cta" target="_blank" rel="noopener">Schedule a Call</a>
       </nav>
@@ -155,13 +175,21 @@
         <div>
           <img src="images/jacob-stark-footer-avatar.png" alt="Jacob Stark headshot" class="footer__avatar" width="48" height="48">
           <div class="footer__brand-name">Selling 303</div>
-          <p class="footer__brand-text">Jacob Stark, REALTOR&reg; at 8z Real Estate. Data-driven guidance for families buying and selling across the South Denver Metro.</p>
+          <p class="footer__brand-text">Jacob Stark, REALTOR&reg; at 8z Real Estate. Your guide through South Denver Metro real estate &mdash; from the first conversation to closing day.</p>
+          <div class="footer__contact-info">
+            <p><a href="tel:3039970634">303-997-0634</a></p>
+            <p><a href="mailto:jacob@selling303.com">jacob@selling303.com</a></p>
+            <p><a href="http://app.recolorado.com/17E403CC" target="_blank" rel="noopener">Download My App</a></p>
+          </div>
           <div class="footer__social">
             <a href="https://instagram.com/jacobstark_realtor" aria-label="Instagram">IG</a>
             <a href="https://facebook.com/jacobstarkrealtor" aria-label="Facebook">FB</a>
             <a href="https://youtube.com/@selling303" aria-label="YouTube">YT</a>
             <a href="https://linkedin.com/in/jacobstark" aria-label="LinkedIn">LI</a>
             <a href="https://zillow.com/profile/jacobstarkrealtor" aria-label="Zillow">ZL</a>
+          </div>
+          <div class="footer__brokerage-logo">
+            <img src="images/8z-logo-white.png" alt="8z Real Estate" width="100" loading="lazy">
           </div>
         </div>
         <div>
@@ -191,7 +219,7 @@
         </div>
         <div>
           <h4 class="footer__heading">Stay in the Loop</h4>
-          <p class="footer__newsletter-text">Market updates and local insights &mdash; no spam, just data that matters.</p>
+          <p class="footer__newsletter-text">Market updates, real talk, and insights for South Denver buyers and sellers.</p>
           <form class="footer__newsletter-form" name="newsletter" method="POST" data-netlify="true">
             <input type="hidden" name="form-name" value="newsletter">
             <input type="email" name="email" placeholder="Your email" required>

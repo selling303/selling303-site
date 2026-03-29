@@ -24,12 +24,17 @@
         nav.classList.remove('active');
         navOverlay.classList.remove('active');
         document.body.style.overflow = '';
+        // Close all dropdowns
+        document.querySelectorAll('.has-dropdown.dropdown-open').forEach(function (d) {
+          d.classList.remove('dropdown-open');
+          var btn = d.querySelector('.dropdown-toggle');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+        });
       });
     }
 
-    // Close nav on link click (mobile)
-    var navLinks = nav.querySelectorAll('.header__nav-link');
-    navLinks.forEach(function (link) {
+    // Close nav on dropdown item click (mobile)
+    nav.querySelectorAll('.dropdown-item').forEach(function (link) {
       link.addEventListener('click', function () {
         hamburger.classList.remove('active');
         nav.classList.remove('active');
@@ -38,6 +43,52 @@
       });
     });
   }
+
+  // --- Dropdown Navigation ---
+  var dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+  dropdownToggles.forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var parent = btn.closest('.has-dropdown');
+      var isOpen = parent.classList.contains('dropdown-open');
+
+      // Close all open dropdowns
+      document.querySelectorAll('.has-dropdown.dropdown-open').forEach(function (d) {
+        d.classList.remove('dropdown-open');
+        var b = d.querySelector('.dropdown-toggle');
+        if (b) b.setAttribute('aria-expanded', 'false');
+      });
+
+      // Toggle this one (if it wasn't already open)
+      if (!isOpen) {
+        parent.classList.add('dropdown-open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // Close dropdowns on outside click (desktop)
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.has-dropdown')) {
+      document.querySelectorAll('.has-dropdown.dropdown-open').forEach(function (d) {
+        d.classList.remove('dropdown-open');
+        var btn = d.querySelector('.dropdown-toggle');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+
+  // Close dropdowns on Escape key
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.has-dropdown.dropdown-open').forEach(function (d) {
+        d.classList.remove('dropdown-open');
+        var btn = d.querySelector('.dropdown-toggle');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
 
   // --- Sticky Header (scroll behavior) ---
   var header = document.getElementById('header');
