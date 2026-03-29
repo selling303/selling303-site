@@ -581,6 +581,22 @@ p:last-child {
   }
 }
 
+.card-grid--3col {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 900px) {
+  .card-grid--3col {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .card-grid--3col {
+    grid-template-columns: 1fr;
+  }
+}
+
 .card {
   background-color: var(--color-white);
   border-radius: var(--radius-md);
