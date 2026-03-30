@@ -3,14 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Properties | Selling 303 &mdash; Jacob Stark Listings</title>
-  <meta name="description" content="Browse Jacob Stark's current and recent listings across South Denver Metro. View homes for sale, in contract, and sold properties in Littleton, Highlands Ranch, Centennial, and beyond.">
-  <meta property="og:title" content="Properties | Selling 303">
-  <meta property="og:description" content="Jacob Stark's current and recent listings in South Denver Metro.">
+  <title>Page Not Found | Selling 303</title>
+  <meta name="description" content="The page you're looking for doesn't exist or has moved. Find South Denver Metro real estate info on Selling 303.">
+  <meta name="robots" content="noindex">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Page Not Found | Selling 303">
+  <meta property="og:description" content="The page you're looking for doesn't exist or has moved. Find South Denver Metro real estate info on Selling 303.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://selling303.com/properties.html">
-  <meta property="og:image" content="https://selling303.com/images/og-properties.jpg">
+  <meta property="og:url" content="https://selling303.com/404.html">
+  <meta property="og:image" content="https://selling303.com/images/og-home.jpg">
+
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WLGW57VN8C"></script>
   <script>
@@ -30,28 +35,47 @@
   window.widgetTracker("send", "pageview");
   </script>
   <!-- end Widget Tracker Code -->
-  <script src="https://em.realscout.com/widgets/realscout-web-components.umd.js" type="module"></script>
+
+  <link rel="stylesheet" href="css/styles.css">
   <style>
-    realscout-your-listings {
-      --rs-listing-divider-color: #c8965a;
-      width: 100%;
+    .error-page {
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: var(--space-3xl) 0;
+    }
+    .error-page__code {
+      font-family: var(--font-heading);
+      font-size: clamp(4rem, 12vw, 8rem);
+      color: var(--color-accent);
+      line-height: 1;
+      margin-bottom: var(--space-sm);
+    }
+    .error-page__heading {
+      font-family: var(--font-heading);
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      color: var(--color-primary);
+      margin-bottom: var(--space-sm);
+    }
+    .error-page__message {
+      color: var(--color-body-text);
+      font-size: 1.125rem;
+      max-width: 480px;
+      margin: 0 auto var(--space-lg);
+    }
+    .error-page__links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      justify-content: center;
     }
   </style>
-  <!-- Schema: WebPage -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Properties | Selling 303",
-    "url": "https://selling303.com/properties.html",
-    "description": "Browse Jacob Stark's current and recent listings across South Denver Metro.",
-    "author": {"@type": "Person", "name": "Jacob Stark"}
-  }
-  </script>
-  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
+  <!-- ========== HEADER ========== -->
   <header class="header header--solid" id="header">
     <div class="header__inner">
       <a href="index.html" class="header__logo">Selling 303</a>
@@ -96,20 +120,23 @@
     <div class="nav-overlay" id="navOverlay"></div>
   </header>
 
-  <section class="page-hero">
+  <!-- ========== 404 CONTENT ========== -->
+  <section class="error-page">
     <div class="container">
-      <span class="section-label">Listings</span>
-      <h1>My Properties</h1>
-      <p>Current, in-contract, and recent sales across the South Denver Metro</p>
+      <div class="error-page__code">404</div>
+      <h1 class="error-page__heading">Page Not Found</h1>
+      <p class="error-page__message">The page you're looking for doesn't exist or has moved. Here are a few places to get back on track.</p>
+      <div class="error-page__links">
+        <a href="index.html" class="btn btn--primary">Go Home</a>
+        <a href="blog.html" class="btn btn--outline-dark">Blog</a>
+        <a href="neighborhoods.html" class="btn btn--outline-dark">Neighborhoods</a>
+        <a href="properties.html" class="btn btn--outline-dark">Properties</a>
+        <a href="contact.html" class="btn btn--outline-dark">Contact Jacob</a>
+      </div>
     </div>
   </section>
 
-  <section class="section section--white">
-    <div class="container">
-      <realscout-your-listings agent-encoded-id="QWdlbnQtMjg5MjYw" sort-order="STATUS_AND_SIGNIFICANT_CHANGE" listing-status="For Sale,In Contract,Sold" property-types="SFR,MF,TC,LAL,MOBILE,OTHER" include-co-listings include-seller-listings></realscout-your-listings>
-    </div>
-  </section>
-
+  <!-- ========== FOOTER ========== -->
   <footer class="footer">
     <div class="container">
       <div class="footer__grid">
@@ -178,6 +205,7 @@
     </div>
   </footer>
 
+  <!-- Floating CTA -->
   <a href="tel:3039970634" class="floating-cta" aria-label="Call Jacob">
     <span class="floating-cta__icon">&#x1F4DE;</span>
     <span class="floating-cta__text">Call Jacob &mdash; 303-997-0634</span>
