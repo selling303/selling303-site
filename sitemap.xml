@@ -154,6 +154,19 @@
     <priority>0.6</priority>
   </url>
 
+  <url>
+    <loc>https://selling303.com/blog/why-homes-sit-on-market-south-denver.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://selling303.com/clientclarity-demo.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
   <!-- Success Stories -->
   <url>
     <loc>https://selling303.com/success-stories/time-for-more-space.html</loc>
