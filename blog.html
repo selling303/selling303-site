@@ -104,16 +104,26 @@
   <section class="section section--white">
     <div class="container">
       <div class="blog-filters">
-        <button class="blog-filter blog-filter--active">All</button>
-        <button class="blog-filter">Costs &amp; Pricing</button>
-        <button class="blog-filter">Problems &amp; Mistakes</button>
-        <button class="blog-filter">Comparisons</button>
-        <button class="blog-filter">Best Of</button>
-        <button class="blog-filter">What to Expect</button>
+        <button class="blog-filter blog-filter--active" data-filter="All">All</button>
+        <button class="blog-filter" data-filter="Costs &amp; Pricing">Costs &amp; Pricing</button>
+        <button class="blog-filter" data-filter="Problems &amp; Mistakes">Problems &amp; Mistakes</button>
+        <button class="blog-filter" data-filter="Comparisons">Comparisons</button>
+        <button class="blog-filter" data-filter="Best Of">Best Of</button>
+        <button class="blog-filter" data-filter="What to Expect">What to Expect</button>
       </div>
 
       <div class="card-grid">
-        <a href="blog/why-homes-sit-on-market-south-denver.html" class="card">
+        <a href="blog/7-smartest-home-upgrades-before-selling-2026.html" class="card" data-category="Best Of">
+          <div class="card__image" style="background-image: url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=500&fit=crop&q=80');" role="img" aria-label="Home being prepared for sale with upgrades"></div>
+          <div class="card__body">
+            <span class="card__tag">Selling</span>
+            <h3 class="card__title">The 7 Smartest Home Upgrades Before Selling in 2026</h3>
+            <p class="card__text">The highest-ROI pre-listing upgrades South Denver sellers can make — what to fix, what to skip, and what today's buyers actually respond to.</p>
+            <span class="card__meta">April 3, 2026 &middot; 9 min read</span>
+          </div>
+        </a>
+
+        <a href="blog/why-homes-sit-on-market-south-denver.html" class="card" data-category="Problems &amp; Mistakes">
           <div class="card__image" style="background-image: url('https://images.unsplash.com/photo-1582407947092-40bf940bb514?w=800&h=500&fit=crop&q=80');" role="img" aria-label="Home sitting on the market in South Denver neighborhood"></div>
           <div class="card__body">
             <span class="card__tag">Selling</span>
@@ -123,7 +133,7 @@
           </div>
         </a>
 
-        <a href="blog/parker-vs-castle-pines.html" class="card">
+        <a href="blog/parker-vs-castle-pines.html" class="card" data-category="Comparisons">
           <div class="card__image" style="background-image: url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=500&fit=crop&q=80');" role="img" aria-label="Suburban homes in Parker and Castle Pines, Colorado"></div>
           <div class="card__body">
             <span class="card__tag">Comparison</span>
@@ -133,7 +143,7 @@
           </div>
         </a>
 
-        <a href="blog/closing-costs-colorado-buyers-2026.html" class="card">
+        <a href="blog/closing-costs-colorado-buyers-2026.html" class="card" data-category="Costs &amp; Pricing">
           <div class="card__image" style="background-image: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=500&fit=crop&q=80');" role="img" aria-label="Buyer reviewing closing cost documents at a Colorado title company"></div>
           <div class="card__body">
             <span class="card__tag">Buying</span>
@@ -143,7 +153,7 @@
           </div>
         </a>
 
-        <a href="blog/cost-to-sell-house-colorado-2026.html" class="card">
+        <a href="blog/cost-to-sell-house-colorado-2026.html" class="card" data-category="Costs &amp; Pricing">
           <div class="card__image" style="background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=500&fit=crop&q=80');" role="img" aria-label="Real estate paperwork and cost breakdown for selling in Colorado"></div>
           <div class="card__body">
             <span class="card__tag">Selling</span>
@@ -153,7 +163,7 @@
           </div>
         </a>
 
-        <a href="blog/why-house-not-selling-denver.html" class="card">
+        <a href="blog/why-house-not-selling-denver.html" class="card" data-category="Problems &amp; Mistakes">
           <div class="card__image" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=500&fit=crop&q=80');" role="img" aria-label="Home sitting on the market not selling in Denver"></div>
           <div class="card__body">
             <span class="card__tag">Selling</span>
@@ -163,7 +173,7 @@
           </div>
         </a>
 
-        <a href="blog/littleton-vs-highlands-ranch.html" class="card">
+        <a href="blog/littleton-vs-highlands-ranch.html" class="card" data-category="Comparisons">
           <div class="card__image" style="background-image: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=500&fit=crop&q=80');" role="img" aria-label="Suburban homes in Littleton and Highlands Ranch comparison"></div>
           <div class="card__body">
             <span class="card__tag">Neighborhoods</span>
@@ -173,7 +183,7 @@
           </div>
         </a>
 
-        <a href="blog/best-neighborhoods-south-denver-move-up-buyers.html" class="card">
+        <a href="blog/best-neighborhoods-south-denver-move-up-buyers.html" class="card" data-category="Best Of">
           <div class="card__image" style="background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=500&fit=crop&q=80');" role="img" aria-label="South Denver neighborhood aerial view for move-up buyers"></div>
           <div class="card__body">
             <span class="card__tag">Neighborhoods</span>
@@ -183,7 +193,7 @@
           </div>
         </a>
 
-        <a href="blog/what-happens-after-accepting-offer.html" class="card">
+        <a href="blog/what-happens-after-accepting-offer.html" class="card" data-category="What to Expect">
           <div class="card__image" style="background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop&q=80');" role="img" aria-label="Closing paperwork and house keys on table"></div>
           <div class="card__body">
             <span class="card__tag">Selling</span>
@@ -281,5 +291,30 @@
   </a>
 
   <script src="js/main.js"></script>
+  <script>
+    (function () {
+      var filters = document.querySelectorAll('.blog-filter');
+      var cards = document.querySelectorAll('.card-grid .card');
+
+      filters.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          filters.forEach(function (b) { b.classList.remove('blog-filter--active'); });
+          btn.classList.add('blog-filter--active');
+
+          var selected = btn.getAttribute('data-filter');
+          cards.forEach(function (card) {
+            if (selected === 'All') {
+              card.style.display = '';
+            } else {
+              var cat = card.getAttribute('data-category') || '';
+              // decode HTML entities for comparison
+              var decoded = cat.replace(/&amp;/g, '&');
+              card.style.display = (decoded === selected.replace(/&amp;/g, '&')) ? '' : 'none';
+            }
+          });
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
