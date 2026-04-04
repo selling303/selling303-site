@@ -1,0 +1,154 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+---
+
+<BaseLayout
+  title="Contact Jacob Stark | Selling 303 — Schedule a Call"
+  description="Get in touch with Jacob Stark, South Denver Metro REALTOR. Schedule a call, send a message, or reach out directly at 303-997-0634."
+  ogUrl="https://selling303.com/contact"
+  ogImage="https://selling303.com/images/og-contact.jpg"
+  currentPage="contact"
+  headerVariant="solid"
+>
+  <Fragment slot="head">
+    <!-- Schema: ContactPage -->
+    <script type="application/ld+json" is:inline>
+    {
+      "@context":"https://schema.org",
+      "@type":"ContactPage",
+      "name":"Contact Jacob Stark | Selling 303",
+      "url":"https://selling303.com/contact",
+      "description":"Get in touch with Jacob Stark, South Denver Metro REALTOR.",
+      "mainEntity":{"@type":"Person","name":"Jacob Stark","telephone":"+1-303-997-0634","email":"jacob@selling303.com"}
+    }
+    </script>
+  </Fragment>
+
+  <!-- ========== PAGE HERO ========== -->
+  <PageHero
+    label="Get in Touch"
+    heading="Contact Jacob"
+    subtext="No pressure, no pitch — just a conversation about your goals."
+  />
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- LEFT: FORM -->
+        <div>
+          <h2 class="section-heading">Send a Message</h2>
+          <p style="margin-bottom: var(--space-lg);">Tell me a bit about your situation and I'll get back to you within a few hours.</p>
+          <form class="form" name="contact" method="POST" data-netlify="true" action="/thank-you">
+            <input type="hidden" name="form-name" value="contact">
+            <div class="form__row">
+              <div class="form__group">
+                <label class="form__label" for="contact-name">Name</label>
+                <input
+                  type="text"
+                  id="contact-name"
+                  name="name"
+                  class="form__input"
+                  placeholder="First Last"
+                  required
+                />
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="contact-email">Email</label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  name="email"
+                  class="form__input"
+                  placeholder="you@email.com"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="contact-phone">Phone</label>
+              <input
+                type="tel"
+                id="contact-phone"
+                name="phone"
+                class="form__input"
+                placeholder="(303) 555-0000"
+              />
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="contact-interest">I'm interested in...</label>
+              <select id="contact-interest" name="interest" class="form__select">
+                <option value="">Select one</option>
+                <option value="buying">Buying a Home</option>
+                <option value="selling">Selling a Home</option>
+                <option value="both">Buying &amp; Selling</option>
+                <option value="investing">Investment Property</option>
+                <option value="valuation">Home Valuation</option>
+                <option value="other">Something Else</option>
+              </select>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="contact-message">Message</label>
+              <textarea
+                id="contact-message"
+                name="message"
+                class="form__textarea"
+                placeholder="Tell me about your timeline, budget, neighborhood preferences, or anything else that's helpful."
+                rows="5"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--lg">Send Message</button>
+          </form>
+        </div>
+
+        <!-- RIGHT: CONTACT INFO -->
+        <div>
+          <h2 class="section-heading">Reach Out Directly</h2>
+
+          <div class="contact-info-item">
+            <div class="contact-info-item__icon">&#x1F4DE;</div>
+            <div>
+              <div class="contact-info-item__label">Phone / Text</div>
+              <div class="contact-info-item__value"><a href="tel:3039970634">303-997-0634</a></div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-item__icon">&#x2709;</div>
+            <div>
+              <div class="contact-info-item__label">Email</div>
+              <div class="contact-info-item__value"><a href="mailto:jacob@selling303.com">jacob@selling303.com</a></div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-item__icon">&#x1F3E2;</div>
+            <div>
+              <div class="contact-info-item__label">Brokerage</div>
+              <div class="contact-info-item__value">8z Real Estate<br />South Denver Metro</div>
+            </div>
+          </div>
+
+          <div style="margin-top: var(--space-lg);">
+            <h3 style="margin-bottom: var(--space-sm);">Schedule a Call</h3>
+            <p style="margin-bottom: var(--space-sm);">Book a free 15-minute strategy call at a time that works for you.</p>
+            <a
+              href="https://calendly.com/jacob-realtor"
+              class="btn btn--primary btn--lg"
+              target="_blank"
+              rel="noopener"
+            >
+              Book a Time on Calendly
+            </a>
+          </div>
+
+          <div style="margin-top: var(--space-lg);">
+            <h3 style="margin-bottom: var(--space-sm);">Service Area</h3>
+            <p>I specialize in 9 South Denver Metro communities: Littleton, Highlands Ranch, Centennial, Englewood, Parker, Lakewood, Lone Tree, Castle Pines, and Greenwood Village. Covering Arapahoe, Douglas, and Jefferson counties.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

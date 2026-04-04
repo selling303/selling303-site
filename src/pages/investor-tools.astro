@@ -1,0 +1,87 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import CTABanner from '../components/CTABanner.astro';
+---
+
+<BaseLayout
+  title="Investor Tools | Selling 303 — Investment Analysis"
+  description="Free rent estimate tool, rental income projections, and investment analysis for South Denver Metro properties. Jacob Stark brings an investor-minded approach to every deal."
+  ogUrl="https://selling303.com/investor-tools"
+  ogImage="https://selling303.com/images/og-investor-tools.jpg"
+  currentPage="investor-tools"
+  headerVariant="solid"
+>
+  <Fragment slot="head">
+    <!-- Schema: WebPage -->
+    <script type="application/ld+json" is:inline>
+    {
+      "@context":"https://schema.org",
+      "@type":"WebPage",
+      "name":"Investor Tools | Selling 303",
+      "url":"https://selling303.com/investor-tools",
+      "description":"Free rent estimate tool, rental income projections, and investment analysis for South Denver Metro properties.",
+      "author":{
+        "@type":"Person",
+        "name":"Jacob Stark"
+      }
+    }
+    </script>
+  </Fragment>
+
+  <!-- ========== PAGE HERO ========== -->
+  <PageHero
+    label="Investment Analysis"
+    heading="Know the Numbers Before You Buy"
+    subtext="Whether you're evaluating a rental property, considering an investment, or just curious what your home could rent for — run the numbers here."
+  />
+
+  <!-- ========== RENT ESTIMATE SECTION ========== -->
+  <section class="section section--white">
+    <div class="container">
+      <span class="section-label">Rent Estimate Tool</span>
+      <h2 class="section-heading">What Could Your Property Rent For?</h2>
+      <p class="section-subtext">Enter an address to get a real-time rent estimate powered by Rentometer. See how rents compare in your target neighborhood.</p>
+      <div class="quickview_widget" data-widget-id="_9LsmYX4ddcWBpGcWfb9jA"></div>
+      <script src="https://www.rentometer.com/widgets/rent.js" async is:inline></script>
+    </div>
+  </section>
+
+  <!-- ========== WHY INVESTOR-MINDED AGENT SECTION ========== -->
+  <section class="section">
+    <div class="container text-center">
+      <span class="section-label">Why It Matters</span>
+      <h2 class="section-heading">Why Work With an Investor-Minded Agent?</h2>
+      <p class="section-subtext">I don't just help you find a property — I help you analyze deals. Before I was an agent, I was flipping houses through Seventh Level Ventures. That investor perspective shapes every conversation.</p>
+      <div class="value-props">
+        <div class="value-prop">
+          <div class="value-prop__icon">💰</div>
+          <h3>Renovation ROI Analysis</h3>
+          <p>Not every upgrade adds value. I'll help you identify which improvements generate real returns and which are money pits — before you close.</p>
+        </div>
+        <div class="value-prop">
+          <div class="value-prop__icon">📈</div>
+          <h3>Rental Income Projections</h3>
+          <p>Using real market data, I'll help you project monthly cash flow, cap rates, and long-term appreciation potential for any property you're evaluating.</p>
+        </div>
+        <div class="value-prop">
+          <div class="value-prop__icon">⏱</div>
+          <h3>Market Timing</h3>
+          <p>Absorption rates, inventory trends, and seasonal patterns all affect your entry point. I'll help you read the data and time your purchase strategically.</p>
+        </div>
+        <div class="value-prop">
+          <div class="value-prop__icon">🏠</div>
+          <h3>Buy-and-Hold Strategy</h3>
+          <p>Whether you're looking for a long-term rental, a house hack, or a BRRRR deal, I'll help you build a strategy that aligns with your financial goals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA BANNER ========== -->
+  <CTABanner
+    heading="Thinking About an Investment Property?"
+    subtext="I'll run the numbers with you — no obligation. Whether it's your first rental or your tenth, you'll get honest analysis and real data."
+    variant="dark"
+  />
+</BaseLayout>

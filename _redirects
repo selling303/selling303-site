@@ -1,14 +1,28 @@
 # Netlify redirects for selling303.com
-# Clean URLs
-/index       /           301
-/home        /           301
 
-# Common patterns
-/neighborhoods/*  /neighborhoods.html  200
-/search      /neighborhoods.html  301
-/listings    /properties.html     301
+# Convenience shortcuts
 /schedule    https://calendly.com/jacob-realtor  302
 /call        https://calendly.com/jacob-realtor  302
 
-# SPA-style fallback (optional, for future use)
-# /*          /index.html   200
+# Legacy URL redirects (old static site paths → new Astro paths)
+/neighborhood-littleton           /neighborhoods/littleton          301
+/neighborhood-highlands-ranch     /neighborhoods/highlands-ranch    301
+/neighborhood-centennial          /neighborhoods/centennial         301
+/neighborhood-englewood           /neighborhoods/englewood          301
+/neighborhood-parker              /neighborhoods/parker             301
+/neighborhood-lakewood            /neighborhoods/lakewood           301
+/neighborhood-lone-tree           /neighborhoods/lone-tree          301
+/neighborhood-castle-pines        /neighborhoods/castle-pines       301
+/neighborhood-greenwood-village   /neighborhoods/greenwood-village  301
+/neighborhoods.html               /neighborhoods                    301
+/blog.html                        /blog                             301
+/index.html                       /                                 301
+/about.html                       /about                            301
+/contact.html                     /contact                          301
+/properties.html                  /properties                       301
+/expired-listings.html            /expired-listings                 301
+/move-up-sellers.html             /move-up-sellers                  301
+/first-time-buyers-sellers.html   /first-time-buyers-sellers        301
+/new-construction.html            /new-construction                 301
+/relocation.html                  /relocation                       301
+/investor-tools.html              /investor-tools                   301

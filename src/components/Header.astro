@@ -1,0 +1,63 @@
+---
+interface Props {
+  currentPage?: string;
+  variant?: 'transparent' | 'solid';
+}
+
+const { currentPage = '', variant = 'transparent' } = Astro.props;
+const headerClass = variant === 'solid' ? 'header header--solid' : 'header';
+---
+
+<header class={headerClass} id="header">
+  <div class="header__inner">
+    <a href="/" class="header__logo">Selling 303</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="header__nav" id="nav">
+      <ul class="header__nav-links">
+        <li class="has-dropdown">
+          <button class="header__nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">Buy <span class="dropdown-arrow">&#x25BE;</span></button>
+          <ul class="dropdown-menu">
+            <li><a href="/neighborhoods" class="dropdown-item">Search Homes</a></li>
+            <li><a href="/neighborhoods" class="dropdown-item">Neighborhoods</a></li>
+            <li><a href="/new-construction" class="dropdown-item">New Construction</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <button class="header__nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">Sell <span class="dropdown-arrow">&#x25BE;</span></button>
+          <ul class="dropdown-menu">
+            <li><a href="/#home-value" class="dropdown-item">Home Value</a></li>
+            <li><a href="/properties" class="dropdown-item">Properties</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <button class="header__nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">Your Situation <span class="dropdown-arrow">&#x25BE;</span></button>
+          <ul class="dropdown-menu">
+            <li><a href="/expired-listings" class="dropdown-item">Expired Listing</a></li>
+            <li><a href="/move-up-sellers" class="dropdown-item">Moving Up</a></li>
+            <li><a href="/first-time-buyers-sellers" class="dropdown-item">First-Time Buyer / Seller</a></li>
+            <li><a href="/relocation" class="dropdown-item">Relocating to Denver</a></li>
+            <li><a href="/new-construction" class="dropdown-item">New Construction</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <button class="header__nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">Resources <span class="dropdown-arrow">&#x25BE;</span></button>
+          <ul class="dropdown-menu">
+            <li><a href="/blog" class="dropdown-item">Blog</a></li>
+            <li><a href="/investor-tools" class="dropdown-item">Investor Tools</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <button class="header__nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true">About <span class="dropdown-arrow">&#x25BE;</span></button>
+          <ul class="dropdown-menu">
+            <li><a href="/about" class="dropdown-item">About Jacob</a></li>
+            <li><a href="/contact" class="dropdown-item">Contact</a></li>
+          </ul>
+        </li>
+      </ul>
+      <a href="https://calendly.com/jacob-realtor" class="btn btn--primary btn--sm header__cta" target="_blank" rel="noopener">Schedule a Call</a>
+    </nav>
+  </div>
+  <div class="nav-overlay" id="navOverlay"></div>
+</header>

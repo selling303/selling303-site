@@ -1,0 +1,384 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Expired Listing? Sell Your South Denver Home | Jacob Stark, REALTOR®"
+  description="Relist and sell your expired listing in South Denver. Jacob Stark helps sellers in Littleton, Highlands Ranch, Centennial. Expert relist strategy."
+  ogType="website"
+  ogUrl="https://selling303.com/expired-listings"
+  ogImage="https://selling303.com/images/og-default.jpg"
+  currentPage="expired-listings"
+  headerVariant="solid"
+>
+  <Fragment slot="head">
+    <!-- Schema: RealEstateAgent + Service -->
+    <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "Jacob Stark",
+      "jobTitle": "REALTOR®",
+      "url": "https://selling303.com",
+      "telephone": "+1-303-997-0634",
+      "email": "jacob@selling303.com",
+      "image": "https://selling303.com/images/jacob-stark-footer-avatar.png",
+      "worksFor": {
+        "@type": "RealEstateAgent",
+        "name": "8z Real Estate"
+      },
+      "areaServed": [
+        {"@type": "City", "name": "Littleton", "containedInPlace": {"@type": "State", "name": "Colorado"}},
+        {"@type": "City", "name": "Highlands Ranch", "containedInPlace": {"@type": "State", "name": "Colorado"}},
+        {"@type": "City", "name": "Centennial", "containedInPlace": {"@type": "State", "name": "Colorado"}},
+        {"@type": "City", "name": "Englewood", "containedInPlace": {"@type": "State", "name": "Colorado"}},
+        {"@type": "City", "name": "Parker", "containedInPlace": {"@type": "State", "name": "Colorado"}},
+        {"@type": "City", "name": "Lakewood", "containedInPlace": {"@type": "State", "name": "Colorado"}},
+        {"@type": "City", "name": "Lone Tree", "containedInPlace": {"@type": "State", "name": "Colorado"}},
+        {"@type": "City", "name": "Castle Pines", "containedInPlace": {"@type": "State", "name": "Colorado"}},
+        {"@type": "City", "name": "Greenwood Village", "containedInPlace": {"@type": "State", "name": "Colorado"}}
+      ],
+      "makesOffer": {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Expired Listing Relist Strategy",
+          "description": "Jacob Stark helps South Denver homeowners relist and sell properties that previously expired or were withdrawn from the MLS. Includes market analysis, pricing strategy, and full-service marketing.",
+          "serviceType": "Real Estate Listing Services",
+          "areaServed": "South Denver Metro, Colorado"
+        }
+      }
+    }
+    </script>
+    <!-- Schema: FAQPage -->
+    <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why didn't my house sell in South Denver?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The three most common reasons homes fail to sell in the South Denver Metro are pricing above what the market data supports, insufficient marketing exposure, and poor showing condition. In competitive suburbs like Highlands Ranch and Centennial, even 3–5% overpricing can push days on market past 60 and stall buyer interest."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long should I wait before relisting my expired listing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There is no required waiting period to relist an expired listing in Colorado. However, Jacob Stark typically recommends a strategic pause of 2–4 weeks to implement pricing adjustments, update photography, and relaunch with a refreshed MLS presence so the listing reappears as new inventory in buyer searches."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does Jacob Stark do differently to sell expired listings?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Jacob Stark starts every expired listing engagement with a data-driven audit: reviewing the prior listing's pricing, marketing, showing feedback, and days on market against current REcolorado MLS comparables. From there, he builds a repositioning plan with updated pricing, professional photography, and a targeted digital marketing campaign across Google, Instagram, and Facebook."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I switch agents after my listing expires?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Once your listing agreement expires, you are free to hire a new agent with no penalty. You are not obligated to relist with the same agent or brokerage. Jacob Stark works with expired listing sellers across Littleton, Highlands Ranch, Centennial, Englewood, Parker, and the broader South Denver Metro."
+          }
+        }
+      ]
+    }
+    </script>
+  </Fragment>
+
+  <!-- COMPACT PILLAR HERO -->
+  <section class="pillar-hero">
+    <div class="container">
+      <div class="pillar-hero__content">
+        <span class="pillar-hero__label">Your Situation</span>
+        <h1>Your Listing Expired. Now What?</h1>
+        <p class="pillar-hero__subtitle">A complete resource for South Denver homeowners whose listing didn't sell &mdash; what went wrong, what to do next, and how to relist with a strategy that works.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PILLAR PAGE BODY: TOC SIDEBAR + CONTENT -->
+  <section class="section section--white pillar-body">
+    <div class="pillar-layout">
+
+      <!-- STICKY TOC SIDEBAR -->
+      <aside class="pillar-toc" aria-label="Page navigation">
+        <span class="pillar-toc__label">On This Page</span>
+        <ul class="pillar-toc__list">
+          <li><a href="#direct-answer" class="pillar-toc__link active">Direct Answer</a></li>
+          <li><a href="#the-problem" class="pillar-toc__link">The Problem</a></li>
+          <li><a href="#why-listings-expire" class="pillar-toc__link">Why Listings Expire</a></li>
+          <li><a href="#the-approach" class="pillar-toc__link">The Approach</a></li>
+          <li><a href="#areas-served" class="pillar-toc__link">Areas Served</a></li>
+          <li><a href="#faq" class="pillar-toc__link">FAQ</a></li>
+          <li><a href="#related-reading" class="pillar-toc__link">Related Reading</a></li>
+          <li><a href="#why-jacob" class="pillar-toc__link">Why Jacob</a></li>
+        </ul>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <div class="pillar-content">
+
+        <!-- DIRECT ANSWER SNIPPET -->
+        <div class="snippet-block" id="direct-answer">
+          <span class="snippet-block__label">Direct Answer</span>
+          <p><strong>Why do listings expire in South Denver?</strong> The most common reasons are overpricing relative to the local market, weak marketing exposure, and poor showing condition. Jacob Stark, REALTOR&reg; at 8z Real Estate, specializes in relisting and selling expired listings across Littleton, Highlands Ranch, Centennial, and the broader South Denver Metro.</p>
+        </div>
+
+        <!-- THE PROBLEM -->
+        <div id="the-problem" style="padding-top: var(--space-xl);">
+          <span class="section-label">The Problem</span>
+          <h2 class="section-heading">Your Home Sat on the Market. That Doesn't Mean It Can't Sell.</h2>
+          <p>An expired listing doesn't mean your home is unsellable. It means something in the strategy didn't work &mdash; the price, the marketing, the presentation, the timing, or some combination. And the longer a property sits, the more leverage buyers think they have.</p>
+          <p>In South Denver suburbs like <a href="/neighborhoods">Littleton</a>, <a href="/neighborhoods">Highlands Ranch</a>, and <a href="/neighborhoods">Centennial</a>, the difference between a home that sells in 21 days and one that expires at 90 often comes down to pricing precision and marketing execution &mdash; not the home itself.</p>
+          <p>Jacob Stark approaches every expired listing as a diagnostic problem. What went wrong? What does the current data say? And what specific changes will get this home under contract?</p>
+
+          <!-- Inline CTA -->
+          <div class="section-cta">
+            <p>Want a free audit of your expired listing? Jacob will review what went wrong and what needs to change.</p>
+            <a href="tel:3039970634" class="btn btn--primary btn--sm">Call 303-997-0634</a>
+          </div>
+        </div>
+
+        <!-- WHY LISTINGS EXPIRE -->
+        <div id="why-listings-expire" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Common Causes</span>
+          <h2 class="section-heading">Why Homes Don't Sell in South Denver</h2>
+          <p style="margin-bottom: var(--space-lg);">Based on MLS data and pattern analysis from the South Denver Metro market, most expired listings share one or more of these issues.</p>
+          <div class="amenities-grid">
+            <div class="amenity-item">
+              <div class="amenity-item__icon">&#x1F4C9;</div>
+              <div>
+                <h4>Overpriced for the Market</h4>
+                <p>Even 3&ndash;5% above what comparable homes in Highlands Ranch or Centennial have actually closed at can push days on market past 60 and stall buyer interest entirely.</p>
+              </div>
+            </div>
+            <div class="amenity-item">
+              <div class="amenity-item__icon">&#x1F4F7;</div>
+              <div>
+                <h4>Weak Marketing &amp; Photography</h4>
+                <p>Phone photos, missing floor plans, no video walkthrough, and zero digital ad spend. Buyers scroll past listings that don't look professional in the first three seconds.</p>
+              </div>
+            </div>
+            <div class="amenity-item">
+              <div class="amenity-item__icon">&#x1F3E0;</div>
+              <div>
+                <h4>Poor Showing Condition</h4>
+                <p>Clutter, deferred maintenance, and dated finishes that weren't addressed before listing. Buyers in Littleton and Parker have options &mdash; they'll choose the home that's move-in ready.</p>
+              </div>
+            </div>
+            <div class="amenity-item">
+              <div class="amenity-item__icon">&#x1F4C5;</div>
+              <div>
+                <h4>Bad Timing or Market Shift</h4>
+                <p>Listing during a seasonal slowdown or rate spike without adjusting strategy. The South Denver market moves in cycles, and timing affects absorption rate.</p>
+              </div>
+            </div>
+            <div class="amenity-item">
+              <div class="amenity-item__icon">&#x1F6AB;</div>
+              <div>
+                <h4>Limited Buyer Access</h4>
+                <p>Restrictive showing windows, no lockbox, or pets that complicated appointments. Every showing you lose is a potential buyer who moved on to the next listing.</p>
+              </div>
+            </div>
+            <div class="amenity-item">
+              <div class="amenity-item__icon">&#x1F4AC;</div>
+              <div>
+                <h4>No Feedback Loop</h4>
+                <p>No one tracked showing feedback, analyzed buyer objections, or recommended adjustments. Without data, there's no way to course-correct before the listing expires.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- THE APPROACH -->
+        <div id="the-approach" style="padding-top: var(--space-2xl);">
+          <span class="section-label">The Approach</span>
+          <h2 class="section-heading">How Jacob Stark Sells Expired Listings</h2>
+          <p style="margin-bottom: var(--space-lg);">A data-first process built for sellers who've already been through a failed listing experience.</p>
+          <div class="process-steps">
+            <div class="process-step">
+              <h4>Listing Audit</h4>
+              <p>Jacob reviews the prior MLS data, pricing history, showing count, buyer feedback, photography, and marketing footprint. This identifies exactly what stalled the sale.</p>
+            </div>
+            <div class="process-step">
+              <h4>Market Repositioning</h4>
+              <p>A fresh CMA using current REcolorado data &mdash; not the comps from three months ago. Jacob sets a data-backed price that reflects where the market is today in your specific South Denver neighborhood.</p>
+            </div>
+            <div class="process-step">
+              <h4>Relaunch Strategy</h4>
+              <p>Professional photography, video walkthroughs, staging guidance, and a targeted digital marketing campaign across Google, Instagram, and Facebook. The goal: your home re-enters the market looking like a brand-new listing.</p>
+            </div>
+          </div>
+
+          <!-- Inline CTA -->
+          <div class="section-cta">
+            <p>Ready to talk strategy? Schedule a no-pressure call to review your options.</p>
+            <a href="https://calendly.com/jacob-realtor" class="btn btn--primary btn--sm" target="_blank" rel="noopener">Schedule a Call</a>
+          </div>
+        </div>
+
+        <!-- AREAS SERVED -->
+        <div id="areas-served" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Areas Served</span>
+          <h2 class="section-heading">Expired Listing Help Across South Denver</h2>
+          <p>Jacob Stark relists and sells expired listings throughout the South Denver Metro. Whether your home is in a walkable downtown pocket or a master-planned community, the diagnostic approach is the same &mdash; audit, reposition, relaunch.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: var(--space-md);">
+            <a href="/neighborhoods" class="btn btn--outline-dark btn--sm">Littleton</a>
+            <a href="/neighborhoods" class="btn btn--outline-dark btn--sm">Highlands Ranch</a>
+            <a href="/neighborhoods" class="btn btn--outline-dark btn--sm">Centennial</a>
+            <a href="/neighborhoods" class="btn btn--outline-dark btn--sm">Englewood</a>
+            <a href="/neighborhoods" class="btn btn--outline-dark btn--sm">Parker</a>
+            <a href="/neighborhoods" class="btn btn--outline-dark btn--sm">Lakewood</a>
+            <a href="/neighborhoods" class="btn btn--outline-dark btn--sm">Lone Tree</a>
+            <a href="/neighborhoods" class="btn btn--outline-dark btn--sm">Castle Pines</a>
+            <a href="/neighborhoods" class="btn btn--outline-dark btn--sm">Greenwood Village</a>
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <div id="faq" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Common Questions</span>
+          <h2 class="section-heading">Expired Listing FAQ</h2>
+          <div class="faq-list">
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Why didn't my house sell in South Denver?</button>
+              <div class="faq-answer">
+                <p>The three most common reasons homes fail to sell in the South Denver Metro are pricing above what the market data supports, insufficient marketing exposure, and poor showing condition. In competitive suburbs like Highlands Ranch and Centennial, even 3&ndash;5% overpricing can push days on market past 60 and stall buyer interest. Jacob Stark audits every expired listing against current REcolorado MLS data to identify the exact gap.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How long should I wait before relisting my expired listing?</button>
+              <div class="faq-answer">
+                <p>There is no required waiting period to relist an expired listing in Colorado. However, Jacob Stark typically recommends a strategic pause of 2&ndash;4 weeks to implement pricing adjustments, update photography, and relaunch with a refreshed MLS presence so the listing reappears as new inventory in buyer searches across Littleton, Highlands Ranch, Centennial, and the surrounding market.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What does Jacob Stark do differently to sell expired listings?</button>
+              <div class="faq-answer">
+                <p>Jacob Stark starts every expired listing engagement with a data-driven audit: reviewing the prior listing's pricing, marketing, showing feedback, and days on market against current REcolorado MLS comparables. From there, he builds a repositioning plan with updated pricing, professional photography, and a targeted digital marketing campaign across Google, Instagram, and Facebook &mdash; designed to make the home re-enter the South Denver market as if it were a brand-new listing.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Can I switch agents after my listing expires?</button>
+              <div class="faq-answer">
+                <p>Yes. Once your listing agreement expires, you are free to hire a new real estate agent with no penalty. You are not obligated to relist with the same agent or brokerage. Jacob Stark, REALTOR&reg; at 8z Real Estate, works with expired listing sellers across Littleton, Highlands Ranch, Centennial, Englewood, Parker, and the broader South Denver Metro.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RELATED READING -->
+        <div id="related-reading" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Related Reading</span>
+          <h2 class="section-heading">Expired Listing Insights</h2>
+          <div class="card-grid">
+            <a href="/blog" class="card">
+              <div class="card__body">
+                <span class="card__tag">Seller Advice</span>
+                <h3 class="card__title">Why Your House Isn't Selling in Denver &mdash; and What to Do About It</h3>
+                <p class="card__text">Data-backed reasons homes stall on the market, plus the strategy adjustments that actually work.</p>
+                <span class="card__meta">March 2026</span>
+              </div>
+            </a>
+            <a href="/blog" class="card">
+              <div class="card__body">
+                <span class="card__tag">Market Analysis</span>
+                <h3 class="card__title">Why Homes Sit on the Market in South Denver</h3>
+                <p class="card__text">Absorption rates, pricing patterns, and the market dynamics that determine how fast homes sell.</p>
+                <span class="card__meta">April 2026</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- WHY JACOB / TRUST BAR -->
+        <div id="why-jacob" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Why Jacob</span>
+          <h2 class="section-heading">The Numbers Behind the Strategy</h2>
+          <p style="margin-bottom: var(--space-lg);">Jacob Stark doesn't just relist homes &mdash; he sells them. These numbers reflect a track record of pricing accuracy, marketing execution, and client results across the South Denver Metro.</p>
+          <div class="trust-bar">
+            <div class="trust-bar__item">
+              <span class="trust-bar__value">$46M+</span>
+              <span class="trust-bar__label">in Sales</span>
+            </div>
+            <div class="trust-bar__item">
+              <span class="trust-bar__value">100.6%</span>
+              <span class="trust-bar__label">Avg Sale-to-List</span>
+            </div>
+            <div class="trust-bar__item">
+              <span class="trust-bar__value">83</span>
+              <span class="trust-bar__label">Families Helped</span>
+            </div>
+            <div class="trust-bar__item">
+              <span class="trust-bar__value">5.0</span>
+              <span class="trust-bar__label">Google Rating</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.pillar-content -->
+    </div><!-- /.pillar-layout -->
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="cta-banner" style="background-color: var(--color-white);">
+    <div class="container">
+      <h2 style="color: var(--color-dark-text);">Ready to Relist and Get It Right?</h2>
+      <p style="color: var(--color-body-text);">Jacob Stark will audit your expired listing, show you what the data says today, and build a strategy to get your South Denver home sold. No pressure, no pitch &mdash; just a clear plan.</p>
+      <a href="https://calendly.com/jacob-realtor" class="btn btn--primary btn--lg" target="_blank" rel="noopener">Schedule a Call</a>
+      <a href="tel:3039970634" class="btn btn--outline-dark btn--lg">Call 303-997-0634</a>
+    </div>
+  </section>
+
+  <script is:inline>
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = this.closest('.faq-item');
+        var isActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(function(el) {
+          el.classList.remove('active');
+          el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+        if (!isActive) {
+          item.classList.add('active');
+          this.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    // Sticky TOC active state
+    (function() {
+      var tocLinks = document.querySelectorAll('.pillar-toc__link');
+      var sections = [];
+      tocLinks.forEach(function(link) {
+        var id = link.getAttribute('href').replace('#', '');
+        var el = document.getElementById(id);
+        if (el) sections.push({ id: id, el: el, link: link });
+      });
+
+      function updateActive() {
+        var scrollPos = window.scrollY + 120;
+        var current = sections[0];
+        for (var i = 0; i < sections.length; i++) {
+          if (sections[i].el.offsetTop <= scrollPos) {
+            current = sections[i];
+          }
+        }
+        tocLinks.forEach(function(l) { l.classList.remove('active'); });
+        if (current) current.link.classList.add('active');
+      }
+
+      window.addEventListener('scroll', updateActive);
+      updateActive();
+    })();
+  </script>
+</BaseLayout>

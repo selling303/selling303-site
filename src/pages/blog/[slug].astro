@@ -1,0 +1,144 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { data } = entry;
+const { Content } = await render(entry);
+
+// Build Article JSON-LD
+const articleSchema: Record<string, any> = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": data.headline || data.title,
+  "description": data.description,
+  "image": data.ogImage || data.cardImage.url,
+  "author": {
+    "@type": "Person",
+    "name": "Jacob Stark",
+    "jobTitle": "REALTOR®",
+    "url": "https://selling303.com/about",
+    "worksFor": { "@type": "Organization", "name": "8z Real Estate" }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Selling 303",
+    "url": "https://selling303.com",
+    "logo": { "@type": "ImageObject", "url": "https://selling303.com/images/selling303-logo.png" }
+  },
+  "datePublished": data.date,
+  "dateModified": data.dateModified || data.date,
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": `https://selling303.com/blog/${entry.id}`
+  }
+};
+
+if (data.aboutPlaces && data.aboutPlaces.length > 0) {
+  articleSchema.about = data.aboutPlaces.map((place: string) => ({
+    "@type": "Place",
+    "name": place
+  }));
+}
+
+if (data.keywords) {
+  articleSchema.keywords = data.keywords;
+}
+
+const articleSchemaJson = JSON.stringify(articleSchema);
+
+// Build FAQ JSON-LD if present
+let faqSchemaJson: string | null = null;
+if (data.faqSchema && data.faqSchema.length > 0) {
+  faqSchemaJson = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": data.faqSchema.map((faq: { question: string; answer: string }) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+    }))
+  });
+}
+
+const ogImage = data.ogImage || data.cardImage.url;
+---
+
+<BaseLayout
+  title={data.title}
+  description={data.description}
+  ogType="article"
+  ogUrl={`https://selling303.com/blog/${entry.id}`}
+  ogImage={ogImage}
+  currentPage="blog"
+  headerVariant="solid"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" is:inline set:html={articleSchemaJson} />
+    {faqSchemaJson && <script type="application/ld+json" is:inline set:html={faqSchemaJson} />}
+  </Fragment>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label">{data.heroLabel}</span>
+      <h1>{data.title}</h1>
+      <p>{data.heroSubtext}</p>
+    </div>
+  </section>
+
+  <!-- ARTICLE -->
+  <article class="article">
+    <!-- AUTHOR BLOCK -->
+    <div class="article__meta">
+      <img src="/images/jacob-stark-avatar.png" alt="Jacob Stark, REALTOR® at 8z Real Estate" class="article__author-photo" width="48" height="48">
+      <div>
+        <span class="article__author-name">Jacob Stark</span>
+        <span>{data.date} &middot; {data.readTime}</span>
+      </div>
+    </div>
+
+    <!-- ARTICLE BODY (rendered from markdown) -->
+    <Content />
+  </article>
+
+  <!-- RELATED POSTS -->
+  {data.relatedPosts && data.relatedPosts.length > 0 && (
+    <section class="section related-posts">
+      <div class="container">
+        <span class="section-label">Keep Reading</span>
+        <h2 class="section-heading">Related Posts</h2>
+        <div class="card-grid">
+          {data.relatedPosts.map((post) => (
+            <a href={`/blog/${post.slug}`} class="card">
+              <div class="card__image" style={`background-image: url('${post.image.url}');`} role="img" aria-label={post.image.alt}></div>
+              <div class="card__body">
+                <span class="card__tag">{post.tag}</span>
+                <h3 class="card__title">{post.title}</h3>
+                <p class="card__text">{post.description}</p>
+                <span class="card__meta">{post.date}</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- CTA Section -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Have a Question?</h2>
+      <p>If something you read here raised a question about your situation, I'm happy to talk it through — no obligation.</p>
+      <a href="https://calendly.com/jacob-realtor" class="btn btn--primary btn--lg" target="_blank" rel="noopener">Schedule a Call</a>
+    </div>
+  </section>
+</BaseLayout>

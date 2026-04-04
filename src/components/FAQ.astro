@@ -1,0 +1,61 @@
+---
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  items: FAQItem[];
+  location?: string;
+}
+
+const { items, location } = Astro.props;
+
+// Inject location into questions/answers if provided
+const processedItems = items.map((item) => ({
+  question: location ? item.question.replace(/\{location\}/g, location) : item.question,
+  answer: location ? item.answer.replace(/\{location\}/g, location) : item.answer,
+}));
+
+// Build FAQPage JSON-LD schema
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: processedItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+---
+
+<section class="section section--light" id="faq">
+  <div class="container">
+    <h2 style="text-align: center; margin-bottom: var(--space-lg);">Frequently Asked Questions</h2>
+    <div style="max-width: 800px; margin: 0 auto;">
+      {processedItems.map((item) => (
+        <details class="faq-item" style="border-bottom: 1px solid var(--color-border, #e0e0e0); padding: var(--space-md) 0;">
+          <summary style="font-weight: 600; font-size: 1.0625rem; color: var(--color-dark-text); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+            <h3 style="margin: 0; font-size: 1.0625rem; font-weight: 600;">{item.question}</h3>
+            <span class="faq-icon" style="font-size: 1.25rem; color: var(--color-accent); flex-shrink: 0; margin-left: 1rem; transition: transform 0.2s;">+</span>
+          </summary>
+          <p style="color: var(--color-body-text); line-height: 1.7; margin-top: var(--space-sm); padding-right: 2rem;">{item.answer}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+<style>
+  details[open] .faq-icon {
+    transform: rotate(45deg);
+  }
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

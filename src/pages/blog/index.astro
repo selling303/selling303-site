@@ -1,0 +1,108 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// Get all blog posts, sorted by date (newest first)
+const posts = await getCollection('blog');
+
+// Parse dates for sorting — handle "Month Day, Year" format
+function parseDate(dateStr: string): number {
+  const d = new Date(dateStr);
+  return isNaN(d.getTime()) ? 0 : d.getTime();
+}
+
+const sortedPosts = posts.sort((a, b) => parseDate(b.data.date) - parseDate(a.data.date));
+
+// Extract unique categories for filter buttons
+const categories = [...new Set(sortedPosts.map((p) => p.data.category))];
+---
+
+<BaseLayout
+  title="Blog | Selling 303 — South Denver Real Estate Insights"
+  description="Market updates, neighborhood guides, buyer and seller advice for South Denver Metro. Honest, informed insights from Jacob Stark at 8z Real Estate."
+  ogUrl="https://selling303.com/blog"
+  ogImage="https://selling303.com/images/og-default.jpg"
+  currentPage="blog"
+  headerVariant="solid"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" is:inline>
+    {
+      "@context":"https://schema.org",
+      "@type":"Blog",
+      "name":"Selling 303 Blog",
+      "url":"https://selling303.com/blog",
+      "description":"Market updates, neighborhood guides, buyer and seller advice for South Denver Metro.",
+      "author":{"@type":"Person","name":"Jacob Stark"},
+      "publisher":{"@type":"Organization","name":"Selling 303"}
+    }
+    </script>
+  </Fragment>
+
+  <!-- Blog Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label">Blog</span>
+      <h1>Latest Insights</h1>
+      <p>Market data, neighborhood deep-dives, and practical advice for South Denver buyers and sellers.</p>
+    </div>
+  </section>
+
+  <!-- Filter Buttons Section -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="blog-filters" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: var(--space-lg);">
+        <button class="btn btn--sm btn--primary blog-filter active" data-filter="all">All</button>
+        <button class="btn btn--sm btn--outline-dark blog-filter" data-filter="costs-pricing">Costs &amp; Pricing</button>
+        <button class="btn btn--sm btn--outline-dark blog-filter" data-filter="problems-mistakes">Problems &amp; Mistakes</button>
+        <button class="btn btn--sm btn--outline-dark blog-filter" data-filter="comparisons">Comparisons</button>
+        <button class="btn btn--sm btn--outline-dark blog-filter" data-filter="best-of">Best Of</button>
+        <button class="btn btn--sm btn--outline-dark blog-filter" data-filter="what-to-expect">What to Expect</button>
+      </div>
+      <div class="card-grid card-grid--3col">
+        {sortedPosts.map((post) => (
+          <a href={`/blog/${post.id}`} class="card" data-category={post.data.category}>
+            <div class="card__image" style={`background-image: url('${post.data.cardImage.url}');`} role="img" aria-label={post.data.cardImage.alt}></div>
+            <div class="card__body">
+              <span class="card__tag">{post.data.tag}</span>
+              <h3 class="card__title">{post.data.title}</h3>
+              <p class="card__text">{post.data.description}</p>
+              <span class="card__meta">{post.data.date} &middot; {post.data.readTime}</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Have a Question?</h2>
+      <p>If something you read here raised a question about your situation, I'm happy to talk it through — no obligation.</p>
+      <a href="https://calendly.com/jacob-realtor" class="btn btn--primary btn--lg" target="_blank" rel="noopener">Schedule a Call</a>
+    </div>
+  </section>
+
+  <script is:inline>
+(function() {
+  const filters = document.querySelectorAll('.blog-filter');
+  const cards = document.querySelectorAll('.card-grid .card');
+  filters.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      filters.forEach(function(b) { b.classList.remove('active'); b.classList.remove('btn--primary'); b.classList.add('btn--outline-dark'); });
+      btn.classList.add('active'); btn.classList.add('btn--primary'); btn.classList.remove('btn--outline-dark');
+      var filter = btn.getAttribute('data-filter');
+      cards.forEach(function(card) {
+        var cat = (card.getAttribute('data-category') || '').toLowerCase().replace(/&/g,'').replace(/\s+/g,' ').trim().replace(/\s+/g,'-');
+        if (filter === 'all' || cat === filter) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+})();
+  </script>
+</BaseLayout>

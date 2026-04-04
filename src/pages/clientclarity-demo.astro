@@ -1,0 +1,766 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="ClientClarity Demo — Seller Dashboard | Selling 303"
+  description="See what the ClientClarity seller dashboard looks like — showing activity, buyer feedback, market position, and marketing timeline all in one view."
+  ogUrl="https://selling303.com/clientclarity-demo"
+  currentPage="clientclarity-demo"
+  headerVariant="solid"
+>
+  <head slot="head">
+    <style>
+      /* ─── PAGE-SPECIFIC STYLES ─── */
+      .demo-hero {
+        background: var(--color-primary, #002a3a);
+        color: #fff;
+        padding: 3.5rem 0 2.5rem;
+        text-align: center;
+      }
+
+      .demo-hero__label {
+        display: inline-block;
+        background: rgba(200, 149, 106, 0.2);
+        color: #C8956C;
+        font-size: .75rem;
+        font-weight: 700;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        padding: .35rem .9rem;
+        border-radius: 99px;
+        margin-bottom: 1rem;
+      }
+
+      .demo-hero h1 {
+        font-family: 'DM Serif Display', serif;
+        font-size: clamp(1.8rem, 4vw, 2.75rem);
+        margin-bottom: .75rem;
+        line-height: 1.2;
+        color: #fff;
+      }
+
+      .demo-hero__sub {
+        font-size: 1.1rem;
+        opacity: .85;
+        max-width: 520px;
+        margin: 0 auto 1.25rem;
+      }
+
+      .demo-hero__notice {
+        display: inline-flex;
+        align-items: center;
+        gap: .5rem;
+        background: rgba(255,255,255,.1);
+        border: 1px solid rgba(255,255,255,.2);
+        border-radius: 8px;
+        padding: .5rem 1rem;
+        font-size: .85rem;
+        color: rgba(255,255,255,.8);
+      }
+
+      .demo-hero__notice span {
+        background: #C8956C;
+        color: #fff;
+        font-weight: 700;
+        font-size: .7rem;
+        padding: .15rem .5rem;
+        border-radius: 4px;
+        text-transform: uppercase;
+        letter-spacing: .05em;
+      }
+
+      /* ─── DEMO LAYOUT ─── */
+      .demo-body {
+        background: #f7f8f9;
+        padding: 2.5rem 0 4rem;
+      }
+
+      .demo-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 1.25rem;
+      }
+
+      /* ─── EXAMPLE WATERMARK ─── */
+      .example-badge {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-35deg);
+        font-size: 6rem;
+        font-weight: 900;
+        color: rgba(0,42,58,.04);
+        pointer-events: none;
+        z-index: 0;
+        white-space: nowrap;
+        user-select: none;
+        letter-spacing: .2em;
+      }
+
+      /* ─── CARDS ─── */
+      .cc-card {
+        background: #fff;
+        border-radius: 14px;
+        box-shadow: 0 2px 16px rgba(0,42,58,.07);
+        padding: 1.75rem 2rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cc-card__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.25rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #ebedef;
+      }
+
+      .cc-card__title {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #002a3a;
+        text-transform: uppercase;
+        letter-spacing: .06em;
+      }
+
+      .cc-card__icon {
+        font-size: 1.25rem;
+      }
+
+      /* ─── LISTING OVERVIEW ─── */
+      .listing-overview__address {
+        font-family: 'DM Serif Display', serif;
+        font-size: 1.5rem;
+        color: #002a3a;
+        margin-bottom: .25rem;
+      }
+
+      .listing-overview__meta {
+        font-size: .9rem;
+        color: #6b7280;
+        margin-bottom: 1.25rem;
+      }
+
+      .listing-status {
+        display: inline-flex;
+        align-items: center;
+        gap: .4rem;
+        background: #ecfdf5;
+        color: #047857;
+        font-weight: 700;
+        font-size: .8rem;
+        letter-spacing: .06em;
+        padding: .3rem .8rem;
+        border-radius: 99px;
+        text-transform: uppercase;
+      }
+
+      .listing-status::before {
+        content: '';
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background: #047857;
+        border-radius: 50%;
+      }
+
+      .listing-stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 1rem;
+        margin-top: 1.25rem;
+      }
+
+      .listing-stat {
+        background: #f7f8f9;
+        border-radius: 10px;
+        padding: .9rem 1rem;
+      }
+
+      .listing-stat__label {
+        font-size: .75rem;
+        color: #6b7280;
+        text-transform: uppercase;
+        letter-spacing: .06em;
+        margin-bottom: .25rem;
+      }
+
+      .listing-stat__value {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #002a3a;
+      }
+
+      .listing-key-dates {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: .75rem;
+        margin-top: 1rem;
+      }
+
+      .key-date {
+        display: flex;
+        flex-direction: column;
+        gap: .15rem;
+      }
+
+      .key-date__label {
+        font-size: .75rem;
+        color: #9ca3af;
+        text-transform: uppercase;
+        letter-spacing: .06em;
+      }
+
+      .key-date__value {
+        font-size: .95rem;
+        font-weight: 600;
+        color: #002a3a;
+      }
+
+      .key-date__value .dom-badge {
+        background: #fffbeb;
+        color: #b45309;
+        font-size: .75rem;
+        font-weight: 700;
+        padding: .1rem .5rem;
+        border-radius: 6px;
+        margin-left: .4rem;
+      }
+
+      /* ─── BAR CHART ─── */
+      .showing-chart {
+        display: flex;
+        align-items: flex-end;
+        gap: 1.5rem;
+        height: 160px;
+        padding-bottom: 1.5rem;
+        border-bottom: 2px solid #ebedef;
+        margin-bottom: 1rem;
+      }
+
+      .chart-bar-group {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .5rem;
+        height: 100%;
+        justify-content: flex-end;
+      }
+
+      .chart-bar {
+        width: 100%;
+        max-width: 80px;
+        background: #002a3a;
+        border-radius: 6px 6px 0 0;
+        transition: background .2s;
+        position: relative;
+      }
+
+      .chart-bar:hover { background: #C8956C; }
+
+      .chart-bar__label {
+        position: absolute;
+        top: -1.5rem;
+        width: 100%;
+        text-align: center;
+        font-size: .85rem;
+        font-weight: 700;
+        color: #002a3a;
+      }
+
+      .chart-week-label {
+        font-size: .75rem;
+        color: #6b7280;
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      .showing-summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: .75rem;
+        margin-top: .5rem;
+      }
+
+      .showing-total {
+        font-weight: 700;
+        color: #002a3a;
+        font-size: .95rem;
+      }
+
+      .showing-callout {
+        background: #eff6ff;
+        color: #1d4ed8;
+        font-size: .82rem;
+        font-weight: 500;
+        padding: .4rem .9rem;
+        border-radius: 8px;
+        border-left: 3px solid #1d4ed8;
+      }
+
+      /* ─── FEEDBACK ─── */
+      .feedback-list {
+        display: flex;
+        flex-direction: column;
+        gap: .9rem;
+      }
+
+      .feedback-item {
+        background: #fafbfc;
+        border-radius: 10px;
+        padding: .95rem 1.1rem;
+        border-left: 3px solid #C8956C;
+      }
+
+      .feedback-item__meta {
+        font-size: .75rem;
+        color: #9ca3af;
+        margin-bottom: .3rem;
+      }
+
+      .feedback-item__text {
+        font-size: .92rem;
+        color: #374151;
+        line-height: 1.5;
+      }
+
+      /* ─── MARKET POSITION ─── */
+      .market-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: .9rem;
+      }
+
+      .market-table th {
+        text-align: left;
+        font-size: .73rem;
+        text-transform: uppercase;
+        letter-spacing: .06em;
+        color: #9ca3af;
+        font-weight: 600;
+        padding: .5rem .75rem;
+        border-bottom: 1px solid #ebedef;
+      }
+
+      .market-table td {
+        padding: .8rem .75rem;
+        border-bottom: 1px solid #f0f1f2;
+        color: #374151;
+      }
+
+      .market-table tr.highlight-row td {
+        background: #f0fdf4;
+        font-weight: 600;
+        color: #002a3a;
+      }
+
+      .market-table tr.highlight-row td:first-child {
+        border-left: 3px solid #047857;
+      }
+
+      .market-verdict {
+        margin-top: 1rem;
+        background: #ecfdf5;
+        border-radius: 10px;
+        padding: .9rem 1.1rem;
+        display: flex;
+        align-items: center;
+        gap: .75rem;
+        font-size: .92rem;
+        color: #047857;
+        font-weight: 500;
+      }
+
+      .market-verdict__icon {
+        font-size: 1.25rem;
+        flex-shrink: 0;
+      }
+
+      /* ─── TIMELINE ─── */
+      .timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .timeline-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: .75rem 0;
+        position: relative;
+      }
+
+      .timeline-item:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        left: 11px;
+        top: 2.2rem;
+        bottom: 0;
+        width: 2px;
+        background: #ebedef;
+      }
+
+      .timeline-check {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: #ecfdf5;
+        border: 2px solid #047857;
+        color: #047857;
+        font-size: .8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-top: .1rem;
+        font-weight: 700;
+      }
+
+      .timeline-content__label {
+        font-size: .95rem;
+        font-weight: 500;
+        color: #002a3a;
+      }
+
+      .timeline-content__date {
+        font-size: .78rem;
+        color: #9ca3af;
+        margin-top: .1rem;
+      }
+
+      /* ─── CTA SECTION ─── */
+      .cc-cta {
+        background: #002a3a;
+        color: #fff;
+        border-radius: 16px;
+        padding: 2.5rem 2rem;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+      }
+
+      .cc-cta::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(ellipse at top right, rgba(200,149,106,.15) 0%, transparent 60%);
+        pointer-events: none;
+      }
+
+      .cc-cta h2 {
+        font-family: 'DM Serif Display', serif;
+        font-size: clamp(1.4rem, 3vw, 1.9rem);
+        margin-bottom: .75rem;
+        line-height: 1.25;
+        color: #fff;
+      }
+
+      .cc-cta p {
+        opacity: .8;
+        font-size: .95rem;
+        margin-bottom: 1.75rem;
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .cc-cta .btn--cta {
+        display: inline-block;
+        background: #C8956C;
+        color: #fff;
+        font-weight: 700;
+        font-size: 1rem;
+        padding: .9rem 2rem;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: background .2s, transform .15s;
+      }
+
+      .cc-cta .btn--cta:hover {
+        background: #b4784d;
+        transform: translateY(-1px);
+      }
+
+      .cc-cta .btn--cta::after {
+        content: ' \2192';
+      }
+
+      /* ─── SECTION DIVIDER LABEL ─── */
+      .section-eyebrow {
+        font-size: .72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        color: #C8956C;
+        margin-bottom: .3rem;
+      }
+
+      /* ─── RESPONSIVE ─── */
+      @media (max-width: 600px) {
+        .cc-card { padding: 1.25rem 1.1rem; }
+        .listing-stats { grid-template-columns: repeat(2, 1fr); }
+        .showing-chart { gap: .75rem; height: 130px; }
+        .market-table { font-size: .82rem; }
+        .market-table th, .market-table td { padding: .6rem .5rem; }
+      }
+    </style>
+  </head>
+
+  <!-- Demo Hero -->
+  <section class="demo-hero">
+    <div class="demo-container">
+      <div class="demo-hero__label">ClientClarity</div>
+      <h1>Your Listing Dashboard</h1>
+      <p class="demo-hero__sub">See exactly where your home stands &mdash; every step of the way.</p>
+      <div class="demo-hero__notice">
+        <span>Example</span>
+        This is an example dashboard for a recently sold listing.
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo Body -->
+  <div class="demo-body">
+    <div class="demo-container" style="position:relative;">
+
+      <!-- Watermark -->
+      <div class="example-badge" aria-hidden="true">EXAMPLE</div>
+
+      <!-- Listing Overview -->
+      <div class="cc-card">
+        <div class="cc-card__header">
+          <div class="cc-card__title">Listing Overview</div>
+          <div class="cc-card__icon">&#x1F3E0;</div>
+        </div>
+
+        <div style="display:flex; align-items:flex-start; justify-content:space-between; flex-wrap:wrap; gap:1rem; margin-bottom:1rem;">
+          <div>
+            <div class="listing-overview__address">8742 S Yukon Way</div>
+            <div class="listing-overview__meta">Littleton, CO 80128</div>
+            <span class="listing-status">Sold</span>
+          </div>
+          <div style="text-align:right;">
+            <div style="font-size:1.75rem; font-weight:800; color:#002a3a; line-height:1;">$625,000</div>
+            <div style="font-size:.8rem; color:#9ca3af; margin-top:.2rem;">List Price</div>
+          </div>
+        </div>
+
+        <div class="listing-key-dates">
+          <div class="key-date">
+            <div class="key-date__label">Listed</div>
+            <div class="key-date__value">February 15, 2026</div>
+          </div>
+          <div class="key-date">
+            <div class="key-date__label">Under Contract</div>
+            <div class="key-date__value">March 3, 2026 <span class="dom-badge">16 DOM</span></div>
+          </div>
+        </div>
+
+        <div class="listing-stats">
+          <div class="listing-stat">
+            <div class="listing-stat__label">Beds</div>
+            <div class="listing-stat__value">4</div>
+          </div>
+          <div class="listing-stat">
+            <div class="listing-stat__label">Baths</div>
+            <div class="listing-stat__value">3</div>
+          </div>
+          <div class="listing-stat">
+            <div class="listing-stat__label">Sq Ft</div>
+            <div class="listing-stat__value">2,400</div>
+          </div>
+          <div class="listing-stat">
+            <div class="listing-stat__label">Lot</div>
+            <div class="listing-stat__value">0.18 ac</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Showing Activity -->
+      <div class="cc-card">
+        <div class="cc-card__header">
+          <div class="cc-card__title">Showing Activity</div>
+          <div class="cc-card__icon">&#x1F4C5;</div>
+        </div>
+
+        <div class="showing-chart">
+          <div class="chart-bar-group">
+            <div class="chart-bar" style="height:80%;">
+              <div class="chart-bar__label">8</div>
+            </div>
+            <div class="chart-week-label">Week 1<br>Feb 15–21</div>
+          </div>
+          <div class="chart-bar-group">
+            <div class="chart-bar" style="height:60%;">
+              <div class="chart-bar__label">6</div>
+            </div>
+            <div class="chart-week-label">Week 2<br>Feb 22–28</div>
+          </div>
+          <div class="chart-bar-group">
+            <div class="chart-bar" style="height:30%; background:#C8956C;">
+              <div class="chart-bar__label">3</div>
+            </div>
+            <div class="chart-week-label">Week 3*<br>Mar 1–3</div>
+          </div>
+        </div>
+
+        <div style="font-size:.75rem; color:#9ca3af; margin-bottom:.75rem;">* Went under contract March 3</div>
+
+        <div class="showing-summary">
+          <div class="showing-total">Total showings: <strong>17</strong></div>
+          <div class="showing-callout">&#x1F4CA; Median showings to go pending in Arapahoe County: 12</div>
+        </div>
+      </div>
+
+      <!-- Buyer Feedback -->
+      <div class="cc-card">
+        <div class="cc-card__header">
+          <div class="cc-card__title">Buyer Feedback</div>
+          <div class="cc-card__icon">&#x1F4AC;</div>
+        </div>
+
+        <div class="feedback-list">
+          <div class="feedback-item">
+            <div class="feedback-item__meta">Showing &mdash; Feb 17, 2026</div>
+            <div class="feedback-item__text">"Love the backyard and updated kitchen. Price feels right for the area."</div>
+          </div>
+          <div class="feedback-item">
+            <div class="feedback-item__meta">Showing &mdash; Feb 20, 2026</div>
+            <div class="feedback-item__text">"Great layout but master bath felt small. Still interested &mdash; will circle back."</div>
+          </div>
+          <div class="feedback-item">
+            <div class="feedback-item__meta">Showing &mdash; Feb 25, 2026</div>
+            <div class="feedback-item__text">"Loved the neighborhood and street presence. Very clean and move-in ready."</div>
+          </div>
+          <div class="feedback-item">
+            <div class="feedback-item__meta">Showing &mdash; Mar 2, 2026</div>
+            <div class="feedback-item__text">"Beautiful home, submitted an offer." &#x1F3C6;</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Market Position -->
+      <div class="cc-card">
+        <div class="cc-card__header">
+          <div class="cc-card__title">Market Position</div>
+          <div class="cc-card__icon">&#x1F4C8;</div>
+        </div>
+
+        <div class="section-eyebrow" style="margin-bottom:.75rem;">Your listing vs. competition</div>
+
+        <table class="market-table">
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>List Price</th>
+              <th>Sq Ft</th>
+              <th>$/Sq Ft</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="highlight-row">
+              <td>&#x2605; Your Home</td>
+              <td>$625,000</td>
+              <td>2,400</td>
+              <td>$260</td>
+            </tr>
+            <tr>
+              <td>Avg Active Comp</td>
+              <td>$649,000</td>
+              <td>2,350</td>
+              <td>$276</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="market-verdict">
+          <span class="market-verdict__icon">&#x2714;&#xFE0F;</span>
+          <span>Positioned competitively &mdash; priced to attract serious buyers and generate early momentum.</span>
+        </div>
+      </div>
+
+      <!-- Marketing Timeline -->
+      <div class="cc-card">
+        <div class="cc-card__header">
+          <div class="cc-card__title">Marketing Timeline</div>
+          <div class="cc-card__icon">&#x1F4E3;</div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-check">&#x2713;</div>
+            <div class="timeline-content">
+              <div class="timeline-content__label">Professional photography</div>
+              <div class="timeline-content__date">Patrick Bohn, Sotanda &mdash; Feb 13, 2026</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-check">&#x2713;</div>
+            <div class="timeline-content">
+              <div class="timeline-content__label">MLS listing live</div>
+              <div class="timeline-content__date">REcolorado &mdash; Feb 15, 2026</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-check">&#x2713;</div>
+            <div class="timeline-content">
+              <div class="timeline-content__label">RealScout buyer matching activated</div>
+              <div class="timeline-content__date">Feb 15, 2026</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-check">&#x2713;</div>
+            <div class="timeline-content">
+              <div class="timeline-content__label">Social media campaign launched</div>
+              <div class="timeline-content__date">Instagram &amp; Facebook &mdash; Feb 15, 2026</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-check">&#x2713;</div>
+            <div class="timeline-content">
+              <div class="timeline-content__label">Open house scheduled &amp; promoted</div>
+              <div class="timeline-content__date">Feb 22, 2026</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-check">&#x2713;</div>
+            <div class="timeline-content">
+              <div class="timeline-content__label">Agent broker tour completed</div>
+              <div class="timeline-content__date">Feb 18, 2026</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-check">&#x2713;</div>
+            <div class="timeline-content">
+              <div class="timeline-content__label">Weekly seller update #1 sent</div>
+              <div class="timeline-content__date">Feb 22, 2026</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-check" style="background:#ecfdf5; border-color:#047857; color:#047857;">&#x2713;</div>
+            <div class="timeline-content">
+              <div class="timeline-content__label" style="font-weight:700; color:#047857;">Under contract &mdash; 16 days on market</div>
+              <div class="timeline-content__date">March 3, 2026</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="cc-cta">
+        <h2>Want this level of clarity when you sell?</h2>
+        <p>Every seller I work with gets a live dashboard like this one &mdash; real data, real feedback, and full transparency from day one to close.</p>
+        <a href="https://calendly.com/jacob-realtor" class="btn--cta" target="_blank" rel="noopener">Schedule a call with Jacob</a>
+      </div>
+
+    </div>
+  </div>
+</BaseLayout>

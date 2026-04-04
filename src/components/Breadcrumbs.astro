@@ -1,0 +1,41 @@
+---
+interface BreadcrumbItem {
+  label: string;
+  url: string | null;
+}
+
+interface Props {
+  items: BreadcrumbItem[];
+}
+
+const { items } = Astro.props;
+
+// Generate JSON-LD BreadcrumbList schema
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: items.map((item, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: item.label,
+    item: item.url ? `${Astro.url.origin}${item.url}` : undefined,
+  })),
+};
+---
+
+<div style="font-size: 0.875rem; padding: var(--space-sm) 0; color: var(--color-body-text);">
+  {items.map((item, index) => (
+    <>
+      {item.url ? (
+        <a href={item.url} style="color: var(--color-accent);">
+          {item.label}
+        </a>
+      ) : (
+        <span>{item.label}</span>
+      )}
+      {index < items.length - 1 && <span style="margin: 0 0.5rem;"> > </span>}
+    </>
+  ))}
+</div>
+
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />

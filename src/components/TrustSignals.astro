@@ -1,0 +1,28 @@
+---
+interface Stat {
+  number: string;
+  label: string;
+}
+
+interface Props {
+  stats?: Stat[];
+}
+
+const defaultStats: Stat[] = [
+  { number: "$46M+", label: "Career Sales Volume" },
+  { number: "83", label: "Families Helped" },
+  { number: "100.6%", label: "Avg Sale-to-List" },
+  { number: "5.0", label: "Google Rating" },
+];
+
+const { stats = defaultStats } = Astro.props;
+---
+
+<div class="credentials">
+  {stats.map((stat) => (
+    <div class="credential">
+      <span class="credential__number">{stat.number}</span>
+      <span class="credential__label">{stat.label}</span>
+    </div>
+  ))}
+</div>

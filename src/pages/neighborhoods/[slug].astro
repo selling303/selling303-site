@@ -1,0 +1,180 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const neighborhoods = await getCollection('neighborhoods');
+  return neighborhoods.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { data } = entry;
+
+// Build schema JSON
+const schemaJson = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": data.metaTitle,
+  "url": `https://selling303.com/neighborhoods/${entry.id}`,
+  "description": data.description,
+  "about": {
+    "@type": "Place",
+    "name": `${data.title}, Colorado`,
+    "containedInPlace": { "@type": "State", "name": "Colorado" }
+  },
+  "author": { "@type": "Person", "name": "Jacob Stark" }
+});
+---
+
+<BaseLayout
+  title={data.metaTitle}
+  description={data.description}
+  ogType="website"
+  ogUrl={`https://selling303.com/neighborhoods/${entry.id}`}
+  ogImage="https://selling303.com/images/og-default.jpg"
+  currentPage="neighborhoods"
+  headerVariant="solid"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" is:inline set:html={schemaJson} />
+    <script src="https://em.realscout.com/widgets/realscout-web-components.umd.js" type="module" is:inline></script>
+  </Fragment>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label">Neighborhoods</span>
+      <h1>{data.title}, Colorado</h1>
+      <p>{data.heroSubtext}</p>
+    </div>
+  </section>
+
+  <!-- AREA DESCRIPTION -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <span class="section-label">About the Area</span>
+          <h2 class="section-heading">{data.aboutHeading}</h2>
+          {data.aboutParagraphs.map((p) => <p>{p}</p>)}
+        </div>
+        <div class="two-col__image">
+          <img src={data.aboutImage.url} alt={data.aboutImage.alt} width="1200" height="900" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARKET STATS -->
+  <section class="section">
+    <div class="container text-center">
+      <span class="section-label">Market Data</span>
+      <h2 class="section-heading">{data.title} by the Numbers</h2>
+      <p class="section-subtext">Current market snapshot based on recent MLS data. Updated regularly.</p>
+      <div class="neighborhood-stats">
+        <div class="neighborhood-stat">
+          <span class="neighborhood-stat__value">{data.stats.medianPrice}</span>
+          <span class="neighborhood-stat__label">Median Sale Price</span>
+        </div>
+        <div class="neighborhood-stat">
+          <span class="neighborhood-stat__value">{data.stats.avgDOM}</span>
+          <span class="neighborhood-stat__label">Avg Days on Market</span>
+        </div>
+        <div class="neighborhood-stat">
+          <span class="neighborhood-stat__value">{data.stats.listPriceReceived}</span>
+          <span class="neighborhood-stat__label">List Price Received</span>
+        </div>
+        <div class="neighborhood-stat">
+          <span class="neighborhood-stat__value">{data.stats.activeListings}</span>
+          <span class="neighborhood-stat__label">Active Listings</span>
+        </div>
+      </div>
+      <p class="market-stats-source" style="margin-top: var(--space-md);">Source: {data.stats.source} &middot; {data.stats.sourceDate}</p>
+    </div>
+  </section>
+
+  <!-- LISTINGS EMBED -->
+  <section class="section section--white">
+    <div class="container">
+      <span class="section-label">Active Listings</span>
+      <h2 class="section-heading">Homes for Sale in {data.title}</h2>
+      <div class="embed-placeholder">
+        <realscout-advanced-search></realscout-advanced-search>
+        <p style="margin-top: 1rem;">
+          <a href={data.realscoutSearchUrl} class="btn btn--primary btn--lg" target="_blank" rel="noopener">Search Homes in {data.title}</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AMENITIES / LIFESTYLE -->
+  <section class="section">
+    <div class="container">
+      <span class="section-label">Lifestyle</span>
+      <h2 class="section-heading">What It's Like Living in {data.title}</h2>
+      <p class="section-subtext">Key amenities and lifestyle highlights that define the area.</p>
+      <div class="amenities-grid">
+        {data.amenities.map((amenity) => (
+          <div class="amenity-item">
+            <div class="amenity-item__icon" set:html={amenity.icon} />
+            <div>
+              <h4>{amenity.title}</h4>
+              <p>{amenity.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- LIVE MARKET CHARTS (if available) -->
+  {data.showingTimeCharts && data.showingTimeCharts.length > 0 && (
+    <section class="section section--white">
+      <div class="container text-center">
+        <span class="section-label">Live MLS Data</span>
+        <h2 class="section-heading">{data.title} Market Charts</h2>
+        <p class="section-subtext">REcolorado MLS data, updated automatically.</p>
+        <div style="display: grid; grid-template-columns: 1fr; gap: var(--space-lg); max-width: 800px; margin: var(--space-lg) auto 0;">
+          {data.showingTimeCharts.map((chart) => (
+            <div>
+              <img src={chart.url} alt={chart.alt} style="width: 100%; height: auto; border-radius: var(--radius-md);" loading="lazy" />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- RELATED BLOG POSTS -->
+  <section class="section section--dark related-posts">
+    <div class="container">
+      <span class="section-label">Related Articles</span>
+      <h2 class="section-heading">{data.title} Insights</h2>
+      <div class="card-grid">
+        {data.relatedPosts.map((post) => (
+          <a href="/blog" class="card card--dark">
+            <div class="card__body">
+              <span class="card__tag">{post.tag}</span>
+              <h3 class="card__title">{post.title}</h3>
+              <p class="card__text">{post.description}</p>
+              <span class="card__meta">{post.date}</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner" style="background-color: var(--color-white);">
+    <div class="container">
+      <h2 style="color: var(--color-dark-text);">{data.cta.heading}</h2>
+      <p style="color: var(--color-body-text);">{data.cta.text}</p>
+      <a href="https://calendly.com/jacob-realtor" class="btn btn--primary btn--lg" target="_blank" rel="noopener">Schedule a Call</a>
+      <a href="tel:3039970634" class="btn btn--outline-dark btn--lg">Call 303-997-0634</a>
+    </div>
+  </section>
+</BaseLayout>

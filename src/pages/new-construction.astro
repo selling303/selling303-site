@@ -1,0 +1,395 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="New Construction Buyer Representation | South Denver | Jacob Stark, REALTOR®"
+  description="Buying new construction in South Denver? Jacob Stark represents buyers — not builders — in Littleton, Highlands Ranch, Parker, and Castle Pines."
+  ogType="website"
+  ogUrl="https://selling303.com/new-construction"
+  ogImage="https://selling303.com/images/og-default.jpg"
+  currentPage="new-construction"
+  headerVariant="solid"
+>
+  <Fragment slot="head">
+    <!-- Schema: RealEstateAgent + Service -->
+    <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "Jacob Stark",
+      "jobTitle": "REALTOR®",
+      "url": "https://selling303.com",
+      "telephone": "+1-303-997-0634",
+      "email": "jacob@selling303.com",
+      "image": "https://selling303.com/images/jacob-stark-footer-avatar.png",
+      "worksFor": {
+        "@type": "RealEstateAgent",
+        "name": "8z Real Estate"
+      },
+      "areaServed": [
+        {"@type": "City", "name": "Littleton", "containedInPlace": {"@type": "State", "name": "Colorado"}},
+        {"@type": "City", "name": "Highlands Ranch", "containedInPlace": {"@type": "State", "name": "Colorado"}},
+        {"@type": "City", "name": "Centennial", "containedInPlace": {"@type": "State", "name": "Colorado"}},
+        {"@type": "City", "name": "Englewood", "containedInPlace": {"@type": "State", "name": "Colorado"}},
+        {"@type": "City", "name": "Parker", "containedInPlace": {"@type": "State", "name": "Colorado"}},
+        {"@type": "City", "name": "Lakewood", "containedInPlace": {"@type": "State", "name": "Colorado"}},
+        {"@type": "City", "name": "Lone Tree", "containedInPlace": {"@type": "State", "name": "Colorado"}},
+        {"@type": "City", "name": "Castle Pines", "containedInPlace": {"@type": "State", "name": "Colorado"}},
+        {"@type": "City", "name": "Greenwood Village", "containedInPlace": {"@type": "State", "name": "Colorado"}}
+      ],
+      "makesOffer": {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "New Construction Buyer Representation",
+          "description": "Jacob Stark represents new construction buyers across South Denver Metro, protecting buyer interests in negotiations with builders. Services include builder and community research, contract review and negotiation, and construction monitoring through closing.",
+          "serviceType": "Real Estate Buyer Services",
+          "areaServed": "South Denver Metro, Colorado"
+        }
+      }
+    }
+    </script>
+    <!-- Schema: FAQPage -->
+    <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does it cost extra to have my own agent for new construction?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Builders are required to pay buyer agent commissions in Colorado, just like traditional resale transactions. There is no additional cost to you for having Jacob Stark, REALTOR®, represent your interests. Many buyers don't realize this &mdash; they assume the builder's on-site agent is neutral. That agent works for the builder, not you. Having your own buyer's agent protects your interests at no out-of-pocket cost."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What can a buyer's agent negotiate with a builder?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A buyer's agent can negotiate contract terms, upgrade pricing, included features, financing contingencies, closing timelines, and allowances. Jacob Stark reviews builder contracts line-by-line, identifies terms that favor the builder, and negotiates more favorable terms on your behalf &mdash; including price protection, closing cost assistance, and upgrade discounts that many buyers never know to ask for."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I get an inspection on a new build?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Many new construction contracts limit your inspection rights or require you to accept the home 'as-is' after final walkthrough. Jacob Stark insists on protecting your inspection rights and recommends a third-party inspection by a certified inspector before closing. New homes can have construction defects, missing finishes, or code violations that the builder's standards don't catch. An inspection protects you."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What new construction communities are in South Denver?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "South Denver has active new construction communities across all price points. Sterling Ranch near Littleton, Solstice in Castle Pines, and communities throughout Parker, Highlands Ranch, and Littleton offer everything from townhomes to single-family homes. Jacob Stark specializes in all South Denver new construction markets and can walk you through what's available in your target area and price range."
+          }
+        }
+      ]
+    }
+    </script>
+  </Fragment>
+
+  <!-- COMPACT PILLAR HERO -->
+  <section class="pillar-hero">
+    <div class="container">
+      <div class="pillar-hero__content">
+        <span class="pillar-hero__label">Your Situation</span>
+        <h1>Buying New Construction? You Need Your Own Agent.</h1>
+        <p class="pillar-hero__subtitle">The builder's on-site agent represents the builder, not you. Jacob Stark, REALTOR® at 8z Real Estate, represents new construction buyers across South Denver &mdash; protecting your interests at no additional cost.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PILLAR PAGE BODY: TOC SIDEBAR + CONTENT -->
+  <section class="section section--white pillar-body">
+    <div class="pillar-layout">
+
+      <!-- STICKY TOC SIDEBAR -->
+      <aside class="pillar-toc" aria-label="Page navigation">
+        <span class="pillar-toc__label">On This Page</span>
+        <ul class="pillar-toc__list">
+          <li><a href="#direct-answer" class="pillar-toc__link active">Direct Answer</a></li>
+          <li><a href="#the-problem" class="pillar-toc__link">The Problem</a></li>
+          <li><a href="#what-builders-wont-tell-you" class="pillar-toc__link">What Builders Won't Tell You</a></li>
+          <li><a href="#the-approach" class="pillar-toc__link">The Approach</a></li>
+          <li><a href="#areas-served" class="pillar-toc__link">Areas Served</a></li>
+          <li><a href="#faq" class="pillar-toc__link">FAQ</a></li>
+          <li><a href="#related-reading" class="pillar-toc__link">Related Reading</a></li>
+          <li><a href="#why-jacob" class="pillar-toc__link">Why Jacob</a></li>
+        </ul>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <div class="pillar-content">
+
+        <!-- DIRECT ANSWER SNIPPET -->
+        <div class="snippet-block" id="direct-answer">
+          <span class="snippet-block__label">Direct Answer</span>
+          <p><strong>Do I need a real estate agent when buying new construction in Colorado?</strong> Yes. The builder's on-site agent represents the builder's interests, not yours. Jacob Stark, REALTOR® at 8z Real Estate, represents new construction buyers across South Denver at no additional cost. You gain contract negotiation expertise, builder awareness, and price protection — while the builder still pays the commission.</p>
+        </div>
+
+
+        <!-- THE PROBLEM -->
+        <div id="the-problem" style="padding-top: var(--space-xl);">
+          <span class="section-label">The Problem</span>
+          <h2 class="section-heading">Most Buyers Don't Know the Model Home Agent Works for the Builder.</h2>
+          <p>When you walk into a new construction model home and meet the agent at the sales office, that agent works for the builder, not you. Their job is to sell homes at the highest price with the most favorable terms — for the builder. Many buyers assume this agent is neutral, or even working in their favor. They are not.</p>
+          <p>Without your own buyer's agent, you're negotiating against a professional whose paycheck depends on the builder's profit. You won't know market comparables. You won't know what upgrades actually cost elsewhere. You won't have someone reviewing the contract for terms that favor the builder. And you won't know if the lot you've chosen has resale challenges.</p>
+          <p>In South Denver new construction communities like Sterling Ranch in Littleton, Solstice in Castle Pines, and growing neighborhoods across Parker and Highlands Ranch, having Jacob Stark represent you levels the playing field. He brings market data, contract expertise, and a clear focus on protecting your investment — not the builder's margins.</p>
+
+          <!-- Inline CTA -->
+          <div class="section-cta">
+            <p>Want a free consultation about your new construction purchase? Jacob will review your options and timeline.</p>
+            <a href="https://calendly.com/jacob-realtor" class="btn btn--primary btn--sm" target="_blank" rel="noopener">Schedule a Call</a>
+          </div>
+        </div>
+
+
+        <!-- WHAT BUILDERS WON'T TELL YOU -->
+        <div id="what-builders-wont-tell-you" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Buyer Protection</span>
+          <h2 class="section-heading">What the Builder Won't Tell You</h2>
+          <p style="margin-bottom: var(--space-lg);">Builders profit by controlling information. Jacob Stark brings transparency and data to every step of new construction buying.</p>
+          <div class="amenities-grid">
+            <div class="amenity-item">
+              <div class="amenity-item__icon">&#x1F3A8;</div>
+              <div>
+                <h4>The Builder's Agent Works for the Builder</h4>
+                <p>Not you. That sales office agent is paid to maximize the builder's profit. Upgrades, pricing, contract terms — they're all negotiated to favor the builder. Jacob Stark advocates for buyer-friendly terms and genuine market value.</p>
+              </div>
+            </div>
+            <div class="amenity-item">
+              <div class="amenity-item__icon">&#x1F4B5;</div>
+              <div>
+                <h4>Upgrades &amp; Pricing Aren't Always Fair</h4>
+                <p>Builders lock you into their upgrade pricing, which is often 20&ndash;40% above market rate for the same work. Jacob Stark knows what upgrades actually cost and can negotiate builder allowances or credits that save thousands.</p>
+              </div>
+            </div>
+            <div class="amenity-item">
+              <div class="amenity-item__icon">&#x1F50D;</div>
+              <div>
+                <h4>Inspection Is Still Critical</h4>
+                <p>Many new construction contracts limit your inspection rights or require acceptance 'as-is' after final walkthrough. Jacob Stark protects your inspection rights and recommends third-party inspection before closing to catch defects builders miss.</p>
+              </div>
+            </div>
+            <div class="amenity-item">
+              <div class="amenity-item__icon">&#x1F4DC;</div>
+              <div>
+                <h4>Contract Terms Favor the Builder</h4>
+                <p>Builder contracts are written to protect the builder, not you. Limited contingencies, tight deadlines, penalty clauses, and vague completion timelines. Jacob Stark reviews every line and negotiates terms that protect your investment.</p>
+              </div>
+            </div>
+            <div class="amenity-item">
+              <div class="amenity-item__icon">&#x1F3D7;</div>
+              <div>
+                <h4>Lot Selection Matters More Than You Think</h4>
+                <p>Lot location, orientation, and community infrastructure affect resale value. Some lots face busy roads, have poor drainage, or sit in less desirable sections. Jacob Stark helps you choose lots with genuine resale strength and future appreciation potential.</p>
+              </div>
+            </div>
+            <div class="amenity-item">
+              <div class="amenity-item__icon">&#x1F4C8;</div>
+              <div>
+                <h4>Resale Value Varies by Community</h4>
+                <p>Not all new construction appreciates equally. Builder reputation, community amenities, homeowner association quality, and location all impact resale. Jacob Stark has data on which South Denver new construction communities hold value best.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- THE APPROACH -->
+        <div id="the-approach" style="padding-top: var(--space-2xl);">
+          <span class="section-label">The Approach</span>
+          <h2 class="section-heading">How Jacob Stark Helps New Construction Buyers</h2>
+          <p style="margin-bottom: var(--space-lg);">A buyer-first process built to protect your interests from first walkthrough to final closing.</p>
+          <div class="process-steps">
+            <div class="process-step">
+              <h4>Builder &amp; Community Research</h4>
+              <p>Jacob analyzes the builder's reputation, pricing history, warranty coverage, and construction timeline reliability. He researches community amenities, HOA fees and restrictions, infrastructure development, and long-term appreciation potential across all South Denver new construction markets.</p>
+            </div>
+            <div class="process-step">
+              <h4>Negotiation &amp; Contract Review</h4>
+              <p>Line-by-line contract review identifying terms that favor the builder. Jacob negotiates price, upgrades, allowances, inspection rights, contingencies, closing timeline, and financing protections. He leverages market data and builder competition to secure genuine buyer advantages.</p>
+            </div>
+            <div class="process-step">
+              <h4>Construction Monitoring &amp; Closing</h4>
+              <p>Regular property inspections during construction to track progress and catch defects early. Final walkthrough coordination with third-party inspection before closing. Jacob ensures the home matches the contract specs, all agreed upgrades are completed, and closing happens on schedule.</p>
+            </div>
+          </div>
+
+          <!-- Inline CTA -->
+          <div class="section-cta">
+            <p>Ready to get an advocate on your side? Schedule a call to discuss your new construction purchase.</p>
+            <a href="https://calendly.com/jacob-realtor" class="btn btn--primary btn--sm" target="_blank" rel="noopener">Schedule a Call</a>
+          </div>
+        </div>
+
+
+        <!-- AREAS SERVED -->
+        <div id="areas-served" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Areas Served</span>
+          <h2 class="section-heading">New Construction Buyer Representation Across South Denver</h2>
+          <p>Jacob Stark represents new construction buyers throughout the South Denver Metro. Whether you're building in Littleton, Highlands Ranch, Parker, Castle Pines, or anywhere across South Denver, the buyer-first approach is the same — research, negotiation, and protection.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: var(--space-md);">
+            <a href="/neighborhoods" class="btn btn--outline-dark btn--sm">Littleton</a>
+            <a href="/neighborhoods" class="btn btn--outline-dark btn--sm">Highlands Ranch</a>
+            <a href="/neighborhoods" class="btn btn--outline-dark btn--sm">Centennial</a>
+            <a href="/neighborhoods" class="btn btn--outline-dark btn--sm">Englewood</a>
+            <a href="/neighborhoods" class="btn btn--outline-dark btn--sm">Parker</a>
+            <a href="/neighborhoods" class="btn btn--outline-dark btn--sm">Lakewood</a>
+            <a href="/neighborhoods" class="btn btn--outline-dark btn--sm">Lone Tree</a>
+            <a href="/neighborhoods" class="btn btn--outline-dark btn--sm">Castle Pines</a>
+            <a href="/neighborhoods" class="btn btn--outline-dark btn--sm">Greenwood Village</a>
+          </div>
+        </div>
+
+
+        <!-- FAQ -->
+        <div id="faq" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Common Questions</span>
+          <h2 class="section-heading">New Construction Buyer FAQ</h2>
+          <div class="faq-list">
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Does it cost extra to have my own agent for new construction?</button>
+              <div class="faq-answer">
+                <p>No. Builders are required to pay buyer agent commissions in Colorado, just like traditional resale transactions. There is no additional cost to you for having Jacob Stark, REALTOR®, represent your interests. Many buyers don't realize this — they assume the builder's on-site agent is neutral. That agent works for the builder, not you. Having your own buyer's agent protects your interests at no out-of-pocket cost.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What can a buyer's agent negotiate with a builder?</button>
+              <div class="faq-answer">
+                <p>A buyer's agent can negotiate contract terms, upgrade pricing, included features, financing contingencies, closing timelines, and allowances. Jacob Stark reviews builder contracts line-by-line, identifies terms that favor the builder, and negotiates more favorable terms on your behalf — including price protection, closing cost assistance, and upgrade discounts that many buyers never know to ask for. In competitive South Denver markets like Parker and Castle Pines, this negotiation can save tens of thousands of dollars.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Should I get an inspection on a new build?</button>
+              <div class="faq-answer">
+                <p>Yes. Many new construction contracts limit your inspection rights or require you to accept the home 'as-is' after final walkthrough. Jacob Stark insists on protecting your inspection rights and recommends a third-party inspection by a certified inspector before closing. New homes can have construction defects, missing finishes, punch-list items, or code violations that the builder's standards don't catch. An inspection protects your investment and gives you leverage to request builder corrections before you take ownership.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What new construction communities are in South Denver?</button>
+              <div class="faq-answer">
+                <p>South Denver has active new construction across all price points and product types. Sterling Ranch near Littleton offers townhomes and single-family homes. Solstice in Castle Pines features premium single-family homes. Parker has multiple communities in various phases of development. Highlands Ranch offers new construction alongside established inventory. Jacob Stark specializes in all South Denver new construction markets and can walk you through what's available in your target area, price range, and timeline.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- RELATED READING -->
+        <div id="related-reading" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Related Reading</span>
+          <h2 class="section-heading">New Construction Insights</h2>
+          <div class="card-grid">
+            <a href="/blog" class="card">
+              <div class="card__body">
+                <span class="card__tag">Buyer Guide</span>
+                <h3 class="card__title">Parker vs. Castle Pines: Where Should You Build?</h3>
+                <p class="card__text">Community comparison, price points, lifestyle, and appreciation potential for new construction buyers in South Denver's fastest-growing areas.</p>
+                <span class="card__meta">April 2026</span>
+              </div>
+            </a>
+            <a href="/blog" class="card">
+              <div class="card__body">
+                <span class="card__tag">Market Analysis</span>
+                <h3 class="card__title">Best Neighborhoods in South Denver for Move-Up Buyers</h3>
+                <p class="card__text">Top communities for buyers stepping up in price or size, including new construction options with strong appreciation and lifestyle fit.</p>
+                <span class="card__meta">March 2026</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+
+        <!-- WHY JACOB / TRUST BAR -->
+        <div id="why-jacob" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Why Jacob</span>
+          <h2 class="section-heading">The Numbers Behind the Strategy</h2>
+          <p style="margin-bottom: var(--space-lg);">Jacob Stark doesn't just represent new construction buyers — he protects them. These numbers reflect a track record of negotiation success, buyer advocacy, and client results across the South Denver Metro.</p>
+          <div class="trust-bar">
+            <div class="trust-bar__item">
+              <span class="trust-bar__value">$46M+</span>
+              <span class="trust-bar__label">in Sales</span>
+            </div>
+            <div class="trust-bar__item">
+              <span class="trust-bar__value">100.6%</span>
+              <span class="trust-bar__label">Avg Sale-to-List</span>
+            </div>
+            <div class="trust-bar__item">
+              <span class="trust-bar__value">83</span>
+              <span class="trust-bar__label">Families Helped</span>
+            </div>
+            <div class="trust-bar__item">
+              <span class="trust-bar__value">5.0</span>
+              <span class="trust-bar__label">Google Rating</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.pillar-content -->
+    </div><!-- /.pillar-layout -->
+  </section>
+
+
+  <!-- FINAL CTA -->
+  <section class="cta-banner" style="background-color: var(--color-white);">
+    <div class="container">
+      <h2 style="color: var(--color-dark-text);">Building in South Denver? Get Your Own Advocate.</h2>
+      <p style="color: var(--color-body-text);">Jacob Stark represents new construction buyers across Littleton, Highlands Ranch, Parker, Castle Pines, and the entire South Denver Metro. No cost to you. No conflict of interest. Just protection for your investment.</p>
+      <a href="https://calendly.com/jacob-realtor" class="btn btn--primary btn--lg" target="_blank" rel="noopener">Schedule a Call</a>
+      <a href="tel:3039970634" class="btn btn--outline-dark btn--lg">Call 303-997-0634</a>
+    </div>
+  </section>
+
+  <script is:inline>
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = this.closest('.faq-item');
+        var isActive = item.classList.contains('active');
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(function(el) {
+          el.classList.remove('active');
+          el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+        // Toggle current
+        if (!isActive) {
+          item.classList.add('active');
+          this.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    // Sticky TOC active state
+    (function() {
+      var tocLinks = document.querySelectorAll('.pillar-toc__link');
+      var sections = [];
+      tocLinks.forEach(function(link) {
+        var id = link.getAttribute('href').replace('#', '');
+        var el = document.getElementById(id);
+        if (el) sections.push({ id: id, el: el, link: link });
+      });
+
+      function updateActive() {
+        var scrollPos = window.scrollY + 120;
+        var current = sections[0];
+        for (var i = 0; i < sections.length; i++) {
+          if (sections[i].el.offsetTop <= scrollPos) {
+            current = sections[i];
+          }
+        }
+        tocLinks.forEach(function(l) { l.classList.remove('active'); });
+        if (current) current.link.classList.add('active');
+      }
+
+      window.addEventListener('scroll', updateActive);
+      updateActive();
+    })();
+  </script>
+</BaseLayout>

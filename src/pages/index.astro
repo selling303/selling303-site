@@ -1,0 +1,426 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Selling 303 | Jacob Stark — South Denver Metro Real Estate"
+  description="Jacob Stark guides families through buying and selling in Littleton, Highlands Ranch, Centennial, and the South Denver Metro. Clarity, confidence, and control — from the first conversation to closing day."
+  ogTitle="Selling 303 | Jacob Stark — South Denver Metro Real Estate"
+  ogDescription="Buying or selling in South Denver Metro? Jacob Stark guides you through every step so you feel clarity, confidence, and in control — from the first conversation to closing day."
+  ogUrl="https://selling303.com"
+  ogImage="https://selling303.com/images/og-home.jpg"
+  currentPage="home"
+  headerVariant="transparent"
+>
+  <Fragment slot="head">
+    <script src="https://em.realscout.com/widgets/realscout-web-components.umd.js" type="module" is:inline></script>
+    <style>
+      realscout-advanced-search {
+        --rs-as-button-text-color: #ffffff;
+        --rs-as-background-color: #ffffff;
+        --rs-as-button-color: #c8965a;
+        --rs-as-widget-width: 100% !important;
+      }
+      realscout-home-value {
+        --rs-hvw-background-color: transparent;
+        --rs-hvw-title-color: #ffffff;
+        --rs-hvw-subtitle-color: rgba(255, 255, 255, 0.7);
+        --rs-hvw-primary-button-text-color: #ffffff;
+        --rs-hvw-primary-button-color: #c8965a;
+        --rs-hvw-secondary-button-text-color: #c8965a;
+        --rs-hvw-secondary-button-color: #ffffff;
+        --rs-hvw-widget-width: auto;
+      }
+    </style>
+
+    <!-- Schema: LocalBusiness -->
+    <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "Jacob Stark — Selling 303",
+      "description": "Your guide through South Denver Metro real estate — helping families buy and sell with clarity, confidence, and control.",
+      "url": "https://selling303.com",
+      "telephone": "+1-303-997-0634",
+      "email": "jacob@selling303.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Littleton",
+        "addressRegion": "CO",
+        "postalCode": "80120",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        {"@type": "City", "name": "Littleton"},
+        {"@type": "City", "name": "Highlands Ranch"},
+        {"@type": "City", "name": "Centennial"},
+        {"@type": "City", "name": "Englewood"},
+        {"@type": "City", "name": "Parker"},
+        {"@type": "City", "name": "Lakewood"},
+        {"@type": "City", "name": "Lone Tree"},
+        {"@type": "City", "name": "Castle Pines"},
+        {"@type": "City", "name": "Greenwood Village"}
+      ],
+      "memberOf": {
+        "@type": "Organization",
+        "name": "8z Real Estate"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "52"
+      }
+    }
+    </script>
+
+    <!-- RealEstateAgent Schema -->
+    <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "@id": "https://selling303.com/#agent",
+      "name": "Jacob Stark",
+      "url": "https://selling303.com/",
+      "image": "https://selling303.com/images/jacob-stark-headshot.png",
+      "telephone": "+1-303-997-0634",
+      "email": "jacob@selling303.com",
+      "description": "South Denver Metro REALTOR specializing in Littleton, Highlands Ranch, Centennial, Parker, and surrounding communities. Guiding buyers and sellers with clarity, confidence, and control.",
+      "areaServed": [
+        { "@type": "City", "name": "Littleton", "containedInPlace": { "@type": "State", "name": "Colorado" } },
+        { "@type": "City", "name": "Highlands Ranch", "containedInPlace": { "@type": "State", "name": "Colorado" } },
+        { "@type": "City", "name": "Centennial", "containedInPlace": { "@type": "State", "name": "Colorado" } },
+        { "@type": "City", "name": "Englewood", "containedInPlace": { "@type": "State", "name": "Colorado" } },
+        { "@type": "City", "name": "Parker", "containedInPlace": { "@type": "State", "name": "Colorado" } },
+        { "@type": "City", "name": "Lakewood", "containedInPlace": { "@type": "State", "name": "Colorado" } },
+        { "@type": "City", "name": "Lone Tree", "containedInPlace": { "@type": "State", "name": "Colorado" } },
+        { "@type": "City", "name": "Castle Pines", "containedInPlace": { "@type": "State", "name": "Colorado" } },
+        { "@type": "City", "name": "Greenwood Village", "containedInPlace": { "@type": "State", "name": "Colorado" } }
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "8z Real Estate",
+        "url": "https://8z.com"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "7935 E Prentice Ave, Suite 105",
+        "addressLocality": "Greenwood Village",
+        "addressRegion": "CO",
+        "postalCode": "80111",
+        "addressCountry": "US"
+      },
+      "knowsAbout": [
+        "home selling",
+        "home buying",
+        "real estate pricing strategy",
+        "South Denver Metro real estate",
+        "comparative market analysis",
+        "real estate negotiation",
+        "investment property analysis"
+      ],
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Professional Certification",
+        "name": "Real Estate Negotiation Expert (RENE)"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "47",
+        "bestRating": "5"
+      },
+      "sameAs": [
+        "https://jacobstark.8z.com/",
+        "https://www.google.com/maps/place/?q=Jacob+Stark+Real+Estate",
+        "https://www.zillow.com/profile/jacobstarkrealtor",
+        "https://www.realtor.com/realestateagents/5ef4c015aa95460011ac4a5b",
+        "https://www.linkedin.com/in/jacobstark",
+        "https://www.instagram.com/jacobstark_realtor/",
+        "https://www.facebook.com/jacobstarkrealtor/",
+        "https://www.youtube.com/@selling303",
+        "https://www.youtube.com/channel/UCTr7LNftWL7F63Bw-rcdxLg",
+        "https://www.fastexpert.com/agents/jacob-stark-109720/"
+      ]
+    }
+    </script>
+  </Fragment>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__content">
+        <span class="hero__label">South Denver Metro Real Estate</span>
+        <h1>Clarity First. Confidence Always. Let's Talk About Your Next Move.</h1>
+        <p class="hero__subtitle">Buying or selling in Littleton, Highlands Ranch, Centennial, or anywhere across the South Denver Metro? You deserve a guide who listens first, keeps you informed, and makes the biggest financial decision of your life feel clear &mdash; not chaotic.</p>
+        <div class="hero__buttons">
+          <a href="#home-value" class="btn btn--primary btn--lg">What's Your Home Worth?</a>
+          <a href="/neighborhoods" class="btn btn--outline btn--lg">Search Homes</a>
+        </div>
+        <div class="stats-bar">
+          <div class="stat-item">
+            <span class="stat-item__number">$46M+</span>
+            <span class="stat-item__label">in Sales</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-item__number">83</span>
+            <span class="stat-item__label">Families Helped</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-item__number">100.6%</span>
+            <span class="stat-item__label">Avg Sale-to-List</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-item__number">5.0</span>
+            <span class="stat-item__label">Google Rating</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ONE-LINER BANNER ========== -->
+  <section class="oneliner-banner">
+    <div class="container">
+      <p><em>Most people feel overwhelmed when it's time to buy or sell a home. We guide you through every step so you feel clarity, confidence, and in control &mdash; from the first conversation to closing day.</em></p>
+    </div>
+  </section>
+
+  <!-- ========== SEARCH HOMES ========== -->
+  <section class="section section--white">
+    <div class="container text-center">
+      <span class="section-label">Start Here</span>
+      <h2 class="section-heading">Tell Us What You're Looking For</h2>
+      <p class="section-subtext">Whether you know exactly what you want or you're just starting to explore, search active listings across Littleton, Highlands Ranch, Centennial, and the South Denver Metro.</p>
+      <realscout-advanced-search agent-encoded-id="QWdlbnQtMjg5MjYw" style="width:100%;"></realscout-advanced-search>
+    </div>
+  </section>
+
+  <!-- ========== VALUE PROPS ========== -->
+  <section class="section">
+    <div class="container text-center">
+      <h2 class="section-heading">Your Goals. Our Playbook.</h2>
+      <div class="value-props">
+        <div class="value-prop">
+          <div class="value-prop__icon">&#x1F91D;</div>
+          <h3>We Start by Listening</h3>
+          <p>Your goals, your timeline, your priorities. Before we talk strategy or numbers, we want to understand what this move means for you and your family.</p>
+        </div>
+        <div class="value-prop">
+          <div class="value-prop__icon">&#x1F4CB;</div>
+          <h3>You'll Always Know Where You Stand</h3>
+          <p>No surprises, no radio silence. From weekly updates to a real-time dashboard tracking every step, you'll have clarity on what's happening and why.</p>
+        </div>
+        <div class="value-prop">
+          <div class="value-prop__icon">&#x1F4CA;</div>
+          <h3>The Data Backs Up Every Decision</h3>
+          <p>Market analysis, pricing strategy, and neighborhood insights aren't just nice to have &mdash; they give you the confidence to make decisions you feel good about.</p>
+        </div>
+        <div class="value-prop">
+          <div class="value-prop__icon">&#x1F3E0;</div>
+          <h3>You Stay in Control</h3>
+          <p>You set the pace. You make the calls. We bring the options and the expertise &mdash; you decide what's right for your family.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURED NEIGHBORHOODS ========== -->
+  <section class="section section--white">
+    <div class="container">
+      <span class="section-label">Explore the Area</span>
+      <h2 class="section-heading">Featured Neighborhoods</h2>
+      <p class="section-subtext">South Denver's best communities for growing families. Explore market data, amenities, and active listings for each area.</p>
+      <div class="card-grid card-grid--3col">
+        <a href="/neighborhoods/littleton" class="card">
+          <div class="card__image" style="background-image: url('/images/neighborhood-littleton.jpg');" role="img" aria-label="Suburban home in Littleton, Colorado with tree-lined street"></div>
+          <div class="card__body">
+            <span class="card__tag">Littleton</span>
+            <h3 class="card__title">Littleton</h3>
+            <p class="card__text">Historic downtown charm meets suburban convenience. Top-rated access to light rail, trails, and a walkable Main Street.</p>
+            <div class="card__stats">
+              <div class="card__stat"><strong>$703K</strong> Median Price</div>
+              <div class="card__stat"><strong>51</strong> Avg DOM</div>
+            </div>
+          </div>
+        </a>
+        <a href="/neighborhoods/highlands-ranch" class="card">
+          <div class="card__image" style="background-image: url('/images/neighborhood-highlands-ranch.jpg');" role="img" aria-label="Modern home in Highlands Ranch, Colorado with landscaped yard"></div>
+          <div class="card__body">
+            <span class="card__tag">Highlands Ranch</span>
+            <h3 class="card__title">Highlands Ranch</h3>
+            <p class="card__text">Master-planned with 70+ miles of trails, four rec centers, and strong resale values across a range of price points.</p>
+            <div class="card__stats">
+              <div class="card__stat"><strong>$718.5K</strong> Median Price</div>
+              <div class="card__stat"><strong>52</strong> Avg DOM</div>
+            </div>
+          </div>
+        </a>
+        <a href="/neighborhoods/centennial" class="card">
+          <div class="card__image" style="background-image: url('/images/neighborhood-centennial.jpg');" role="img" aria-label="Residential home in Centennial, Colorado with green lawn"></div>
+          <div class="card__body">
+            <span class="card__tag">Centennial</span>
+            <h3 class="card__title">Centennial</h3>
+            <p class="card__text">Central location with easy I-25 and E-470 access. Larger lots, established neighborhoods, and strong appreciation.</p>
+            <div class="card__stats">
+              <div class="card__stat"><strong>$699K</strong> Median Price</div>
+              <div class="card__stat"><strong>48</strong> Avg DOM</div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div style="text-align: center; margin-top: var(--space-lg);">
+        <a href="/neighborhoods" class="btn btn--outline-dark">View All 9 Neighborhoods</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MARKET INSIGHTS ========== -->
+  <section class="section">
+    <div class="container text-center">
+      <span class="section-label">South Denver Metro</span>
+      <h2 class="section-heading">What's the Market Doing Right Now?</h2>
+      <p class="section-subtext">A quick pulse on the Denver metro real estate market &mdash; so you're never guessing.</p>
+      <div class="market-stats-tiles">
+        <div class="market-stat-tile">
+          <span class="market-stat-tile__number">$605,000</span>
+          <span class="market-stat-tile__label">Median Home Price</span>
+          <span class="market-stat-tile__trend market-stat-tile__trend--down">&#x2193; -2.3% YoY</span>
+        </div>
+        <div class="market-stat-tile">
+          <span class="market-stat-tile__number">64</span>
+          <span class="market-stat-tile__label">Avg Days on Market</span>
+          <span class="market-stat-tile__trend market-stat-tile__trend--up">&#x2191; +6.7% YoY</span>
+        </div>
+        <div class="market-stat-tile">
+          <span class="market-stat-tile__number">8,351</span>
+          <span class="market-stat-tile__label">Active Inventory</span>
+          <span class="market-stat-tile__trend market-stat-tile__trend--down">&#x2193; -12.4% YoY</span>
+        </div>
+        <div class="market-stat-tile">
+          <span class="market-stat-tile__number">3,732</span>
+          <span class="market-stat-tile__label">Under Contract</span>
+          <span class="market-stat-tile__trend market-stat-tile__trend--up">&#x2191; +19.0% YoY</span>
+        </div>
+      </div>
+      <p class="market-stats-source">Source: DMAR / REcolorado MLS &middot; February 2026</p>
+    </div>
+  </section>
+
+  <!-- ========== LATEST BLOG POSTS ========== -->
+  <section class="section section--dark">
+    <div class="container">
+      <span class="section-label">Latest Insights</span>
+      <h2 class="section-heading">From the Blog</h2>
+      <p class="section-subtext">Market data, neighborhood deep-dives, and practical advice for South Denver buyers and sellers.</p>
+      <div class="card-grid card-grid--3col">
+        <a href="/blog/parker-vs-castle-pines" class="card card--dark">
+          <div class="card__body">
+            <span class="card__tag">Neighborhoods</span>
+            <h3 class="card__title">Parker vs. Castle Pines: Which Colorado Suburb Is Right for Your Family?</h3>
+            <p class="card__text">Two strong choices in Douglas County — one built for variety, one built for prestige. Side-by-side data on price, inventory, lifestyle, and commute.</p>
+            <span class="card__meta">April 1, 2026 &middot; 7 min read</span>
+          </div>
+        </a>
+        <a href="/blog/why-homes-sit-on-market-south-denver" class="card card--dark">
+          <div class="card__body">
+            <span class="card__tag">Selling</span>
+            <h3 class="card__title">Why Homes Sit on the Market in South Denver (And How to Avoid It)</h3>
+            <p class="card__text">The most common reasons homes sit unsold in Arapahoe County — pricing mistakes, presentation gaps, and timing errors — plus what to do differently.</p>
+            <span class="card__meta">April 2, 2026 &middot; 9 min read</span>
+          </div>
+        </a>
+        <a href="/blog/closing-costs-colorado-buyers-2026" class="card card--dark">
+          <div class="card__body">
+            <span class="card__tag">Buying</span>
+            <h3 class="card__title">How Much Do Closing Costs Really Run in Colorado? (Buyer Edition)</h3>
+            <p class="card__text">Typically 2–5% of your purchase price. Real breakdown of lender fees, title insurance, prepaids, and recording fees — no surprises at the closing table.</p>
+            <span class="card__meta">March 31, 2026 &middot; 7 min read</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="section section--white">
+    <div class="container">
+      <span class="section-label" style="text-align:center; display:block;">In Their Words</span>
+      <h2 class="section-heading" style="text-align:center; margin-bottom: var(--space-xl);">What It's Like to Work Together</h2>
+      <div class="testimonial">
+        <p class="testimonial__quote">Jacob was incredibly knowledgeable about the South Denver market. His data-driven approach gave us confidence in our pricing strategy, and we sold above asking in under two weeks.</p>
+        <p class="testimonial__author">Fei D.</p>
+        <p class="testimonial__detail">Sold in Centennial</p>
+      </div>
+      <div class="testimonial" style="margin-top: var(--space-xl);">
+        <p class="testimonial__quote">We looked at over 20 homes and Jacob was patient through every single one. He ran the numbers on each property so we always knew exactly what we were getting into. Could not recommend him enough.</p>
+        <p class="testimonial__author">Erik P.</p>
+        <p class="testimonial__detail">Bought in Highlands Ranch</p>
+      </div>
+      <div class="testimonial" style="margin-top: var(--space-xl);">
+        <p class="testimonial__quote">Jacob made a complicated relocation feel easy. He handled everything from pricing our old home to finding the right neighborhood for our kids. The whole process was seamless.</p>
+        <p class="testimonial__author">Amber W.</p>
+        <p class="testimonial__detail">Sold in Lakewood, Bought in Littleton</p>
+      </div>
+      <div class="testimonial" style="margin-top: var(--space-xl);">
+        <p class="testimonial__quote">As a first-time buyer, I had a million questions. Jacob never made me feel rushed and always backed up his advice with actual data. I felt fully informed every step of the way.</p>
+        <p class="testimonial__author">Sara H.M.</p>
+        <p class="testimonial__detail">Bought in Englewood</p>
+      </div>
+      <div class="testimonial" style="margin-top: var(--space-xl);">
+        <p class="testimonial__quote">Hands down the most professional and thorough agent I've worked with. Jacob's market analysis was spot-on and his negotiation skills saved us thousands on our purchase.</p>
+        <p class="testimonial__author">Dee</p>
+        <p class="testimonial__detail">Bought in Parker</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TRUSTED & RECOGNIZED ========== -->
+  <section class="section">
+    <div class="container text-center">
+      <span class="section-label">Trusted &amp; Recognized</span>
+      <h2 class="section-heading">Recognized By</h2>
+      <div class="credentials" style="margin-top: var(--space-lg);">
+        <div class="credential">
+          <span class="credential__number" style="font-size: 1.25rem; font-family: var(--font-body); font-weight: 700;">RealTrends</span>
+          <span class="credential__label">America's Best Real Estate Professionals</span>
+        </div>
+        <div class="credential">
+          <span class="credential__number" style="font-size: 1.25rem; font-family: var(--font-body); font-weight: 700;">5280 Magazine</span>
+          <span class="credential__label">Five Star Professional</span>
+        </div>
+        <div class="credential">
+          <span class="credential__number" style="font-size: 1.25rem; font-family: var(--font-body); font-weight: 700;">Realtor.com</span>
+          <span class="credential__label">Featured Agent</span>
+        </div>
+        <div class="credential">
+          <span class="credential__number" style="font-size: 1.25rem; font-family: var(--font-body); font-weight: 700;">FastExpert</span>
+          <span class="credential__label">Top-Rated Agent</span>
+        </div>
+        <div class="credential">
+          <span class="credential__number" style="font-size: 1.25rem; font-family: var(--font-body); font-weight: 700;">RENE</span>
+          <span class="credential__label">Real Estate Negotiation Expert</span>
+        </div>
+        <div class="credential">
+          <span class="credential__number" style="font-size: 1.25rem; font-family: var(--font-body); font-weight: 700;">Who's Who in Luxury</span>
+          <span class="credential__label">Luxury Real Estate</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HOME VALUE ========== -->
+  <section class="lead-capture" id="home-value">
+    <div class="container">
+      <div class="lead-capture__inner">
+        <div>
+          <span class="section-label">Thinking About Selling?</span>
+          <h2>Find Out What Your Home Is Worth</h2>
+          <p>Get a real-time estimate based on recent sales in your neighborhood. No pressure, no obligation &mdash; just the clarity you need to start planning your next move.</p>
+        </div>
+        <div>
+          <realscout-home-value agent-encoded-id="QWdlbnQtMjg5MjYw"></realscout-home-value>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

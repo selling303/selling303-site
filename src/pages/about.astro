@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import CTABanner from '../components/CTABanner.astro';
+---
+
+<BaseLayout
+  title="About Jacob Stark | Selling 303 — South Denver REALTOR"
+  description="Jacob Stark is your guide through South Denver Metro real estate. Learn how he helps families buy and sell with clarity, confidence, and control."
+  ogType="profile"
+  ogUrl="https://selling303.com/about"
+  ogImage="https://selling303.com/images/og-about.jpg"
+  currentPage="about"
+  headerVariant="solid"
+>
+  <Fragment slot="head">
+    <!-- Schema: Person -->
+    <script type="application/ld+json" is:inline>
+    {
+      "@context":"https://schema.org",
+      "@type":"Person",
+      "name":"Jacob Stark",
+      "jobTitle":"REALTOR®",
+      "worksFor":{"@type":"Organization","name":"8z Real Estate"},
+      "url":"https://selling303.com/about",
+      "telephone":"+1-303-997-0634",
+      "email":"jacob@selling303.com",
+      "areaServed":"South Denver Metro, Colorado",
+      "knowsAbout":["Real Estate","Home Buying","Home Selling","Investment Properties","South Denver Metro"]
+    }
+    </script>
+  </Fragment>
+
+  <!-- ========== PAGE HERO ========== -->
+  <PageHero
+    label="About Jacob"
+    heading="Meet Jacob Stark"
+    subtext="REALTOR® at 8z Real Estate · Your Guide Through South Denver Metro Real Estate"
+  />
+
+  <!-- ========== BIO SECTION ========== -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="two-col">
+        <div class="about-images">
+          <div class="two-col__image two-col__image--portrait">
+            <img
+              src="/images/jacob-stark-headshot.png"
+              alt="Jacob Stark, REALTOR at 8z Real Estate — professional headshot, South Denver Metro real estate agent"
+              width="750"
+              height="750"
+              loading="eager"
+            />
+          </div>
+          <div class="two-col__image">
+            <img
+              src="/images/jacob-lifestyle-kitchen.jpg"
+              alt="Jacob Stark reviewing a home with clients in a modern kitchen in Denver, Colorado"
+              width="1200"
+              height="800"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <div>
+          <span class="section-label">The Short Version</span>
+          <h2 class="section-heading">Real Estate Done Differently</h2>
+          <p>I got into real estate because I watched too many families make one of the biggest financial decisions of their lives without a real guide in their corner. Generic advice, vague timelines, pressure to decide fast. That didn't sit right.</p>
+          <p>Before I became a REALTOR®, I was a marketer. I flipped houses. I learned what it feels like to be on the other side of the table — and I decided that if I was going to do this job, I was going to do it differently. Every decision backed by real data, every update delivered clearly, and every client treated like someone whose future actually matters.</p>
+          <p>I specialize in the South Denver Metro — Littleton, Highlands Ranch, Centennial, Englewood, Parker, Lakewood, Lone Tree, Castle Pines, and Greenwood Village. I know these neighborhoods at the HOA level, the street level, and the comps level. That specificity matters when you're making a $600K+ decision.</p>
+          <p>Whether you're a growing family looking to move up, a seller trying to maximize your net, or an investor running deal numbers — you'll get the same thing from me: honest context, a clear strategy, and someone who actually picks up the phone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TRACK RECORD ========== -->
+  <section class="section">
+    <div class="container text-center">
+      <span class="section-label">By the Numbers</span>
+      <h2 class="section-heading">Track Record</h2>
+      <div class="credentials">
+        <div class="credential">
+          <span class="credential__number">$46M+</span>
+          <span class="credential__label">Career Sales Volume</span>
+        </div>
+        <div class="credential">
+          <span class="credential__number">83</span>
+          <span class="credential__label">Families Helped</span>
+        </div>
+        <div class="credential">
+          <span class="credential__number">100.6%</span>
+          <span class="credential__label">Avg Sale-to-List</span>
+        </div>
+        <div class="credential">
+          <span class="credential__number">5.0</span>
+          <span class="credential__label">Google Rating</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA BANNER ========== -->
+  <CTABanner
+    heading="Ready to Talk?"
+    subtext="No pitch, no pressure. Just a conversation about your goals and whether working together makes sense."
+  />
+</BaseLayout>

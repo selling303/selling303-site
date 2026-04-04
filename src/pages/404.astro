@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Page Not Found | Selling 303"
+  description="The page you're looking for doesn't exist or has moved."
+  currentPage="404"
+  headerVariant="solid"
+>
+  <Fragment slot="head">
+    <meta name="robots" content="noindex" />
+    <style>
+      .error-page {
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: var(--space-3xl) 0;
+      }
+      .error-page__code {
+        font-family: var(--font-heading);
+        font-size: clamp(4rem, 12vw, 8rem);
+        color: var(--color-accent);
+        line-height: 1;
+        margin-bottom: var(--space-sm);
+      }
+      .error-page__heading {
+        font-family: var(--font-heading);
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
+        color: var(--color-primary);
+        margin-bottom: var(--space-sm);
+      }
+      .error-page__message {
+        color: var(--color-body-text);
+        font-size: 1.125rem;
+        max-width: 480px;
+        margin: 0 auto var(--space-lg);
+      }
+      .error-page__links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-sm);
+        justify-content: center;
+      }
+    </style>
+  </Fragment>
+
+  <div class="error-page">
+    <div class="container text-center">
+      <div class="error-page__code">404</div>
+      <h1 class="error-page__heading">Page Not Found</h1>
+      <p class="error-page__message">
+        The page you're looking for doesn't exist or has moved. Let's get you back on track.
+      </p>
+      <div class="error-page__links">
+        <a href="/" class="btn btn--primary btn--lg">Home</a>
+        <a href="/blog" class="btn btn--outline btn--lg">Blog</a>
+        <a href="/neighborhoods" class="btn btn--outline btn--lg">Neighborhoods</a>
+        <a href="/contact" class="btn btn--outline btn--lg">Contact</a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

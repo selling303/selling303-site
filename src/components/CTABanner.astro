@@ -1,0 +1,50 @@
+---
+interface Props {
+  heading: string;
+  subtext: string;
+  primaryHref?: string;
+  primaryText?: string;
+  secondaryHref?: string;
+  secondaryText?: string;
+  variant?: "dark" | "light";
+}
+
+const {
+  heading,
+  subtext,
+  primaryHref = "https://calendly.com/jacob-realtor",
+  primaryText = "Schedule a Call",
+  secondaryHref = "tel:3039970634",
+  secondaryText = "Call 303-997-0634",
+  variant = "dark",
+} = Astro.props;
+
+const isDark = variant === "dark";
+const isCalendly = primaryHref.includes("calendly");
+const bannerStyle = isDark
+  ? ""
+  : "background-color: var(--color-white);";
+const headingStyle = isDark ? "" : "color: var(--color-dark-text);";
+const subtextStyle = isDark ? "" : "color: var(--color-body-text);";
+const secondaryBtnClass = isDark ? "btn--outline" : "btn--outline-dark";
+---
+
+<section class={`cta-banner${isDark ? "" : ""}`} style={isDark ? "" : `background-color: var(--color-white);`}>
+  <div class="container">
+    <h2 style={headingStyle}>{heading}</h2>
+    <p style={subtextStyle}>{subtext}</p>
+    <a
+      href={primaryHref}
+      class="btn btn--primary btn--lg"
+      target={isCalendly ? "_blank" : undefined}
+      rel={isCalendly ? "noopener" : undefined}
+    >
+      {primaryText}
+    </a>
+    {secondaryHref && (
+      <a href={secondaryHref} class={`btn ${secondaryBtnClass} btn--lg`}>
+        {secondaryText}
+      </a>
+    )}
+  </div>
+</section>

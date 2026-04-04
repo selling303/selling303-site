@@ -1,0 +1,62 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  ogUrl?: string;
+  ogType?: string;
+  canonicalUrl?: string;
+}
+
+const {
+  title,
+  description,
+  ogTitle = title,
+  ogDescription = description,
+  ogImage = 'https://selling303.com/images/og-default.jpg',
+  ogUrl = Astro.url.href,
+  ogType = 'website',
+  canonicalUrl = Astro.url.href,
+} = Astro.props;
+---
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{title}</title>
+<meta name="description" content={description}>
+
+<!-- Open Graph -->
+<meta property="og:title" content={ogTitle}>
+<meta property="og:description" content={ogDescription}>
+<meta property="og:type" content={ogType}>
+<meta property="og:url" content={ogUrl}>
+<meta property="og:image" content={ogImage}>
+
+<!-- Canonical -->
+<link rel="canonical" href={canonicalUrl}>
+
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WLGW57VN8C" is:inline></script>
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WLGW57VN8C');
+</script>
+
+<!-- Widget Tracker -->
+<script is:inline>
+(function(w,i,d,g,e,t){w["WidgetTrackerObject"]=g;(w[g]=w[g]||function()
+{(w[g].q=w[g].q||[]).push(arguments);}),(w[g].ds=1*new Date());(e="script"),
+(t=d.createElement(e)),(e=d.getElementsByTagName(e)[0]);t.async=1;t.src=i;
+e.parentNode.insertBefore(t,e);})
+(window,"https://widgetbe.com/agent",document,"widgetTracker");
+window.widgetTracker("create", "WT-XNIBWJKE");
+window.widgetTracker("send", "pageview");
+</script>
+
+<link rel="stylesheet" href="/css/styles.css">
