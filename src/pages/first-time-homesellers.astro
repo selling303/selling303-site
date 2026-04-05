@@ -1,0 +1,393 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="First-Time Home Seller Guide | South Denver Metro | Jacob Stark, REALTOR®"
+  description="Selling your first home in the South Denver Metro? Jacob Stark walks you through pricing, staging, marketing, and closing in Littleton, Highlands Ranch, and Centennial."
+  ogType="website"
+  ogUrl="https://selling303.com/first-time-homesellers"
+  ogImage="https://selling303.com/images/og-default.jpg"
+  currentPage="first-time-homesellers"
+  headerVariant="solid"
+>
+  <Fragment slot="head">
+    <!-- Schema: RealEstateAgent + Service -->
+    <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "Jacob Stark",
+      "jobTitle": "REALTOR®",
+      "url": "https://selling303.com",
+      "telephone": "+1-303-997-0634",
+      "email": "jacob@selling303.com",
+      "image": "https://selling303.com/images/jacob-stark-footer-avatar.png",
+      "worksFor": {
+        "@type": "RealEstateAgent",
+        "name": "8z Real Estate"
+      },
+      "areaServed": [
+        {"@type": "City", "name": "Littleton", "containedInPlace": {"@type": "State", "name": "Colorado"}},
+        {"@type": "City", "name": "Highlands Ranch", "containedInPlace": {"@type": "State", "name": "Colorado"}},
+        {"@type": "City", "name": "Centennial", "containedInPlace": {"@type": "State", "name": "Colorado"}},
+        {"@type": "City", "name": "Englewood", "containedInPlace": {"@type": "State", "name": "Colorado"}},
+        {"@type": "City", "name": "Parker", "containedInPlace": {"@type": "State", "name": "Colorado"}},
+        {"@type": "City", "name": "Lakewood", "containedInPlace": {"@type": "State", "name": "Colorado"}},
+        {"@type": "City", "name": "Lone Tree", "containedInPlace": {"@type": "State", "name": "Colorado"}},
+        {"@type": "City", "name": "Castle Pines", "containedInPlace": {"@type": "State", "name": "Colorado"}},
+        {"@type": "City", "name": "Greenwood Village", "containedInPlace": {"@type": "State", "name": "Colorado"}}
+      ],
+      "makesOffer": {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "First-Time Home Seller Strategy",
+          "description": "Jacob Stark guides first-time home sellers through every step of the selling process in the South Denver Metro — from market analysis and staging to listing, negotiation, and closing.",
+          "serviceType": "Real Estate Seller Representation",
+          "areaServed": "South Denver Metro, Colorado"
+        }
+      }
+    }
+    </script>
+    <!-- Schema: FAQPage -->
+    <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does it cost to sell a home in Colorado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Selling costs in Colorado typically include real estate agent commissions (usually 5–6% split between buyer and seller agents), title insurance, title company closing fees, and any repairs needed before closing. The total usually runs 8–10% of the sale price. For a $500,000 home in Highlands Ranch, that's roughly $40,000–$50,000. Jacob Stark breaks down every cost upfront before you list, so there are no surprises."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to sell a home in the South Denver Metro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Average days on market in South Denver Metro suburbs range from 15–45 days depending on price point, neighborhood, condition, and season. Homes priced correctly from day one in Littleton, Highlands Ranch, and Centennial tend to sell faster. Jacob Stark uses MLS comparable data to price your home competitively and runs a full marketing launch to generate showings in the first week."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I make repairs before listing my home?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not all repairs are worth making. Jacob Stark walks through your home and identifies which improvements give you the best return — things like fresh paint, landscaping, and minor cosmetic fixes. Major renovations before listing rarely pay for themselves. The goal is to present a clean, well-maintained home that photographs well and appeals to the broadest pool of buyers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I price my home correctly as a first-time seller?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pricing starts with comparable sales data from the REcolorado MLS — what similar homes in your neighborhood sold for recently, how long they took to sell, and what concessions were made. Jacob Stark prepares a detailed market analysis showing active, pending, and sold comparables so you see the full picture. Overpricing leads to stale listings; underpricing leaves money on the table. Data-driven pricing gets you the best result."
+          }
+        }
+      ]
+    }
+    </script>
+  </Fragment>
+
+  <!-- COMPACT PILLAR HERO -->
+  <section class="pillar-hero">
+    <div class="container">
+      <div class="pillar-hero__content">
+        <span class="pillar-hero__label">Your Situation</span>
+        <h1>Selling Your First Home in the South Denver Metro</h1>
+        <p class="pillar-hero__subtitle">A step-by-step guide for first-time home sellers in the South Denver Metro. From pricing strategy to closing day, Jacob Stark walks you through every decision so you sell with confidence and keep more of your equity.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PILLAR PAGE BODY: TOC SIDEBAR + CONTENT -->
+  <section class="section section--white pillar-body">
+    <div class="pillar-layout">
+
+      <!-- STICKY TOC SIDEBAR -->
+      <aside class="pillar-toc" aria-label="Page navigation">
+        <span class="pillar-toc__label">On This Page</span>
+        <ul class="pillar-toc__list">
+          <li><a href="#direct-answer" class="pillar-toc__link active">Direct Answer</a></li>
+          <li><a href="#the-problem" class="pillar-toc__link">The Problem</a></li>
+          <li><a href="#selling-path" class="pillar-toc__link">The Selling Process</a></li>
+          <li><a href="#how-jacob-works" class="pillar-toc__link">How Jacob Works</a></li>
+          <li><a href="#areas-served" class="pillar-toc__link">Areas Served</a></li>
+          <li><a href="#faq" class="pillar-toc__link">FAQ</a></li>
+          <li><a href="#related-reading" class="pillar-toc__link">Related Reading</a></li>
+          <li><a href="#why-jacob" class="pillar-toc__link">Why Jacob</a></li>
+        </ul>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <div class="pillar-content">
+
+        <!-- DIRECT ANSWER SNIPPET -->
+        <div class="snippet-block" id="direct-answer">
+          <span class="snippet-block__label">Direct Answer</span>
+          <p><strong>What should a first-time home seller know about the South Denver Metro market?</strong> Selling costs in Colorado typically run 8–10% of the sale price, and homes priced correctly from day one sell faster with fewer concessions. South Denver Metro neighborhoods like Littleton, Highlands Ranch, and Centennial each have distinct buyer pools, pricing dynamics, and seasonal patterns. Jacob Stark, REALTOR&reg; at 8z Real Estate, specializes in guiding first-time sellers through pricing, preparation, marketing, negotiation, and closing.</p>
+        </div>
+
+
+        <!-- THE CHALLENGE -->
+        <div id="the-problem" style="padding-top: var(--space-xl);">
+          <span class="section-label">The Problem</span>
+          <h2 class="section-heading">Selling Your First Home Is Different Than You Think</h2>
+          <p>You bought your home as a first-time buyer, and now you're facing a process you've never been on the other side of. Pricing, staging, marketing, negotiations, inspections, appraisals, and closing — all from the seller's chair.</p>
+          <p>First-time sellers in South Denver Metro suburbs like <a href="/neighborhoods/littleton">Littleton</a>, <a href="/neighborhoods/highlands-ranch">Highlands Ranch</a>, and <a href="/neighborhoods/centennial">Centennial</a> often worry about pricing correctly, leaving money on the table, or being surprised by costs they didn't expect. The net sheet at closing rarely looks like the number on the yard sign.</p>
+          <p>Jacob Stark's job is to remove that uncertainty. He shows you every cost upfront, prices your home with MLS data, and manages the entire process so you sell smart — not stressed.</p>
+
+          <!-- Inline CTA -->
+          <div class="section-cta">
+            <p>Ready to understand what your home is worth and what selling looks like? Jacob will walk you through it.</p>
+            <a href="https://calendly.com/jacob-realtor" class="btn btn--primary btn--sm" target="_blank" rel="noopener">Schedule a Call</a>
+          </div>
+        </div>
+
+
+        <!-- SELLING PATH SECTION -->
+        <div id="selling-path" style="padding-top: var(--space-2xl);">
+          <span class="section-label">The Process</span>
+          <h2 class="section-heading">How Jacob Guides First-Time Sellers in the South Denver Metro</h2>
+          <p style="margin-bottom: var(--space-lg);">Selling is different than buying. Jacob Stark walks first-time sellers through preparation, pricing, marketing, and negotiation so your home sells fast and for fair market value.</p>
+          <div class="amenities-grid">
+            <div class="amenity-item">
+              <div class="amenity-item__icon">&#x1F4C8;</div>
+              <div>
+                <h4>Market Analysis</h4>
+                <p>Jacob pulls current REcolorado MLS comparables for your neighborhood and condition. He shows you what similar homes have sold for recently, how many days they spent on market, and what price range is realistic. This data removes guessing and positions your home correctly from day one.</p>
+              </div>
+            </div>
+            <div class="amenity-item">
+              <div class="amenity-item__icon">&#x1F3A8;</div>
+              <div>
+                <h4>Prep &amp; Staging</h4>
+                <p>First-time sellers don't always know what buyers notice. Jacob walks through your home, identifies what needs attention (fresh paint, landscaping, decluttering, repairs), and recommends staging guidance. A home that shows well gets more showings and stronger offers.</p>
+              </div>
+            </div>
+            <div class="amenity-item">
+              <div class="amenity-item__icon">&#x1F4F8;</div>
+              <div>
+                <h4>Listing Launch</h4>
+                <p>Professional photography, video walkthrough, drone images, virtual tour, and a detailed MLS description optimized for buyer searches. Jacob's listings stand out in Littleton, Highlands Ranch, and Centennial markets. Marketing starts immediately across Google, Instagram, and Facebook.</p>
+              </div>
+            </div>
+            <div class="amenity-item">
+              <div class="amenity-item__icon">&#x1F512;</div>
+              <div>
+                <h4>Showings &amp; Offers</h4>
+                <p>Jacob monitors showing feedback, adjusts strategy if needed, and calls you with every offer that comes in. He explains each offer's strengths and weaknesses so you understand what you're deciding. Multiple offers aren't guaranteed, but preparation and pricing make them more likely.</p>
+              </div>
+            </div>
+            <div class="amenity-item">
+              <div class="amenity-item__icon">&#x1F4A4;</div>
+              <div>
+                <h4>Negotiation</h4>
+                <p>Not all offers are equal. Some have weak financing, others have contingencies that complicate closing. Jacob recommends which offers to counter, what terms to push back on, and when to accept. He negotiates on your behalf so emotion doesn't cloud judgment.</p>
+              </div>
+            </div>
+            <div class="amenity-item">
+              <div class="amenity-item__icon">&#x1F3C3;</div>
+              <div>
+                <h4>Closing &amp; Next Steps</h4>
+                <p>Jacob coordinates title search, appraisal, closing statement review, and final walkthrough. He explains every number and answers your lender's questions. After closing, you have your proceeds and the clarity of knowing you sold smart.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- HOW JACOB WORKS -->
+        <div id="how-jacob-works" style="padding-top: var(--space-2xl);">
+          <span class="section-label">How Jacob Works</span>
+          <h2 class="section-heading">Three Steps to Confidence</h2>
+          <p style="margin-bottom: var(--space-lg);">The process is straightforward: understand your situation, build a clear plan, and execute with communication every step of the way.</p>
+          <div class="process-steps">
+            <div class="process-step">
+              <h4>Initial Consultation</h4>
+              <p>You share your situation — timeline, goals, home details, and what comes next after selling. Jacob listens, asks questions to understand your priorities, and shares how he works. There's no pressure, just a conversation. You decide if you want to move forward.</p>
+            </div>
+            <div class="process-step">
+              <h4>Customized Game Plan</h4>
+              <p>Jacob builds a plan tailored to you: market analysis, prep checklist, pricing strategy, marketing timeline, and a projected net sheet so you know what to expect at closing. You get this plan in writing.</p>
+            </div>
+            <div class="process-step">
+              <h4>Clear Communication Through Closing</h4>
+              <p>Jacob stays in touch throughout the process — showing feedback updates, market news, contract timelines, closing coordination. You always know what's happening next and why. No surprises. No gaps. You have his phone number and he answers your questions.</p>
+            </div>
+          </div>
+
+          <!-- Inline CTA -->
+          <div class="section-cta">
+            <p>Ready to take the first step? Talk to Jacob about your home and what selling looks like.</p>
+            <a href="https://calendly.com/jacob-realtor" class="btn btn--primary btn--sm" target="_blank" rel="noopener">Schedule a Call</a>
+          </div>
+        </div>
+
+
+        <!-- AREAS SERVED -->
+        <div id="areas-served" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Areas Served</span>
+          <h2 class="section-heading">First-Time Home Seller Help Across the South Denver Metro</h2>
+          <p>Jacob Stark guides first-time sellers throughout the South Denver Metro. Whether you're selling a starter home in Englewood, a townhome in Centennial, or a family home in Highlands Ranch, the approach is the same — clear communication, data-backed pricing, and confidence at closing.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: var(--space-md);">
+            <a href="/neighborhoods/littleton" class="btn btn--outline-dark btn--sm">Littleton</a>
+            <a href="/neighborhoods/highlands-ranch" class="btn btn--outline-dark btn--sm">Highlands Ranch</a>
+            <a href="/neighborhoods/centennial" class="btn btn--outline-dark btn--sm">Centennial</a>
+            <a href="/neighborhoods/englewood" class="btn btn--outline-dark btn--sm">Englewood</a>
+            <a href="/neighborhoods/parker" class="btn btn--outline-dark btn--sm">Parker</a>
+            <a href="/neighborhoods/lakewood" class="btn btn--outline-dark btn--sm">Lakewood</a>
+            <a href="/neighborhoods/lone-tree" class="btn btn--outline-dark btn--sm">Lone Tree</a>
+            <a href="/neighborhoods/castle-pines" class="btn btn--outline-dark btn--sm">Castle Pines</a>
+            <a href="/neighborhoods/greenwood-village" class="btn btn--outline-dark btn--sm">Greenwood Village</a>
+          </div>
+        </div>
+
+
+        <!-- FAQ -->
+        <div id="faq" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Common Questions</span>
+          <h2 class="section-heading">First-Time Home Seller FAQ</h2>
+          <div class="faq-list">
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What does it cost to sell a home in Colorado?</button>
+              <div class="faq-answer">
+                <p>Selling costs in Colorado typically include real estate agent commissions (usually 5–6% split between buyer and seller agents), title insurance, title company closing fees, and any repairs needed before closing. The total usually runs 8–10% of the sale price. For a $500,000 home in Highlands Ranch, that's roughly $40,000–$50,000. Jacob Stark breaks down every cost upfront before you list, so there are no surprises. He also advises on which repairs to prioritize and which to skip based on what buyers value in your specific neighborhood.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How long does it take to sell a home in the South Denver Metro?</button>
+              <div class="faq-answer">
+                <p>Average days on market in South Denver Metro suburbs range from 15–45 days depending on price point, neighborhood, condition, and season. Homes priced correctly from day one in Littleton, Highlands Ranch, and Centennial tend to sell faster. Jacob Stark uses MLS comparable data to price your home competitively and runs a full marketing launch to generate showings in the first week. Spring and early summer tend to see the most buyer activity.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Should I make repairs before listing my home?</button>
+              <div class="faq-answer">
+                <p>Not all repairs are worth making. Jacob Stark walks through your home and identifies which improvements give you the best return — things like fresh paint, landscaping, and minor cosmetic fixes. Major renovations before listing rarely pay for themselves. The goal is to present a clean, well-maintained home that photographs well and appeals to the broadest pool of buyers. Jacob tells you exactly what to fix and what to leave alone.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How do I price my home correctly as a first-time seller?</button>
+              <div class="faq-answer">
+                <p>Pricing starts with comparable sales data from the REcolorado MLS — what similar homes in your neighborhood sold for recently, how long they took to sell, and what concessions were made. Jacob Stark prepares a detailed market analysis showing active, pending, and sold comparables so you see the full picture. Overpricing leads to stale listings; underpricing leaves money on the table. Data-driven pricing gets you the best result.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- RELATED READING -->
+        <div id="related-reading" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Related Reading</span>
+          <h2 class="section-heading">First-Time Seller Insights</h2>
+          <div class="card-grid">
+            <a href="/blog/cost-to-sell-house-colorado-2026" class="card">
+              <div class="card__body">
+                <span class="card__tag">Seller Advice</span>
+                <h3 class="card__title">Cost to Sell a House in Colorado (2026)</h3>
+                <p class="card__text">A full breakdown of selling costs — commissions, title, repairs, and closing fees. Know your net sheet before you list.</p>
+                <span class="card__meta">March 2026</span>
+              </div>
+            </a>
+            <a href="/blog/why-homes-sit-on-market-south-denver" class="card">
+              <div class="card__body">
+                <span class="card__tag">Seller Advice</span>
+                <h3 class="card__title">Why Homes Sit on the Market in the South Denver Metro</h3>
+                <p class="card__text">Pricing mistakes, photo quality, and showing friction — the real reasons homes don't sell and how to avoid them.</p>
+                <span class="card__meta">March 2026</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+
+        <!-- WHY JACOB / TRUST BAR -->
+        <div id="why-jacob" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Why Jacob</span>
+          <h2 class="section-heading">The Numbers Behind the Strategy</h2>
+          <p style="margin-bottom: var(--space-lg);">Jacob Stark doesn't just guide first-time sellers — he closes transactions successfully. These numbers reflect a track record of clear communication, data-backed pricing, and client results across the South Denver Metro.</p>
+          <div class="trust-bar">
+            <div class="trust-bar__item">
+              <span class="trust-bar__value">$46M+</span>
+              <span class="trust-bar__label">in Sales</span>
+            </div>
+            <div class="trust-bar__item">
+              <span class="trust-bar__value">100.6%</span>
+              <span class="trust-bar__label">Avg Sale-to-List</span>
+            </div>
+            <div class="trust-bar__item">
+              <span class="trust-bar__value">83</span>
+              <span class="trust-bar__label">Families Helped</span>
+            </div>
+            <div class="trust-bar__item">
+              <span class="trust-bar__value">5.0</span>
+              <span class="trust-bar__label">Google Rating</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.pillar-content -->
+    </div><!-- /.pillar-layout -->
+  </section>
+
+
+  <!-- FINAL CTA -->
+  <section class="cta-banner" style="background-color: var(--color-white);">
+    <div class="container">
+      <h2 style="color: var(--color-dark-text);">Ready to Sell Your First Home?</h2>
+      <p style="color: var(--color-body-text);">Jacob Stark will show you what your home is worth, what selling costs, and what to expect at every step. Your first move is a conversation. No pressure, no sales pitch — just clarity.</p>
+      <a href="https://calendly.com/jacob-realtor" class="btn btn--primary btn--lg" target="_blank" rel="noopener">Schedule a Call</a>
+      <a href="tel:3039970634" class="btn btn--outline-dark btn--lg">Call 303-997-0634</a>
+    </div>
+  </section>
+
+  <script is:inline>
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = this.closest('.faq-item');
+        var isActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(function(el) {
+          el.classList.remove('active');
+          el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+        if (!isActive) {
+          item.classList.add('active');
+          this.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    // Sticky TOC active state
+    (function() {
+      var tocLinks = document.querySelectorAll('.pillar-toc__link');
+      var sections = [];
+      tocLinks.forEach(function(link) {
+        var id = link.getAttribute('href').replace('#', '');
+        var el = document.getElementById(id);
+        if (el) sections.push({ id: id, el: el, link: link });
+      });
+
+      function updateActive() {
+        var scrollPos = window.scrollY + 120;
+        var current = sections[0];
+        for (var i = 0; i < sections.length; i++) {
+          if (sections[i].el.offsetTop <= scrollPos) {
+            current = sections[i];
+          }
+        }
+        tocLinks.forEach(function(l) { l.classList.remove('active'); });
+        if (current) current.link.classList.add('active');
+      }
+
+      window.addEventListener('scroll', updateActive);
+      updateActive();
+    })();
+  </script>
+</BaseLayout>

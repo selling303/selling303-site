@@ -24,19 +24,26 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - Best Neighborhoods in South Denver for Move-Up Buyers (`/blog/best-neighborhoods-south-denver-move-up-buyers`)
 - Cost to Sell a House in Colorado 2026 (`/blog/cost-to-sell-house-colorado-2026`)
 
-### 3. First-Time Buyers & Sellers (`/first-time-buyers-sellers`)
+### 3. First-Time Homebuyers (`/first-time-homebuyers`)
 **Primary geographic ties:** Littleton, Englewood, Centennial (most affordable entry points in the metro)
 **Existing blog links:**
 - Closing Costs for Colorado Buyers 2026 (`/blog/closing-costs-colorado-buyers-2026`)
 - What Happens After Accepting an Offer (`/blog/what-happens-after-accepting-offer`)
+- First-Time Home Buyer's Guide to Englewood (`/blog/first-time-home-buyer-guide-englewood-colorado-2026`)
 
-### 4. Relocation (`/relocation`)
+### 4. First-Time Home Sellers (`/first-time-homesellers`)
+**Primary geographic ties:** Centennial, Littleton, Highlands Ranch (first-time seller volume in South Denver)
+**Existing blog links:**
+- Cost to Sell a House in Colorado 2026 (`/blog/cost-to-sell-house-colorado-2026`)
+- Why Homes Sit on the Market in South Denver (`/blog/why-homes-sit-on-market-south-denver`)
+
+### 5. Relocation (`/relocation`)
 **Primary geographic ties:** All 9 neighborhoods (relocation buyers need the full map)
 **Existing blog links:**
 - Best Neighborhoods in South Denver for Move-Up Buyers (`/blog/best-neighborhoods-south-denver-move-up-buyers`)
 - Littleton vs. Highlands Ranch (`/blog/littleton-vs-highlands-ranch`)
 
-### 5. New Construction (`/new-construction`)
+### 6. New Construction (`/new-construction`)
 **Primary geographic ties:** Parker, Castle Pines, Highlands Ranch, Lone Tree (active builder communities)
 **Existing blog links:**
 - Parker vs. Castle Pines (`/blog/parker-vs-castle-pines`)
@@ -66,13 +73,14 @@ Each title bridges a geographic pillar and a specialization pillar. Format: [Blo
    → Parker + Move-Up Sellers
    *Angle: Decision framework for move-up timing. Equity position, lifestyle triggers, market conditions.*
 
-### First-Time Buyer/Seller Spokes
+### First-Time Homebuyer Spokes
 5. **"First-Time Home Buyer's Guide to Englewood, Colorado (2026)"**
-   → Englewood + First-Time Buyers
+   → Englewood + First-Time Homebuyers (`/first-time-homebuyers`)
    *Angle: Entry-level price points, FHA/conventional thresholds, neighborhood walkability, transit access.*
 
+### First-Time Home Seller Spokes
 6. **"Selling Your First Home in South Denver: What No One Tells You About the Process"**
-   → Centennial + First-Time Sellers
+   → Centennial + First-Time Home Sellers (`/first-time-homesellers`)
    *Angle: Common first-time seller mistakes. Net sheet surprises, staging ROI, inspection negotiations.*
 
 ### Relocation Spokes
@@ -109,8 +117,8 @@ Each title bridges a geographic pillar and a specialization pillar. Format: [Blo
 | Why Your House Isn't Selling in Denver | Expired Listings |
 | Why Homes Sit on Market in South Denver | Expired Listings |
 | Best Neighborhoods for Move-Up Buyers | Move-Up Sellers, Relocation |
-| Cost to Sell a House in Colorado 2026 | Move-Up Sellers, First-Time Sellers |
+| Cost to Sell a House in Colorado 2026 | Move-Up Sellers, First-Time Home Sellers (`/first-time-homesellers`) |
 | Littleton vs. Highlands Ranch | Relocation |
-| What Happens After Accepting an Offer | First-Time Buyers |
-| Closing Costs for Colorado Buyers 2026 | First-Time Buyers |
+| What Happens After Accepting an Offer | First-Time Homebuyers (`/first-time-homebuyers`) |
+| Closing Costs for Colorado Buyers 2026 | First-Time Homebuyers (`/first-time-homebuyers`) |
 | Parker vs. Castle Pines | New Construction, Relocation |

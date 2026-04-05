@@ -89,7 +89,7 @@ relatedPosts:
 
 <p>Accepting an offer is the beginning, not the finish line. The next 30 days involve real moving parts — some that need your attention, many that run without you.</p>
 
-<p>Without a clear process, this stretch can feel like a black box. But when you know who's handling each step and what to watch for, it becomes a manageable sequence — not a guessing game. My job is to keep you informed at every stage so there are no surprises. That's what this guide is for. Whether you're a <a href="../first-time-buyers-sellers.html" style="color: var(--color-accent); font-weight: 600;">first-time buyer or seller</a>, understanding the closing timeline and process removes uncertainty and keeps you in control.</p>
+<p>Without a clear process, this stretch can feel like a black box. But when you know who's handling each step and what to watch for, it becomes a manageable sequence — not a guessing game. My job is to keep you informed at every stage so there are no surprises. That's what this guide is for. Whether you're a <a href="/first-time-homebuyers" style="color: var(--color-accent); font-weight: 600;">first-time buyer</a> or <a href="/first-time-homesellers" style="color: var(--color-accent); font-weight: 600;">first-time seller</a>, understanding the closing timeline and process removes uncertainty and keeps you in control.</p>
 
 <h2 id="day-1-under-contract">What Happens on Day 1 When Your Listing Goes Under Contract?</h2>
 

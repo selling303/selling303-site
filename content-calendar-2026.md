@@ -11,7 +11,8 @@
 **Cluster coverage targets (30 days):**
 - Expired Listings: 6 posts
 - Move-Up Sellers: 7 posts
-- First-Time Buyers/Sellers: 6 posts
+- First-Time Homebuyers: 4 posts
+- First-Time Home Sellers: 2 posts
 - Relocation: 5 posts
 - New Construction: 6 posts
 
@@ -20,7 +21,7 @@
 ### Week 1: April 4–10
 
 #### Day 1 — Friday, April 4
-- [ ] **"Your Listing Expired in Highlands Ranch — Here's What Actually Went Wrong"**
+- [x] **"Your Listing Expired in Highlands Ranch — Here's What Actually Went Wrong"** *(drafted 2026-04-04)*
   - Specialization: `/expired-listings` | Geographic: `/highlands-ranch`
   - Type: Buyer/seller advice | Funnel: BOFU
   - Angle: Data-driven autopsy of why HR listings expire. Pricing gaps, DOM patterns, seasonal factors.
@@ -28,7 +29,7 @@
 
 #### Day 2 — Saturday, April 5
 - [ ] **"First-Time Home Buyer's Guide to Englewood, Colorado (2026)"**
-  - Specialization: `/first-time-buyers-sellers` | Geographic: `/englewood`
+  - Specialization: `/first-time-homebuyers` | Geographic: `/englewood`
   - Type: Buyer advice | Funnel: TOFU
   - Angle: Entry-level price points, FHA/conventional thresholds, walkability, transit, lifestyle fit for first-time buyers.
   - Target keywords: first-time home buyer Englewood CO, Englewood Colorado homes for sale 2026, buying a house in Englewood
@@ -88,7 +89,7 @@
 
 #### Day 10 — Sunday, April 13
 - [ ] **"Selling Your First Home in South Denver: What No One Tells You About the Process"**
-  - Specialization: `/first-time-buyers-sellers` | Geographic: `/centennial`
+  - Specialization: `/first-time-homesellers` | Geographic: `/centennial`
   - Type: Seller advice | Funnel: MOFU
   - Angle: Common first-time seller mistakes. Net sheet surprises, staging ROI, inspection negotiations.
   - Target keywords: selling first home South Denver, first-time seller mistakes, what to expect selling house Centennial
@@ -109,7 +110,7 @@
 
 #### Day 13 — Wednesday, April 16
 - [ ] **"What First-Time Buyers Should Know About Bidding in Littleton's Spring Market"**
-  - Specialization: `/first-time-buyers-sellers` | Geographic: `/littleton`
+  - Specialization: `/first-time-homebuyers` | Geographic: `/littleton`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Offer strategy for entry-level buyers competing in Littleton. Escalation clauses, appraisal gaps, inspection flexibility.
   - Target keywords: buying first home Littleton CO, Littleton spring real estate, first-time buyer offer strategy Denver
@@ -141,7 +142,7 @@
 
 #### Day 17 — Sunday, April 20
 - [ ] **"The Hidden Costs of Selling Your Home in Arapahoe County — A First-Time Seller's Net Sheet"**
-  - Specialization: `/first-time-buyers-sellers` | Geographic: `/centennial`
+  - Specialization: `/first-time-homesellers` | Geographic: `/centennial`
   - Type: Seller advice | Funnel: MOFU
   - Angle: Detailed net sheet walkthrough. Transfer tax, title fees, commission structures, concession norms, surprise costs.
   - Target keywords: cost to sell home Arapahoe County, seller net sheet Colorado, first-time seller costs Denver
@@ -187,7 +188,7 @@
 
 #### Day 23 — Saturday, April 26
 - [ ] **"Closing Costs Breakdown for First-Time Buyers in Littleton (2026 Update)"**
-  - Specialization: `/first-time-buyers-sellers` | Geographic: `/littleton`
+  - Specialization: `/first-time-homebuyers` | Geographic: `/littleton`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Littleton-specific closing cost breakdown. Lender fees, title, HOA transfer, prepaid items. Reference the existing Colorado-wide closing costs post and go deeper.
   - Target keywords: closing costs Littleton CO, first-time buyer closing costs Denver, Littleton home buying costs 2026
@@ -222,7 +223,7 @@
 
 #### Day 28 — Thursday, May 1
 - [ ] **"What $500K Gets You in Centennial vs. Highlands Ranch vs. Parker (Spring 2026)"**
-  - Specialization: `/first-time-buyers-sellers` | Geographic: `/centennial`
+  - Specialization: `/first-time-homebuyers` | Geographic: `/centennial`
   - Type: Local area topic / Buyer advice | Funnel: TOFU
   - Angle: Price-point comparison across three suburbs. Sqft, lot size, age, commute, lifestyle. Great for fence-sitters and relocation buyers.
   - Target keywords: $500K home Denver suburbs, Centennial vs Highlands Ranch vs Parker, what can I afford South Denver
@@ -253,7 +254,8 @@
 |---|---|---|
 | Expired Listings | 6 | Highlands Ranch (2), Littleton, Centennial (2), Englewood |
 | Move-Up Sellers | 7 | Parker, Centennial, Highlands Ranch (2), Englewood, Castle Pines, Lakewood |
-| First-Time Buyers/Sellers | 6 | Englewood, Centennial (3), Littleton (2) |
+| First-Time Homebuyers | 4 | Englewood, Centennial, Littleton (2) |
+| First-Time Home Sellers | 2 | Centennial (2) |
 | Relocation | 5 | Highlands Ranch, Littleton, Parker, Centennial, Greenwood Village |
 | New Construction | 6 | Castle Pines, Highlands Ranch (2), Lone Tree, Parker (2) |
 

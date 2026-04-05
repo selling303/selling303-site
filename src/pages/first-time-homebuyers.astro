@@ -1,0 +1,393 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="First-Time Home Buyer Guide | South Denver Metro | Jacob Stark, REALTOR®"
+  description="First-time buyer in the South Denver Metro? Jacob Stark guides you from pre-approval to closing in Littleton, Highlands Ranch, Centennial, and surrounding communities."
+  ogType="website"
+  ogUrl="https://selling303.com/first-time-homebuyers"
+  ogImage="https://selling303.com/images/og-default.jpg"
+  currentPage="first-time-homebuyers"
+  headerVariant="solid"
+>
+  <Fragment slot="head">
+    <!-- Schema: RealEstateAgent + Service -->
+    <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "Jacob Stark",
+      "jobTitle": "REALTOR®",
+      "url": "https://selling303.com",
+      "telephone": "+1-303-997-0634",
+      "email": "jacob@selling303.com",
+      "image": "https://selling303.com/images/jacob-stark-footer-avatar.png",
+      "worksFor": {
+        "@type": "RealEstateAgent",
+        "name": "8z Real Estate"
+      },
+      "areaServed": [
+        {"@type": "City", "name": "Littleton", "containedInPlace": {"@type": "State", "name": "Colorado"}},
+        {"@type": "City", "name": "Highlands Ranch", "containedInPlace": {"@type": "State", "name": "Colorado"}},
+        {"@type": "City", "name": "Centennial", "containedInPlace": {"@type": "State", "name": "Colorado"}},
+        {"@type": "City", "name": "Englewood", "containedInPlace": {"@type": "State", "name": "Colorado"}},
+        {"@type": "City", "name": "Parker", "containedInPlace": {"@type": "State", "name": "Colorado"}},
+        {"@type": "City", "name": "Lakewood", "containedInPlace": {"@type": "State", "name": "Colorado"}},
+        {"@type": "City", "name": "Lone Tree", "containedInPlace": {"@type": "State", "name": "Colorado"}},
+        {"@type": "City", "name": "Castle Pines", "containedInPlace": {"@type": "State", "name": "Colorado"}},
+        {"@type": "City", "name": "Greenwood Village", "containedInPlace": {"@type": "State", "name": "Colorado"}}
+      ],
+      "makesOffer": {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "First-Time Homebuyer Representation",
+          "description": "Jacob Stark guides first-time home buyers through every step of the buying process in the South Denver Metro — from pre-approval and neighborhood selection to offer strategy, inspection, and closing.",
+          "serviceType": "Real Estate Buyer Representation",
+          "areaServed": "South Denver Metro, Colorado"
+        }
+      }
+    }
+    </script>
+    <!-- Schema: FAQPage -->
+    <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much do I need for a down payment in Colorado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can buy a home in Colorado with as little as 3% down, though most lenders offer conventional mortgages with 5–20% down. First-time buyers often qualify for special loan programs like FHA (3.5% down) or USDA loans (0% down for eligible rural properties). Jacob Stark connects you with lenders who specialize in first-time buyer financing across South Denver Metro neighborhoods like Littleton, Highlands Ranch, and Centennial. Your down payment depends on your credit score, debt-to-income ratio, and savings — not a fixed requirement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need an agent as a first-time buyer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You are not required to use an agent, but working with a buyer's agent is almost always in your favor. The seller typically pays the buyer's agent commission, so you don't pay extra. Jacob Stark, as your buyer's agent, negotiates on your behalf, explains market conditions in your target neighborhoods, advises on offers, and handles the inspection and appraisal process. Without representation, you're navigating a complex transaction alone — which is risky on your first home."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to buy a home in the South Denver Metro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "From pre-approval to closing typically takes 4–6 weeks, though it can move faster. Pre-approval usually takes a few days, home search ranges from days to months depending on your preferences, the inspection and appraisal period is 10–14 days, and closing takes 5–7 days. In the South Denver Metro — Littleton, Highlands Ranch, Centennial, and Parker — competitive neighborhoods can move quickly, so being prepared and pre-approved before you start searching is critical."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are closing costs for first-time buyers in Colorado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Buyer closing costs in Colorado typically run 2–4% of the purchase price. For a $500,000 home, expect $10,000–$20,000 covering lender fees, title insurance, appraisal, prepaid taxes and insurance, and recording fees. Some sellers offer closing cost concessions, and certain loan programs include credits. Jacob Stark breaks down every cost before you make an offer so there are no surprises at the closing table."
+          }
+        }
+      ]
+    }
+    </script>
+  </Fragment>
+
+  <!-- COMPACT PILLAR HERO -->
+  <section class="pillar-hero">
+    <div class="container">
+      <div class="pillar-hero__content">
+        <span class="pillar-hero__label">Your Situation</span>
+        <h1>Buying Your First Home in the South Denver Metro</h1>
+        <p class="pillar-hero__subtitle">A step-by-step guide for first-time home buyers in the South Denver Metro. From pre-approval to closing, Jacob Stark walks you through every decision with clarity, control, and confidence.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PILLAR PAGE BODY: TOC SIDEBAR + CONTENT -->
+  <section class="section section--white pillar-body">
+    <div class="pillar-layout">
+
+      <!-- STICKY TOC SIDEBAR -->
+      <aside class="pillar-toc" aria-label="Page navigation">
+        <span class="pillar-toc__label">On This Page</span>
+        <ul class="pillar-toc__list">
+          <li><a href="#direct-answer" class="pillar-toc__link active">Direct Answer</a></li>
+          <li><a href="#the-problem" class="pillar-toc__link">The Problem</a></li>
+          <li><a href="#buying-path" class="pillar-toc__link">The Buying Process</a></li>
+          <li><a href="#how-jacob-works" class="pillar-toc__link">How Jacob Works</a></li>
+          <li><a href="#areas-served" class="pillar-toc__link">Areas Served</a></li>
+          <li><a href="#faq" class="pillar-toc__link">FAQ</a></li>
+          <li><a href="#related-reading" class="pillar-toc__link">Related Reading</a></li>
+          <li><a href="#why-jacob" class="pillar-toc__link">Why Jacob</a></li>
+        </ul>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <div class="pillar-content">
+
+        <!-- DIRECT ANSWER SNIPPET -->
+        <div class="snippet-block" id="direct-answer">
+          <span class="snippet-block__label">Direct Answer</span>
+          <p><strong>What should a first-time home buyer know about the South Denver Metro market?</strong> South Denver Metro neighborhoods like Littleton, Highlands Ranch, and Centennial have median home prices between $450,000 and $650,000, competitive offer conditions, and a mix of resale homes and new construction. Jacob Stark, REALTOR&reg; at 8z Real Estate, specializes in guiding first-time buyers from pre-approval through closing — including loan selection, neighborhood research, offer strategy, and inspection negotiation.</p>
+        </div>
+
+
+        <!-- THE CHALLENGE -->
+        <div id="the-problem" style="padding-top: var(--space-xl);">
+          <span class="section-label">The Problem</span>
+          <h2 class="section-heading">Buying Your First Home Is Overwhelming</h2>
+          <p>There are financing options you've never considered. Neighborhoods you're still learning about. Offers to make. Inspections to understand. A closing process filled with documents and decisions. And everyone around you has different advice.</p>
+          <p>First-time buyers in South Denver Metro suburbs like <a href="/neighborhoods/littleton">Littleton</a>, <a href="/neighborhoods/highlands-ranch">Highlands Ranch</a>, and <a href="/neighborhoods/centennial">Centennial</a> often feel uncertain about whether they're making the right choice, overpaying, or missing something critical. That uncertainty can lead to hesitation — and in a competitive market, hesitation costs you the home.</p>
+          <p>Jacob Stark's job is to remove that uncertainty. He explains each step in plain language, answers every question without judgment, and gives you data so you can make confident decisions about the biggest purchase of your life.</p>
+
+          <!-- Inline CTA -->
+          <div class="section-cta">
+            <p>Ready to start your home buying journey? Jacob will listen to your situation and build a clear plan.</p>
+            <a href="https://calendly.com/jacob-realtor" class="btn btn--primary btn--sm" target="_blank" rel="noopener">Schedule a Call</a>
+          </div>
+        </div>
+
+
+        <!-- BUYING PATH SECTION -->
+        <div id="buying-path" style="padding-top: var(--space-2xl);">
+          <span class="section-label">The Process</span>
+          <h2 class="section-heading">How Jacob Guides First-Time Buyers in the South Denver Metro</h2>
+          <p style="margin-bottom: var(--space-lg);">Step by step, decision by decision, Jacob Stark guides you through the buying process so you know what to expect and what to avoid.</p>
+          <div class="amenities-grid">
+            <div class="amenity-item">
+              <div class="amenity-item__icon">&#x1F4B3;</div>
+              <div>
+                <h4>Pre-Approval</h4>
+                <p>Before you start house hunting, Jacob connects you with lenders who work with first-time buyers. Get pre-approved to know your budget, understand different loan types (conventional, FHA, USDA), and see where you stand. Pre-approval also makes your offer stronger in competitive Highlands Ranch and Centennial markets.</p>
+              </div>
+            </div>
+            <div class="amenity-item">
+              <div class="amenity-item__icon">&#x1F3E0;</div>
+              <div>
+                <h4>Choosing a Neighborhood</h4>
+                <p>The South Denver Metro has distinct neighborhoods — Littleton's walkable downtown, Highlands Ranch's master-planned communities, Centennial's parks, Parker's growth, Lakewood's proximity to downtown. Jacob knows schools, commute times, property tax rates, and community character. He helps you narrow down what matters most.</p>
+              </div>
+            </div>
+            <div class="amenity-item">
+              <div class="amenity-item__icon">&#x1F4DC;</div>
+              <div>
+                <h4>Making an Offer</h4>
+                <p>First-time buyers often don't know what to offer or how competitive to be. Jacob analyzes comparable sales, market conditions, and the specific property to recommend an offer price. He handles the written offer, negotiates terms, and advises on contingencies so you're protected.</p>
+              </div>
+            </div>
+            <div class="amenity-item">
+              <div class="amenity-item__icon">&#x1F527;</div>
+              <div>
+                <h4>Home Inspection</h4>
+                <p>Jacob schedules your inspection and attends with you. He explains what the inspector finds, what's normal wear vs. a red flag, and negotiates repairs or credits with the seller. A home inspection protects you from major surprises after closing.</p>
+              </div>
+            </div>
+            <div class="amenity-item">
+              <div class="amenity-item__icon">&#x1F58A;</div>
+              <div>
+                <h4>Closing Process</h4>
+                <p>Walk through your final walkthrough, review your closing disclosure, ask every question you have. Jacob explains the process, answers your lender's final questions, and guides you through signing. Closing happens fast, so being prepared reduces stress.</p>
+              </div>
+            </div>
+            <div class="amenity-item">
+              <div class="amenity-item__icon">&#x1F50D;</div>
+              <div>
+                <h4>Post-Close Support</h4>
+                <p>Your relationship doesn't end at closing. Jacob provides recommendations for contractors, insurance agents, and local services. He stays in touch, and you have his number if questions come up after you've moved in.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- HOW JACOB WORKS -->
+        <div id="how-jacob-works" style="padding-top: var(--space-2xl);">
+          <span class="section-label">How Jacob Works</span>
+          <h2 class="section-heading">Three Steps to Confidence</h2>
+          <p style="margin-bottom: var(--space-lg);">The process is straightforward: understand your situation, build a clear plan, and execute with communication every step of the way.</p>
+          <div class="process-steps">
+            <div class="process-step">
+              <h4>Initial Consultation</h4>
+              <p>You share your situation — timeline, budget, must-haves, deal-breakers. Jacob listens, asks questions to understand your priorities, and shares how he works. There's no pressure, just a conversation. You decide if you want to move forward.</p>
+            </div>
+            <div class="process-step">
+              <h4>Customized Game Plan</h4>
+              <p>Jacob builds a plan tailored to you: pre-approval strategy, neighborhood research, offer approach, and a timeline so you know what to expect and when. You get this plan in writing.</p>
+            </div>
+            <div class="process-step">
+              <h4>Clear Communication Through Closing</h4>
+              <p>Jacob stays in touch throughout the process — showing schedules, market updates, contract timelines, closing coordination. You always know what's happening next and why. No surprises. No gaps. You have his phone number and he answers your questions.</p>
+            </div>
+          </div>
+
+          <!-- Inline CTA -->
+          <div class="section-cta">
+            <p>Ready to take the first step? Talk to Jacob about your situation and what comes next.</p>
+            <a href="https://calendly.com/jacob-realtor" class="btn btn--primary btn--sm" target="_blank" rel="noopener">Schedule a Call</a>
+          </div>
+        </div>
+
+
+        <!-- AREAS SERVED -->
+        <div id="areas-served" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Areas Served</span>
+          <h2 class="section-heading">First-Time Homebuyer Help Across the South Denver Metro</h2>
+          <p>Jacob Stark guides first-time buyers throughout the South Denver Metro. Whether you're looking at a starter home near Old Town Littleton, a condo in Centennial, or a new build in Parker, the approach is the same — clear communication, data-backed decisions, confidence at closing.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: var(--space-md);">
+            <a href="/neighborhoods/littleton" class="btn btn--outline-dark btn--sm">Littleton</a>
+            <a href="/neighborhoods/highlands-ranch" class="btn btn--outline-dark btn--sm">Highlands Ranch</a>
+            <a href="/neighborhoods/centennial" class="btn btn--outline-dark btn--sm">Centennial</a>
+            <a href="/neighborhoods/englewood" class="btn btn--outline-dark btn--sm">Englewood</a>
+            <a href="/neighborhoods/parker" class="btn btn--outline-dark btn--sm">Parker</a>
+            <a href="/neighborhoods/lakewood" class="btn btn--outline-dark btn--sm">Lakewood</a>
+            <a href="/neighborhoods/lone-tree" class="btn btn--outline-dark btn--sm">Lone Tree</a>
+            <a href="/neighborhoods/castle-pines" class="btn btn--outline-dark btn--sm">Castle Pines</a>
+            <a href="/neighborhoods/greenwood-village" class="btn btn--outline-dark btn--sm">Greenwood Village</a>
+          </div>
+        </div>
+
+
+        <!-- FAQ -->
+        <div id="faq" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Common Questions</span>
+          <h2 class="section-heading">First-Time Homebuyer FAQ</h2>
+          <div class="faq-list">
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How much do I need for a down payment in Colorado?</button>
+              <div class="faq-answer">
+                <p>You can buy a home in Colorado with as little as 3% down, though most lenders offer conventional mortgages with 5–20% down. First-time buyers often qualify for special loan programs like FHA (3.5% down) or USDA loans (0% down for eligible rural properties). Jacob Stark connects you with lenders who specialize in first-time buyer financing across South Denver Metro neighborhoods like Littleton, Highlands Ranch, and Centennial. Your down payment depends on your credit score, debt-to-income ratio, and savings — not a fixed requirement. Some employers and state programs offer down payment assistance, which Jacob can help you explore.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Do I need an agent as a first-time buyer?</button>
+              <div class="faq-answer">
+                <p>You are not required to use an agent, but working with a buyer's agent is almost always in your favor. The seller typically pays the buyer's agent commission, so you don't pay extra. Jacob Stark, as your buyer's agent, negotiates on your behalf, explains market conditions in your target neighborhoods, advises on offers, and handles the inspection and appraisal process. Without representation, you're navigating a complex transaction alone — which is risky on your first home. Jacob represents your interests, not the seller's, and you benefit from his market knowledge and negotiating experience.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How long does it take to buy a home in the South Denver Metro?</button>
+              <div class="faq-answer">
+                <p>From pre-approval to closing typically takes 4–6 weeks, though it can move faster. Pre-approval usually takes a few days, home search ranges from days to months depending on your preferences, the inspection and appraisal period is 10–14 days, and closing takes 5–7 days. In the South Denver Metro — Littleton, Highlands Ranch, Centennial, and Parker — competitive neighborhoods can move quickly, so being prepared and pre-approved before you start searching is critical. Jacob keeps the timeline moving and coordinates all parties so nothing slows down your path to closing.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What are closing costs for first-time buyers in Colorado?</button>
+              <div class="faq-answer">
+                <p>Buyer closing costs in Colorado typically run 2–4% of the purchase price. For a $500,000 home, expect $10,000–$20,000 covering lender fees, title insurance, appraisal, prepaid taxes and insurance, and recording fees. Some sellers offer closing cost concessions, and certain loan programs include credits. Jacob Stark breaks down every cost before you make an offer so there are no surprises at the closing table.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- RELATED READING -->
+        <div id="related-reading" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Related Reading</span>
+          <h2 class="section-heading">First-Time Buyer Insights</h2>
+          <div class="card-grid">
+            <a href="/blog/closing-costs-colorado-buyers-2026" class="card">
+              <div class="card__body">
+                <span class="card__tag">Buyer Advice</span>
+                <h3 class="card__title">Closing Costs for Colorado Home Buyers in 2026</h3>
+                <p class="card__text">What you'll pay at closing, how to budget for it, and how to negotiate who covers what. A breakdown of every line item.</p>
+                <span class="card__meta">March 2026</span>
+              </div>
+            </a>
+            <a href="/blog/what-happens-after-accepting-offer" class="card">
+              <div class="card__body">
+                <span class="card__tag">Buyer Advice</span>
+                <h3 class="card__title">What Happens After You Accept an Offer?</h3>
+                <p class="card__text">The inspection, appraisal, underwriting, and final walkthrough. Every step explained so you know what's coming next.</p>
+                <span class="card__meta">April 2026</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+
+        <!-- WHY JACOB / TRUST BAR -->
+        <div id="why-jacob" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Why Jacob</span>
+          <h2 class="section-heading">The Numbers Behind the Strategy</h2>
+          <p style="margin-bottom: var(--space-lg);">Jacob Stark doesn't just guide first-time buyers — he closes transactions successfully. These numbers reflect a track record of clear communication, data-backed decisions, and client results across the South Denver Metro.</p>
+          <div class="trust-bar">
+            <div class="trust-bar__item">
+              <span class="trust-bar__value">$46M+</span>
+              <span class="trust-bar__label">in Sales</span>
+            </div>
+            <div class="trust-bar__item">
+              <span class="trust-bar__value">100.6%</span>
+              <span class="trust-bar__label">Avg Sale-to-List</span>
+            </div>
+            <div class="trust-bar__item">
+              <span class="trust-bar__value">83</span>
+              <span class="trust-bar__label">Families Helped</span>
+            </div>
+            <div class="trust-bar__item">
+              <span class="trust-bar__value">5.0</span>
+              <span class="trust-bar__label">Google Rating</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.pillar-content -->
+    </div><!-- /.pillar-layout -->
+  </section>
+
+
+  <!-- FINAL CTA -->
+  <section class="cta-banner" style="background-color: var(--color-white);">
+    <div class="container">
+      <h2 style="color: var(--color-dark-text);">Ready to Buy Your First Home?</h2>
+      <p style="color: var(--color-body-text);">Jacob Stark will listen to your situation, answer your questions, and show you exactly what to expect. Your first move is a conversation. No pressure, no sales pitch — just clarity.</p>
+      <a href="https://calendly.com/jacob-realtor" class="btn btn--primary btn--lg" target="_blank" rel="noopener">Schedule a Call</a>
+      <a href="tel:3039970634" class="btn btn--outline-dark btn--lg">Call 303-997-0634</a>
+    </div>
+  </section>
+
+  <script is:inline>
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = this.closest('.faq-item');
+        var isActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(function(el) {
+          el.classList.remove('active');
+          el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+        if (!isActive) {
+          item.classList.add('active');
+          this.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    // Sticky TOC active state
+    (function() {
+      var tocLinks = document.querySelectorAll('.pillar-toc__link');
+      var sections = [];
+      tocLinks.forEach(function(link) {
+        var id = link.getAttribute('href').replace('#', '');
+        var el = document.getElementById(id);
+        if (el) sections.push({ id: id, el: el, link: link });
+      });
+
+      function updateActive() {
+        var scrollPos = window.scrollY + 120;
+        var current = sections[0];
+        for (var i = 0; i < sections.length; i++) {
+          if (sections[i].el.offsetTop <= scrollPos) {
+            current = sections[i];
+          }
+        }
+        tocLinks.forEach(function(l) { l.classList.remove('active'); });
+        if (current) current.link.classList.add('active');
+      }
+
+      window.addEventListener('scroll', updateActive);
+      updateActive();
+    })();
+  </script>
+</BaseLayout>
