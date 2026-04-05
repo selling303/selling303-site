@@ -2,6 +2,9 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import CTABanner from '../components/CTABanner.astro';
+import { Image } from 'astro:assets';
+import headshotSrc from '../assets/images/jacob-stark-headshot.png';
+import lifestyleKitchenSrc from '../assets/images/jacob-lifestyle-kitchen.jpg';
 ---
 
 <BaseLayout
@@ -44,20 +47,24 @@ import CTABanner from '../components/CTABanner.astro';
       <div class="two-col">
         <div class="about-images">
           <div class="two-col__image two-col__image--portrait">
-            <img
-              src="/images/jacob-stark-headshot.png"
+            <Image
+              src={headshotSrc}
               alt="Jacob Stark, REALTOR at 8z Real Estate — professional headshot, South Denver Metro real estate agent"
-              width="750"
-              height="750"
+              width={750}
+              height={750}
+              format="webp"
+              quality={80}
               loading="eager"
             />
           </div>
           <div class="two-col__image">
-            <img
-              src="/images/jacob-lifestyle-kitchen.jpg"
+            <Image
+              src={lifestyleKitchenSrc}
               alt="Jacob Stark reviewing a home with clients in a modern kitchen in Denver, Colorado"
-              width="1200"
-              height="800"
+              width={1200}
+              height={800}
+              format="webp"
+              quality={80}
               loading="lazy"
             />
           </div>

@@ -1,5 +1,19 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getImage } from 'astro:assets';
+
+// Hero background — optimized at build time
+import heroBgSrc from '../assets/images/hero-bg.jpg';
+const heroBg = await getImage({ src: heroBgSrc, format: 'webp', quality: 80, width: 1920 });
+
+// Neighborhood card images — optimized at build time
+import nbLittletonSrc from '../assets/images/neighborhood-littleton.jpg';
+import nbHighlandsRanchSrc from '../assets/images/neighborhood-highlands-ranch.jpg';
+import nbCentennialSrc from '../assets/images/neighborhood-centennial.jpg';
+
+const nbLittleton = await getImage({ src: nbLittletonSrc, format: 'webp', quality: 80, width: 800 });
+const nbHighlandsRanch = await getImage({ src: nbHighlandsRanchSrc, format: 'webp', quality: 80, width: 800 });
+const nbCentennial = await getImage({ src: nbCentennialSrc, format: 'webp', quality: 80, width: 800 });
 ---
 
 <BaseLayout
@@ -13,6 +27,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   headerVariant="transparent"
 >
   <Fragment slot="head">
+    <link rel="preload" as="image" href={heroBg.src} type="image/webp" fetchpriority="high" />
     <script src="https://em.realscout.com/widgets/realscout-web-components.umd.js" type="module" is:inline></script>
     <style>
       realscout-advanced-search {
@@ -146,7 +161,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </Fragment>
 
   <!-- ========== HERO ========== -->
-  <section class="hero">
+  <section class="hero" style={`--hero-bg: url('${heroBg.src}');`}>
     <div class="container">
       <div class="hero__content">
         <span class="hero__label">South Denver Metro Real Estate</span>
@@ -232,7 +247,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <p class="section-subtext">South Denver's best communities for growing families. Explore market data, amenities, and active listings for each area.</p>
       <div class="card-grid card-grid--3col">
         <a href="/neighborhoods/littleton" class="card">
-          <div class="card__image" style="background-image: url('/images/neighborhood-littleton.jpg');" role="img" aria-label="Suburban home in Littleton, Colorado with tree-lined street"></div>
+          <div class="card__image" style={`background-image: url('${nbLittleton.src}');`} role="img" aria-label="Suburban home in Littleton, Colorado with tree-lined street"></div>
           <div class="card__body">
             <span class="card__tag">Littleton</span>
             <h3 class="card__title">Littleton</h3>
@@ -244,7 +259,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
         </a>
         <a href="/neighborhoods/highlands-ranch" class="card">
-          <div class="card__image" style="background-image: url('/images/neighborhood-highlands-ranch.jpg');" role="img" aria-label="Modern home in Highlands Ranch, Colorado with landscaped yard"></div>
+          <div class="card__image" style={`background-image: url('${nbHighlandsRanch.src}');`} role="img" aria-label="Modern home in Highlands Ranch, Colorado with landscaped yard"></div>
           <div class="card__body">
             <span class="card__tag">Highlands Ranch</span>
             <h3 class="card__title">Highlands Ranch</h3>
@@ -256,7 +271,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
         </a>
         <a href="/neighborhoods/centennial" class="card">
-          <div class="card__image" style="background-image: url('/images/neighborhood-centennial.jpg');" role="img" aria-label="Residential home in Centennial, Colorado with green lawn"></div>
+          <div class="card__image" style={`background-image: url('${nbCentennial.src}');`} role="img" aria-label="Residential home in Centennial, Colorado with green lawn"></div>
           <div class="card__body">
             <span class="card__tag">Centennial</span>
             <h3 class="card__title">Centennial</h3>

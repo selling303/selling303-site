@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets';
+import avatarSrc from '../assets/images/jacob-stark-avatar.png';
+
 interface Props {
   compact?: boolean;
   date?: string;
@@ -9,9 +12,13 @@ const { compact = false, date } = Astro.props;
 
 {compact ? (
   <div style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.875rem;">
-    <img
-      src="/images/jacob-stark-avatar.png"
+    <Image
+      src={avatarSrc}
       alt="Jacob Stark"
+      width={32}
+      height={32}
+      format="webp"
+      quality={80}
       style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover;"
     />
     <div>
@@ -25,9 +32,13 @@ const { compact = false, date } = Astro.props;
 ) : (
   <div style="padding: var(--space-md) 0; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
     <div style="display: flex; align-items: flex-start; gap: 1.5rem;">
-      <img
-        src="/images/jacob-stark-avatar.png"
+      <Image
+        src={avatarSrc}
         alt="Jacob Stark"
+        width={80}
+        height={80}
+        format="webp"
+        quality={80}
         style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; flex-shrink: 0;"
       />
       <div>

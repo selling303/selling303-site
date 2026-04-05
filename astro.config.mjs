@@ -7,6 +7,10 @@ export default defineConfig({
   integrations: [
     sitemap(),
   ],
+  image: {
+    // Sharp is Astro's default — handles WebP/AVIF generation at build time
+    // All images in src/assets/ are auto-optimized when used via <Image> or getImage()
+  },
   build: {
     assets: '_assets',
   },

@@ -1,5 +1,20 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getImage } from 'astro:assets';
+
+import nbLittletonSrc from '../assets/images/neighborhood-littleton.jpg';
+import nbHighlandsRanchSrc from '../assets/images/neighborhood-highlands-ranch.jpg';
+import nbCentennialSrc from '../assets/images/neighborhood-centennial.jpg';
+import nbEnglewoodSrc from '../assets/images/neighborhood-englewood.jpg';
+import nbParkerSrc from '../assets/images/neighborhood-parker.jpg';
+import nbLakewoodSrc from '../assets/images/neighborhood-lakewood.jpg';
+
+const nbLittleton = await getImage({ src: nbLittletonSrc, format: 'webp', quality: 80, width: 800 });
+const nbHighlandsRanch = await getImage({ src: nbHighlandsRanchSrc, format: 'webp', quality: 80, width: 800 });
+const nbCentennial = await getImage({ src: nbCentennialSrc, format: 'webp', quality: 80, width: 800 });
+const nbEnglewood = await getImage({ src: nbEnglewoodSrc, format: 'webp', quality: 80, width: 800 });
+const nbParker = await getImage({ src: nbParkerSrc, format: 'webp', quality: 80, width: 800 });
+const nbLakewood = await getImage({ src: nbLakewoodSrc, format: 'webp', quality: 80, width: 800 });
 ---
 
 <BaseLayout headerVariant="solid" title="Neighborhoods | Selling 303 — South Denver Metro Communities" description="Explore South Denver Metro neighborhoods — Littleton, Highlands Ranch, Centennial, Englewood, Parker, Lakewood, Lone Tree, Castle Pines, and Greenwood Village. Market stats, lifestyle info, and active listings." currentPage="neighborhoods">
@@ -490,7 +505,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <!-- Littleton -->
         <div class="nbhd-card" data-id="littleton">
           <div class="nbhd-card__match-badge">★ Your Match</div>
-          <div class="nbhd-card__image" style="background-image: url('/images/neighborhood-littleton.jpg');" role="img" aria-label="Suburban street in Littleton, Colorado"></div>
+          <div class="nbhd-card__image" style={`background-image: url('${nbLittleton.src}');`} role="img" aria-label="Suburban street in Littleton, Colorado"></div>
           <div class="nbhd-card__body">
             <span class="nbhd-card__county">Arapahoe County</span>
             <h3 class="nbhd-card__name">Littleton</h3>
@@ -509,7 +524,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <!-- Highlands Ranch -->
         <div class="nbhd-card" data-id="highlands-ranch">
           <div class="nbhd-card__match-badge">★ Your Match</div>
-          <div class="nbhd-card__image" style="background-image: url('/images/neighborhood-highlands-ranch.jpg');" role="img" aria-label="Modern home in Highlands Ranch, Colorado"></div>
+          <div class="nbhd-card__image" style={`background-image: url('${nbHighlandsRanch.src}');`} role="img" aria-label="Modern home in Highlands Ranch, Colorado"></div>
           <div class="nbhd-card__body">
             <span class="nbhd-card__county">Douglas County</span>
             <h3 class="nbhd-card__name">Highlands Ranch</h3>
@@ -528,7 +543,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <!-- Centennial -->
         <div class="nbhd-card" data-id="centennial">
           <div class="nbhd-card__match-badge">★ Your Match</div>
-          <div class="nbhd-card__image" style="background-image: url('/images/neighborhood-centennial.jpg');" role="img" aria-label="Residential home in Centennial, Colorado"></div>
+          <div class="nbhd-card__image" style={`background-image: url('${nbCentennial.src}');`} role="img" aria-label="Residential home in Centennial, Colorado"></div>
           <div class="nbhd-card__body">
             <span class="nbhd-card__county">Arapahoe County</span>
             <h3 class="nbhd-card__name">Centennial</h3>
@@ -547,7 +562,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <!-- Englewood -->
         <div class="nbhd-card" data-id="englewood">
           <div class="nbhd-card__match-badge">★ Your Match</div>
-          <div class="nbhd-card__image" style="background-image: url('/images/neighborhood-englewood.jpg');" role="img" aria-label="Residential neighborhood in Englewood, Colorado"></div>
+          <div class="nbhd-card__image" style={`background-image: url('${nbEnglewood.src}');`} role="img" aria-label="Residential neighborhood in Englewood, Colorado"></div>
           <div class="nbhd-card__body">
             <span class="nbhd-card__county">Arapahoe County</span>
             <h3 class="nbhd-card__name">Englewood</h3>
@@ -566,7 +581,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <!-- Parker -->
         <div class="nbhd-card" data-id="parker">
           <div class="nbhd-card__match-badge">★ Your Match</div>
-          <div class="nbhd-card__image" style="background-image: url('/images/neighborhood-parker.jpg');" role="img" aria-label="Suburban home in Parker, Colorado"></div>
+          <div class="nbhd-card__image" style={`background-image: url('${nbParker.src}');`} role="img" aria-label="Suburban home in Parker, Colorado"></div>
           <div class="nbhd-card__body">
             <span class="nbhd-card__county">Douglas County</span>
             <h3 class="nbhd-card__name">Parker</h3>
@@ -585,7 +600,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <!-- Lakewood -->
         <div class="nbhd-card" data-id="lakewood">
           <div class="nbhd-card__match-badge">★ Your Match</div>
-          <div class="nbhd-card__image" style="background-image: url('/images/neighborhood-lakewood.jpg');" role="img" aria-label="Mountain foothills view near Lakewood, Colorado"></div>
+          <div class="nbhd-card__image" style={`background-image: url('${nbLakewood.src}');`} role="img" aria-label="Mountain foothills view near Lakewood, Colorado"></div>
           <div class="nbhd-card__body">
             <span class="nbhd-card__county">Jefferson County</span>
             <h3 class="nbhd-card__name">Lakewood</h3>
