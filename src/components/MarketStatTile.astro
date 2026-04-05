@@ -1,0 +1,43 @@
+---
+/**
+ * MarketStatTile — displays a single market stat with Schema.org Microdata.
+ * Renders as a PropertyValue inside a parent Place scope.
+ *
+ * Usage:
+ *   <MarketStatTile number="$605,000" label="Median Home Price" value="605000" unit="USD" trend="-2.3% YoY" trendDirection="down" />
+ */
+interface Props {
+  /** Display string shown to the user, e.g. "$605,000" or "64" */
+  number: string;
+  /** Human-readable label, e.g. "Median Home Price" */
+  label: string;
+  /** Machine-readable numeric value for Microdata, e.g. "605000" */
+  value: string;
+  /** Unit — "USD" for prices, "days" / "listings" for others */
+  unit: string;
+  /** Trend string, e.g. "-2.3% YoY" */
+  trend?: string;
+  /** "up" or "down" — controls the arrow and color */
+  trendDirection?: 'up' | 'down';
+}
+
+const { number, label, value, unit, trend, trendDirection } = Astro.props;
+const isPrice = unit === 'USD';
+---
+
+<div class="market-stat-tile" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue">
+  <meta itemprop="name" content={label} />
+  {isPrice ? (
+    <meta itemprop="unitCode" content={unit} />
+  ) : (
+    <meta itemprop="unitText" content={unit} />
+  )}
+  <meta itemprop="value" content={value} />
+  <span class="market-stat-tile__number">{number}</span>
+  <span class="market-stat-tile__label">{label}</span>
+  {trend && (
+    <span class={`market-stat-tile__trend market-stat-tile__trend--${trendDirection}`}>
+      {trendDirection === 'up' ? '↑' : '↓'} {trend}
+    </span>
+  )}
+</div>

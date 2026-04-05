@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import MarketStatTile from '../components/MarketStatTile.astro';
+import NeighborhoodCard from '../components/NeighborhoodCard.astro';
 import { getImage } from 'astro:assets';
 
 // Hero background — optimized at build time
@@ -246,45 +248,18 @@ const nbCentennial = await getImage({ src: nbCentennialSrc, format: 'webp', qual
       <h2 class="section-heading">Featured Neighborhoods</h2>
       <p class="section-subtext">South Denver's best communities for growing families. Explore market data, amenities, and active listings for each area.</p>
       <div class="card-grid card-grid--3col">
-        <a href="/neighborhoods/littleton" class="card" itemscope itemtype="https://schema.org/Place">
-          <meta itemprop="name" content="Littleton, Colorado" />
-          <div class="card__image" style={`background-image: url('${nbLittleton.src}');`} role="img" aria-label="Suburban home in Littleton, Colorado with tree-lined street"></div>
-          <div class="card__body">
-            <span class="card__tag">Littleton</span>
-            <h3 class="card__title" itemprop="alternateName">Littleton</h3>
-            <p class="card__text" itemprop="description">Historic downtown charm meets suburban convenience. Top-rated access to light rail, trails, and a walkable Main Street.</p>
-            <div class="card__stats">
-              <div class="card__stat" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue"><meta itemprop="name" content="Median Home Price" /><meta itemprop="value" content="703000" /><strong>$703K</strong> Median Price</div>
-              <div class="card__stat" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue"><meta itemprop="name" content="Average Days on Market" /><meta itemprop="value" content="51" /><strong>51</strong> Avg DOM</div>
-            </div>
-          </div>
-        </a>
-        <a href="/neighborhoods/highlands-ranch" class="card" itemscope itemtype="https://schema.org/Place">
-          <meta itemprop="name" content="Highlands Ranch, Colorado" />
-          <div class="card__image" style={`background-image: url('${nbHighlandsRanch.src}');`} role="img" aria-label="Modern home in Highlands Ranch, Colorado with landscaped yard"></div>
-          <div class="card__body">
-            <span class="card__tag">Highlands Ranch</span>
-            <h3 class="card__title" itemprop="alternateName">Highlands Ranch</h3>
-            <p class="card__text" itemprop="description">Master-planned with 70+ miles of trails, four rec centers, and strong resale values across a range of price points.</p>
-            <div class="card__stats">
-              <div class="card__stat" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue"><meta itemprop="name" content="Median Home Price" /><meta itemprop="value" content="718500" /><strong>$718.5K</strong> Median Price</div>
-              <div class="card__stat" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue"><meta itemprop="name" content="Average Days on Market" /><meta itemprop="value" content="52" /><strong>52</strong> Avg DOM</div>
-            </div>
-          </div>
-        </a>
-        <a href="/neighborhoods/centennial" class="card" itemscope itemtype="https://schema.org/Place">
-          <meta itemprop="name" content="Centennial, Colorado" />
-          <div class="card__image" style={`background-image: url('${nbCentennial.src}');`} role="img" aria-label="Residential home in Centennial, Colorado with green lawn"></div>
-          <div class="card__body">
-            <span class="card__tag">Centennial</span>
-            <h3 class="card__title" itemprop="alternateName">Centennial</h3>
-            <p class="card__text" itemprop="description">Central location with easy I-25 and E-470 access. Larger lots, established neighborhoods, and strong appreciation.</p>
-            <div class="card__stats">
-              <div class="card__stat" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue"><meta itemprop="name" content="Median Home Price" /><meta itemprop="value" content="699000" /><strong>$699K</strong> Median Price</div>
-              <div class="card__stat" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue"><meta itemprop="name" content="Average Days on Market" /><meta itemprop="value" content="48" /><strong>48</strong> Avg DOM</div>
-            </div>
-          </div>
-        </a>
+        <NeighborhoodCard variant="compact" name="Littleton" slug="littleton"
+          description="Historic downtown charm meets suburban convenience. Top-rated access to light rail, trails, and a walkable Main Street."
+          medianPrice={703000} medianPriceDisplay="$703K" dom={51}
+          imageSrc={nbLittleton.src} imageAlt="Suburban home in Littleton, Colorado with tree-lined street" />
+        <NeighborhoodCard variant="compact" name="Highlands Ranch" slug="highlands-ranch"
+          description="Master-planned with 70+ miles of trails, four rec centers, and strong resale values across a range of price points."
+          medianPrice={718500} medianPriceDisplay="$718.5K" dom={52}
+          imageSrc={nbHighlandsRanch.src} imageAlt="Modern home in Highlands Ranch, Colorado with landscaped yard" />
+        <NeighborhoodCard variant="compact" name="Centennial" slug="centennial"
+          description="Central location with easy I-25 and E-470 access. Larger lots, established neighborhoods, and strong appreciation."
+          medianPrice={699000} medianPriceDisplay="$699K" dom={48}
+          imageSrc={nbCentennial.src} imageAlt="Residential home in Centennial, Colorado with green lawn" />
       </div>
       <div style="text-align: center; margin-top: var(--space-lg);">
         <a href="/neighborhoods" class="btn btn--outline-dark">View All 9 Neighborhoods</a>
@@ -300,38 +275,10 @@ const nbCentennial = await getImage({ src: nbCentennialSrc, format: 'webp', qual
       <h2 class="section-heading">What's the Market Doing Right Now?</h2>
       <p class="section-subtext">A quick pulse on the Denver metro real estate market &mdash; so you're never guessing.</p>
       <div class="market-stats-tiles">
-        <div class="market-stat-tile" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue">
-          <meta itemprop="name" content="Median Home Price" />
-          <meta itemprop="unitCode" content="USD" />
-          <meta itemprop="value" content="605000" />
-          <span class="market-stat-tile__number">$605,000</span>
-          <span class="market-stat-tile__label">Median Home Price</span>
-          <span class="market-stat-tile__trend market-stat-tile__trend--down">&#x2193; -2.3% YoY</span>
-        </div>
-        <div class="market-stat-tile" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue">
-          <meta itemprop="name" content="Average Days on Market" />
-          <meta itemprop="unitText" content="days" />
-          <meta itemprop="value" content="64" />
-          <span class="market-stat-tile__number">64</span>
-          <span class="market-stat-tile__label">Avg Days on Market</span>
-          <span class="market-stat-tile__trend market-stat-tile__trend--up">&#x2191; +6.7% YoY</span>
-        </div>
-        <div class="market-stat-tile" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue">
-          <meta itemprop="name" content="Active Inventory" />
-          <meta itemprop="unitText" content="listings" />
-          <meta itemprop="value" content="8351" />
-          <span class="market-stat-tile__number">8,351</span>
-          <span class="market-stat-tile__label">Active Inventory</span>
-          <span class="market-stat-tile__trend market-stat-tile__trend--down">&#x2193; -12.4% YoY</span>
-        </div>
-        <div class="market-stat-tile" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue">
-          <meta itemprop="name" content="Under Contract" />
-          <meta itemprop="unitText" content="listings" />
-          <meta itemprop="value" content="3732" />
-          <span class="market-stat-tile__number">3,732</span>
-          <span class="market-stat-tile__label">Under Contract</span>
-          <span class="market-stat-tile__trend market-stat-tile__trend--up">&#x2191; +19.0% YoY</span>
-        </div>
+        <MarketStatTile number="$605,000" label="Median Home Price" value="605000" unit="USD" trend="-2.3% YoY" trendDirection="down" />
+        <MarketStatTile number="64" label="Avg Days on Market" value="64" unit="days" trend="+6.7% YoY" trendDirection="up" />
+        <MarketStatTile number="8,351" label="Active Inventory" value="8351" unit="listings" trend="-12.4% YoY" trendDirection="down" />
+        <MarketStatTile number="3,732" label="Under Contract" value="3732" unit="listings" trend="+19.0% YoY" trendDirection="up" />
       </div>
       <p class="market-stats-source">Source: DMAR / REcolorado MLS &middot; February 2026</p>
     </div>

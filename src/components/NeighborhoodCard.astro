@@ -1,0 +1,117 @@
+---
+/**
+ * NeighborhoodCard — renders a neighborhood card with Schema.org Place Microdata.
+ * Supports two variants: "compact" (homepage) and "full" (neighborhoods page).
+ *
+ * Compact usage (homepage):
+ *   <NeighborhoodCard variant="compact" name="Littleton" slug="littleton"
+ *     description="Historic downtown charm..." medianPrice={703000}
+ *     medianPriceDisplay="$703K" dom={51} imageSrc={nbLittleton.src}
+ *     imageAlt="Suburban home in Littleton, Colorado" />
+ *
+ * Full usage (neighborhoods page):
+ *   <NeighborhoodCard variant="full" name="Littleton" slug="littleton"
+ *     county="Arapahoe County" description="Littleton is the Saturday-morning..."
+ *     medianPrice={703000} medianPriceDisplay="$703,000" dom={51}
+ *     imageSrc={nbLittleton.src} imageAlt="Suburban street in Littleton"
+ *     searchUrl="https://selling303.realscout.com/search?city=Littleton" />
+ */
+interface Props {
+  /** "compact" for homepage cards, "full" for neighborhoods page */
+  variant: 'compact' | 'full';
+  /** City name, e.g. "Littleton" */
+  name: string;
+  /** URL slug, e.g. "littleton" or "highlands-ranch" */
+  slug: string;
+  /** County name — required for full variant */
+  county?: string;
+  /** Description or personality text */
+  description: string;
+  /** Machine-readable median price (number), e.g. 703000 */
+  medianPrice: number;
+  /** Display string for the price, e.g. "$703K" or "$703,000" */
+  medianPriceDisplay: string;
+  /** Average days on market (number) */
+  dom: number;
+  /** Optimized image URL from getImage() */
+  imageSrc: string;
+  /** Alt text for the image */
+  imageAlt: string;
+  /** RealScout search URL — required for full variant */
+  searchUrl?: string;
+}
+
+const {
+  variant,
+  name,
+  slug,
+  county,
+  description,
+  medianPrice,
+  medianPriceDisplay,
+  dom,
+  imageSrc,
+  imageAlt,
+  searchUrl,
+} = Astro.props;
+
+const fullName = `${name}, Colorado`;
+const priceLabel = variant === 'full' ? 'Median Single-Family Home Price' : 'Median Home Price';
+---
+
+{variant === 'compact' ? (
+  <a href={`/neighborhoods/${slug}`} class="card" itemscope itemtype="https://schema.org/Place">
+    <meta itemprop="name" content={fullName} />
+    <div class="card__image" style={`background-image: url('${imageSrc}');`} role="img" aria-label={imageAlt}></div>
+    <div class="card__body">
+      <span class="card__tag">{name}</span>
+      <h3 class="card__title" itemprop="alternateName">{name}</h3>
+      <p class="card__text" itemprop="description">{description}</p>
+      <div class="card__stats">
+        <div class="card__stat" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue">
+          <meta itemprop="name" content={priceLabel} />
+          <meta itemprop="value" content={String(medianPrice)} />
+          <strong>{medianPriceDisplay}</strong> Median Price
+        </div>
+        <div class="card__stat" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue">
+          <meta itemprop="name" content="Average Days on Market" />
+          <meta itemprop="value" content={String(dom)} />
+          <strong>{dom}</strong> Avg DOM
+        </div>
+      </div>
+    </div>
+  </a>
+) : (
+  <div class={`nbhd-card`} data-id={slug} itemscope itemtype="https://schema.org/Place">
+    <meta itemprop="name" content={fullName} />
+    <div class="nbhd-card__match-badge">★ Your Match</div>
+    <div class="nbhd-card__image" style={`background-image: url('${imageSrc}');`} role="img" aria-label={imageAlt}></div>
+    <div class="nbhd-card__body">
+      {county && (
+        <span class="nbhd-card__county" itemprop="containedInPlace" itemscope itemtype="https://schema.org/AdministrativeArea">
+          <span itemprop="name">{county}</span>
+        </span>
+      )}
+      <h3 class="nbhd-card__name" itemprop="alternateName">{name}</h3>
+      <p class="nbhd-card__personality" itemprop="description">{description}</p>
+      <div class="nbhd-card__stats">
+        <div class="nbhd-card__stat" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue">
+          <meta itemprop="name" content={priceLabel} />
+          <meta itemprop="value" content={String(medianPrice)} />
+          <strong>{medianPriceDisplay}</strong> Median SFH
+        </div>
+        <div class="nbhd-card__stat" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue">
+          <meta itemprop="name" content="Average Days on Market" />
+          <meta itemprop="value" content={String(dom)} />
+          <strong>{dom}</strong> Avg DOM
+        </div>
+      </div>
+      <div class="nbhd-card__actions">
+        <a href={`/neighborhoods/${slug}`} class="nbhd-card__btn-explore">Explore {name}</a>
+        {searchUrl && (
+          <a href={searchUrl} class="nbhd-card__btn-search" target="_blank" rel="noopener">Search Homes</a>
+        )}
+      </div>
+    </div>
+  </div>
+)}

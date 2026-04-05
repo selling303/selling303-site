@@ -29,3 +29,55 @@ All images on the site MUST go through Astro's built-in image optimization pipel
 ### Why
 
 Astro's Sharp-based pipeline converts to WebP at build time, reducing file sizes 40-60% with no visible quality loss. This directly improves LCP and page load performance across the site.
+
+## Reusable Components with AEO Microdata (Mandatory)
+
+Market stats and neighborhood cards have dedicated Astro components with Schema.org Microdata baked in. Always use these components — never write inline Microdata HTML.
+
+### MarketStatTile
+
+Location: `src/components/MarketStatTile.astro`
+
+Renders a single market stat with `PropertyValue` Microdata. Must be placed inside a parent element with `itemscope itemtype="https://schema.org/Place"`.
+
+```astro
+import MarketStatTile from '../components/MarketStatTile.astro';
+// ...
+<div itemscope itemtype="https://schema.org/Place">
+  <meta itemprop="name" content="South Denver Metro, Colorado" />
+  <MarketStatTile number="$605,000" label="Median Home Price" value="605000" unit="USD" trend="-2.3% YoY" trendDirection="down" />
+</div>
+```
+
+Props: `number` (display string), `label`, `value` (machine-readable), `unit` ("USD" | "days" | "listings"), `trend?`, `trendDirection?` ("up" | "down").
+
+### NeighborhoodCard
+
+Location: `src/components/NeighborhoodCard.astro`
+
+Renders a neighborhood card with `Place` + `PropertyValue` Microdata. Two variants:
+
+- **`compact`** — homepage cards. Renders as `<a>` with `.card` classes.
+- **`full`** — neighborhoods page. Renders as `<div>` with `.nbhd-card` classes, includes county, match badge, explore/search buttons.
+
+```astro
+import NeighborhoodCard from '../components/NeighborhoodCard.astro';
+// Compact (homepage):
+<NeighborhoodCard variant="compact" name="Littleton" slug="littleton"
+  description="Historic downtown charm..." medianPrice={703000}
+  medianPriceDisplay="$703K" dom={51} imageSrc={nbLittleton.src}
+  imageAlt="Suburban home in Littleton, Colorado" />
+
+// Full (neighborhoods page):
+<NeighborhoodCard variant="full" name="Littleton" slug="littleton"
+  county="Arapahoe County" description="Littleton is the Saturday-morning..."
+  medianPrice={703000} medianPriceDisplay="$703,000" dom={51}
+  imageSrc={nbLittleton.src} imageAlt="Suburban street in Littleton"
+  searchUrl="https://selling303.realscout.com/search?city=Littleton" />
+```
+
+Props: `variant` ("compact" | "full"), `name`, `slug`, `county?` (required for full), `description`, `medianPrice` (number), `medianPriceDisplay` (string), `dom` (number), `imageSrc`, `imageAlt`, `searchUrl?` (required for full).
+
+### Why
+
+Schema.org Microdata helps answer engines (ChatGPT, Google AI Overviews, Perplexity) surface structured data about neighborhoods and market stats directly from the HTML. Baking it into components ensures every page gets correct structured data automatically — no manual Microdata required.
