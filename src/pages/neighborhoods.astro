@@ -545,62 +545,29 @@ const nbLakewood = await getImage({ src: nbLakewoodSrc, format: 'webp', quality:
           imageSrc={nbLakewood.src} imageAlt="Mountain foothills view near Lakewood, Colorado"
           searchUrl="https://selling303.realscout.com/search?city=Lakewood" />
 
-        <!-- Lone Tree -->
-        <div class="nbhd-card" data-id="lone-tree">
-          <div class="nbhd-card__match-badge">★ Your Match</div>
-          <div class="nbhd-card__image" style="background-image: url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&h=500&fit=crop&q=80');" role="img" aria-label="Modern home in Lone Tree, Colorado"></div>
-          <div class="nbhd-card__body">
-            <span class="nbhd-card__county">Douglas County</span>
-            <h3 class="nbhd-card__name">Lone Tree</h3>
-            <p class="nbhd-card__personality">Lone Tree is where executive living meets light rail — Park Meadows, RidgeGate, Lincoln Station, and a fast commute to anywhere in the metro.</p>
-            <div class="nbhd-card__stats">
-              <div class="nbhd-card__stat"><strong>$918,485</strong> Median SFH</div>
-              <div class="nbhd-card__stat"><strong>61</strong> Avg DOM</div>
-            </div>
-            <div class="nbhd-card__actions">
-              <a href="/neighborhoods/lone-tree" class="nbhd-card__btn-explore">Explore Lone Tree</a>
-              <a href="https://selling303.realscout.com/search?city=Lone+Tree" class="nbhd-card__btn-search" target="_blank" rel="noopener">Search Homes</a>
-            </div>
-          </div>
-        </div>
+        <!-- Lone Tree (Unsplash placeholder — swap for real photo when available) -->
+        <NeighborhoodCard variant="full" name="Lone Tree" slug="lone-tree" county="Douglas County"
+          description="Lone Tree is where executive living meets light rail — Park Meadows, RidgeGate, Lincoln Station, and a fast commute to anywhere in the metro."
+          medianPrice={918485} medianPriceDisplay="$918,485" dom={61}
+          imageSrc="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&h=500&fit=crop&q=80"
+          imageAlt="Modern home in Lone Tree, Colorado"
+          searchUrl="https://selling303.realscout.com/search?city=Lone+Tree" />
 
-        <!-- Castle Pines -->
-        <div class="nbhd-card" data-id="castle-pines">
-          <div class="nbhd-card__match-badge">★ Your Match</div>
-          <div class="nbhd-card__image" style="background-image: url('https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&h=500&fit=crop&q=80');" role="img" aria-label="Large home among pine trees in Castle Pines, Colorado"></div>
-          <div class="nbhd-card__body">
-            <span class="nbhd-card__county">Douglas County</span>
-            <h3 class="nbhd-card__name">Castle Pines</h3>
-            <p class="nbhd-card__personality">Castle Pines is the neighborhood where the pine trees are real, the golf isn't a metaphor, and the DTC is still only 25 minutes away.</p>
-            <div class="nbhd-card__stats">
-              <div class="nbhd-card__stat"><strong>$959,000</strong> Median SFH</div>
-              <div class="nbhd-card__stat"><strong>77</strong> Avg DOM</div>
-            </div>
-            <div class="nbhd-card__actions">
-              <a href="/neighborhoods/castle-pines" class="nbhd-card__btn-explore">Explore Castle Pines</a>
-              <a href="https://selling303.realscout.com/search?city=Castle+Pines" class="nbhd-card__btn-search" target="_blank" rel="noopener">Search Homes</a>
-            </div>
-          </div>
-        </div>
+        <!-- Castle Pines (Unsplash placeholder — swap for real photo when available) -->
+        <NeighborhoodCard variant="full" name="Castle Pines" slug="castle-pines" county="Douglas County"
+          description="Castle Pines is the neighborhood where the pine trees are real, the golf isn't a metaphor, and the DTC is still only 25 minutes away."
+          medianPrice={959000} medianPriceDisplay="$959,000" dom={77}
+          imageSrc="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&h=500&fit=crop&q=80"
+          imageAlt="Large home among pine trees in Castle Pines, Colorado"
+          searchUrl="https://selling303.realscout.com/search?city=Castle+Pines" />
 
-        <!-- Greenwood Village -->
-        <div class="nbhd-card" data-id="greenwood-village">
-          <div class="nbhd-card__match-badge">★ Your Match</div>
-          <div class="nbhd-card__image" style="background-image: url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=500&fit=crop&q=80');" role="img" aria-label="Luxury home in Greenwood Village, Colorado"></div>
-          <div class="nbhd-card__body">
-            <span class="nbhd-card__county">Arapahoe County</span>
-            <h3 class="nbhd-card__name">Greenwood Village</h3>
-            <p class="nbhd-card__personality">Greenwood Village is old-money South Denver — large lots, landmark estates, and a DTC address that speaks for itself at the metro's highest price point.</p>
-            <div class="nbhd-card__stats">
-              <div class="nbhd-card__stat"><strong>$1,847,000</strong> Median SFH</div>
-              <div class="nbhd-card__stat"><strong>40</strong> Avg DOM</div>
-            </div>
-            <div class="nbhd-card__actions">
-              <a href="/neighborhoods/greenwood-village" class="nbhd-card__btn-explore">Explore Greenwood Village</a>
-              <a href="https://selling303.realscout.com/search?city=Greenwood+Village" class="nbhd-card__btn-search" target="_blank" rel="noopener">Search Homes</a>
-            </div>
-          </div>
-        </div>
+        <!-- Greenwood Village (Unsplash placeholder — swap for real photo when available) -->
+        <NeighborhoodCard variant="full" name="Greenwood Village" slug="greenwood-village" county="Arapahoe County"
+          description="Greenwood Village is old-money South Denver — large lots, landmark estates, and a DTC address that speaks for itself at the metro's highest price point."
+          medianPrice={1847000} medianPriceDisplay="$1,847,000" dom={40}
+          imageSrc="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=500&fit=crop&q=80"
+          imageAlt="Luxury home in Greenwood Village, Colorado"
+          searchUrl="https://selling303.realscout.com/search?city=Greenwood+Village" />
 
       </div>
     </div>

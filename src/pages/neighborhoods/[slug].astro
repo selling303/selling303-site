@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import MarketStatTile from '../../components/MarketStatTile.astro';
 
 export async function getStaticPaths() {
   const neighborhoods = await getCollection('neighborhoods');
@@ -12,6 +13,15 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { data } = entry;
+
+// Extract machine-readable values from display strings for Microdata
+function extractNumeric(s: string): string {
+  const cleaned = s.replace(/[^0-9.]/g, '');
+  // Handle shorthand: $703K → 703000
+  if (s.includes('K')) return String(parseFloat(cleaned) * 1000);
+  if (s.includes('M')) return String(parseFloat(cleaned) * 1000000);
+  return cleaned;
+}
 
 // Build schema JSON
 const schemaJson = JSON.stringify({
@@ -69,28 +79,17 @@ const schemaJson = JSON.stringify({
   </section>
 
   <!-- MARKET STATS -->
-  <section class="section">
+  <section class="section" itemscope itemtype="https://schema.org/Place">
+    <meta itemprop="name" content={`${data.title}, Colorado`} />
     <div class="container text-center">
       <span class="section-label">Market Data</span>
       <h2 class="section-heading">{data.title} by the Numbers</h2>
       <p class="section-subtext">Current market snapshot based on recent MLS data. Updated regularly.</p>
       <div class="neighborhood-stats">
-        <div class="neighborhood-stat">
-          <span class="neighborhood-stat__value">{data.stats.medianPrice}</span>
-          <span class="neighborhood-stat__label">Median Sale Price</span>
-        </div>
-        <div class="neighborhood-stat">
-          <span class="neighborhood-stat__value">{data.stats.avgDOM}</span>
-          <span class="neighborhood-stat__label">Avg Days on Market</span>
-        </div>
-        <div class="neighborhood-stat">
-          <span class="neighborhood-stat__value">{data.stats.listPriceReceived}</span>
-          <span class="neighborhood-stat__label">List Price Received</span>
-        </div>
-        <div class="neighborhood-stat">
-          <span class="neighborhood-stat__value">{data.stats.activeListings}</span>
-          <span class="neighborhood-stat__label">Active Listings</span>
-        </div>
+        <MarketStatTile number={data.stats.medianPrice} label="Median Sale Price" value={extractNumeric(data.stats.medianPrice)} unit="USD" />
+        <MarketStatTile number={data.stats.avgDOM} label="Avg Days on Market" value={data.stats.avgDOM} unit="days" />
+        <MarketStatTile number={data.stats.listPriceReceived} label="List Price Received" value={extractNumeric(data.stats.listPriceReceived)} unit="percent" />
+        <MarketStatTile number={data.stats.activeListings} label="Active Listings" value={data.stats.activeListings} unit="listings" />
       </div>
       <p class="market-stats-source" style="margin-top: var(--space-md);">Source: {data.stats.source} &middot; {data.stats.sourceDate}</p>
     </div>
