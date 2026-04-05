@@ -28,7 +28,7 @@
   - Target keywords: expired listing Highlands Ranch, why didn't my house sell Highlands Ranch, Highlands Ranch homes not selling
 
 #### Day 2 — Saturday, April 5
-- [ ] **"First-Time Home Buyer's Guide to Englewood, Colorado (2026)"**
+- [x] **"First-Time Home Buyer's Guide to Englewood, Colorado (2026)"** *(published 2026-04-05)*
   - Specialization: `/first-time-homebuyers` | Geographic: `/englewood`
   - Type: Buyer advice | Funnel: TOFU
   - Angle: Entry-level price points, FHA/conventional thresholds, walkability, transit, lifestyle fit for first-time buyers.
