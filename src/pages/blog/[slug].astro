@@ -98,18 +98,27 @@ const ogImage = data.ogImage || data.cardImage.url;
   </section>
 
   <!-- ARTICLE -->
-  <article class="article">
+  <article class="article" itemscope itemtype="https://schema.org/Article">
+    <meta itemprop="headline" content={data.headline || data.title} />
+    <meta itemprop="datePublished" content={data.date} />
+    <meta itemprop="dateModified" content={data.dateModified || data.date} />
+    {data.aboutPlaces && data.aboutPlaces.map((place: string) => (
+      <meta itemprop="about" content={place} />
+    ))}
     <!-- AUTHOR BLOCK -->
-    <div class="article__meta">
-      <Image src={avatarSrc} alt="Jacob Stark, REALTOR® at 8z Real Estate" class="article__author-photo" width={48} height={48} format="webp" quality={80} />
+    <div class="article__meta" itemprop="author" itemscope itemtype="https://schema.org/Person">
+      <Image src={avatarSrc} alt="Jacob Stark, REALTOR® at 8z Real Estate" class="article__author-photo" width={48} height={48} format="webp" quality={80} itemprop="image" />
       <div>
-        <span class="article__author-name">Jacob Stark</span>
+        <span class="article__author-name" itemprop="name">Jacob Stark</span>
+        <meta itemprop="jobTitle" content="REALTOR®" />
         <span>{data.date} &middot; {data.readTime}</span>
       </div>
     </div>
 
     <!-- ARTICLE BODY (rendered from markdown) -->
-    <Content />
+    <div itemprop="articleBody">
+      <Content />
+    </div>
   </article>
 
   <!-- RELATED POSTS -->

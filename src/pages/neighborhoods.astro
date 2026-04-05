@@ -503,16 +503,17 @@ const nbLakewood = await getImage({ src: nbLakewoodSrc, format: 'webp', quality:
       <div class="neighborhoods-grid" id="neighborhoods-grid">
 
         <!-- Littleton -->
-        <div class="nbhd-card" data-id="littleton">
+        <div class="nbhd-card" data-id="littleton" itemscope itemtype="https://schema.org/Place">
+          <meta itemprop="name" content="Littleton, Colorado" />
           <div class="nbhd-card__match-badge">★ Your Match</div>
           <div class="nbhd-card__image" style={`background-image: url('${nbLittleton.src}');`} role="img" aria-label="Suburban street in Littleton, Colorado"></div>
           <div class="nbhd-card__body">
-            <span class="nbhd-card__county">Arapahoe County</span>
-            <h3 class="nbhd-card__name">Littleton</h3>
-            <p class="nbhd-card__personality">Littleton is the Saturday-morning-farmers-market town — a walkable Main Street, light rail, and mountain views without losing your Denver connection.</p>
+            <span class="nbhd-card__county" itemprop="containedInPlace" itemscope itemtype="https://schema.org/AdministrativeArea"><span itemprop="name">Arapahoe County</span></span>
+            <h3 class="nbhd-card__name" itemprop="alternateName">Littleton</h3>
+            <p class="nbhd-card__personality" itemprop="description">Littleton is the Saturday-morning-farmers-market town — a walkable Main Street, light rail, and mountain views without losing your Denver connection.</p>
             <div class="nbhd-card__stats">
-              <div class="nbhd-card__stat"><strong>$703,000</strong> Median SFH</div>
-              <div class="nbhd-card__stat"><strong>51</strong> Avg DOM</div>
+              <div class="nbhd-card__stat" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue"><meta itemprop="name" content="Median Single-Family Home Price" /><meta itemprop="value" content="703000" /><strong>$703,000</strong> Median SFH</div>
+              <div class="nbhd-card__stat" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue"><meta itemprop="name" content="Average Days on Market" /><meta itemprop="value" content="51" /><strong>51</strong> Avg DOM</div>
             </div>
             <div class="nbhd-card__actions">
               <a href="/neighborhoods/littleton" class="nbhd-card__btn-explore">Explore Littleton</a>
@@ -522,16 +523,17 @@ const nbLakewood = await getImage({ src: nbLakewoodSrc, format: 'webp', quality:
         </div>
 
         <!-- Highlands Ranch -->
-        <div class="nbhd-card" data-id="highlands-ranch">
+        <div class="nbhd-card" data-id="highlands-ranch" itemscope itemtype="https://schema.org/Place">
+          <meta itemprop="name" content="Highlands Ranch, Colorado" />
           <div class="nbhd-card__match-badge">★ Your Match</div>
           <div class="nbhd-card__image" style={`background-image: url('${nbHighlandsRanch.src}');`} role="img" aria-label="Modern home in Highlands Ranch, Colorado"></div>
           <div class="nbhd-card__body">
-            <span class="nbhd-card__county">Douglas County</span>
-            <h3 class="nbhd-card__name">Highlands Ranch</h3>
-            <p class="nbhd-card__personality">Highlands Ranch is the family command center — 70+ miles of trails, four rec centers, top-rated schools, and resale values that hold.</p>
+            <span class="nbhd-card__county" itemprop="containedInPlace" itemscope itemtype="https://schema.org/AdministrativeArea"><span itemprop="name">Douglas County</span></span>
+            <h3 class="nbhd-card__name" itemprop="alternateName">Highlands Ranch</h3>
+            <p class="nbhd-card__personality" itemprop="description">Highlands Ranch is the family command center — 70+ miles of trails, four rec centers, top-rated schools, and resale values that hold.</p>
             <div class="nbhd-card__stats">
-              <div class="nbhd-card__stat"><strong>$718,500</strong> Median SFH</div>
-              <div class="nbhd-card__stat"><strong>52</strong> Avg DOM</div>
+              <div class="nbhd-card__stat" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue"><meta itemprop="name" content="Median Single-Family Home Price" /><meta itemprop="value" content="718500" /><strong>$718,500</strong> Median SFH</div>
+              <div class="nbhd-card__stat" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue"><meta itemprop="name" content="Average Days on Market" /><meta itemprop="value" content="52" /><strong>52</strong> Avg DOM</div>
             </div>
             <div class="nbhd-card__actions">
               <a href="/neighborhoods/highlands-ranch" class="nbhd-card__btn-explore">Explore Highlands Ranch</a>
@@ -541,16 +543,17 @@ const nbLakewood = await getImage({ src: nbLakewoodSrc, format: 'webp', quality:
         </div>
 
         <!-- Centennial -->
-        <div class="nbhd-card" data-id="centennial">
+        <div class="nbhd-card" data-id="centennial" itemscope itemtype="https://schema.org/Place">
+          <meta itemprop="name" content="Centennial, Colorado" />
           <div class="nbhd-card__match-badge">★ Your Match</div>
           <div class="nbhd-card__image" style={`background-image: url('${nbCentennial.src}');`} role="img" aria-label="Residential home in Centennial, Colorado"></div>
           <div class="nbhd-card__body">
-            <span class="nbhd-card__county">Arapahoe County</span>
-            <h3 class="nbhd-card__name">Centennial</h3>
-            <p class="nbhd-card__personality">Centennial is where DTC commuters put down roots — central, established, larger lots, and quietly appreciating year over year.</p>
+            <span class="nbhd-card__county" itemprop="containedInPlace" itemscope itemtype="https://schema.org/AdministrativeArea"><span itemprop="name">Arapahoe County</span></span>
+            <h3 class="nbhd-card__name" itemprop="alternateName">Centennial</h3>
+            <p class="nbhd-card__personality" itemprop="description">Centennial is where DTC commuters put down roots — central, established, larger lots, and quietly appreciating year over year.</p>
             <div class="nbhd-card__stats">
-              <div class="nbhd-card__stat"><strong>$699,000</strong> Median SFH</div>
-              <div class="nbhd-card__stat"><strong>48</strong> Avg DOM</div>
+              <div class="nbhd-card__stat" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue"><meta itemprop="name" content="Median Single-Family Home Price" /><meta itemprop="value" content="699000" /><strong>$699,000</strong> Median SFH</div>
+              <div class="nbhd-card__stat" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue"><meta itemprop="name" content="Average Days on Market" /><meta itemprop="value" content="48" /><strong>48</strong> Avg DOM</div>
             </div>
             <div class="nbhd-card__actions">
               <a href="/neighborhoods/centennial" class="nbhd-card__btn-explore">Explore Centennial</a>
@@ -560,16 +563,17 @@ const nbLakewood = await getImage({ src: nbLakewoodSrc, format: 'webp', quality:
         </div>
 
         <!-- Englewood -->
-        <div class="nbhd-card" data-id="englewood">
+        <div class="nbhd-card" data-id="englewood" itemscope itemtype="https://schema.org/Place">
+          <meta itemprop="name" content="Englewood, Colorado" />
           <div class="nbhd-card__match-badge">★ Your Match</div>
           <div class="nbhd-card__image" style={`background-image: url('${nbEnglewood.src}');`} role="img" aria-label="Residential neighborhood in Englewood, Colorado"></div>
           <div class="nbhd-card__body">
-            <span class="nbhd-card__county">Arapahoe County</span>
-            <h3 class="nbhd-card__name">Englewood</h3>
-            <p class="nbhd-card__personality">Englewood is South Denver's best-kept secret — light rail, walkable pockets, and the lowest entry point in the metro with room to grow.</p>
+            <span class="nbhd-card__county" itemprop="containedInPlace" itemscope itemtype="https://schema.org/AdministrativeArea"><span itemprop="name">Arapahoe County</span></span>
+            <h3 class="nbhd-card__name" itemprop="alternateName">Englewood</h3>
+            <p class="nbhd-card__personality" itemprop="description">Englewood is South Denver's best-kept secret — light rail, walkable pockets, and the lowest entry point in the metro with room to grow.</p>
             <div class="nbhd-card__stats">
-              <div class="nbhd-card__stat"><strong>$655,800</strong> Median SFH</div>
-              <div class="nbhd-card__stat"><strong>60</strong> Avg DOM</div>
+              <div class="nbhd-card__stat" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue"><meta itemprop="name" content="Median Single-Family Home Price" /><meta itemprop="value" content="655800" /><strong>$655,800</strong> Median SFH</div>
+              <div class="nbhd-card__stat" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue"><meta itemprop="name" content="Average Days on Market" /><meta itemprop="value" content="60" /><strong>60</strong> Avg DOM</div>
             </div>
             <div class="nbhd-card__actions">
               <a href="/neighborhoods/englewood" class="nbhd-card__btn-explore">Explore Englewood</a>
@@ -579,16 +583,17 @@ const nbLakewood = await getImage({ src: nbLakewoodSrc, format: 'webp', quality:
         </div>
 
         <!-- Parker -->
-        <div class="nbhd-card" data-id="parker">
+        <div class="nbhd-card" data-id="parker" itemscope itemtype="https://schema.org/Place">
+          <meta itemprop="name" content="Parker, Colorado" />
           <div class="nbhd-card__match-badge">★ Your Match</div>
           <div class="nbhd-card__image" style={`background-image: url('${nbParker.src}');`} role="img" aria-label="Suburban home in Parker, Colorado"></div>
           <div class="nbhd-card__body">
-            <span class="nbhd-card__county">Douglas County</span>
-            <h3 class="nbhd-card__name">Parker</h3>
-            <p class="nbhd-card__personality">Parker is the small town that didn't get swallowed by the suburbs — an active Main Street, elbow room, newer homes, and a real sense of community.</p>
+            <span class="nbhd-card__county" itemprop="containedInPlace" itemscope itemtype="https://schema.org/AdministrativeArea"><span itemprop="name">Douglas County</span></span>
+            <h3 class="nbhd-card__name" itemprop="alternateName">Parker</h3>
+            <p class="nbhd-card__personality" itemprop="description">Parker is the small town that didn't get swallowed by the suburbs — an active Main Street, elbow room, newer homes, and a real sense of community.</p>
             <div class="nbhd-card__stats">
-              <div class="nbhd-card__stat"><strong>$706,324</strong> Median SFH</div>
-              <div class="nbhd-card__stat"><strong>62</strong> Avg DOM</div>
+              <div class="nbhd-card__stat" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue"><meta itemprop="name" content="Median Single-Family Home Price" /><meta itemprop="value" content="706324" /><strong>$706,324</strong> Median SFH</div>
+              <div class="nbhd-card__stat" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue"><meta itemprop="name" content="Average Days on Market" /><meta itemprop="value" content="62" /><strong>62</strong> Avg DOM</div>
             </div>
             <div class="nbhd-card__actions">
               <a href="/neighborhoods/parker" class="nbhd-card__btn-explore">Explore Parker</a>
@@ -598,16 +603,17 @@ const nbLakewood = await getImage({ src: nbLakewoodSrc, format: 'webp', quality:
         </div>
 
         <!-- Lakewood -->
-        <div class="nbhd-card" data-id="lakewood">
+        <div class="nbhd-card" data-id="lakewood" itemscope itemtype="https://schema.org/Place">
+          <meta itemprop="name" content="Lakewood, Colorado" />
           <div class="nbhd-card__match-badge">★ Your Match</div>
           <div class="nbhd-card__image" style={`background-image: url('${nbLakewood.src}');`} role="img" aria-label="Mountain foothills view near Lakewood, Colorado"></div>
           <div class="nbhd-card__body">
-            <span class="nbhd-card__county">Jefferson County</span>
-            <h3 class="nbhd-card__name">Lakewood</h3>
-            <p class="nbhd-card__personality">Lakewood is your gateway to Red Rocks and the foothills — without leaving Denver behind. Diverse housing stock at the metro's most accessible price point.</p>
+            <span class="nbhd-card__county" itemprop="containedInPlace" itemscope itemtype="https://schema.org/AdministrativeArea"><span itemprop="name">Jefferson County</span></span>
+            <h3 class="nbhd-card__name" itemprop="alternateName">Lakewood</h3>
+            <p class="nbhd-card__personality" itemprop="description">Lakewood is your gateway to Red Rocks and the foothills — without leaving Denver behind. Diverse housing stock at the metro's most accessible price point.</p>
             <div class="nbhd-card__stats">
-              <div class="nbhd-card__stat"><strong>$636,900</strong> Median SFH</div>
-              <div class="nbhd-card__stat"><strong>39</strong> Avg DOM</div>
+              <div class="nbhd-card__stat" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue"><meta itemprop="name" content="Median Single-Family Home Price" /><meta itemprop="value" content="636900" /><strong>$636,900</strong> Median SFH</div>
+              <div class="nbhd-card__stat" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue"><meta itemprop="name" content="Average Days on Market" /><meta itemprop="value" content="39" /><strong>39</strong> Avg DOM</div>
             </div>
             <div class="nbhd-card__actions">
               <a href="/neighborhoods/lakewood" class="nbhd-card__btn-explore">Explore Lakewood</a>
