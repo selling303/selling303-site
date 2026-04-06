@@ -35,7 +35,7 @@
   - Target keywords: first-time home buyer Englewood CO, Englewood Colorado homes for sale 2026, buying a house in Englewood
 
 #### Day 3 — Sunday, April 6
-- [ ] **"When to Sell Your Parker Home and Move Up — 5 Signs You've Outgrown It"**
+- [x] **"When to Sell Your Parker Home and Move Up — 5 Signs You've Outgrown It"** *(published 2026-04-06)*
   - Specialization: `/move-up-sellers` | Geographic: `/parker`
   - Type: Seller advice | Funnel: MOFU
   - Angle: Decision framework for move-up timing. Equity position, lifestyle triggers, market conditions.

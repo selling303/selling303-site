@@ -23,6 +23,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 **Existing blog links:**
 - Best Neighborhoods in South Denver for Move-Up Buyers (`/blog/best-neighborhoods-south-denver-move-up-buyers`)
 - Cost to Sell a House in Colorado 2026 (`/blog/cost-to-sell-house-colorado-2026`)
+- When to Sell Your Parker Home and Move Up — 5 Signs You've Outgrown It (`/blog/when-to-sell-parker-home-move-up`)
 
 ### 3. First-Time Homebuyers (`/first-time-homebuyers`)
 **Primary geographic ties:** Littleton, Englewood, Centennial (most affordable entry points in the metro)
@@ -122,3 +123,4 @@ Each title bridges a geographic pillar and a specialization pillar. Format: [Blo
 | What Happens After Accepting an Offer | First-Time Homebuyers (`/first-time-homebuyers`) |
 | Closing Costs for Colorado Buyers 2026 | First-Time Homebuyers (`/first-time-homebuyers`) |
 | Parker vs. Castle Pines | New Construction, Relocation |
+| When to Sell Your Parker Home and Move Up | Move-Up Sellers, Parker geographic |
