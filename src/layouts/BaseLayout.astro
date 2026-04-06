@@ -3,6 +3,7 @@ import SEO from '../components/SEO.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FloatingCTA from '../components/FloatingCTA.astro';
+import '../styles/styles.css';
 
 interface Props {
   title: string;
@@ -55,6 +56,6 @@ const {
   <Footer />
   <FloatingCTA />
 
-  <script src="/js/main.js" is:inline></script>
+  <script src="../scripts/main.js"></script>
 </body>
 </html>

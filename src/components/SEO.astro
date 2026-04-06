@@ -27,6 +27,13 @@ const {
 <title>{title}</title>
 <meta name="description" content={description}>
 
+<!-- Preconnect hints — early TLS handshake for third-party origins -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://em.realscout.com" crossorigin>
+<link rel="preconnect" href="https://widgetbe.com" crossorigin>
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+
 <!-- Open Graph -->
 <meta property="og:title" content={ogTitle}>
 <meta property="og:description" content={ogDescription}>
@@ -58,5 +65,3 @@ e.parentNode.insertBefore(t,e);})
 window.widgetTracker("create", "WT-XNIBWJKE");
 window.widgetTracker("send", "pageview");
 </script>
-
-<link rel="stylesheet" href="/css/styles.css">
