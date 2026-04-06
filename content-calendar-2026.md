@@ -42,27 +42,34 @@
   - Target keywords: sell house Parker CO, move up from Parker, when to sell Parker home
 
 #### Day 4 — Monday, April 7
+- [ ] **"South Denver Metro Watering Restrictions Guide: What Every Homeowner Needs to Know in 2026"**
+  - Specialization: Cross-pillar (all geographic) | Geographic: All 9 neighborhoods
+  - Type: Local area topic / Homeowner resource | Funnel: TOFU
+  - Angle: District-by-district watering schedules, fines, and best practices for keeping a healthy lawn under 2026 drought restrictions. Covers Denver Water (Littleton, Centennial, Lone Tree), Highlands Ranch Metro District, Parker Water & Sanitation, Castle Rock Water, Castle Pines North Metro District, and Englewood Water District. Includes smart watering tips (cycle-and-soak, deep watering, best times, mowing height). Timely — Stage 1 drought declared March 25, 2026.
+  - Target keywords: Denver water restrictions 2026, Parker watering schedule, Highlands Ranch water restrictions, Castle Rock watering rules, Colorado lawn watering guide, south Denver metro watering restrictions
+
+#### Day 5 — Tuesday, April 8
 - [ ] **"New Construction Communities in Castle Pines and Parker: What Buyers Need to Know in 2026"**
   - Specialization: `/new-construction` | Geographic: `/castle-pines`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Builder community rundown. Base pricing vs. total cost, lot premiums, representation value.
   - Target keywords: new construction Castle Pines, new builds Parker CO 2026, Castle Pines new homes
 
-#### Day 5 — Tuesday, April 8
+#### Day 6 — Wednesday, April 9
 - [ ] **"Moving to Highlands Ranch from Out of State: A Relocation Guide for 2026"**
   - Specialization: `/relocation` | Geographic: `/highlands-ranch`
   - Type: Local area topic | Funnel: TOFU
   - Angle: Complete area guide for incoming families. Commute, rec centers, price ranges, remote buying process.
   - Target keywords: moving to Highlands Ranch, Highlands Ranch relocation guide, relocating to Denver suburbs
 
-#### Day 6 — Wednesday, April 9
+#### Day 7 — Thursday, April 10
 - [ ] **"How to Relist and Sell a Home in Littleton After an Expired Listing"**
   - Specialization: `/expired-listings` | Geographic: `/littleton`
   - Type: Seller advice | Funnel: BOFU
   - Angle: Step-by-step relist playbook. Timing, price adjustment formula, marketing relaunch checklist.
   - Target keywords: relist home Littleton, expired listing Littleton CO, sell home after expired listing
 
-#### Day 7 — Thursday, April 10
+#### Day 8 — Friday, April 11
 - [ ] **"Selling in Centennial and Buying in Highlands Ranch: How to Coordinate Two Transactions"**
   - Specialization: `/move-up-sellers` | Geographic: `/centennial`
   - Type: Seller advice | Funnel: BOFU
@@ -71,51 +78,51 @@
 
 ---
 
-### Week 2: April 11–17
+### Week 2: April 12–18
 
-#### Day 8 — Friday, April 11
+#### Day 9 — Saturday, April 12
 - [ ] **"Do You Need a Real Estate Agent for New Construction in Colorado? (Yes — Here's Why)"**
   - Specialization: `/new-construction` | Geographic: `/highlands-ranch`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Builder agent vs. buyer agent. Negotiation leverage, inspection importance, contract traps.
   - Target keywords: real estate agent new construction Colorado, buyer agent new build, new construction representation Denver
 
-#### Day 9 — Saturday, April 12
+#### Day 10 — Sunday, April 13
 - [ ] **"Littleton vs. Centennial: Which South Denver Suburb Fits Your Relocation?"**
   - Specialization: `/relocation` | Geographic: `/littleton`
   - Type: Local area topic | Funnel: TOFU
   - Angle: Side-by-side comparison for relocation buyers. Walkability vs. space, price vs. commute.
   - Target keywords: Littleton vs Centennial, best suburb Denver relocation, South Denver suburb comparison
 
-#### Day 10 — Sunday, April 13
+#### Day 11 — Monday, April 14
 - [ ] **"Selling Your First Home in South Denver: What No One Tells You About the Process"**
   - Specialization: `/first-time-homesellers` | Geographic: `/centennial`
   - Type: Seller advice | Funnel: MOFU
   - Angle: Common first-time seller mistakes. Net sheet surprises, staging ROI, inspection negotiations.
   - Target keywords: selling first home South Denver, first-time seller mistakes, what to expect selling house Centennial
 
-#### Day 11 — Monday, April 14
+#### Day 12 — Tuesday, April 15
 - [ ] **"South Denver Market Update: What April 2026 Means for Sellers Sitting on Expired Listings"**
   - Specialization: `/expired-listings` | Geographic: `/centennial`
   - Type: Market update | Funnel: MOFU
   - Angle: Spring market data tied to expired listing opportunity. Absorption rate, new inventory impact, pricing reset window.
   - Target keywords: South Denver market update April 2026, expired listing spring market, Centennial real estate market
 
-#### Day 12 — Tuesday, April 15
+#### Day 13 — Wednesday, April 16
 - [ ] **"How Much Equity Do You Need to Move Up in Highlands Ranch?"**
   - Specialization: `/move-up-sellers` | Geographic: `/highlands-ranch`
   - Type: Buyer/seller advice | Funnel: MOFU
   - Angle: Equity math for the move-up decision. Home value appreciation data, down payment scenarios, carrying cost comparison.
   - Target keywords: equity to move up Highlands Ranch, Highlands Ranch home equity 2026, upgrade home Highlands Ranch
 
-#### Day 13 — Wednesday, April 16
+#### Day 14 — Thursday, April 17
 - [ ] **"What First-Time Buyers Should Know About Bidding in Littleton's Spring Market"**
   - Specialization: `/first-time-homebuyers` | Geographic: `/littleton`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Offer strategy for entry-level buyers competing in Littleton. Escalation clauses, appraisal gaps, inspection flexibility.
   - Target keywords: buying first home Littleton CO, Littleton spring real estate, first-time buyer offer strategy Denver
 
-#### Day 14 — Thursday, April 17
+#### Day 15 — Friday, April 18
 - [ ] **"Lone Tree New Construction: Builder Incentives and What They Actually Mean for Your Bottom Line"**
   - Specialization: `/new-construction` | Geographic: `/lone-tree`
   - Type: Buyer advice | Funnel: MOFU
@@ -124,51 +131,51 @@
 
 ---
 
-### Week 3: April 18–24
+### Week 3: April 19–25
 
-#### Day 15 — Friday, April 18
+#### Day 16 — Saturday, April 19
 - [ ] **"Relocating to Parker, Colorado: What Families Moving from Out of State Need to Know"**
   - Specialization: `/relocation` | Geographic: `/parker`
   - Type: Local area topic | Funnel: TOFU
   - Angle: Family-focused relocation guide. Parker's community feel, commute realities, price points, HOA landscape.
   - Target keywords: moving to Parker Colorado, Parker CO relocation guide, Parker Colorado families
 
-#### Day 16 — Saturday, April 19
+#### Day 17 — Sunday, April 20
 - [ ] **"Why Your Centennial Home Isn't Getting Offers — and How to Fix It Before Summer"**
   - Specialization: `/expired-listings` | Geographic: `/centennial`
   - Type: Seller advice | Funnel: BOFU
   - Angle: Diagnostic approach for stale Centennial listings. Photo quality audit, pricing relative to DOM benchmarks, showing feedback patterns.
   - Target keywords: home not selling Centennial CO, no offers Centennial, fix expired listing Centennial
 
-#### Day 17 — Sunday, April 20
+#### Day 18 — Monday, April 21
 - [ ] **"The Hidden Costs of Selling Your Home in Arapahoe County — A First-Time Seller's Net Sheet"**
   - Specialization: `/first-time-homesellers` | Geographic: `/centennial`
   - Type: Seller advice | Funnel: MOFU
   - Angle: Detailed net sheet walkthrough. Transfer tax, title fees, commission structures, concession norms, surprise costs.
   - Target keywords: cost to sell home Arapahoe County, seller net sheet Colorado, first-time seller costs Denver
 
-#### Day 18 — Monday, April 21
+#### Day 19 — Tuesday, April 22
 - [ ] **"Move-Up Buyer's Checklist: Going from a Starter in Englewood to More Space in Parker"**
   - Specialization: `/move-up-sellers` | Geographic: `/englewood`
   - Type: Buyer/seller advice | Funnel: MOFU
   - Angle: Practical checklist for the move-up journey. Timeline, financial prep, neighborhood comparison, school-adjacent lifestyle factors.
   - Target keywords: move up from Englewood, upgrade home Parker from Englewood, South Denver move-up checklist
 
-#### Day 19 — Tuesday, April 22
+#### Day 20 — Wednesday, April 23
 - [ ] **"New Build vs. Resale in Highlands Ranch: Which Makes More Financial Sense in 2026?"**
   - Specialization: `/new-construction` | Geographic: `/highlands-ranch`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Head-to-head comparison. Appreciation data, customization premium, closing timeline, warranty value, total cost of ownership.
   - Target keywords: new construction vs resale Highlands Ranch, buy new build Highlands Ranch 2026, Highlands Ranch home comparison
 
-#### Day 20 — Wednesday, April 23
+#### Day 21 — Thursday, April 24
 - [ ] **"What Out-of-State Buyers Get Wrong About the Denver Suburbs (and How to Avoid the Same Mistakes)"**
   - Specialization: `/relocation` | Geographic: `/centennial`
   - Type: Buyer advice | Funnel: TOFU
   - Angle: Common misconceptions (commute times, altitude adjustment, seasonal pricing, HOA surprises). Centennial as the case study.
   - Target keywords: moving to Denver suburbs mistakes, Denver relocation advice, Centennial Colorado relocation
 
-#### Day 21 — Thursday, April 24
+#### Day 22 — Friday, April 25
 - [ ] **"How Jacob Stark Helped a Highlands Ranch Seller Recover from an Expired Listing — A Case Study"**
   - Specialization: `/expired-listings` | Geographic: `/highlands-ranch`
   - Type: Listing spotlight / case study | Funnel: BOFU
@@ -177,51 +184,51 @@
 
 ---
 
-### Week 4: April 25 – May 1
+### Week 4: April 26 – May 2
 
-#### Day 22 — Friday, April 25
+#### Day 23 — Saturday, April 26
 - [ ] **"Spring 2026 Move-Up Market Report: Where Are South Denver Families Upgrading To?"**
   - Specialization: `/move-up-sellers` | Geographic: `/highlands-ranch`
   - Type: Market update | Funnel: TOFU
   - Angle: Migration patterns within the metro. Where move-up inventory is, price-tier analysis, HR/Parker/Castle Pines as landing spots.
   - Target keywords: South Denver move-up market 2026, where to upgrade home Denver, Highlands Ranch move-up report
 
-#### Day 23 — Saturday, April 26
+#### Day 24 — Sunday, April 27
 - [ ] **"Closing Costs Breakdown for First-Time Buyers in Littleton (2026 Update)"**
   - Specialization: `/first-time-homebuyers` | Geographic: `/littleton`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Littleton-specific closing cost breakdown. Lender fees, title, HOA transfer, prepaid items. Reference the existing Colorado-wide closing costs post and go deeper.
   - Target keywords: closing costs Littleton CO, first-time buyer closing costs Denver, Littleton home buying costs 2026
 
-#### Day 24 — Sunday, April 27
+#### Day 25 — Monday, April 28
 - [ ] **"Should You Build New in Parker or Buy Resale? A Cost-Per-Square-Foot Analysis"**
   - Specialization: `/new-construction` | Geographic: `/parker`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Data comparison. Builder base price per sqft vs. resale comps, upgrade cost reality, lot premium analysis for Parker communities.
   - Target keywords: new build vs resale Parker CO, Parker new construction cost, build or buy Parker Colorado
 
-#### Day 25 — Monday, April 28
+#### Day 26 — Tuesday, April 29
 - [ ] **"Is Greenwood Village Worth the Price Tag? A Relocation Buyer's Honest Assessment"**
   - Specialization: `/relocation` | Geographic: `/greenwood-village`
   - Type: Local area topic | Funnel: TOFU
   - Angle: Value proposition for GV — luxury price points, DTC proximity, lifestyle amenities. Who it's right for, who should look elsewhere.
   - Target keywords: Greenwood Village Colorado worth it, relocating to Greenwood Village, Greenwood Village real estate 2026
 
-#### Day 26 — Tuesday, April 29
+#### Day 27 — Wednesday, April 30
 - [ ] **"The Expired Listing Trap: Why Switching Agents Alone Won't Sell Your Englewood Home"**
   - Specialization: `/expired-listings` | Geographic: `/englewood`
   - Type: Seller advice | Funnel: BOFU
   - Angle: What actually needs to change (pricing, presentation, strategy) vs. just getting a new yard sign. Addresses the #1 seller reaction.
   - Target keywords: switch agents expired listing, Englewood home not selling, why change Realtors expired listing
 
-#### Day 27 — Wednesday, April 30
+#### Day 28 — Thursday, May 1
 - [ ] **"How to Time Your Move-Up Sale in Castle Pines Without Ending Up Homeless"**
   - Specialization: `/move-up-sellers` | Geographic: `/castle-pines`
   - Type: Seller advice | Funnel: BOFU
   - Angle: Timing strategies — sell first vs. buy first vs. simultaneous close. Rent-back agreements, bridge loans, contingency offers. Castle Pines inventory context.
   - Target keywords: sell and buy Castle Pines, move-up timing Castle Pines CO, coordinating sale and purchase Denver
 
-#### Day 28 — Thursday, May 1
+#### Day 29 — Friday, May 2
 - [ ] **"What $500K Gets You in Centennial vs. Highlands Ranch vs. Parker (Spring 2026)"**
   - Specialization: `/first-time-homebuyers` | Geographic: `/centennial`
   - Type: Local area topic / Buyer advice | Funnel: TOFU
