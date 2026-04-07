@@ -1155,6 +1155,19 @@ p:last-child {
   list-style: decimal;
 }
 
+.article a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 42, 58, 0.3);
+  text-underline-offset: 2px;
+  transition: color var(--transition), text-decoration-color var(--transition);
+}
+
+.article a:hover {
+  color: var(--color-primary-light);
+  text-decoration-color: var(--color-primary-light);
+}
+
 .article blockquote {
   border-left: 3px solid var(--color-accent);
   padding: var(--space-sm) var(--space-md);
