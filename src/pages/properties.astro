@@ -14,6 +14,12 @@ import PageHero from '../components/PageHero.astro';
   <Fragment slot="head">
     <!-- RealScout Widget Script -->
     <script src="https://em.realscout.com/widgets/realscout-web-components.umd.js" type="module" is:inline></script>
+    <style is:inline>
+      realscout-your-listings {
+        --rs-listing-divider-color: #c8965a;
+        width: 100%;
+      }
+    </style>
 
     <!-- Schema: WebPage -->
     <script type="application/ld+json" is:inline>

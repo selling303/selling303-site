@@ -27,3 +27,25 @@
 /new-construction.html            /new-construction                 301
 /relocation.html                  /relocation                       301
 /investor-tools.html              /investor-tools                   301
+
+# Legacy Framer URL redirects (pre-migration ghost pages)
+/home                             /                                 301
+/postcard                         /                                 301
+/search                           /properties                       301
+/search/                          /properties                       301
+/preferred-lenders/               /                                 301
+/preferred-lenders                /                                 301
+/zillow-step-2                    /                                 301
+/james-hendry                     /                                 301
+/jacci-mason                      /                                 301
+/steven-brooks                    /                                 301
+/Denver-Metro                     /neighborhoods                    301
+/page                             /                                 301
+/sidebar                          /                                 301
+/404-page                         /                                 301
+/party-in-medema-park             /                                 301
+/blog/:qGAS1Evcm                  /blog                             301
+
+# Old listing pages (Framer)
+/6718-s-holland-way-littleton-co-80128      /properties               301
+/4360-w-wagon-trail-dr-denver-co-80123      /properties               301

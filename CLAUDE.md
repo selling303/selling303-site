@@ -1,5 +1,9 @@
 # selling303.com — Project Rules
 
+## Deploy Queue Protocol (Mandatory)
+
+When making changes to the repo, log each change as a bullet in `DEPLOY_QUEUE.md` with the date and a brief description. Before deploying, read `DEPLOY_QUEUE.md` and summarize all queued changes for Jacob. After a successful deploy, clear the list (keep the header). Use the `deploy-to-netlify` skill for all deploys — never attempt `git push` from the sandbox.
+
 ## Image Pipeline (Mandatory)
 
 All images on the site MUST go through Astro's built-in image optimization pipeline. No exceptions for new pages, replacement images, or redesigns.
