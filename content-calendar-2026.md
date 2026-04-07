@@ -42,7 +42,7 @@
   - Target keywords: sell house Parker CO, move up from Parker, when to sell Parker home
 
 #### Day 4 — Monday, April 7
-- [ ] **"South Denver Metro Watering Restrictions Guide: What Every Homeowner Needs to Know in 2026"**
+- [x] **"South Denver Metro Watering Restrictions Guide: What Every Homeowner Needs to Know in 2026"** *(published 2026-04-07)*
   - Specialization: Cross-pillar (all geographic) | Geographic: All 9 neighborhoods
   - Type: Local area topic / Homeowner resource | Funnel: TOFU
   - Angle: District-by-district watering schedules, fines, and best practices for keeping a healthy lawn under 2026 drought restrictions. Covers Denver Water (Littleton, Centennial, Lone Tree), Highlands Ranch Metro District, Parker Water & Sanitation, Castle Rock Water, Castle Pines North Metro District, and Englewood Water District. Includes smart watering tips (cycle-and-soak, deep watering, best times, mowing height). Timely — Stage 1 drought declared March 25, 2026.
