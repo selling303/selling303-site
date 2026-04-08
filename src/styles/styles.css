@@ -610,6 +610,7 @@ p:last-child {
   box-shadow: var(--shadow-lg);
 }
 
+/* Legacy card image — kept for non-blog cards */
 .card__image {
   width: 100%;
   height: 220px;
@@ -628,6 +629,104 @@ p:last-child {
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+/* Blog card gradient header */
+.card__header {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 22px;
+  position: relative;
+  overflow: hidden;
+  background-size: 100% 100%;
+  transition: background-size 0.4s ease;
+}
+
+.card:hover .card__header {
+  background-size: 120% 120%;
+}
+
+.card__header-default {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.card__header-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.card__header-cat {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.card__header-reveal {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.card__header-stat {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: #fff;
+  line-height: 1;
+}
+
+.card__header-stat-label {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Hover crossfade — desktop only */
+@media (hover: hover) {
+  .card:hover .card__header-default {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  .card:hover .card__header-reveal {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Category gradient backgrounds */
+.cat-grad--costs {
+  background: radial-gradient(ellipse at 20% 0%, #004d6b 0%, #002a3a 50%, #001a25 100%);
+}
+.cat-grad--problems {
+  background: radial-gradient(ellipse at 80% 10%, #b86b3a 0%, #8B4513 45%, #5a2d0a 100%);
+}
+.cat-grad--comparisons {
+  background: radial-gradient(ellipse at 30% 90%, #4a8a5f 0%, #2d5a3d 50%, #1a3d28 100%);
+}
+.cat-grad--bestof {
+  background: radial-gradient(ellipse at 70% 0%, #7d5a8f 0%, #5a3d6b 50%, #3a2548 100%);
+}
+.cat-grad--expect {
+  background: radial-gradient(ellipse at 15% 80%, #2d6f9f 0%, #1a4a6b 50%, #0d2d42 100%);
+}
+.cat-grad--neighborhoods {
+  background: radial-gradient(ellipse at 85% 70%, #5a8a4a 0%, #3d5a2d 50%, #253d1a 100%);
 }
 
 .card__body {

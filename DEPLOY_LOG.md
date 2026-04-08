@@ -4,6 +4,10 @@ Permanent record of deployed changes. The deploy-to-netlify skill moves items he
 
 ---
 
+## 2026-04-08 — hotfix | Credits remaining: 320
+
+- HOTFIX: Added missing blog card CSS to styles.css (gradient backgrounds, card headers, hover reveal animations). Cards were rendering blank after previous deploy omitted the stylesheet additions.
+
 ## 2026-04-08 — commit a3a34f5 | Credits remaining: 335
 
 - Blog tile redesign: category gradient headers, SVG icons, cardStat/cardStatLabel hover reveal
