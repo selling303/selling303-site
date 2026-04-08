@@ -9,6 +9,8 @@ readTime: "9 min read"
 heroLabel: "Selling"
 heroSubtext: "Usually one of seven reasons — and most are fixable within 1–3 weeks."
 cardImage: {url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=500&fit=crop&q=80", alt: "Home sitting on the market not selling in Denver"}
+cardStat: "7 reasons"
+cardStatLabel: "your listing isn't moving"
 ogImage: "https://selling303.com/images/og-default.jpg"
 aboutPlaces:
   - "South Denver Metro, Colorado"

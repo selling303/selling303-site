@@ -9,6 +9,8 @@ readTime: "10 min read"
 heroLabel: "Neighborhoods"
 heroSubtext: "Two popular choices, very different personalities. A side-by-side comparison."
 cardImage: {url: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=500&fit=crop&q=80", alt: "Suburban homes in Littleton and Highlands Ranch comparison"}
+cardStat: "$19K"
+cardStatLabel: "median price gap"
 ogImage: "https://selling303.com/images/og-default.jpg"
 aboutPlaces:
   - "Littleton, Colorado"

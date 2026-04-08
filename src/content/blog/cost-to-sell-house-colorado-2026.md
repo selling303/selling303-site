@@ -9,6 +9,8 @@ readTime: "8 min read"
 heroLabel: "Pricing & Cost"
 heroSubtext: "Between 7–12% of your home's sale price. Here's the full, honest breakdown."
 cardImage: {url: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=500&fit=crop&q=80", alt: "Real estate paperwork and cost breakdown for selling in Colorado"}
+cardStat: "$34K"
+cardStatLabel: "avg seller closing costs"
 ogImage: "https://selling303.com/images/og-default.jpg"
 aboutPlaces:
   - "South Denver Metro, Colorado"

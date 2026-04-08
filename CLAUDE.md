@@ -1,8 +1,27 @@
 # selling303.com — Project Rules
 
-## Deploy Queue Protocol (Mandatory)
+## Deploy Protocol (Mandatory)
 
-When making changes to the repo, log each change as a bullet in `DEPLOY_QUEUE.md` with the date and a brief description. Before deploying, read `DEPLOY_QUEUE.md` and summarize all queued changes for Jacob. After a successful deploy, clear the list (keep the header). Use the `deploy-to-netlify` skill for all deploys — never attempt `git push` from the sandbox.
+### Before making changes
+
+Run `git pull --rebase origin main` to sync with what's already deployed. Without this, you risk duplicating work that another conversation already pushed.
+
+### Logging changes
+
+When making changes to the repo, log each change as a bullet in `DEPLOY_QUEUE.md` with the date and a brief description. Before logging, verify the change is actually needed — check `git log` and `DEPLOY_LOG.md` to confirm it wasn't already deployed.
+
+### Deploying
+
+Use the `deploy-to-netlify` skill for all deploys — never attempt `git push` from the sandbox. The skill handles syncing, queue validation, pushing, and logging.
+
+### Two-file system
+
+- `DEPLOY_QUEUE.md` — pending changes waiting to ship. Cleared after each deploy.
+- `DEPLOY_LOG.md` — permanent record of deployed changes with dates and commit hashes. Check this to see if something was already deployed.
+
+### Commit before closing (Mandatory)
+
+Every conversation that edits site files must commit its changes before ending. Not push — just commit. Uncommitted changes are invisible to every other conversation and to the deploy protocol. If FUSE issues prevent committing, flag the uncommitted work in `DEPLOY_QUEUE.md` with file paths so the next conversation knows what to pick up.
 
 ## Image Pipeline (Mandatory)
 

@@ -12,6 +12,8 @@ heroSubtext: Two strong choices in Douglas County — one built for variety, one
 cardImage:
   url: https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&h=630&fit=crop&q=80
   alt: Suburban street for Parker vs Castle Pines comparison
+cardStat: "$1.1M"
+cardStatLabel: "Castle Pines median list price"
 ogImage: https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&h=630&fit=crop&q=80
 aboutPlaces:
   - Parker, Colorado

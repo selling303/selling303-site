@@ -15,6 +15,38 @@ const sortedPosts = posts.sort((a, b) => parseDate(b.data.date) - parseDate(a.da
 
 // Extract unique categories for filter buttons
 const categories = [...new Set(sortedPosts.map((p) => p.data.category))];
+
+// Category → gradient class + SVG icon mapping
+const categoryMeta: Record<string, { gradient: string; icon: string }> = {
+  'Costs & Pricing': {
+    gradient: 'cat-grad--costs',
+    icon: '<circle cx="14" cy="14" r="11" stroke="rgba(255,255,255,0.4)" stroke-width="1.2"/><text x="14" y="18.5" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="13" font-weight="600" font-family="Inter,sans-serif">$</text>',
+  },
+  'Problems & Mistakes': {
+    gradient: 'cat-grad--problems',
+    icon: '<path d="M14 4L26 24H2L14 4Z" stroke="rgba(255,255,255,0.4)" stroke-width="1.2" stroke-linejoin="round"/><line x1="14" y1="11" x2="14" y2="17" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" stroke-linecap="round"/><circle cx="14" cy="20" r="1" fill="rgba(255,255,255,0.6)"/>',
+  },
+  'Comparisons': {
+    gradient: 'cat-grad--comparisons',
+    icon: '<rect x="3" y="8" width="9" height="14" rx="1.5" stroke="rgba(255,255,255,0.4)" stroke-width="1.2"/><rect x="16" y="5" width="9" height="17" rx="1.5" stroke="rgba(255,255,255,0.4)" stroke-width="1.2"/><line x1="11.5" y1="14" x2="16.5" y2="14" stroke="rgba(255,255,255,0.4)" stroke-width="1.2" stroke-dasharray="2 2"/>',
+  },
+  'Best Of': {
+    gradient: 'cat-grad--bestof',
+    icon: '<path d="M14 3L17 11H25L19 16L21 24L14 19L7 24L9 16L3 11H11L14 3Z" stroke="rgba(255,255,255,0.4)" stroke-width="1.2" stroke-linejoin="round"/>',
+  },
+  'What to Expect': {
+    gradient: 'cat-grad--expect',
+    icon: '<rect x="5" y="3" width="18" height="22" rx="2.5" stroke="rgba(255,255,255,0.4)" stroke-width="1.2"/><line x1="10" y1="9" x2="18" y2="9" stroke="rgba(255,255,255,0.35)" stroke-width="1.2"/><line x1="10" y1="14" x2="18" y2="14" stroke="rgba(255,255,255,0.35)" stroke-width="1.2"/><line x1="10" y1="19" x2="15" y2="19" stroke="rgba(255,255,255,0.35)" stroke-width="1.2"/>',
+  },
+  'Neighborhoods': {
+    gradient: 'cat-grad--neighborhoods',
+    icon: '<path d="M14 3C10 3 7 6.5 7 10.5C7 16 14 25 14 25C14 25 21 16 21 10.5C21 6.5 18 3 14 3Z" stroke="rgba(255,255,255,0.4)" stroke-width="1.2"/><circle cx="14" cy="10.5" r="2.5" stroke="rgba(255,255,255,0.4)" stroke-width="1.2"/>',
+  },
+};
+
+function getCatMeta(category: string) {
+  return categoryMeta[category] || categoryMeta['What to Expect'];
+}
 ---
 
 <BaseLayout
@@ -60,17 +92,32 @@ const categories = [...new Set(sortedPosts.map((p) => p.data.category))];
         <button class="btn btn--sm btn--outline-dark blog-filter" data-filter="what-to-expect">What to Expect</button>
       </div>
       <div class="card-grid card-grid--3col">
-        {sortedPosts.map((post) => (
-          <a href={`/blog/${post.id}`} class="card" data-category={post.data.category}>
-            <div class="card__image" style={`background-image: url('${post.data.cardImage.url}');`} role="img" aria-label={post.data.cardImage.alt}></div>
-            <div class="card__body">
-              <span class="card__tag">{post.data.tag}</span>
-              <h3 class="card__title">{post.data.title}</h3>
-              <p class="card__text">{post.data.description}</p>
-              <span class="card__meta">{post.data.date} &middot; {post.data.readTime}</span>
-            </div>
-          </a>
-        ))}
+        {sortedPosts.map((post) => {
+          const meta = getCatMeta(post.data.category);
+          const hasStat = post.data.cardStat && post.data.cardStatLabel;
+          return (
+            <a href={`/blog/${post.id}`} class="card" data-category={post.data.category}>
+              <div class={`card__header ${meta.gradient}`}>
+                <div class="card__header-default">
+                  <svg class="card__header-icon" viewBox="0 0 28 28" fill="none" set:html={meta.icon} />
+                  <span class="card__header-cat">{post.data.category}</span>
+                </div>
+                {hasStat && (
+                  <div class="card__header-reveal">
+                    <span class="card__header-stat">{post.data.cardStat}</span>
+                    <span class="card__header-stat-label">{post.data.cardStatLabel}</span>
+                  </div>
+                )}
+              </div>
+              <div class="card__body">
+                <span class="card__tag">{post.data.tag}</span>
+                <h3 class="card__title">{post.data.title}</h3>
+                <p class="card__text">{post.data.description}</p>
+                <span class="card__meta">{post.data.date} &middot; {post.data.readTime}</span>
+              </div>
+            </a>
+          );
+        })}
       </div>
     </div>
   </section>

@@ -12,6 +12,8 @@ heroSubtext: As a seller, you're paying 5–6% of the sale price — here's exac
 cardImage:
   url: https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=1200&h=630&fit=crop&q=80
   alt: Real estate agent explaining commission
+cardStat: "5–6%"
+cardStatLabel: "typical total commission"
 ogImage: https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=1200&h=630&fit=crop&q=80
 aboutPlaces:
   - South Denver Metro, Colorado
