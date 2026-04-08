@@ -23,6 +23,10 @@ Use the `deploy-to-netlify` skill for all deploys — never attempt `git push` f
 
 Every conversation that edits site files must commit its changes before ending. Not push — just commit. Uncommitted changes are invisible to every other conversation and to the deploy protocol. If FUSE issues prevent committing, flag the uncommitted work in `DEPLOY_QUEUE.md` with file paths so the next conversation knows what to pick up.
 
+### Bundling policy
+
+One push per day, bundled with the nightly blog post. Any site changes made during the day (bug fixes, page updates, component work) should be committed locally and queued in `DEPLOY_QUEUE.md`, then deployed together with the blog post in a single push. This reserves Netlify credits for the daily blog cadence. Exception: if something is visibly broken on the live site, Jacob may approve a standalone push — always confirm with him first.
+
 ## Image Pipeline (Mandatory)
 
 All images on the site MUST go through Astro's built-in image optimization pipeline. No exceptions for new pages, replacement images, or redesigns.
