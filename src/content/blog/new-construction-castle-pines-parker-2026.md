@@ -84,7 +84,7 @@ relatedPosts:
 
 <p>If you're shopping for a new build in Douglas County, <a href="/neighborhoods/castle-pines">Castle Pines</a> and Parker are the two markets where the most dirt is moving in 2026. Jacob Stark works with buyers navigating <a href="/new-construction">new construction</a> contracts across both cities — and the gap between what builders advertise and what buyers actually pay at closing is one of the most misunderstood dynamics in the South Denver Metro.</p>
 
-<p>Between master-planned communities, semi-custom builders, and production-level options, buyers have more choices here than anywhere else in the metro. The broader Denver Metro detached market posted a median close price of $645,000 in March 2026 with a median of just 13 days on market, per DMAR's Market Trends Report — both Castle Pines and Parker sit above that metro median, which tells you something about the caliber of product builders are competing against. This guide breaks down the active communities, the real cost structure, and why having your own representation at the builder's sales office isn't optional.</p>
+<p>Between master-planned communities, semi-custom builders, and production-level options, buyers have more choices here than anywhere else in the metro. The broader Denver Metro detached market posted a median close price of $645,000 in March 2026 with a median of just 13 days on market, per DMAR's Market Trends Report — both Castle Pines and Parker sit above that metro median, which tells you something about the caliber of product builders are competing against. This guide breaks down the active communities, the real cost structure, and why walking into a builder's sales office with your own representation makes a measurable difference.</p>
 
 <h2 id="castle-pines-communities">What New Construction Communities Are Active in Castle Pines?</h2>
 
@@ -138,6 +138,8 @@ relatedPosts:
 <p><strong>Lot premiums</strong> are charged separately (more on those below).</p>
 
 <p>When you add it up, the gap between the advertised base price and the actual contract price for a move-in-ready home in Castle Pines or Parker routinely lands between $40,000 and $100,000 — and can exceed $150,000 on higher-end builds.</p>
+
+<p>Jacob Stark's advice to every new construction buyer: <strong>set your upgrade budget before you walk into the design center.</strong> Decide in advance what you're willing to spend above the base price — structural options, finishes, and lot premium combined — and treat that number as your ceiling. The design center experience is engineered to make upgrades feel incremental, and it's easy to add $15,000 here and $20,000 there without feeling the cumulative weight until the final contract lands. You can always adjust the budget if something genuinely changes your priorities, but going in with a number gives you a framework to evaluate each decision against. Buyers who skip this step almost always spend more than they intended.</p>
 
 <h2 id="lot-premiums">What Are Lot Premiums and How Do They Work?</h2>
 
