@@ -49,7 +49,7 @@
   - Target keywords: Denver water restrictions 2026, Parker watering schedule, Highlands Ranch water restrictions, Castle Rock watering rules, Colorado lawn watering guide, south Denver metro watering restrictions
 
 #### Day 5 — Tuesday, April 8
-- [ ] **"New Construction Communities in Castle Pines and Parker: What Buyers Need to Know in 2026"**
+- [x] **"New Construction Communities in Castle Pines and Parker: What Buyers Need to Know in 2026"** *(published 2026-04-08)*
   - Specialization: `/new-construction` | Geographic: `/castle-pines`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Builder community rundown. Base pricing vs. total cost, lot premiums, representation value.
