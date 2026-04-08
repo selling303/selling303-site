@@ -4,7 +4,7 @@ headline: "Parker vs. Castle Pines: Which Colorado Suburb Is Right for Your Fami
 description: Parker vs. Castle Pines for move-up buyers — median prices, inventory, lifestyle, and how to choose. Real data from DMAR and REcolorado, 2026.
 date: April 1, 2026
 dateModified: April 1, 2026
-category: Comparisons
+category: "Comparisons"
 tag: Neighborhoods
 readTime: 7 min read
 heroLabel: Neighborhoods

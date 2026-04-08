@@ -4,7 +4,7 @@ headline: How Much Do Closing Costs Really Run in Colorado? (Buyer Edition)
 description: Full breakdown of buyer closing costs in Colorado — lender fees, title insurance, prepaids, and what to budget in the South Denver Metro.
 date: March 31, 2026
 dateModified: March 31, 2026
-category: Costs & Pricing
+category: "Costs & Pricing"
 tag: Buying
 readTime: 7 min read
 heroLabel: Pricing & Cost

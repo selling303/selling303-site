@@ -8,9 +8,8 @@ tag: "Neighborhoods"
 readTime: "10 min read"
 heroLabel: "Neighborhoods"
 heroSubtext: "Denver Water declared Stage 1 drought on March 25, 2026. Every district in the South Denver Metro has different rules — here's the consolidated guide."
-cardImage:
-  url: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&h=500&fit=crop&q=80"
-  alt: "Residential lawn sprinkler watering green grass in a Colorado suburb"
+cardStat: "7 districts"
+cardStatLabel: "each with different watering rules"
 ogImage: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"

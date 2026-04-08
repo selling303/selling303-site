@@ -4,7 +4,7 @@ headline: Why Homes Sit on the Market in South Denver (And How to Avoid It)
 description: The most common reasons homes sit unsold in South Denver — and what sellers in Arapahoe County can do differently. Real data from DMAR, spring 2026.
 date: April 2, 2026
 dateModified: April 2, 2026
-category: Problems & Mistakes
+category: "Problems & Mistakes"
 tag: Selling
 readTime: 8 min read
 heroLabel: Selling

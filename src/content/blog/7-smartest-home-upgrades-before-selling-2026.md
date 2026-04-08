@@ -4,7 +4,7 @@ headline: The 7 Smartest Home Upgrades Before Selling in 2026
 description: The 7 highest-ROI upgrades South Denver sellers can make before listing — what to fix, what to skip, and what the current market actually rewards.
 date: April 3, 2026
 dateModified: April 3, 2026
-category: Best Of
+category: "Best Of"
 tag: Selling
 readTime: 9 min read
 heroLabel: Selling

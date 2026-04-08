@@ -4,7 +4,7 @@ headline: What Does a REALTOR Actually Do to Earn Their Commission?
 description: A transparent breakdown of what a listing agent and buyer's agent actually do — and why commission in Colorado typically runs 5–6% of the sale price.
 date: April 4, 2026
 dateModified: April 4, 2026
-category: Costs & Pricing
+category: "Costs & Pricing"
 tag: Selling & Buying
 readTime: 9 min read
 heroLabel: Selling & Buying
