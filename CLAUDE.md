@@ -6,26 +6,35 @@
 
 Run `git pull --rebase origin main` to sync with what's already deployed. Without this, you risk duplicating work that another conversation already pushed.
 
+### Two-branch system
+
+- **`main`** — working branch. Pushes here do NOT trigger Netlify builds. Safe, free, always in sync.
+- **`live`** — production branch. Pushes here trigger Netlify auto-deploy (15 credits per deploy). Only production-ready code.
+
+### Pushing changes (Mandatory)
+
+Every session that edits site files MUST push to `main` before closing. Do NOT commit locally — push directly to `main` via the `deploy-to-netlify` skill. This keeps work visible to all sessions and prevents duplication.
+
+Use the `deploy-to-netlify` skill for all pushes — never attempt `git push` from the sandbox. The skill handles syncing, validation, and logging.
+
+### Deploying to production
+
+Production deploys happen once per day, bundled with the nightly blog post. Use the `deploy-to-netlify` skill to:
+1. Merge `main` → `live`
+2. Push `live` to trigger Netlify build
+
+This reserves Netlify credits for the daily blog cadence.
+
+**Exception:** if something is visibly broken on the live site, Jacob may approve a standalone production deploy — always confirm with him first.
+
 ### Logging changes
 
 When making changes to the repo, log each change as a bullet in `DEPLOY_QUEUE.md` with the date and a brief description. Before logging, verify the change is actually needed — check `git log` and `DEPLOY_LOG.md` to confirm it wasn't already deployed.
 
-### Deploying
-
-Use the `deploy-to-netlify` skill for all deploys — never attempt `git push` from the sandbox. The skill handles syncing, queue validation, pushing, and logging.
-
 ### Two-file system
 
-- `DEPLOY_QUEUE.md` — pending changes waiting to ship. Cleared after each deploy.
+- `DEPLOY_QUEUE.md` — pending changes waiting to ship. Cleared after each production deploy.
 - `DEPLOY_LOG.md` — permanent record of deployed changes with dates and commit hashes. Check this to see if something was already deployed.
-
-### Commit before closing (Mandatory)
-
-Every conversation that edits site files must commit its changes before ending. Not push — just commit. Uncommitted changes are invisible to every other conversation and to the deploy protocol. If FUSE issues prevent committing, flag the uncommitted work in `DEPLOY_QUEUE.md` with file paths so the next conversation knows what to pick up.
-
-### Bundling policy
-
-One push per day, bundled with the nightly blog post. Any site changes made during the day (bug fixes, page updates, component work) should be committed locally and queued in `DEPLOY_QUEUE.md`, then deployed together with the blog post in a single push. This reserves Netlify credits for the daily blog cadence. Exception: if something is visibly broken on the live site, Jacob may approve a standalone push — always confirm with him first.
 
 ## Image Pipeline (Mandatory)
 
