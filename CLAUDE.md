@@ -19,11 +19,11 @@ Use the `deploy-to-netlify` skill for all pushes — never attempt `git push` fr
 
 ### Deploying to production
 
-Production deploys happen once per day, bundled with the nightly blog post. Use the `deploy-to-netlify` skill to:
+**Never push to `live` without Jacob's explicit approval.** Production deploys cost 15 credits each and happen once per day, bundled with the nightly blog post. Use the `deploy-to-netlify` skill to:
 1. Merge `main` → `live`
 2. Push `live` to trigger Netlify build
 
-This reserves Netlify credits for the daily blog cadence.
+When Jacob confirms changes are "good to go" or "ready to push," that means push to `main` only — not `live`. The nightly blog task handles the production deploy. If Jacob wants something live immediately, he will say so explicitly (e.g., "deploy now," "push this live," "make this live now").
 
 **Exception:** if something is visibly broken on the live site, Jacob may approve a standalone production deploy — always confirm with him first.
 
