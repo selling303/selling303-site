@@ -2,7 +2,7 @@
 title: "South Denver Metro Watering Restrictions Guide: What Every Homeowner Needs to Know in 2026"
 description: "District-by-district 2026 watering schedules for Littleton, Highlands Ranch, Parker, Castle Rock, Castle Pines, Englewood, and more."
 date: "April 7, 2026"
-dateModified: "April 7, 2026"
+dateModified: "April 8, 2026"
 category: "What to Expect"
 tag: "Neighborhoods"
 readTime: "10 min read"
@@ -25,8 +25,10 @@ keywords: "Denver water restrictions 2026, Parker watering schedule, Highlands R
 faqSchema:
   - question: "When do 2026 watering restrictions start in the South Denver Metro?"
     answer: "Denver Water's Stage 1 drought restrictions took effect March 25, 2026 and limit watering to two assigned days per week. Highlands Ranch enacted similar Stage 1 restrictions the same week. The City of Englewood has asked residents to voluntarily follow a three-day-per-week guideline, with mandatory restrictions possible if conditions worsen. Most districts enforce seasonal schedules from May 1 through September 30."
+  - question: "What are Denver Water's new drought surcharges for 2026?"
+    answer: "Denver Water's board approved temporary drought pricing on April 8, 2026. Starting with May water use (reflected on June bills), outdoor water tiers carry surcharges: Tier 2 (outdoor use up to 15,000 gallons per month above indoor baseline) adds $1.10 per 1,000 gallons on top of 2026 rates, and Tier 3 (heavy outdoor use above Tier 2) adds $2.20 per 1,000 gallons. Indoor use (Tier 1) is exempt. The surcharges run through April 30, 2027 — the first drought pricing Denver Water has imposed in over 20 years."
   - question: "What are the fines for violating watering restrictions in Colorado?"
-    answer: "Fines vary by district. Denver Water issues warnings for first offenses and can escalate to fines and service restrictions. Castle Rock uses tiered water budget surcharges — exceeding your allocation costs $6.91 per 1,000 gallons for the first overage tier, rising to $10.31. Check your specific district's enforcement policies to avoid surprises."
+    answer: "Fines vary by district. Denver Water issues warnings for first offenses and can escalate to fines and service restrictions — and the new 2026 drought surcharges add $1.10 to $2.20 per 1,000 gallons on outdoor water tiers. Castle Rock uses tiered water budget surcharges — exceeding your allocation costs $6.91 per 1,000 gallons for the first overage tier, rising to $10.31. Check your specific district's enforcement policies to avoid surprises."
   - question: "Can I install new sod or a new lawn during drought restrictions in Denver?"
     answer: "Under Denver Water's Stage 1 drought rules, new sod is strongly discouraged and effectively impractical — the two-day-per-week watering limit cannot sustain new turf establishment, which requires daily watering. If you're selling a home in the Littleton, Centennial, or Lone Tree areas served by Denver Water, consider drought-tolerant landscaping alternatives like xeriscaping or native grass seeding instead of traditional sod."
 relatedPosts:
@@ -63,7 +65,7 @@ relatedPosts:
 <div style="background: #f0f4f0; border-left: 4px solid #4a7c59; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>Key Takeaways</strong>
 <ul style="margin: 0.75rem 0 0 1.25rem; padding: 0;">
-<li><strong>Denver Water (Littleton, Centennial, Lone Tree)</strong> — Stage 1 drought: two assigned days per week, no watering 10am–6pm, new sod effectively off the table.</li>
+<li><strong>Denver Water (Littleton, Centennial, Lone Tree)</strong> — Stage 1 drought: two assigned days per week, no watering 10am–6pm, new sod effectively off the table. <strong>New drought surcharges</strong> add $1.10–$2.20 per 1,000 gallons on outdoor water starting May 2026.</li>
 <li><strong>Highlands Ranch</strong> — Stage 1 restrictions: two days per week by address, no watering 10am–6pm from May 1 through September 30.</li>
 <li><strong>Englewood is currently voluntary</strong> — the City asks residents to follow a three-day-per-week guideline, but mandatory restrictions may follow if drought conditions worsen.</li>
 <li><strong>Castle Rock uses water budgets, not day limits</strong> — exceed your allocation and surcharges start at $6.91 per 1,000 gallons.</li>
@@ -105,6 +107,22 @@ relatedPosts:
 <p><strong>No watering between 10am and 6pm.</strong> Denver Water also recommends waiting until mid-to-late May to turn on sprinkler systems at all — late spring freezes can damage irrigation lines and waste water before lawns are actively growing.</p>
 
 <p>The most notable restriction for homeowners: <strong>new sod installations are strongly discouraged and effectively impractical</strong> under Stage 1. New turf requires daily watering to establish, which isn't possible on a two-day-per-week schedule. If you're planning curb appeal improvements ahead of a home sale, traditional sod is essentially off the table in Denver Water's service area. The district's goal is a 20% reduction in outdoor water use across its service territory.</p>
+
+<h3>Denver Water's New Drought Surcharges (Effective May 2026)</h3>
+
+<p>On April 8, 2026, Denver Water's board approved <strong>temporary drought pricing</strong> — the first time the utility has imposed drought surcharges in over 20 years (the last time was during the 2002–2004 drought). The surcharges take effect with May water use, which means they'll first appear on June bills, and run through April 30, 2027.</p>
+
+<p>The pricing targets outdoor water use specifically:</p>
+
+<ul>
+<li><strong>Tier 1 (essential indoor use):</strong> Exempt — no drought surcharge on indoor water.</li>
+<li><strong>Tier 2 (outdoor use up to 15,000 gallons/month above Tier 1):</strong> +$1.10 per 1,000 gallons on top of standard 2026 rates.</li>
+<li><strong>Tier 3 (heavy outdoor use above Tier 2 threshold):</strong> +$2.20 per 1,000 gallons on top of standard 2026 rates.</li>
+</ul>
+
+<p>What does this mean in dollars? Denver Water estimates that a suburban customer (Littleton, Centennial, Lone Tree) who doesn't conserve will see annual water costs rise from roughly $877 to $929. High-use households — think large irrigated lots — could go from $1,050 to $1,126 annually. Inside the city of Denver, the numbers are lower but still meaningful: non-conservers from $684 to $729, and high users from $803 to $879.</p>
+
+<p>The takeaway for South Denver homeowners: watering restrictions now have a direct financial cost beyond fines. Overwatering doesn't just risk a warning from Denver Water — it hits your bill at $1.10 to $2.20 per thousand gallons above your indoor baseline.</p>
 
 <h2 id="highlands-ranch">What Are the Highlands Ranch Watering Rules for 2026?</h2>
 
@@ -199,7 +217,7 @@ relatedPosts:
 
 <h3>For Buyers: Factor Water Costs Into Your Budget</h3>
 
-<p>If you're purchasing a home in Castle Rock, water budget surcharges can meaningfully affect your monthly costs — especially if the property has a large irrigated lot. Ask for 12 months of water bills during due diligence. In Englewood, where mandatory restrictions could follow the current voluntary guidelines, it's worth considering how a property's landscaping would hold up under tighter rules.</p>
+<p>Water costs are no longer a background line item — they're a real budget factor in multiple South Denver districts. In Castle Rock, water budget surcharges can meaningfully affect your monthly costs, especially if the property has a large irrigated lot. And now in Denver Water's service area (Littleton, Centennial, Lone Tree), the new drought surcharges mean a suburban home with heavy outdoor irrigation could cost $1,050–$1,126 annually for water — up from $877–$1,050 before drought pricing. Ask for 12 months of water bills during due diligence regardless of which district you're buying in. In Englewood, where mandatory restrictions could follow the current voluntary guidelines, it's worth considering how a property's landscaping would hold up under tighter rules.</p>
 
 <h3>For Relocation Buyers: Colorado Water Is Different</h3>
 
@@ -207,13 +225,17 @@ relatedPosts:
 
 <h2 id="faq">Frequently Asked Questions</h2>
 
+<h3>What are Denver Water's new drought surcharges for 2026?</h3>
+
+<p>Denver Water's board approved temporary drought pricing on April 8, 2026. Starting with May water use (reflected on June bills), outdoor water tiers carry surcharges: Tier 2 (outdoor use up to 15,000 gallons per month above your indoor baseline) adds $1.10 per 1,000 gallons on top of 2026 rates, and Tier 3 (heavy outdoor use above Tier 2) adds $2.20 per 1,000 gallons. Indoor use (Tier 1) is exempt. The surcharges run through April 30, 2027 — the first drought pricing Denver Water has imposed in over 20 years.</p>
+
 <h3>When do 2026 watering restrictions start in the South Denver Metro?</h3>
 
 <p>Denver Water's Stage 1 drought restrictions took effect March 25, 2026 and limit watering to two assigned days per week. Highlands Ranch enacted similar Stage 1 restrictions the same week. The City of Englewood is currently asking residents to voluntarily follow a three-day-per-week guideline, with mandatory restrictions possible if drought conditions worsen. Most districts enforce seasonal schedules from May 1 through September 30.</p>
 
 <h3>What are the fines for violating watering restrictions in Colorado?</h3>
 
-<p>Fines vary by district. Denver Water issues warnings for first offenses and can escalate to fines and service restrictions. Castle Rock uses tiered water budget surcharges — exceeding your allocation costs $6.91 per 1,000 gallons for the first overage tier, rising to $10.31. Check your specific district's enforcement policies to avoid surprises.</p>
+<p>Fines vary by district. Denver Water issues warnings for first offenses and can escalate to fines and service restrictions — and the new 2026 drought surcharges add $1.10 to $2.20 per 1,000 gallons on outdoor water tiers. Castle Rock uses tiered water budget surcharges — exceeding your allocation costs $6.91 per 1,000 gallons for the first overage tier, rising to $10.31. Check your specific district's enforcement policies to avoid surprises.</p>
 
 <h3>Can I install new sod or a new lawn during drought restrictions in Denver?</h3>
 
@@ -223,4 +245,4 @@ relatedPosts:
 <p><strong>Buying or selling in the South Denver Metro this spring?</strong> Jacob Stark helps homeowners across Littleton, Highlands Ranch, Parker, Centennial, Englewood, Castle Pines, and Lone Tree navigate every detail — including the ones that don't show up on the MLS. <a href="https://calendly.com/jacob-realtor">Schedule a conversation</a> or call directly at 303-997-0634.</p>
 </blockquote>
 
-<p style="font-size: 0.85rem; color: #6b7280; margin-top: 2rem;">Sources: <a href="https://www.denverwater.org/residential/rebates-and-conservation-tips/summer-watering-rules" target="_blank" rel="noopener">Denver Water</a>, <a href="https://www.highlandsranchwater.org/drought-resource-center" target="_blank" rel="noopener">Highlands Ranch Water</a>, <a href="https://pwsd.org/3366/Watering-Restrictions" target="_blank" rel="noopener">Parker Water & Sanitation District</a>, <a href="https://crconserve.com/158/Watering-Schedule" target="_blank" rel="noopener">Castle Rock Water</a>, <a href="https://www.cpnmd.org/water" target="_blank" rel="noopener">Castle Pines North Metropolitan District</a>, <a href="https://www.englewoodco.gov/government/city-departments/utilities/customers/watering-schedule" target="_blank" rel="noopener">City of Englewood Utilities</a>, <a href="https://extension.colostate.edu/resource/lawn-care-basics/" target="_blank" rel="noopener">Colorado State University Extension</a>, <a href="https://www.dmarealtors.com/news/what-colorados-water-restrictions-mean-you-and-your-clients" target="_blank" rel="noopener">DMAR</a>. All information current as of April 7, 2026 — check your district directly for the latest updates.</p>
+<p style="font-size: 0.85rem; color: #6b7280; margin-top: 2rem;">Sources: <a href="https://www.denverwater.org/residential/rebates-and-conservation-tips/summer-watering-rules" target="_blank" rel="noopener">Denver Water</a>, <a href="https://www.denverwater.org/your-water/water-supply-and-planning/drought-response" target="_blank" rel="noopener">Denver Water Drought Pricing (April 2026)</a>, <a href="https://www.highlandsranchwater.org/drought-resource-center" target="_blank" rel="noopener">Highlands Ranch Water</a>, <a href="https://pwsd.org/3366/Watering-Restrictions" target="_blank" rel="noopener">Parker Water & Sanitation District</a>, <a href="https://crconserve.com/158/Watering-Schedule" target="_blank" rel="noopener">Castle Rock Water</a>, <a href="https://www.cpnmd.org/water" target="_blank" rel="noopener">Castle Pines North Metropolitan District</a>, <a href="https://www.englewoodco.gov/government/city-departments/utilities/customers/watering-schedule" target="_blank" rel="noopener">City of Englewood Utilities</a>, <a href="https://extension.colostate.edu/resource/lawn-care-basics/" target="_blank" rel="noopener">Colorado State University Extension</a>, <a href="https://www.dmarealtors.com/news/what-colorados-water-restrictions-mean-you-and-your-clients" target="_blank" rel="noopener">DMAR</a>. All information current as of April 8, 2026 — check your district directly for the latest updates.</p>
