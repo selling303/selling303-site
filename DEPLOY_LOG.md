@@ -4,6 +4,17 @@ Permanent record of deployed changes. The deploy-to-netlify skill moves items he
 
 ---
 
+## 2026-04-08 — commit 5e3b0bf | Credits remaining: 290
+
+- Infrastructure: switched to two-branch deploy system (main/live)
+- Netlify production branch changed from `main` to `live`
+- Created build hook `deploy-selling303` (stored as NETLIFY_BUILD_HOOK env var)
+- CLAUDE.md: rewritten deploy protocol for main/live architecture
+- YAML quoting fixes across 5 blog posts (& character safety)
+- Added missing cardStat/cardStatLabel to 2 older posts
+- Added Neighborhoods filter button to blog index
+- Deploy skill v4: two-branch push/deploy workflow
+
 ## 2026-04-08 — commit 57d5a78 | Credits remaining: 320
 
 - HOTFIX: Added missing blog card CSS to styles.css (gradient backgrounds, card headers, hover reveal animations). Cards were rendering blank after previous deploy omitted the stylesheet additions.
