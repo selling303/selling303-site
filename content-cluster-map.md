@@ -17,6 +17,8 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 **Existing blog links:**
 - Why Your House Isn't Selling in Denver (`/blog/why-house-not-selling-denver`)
 - Why Homes Sit on the Market in South Denver (`/blog/why-homes-sit-on-market-south-denver`)
+- Your Listing Expired in Highlands Ranch — Here's What Actually Went Wrong (`/blog/expired-listing-highlands-ranch`)
+- How to Relist and Sell a Home in Littleton After an Expired Listing (`/blog/relist-home-littleton-after-expired-listing`)
 
 ### 2. Move-Up Sellers (`/move-up-sellers`)
 **Primary geographic ties:** Highlands Ranch, Centennial, Parker (highest move-up activity — families upgrading within the metro)
@@ -43,12 +45,14 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 **Existing blog links:**
 - Best Neighborhoods in South Denver for Move-Up Buyers (`/blog/best-neighborhoods-south-denver-move-up-buyers`)
 - Littleton vs. Highlands Ranch (`/blog/littleton-vs-highlands-ranch`)
+- Moving to Highlands Ranch from Out of State: A Relocation Guide for 2026 (`/blog/moving-to-highlands-ranch-relocation-guide-2026`)
 
 ### 6. New Construction (`/new-construction`)
 **Primary geographic ties:** Parker, Castle Pines, Highlands Ranch, Lone Tree (active builder communities)
 **Existing blog links:**
 - Parker vs. Castle Pines (`/blog/parker-vs-castle-pines`)
 - Best Neighborhoods in South Denver for Move-Up Buyers (`/blog/best-neighborhoods-south-denver-move-up-buyers`)
+- New Construction Communities in Castle Pines and Parker: What Buyers Need to Know in 2026 (`/blog/new-construction-castle-pines-parker-2026`)
 
 ---
 

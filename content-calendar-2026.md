@@ -56,14 +56,14 @@
   - Target keywords: new construction Castle Pines, new builds Parker CO 2026, Castle Pines new homes
 
 #### Day 6 — Wednesday, April 9
-- [ ] **"Moving to Highlands Ranch from Out of State: A Relocation Guide for 2026"**
+- [x] **"Moving to Highlands Ranch from Out of State: A Relocation Guide for 2026"** *(drafted 2026-04-09)* *(published 2026-04-09)*
   - Specialization: `/relocation` | Geographic: `/highlands-ranch`
   - Type: Local area topic | Funnel: TOFU
   - Angle: Complete area guide for incoming families. Commute, rec centers, price ranges, remote buying process.
   - Target keywords: moving to Highlands Ranch, Highlands Ranch relocation guide, relocating to Denver suburbs
 
 #### Day 7 — Thursday, April 10
-- [ ] **"How to Relist and Sell a Home in Littleton After an Expired Listing"**
+- [x] **"How to Relist and Sell a Home in Littleton After an Expired Listing"** *(drafted 2026-04-10)*
   - Specialization: `/expired-listings` | Geographic: `/littleton`
   - Type: Seller advice | Funnel: BOFU
   - Angle: Step-by-step relist playbook. Timing, price adjustment formula, marketing relaunch checklist.
