@@ -9,7 +9,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   currentPage="clientclarity-demo"
   headerVariant="solid"
 >
-  <head slot="head">
+  <Fragment slot="head">
     <style>
       /* ─── PAGE-SPECIFIC STYLES ─── */
       .demo-hero {
@@ -512,7 +512,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         .market-table th, .market-table td { padding: .6rem .5rem; }
       }
     </style>
-  </head>
+  </Fragment>
 
   <!-- Demo Hero -->
   <section class="demo-hero">
