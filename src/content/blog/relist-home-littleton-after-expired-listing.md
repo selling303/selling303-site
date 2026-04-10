@@ -101,7 +101,7 @@ relatedPosts:
 
 <p>Timing a relist involves two considerations: the cooling-off period and the seasonal window.</p>
 
-<p><strong>The cooling-off period.</strong> Most experienced agents recommend waiting at least 30 days before relisting. This isn't an MLS rule — it's a perception strategy. Relisting within a week signals that nothing meaningful has changed. A 30-day gap gives you time to make real improvements (new photos, staging adjustments, minor repairs) and lets the market perception of your property reset slightly.</p>
+<p><strong>The cooling-off period.</strong> Most experienced agents recommend waiting at least 30 days before relisting. This isn't an MLS rule — it's a perception strategy. Relisting within a week signals that nothing meaningful has changed. A 30-day gap gives you time to make real improvements (new photos, staging adjustments, minor repairs) and lets the market perception of your property reset. There's also a practical advantage: during those 30+ days, buyers who were actively shopping when your listing first went stale are closing on other properties and moving on. New buyers are entering the market — people who never saw your original listing and have no baggage around its price history. That turnover means your relist lands in front of fresh eyes, not the same audience that already passed.</p>
 
 <p><strong>The seasonal window.</strong> Littleton's strongest selling months are April through June and September through early October. Inventory tightens, buyer activity picks up, and well-priced homes move faster. According to DMAR data, Littleton's active inventory was down 22.1% year-over-year in February 2026 — meaning fewer competing listings heading into spring. If your listing expired in Q1, spring 2026 is your window to relaunch into a leaner competitive set.</p>
 
@@ -115,9 +115,9 @@ relatedPosts:
 
 <p><strong>Rewrite the MLS remarks.</strong> The listing description should tell a different story. Highlight features that weren't emphasized before. If you've made improvements — new paint, updated landscaping, a refreshed kitchen — lead with those. The remarks should make it clear this is a relaunched listing with a corrected strategy, not the same product at a lower number.</p>
 
-<p><strong>Targeted digital marketing.</strong> The <a href="https://www.nar.realtor/research-and-statistics/research-reports/digital-age" target="_blank" rel="noopener">National Association of REALTORS</a> reports that over 95% of buyers use the internet in their home search. A relist marketing plan should include geo-targeted social media ads within a 15-mile radius of Littleton, email outreach to agents who showed the property during the first listing period, and a refreshed Zillow/Realtor.com listing that syncs with the new MLS entry.</p>
+<p><strong>Targeted digital marketing.</strong> The <a href="https://www.nar.realtor/research-and-statistics/research-reports/digital-age" target="_blank" rel="noopener">National Association of REALTORS</a> reports that over 95% of buyers use the internet in their home search. A relist marketing plan should include email outreach to agents who showed the property during the first listing period, a refreshed Zillow/Realtor.com listing that syncs with the new MLS entry, and an updated presence across the platforms where Littleton buyers are searching. Ask your listing agent whether geo-targeted social media ads make sense for your property and price point — it's not always the right fit, but for certain homes and neighborhoods, paid digital exposure can accelerate the relaunch.</p>
 
-<p><strong>Open house strategy.</strong> Host a broker open within the first week and a public open house within the first two weekends. This creates concentrated showing activity that generates urgency — something the original listing likely lacked after 60+ days on market.</p>
+<p><strong>Open house strategy.</strong> A broker open within the first week and a public open house during the first two weekends can create concentrated showing activity that generates urgency — something the original listing likely lacked after 60+ days on market. That said, open houses aren't always realistic depending on the agent's schedule, your availability, and the property's location. Have an honest conversation with your agent about whether open houses make sense for your relist — and if they do, how to time them for maximum impact within the marketing launch window.</p>
 
 <h2 id="agent-decision">Should You Switch Agents Before Relisting?</h2>
 
@@ -127,7 +127,7 @@ relatedPosts:
 
 <p><strong>When to switch:</strong> If your agent was passive on marketing, slow to communicate, didn't push back on your initial price, or didn't provide data-driven feedback on why the listing wasn't attracting offers — those are process failures. An <a href="/expired-listings">expired listing specialist</a> approaches the relist differently from the start: a corrected CMA before the listing goes live, a 30-day marketing launch plan, and weekly performance reviews against showing data and online engagement metrics.</p>
 
-<p>Jacob Stark's track record with relist clients in South Denver reflects this approach — a 100.6% sale-to-list ratio across $46M+ in closed volume, because the pricing is right before the listing goes active, not corrected after it stalls.</p>
+<p>Jacob Stark lists every home in South Denver under a transparent <a href="/my-seller-promise">Seller Promise</a> — a defined set of commitments covering pricing strategy, marketing execution, and communication standards. That approach has produced a 100.6% sale-to-list ratio across $46M+ in closed volume, because the pricing is right before the listing goes active, not corrected after it stalls.</p>
 
 <h2 id="checklist">What's the Complete Relist Checklist for Littleton Sellers?</h2>
 
@@ -169,6 +169,7 @@ relatedPosts:
 <li>Review showing feedback from the expired listing — what did buyers and agents say?</li>
 <li>Assess whether the agent proactively addressed pricing, or waited for you to bring it up</li>
 <li>Interview at least one expired listing specialist before deciding whether to stay or switch</li>
+<li>Ask what commitments the agent will make in writing — a <a href="/my-seller-promise">seller promise</a> or service guarantee removes the guesswork</li>
 </ul>
 
 <h2 id="faq">Frequently Asked Questions</h2>
