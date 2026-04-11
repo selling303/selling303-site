@@ -70,7 +70,7 @@
   - Target keywords: relist home Littleton, expired listing Littleton CO, sell home after expired listing
 
 #### Day 8 — Friday, April 11
-- [ ] **"Selling in Centennial and Buying in Highlands Ranch: How to Coordinate Two Transactions"**
+- [x] **"Selling in Centennial and Buying in Highlands Ranch: How to Coordinate Two Transactions"** *(drafted 2026-04-11)*
   - Specialization: `/move-up-sellers` | Geographic: `/centennial`
   - Type: Seller advice | Funnel: BOFU
   - Angle: Real timeline walkthrough of a dual transaction. Equity math, contingency mechanics, bridge options.

@@ -26,6 +26,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - Best Neighborhoods in South Denver for Move-Up Buyers (`/blog/best-neighborhoods-south-denver-move-up-buyers`)
 - Cost to Sell a House in Colorado 2026 (`/blog/cost-to-sell-house-colorado-2026`)
 - When to Sell Your Parker Home and Move Up — 5 Signs You've Outgrown It (`/blog/when-to-sell-parker-home-move-up`)
+- Selling in Centennial and Buying in Highlands Ranch: How to Coordinate Two Transactions (`/blog/selling-centennial-buying-highlands-ranch-coordinate-transactions`)
 
 ### 3. First-Time Homebuyers (`/first-time-homebuyers`)
 **Primary geographic ties:** Littleton, Englewood, Centennial (most affordable entry points in the metro)
