@@ -143,6 +143,101 @@ relatedPosts:
 
 <p>The entire process, from listing in Centennial to closing in Highlands Ranch, typically runs 60 to 90 days when both transactions are coordinated by the same agent. That timeline compresses or expands based on pricing accuracy, inspection outcomes, and lender turnaround.</p>
 
+<p>Here's how the sell side, buy side, and coordination milestones line up week by week:</p>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" style="width:100%;height:auto;margin:1.5rem 0 2rem;">
+<defs>
+<linearGradient id="headerGrad" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0%" stop-color="#002a3a"/>
+<stop offset="100%" stop-color="#0a4a5e"/>
+</linearGradient>
+<filter id="shadow" x="-2%" y="-2%" width="104%" height="108%">
+<feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+</filter>
+</defs>
+<rect width="900" height="520" rx="12" fill="#ffffff"/>
+<rect width="900" height="56" rx="12" fill="url(#headerGrad)"/>
+<rect y="44" width="900" height="12" fill="url(#headerGrad)"/>
+<text x="450" y="36" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="700" letter-spacing="0.5">Dual Transaction Timeline: Centennial → Highlands Ranch</text>
+<line x1="80" y1="100" x2="80" y2="460" stroke="#d0d5dd" stroke-width="2" stroke-dasharray="6,4"/>
+<text x="80" y="86" text-anchor="middle" fill="#81848a" font-size="11" font-weight="600">WEEK</text>
+<text x="80" y="130" text-anchor="middle" fill="#002a3a" font-size="13" font-weight="700">1–2</text>
+<text x="80" y="210" text-anchor="middle" fill="#002a3a" font-size="13" font-weight="700">3–4</text>
+<text x="80" y="290" text-anchor="middle" fill="#002a3a" font-size="13" font-weight="700">5–6</text>
+<text x="80" y="370" text-anchor="middle" fill="#002a3a" font-size="13" font-weight="700">7–8</text>
+<text x="80" y="450" text-anchor="middle" fill="#002a3a" font-size="13" font-weight="700">9–10</text>
+<rect x="120" y="68" width="250" height="28" rx="4" fill="#002a3a" opacity="0.08"/>
+<text x="245" y="87" text-anchor="middle" fill="#002a3a" font-size="12" font-weight="700">SELL SIDE (Centennial)</text>
+<rect x="400" y="68" width="250" height="28" rx="4" fill="#4a7c59" opacity="0.08"/>
+<text x="525" y="87" text-anchor="middle" fill="#4a7c59" font-size="12" font-weight="700">BUY SIDE (Highlands Ranch)</text>
+<rect x="680" y="68" width="200" height="28" rx="4" fill="#81848a" opacity="0.08"/>
+<text x="780" y="87" text-anchor="middle" fill="#81848a" font-size="12" font-weight="700">COORDINATION</text>
+<rect x="120" y="110" width="250" height="42" rx="6" fill="#f4f7f9" filter="url(#shadow)"/>
+<rect x="120" y="110" width="4" height="42" rx="2" fill="#002a3a"/>
+<text x="134" y="127" fill="#002a3a" font-size="11" font-weight="700">Prep, stage &amp; list</text>
+<text x="134" y="143" fill="#81848a" font-size="10">Price to sell in 14 days. Go live.</text>
+<rect x="400" y="110" width="250" height="42" rx="6" fill="#f0f4f0" filter="url(#shadow)"/>
+<rect x="400" y="110" width="4" height="42" rx="2" fill="#4a7c59"/>
+<text x="414" y="127" fill="#4a7c59" font-size="11" font-weight="700">Get pre-underwritten</text>
+<text x="414" y="143" fill="#81848a" font-size="10">Full loan approval (not just pre-qual).</text>
+<rect x="680" y="110" width="200" height="42" rx="6" fill="#fafafa" filter="url(#shadow)"/>
+<text x="694" y="127" fill="#81848a" font-size="10" font-weight="600">Align lender on both</text>
+<text x="694" y="143" fill="#81848a" font-size="10">sides. Start HR search.</text>
+<rect x="120" y="190" width="250" height="42" rx="6" fill="#f4f7f9" filter="url(#shadow)"/>
+<rect x="120" y="190" width="4" height="42" rx="2" fill="#002a3a"/>
+<text x="134" y="207" fill="#002a3a" font-size="11" font-weight="700">Under contract</text>
+<text x="134" y="223" fill="#81848a" font-size="10">Inspection + appraisal on your sale.</text>
+<rect x="400" y="190" width="250" height="42" rx="6" fill="#f0f4f0" filter="url(#shadow)"/>
+<rect x="400" y="190" width="4" height="42" rx="2" fill="#4a7c59"/>
+<text x="414" y="207" fill="#4a7c59" font-size="11" font-weight="700">Active shopping</text>
+<text x="414" y="223" fill="#81848a" font-size="10">Tour HR homes. Identify top targets.</text>
+<rect x="680" y="190" width="200" height="42" rx="6" fill="#fafafa" filter="url(#shadow)"/>
+<text x="694" y="207" fill="#81848a" font-size="10" font-weight="600">Negotiate rent-back</text>
+<text x="694" y="223" fill="#81848a" font-size="10">terms on Centennial sale.</text>
+<rect x="120" y="270" width="250" height="42" rx="6" fill="#f4f7f9" filter="url(#shadow)"/>
+<rect x="120" y="270" width="4" height="42" rx="2" fill="#002a3a"/>
+<text x="134" y="287" fill="#002a3a" font-size="11" font-weight="700">Clear to close</text>
+<text x="134" y="303" fill="#81848a" font-size="10">All contingencies resolved on sale.</text>
+<rect x="400" y="270" width="250" height="42" rx="6" fill="#f0f4f0" filter="url(#shadow)"/>
+<rect x="400" y="270" width="4" height="42" rx="2" fill="#4a7c59"/>
+<text x="414" y="287" fill="#4a7c59" font-size="11" font-weight="700">Submit offer on HR home</text>
+<text x="414" y="303" fill="#81848a" font-size="10">Use sale-under-contract strength.</text>
+<rect x="680" y="270" width="200" height="42" rx="6" fill="#fafafa" filter="url(#shadow)"/>
+<text x="694" y="287" fill="#81848a" font-size="10" font-weight="600">Align closing dates</text>
+<text x="694" y="303" fill="#81848a" font-size="10">within 2-week window.</text>
+<rect x="120" y="350" width="250" height="42" rx="6" fill="#f4f7f9" filter="url(#shadow)"/>
+<rect x="120" y="350" width="4" height="42" rx="2" fill="#002a3a"/>
+<text x="134" y="367" fill="#002a3a" font-size="11" font-weight="700">Close Centennial sale</text>
+<text x="134" y="383" fill="#81848a" font-size="10">Proceeds wired. Rent-back begins.</text>
+<rect x="400" y="350" width="250" height="42" rx="6" fill="#f0f4f0" filter="url(#shadow)"/>
+<rect x="400" y="350" width="4" height="42" rx="2" fill="#4a7c59"/>
+<text x="414" y="367" fill="#4a7c59" font-size="11" font-weight="700">HR inspection + appraisal</text>
+<text x="414" y="383" fill="#81848a" font-size="10">Due diligence on purchase side.</text>
+<rect x="680" y="350" width="200" height="42" rx="6" fill="#fafafa" filter="url(#shadow)"/>
+<text x="694" y="367" fill="#81848a" font-size="10" font-weight="600">Wire proceeds to</text>
+<text x="694" y="383" fill="#81848a" font-size="10">escrow for HR close.</text>
+<rect x="120" y="430" width="250" height="42" rx="6" fill="#e8f5e9" filter="url(#shadow)"/>
+<rect x="120" y="430" width="4" height="42" rx="2" fill="#2e7d32"/>
+<text x="134" y="447" fill="#2e7d32" font-size="11" font-weight="700">✓ Rent-back ends</text>
+<text x="134" y="463" fill="#81848a" font-size="10">Vacate Centennial home.</text>
+<rect x="400" y="430" width="250" height="42" rx="6" fill="#e8f5e9" filter="url(#shadow)"/>
+<rect x="400" y="430" width="4" height="42" rx="2" fill="#2e7d32"/>
+<text x="414" y="447" fill="#2e7d32" font-size="11" font-weight="700">✓ Close on Highlands Ranch</text>
+<text x="414" y="463" fill="#81848a" font-size="10">Keys in hand. Move once.</text>
+<rect x="680" y="430" width="200" height="42" rx="6" fill="#e8f5e9" filter="url(#shadow)"/>
+<text x="694" y="447" fill="#2e7d32" font-size="10" font-weight="700">DONE — One move,</text>
+<text x="694" y="463" fill="#2e7d32" font-size="10" font-weight="700">two closings complete.</text>
+<line x1="245" y1="152" x2="245" y2="188" stroke="#002a3a" stroke-width="1.5" opacity="0.3"/>
+<line x1="245" y1="232" x2="245" y2="268" stroke="#002a3a" stroke-width="1.5" opacity="0.3"/>
+<line x1="245" y1="312" x2="245" y2="348" stroke="#002a3a" stroke-width="1.5" opacity="0.3"/>
+<line x1="245" y1="392" x2="245" y2="428" stroke="#002a3a" stroke-width="1.5" opacity="0.3"/>
+<line x1="525" y1="152" x2="525" y2="188" stroke="#4a7c59" stroke-width="1.5" opacity="0.3"/>
+<line x1="525" y1="232" x2="525" y2="268" stroke="#4a7c59" stroke-width="1.5" opacity="0.3"/>
+<line x1="525" y1="312" x2="525" y2="348" stroke="#4a7c59" stroke-width="1.5" opacity="0.3"/>
+<line x1="525" y1="392" x2="525" y2="428" stroke="#4a7c59" stroke-width="1.5" opacity="0.3"/>
+<text x="450" y="505" text-anchor="middle" fill="#a5a7a9" font-size="10">selling303.com | Jacob Stark, REALTOR® | 303-997-0634</text>
+</svg>
+
 <h2 id="bridge-options">What Are Your Options for Bridging the Gap Between Selling and Buying?</h2>
 
 <p>There are three primary strategies, and each carries different risk, cost, and complexity profiles.</p>
@@ -151,11 +246,13 @@ relatedPosts:
 
 <p>List and sell your Centennial home. Negotiate a rent-back agreement — Colorado's standard post-closing occupancy agreement allows up to 60 days — giving you time to close on the Highlands Ranch home while still living in your current house. Your proceeds are in hand, you're a cash-equivalent buyer on the purchase side, and you eliminate the risk of carrying two mortgages.</p>
 
-<p>The downside: if your Highlands Ranch purchase falls through during the rent-back period, you're on a countdown. And not every Centennial buyer will agree to a rent-back, though it's common enough in this market that Jacob Stark negotiates them regularly.</p>
+<p>The downside: if your Highlands Ranch purchase falls through during the rent-back period, you're on a countdown. And not every Centennial buyer will agree to a rent-back — it depends on their own timeline and motivation. Rent-backs are common in South Denver Metro transactions, but they're never guaranteed, so your pricing and offer strategy need to account for the possibility that the buyer says no.</p>
 
 <h3>Strategy 2: Buy First with Bridge Financing (Higher Cost, More Flexibility)</h3>
 
 <p>A bridge loan or a HELOC against your Centennial home equity lets you secure the Highlands Ranch home before selling. This is most useful when you've found the perfect property and can't risk losing it to another buyer. Bridge loans typically carry higher interest rates (currently in the 8–10% range) and origination fees, but the cost is usually justified if it means locking in a property in a competitive pocket of Highlands Ranch.</p>
+
+<p>Despite the higher cost, many move-up sellers prefer this approach because it eliminates the most stressful parts of a dual transaction. You don't have to keep your Centennial home in show-ready condition while your family is living in it. No last-minute scrambles to clean before showings. No coordinating bedtimes around evening tours. You move once, on your schedule, and your Centennial home can be professionally staged and shown vacant — which typically sells faster and for more money.</p>
 
 <p>This approach works best when you have significant equity in your Centennial home — enough that the temporary carrying cost doesn't create financial strain. If your Centennial home is worth $699,000 and you owe $350,000, you have a strong equity cushion. If you owe $600,000, the math gets tight.</p>
 
