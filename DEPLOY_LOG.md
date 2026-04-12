@@ -4,6 +4,12 @@ Permanent record of deployed changes. The deploy-to-netlify skill moves items he
 
 ---
 
+## 2026-04-11 — commit afb29ea | Credits used: 15 | Credits remaining: 260
+
+- New blog post: "Selling in Centennial and Buying in Highlands Ranch: How to Coordinate Two Transactions" (`src/content/blog/selling-centennial-buying-highlands-ranch-coordinate-transactions.md`). Day 8 of content calendar. Move-Up Sellers pillar + Centennial geographic pillar. BOFU. DMAR Feb 2026 data (Centennial $699K median / 48 DOM, HR $718.5K / 52 DOM), inline SVG timeline graphic, comparison table, three bridge strategies, equity math framework.
+- Updated content-calendar-2026.md — marked Day 8 as drafted.
+- Updated content-cluster-map.md — added post to Move-Up Sellers cluster.
+
 ## 2026-04-10 — commit 48b3fcc | Credits used: 15 | Credits remaining: 275
 
 - New blog post: "How to Relist and Sell a Home in Littleton After an Expired Listing" (`src/content/blog/relist-home-littleton-after-expired-listing.md`). Day 7 of content calendar. Expired Listings pillar + Littleton geographic pillar. 93 expired + 18 withdrawn Q1 2026 data from REcolorado, DMAR Feb 2026 stats, step-by-step relist checklist, Seller Promise links.
