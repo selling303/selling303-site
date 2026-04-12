@@ -81,7 +81,7 @@
 ### Week 2: April 12–18
 
 #### Day 9 — Saturday, April 12
-- [ ] **"Do You Need a Real Estate Agent for New Construction in Colorado? (Yes — Here's Why)"**
+- [x] **"Do You Need a Real Estate Agent for New Construction in Colorado? (Yes — Here's Why)"** *(drafted 2026-04-12)*
   - Specialization: `/new-construction` | Geographic: `/highlands-ranch`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Builder agent vs. buyer agent. Negotiation leverage, inspection importance, contract traps.

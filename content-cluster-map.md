@@ -54,6 +54,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - Parker vs. Castle Pines (`/blog/parker-vs-castle-pines`)
 - Best Neighborhoods in South Denver for Move-Up Buyers (`/blog/best-neighborhoods-south-denver-move-up-buyers`)
 - New Construction Communities in Castle Pines and Parker: What Buyers Need to Know in 2026 (`/blog/new-construction-castle-pines-parker-2026`)
+- Do You Need a Real Estate Agent for New Construction in Colorado? (`/blog/real-estate-agent-new-construction-colorado`)
 
 ---
 
