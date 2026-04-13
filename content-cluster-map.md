@@ -47,6 +47,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - Best Neighborhoods in South Denver for Move-Up Buyers (`/blog/best-neighborhoods-south-denver-move-up-buyers`)
 - Littleton vs. Highlands Ranch (`/blog/littleton-vs-highlands-ranch`)
 - Moving to Highlands Ranch from Out of State: A Relocation Guide for 2026 (`/blog/moving-to-highlands-ranch-relocation-guide-2026`)
+- Littleton vs. Centennial: Which South Denver Suburb Fits Your Relocation? (`/blog/littleton-vs-centennial-south-denver-relocation`)
 
 ### 6. New Construction (`/new-construction`)
 **Primary geographic ties:** Parker, Castle Pines, Highlands Ranch, Lone Tree (active builder communities)

@@ -88,7 +88,7 @@
   - Target keywords: real estate agent new construction Colorado, buyer agent new build, new construction representation Denver
 
 #### Day 10 — Sunday, April 13
-- [ ] **"Littleton vs. Centennial: Which South Denver Suburb Fits Your Relocation?"**
+- [x] **"Littleton vs. Centennial: Which South Denver Suburb Fits Your Relocation?"** *(drafted 2026-04-13)*
   - Specialization: `/relocation` | Geographic: `/littleton`
   - Type: Local area topic | Funnel: TOFU
   - Angle: Side-by-side comparison for relocation buyers. Walkability vs. space, price vs. commute.
