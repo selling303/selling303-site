@@ -36,6 +36,15 @@ fi
 AUTH="Authorization: token ${GITHUB_PAT}"
 ACCEPT="Accept: application/vnd.github.v3+json"
 
+# --- Helper: JSON-escape a string ---
+json_escape() {
+  python3 -c "import json,sys; print(json.dumps(sys.argv[1]))" "$1"
+}
+
+# Pre-escape the commit message for safe JSON embedding
+# Returns a quoted string like "my message" — strip outer quotes when embedding
+COMMIT_MSG_ESCAPED=$(json_escape "$COMMIT_MSG")
+
 # --- Helper: API call ---
 gh_api() {
   local method="$1" endpoint="$2" data="${3:-}"
@@ -109,7 +118,8 @@ for FILE_PATH in "${FILES[@]}"; do
   else
     TREE_ENTRIES+=","
   fi
-  TREE_ENTRIES+="{\"path\":\"${REL_PATH}\",\"mode\":\"100644\",\"type\":\"blob\",\"sha\":\"${BLOB_SHA}\"}"
+  REL_PATH_ESCAPED=$(json_escape "$REL_PATH")
+  TREE_ENTRIES+="{\"path\":${REL_PATH_ESCAPED},\"mode\":\"100644\",\"type\":\"blob\",\"sha\":\"${BLOB_SHA}\"}"
 done
 
 TREE_ENTRIES+="]"
@@ -122,7 +132,7 @@ echo "  New tree: ${NEW_TREE_SHA}"
 
 # --- Step 5: Create commit ---
 echo "Creating commit..."
-COMMIT_CREATE_JSON=$(gh_api POST "/git/commits" "{\"message\":\"${COMMIT_MSG}\",\"tree\":\"${NEW_TREE_SHA}\",\"parents\":[\"${HEAD_SHA}\"]}")
+COMMIT_CREATE_JSON=$(gh_api POST "/git/commits" "{\"message\":${COMMIT_MSG_ESCAPED},\"tree\":\"${NEW_TREE_SHA}\",\"parents\":[\"${HEAD_SHA}\"]}")
 NEW_COMMIT_SHA=$(echo "$COMMIT_CREATE_JSON" | python3 -c "import sys,json; print(json.load(sys.stdin)['sha'])")
 echo "  Commit: ${NEW_COMMIT_SHA}"
 
