@@ -47,6 +47,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </style>
   </Fragment>
 
+  <script is:inline>
+    // Fire a GA4 custom event so we can see which URLs trigger 404s
+    if (typeof gtag === 'function') {
+      gtag('event', 'page_not_found', {
+        page_path: window.location.pathname + window.location.search,
+        page_referrer: document.referrer || '(direct)',
+        page_url: window.location.href
+      });
+    }
+  </script>
+
   <div class="error-page">
     <div class="container text-center">
       <div class="error-page__code">404</div>
