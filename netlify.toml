@@ -4,3 +4,11 @@
 
 [build.environment]
   NODE_VERSION = "22.12.0"
+
+# Disable Pretty URLs — Astro handles clean URLs via directory-style output
+# (e.g. /about → dist/about/index.html). Without this, Netlify adds
+# a 301 redirect from /about → /about/ which Google flags as a redirect chain.
+[[plugins]]
+
+[build.processing.html]
+  pretty_urls = false

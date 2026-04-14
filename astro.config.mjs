@@ -4,6 +4,7 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://selling303.com',
   output: 'static',
+  trailingSlash: 'never',
   integrations: [
     sitemap(),
   ],

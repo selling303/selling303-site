@@ -12,3 +12,4 @@ Changes waiting to be pushed to production. Each conversation logs what it chang
 - **2026-04-14** — Updated CSP headers: font-src now 'self' only, added /fonts/* immutable cache rule (1yr)
 - **2026-04-14** — Expected Lighthouse improvement: ~930ms FCP/LCP from font chain elimination, ~205 KiB off critical path from RealScout deferral
 - **2026-04-14** — Added 301 redirects for all 27 GSC 404s: old Framer listing pages → /properties, old blog slugs → closest Astro posts, old static pages → Astro equivalents, old neighborhood paths → /neighborhoods/[slug]
+- **2026-04-14** — Fixed trailing slash redirects: set trailingSlash:'never' in Astro config, disabled Netlify Pretty URLs. Resolves 12 "Page with redirect" issues in GSC
