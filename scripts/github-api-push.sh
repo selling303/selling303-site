@@ -104,8 +104,8 @@ for FILE_PATH in "${FILES[@]}"; do
 
   echo "Creating blob for ${REL_PATH}..."
 
-  # Read file and base64 encode it
-  CONTENT_B64=$(base64 < "$FILE_PATH")
+  # Read file and base64 encode it (no line wrapping — newlines break JSON)
+  CONTENT_B64=$(base64 -w 0 < "$FILE_PATH")
 
   # Create blob via API
   BLOB_JSON=$(gh_api POST "/git/blobs" "{\"content\":\"${CONTENT_B64}\",\"encoding\":\"base64\"}")
