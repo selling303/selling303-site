@@ -4,7 +4,7 @@ Permanent record of deployed changes. The deploy-to-netlify skill moves items he
 
 ---
 
-## 2026-04-14 — commit e5445c2 | Credits used: 15 | Credits remaining: 230
+## 2026-04-14 — commit 683c688 | Credits used: 30 | Credits remaining: 215
 
 - Added GA4 `page_not_found` custom event to 404.astro (tracks broken URL path, referrer, and full URL)
 - Updated CLAUDE.md deploy protocol to reference GitHub API instead of git commands
@@ -16,6 +16,11 @@ Permanent record of deployed changes. The deploy-to-netlify skill moves items he
 - Fixed trailing slash redirects: set trailingSlash:'never' in Astro config, disabled Netlify Pretty URLs. Resolves 12 "Page with redirect" issues in GSC
 - New blog post: "Best Parks and Trails Near Littleton and Highlands Ranch" (`src/content/blog/best-parks-trails-littleton-highlands-ranch.md`). Day 19 of content calendar. Best Of / Neighborhoods. TOFU lifestyle. Inline branded SVG map. Web-verified stats from HRCA, CPW, SSPRD, High Line Canal Conservancy.
 - New SVG asset: `src/assets/images/littleton-highlands-ranch-parks-trails-map.svg`
+- HOTFIX: Converted inline SVG in parks blog post from `<style>`/class-based to inline styles — `<style>` tag inside SVG `<defs>` caused Astro content collection to silently skip the page (404 on production). Same fix applied to standalone SVG asset
+- Updated `why-house-not-selling-denver.md`: added overpricing diagnostic framework (showing-activity-to-price tiers, brand-aligned color palette, NAR Confidence Index link) as new H3 subsection within Reason #1
+- Fixed `netlify.toml`: removed empty `[[plugins]]` block that was causing all builds to fail at config parsing stage
+- Created Netlify build hook `deploy-selling303-live` for programmatic production deploys
+- NOTE: Previous deploy attempts (commits e5445c2, b585c85, ffb959c) all failed due to the netlify.toml bug. The Apr 13 deploy (12ab884) was the last successful production deploy before this one. Two successful deploys in this batch: 56cc089 (toml fix) + 683c688 (full merge) = 30 credits
 
 ## 2026-04-13 — commit 12ab884 | Credits used: 15 | Credits remaining: 245
 
