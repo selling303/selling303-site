@@ -81,14 +81,14 @@
 ### Week 2: April 12–18
 
 #### Day 9 — Saturday, April 12
-- [x] **"Do You Need a Real Estate Agent for New Construction in Colorado? (Yes — Here's Why)"** *(drafted 2026-04-12)*
+- [x] **"Do You Need a Real Estate Agent for New Construction in Colorado? (Yes — Here's Why)"** *(drafted 2026-04-12)* *(published 2026-04-13)*
   - Specialization: `/new-construction` | Geographic: `/highlands-ranch`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Builder agent vs. buyer agent. Negotiation leverage, inspection importance, contract traps.
   - Target keywords: real estate agent new construction Colorado, buyer agent new build, new construction representation Denver
 
 #### Day 10 — Sunday, April 13
-- [x] **"Littleton vs. Centennial: Which South Denver Suburb Fits Your Relocation?"** *(drafted 2026-04-13)*
+- [x] **"Littleton vs. Centennial: Which South Denver Suburb Fits Your Relocation?"** *(drafted 2026-04-13)* *(published 2026-04-13)*
   - Specialization: `/relocation` | Geographic: `/littleton`
   - Type: Local area topic | Funnel: TOFU
   - Angle: Side-by-side comparison for relocation buyers. Walkability vs. space, price vs. commute.

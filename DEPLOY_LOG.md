@@ -4,6 +4,13 @@ Permanent record of deployed changes. The deploy-to-netlify skill moves items he
 
 ---
 
+## 2026-04-13 — commit 12ab884 | Credits used: 15 | Credits remaining: 245
+
+- New blog post: "Do You Need a Real Estate Agent for New Construction in Colorado?" (`src/content/blog/real-estate-agent-new-construction-colorado.md`). Day 9 of content calendar. New Construction pillar + Highlands Ranch geographic pillar. MOFU.
+- New blog post: "Littleton vs. Centennial: Which South Denver Suburb Fits Your Relocation?" (`src/content/blog/littleton-vs-centennial-south-denver-relocation.md`). Day 10 of content calendar. Relocation pillar + Littleton geographic pillar. TOFU. Q1 2026 REcolorado MLS data (Littleton 433 closed/$700K median, Centennial 269 closed/$690K median), DMAR March 2026 report.
+- Updated content-calendar-2026.md — marked Days 9 and 10 as drafted.
+- Updated content-cluster-map.md — added posts to New Construction and Relocation clusters.
+
 ## 2026-04-11 — commit afb29ea | Credits used: 15 | Credits remaining: 260
 
 - New blog post: "Selling in Centennial and Buying in Highlands Ranch: How to Coordinate Two Transactions" (`src/content/blog/selling-centennial-buying-highlands-ranch-coordinate-transactions.md`). Day 8 of content calendar. Move-Up Sellers pillar + Centennial geographic pillar. BOFU. DMAR Feb 2026 data (Centennial $699K median / 48 DOM, HR $718.5K / 52 DOM), inline SVG timeline graphic, comparison table, three bridge strategies, equity math framework.
