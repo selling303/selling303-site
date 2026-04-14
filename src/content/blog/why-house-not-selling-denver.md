@@ -113,21 +113,52 @@ relatedPosts:
 
 <p>Your showing activity is a real-time signal of where your price sits relative to the market. Industry benchmarks built from decades of agent experience break it down into four tiers:</p>
 
-<table>
-  <thead>
-    <tr><th>What You're Seeing</th><th>What It Likely Means</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Only drive-bys and online views — no showing requests</td><td>~13% or more above market value</td></tr>
-    <tr><td>Low or infrequent showings</td><td>~9% above market value</td></tr>
-    <tr><td>Regular showings but no offers</td><td>~5% above market value</td></tr>
-    <tr><td>Showings with offers coming in</td><td>Priced within range — negotiate from strength</td></tr>
-  </tbody>
-</table>
+<div style="display: flex; flex-direction: column; gap: 0; max-width: 640px; margin: 2rem auto; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,42,58,0.10);">
+  <div style="display: flex; align-items: center; gap: 1.25rem; padding: 1.25rem 1.5rem; background: #8b3a3a; color: white;">
+    <div style="min-width: 72px; text-align: center;">
+      <span style="font-size: 2rem; font-weight: 800; line-height: 1;">13%+</span>
+      <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; margin-top: 2px;">over market</div>
+    </div>
+    <div style="border-left: 2px solid rgba(255,255,255,0.3); padding-left: 1.25rem;">
+      <div style="font-weight: 700; font-size: 1rem; margin-bottom: 2px;">No Showing Requests</div>
+      <div style="font-size: 0.875rem; opacity: 0.9;">Only drive-bys and online views. Buyers aren't even curious enough to walk through.</div>
+    </div>
+  </div>
+  <div style="display: flex; align-items: center; gap: 1.25rem; padding: 1.25rem 1.5rem; background: #9e6b3a; color: white;">
+    <div style="min-width: 72px; text-align: center;">
+      <span style="font-size: 2rem; font-weight: 800; line-height: 1;">~9%</span>
+      <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; margin-top: 2px;">over market</div>
+    </div>
+    <div style="border-left: 2px solid rgba(255,255,255,0.3); padding-left: 1.25rem;">
+      <div style="font-weight: 700; font-size: 1rem; margin-bottom: 2px;">Low or Infrequent Showings</div>
+      <div style="font-size: 0.875rem; opacity: 0.9;">Some interest, but not enough to generate momentum. The price is scaring off the majority.</div>
+    </div>
+  </div>
+  <div style="display: flex; align-items: center; gap: 1.25rem; padding: 1.25rem 1.5rem; background: #8a7a3a; color: white;">
+    <div style="min-width: 72px; text-align: center;">
+      <span style="font-size: 2rem; font-weight: 800; line-height: 1;">~5%</span>
+      <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; margin-top: 2px;">over market</div>
+    </div>
+    <div style="border-left: 2px solid rgba(255,255,255,0.3); padding-left: 1.25rem;">
+      <div style="font-weight: 700; font-size: 1rem; margin-bottom: 2px;">Showings But No Offers</div>
+      <div style="font-size: 0.875rem; opacity: 0.9;">Buyers like the home — they just can't justify the price. You're close but not there.</div>
+    </div>
+  </div>
+  <div style="display: flex; align-items: center; gap: 1.25rem; padding: 1.25rem 1.5rem; background: #4a7c59; color: white;">
+    <div style="min-width: 72px; text-align: center;">
+      <span style="font-size: 1.5rem; font-weight: 800; line-height: 1.1;">&#10003;</span>
+      <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; margin-top: 2px;">on target</div>
+    </div>
+    <div style="border-left: 2px solid rgba(255,255,255,0.3); padding-left: 1.25rem;">
+      <div style="font-weight: 700; font-size: 1rem; margin-bottom: 2px;">Showings With Offers</div>
+      <div style="font-size: 0.875rem; opacity: 0.9;">Priced within range. Negotiate from a position of strength.</div>
+    </div>
+  </div>
+</div>
 
-<p>These tiers aren't from a single study — they reflect conventional wisdom refined across thousands of agents over 20+ years of listing data. The pattern holds because buyer behavior is predictable: the further a home sits above market value, the fewer buyers even bother to schedule a tour.</p>
+<p style="text-align: center; font-size: 0.8rem; color: #81848a; margin-top: -0.75rem; margin-bottom: 2rem;">Based on industry benchmarks refined across 20+ years of listing data</p>
 
-<p>NAR's <a href="https://www.nar.realtor/research-and-statistics/research-reports/realtors-confidence-index" style="color: var(--color-accent); font-weight: 600;">REALTORS® Confidence Index</a> reinforces the bottom tier — homes priced correctly sell within 30 days and close at 99% of list price on average. The gap between that outcome and a stale listing sitting at 60+ DOM is almost always a pricing gap, not a market gap.</p>
+<p>The pattern holds because buyer behavior is predictable: the further a home sits above market value, the fewer buyers even bother to schedule a tour. NAR's <a href="https://www.nar.realtor/research-and-statistics/research-reports/realtors-confidence-index" style="color: var(--color-accent); font-weight: 600;">REALTORS® Confidence Index</a> reinforces the bottom tier — homes priced correctly sell within 30 days and close at 99% of list price on average. The gap between that outcome and a stale listing sitting at 60+ DOM is almost always a pricing gap, not a market gap.</p>
 
 <p><strong>The fix:</strong> Price based on recent comps, not sentiment. A good agent pulls comps from the last 90 to 180 days, adjusts for your home's condition and updates, and lands on a defensible price within 5% of market value.</p>
 
