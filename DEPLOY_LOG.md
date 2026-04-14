@@ -4,6 +4,19 @@ Permanent record of deployed changes. The deploy-to-netlify skill moves items he
 
 ---
 
+## 2026-04-14 — commit e5445c2 | Credits used: 15 | Credits remaining: 230
+
+- Added GA4 `page_not_found` custom event to 404.astro (tracks broken URL path, referrer, and full URL)
+- Updated CLAUDE.md deploy protocol to reference GitHub API instead of git commands
+- Hardened github-api-push.sh: added JSON escaping for commit messages and file paths
+- Self-hosted Google Fonts (Inter + DM Serif Display): eliminated render-blocking @import chain, added @font-face declarations with font-display:swap, preloads in head
+- Lazy-load RealScout widget (205 KiB) via IntersectionObserver — removed from critical render path on all 4 pages
+- Updated CSP headers: font-src now 'self' only, added /fonts/* immutable cache rule (1yr)
+- Added 301 redirects for all 27 GSC 404s: old Framer listing pages → /properties, old blog slugs → closest Astro posts, old static pages → Astro equivalents, old neighborhood paths → /neighborhoods/[slug]
+- Fixed trailing slash redirects: set trailingSlash:'never' in Astro config, disabled Netlify Pretty URLs. Resolves 12 "Page with redirect" issues in GSC
+- New blog post: "Best Parks and Trails Near Littleton and Highlands Ranch" (`src/content/blog/best-parks-trails-littleton-highlands-ranch.md`). Day 19 of content calendar. Best Of / Neighborhoods. TOFU lifestyle. Inline branded SVG map. Web-verified stats from HRCA, CPW, SSPRD, High Line Canal Conservancy.
+- New SVG asset: `src/assets/images/littleton-highlands-ranch-parks-trails-map.svg`
+
 ## 2026-04-13 — commit 12ab884 | Credits used: 15 | Credits remaining: 245
 
 - New blog post: "Do You Need a Real Estate Agent for New Construction in Colorado?" (`src/content/blog/real-estate-agent-new-construction-colorado.md`). Day 9 of content calendar. New Construction pillar + Highlands Ranch geographic pillar. MOFU.
