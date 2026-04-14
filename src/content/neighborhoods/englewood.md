@@ -1,7 +1,7 @@
 ---
 title: "Englewood"
 metaTitle: "Englewood Homes for Sale | Selling 303"
-description: "Englewood CO real estate — market stats, light rail access, and active listings. Jacob Stark, REALTOR at 8z Real Estate."
+description: "Englewood CO homes for sale — light rail access, lower entry price, and close-in convenience. Market data and first-time buyer resources from Jacob Stark, South Denver REALTOR®."
 heroSubtext: "Close-in convenience, a lower entry point, and light rail access — one of South Denver's best value plays."
 aboutHeading: "Why Buyers Are Looking at Englewood"
 aboutParagraphs:

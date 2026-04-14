@@ -31,3 +31,5 @@ Changes waiting to be pushed to production. Each conversation logs what it chang
   - 21069 Woodside Lane, Parker — Selling in a Tough Market (holiday season, $10K over, 10 DOM)
   - 2993 S Jericho Ct, Aurora — Life Transition (Conservatory Park, $31K over, 4 DOM)
 - 2026-04-14: NOTE: All 8 new stories need listing photos added to src/assets/images/success-stories/
+- 2026-04-14: SEO meta optimization — updated titles and descriptions on all 6 specialization pages: added "Colorado" to titles, neighborhood names to descriptions for long-tail query matching
+- 2026-04-14: SEO meta optimization — updated descriptions on all 9 neighborhood pages: enriched with specialization keywords (buying, selling, relocating, relisting, new construction) and unique neighborhood character

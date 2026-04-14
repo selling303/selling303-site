@@ -1,7 +1,7 @@
 ---
 title: "Castle Pines"
 metaTitle: "Castle Pines Homes for Sale | Selling 303"
-description: "Castle Pines CO real estate — market stats, golf community living, mountain views, and active listings. Jacob Stark, REALTOR at 8z Real Estate."
+description: "Castle Pines CO homes for sale — golf communities, mountain views, and new construction. Market stats and listings from Jacob Stark, South Denver Metro REALTOR®."
 heroSubtext: "Golf course living, mountain views, and a semi-rural feel — all within 25 minutes of the Denver Tech Center."
 aboutHeading: "Why Buyers Choose Castle Pines"
 aboutParagraphs:

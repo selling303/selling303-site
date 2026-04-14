@@ -1,7 +1,7 @@
 ---
 title: "Greenwood Village"
 metaTitle: "Greenwood Village Homes for Sale | Selling 303"
-description: "Greenwood Village CO real estate — luxury market stats, DTC proximity, and active listings. Jacob Stark, REALTOR at 8z Real Estate."
+description: "Greenwood Village CO luxury homes for sale — DTC proximity, large lots, and top-tier South Denver neighborhoods. Market data from Jacob Stark, South Denver Metro REALTOR®."
 heroSubtext: "Established luxury neighborhoods, large lots, DTC proximity, and some of the highest property values in the South Denver Metro."
 aboutHeading: "Why Greenwood Village Commands a Premium"
 aboutParagraphs:

@@ -1,7 +1,7 @@
 ---
 title: "Lone Tree"
 metaTitle: "Lone Tree Homes for Sale | Selling 303"
-description: "Lone Tree CO real estate — market stats, RidgeGate, light rail access, and active listings. Jacob Stark, REALTOR at 8z Real Estate."
+description: "Lone Tree CO homes for sale — RidgeGate, Park Meadows, and Lincoln Station light rail. Luxury and mid-range listings from Jacob Stark, South Denver REALTOR®."
 heroSubtext: "Park Meadows proximity, RidgeGate development, Lincoln Station light rail, and a mix of luxury and mid-range options in Douglas County."
 aboutHeading: "Why Buyers Target Lone Tree"
 aboutParagraphs:

@@ -1,7 +1,7 @@
 ---
 title: "Littleton"
 metaTitle: "Littleton Homes for Sale | Selling 303"
-description: "Explore Littleton CO real estate — market stats, neighborhood details, lifestyle info, and active listings. Jacob Stark, REALTOR at 8z Real Estate."
+description: "Littleton CO homes for sale — market stats, pricing trends, and neighborhood guide. Buying, selling, relocating, or relisting in Littleton. Jacob Stark, South Denver Metro REALTOR®."
 heroSubtext: "Historic downtown charm, light rail access, and one of South Denver's most walkable communities."
 aboutHeading: "Why Families Choose Littleton"
 aboutParagraphs:

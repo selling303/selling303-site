@@ -1,7 +1,7 @@
 ---
 title: "Centennial"
 metaTitle: "Centennial Homes for Sale | Selling 303"
-description: "Centennial CO real estate — market stats, neighborhood details, and active listings near the DTC. Jacob Stark, REALTOR at 8z Real Estate."
+description: "Centennial CO homes for sale near the Denver Tech Center — market stats, larger lots, and established neighborhoods. Buy, sell, or relocate with Jacob Stark, South Denver REALTOR®."
 heroSubtext: "Central location, larger lots, and easy access to I-25, E-470, and the Denver Tech Center employment corridor."
 aboutHeading: "Why Families Choose Centennial"
 aboutParagraphs:

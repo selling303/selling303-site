@@ -1,7 +1,7 @@
 ---
 title: "Lakewood"
 metaTitle: "Lakewood Homes for Sale | Selling 303"
-description: "Lakewood CO real estate — market stats, foothills access, and active listings. Jacob Stark, REALTOR at 8z Real Estate."
+description: "Lakewood CO homes for sale — foothills access, diverse housing from mid-century ranch to new townhomes, and Red Rocks proximity. Jacob Stark, South Denver REALTOR®."
 heroSubtext: "West-side foothills access, diverse housing stock from mid-century ranch to newer townhomes, and a direct line to Red Rocks."
 aboutHeading: "Why Buyers Are Drawn to Lakewood"
 aboutParagraphs:

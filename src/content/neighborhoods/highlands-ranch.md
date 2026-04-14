@@ -1,7 +1,7 @@
 ---
 title: "Highlands Ranch"
 metaTitle: "Highlands Ranch Homes for Sale | Selling 303"
-description: "Highlands Ranch CO real estate — market stats, trails, rec centers, and active listings. Jacob Stark, REALTOR at 8z Real Estate."
+description: "Highlands Ranch CO homes for sale — 70+ miles of trails, four rec centers, and strong resale values. Buying, selling, or new construction with Jacob Stark, South Denver REALTOR®."
 heroSubtext: "Master-planned community with 70+ miles of trails, four rec centers, and consistent resale values across Douglas County."
 aboutHeading: "Why Families Choose Highlands Ranch"
 aboutParagraphs:

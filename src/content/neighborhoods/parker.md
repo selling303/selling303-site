@@ -1,7 +1,7 @@
 ---
 title: "Parker"
 metaTitle: "Parker Homes for Sale | Selling 303 — Market Data & Listings"
-description: "Parker CO real estate — market stats, downtown Mainstreet, and active listings. Jacob Stark, REALTOR at 8z Real Estate."
+description: "Parker CO homes for sale — newer construction, downtown Mainstreet, and room to grow. Market stats, new builds, and listings from Jacob Stark, South Denver Metro REALTOR®."
 heroSubtext: "Small-town feel with newer construction, an active downtown, and room to spread out on Denver's southeast edge."
 aboutHeading: "Why Families Choose Parker"
 aboutParagraphs:
