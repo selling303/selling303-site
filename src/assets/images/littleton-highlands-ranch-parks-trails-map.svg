@@ -1,0 +1,186 @@
+<svg viewBox="-70 0 1080 780" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      .title { font-size: 22px; font-weight: 700; fill: #002a3a; }
+      .label-community { font-size: 17px; font-weight: 700; fill: #002a3a; letter-spacing: 0.5px; }
+      .label-park { font-size: 13px; font-weight: 600; fill: #002a3a; }
+      .label-park-sub { font-size: 11px; font-weight: 500; fill: #81848a; }
+      .label-road { font-size: 10px; font-weight: 500; fill: #81848a; }
+      .label-highway { font-size: 11px; font-weight: 600; fill: #6b6e73; }
+      .label-trail { font-size: 11px; font-weight: 600; fill: #4a7c59; font-style: italic; }
+      .label-trail-sub { font-size: 10px; font-weight: 400; fill: #4a7c59; }
+      .label-water { font-size: 10px; font-weight: 500; fill: #5b8fa8; font-style: italic; }
+      .watermark { font-size: 11px; font-weight: 500; fill: #a5a7a9; }
+      .legend-label { font-size: 10px; fill: #002a3a; }
+      .legend-title { font-size: 10px; font-weight: 600; fill: #81848a; }
+      .park-fill { fill: #4a7c59; opacity: 0.10; }
+      .park-border { stroke: #4a7c59; stroke-width: 1.5; fill: none; }
+      .reservoir-fill { fill: #5b8fa8; opacity: 0.18; }
+      .reservoir-border { stroke: #5b8fa8; stroke-width: 1.5; fill: none; }
+      .trail-dashed { stroke: #4a7c59; stroke-width: 2.5; stroke-dasharray: 6,4; fill: none; }
+      .trail-solid { stroke: #4a7c59; stroke-width: 2; fill: none; }
+      .river { stroke: #5b8fa8; stroke-width: 3; fill: none; opacity: 0.6; stroke-linecap: round; }
+      .highway { stroke: #b0b3b8; stroke-width: 3; fill: none; stroke-linecap: round; }
+      .highway-major { stroke: #9a9da2; stroke-width: 4; fill: none; stroke-linecap: round; }
+      .road-local { stroke: #cdcfd3; stroke-width: 1.5; fill: none; stroke-dasharray: none; }
+      .community-zone { fill: none; stroke: #d0d4d9; stroke-width: 1.2; stroke-dasharray: 4,3; }
+      .compass-ring { stroke: #002a3a; stroke-width: 1.2; fill: white; }
+      .compass-label { font-size: 12px; font-weight: 700; fill: #002a3a; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect x="-70" width="1080" height="780" fill="#f7f9fb" rx="8"/>
+  <rect x="-67" y="3" width="1074" height="774" fill="none" stroke="#e2e5e9" stroke-width="1" rx="6"/>
+
+  <!-- Title -->
+  <text x="470" y="38" class="title" text-anchor="middle">Parks &amp; Trails — Littleton &amp; Highlands Ranch</text>
+
+  <!-- ==================== WATER ==================== -->
+
+  <!-- South Platte River (runs N-S through west side, slight curve) -->
+  <path d="M 168 60 Q 160 140 155 220 Q 148 300 145 360 Q 140 430 138 480 Q 132 560 128 640 Q 125 700 120 760" class="river"/>
+  <text x="112" y="130" class="label-water" transform="rotate(-82, 112, 130)">South Platte River</text>
+
+  <!-- Chatfield Reservoir (southwest, irregular shape) -->
+  <path d="M 95 520 Q 130 500 170 510 Q 200 520 210 550 Q 205 585 180 600 Q 145 610 115 595 Q 85 570 95 520 Z" class="reservoir-border"/>
+  <path d="M 95 520 Q 130 500 170 510 Q 200 520 210 550 Q 205 585 180 600 Q 145 610 115 595 Q 85 570 95 520 Z" class="reservoir-fill"/>
+  <text x="150" y="562" class="label-water" text-anchor="middle">Chatfield</text>
+  <text x="150" y="574" class="label-water" text-anchor="middle">Reservoir</text>
+
+  <!-- ==================== HIGHWAYS & ROADS ==================== -->
+
+  <!-- I-25 (runs N-S on east side, slight westward curve going south) -->
+  <path d="M 740 60 Q 730 200 720 340 Q 715 430 710 520 Q 705 620 700 760" class="highway-major"/>
+  <rect x="718" y="145" width="28" height="16" rx="3" fill="white" stroke="#9a9da2" stroke-width="0.8"/>
+  <text x="732" y="156" class="label-highway" text-anchor="middle" font-size="9">I-25</text>
+
+  <!-- C-470 (curves from SW near Chatfield, east along Littleton/HR border, meets I-25) -->
+  <path d="M 60 470 Q 120 450 200 420 Q 300 390 400 370 Q 500 355 600 348 Q 660 344 720 340" class="highway-major"/>
+  <rect x="440" y="345" width="38" height="16" rx="3" fill="white" stroke="#9a9da2" stroke-width="0.8"/>
+  <text x="459" y="356" class="label-highway" text-anchor="middle" font-size="9">C-470</text>
+
+  <!-- Santa Fe Dr / US 85 (N-S, west of center) -->
+  <path d="M 285 60 Q 280 200 275 340 Q 272 430 268 520 Q 265 620 260 760" class="highway"/>
+  <text x="252" y="100" class="label-road" transform="rotate(-88, 252, 100)">Santa Fe Dr</text>
+
+  <!-- Broadway (N-S, center) -->
+  <path d="M 430 60 Q 428 200 425 340 Q 423 430 420 520 Q 418 620 415 760" class="highway"/>
+  <text x="440" y="100" class="label-road" transform="rotate(-88, 440, 100)">Broadway</text>
+
+  <!-- University Blvd (N-S, east of center) -->
+  <path d="M 580 60 Q 578 200 575 340 Q 573 430 570 520 Q 568 620 565 760" class="highway"/>
+  <text x="591" y="100" class="label-road" transform="rotate(-88, 591, 100)">University Blvd</text>
+
+  <!-- Wadsworth Blvd (N-S, west side) -->
+  <path d="M 175 60 Q 172 200 170 340 Q 168 400 165 460" class="road-local" stroke="#cdcfd3" stroke-width="1.5"/>
+  <text x="185" y="85" class="label-road" transform="rotate(-88, 185, 85)">Wadsworth</text>
+
+  <!-- Belleview Ave (E-W, northern reference) -->
+  <path d="M 60 160 L 820 160" class="road-local"/>
+  <text x="830" y="157" class="label-road">Belleview Ave</text>
+
+  <!-- Mineral Ave (E-W) -->
+  <path d="M 200 280 L 820 280" class="road-local"/>
+  <text x="830" y="277" class="label-road">Mineral Ave</text>
+
+  <!-- County Line Rd (E-W, key divider between Littleton and HR) -->
+  <path d="M 200 400 L 820 400" class="road-local" stroke="#c0c3c8" stroke-width="1.8"/>
+  <text x="830" y="397" class="label-road" font-weight="600">County Line Rd</text>
+
+  <!-- Highlands Ranch Pkwy (E-W through HR) -->
+  <path d="M 300 500 L 780 500" class="road-local"/>
+  <text x="790" y="497" class="label-road">HR Pkwy</text>
+
+  <!-- Lucent Blvd (N-S in HR) -->
+  <path d="M 490 400 Q 488 480 485 560 Q 483 620 480 700" class="road-local"/>
+  <text x="500" y="440" class="label-road" transform="rotate(-88, 500, 440)">Lucent Blvd</text>
+
+  <!-- ==================== COMMUNITY ZONES ==================== -->
+
+  <!-- Littleton (north of County Line, west-center) -->
+  <path d="M 120 120 Q 450 110 550 130 Q 560 250 540 380 Q 400 395 200 400 Q 140 350 120 120 Z" class="community-zone" opacity="0.6"/>
+  <text x="360" y="250" class="label-community" text-anchor="middle">Littleton</text>
+
+  <!-- Highlands Ranch (south of C-470, centered) -->
+  <path d="M 260 410 Q 500 400 700 405 Q 710 520 700 640 Q 600 700 400 700 Q 290 680 270 550 Q 260 470 260 410 Z" class="community-zone" opacity="0.6"/>
+  <text x="490" y="460" class="label-community" text-anchor="middle">Highlands Ranch</text>
+
+  <!-- ==================== PARKS ==================== -->
+
+  <!-- Chatfield State Park (SW, around the reservoir, large area) -->
+  <path d="M 60 440 Q 90 420 160 410 Q 220 420 240 470 Q 245 530 230 600 Q 210 630 160 640 Q 100 635 65 600 Q 45 550 60 440 Z" class="park-border"/>
+  <path d="M 60 440 Q 90 420 160 410 Q 220 420 240 470 Q 245 530 230 600 Q 210 630 160 640 Q 100 635 65 600 Q 45 550 60 440 Z" class="park-fill"/>
+  <text x="150" y="650" class="label-park" text-anchor="middle">Chatfield State Park</text>
+  <text x="150" y="664" class="label-trail-sub" text-anchor="middle">26 mi of trails · 69-acre dog park</text>
+
+  <!-- South Platte Park (along river, between Mineral and County Line) -->
+  <path d="M 115 285 Q 145 280 175 290 Q 185 320 180 370 Q 170 395 140 400 Q 115 390 105 360 Q 100 320 115 285 Z" class="park-border"/>
+  <path d="M 115 285 Q 145 280 175 290 Q 185 320 180 370 Q 170 395 140 400 Q 115 390 105 360 Q 100 320 115 285 Z" class="park-fill"/>
+  <text x="90" y="330" class="label-park" text-anchor="end">South Platte Park</text>
+  <text x="90" y="343" class="label-park-sub" text-anchor="end">880 acres</text>
+
+  <!-- Backcountry Wilderness Area (far south of HR, large) -->
+  <path d="M 320 620 Q 450 600 620 610 Q 680 640 690 700 Q 660 740 580 755 Q 450 760 350 745 Q 300 720 300 670 Q 310 640 320 620 Z" class="park-border"/>
+  <path d="M 320 620 Q 450 600 620 610 Q 680 640 690 700 Q 660 740 580 755 Q 450 760 350 745 Q 300 720 300 670 Q 310 640 320 620 Z" class="park-fill"/>
+  <text x="495" y="688" class="label-park" text-anchor="middle">Backcountry Wilderness Area</text>
+  <text x="495" y="703" class="label-trail-sub" text-anchor="middle">8,200 acres · 26 mi of trails</text>
+
+  <!-- ==================== TRAILS ==================== -->
+
+  <!-- High Line Canal Trail (enters from SW near Waterton Canyon, winds NE through both communities) -->
+  <path d="M 75 620 Q 130 560 200 480 Q 260 420 320 380 Q 380 350 440 320 Q 520 290 580 260 Q 650 230 720 200 Q 770 180 820 155" class="trail-dashed"/>
+  <text x="615" y="225" class="label-trail">High Line Canal Trail</text>
+  <text x="615" y="240" class="label-trail-sub">71 miles</text>
+
+  <!-- Mary Carter Greenway (along the river, N-S through Littleton) -->
+  <path d="M 158 150 Q 153 200 150 260 Q 147 320 144 380 Q 141 430 138 490" class="trail-solid"/>
+  <text x="170" y="210" class="label-trail">Mary Carter</text>
+  <text x="170" y="223" class="label-trail">Greenway</text>
+
+  <!-- ==================== POINTS OF INTEREST ==================== -->
+
+  <!-- Carson Nature Center marker -->
+  <circle cx="145" cy="340" r="4" fill="#4a7c59" stroke="white" stroke-width="1.5"/>
+  <text x="90" y="360" class="label-park-sub" text-anchor="end">Carson Nature Ctr</text>
+
+  <!-- Downtown Littleton marker -->
+  <circle cx="300" cy="310" r="3.5" fill="#002a3a" stroke="white" stroke-width="1.5"/>
+  <text x="315" y="308" class="label-park-sub">Downtown Littleton</text>
+
+  <!-- Civic Green / Town Center HR marker -->
+  <circle cx="490" cy="485" r="3.5" fill="#002a3a" stroke="white" stroke-width="1.5"/>
+  <text x="505" y="483" class="label-park-sub">Town Center</text>
+
+  <!-- Fly'n B Park trailhead marker -->
+  <circle cx="380" cy="420" r="3" fill="#4a7c59" stroke="white" stroke-width="1.5"/>
+  <text x="395" y="418" class="label-park-sub">Fly'n B Park</text>
+
+  <!-- ==================== COMPASS & LEGEND ==================== -->
+
+  <!-- Compass (top-left) -->
+  <g transform="translate(50, 55)">
+    <circle cx="0" cy="0" r="16" class="compass-ring"/>
+    <polygon points="0,-11 3,-2 0,1 -3,-2" fill="#002a3a"/>
+    <polygon points="0,11 3,2 0,-1 -3,2" fill="#d0d4d9"/>
+    <text x="0" y="30" class="compass-label">N</text>
+  </g>
+
+  <!-- Legend (top-right) -->
+  <g transform="translate(760, 48)">
+    <rect x="0" y="0" width="155" height="102" fill="white" stroke="#d4d7db" stroke-width="0.8" rx="4" opacity="0.95"/>
+    <text x="10" y="16" class="legend-title">Legend</text>
+    <rect x="10" y="24" width="14" height="10" fill="#4a7c59" opacity="0.10" stroke="#4a7c59" stroke-width="1" rx="1"/>
+    <text x="30" y="33" class="legend-label">Parks &amp; Open Space</text>
+    <line x1="10" y1="48" x2="24" y2="48" stroke="#4a7c59" stroke-width="2.5" stroke-dasharray="4,3"/>
+    <text x="30" y="52" class="legend-label">Trails</text>
+    <line x1="10" y1="66" x2="24" y2="66" stroke="#9a9da2" stroke-width="3" stroke-linecap="round"/>
+    <text x="30" y="70" class="legend-label">Highways</text>
+    <line x1="10" y1="84" x2="24" y2="84" stroke="#5b8fa8" stroke-width="2.5" opacity="0.6" stroke-linecap="round"/>
+    <text x="30" y="88" class="legend-label">Water</text>
+  </g>
+
+  <!-- Watermark -->
+  <text x="890" y="765" class="watermark" text-anchor="end">selling303.com</text>
+</svg>
