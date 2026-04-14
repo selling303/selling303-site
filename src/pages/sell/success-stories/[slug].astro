@@ -374,10 +374,12 @@ const ogImage = data.ogImage || heroSrc;
                 <span>Bathrooms</span>
                 <span>{data.propertyDetails.bathrooms}</span>
               </div>
-              <div class="ss-property-card__row">
-                <span>Square Feet</span>
-                <span>{data.propertyDetails.sqft.toLocaleString()}</span>
-              </div>
+              {data.propertyDetails.sqft && (
+                <div class="ss-property-card__row">
+                  <span>Square Feet</span>
+                  <span>{data.propertyDetails.sqft.toLocaleString()}</span>
+                </div>
+              )}
               {data.propertyDetails.lotSize && (
                 <div class="ss-property-card__row">
                   <span>Lot Size</span>

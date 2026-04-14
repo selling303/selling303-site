@@ -105,7 +105,7 @@ const successStories = defineCollection({
     propertyDetails: z.object({
       bedrooms: z.number(),
       bathrooms: z.number(),
-      sqft: z.number(),
+      sqft: z.number().optional(),
       lotSize: z.string().optional(),
       parking: z.string().optional(),
       yearBuilt: z.number().optional(),

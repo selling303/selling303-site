@@ -20,3 +20,14 @@ Changes waiting to be pushed to production. Each conversation logs what it chang
 - 2026-04-14: FAQ uses site-wide accordion pattern (button/answer toggle, one-at-a-time)
 - 2026-04-14: Success Stories added to Sell dropdown in Header.astro
 - 2026-04-14: PhotoGallery.astro reusable component created (available for other pages)
+- 2026-04-14: Made sqft optional in successStories schema + conditional display in template
+- 2026-04-14: 8 new success story content files (SCAR framework, FAQs, Schema.org metadata):
+  - 7307 S Birch St, Centennial — Buy and Sell Simultaneously ($82K over, 4 DOM)
+  - 8965 E Phillips Dr, Centennial — Relocating Out of State ($25K over, 1 DOM, pre-market)
+  - 7327 S Carr Ct, Littleton — As-Is / Lifestyle Change (Stony Creek, 9 DOM)
+  - 6718 S Holland Way, Littleton — Quick Sale (Dutch Ridge, $5K over, 4 DOM)
+  - 6720 S Holland Way, Littleton — Move-Up Seller (Dutch Ridge, multiple offers, 5 DOM)
+  - 6566 S Flower St, Littleton — Pre-Sale Renovation (Woodmar Village, concierge program, 9 DOM)
+  - 21069 Woodside Lane, Parker — Selling in a Tough Market (holiday season, $10K over, 10 DOM)
+  - 2993 S Jericho Ct, Aurora — Life Transition (Conservatory Park, $31K over, 4 DOM)
+- 2026-04-14: NOTE: All 8 new stories need listing photos added to src/assets/images/success-stories/
