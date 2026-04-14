@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import MarketStatTile from '../../components/MarketStatTile.astro';
+import RealScoutLoader from '../../components/RealScoutLoader.astro';
 
 export async function getStaticPaths() {
   const neighborhoods = await getCollection('neighborhoods');
@@ -50,7 +51,6 @@ const schemaJson = JSON.stringify({
 >
   <Fragment slot="head">
     <script type="application/ld+json" is:inline set:html={schemaJson} />
-    <script src="https://em.realscout.com/widgets/realscout-web-components.umd.js" type="module" is:inline></script>
   </Fragment>
 
   <!-- PAGE HERO -->
@@ -176,4 +176,6 @@ const schemaJson = JSON.stringify({
       <a href="tel:3039970634" class="btn btn--outline-dark btn--lg">Call 303-997-0634</a>
     </div>
   </section>
+
+  <RealScoutLoader />
 </BaseLayout>

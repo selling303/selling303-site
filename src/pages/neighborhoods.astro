@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import NeighborhoodCard from '../components/NeighborhoodCard.astro';
+import RealScoutLoader from '../components/RealScoutLoader.astro';
 import { getImage } from 'astro:assets';
 
 import nbLittletonSrc from '../assets/images/neighborhood-littleton.jpg';
@@ -20,9 +21,6 @@ const nbLakewood = await getImage({ src: nbLakewoodSrc, format: 'webp', quality:
 
 <BaseLayout headerVariant="solid" title="Neighborhoods | Selling 303 — South Denver Metro Communities" description="Explore South Denver Metro neighborhoods — Littleton, Highlands Ranch, Centennial, Englewood, Parker, Lakewood, Lone Tree, Castle Pines, and Greenwood Village. Market stats, lifestyle info, and active listings." currentPage="neighborhoods">
   <Fragment slot="head">
-    <!-- RealScout widget -->
-    <script src="https://em.realscout.com/widgets/realscout-web-components.umd.js" type="module" is:inline></script>
-
     <!-- Schema: WebPage -->
     <script type="application/ld+json">
     {
@@ -669,4 +667,6 @@ const nbLakewood = await getImage({ src: nbLakewoodSrc, format: 'webp', quality:
     }
   })();
   </script>
+
+  <RealScoutLoader />
 </BaseLayout>

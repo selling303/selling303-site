@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import MarketStatTile from '../components/MarketStatTile.astro';
 import NeighborhoodCard from '../components/NeighborhoodCard.astro';
+import RealScoutLoader from '../components/RealScoutLoader.astro';
 import { getImage } from 'astro:assets';
 
 // Hero background — optimized at build time
@@ -30,7 +31,6 @@ const nbCentennial = await getImage({ src: nbCentennialSrc, format: 'webp', qual
 >
   <Fragment slot="head">
     <link rel="preload" as="image" href={heroBg.src} type="image/webp" fetchpriority="high" />
-    <script src="https://em.realscout.com/widgets/realscout-web-components.umd.js" type="module" is:inline></script>
     <style>
       realscout-advanced-search {
         --rs-as-button-text-color: #ffffff;
@@ -401,4 +401,6 @@ const nbCentennial = await getImage({ src: nbCentennialSrc, format: 'webp', qual
       </div>
     </div>
   </section>
+
+  <RealScoutLoader />
 </BaseLayout>

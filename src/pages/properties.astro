@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
+import RealScoutLoader from '../components/RealScoutLoader.astro';
 ---
 
 <BaseLayout
@@ -12,8 +13,6 @@ import PageHero from '../components/PageHero.astro';
   headerVariant="solid"
 >
   <Fragment slot="head">
-    <!-- RealScout Widget Script -->
-    <script src="https://em.realscout.com/widgets/realscout-web-components.umd.js" type="module" is:inline></script>
     <style is:inline>
       realscout-your-listings {
         --rs-listing-divider-color: #c8965a;
@@ -58,4 +57,6 @@ import PageHero from '../components/PageHero.astro';
       ></realscout-your-listings>
     </div>
   </section>
+
+  <RealScoutLoader />
 </BaseLayout>

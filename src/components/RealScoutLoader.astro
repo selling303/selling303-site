@@ -1,0 +1,57 @@
+---
+/**
+ * RealScoutLoader.astro
+ * Lazy-loads the RealScout web-components script (205 KiB) only when a
+ * realscout-* custom element is about to enter the viewport.
+ *
+ * Usage: drop <RealScoutLoader /> anywhere on a page that uses RealScout
+ * widgets. It replaces the old <script src="..."> in the <head>.
+ *
+ * On pages where the widget is near the top (e.g. /properties), the
+ * rootMargin ensures the script starts loading immediately — but it no
+ * longer blocks first paint.
+ */
+---
+
+<script is:inline>
+(function () {
+  if (window.__rsLoaded) return;
+  var src = 'https://em.realscout.com/widgets/realscout-web-components.umd.js';
+
+  // Find every realscout-* custom element on the page
+  var widgets = document.querySelectorAll(
+    'realscout-advanced-search, realscout-home-value, realscout-your-listings'
+  );
+  if (!widgets.length) return;
+
+  function loadScript() {
+    if (window.__rsLoaded) return;
+    window.__rsLoaded = true;
+    var s = document.createElement('script');
+    s.src = src;
+    s.type = 'module';
+    document.head.appendChild(s);
+  }
+
+  // Use IntersectionObserver with generous margin so the script
+  // starts loading just before the widget scrolls into view.
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(
+      function (entries) {
+        for (var i = 0; i < entries.length; i++) {
+          if (entries[i].isIntersecting) {
+            loadScript();
+            observer.disconnect();
+            return;
+          }
+        }
+      },
+      { rootMargin: '400px' }
+    );
+    widgets.forEach(function (el) { observer.observe(el); });
+  } else {
+    // Fallback for old browsers: load after DOM is idle
+    loadScript();
+  }
+})();
+</script>

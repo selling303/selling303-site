@@ -27,11 +27,12 @@ const {
 <title>{title}</title>
 <meta name="description" content={description}>
 
-<!-- Preconnect hints — early TLS handshake for third-party origins -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://em.realscout.com" crossorigin>
+<!-- Preload critical fonts — self-hosted, no third-party round-trip -->
+<link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/dm-serif-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 
+<!-- Preconnect hints — early TLS handshake for third-party origins -->
+<link rel="preconnect" href="https://em.realscout.com" crossorigin>
 <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
 
 <!-- Open Graph -->
@@ -54,4 +55,3 @@ const {
   gtag('js', new Date());
   gtag('config', 'G-WLGW57VN8C');
 </script>
-
