@@ -1,0 +1,315 @@
+---
+/**
+ * PhotoGallery — Responsive image grid with full-screen lightbox.
+ * Designed for success story listing photos but reusable anywhere.
+ *
+ * Usage:
+ *   <PhotoGallery images={[{ src: optimizedImg.src, alt: "..." }, ...]} />
+ *
+ * Features:
+ * - Responsive grid (3 cols → 2 → 1)
+ * - First image spans full width as hero
+ * - Full-screen lightbox with arrow nav + keyboard support
+ * - Swipe support on mobile
+ * - Image counter ("3 / 24")
+ * - Escape to close
+ */
+interface GalleryImage {
+  src: string;
+  alt: string;
+}
+
+interface Props {
+  images: GalleryImage[];
+  id?: string;
+}
+
+const { images, id = 'gallery' } = Astro.props;
+const galleryId = `photo-gallery-${id}`;
+---
+
+<section class="photo-gallery" id={galleryId}>
+  <div class="photo-gallery__grid">
+    {images.map((img, i) => (
+      <button
+        class={`photo-gallery__thumb${i === 0 ? ' photo-gallery__thumb--hero' : ''}`}
+        data-gallery={galleryId}
+        data-index={i}
+        type="button"
+        aria-label={`View photo ${i + 1}: ${img.alt}`}
+      >
+        <img
+          src={img.src}
+          alt={img.alt}
+          loading={i < 3 ? 'eager' : 'lazy'}
+          decoding="async"
+          width="600"
+          height="400"
+        />
+        {i === 0 && images.length > 1 && (
+          <span class="photo-gallery__count">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="3" width="10" height="10" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M5 3V2a1 1 0 011-1h8a1 1 0 011 1v8a1 1 0 01-1 1h-1" stroke="currentColor" stroke-width="1.2"/></svg>
+            {images.length} Photos
+          </span>
+        )}
+      </button>
+    ))}
+  </div>
+
+  <!-- Lightbox overlay -->
+  <div class="photo-gallery__lightbox" id={`${galleryId}-lightbox`} role="dialog" aria-modal="true" aria-label="Photo gallery" hidden>
+    <div class="photo-gallery__lightbox-backdrop"></div>
+    <button class="photo-gallery__lightbox-close" aria-label="Close gallery" type="button">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="photo-gallery__lightbox-counter"></div>
+    <button class="photo-gallery__lightbox-prev" aria-label="Previous photo" type="button">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <div class="photo-gallery__lightbox-stage">
+      <img src="" alt="" class="photo-gallery__lightbox-img" />
+    </div>
+    <button class="photo-gallery__lightbox-next" aria-label="Next photo" type="button">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+    <div class="photo-gallery__lightbox-caption"></div>
+  </div>
+</section>
+
+<style>
+  /* ── Grid ── */
+  .photo-gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    border-radius: var(--radius-lg, 12px);
+    overflow: hidden;
+  }
+
+  .photo-gallery__thumb {
+    position: relative;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    background: var(--color-border, #e5e5e5);
+  }
+  .photo-gallery__thumb--hero {
+    grid-column: 1 / -1;
+    aspect-ratio: 16/9;
+  }
+  .photo-gallery__thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
+  }
+  .photo-gallery__thumb:hover img {
+    transform: scale(1.04);
+  }
+
+  .photo-gallery__count {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    pointer-events: none;
+    font-family: var(--font-body, 'Inter', sans-serif);
+  }
+
+  @media (max-width: 768px) {
+    .photo-gallery__grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 480px) {
+    .photo-gallery__grid { grid-template-columns: 1fr; }
+    .photo-gallery__thumb--hero { aspect-ratio: 4/3; }
+  }
+
+  /* ── Lightbox ── */
+  .photo-gallery__lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .photo-gallery__lightbox[hidden] {
+    display: none;
+  }
+  .photo-gallery__lightbox-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+  }
+
+  .photo-gallery__lightbox-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #fff;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+  }
+  .photo-gallery__lightbox-close:hover { background: rgba(255, 255, 255, 0.2); }
+
+  .photo-gallery__lightbox-counter {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.875rem;
+    font-weight: 500;
+    font-family: var(--font-body, 'Inter', sans-serif);
+  }
+
+  .photo-gallery__lightbox-prev,
+  .photo-gallery__lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #fff;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+  }
+  .photo-gallery__lightbox-prev { left: 16px; }
+  .photo-gallery__lightbox-next { right: 16px; }
+  .photo-gallery__lightbox-prev:hover,
+  .photo-gallery__lightbox-next:hover { background: rgba(255, 255, 255, 0.2); }
+
+  .photo-gallery__lightbox-stage {
+    position: relative;
+    z-index: 1;
+    max-width: 90vw;
+    max-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .photo-gallery__lightbox-img {
+    max-width: 90vw;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 4px;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+
+  .photo-gallery__lightbox-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.8125rem;
+    text-align: center;
+    max-width: 600px;
+    font-family: var(--font-body, 'Inter', sans-serif);
+  }
+
+  @media (max-width: 768px) {
+    .photo-gallery__lightbox-prev,
+    .photo-gallery__lightbox-next { width: 40px; height: 40px; }
+    .photo-gallery__lightbox-prev { left: 8px; }
+    .photo-gallery__lightbox-next { right: 8px; }
+  }
+</style>
+
+<script define:vars={{ galleryId, images: JSON.stringify(images) }}>
+  (function() {
+    const parsedImages = JSON.parse(images);
+    const gallery = document.getElementById(galleryId);
+    if (!gallery) return;
+
+    const lightbox = document.getElementById(`${galleryId}-lightbox`);
+    const img = lightbox.querySelector('.photo-gallery__lightbox-img');
+    const counter = lightbox.querySelector('.photo-gallery__lightbox-counter');
+    const caption = lightbox.querySelector('.photo-gallery__lightbox-caption');
+    const closeBtn = lightbox.querySelector('.photo-gallery__lightbox-close');
+    const prevBtn = lightbox.querySelector('.photo-gallery__lightbox-prev');
+    const nextBtn = lightbox.querySelector('.photo-gallery__lightbox-next');
+    const backdrop = lightbox.querySelector('.photo-gallery__lightbox-backdrop');
+
+    let current = 0;
+    let touchStartX = 0;
+
+    function show(index) {
+      current = (index + parsedImages.length) % parsedImages.length;
+      img.src = parsedImages[current].src;
+      img.alt = parsedImages[current].alt;
+      counter.textContent = `${current + 1} / ${parsedImages.length}`;
+      caption.textContent = parsedImages[current].alt;
+      prevBtn.style.display = parsedImages.length <= 1 ? 'none' : '';
+      nextBtn.style.display = parsedImages.length <= 1 ? 'none' : '';
+    }
+
+    function open(index) {
+      show(index);
+      lightbox.hidden = false;
+      document.body.style.overflow = 'hidden';
+    }
+
+    function close() {
+      lightbox.hidden = true;
+      document.body.style.overflow = '';
+    }
+
+    // Thumbnail clicks
+    gallery.querySelectorAll('[data-gallery]').forEach(btn => {
+      btn.addEventListener('click', () => open(parseInt(btn.dataset.index, 10)));
+    });
+
+    closeBtn.addEventListener('click', close);
+    backdrop.addEventListener('click', close);
+    prevBtn.addEventListener('click', () => show(current - 1));
+    nextBtn.addEventListener('click', () => show(current + 1));
+
+    // Keyboard
+    document.addEventListener('keydown', (e) => {
+      if (lightbox.hidden) return;
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowLeft') show(current - 1);
+      if (e.key === 'ArrowRight') show(current + 1);
+    });
+
+    // Touch swipe
+    lightbox.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    lightbox.addEventListener('touchend', (e) => {
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 50) {
+        dx > 0 ? show(current - 1) : show(current + 1);
+      }
+    }, { passive: true });
+  })();
+</script>

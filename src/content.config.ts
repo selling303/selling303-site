@@ -79,4 +79,64 @@ const blog = defineCollection({
   }),
 });
 
-export const collections = { neighborhoods, blog };
+const successStories = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/success-stories' }),
+  schema: z.object({
+    title: z.string(),
+    metaTitle: z.string(),
+    description: z.string(),
+    headline: z.string(),
+    closeDate: z.string(),
+    address: z.object({
+      street: z.string(),
+      city: z.string(),
+      state: z.string(),
+      zip: z.string(),
+    }),
+    situationType: z.string(),
+    specializationPillar: z.string().optional(),
+    neighborhoodPillar: z.string().optional(),
+    results: z.object({
+      listPrice: z.number(),
+      closedPrice: z.number(),
+      daysOnMarket: z.number(),
+      percentOfList: z.number(),
+    }),
+    propertyDetails: z.object({
+      bedrooms: z.number(),
+      bathrooms: z.number(),
+      sqft: z.number(),
+      lotSize: z.string().optional(),
+      parking: z.string().optional(),
+      yearBuilt: z.number().optional(),
+      mls: z.string().optional(),
+    }),
+    story: z.object({
+      situation: z.string(),
+      challenge: z.string(),
+      strategy: z.array(z.string()),
+      strategyNarrative: z.string().optional(),
+    }),
+    testimonials: z.array(z.object({
+      name: z.string(),
+      text: z.string(),
+      rating: z.number().default(5),
+    })),
+    heroImage: z.object({ src: z.string(), alt: z.string() }),
+    images: z.array(z.object({
+      src: z.string(),
+      alt: z.string(),
+      category: z.enum(['exterior', 'interior', 'kitchen', 'bathroom', 'bedroom', 'living', 'outdoor', 'detail', 'floorplan', 'other']).optional(),
+    })),
+    videoUrl: z.string().optional(),
+    tour3dUrl: z.string().optional(),
+    faqSchema: z.array(z.object({
+      question: z.string(),
+      answer: z.string(),
+    })).optional(),
+    ogImage: z.string().optional(),
+    sortOrder: z.number().optional(),
+  }),
+});
+
+export const collections = { neighborhoods, blog, successStories };

@@ -1,0 +1,1026 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import CTABanner from '../../../components/CTABanner.astro';
+
+export async function getStaticPaths() {
+  const stories = await getCollection('successStories');
+  return stories.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { data } = entry;
+const addr = data.address;
+const fullAddress = `${addr.street}, ${addr.city}, ${addr.state} ${addr.zip}`;
+const overUnder = data.results.closedPrice - data.results.listPrice;
+const overUnderLabel = overUnder >= 0 ? 'Over List' : 'Under List';
+const overUnderFormatted = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(Math.abs(overUnder));
+
+const formatPrice = (n: number) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(n);
+
+// Dynamically import all success story images
+const allImages = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/success-stories/**/*.{jpg,jpeg,png,webp}', { eager: true });
+
+// Resolve images for this story — match by slug folder name
+const storySlug = entry.id;
+const resolvedImages = data.images
+  .map((img) => {
+    // Try to find the image in the glob results
+    const key = Object.keys(allImages).find((k) => k.includes(img.src));
+    if (key && allImages[key]) {
+      return { src: allImages[key].default.src, alt: img.alt };
+    }
+    // Fallback: use src as-is (for external URLs or already-resolved paths)
+    return { src: img.src, alt: img.alt };
+  });
+
+// Resolve hero image
+const heroKey = Object.keys(allImages).find((k) => k.includes(data.heroImage.src));
+const heroSrc = heroKey && allImages[heroKey] ? allImages[heroKey].default.src : data.heroImage.src;
+
+// ── Schema: RealEstateListing + Review + Article + BreadcrumbList ──
+
+const listingSchema = {
+  "@context": "https://schema.org",
+  "@type": "RealEstateListing",
+  "name": data.headline,
+  "description": data.description,
+  "url": `https://selling303.com/sell/success-stories/${entry.id}`,
+  "datePosted": data.closeDate,
+  "image": resolvedImages.slice(0, 6).map((img) => img.src),
+  "about": {
+    "@type": "Residence",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": addr.street,
+      "addressLocality": addr.city,
+      "addressRegion": addr.state,
+      "postalCode": addr.zip,
+      "addressCountry": "US",
+    },
+    "numberOfBedrooms": data.propertyDetails.bedrooms,
+    "numberOfBathroomsTotal": data.propertyDetails.bathrooms,
+    "floorSize": {
+      "@type": "QuantitativeValue",
+      "value": data.propertyDetails.sqft,
+      "unitCode": "FTK",
+    },
+    ...(data.propertyDetails.yearBuilt && { "yearBuilt": data.propertyDetails.yearBuilt }),
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": data.results.closedPrice,
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/SoldOut",
+  },
+};
+
+const reviewSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Jacob Stark — Selling 303",
+  "@id": "https://selling303.com/#business",
+  "review": data.testimonials.map((t) => ({
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": t.rating,
+      "bestRating": 5,
+    },
+    "author": {
+      "@type": "Person",
+      "name": t.name,
+    },
+    "reviewBody": t.text,
+  })),
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": 5,
+    "reviewCount": data.testimonials.length,
+    "bestRating": 5,
+  },
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": data.headline,
+  "description": data.description,
+  "image": heroSrc,
+  "author": {
+    "@type": "Person",
+    "name": "Jacob Stark",
+    "jobTitle": "REALTOR®",
+    "url": "https://selling303.com/about",
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Selling 303",
+    "url": "https://selling303.com",
+  },
+  "datePublished": data.closeDate,
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": `https://selling303.com/sell/success-stories/${entry.id}`,
+  },
+  "about": [
+    { "@type": "Place", "name": `${addr.city}, ${addr.state}` },
+  ],
+};
+
+const imageSchemaObjects = resolvedImages.slice(0, 10).map((img) => ({
+  "@context": "https://schema.org",
+  "@type": "ImageObject",
+  "contentUrl": img.src,
+  "description": img.alt,
+  "name": img.alt,
+  "representativeOfPage": false,
+}));
+
+const faqPageSchema = data.faqSchema && data.faqSchema.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": data.faqSchema.map((item) => ({
+    "@type": "Question",
+    "name": item.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.answer,
+    },
+  })),
+} : null;
+
+const ogImage = data.ogImage || heroSrc;
+---
+
+<BaseLayout
+  title={data.metaTitle}
+  description={data.description}
+  ogType="article"
+  ogUrl={`https://selling303.com/sell/success-stories/${entry.id}`}
+  ogImage={ogImage}
+  currentPage="sell"
+  headerVariant="solid"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(listingSchema)} />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(reviewSchema)} />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(articleSchema)} />
+    {imageSchemaObjects.map((obj) => (
+      <script type="application/ld+json" is:inline set:html={JSON.stringify(obj)} />
+    ))}
+    {faqPageSchema && (
+      <script type="application/ld+json" is:inline set:html={JSON.stringify(faqPageSchema)} />
+    )}
+  </Fragment>
+
+  <!-- BREADCRUMB SCHEMA (JSON-LD only, visually hidden) -->
+  <div class="sr-only">
+    <Breadcrumbs items={[
+      { label: 'Home', url: '/' },
+      { label: 'Sell', url: '/sell/success-stories' },
+      { label: 'Success Stories', url: '/sell/success-stories' },
+      { label: `${addr.street}, ${addr.city}`, url: null },
+    ]} />
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="ss-hero">
+    <div class="container">
+      <div class="ss-hero__content">
+        <span class="ss-hero__tag">{data.situationType}</span>
+        <h1 class="ss-hero__headline">{data.headline}</h1>
+        <p class="ss-hero__address">{fullAddress}</p>
+      </div>
+      <div class="ss-hero__stats">
+        <div class="ss-hero__stat">
+          <span class="ss-hero__stat-number">{formatPrice(data.results.listPrice)}</span>
+          <span class="ss-hero__stat-label">List Price</span>
+        </div>
+        <div class="ss-hero__stat ss-hero__stat--highlight">
+          <span class="ss-hero__stat-number">{formatPrice(data.results.closedPrice)}</span>
+          <span class="ss-hero__stat-label">Sold Price</span>
+        </div>
+        <div class="ss-hero__stat">
+          <span class="ss-hero__stat-number">{data.results.daysOnMarket}</span>
+          <span class="ss-hero__stat-label">Days on Market</span>
+        </div>
+        <div class="ss-hero__stat">
+          <span class="ss-hero__stat-number">{data.results.percentOfList}%</span>
+          <span class="ss-hero__stat-label">of List Price</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO IMAGE (clickable — opens full gallery lightbox) -->
+  <section class="ss-hero-image" id="ss-hero-gallery">
+    <div class="container">
+      <button
+        class="ss-hero-image__trigger"
+        type="button"
+        aria-label={`View all ${resolvedImages.length} listing photos`}
+      >
+        <img
+          src={heroSrc}
+          alt={data.heroImage.alt}
+          class="ss-hero-image__img"
+          loading="eager"
+          decoding="async"
+        />
+        {resolvedImages.length > 1 && (
+          <span class="ss-hero-image__badge">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="3" width="10" height="10" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M5 3V2a1 1 0 011-1h8a1 1 0 011 1v8a1 1 0 01-1 1h-1" stroke="currentColor" stroke-width="1.2"/></svg>
+            {resolvedImages.length} Photos
+          </span>
+        )}
+      </button>
+    </div>
+
+    <!-- Lightbox (inline, no PhotoGallery component needed) -->
+    <div class="ss-lightbox" id="ss-lightbox" role="dialog" aria-modal="true" aria-label="Photo gallery" hidden>
+      <div class="ss-lightbox__backdrop"></div>
+      <button class="ss-lightbox__close" aria-label="Close gallery" type="button">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="ss-lightbox__counter"></div>
+      <button class="ss-lightbox__prev" aria-label="Previous photo" type="button">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="ss-lightbox__stage">
+        <img src="" alt="" class="ss-lightbox__img" />
+      </div>
+      <button class="ss-lightbox__next" aria-label="Next photo" type="button">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+      <div class="ss-lightbox__caption"></div>
+    </div>
+  </section>
+
+  <!-- THE STORY: SCAR FRAMEWORK -->
+  <article class="ss-story" itemscope itemtype="https://schema.org/Article">
+    <meta itemprop="headline" content={data.headline} />
+    <meta itemprop="datePublished" content={data.closeDate} />
+
+    <div class="container">
+      <div class="ss-story__grid">
+
+        <!-- Main content column -->
+        <div class="ss-story__main">
+
+          <!-- Situation -->
+          <div class="ss-story__section">
+            <span class="section-label">The Clients</span>
+            <h2>Their Situation</h2>
+            <p>{data.story.situation}</p>
+          </div>
+
+          <!-- Challenge -->
+          <div class="ss-story__section">
+            <span class="section-label">The Challenge</span>
+            <h2>What Made This Complex</h2>
+            <p>{data.story.challenge}</p>
+            {data.specializationPillar && (
+              <a href={data.specializationPillar} class="ss-story__pillar-link">
+                Learn more about this situation →
+              </a>
+            )}
+          </div>
+
+          <!-- Strategy -->
+          <div class="ss-story__section">
+            <span class="section-label">The Strategy</span>
+            <h2>What We Did</h2>
+            {data.story.strategyNarrative && <p>{data.story.strategyNarrative}</p>}
+            <div class="ss-strategy-cards">
+              {data.story.strategy.map((item) => (
+                <div class="ss-strategy-card">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="10" cy="10" r="9" stroke="var(--color-accent)" stroke-width="1.5"/>
+                    <path d="M6 10l3 3 5-6" stroke="var(--color-accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Results (detailed) -->
+          <div class="ss-story__section">
+            <span class="section-label">The Results</span>
+            <h2>{overUnderFormatted} {overUnderLabel}</h2>
+            <div class="ss-results-detail">
+              <div class="ss-results-detail__row">
+                <span>List Price</span>
+                <span>{formatPrice(data.results.listPrice)}</span>
+              </div>
+              <div class="ss-results-detail__row ss-results-detail__row--highlight">
+                <span>Sold Price</span>
+                <span>{formatPrice(data.results.closedPrice)}</span>
+              </div>
+              <div class="ss-results-detail__row">
+                <span>Days on Market</span>
+                <span>{data.results.daysOnMarket} days</span>
+              </div>
+              <div class="ss-results-detail__row">
+                <span>Sale-to-List Ratio</span>
+                <span>{data.results.percentOfList}%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonials -->
+          {data.testimonials.length > 0 && (
+            <div class="ss-story__section">
+              <span class="section-label">In Their Words</span>
+              <h2>What They Said</h2>
+              {data.testimonials.map((t) => (
+                <blockquote class="ss-testimonial" itemprop="review" itemscope itemtype="https://schema.org/Review">
+                  <div class="ss-testimonial__stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                    <meta itemprop="ratingValue" content={String(t.rating)} />
+                    <meta itemprop="bestRating" content="5" />
+                    {Array.from({ length: t.rating }).map(() => (
+                      <svg width="18" height="18" viewBox="0 0 20 20" fill="var(--color-accent)">
+                        <path d="M10 1l2.5 5.5L18 7.5l-4 4 1 5.5L10 14.5 4.5 17l1-5.5-4-4 5.5-1z"/>
+                      </svg>
+                    ))}
+                  </div>
+                  <p itemprop="reviewBody">{t.text}</p>
+                  <cite itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    — <span itemprop="name">{t.name}</span>
+                  </cite>
+                </blockquote>
+              ))}
+            </div>
+          )}
+
+        </div>
+
+        <!-- Sidebar: Property Details + CTA (single sticky unit) -->
+        <aside class="ss-story__sidebar">
+          <div style="position: sticky; top: calc(var(--header-height, 80px) + 1.5rem); display: flex; flex-direction: column; gap: 1.5rem;">
+          <div class="ss-property-card">
+            <h3>Property Details</h3>
+            <div class="ss-property-card__details">
+              <div class="ss-property-card__row">
+                <span>Bedrooms</span>
+                <span>{data.propertyDetails.bedrooms}</span>
+              </div>
+              <div class="ss-property-card__row">
+                <span>Bathrooms</span>
+                <span>{data.propertyDetails.bathrooms}</span>
+              </div>
+              <div class="ss-property-card__row">
+                <span>Square Feet</span>
+                <span>{data.propertyDetails.sqft.toLocaleString()}</span>
+              </div>
+              {data.propertyDetails.lotSize && (
+                <div class="ss-property-card__row">
+                  <span>Lot Size</span>
+                  <span>{data.propertyDetails.lotSize}</span>
+                </div>
+              )}
+              {data.propertyDetails.parking && (
+                <div class="ss-property-card__row">
+                  <span>Parking</span>
+                  <span>{data.propertyDetails.parking}</span>
+                </div>
+              )}
+              {data.propertyDetails.yearBuilt && (
+                <div class="ss-property-card__row">
+                  <span>Year Built</span>
+                  <span>{data.propertyDetails.yearBuilt}</span>
+                </div>
+              )}
+              {data.propertyDetails.mls && (
+                <div class="ss-property-card__row">
+                  <span>MLS #</span>
+                  <span>{data.propertyDetails.mls}</span>
+                </div>
+              )}
+            </div>
+            {data.neighborhoodPillar && (
+              <a href={data.neighborhoodPillar} class="btn btn--outline-dark btn--sm" style="margin-top: var(--space-md); width: 100%; text-align: center;">
+                Explore {addr.city} →
+              </a>
+            )}
+          </div>
+
+          <!-- Inline CTA: What's Your Home Worth? -->
+          <div class="ss-sidebar-cta">
+            <p class="ss-sidebar-cta__heading">What's your home worth?</p>
+            <p class="ss-sidebar-cta__text">Find out if you're sitting on a similar opportunity.</p>
+            <a href="/#home-value" class="btn btn--primary btn--sm" style="width: 100%; text-align: center;">
+              Get My Home's Value
+            </a>
+          </div>
+
+          {data.tour3dUrl && (
+            <div class="ss-property-card">
+              <h3>3D Tour</h3>
+              <a href={data.tour3dUrl} class="btn btn--primary btn--sm" target="_blank" rel="noopener" style="width: 100%; text-align: center;">
+                View 3D Tour
+              </a>
+            </div>
+          )}
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </article>
+
+  <!-- MID-PAGE CTA: Strategy Call -->
+  <section class="ss-mid-cta">
+    <div class="container">
+      <div class="ss-mid-cta__inner">
+        <div class="ss-mid-cta__text">
+          <p class="ss-mid-cta__heading">Facing a similar situation?</p>
+          <p class="ss-mid-cta__subtext">Every sale starts with a strategy conversation. No pressure, no obligation — just clarity on your options.</p>
+        </div>
+        <a href="https://calendly.com/jacob-realtor" class="btn btn--primary btn--lg" target="_blank" rel="noopener">
+          Talk Strategy With Jacob
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO TOUR (full-width) -->
+  {data.videoUrl && (
+    <section class="section section--light">
+      <div class="container">
+        <span class="section-label">Video</span>
+        <h2 class="section-heading" style="margin-bottom: var(--space-lg);">Watch the Tour</h2>
+        <div class="ss-video-full">
+          <iframe
+            src={data.videoUrl}
+            title={`Video tour of ${fullAddress}`}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- FAQ -->
+  {data.faqSchema && data.faqSchema.length > 0 && (
+    <section class="section section--light" id="faq">
+      <div class="container">
+        <span class="section-label">Common Questions</span>
+        <h2 class="section-heading">{`Selling in ${addr.city} — FAQ`}</h2>
+        <div class="faq-list">
+          {data.faqSchema.map((item) => (
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">{item.question}</button>
+              <div class="faq-answer">
+                <p>{item.answer}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- CTA -->
+  <CTABanner
+    heading={`Thinking About Selling in ${addr.city}?`}
+    subtext="Every home has a story. If you're ready to write yours, I'd love to talk through the strategy."
+  />
+</BaseLayout>
+
+<style>
+  /* ── Hero ── */
+  .ss-hero {
+    background: var(--color-primary);
+    padding: calc(var(--header-height, 80px) + var(--space-xl)) 0 var(--space-md);
+  }
+  .ss-hero__content { text-align: center; }
+  .ss-hero__tag {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-accent);
+    background: rgba(200, 150, 90, 0.12);
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: var(--space-sm);
+  }
+  .ss-hero h1.ss-hero__headline {
+    font-family: var(--font-heading);
+    color: #fff;
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    margin: var(--space-xs) 0;
+    line-height: 1.25;
+  }
+  .ss-hero__address {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9375rem;
+    margin-bottom: var(--space-lg);
+  }
+
+  .ss-hero__stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-sm);
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .ss-hero__stat {
+    text-align: center;
+    padding: var(--space-sm);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.06);
+  }
+  .ss-hero__stat--highlight {
+    background: rgba(200, 150, 90, 0.15);
+  }
+  .ss-hero__stat-number {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    color: #fff;
+    line-height: 1.2;
+  }
+  .ss-hero__stat--highlight .ss-hero__stat-number {
+    color: var(--color-accent);
+  }
+  .ss-hero__stat-label {
+    display: block;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  @media (max-width: 600px) {
+    .ss-hero__stats { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* ── Hero Image (Gallery Trigger) ── */
+  .ss-hero-image {
+    margin-top: calc(-1 * var(--space-md));
+    padding-bottom: var(--space-xl);
+  }
+  .ss-hero-image__trigger {
+    position: relative;
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    background: none;
+  }
+  .ss-hero-image__trigger:hover .ss-hero-image__img {
+    transform: scale(1.01);
+  }
+  .ss-hero-image__img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.3s ease;
+  }
+  .ss-hero-image__badge {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 8px;
+    pointer-events: none;
+    font-family: var(--font-body, 'Inter', sans-serif);
+    backdrop-filter: blur(4px);
+  }
+
+  /* ── Story Grid ── */
+  .ss-story { padding: var(--space-xl) 0; }
+  .ss-story__grid {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: var(--space-xl);
+  }
+  @media (max-width: 900px) {
+    .ss-story__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ── Story Sections ── */
+  .ss-story__section {
+    margin-bottom: var(--space-xl);
+  }
+  .ss-story__section h2 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--color-dark-text) !important;
+    margin: var(--space-xs) 0 var(--space-sm);
+  }
+  .ss-story__section p {
+    color: var(--color-body-text);
+    line-height: 1.8;
+    font-size: 1rem;
+  }
+  .ss-story__pillar-link {
+    display: inline-block;
+    margin-top: var(--space-sm);
+    color: var(--color-accent);
+    font-weight: 500;
+    font-size: 0.9375rem;
+    text-decoration: none;
+    transition: color var(--transition);
+  }
+  .ss-story__pillar-link:hover { color: var(--color-accent-hover); }
+
+  /* ── Strategy Cards ── */
+  .ss-strategy-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: var(--space-md);
+  }
+  .ss-strategy-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    background: var(--color-background);
+    border-radius: var(--radius-md);
+    font-size: 0.9375rem;
+    color: var(--color-dark-text);
+    line-height: 1.5;
+  }
+  .ss-strategy-card svg { flex-shrink: 0; }
+
+  /* ── Results Detail ── */
+  .ss-results-detail {
+    margin-top: var(--space-md);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+  }
+  .ss-results-detail__row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 18px;
+    font-size: 0.9375rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .ss-results-detail__row:last-child { border-bottom: none; }
+  .ss-results-detail__row span:first-child { color: var(--color-body-text); }
+  .ss-results-detail__row span:last-child { font-weight: 600; color: var(--color-dark-text); }
+  .ss-results-detail__row--highlight {
+    background: rgba(200, 150, 90, 0.08);
+  }
+  .ss-results-detail__row--highlight span:last-child {
+    color: var(--color-accent);
+  }
+
+  /* ── Testimonials ── */
+  .ss-testimonial {
+    margin: var(--space-md) 0;
+    padding: var(--space-md) var(--space-lg);
+    background: var(--color-background);
+    border-left: 3px solid var(--color-accent);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  }
+  .ss-testimonial__stars {
+    display: flex;
+    gap: 2px;
+    margin-bottom: var(--space-xs);
+  }
+  .ss-testimonial p {
+    color: var(--color-dark-text);
+    font-size: 1rem;
+    line-height: 1.7;
+    font-style: italic;
+    margin: 0 0 var(--space-xs);
+  }
+  .ss-testimonial cite {
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-body-text);
+  }
+
+  /* ── Sidebar ── */
+  .ss-sidebar-sticky {
+    position: sticky;
+    top: calc(var(--header-height, 80px) + var(--space-md));
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+  .ss-property-card {
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-md);
+  }
+  .ss-property-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    margin-bottom: var(--space-sm);
+    color: var(--color-dark-text);
+  }
+  .ss-property-card__row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 0.875rem;
+  }
+  .ss-property-card__row:last-child { border-bottom: none; }
+  .ss-property-card__row span:first-child { color: var(--color-body-text); }
+  .ss-property-card__row span:last-child { font-weight: 600; color: var(--color-dark-text); }
+
+  /* ── Visually hidden (keeps JSON-LD) ── */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* ── Sidebar CTA Card ── */
+  .ss-sidebar-cta {
+    background: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-md);
+    text-align: center;
+  }
+  .ss-sidebar-cta__heading {
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    color: var(--color-dark-text);
+    margin: 0 0 var(--space-xs);
+  }
+  .ss-sidebar-cta__text {
+    font-size: 0.875rem;
+    color: var(--color-body-text);
+    margin: 0 0 var(--space-sm);
+    line-height: 1.5;
+  }
+
+  /* ── Mid-Page CTA ── */
+  .ss-mid-cta {
+    padding: var(--space-lg) 0;
+    background: var(--color-background);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .ss-mid-cta__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-lg);
+  }
+  .ss-mid-cta__heading {
+    font-family: var(--font-heading);
+    font-size: 1.375rem;
+    color: var(--color-dark-text);
+    margin: 0 0 var(--space-xs);
+  }
+  .ss-mid-cta__subtext {
+    font-size: 0.9375rem;
+    color: var(--color-body-text);
+    margin: 0;
+    line-height: 1.6;
+    max-width: 520px;
+  }
+  @media (max-width: 768px) {
+    .ss-mid-cta__inner {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  /* ── Full-Width Video ── */
+  .ss-video-full {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+  }
+  .ss-video-full iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  /* ── Inline Lightbox ── */
+  .ss-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ss-lightbox[hidden] { display: none; }
+  .ss-lightbox__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+  }
+  .ss-lightbox__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #fff;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+  }
+  .ss-lightbox__close:hover { background: rgba(255, 255, 255, 0.2); }
+  .ss-lightbox__counter {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.875rem;
+    font-weight: 500;
+    font-family: var(--font-body, 'Inter', sans-serif);
+  }
+  .ss-lightbox__prev,
+  .ss-lightbox__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #fff;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+  }
+  .ss-lightbox__prev { left: 16px; }
+  .ss-lightbox__next { right: 16px; }
+  .ss-lightbox__prev:hover,
+  .ss-lightbox__next:hover { background: rgba(255, 255, 255, 0.2); }
+  .ss-lightbox__stage {
+    position: relative;
+    z-index: 1;
+    max-width: 90vw;
+    max-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ss-lightbox__img {
+    max-width: 90vw;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 4px;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+  .ss-lightbox__caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.8125rem;
+    text-align: center;
+    max-width: 600px;
+    font-family: var(--font-body, 'Inter', sans-serif);
+  }
+  @media (max-width: 768px) {
+    .ss-lightbox__prev,
+    .ss-lightbox__next { width: 40px; height: 40px; }
+    .ss-lightbox__prev { left: 8px; }
+    .ss-lightbox__next { right: 8px; }
+  }
+</style>
+
+<script define:vars={{ galleryImages: JSON.stringify(resolvedImages) }}>
+  (function() {
+    const images = JSON.parse(galleryImages);
+    if (!images.length) return;
+
+    const trigger = document.querySelector('.ss-hero-image__trigger');
+    const lightbox = document.getElementById('ss-lightbox');
+    if (!trigger || !lightbox) return;
+
+    const img = lightbox.querySelector('.ss-lightbox__img');
+    const counter = lightbox.querySelector('.ss-lightbox__counter');
+    const caption = lightbox.querySelector('.ss-lightbox__caption');
+    const closeBtn = lightbox.querySelector('.ss-lightbox__close');
+    const prevBtn = lightbox.querySelector('.ss-lightbox__prev');
+    const nextBtn = lightbox.querySelector('.ss-lightbox__next');
+    const backdrop = lightbox.querySelector('.ss-lightbox__backdrop');
+
+    let current = 0;
+    let touchStartX = 0;
+
+    function show(index) {
+      current = (index + images.length) % images.length;
+      img.src = images[current].src;
+      img.alt = images[current].alt;
+      counter.textContent = (current + 1) + ' / ' + images.length;
+      caption.textContent = images[current].alt;
+      prevBtn.style.display = images.length <= 1 ? 'none' : '';
+      nextBtn.style.display = images.length <= 1 ? 'none' : '';
+    }
+
+    function open(index) {
+      show(index);
+      lightbox.hidden = false;
+      document.body.style.overflow = 'hidden';
+    }
+
+    function close() {
+      lightbox.hidden = true;
+      document.body.style.overflow = '';
+    }
+
+    // Hero image click opens lightbox at photo 0
+    trigger.addEventListener('click', function() { open(0); });
+
+    closeBtn.addEventListener('click', close);
+    backdrop.addEventListener('click', close);
+    prevBtn.addEventListener('click', function() { show(current - 1); });
+    nextBtn.addEventListener('click', function() { show(current + 1); });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      if (lightbox.hidden) return;
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowLeft') show(current - 1);
+      if (e.key === 'ArrowRight') show(current + 1);
+    });
+
+    // Touch swipe
+    lightbox.addEventListener('touchstart', function(e) {
+      touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+    lightbox.addEventListener('touchend', function(e) {
+      var dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 50) {
+        dx > 0 ? show(current - 1) : show(current + 1);
+      }
+    }, { passive: true });
+
+    // FAQ Accordion (matches pillar page behavior — one open at a time)
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = this.closest('.faq-item');
+        var isOpen = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(function(el) {
+          el.classList.remove('active');
+          el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('active');
+          this.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  })();
+</script>

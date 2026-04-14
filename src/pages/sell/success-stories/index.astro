@@ -1,0 +1,319 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import TrustSignals from '../../../components/TrustSignals.astro';
+import CTABanner from '../../../components/CTABanner.astro';
+
+const stories = await getCollection('successStories');
+
+// Sort by sortOrder (if present), then by close date descending
+const sorted = stories.sort((a, b) => {
+  if (a.data.sortOrder !== undefined && b.data.sortOrder !== undefined) {
+    return a.data.sortOrder - b.data.sortOrder;
+  }
+  return new Date(b.data.closeDate).getTime() - new Date(a.data.closeDate).getTime();
+});
+
+// Dynamically import all success story images for card thumbnails
+const allImages = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/success-stories/**/*.{jpg,jpeg,png,webp}', { eager: true });
+
+function resolveImage(src: string): string {
+  const key = Object.keys(allImages).find((k) => k.includes(src));
+  return key && allImages[key] ? allImages[key].default.src : src;
+}
+
+const formatPrice = (n: number) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(n);
+
+// Get unique situation types for filters
+const situationTypes = [...new Set(sorted.map((s) => s.data.situationType))];
+
+// Build collection page schema
+const collectionSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Seller Success Stories | Selling 303",
+  "description": "Real results from real South Denver Metro sellers. See how Jacob Stark helped homeowners sell their properties with clarity, control, and confidence.",
+  "url": "https://selling303.com/sell/success-stories",
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": sorted.map((story, i) => ({
+      "@type": "ListItem",
+      "position": i + 1,
+      "url": `https://selling303.com/sell/success-stories/${story.id}`,
+      "name": story.data.headline,
+    })),
+  },
+};
+---
+
+<BaseLayout
+  title="Seller Success Stories | Jacob Stark, REALTOR® | Selling 303"
+  description="Real results from real South Denver Metro sellers. See how Jacob Stark helped homeowners sell their properties with clarity, control, and confidence."
+  ogUrl="https://selling303.com/sell/success-stories"
+  currentPage="sell"
+  headerVariant="solid"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(collectionSchema)} />
+  </Fragment>
+
+  <PageHero
+    label="Seller Success Stories"
+    heading="Real Results, Real Families"
+    subtext="Every home sale has a story. Here's how we helped South Denver Metro homeowners navigate their unique situations with clarity, control, and confidence."
+  />
+
+  <div class="container" style="margin-top: calc(-1 * var(--space-md));">
+    <Breadcrumbs items={[
+      { label: 'Home', url: '/' },
+      { label: 'Sell', url: '/sell/success-stories' },
+      { label: 'Success Stories', url: null },
+    ]} />
+  </div>
+
+  <!-- Trust Signals -->
+  <TrustSignals />
+
+  <!-- Filter Bar -->
+  {situationTypes.length > 1 && (
+    <section class="section" style="padding-bottom: 0;">
+      <div class="container">
+        <div class="ss-index-filters" id="ss-filters">
+          <button class="ss-filter-btn ss-filter-btn--active" data-filter="all">All Stories</button>
+          {situationTypes.map((type) => (
+            <button class="ss-filter-btn" data-filter={type}>{type}</button>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Story Cards Grid -->
+  <section class="section">
+    <div class="container">
+      <div class="ss-index-grid" id="ss-grid">
+        {sorted.map((story) => {
+          const d = story.data;
+          const heroSrc = resolveImage(d.heroImage.src);
+          const overUnder = d.results.closedPrice - d.results.listPrice;
+          const overFormatted = overUnder >= 0
+            ? `+${new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(overUnder)}`
+            : new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(overUnder);
+
+          return (
+            <a href={`/sell/success-stories/${story.id}`} class="ss-card" data-situation={d.situationType}>
+              <div class="ss-card__image">
+                <img
+                  src={heroSrc}
+                  alt={d.heroImage.alt}
+                  loading="lazy"
+                  decoding="async"
+                  width="600"
+                  height="400"
+                />
+                <span class="ss-card__badge">{d.situationType}</span>
+              </div>
+              <div class="ss-card__body">
+                <h3 class="ss-card__title">{d.headline}</h3>
+                <p class="ss-card__address">{d.address.street}, {d.address.city}</p>
+                <div class="ss-card__stats">
+                  <div class="ss-card__stat">
+                    <span class="ss-card__stat-value">{formatPrice(d.results.closedPrice)}</span>
+                    <span class="ss-card__stat-label">Sold</span>
+                  </div>
+                  <div class="ss-card__stat">
+                    <span class="ss-card__stat-value ss-card__stat-value--accent">{overFormatted}</span>
+                    <span class="ss-card__stat-label">{overUnder >= 0 ? 'Over List' : 'Under List'}</span>
+                  </div>
+                  <div class="ss-card__stat">
+                    <span class="ss-card__stat-value">{d.results.daysOnMarket}d</span>
+                    <span class="ss-card__stat-label">DOM</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <CTABanner
+    heading="Ready to Write Your Success Story?"
+    subtext="Every situation is different. Whether you're relocating, upsizing, or selling for the first time — I'll build a strategy around your goals."
+  />
+</BaseLayout>
+
+<style>
+  /* ── Filters ── */
+  .ss-index-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .ss-filter-btn {
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    padding: 8px 18px;
+    border: 1px solid var(--color-border);
+    border-radius: 24px;
+    background: #fff;
+    color: var(--color-body-text);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .ss-filter-btn:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+  .ss-filter-btn--active {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #fff;
+  }
+  .ss-filter-btn--active:hover {
+    background: var(--color-primary-light);
+    border-color: var(--color-primary-light);
+    color: #fff;
+  }
+
+  /* ── Card Grid ── */
+  .ss-index-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+  }
+  @media (max-width: 900px) {
+    .ss-index-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .ss-index-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ── Cards ── */
+  .ss-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s, box-shadow 0.3s;
+  }
+  .ss-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(0, 42, 58, 0.12);
+  }
+
+  .ss-card__image {
+    position: relative;
+    aspect-ratio: 16/10;
+    overflow: hidden;
+  }
+  .ss-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+  .ss-card:hover .ss-card__image img {
+    transform: scale(1.04);
+  }
+  .ss-card__badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-family: var(--font-body);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #fff;
+    background: rgba(0, 42, 58, 0.85);
+    padding: 4px 10px;
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
+  }
+
+  .ss-card__body {
+    padding: 16px 20px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .ss-card__title {
+    font-family: var(--font-heading);
+    font-size: 1.0625rem;
+    line-height: 1.35;
+    color: var(--color-dark-text);
+    margin: 0 0 4px;
+  }
+  .ss-card__address {
+    font-size: 0.8125rem;
+    color: var(--color-body-text);
+    margin: 0 0 auto;
+    padding-bottom: var(--space-sm);
+  }
+
+  .ss-card__stats {
+    display: flex;
+    gap: var(--space-sm);
+    padding-top: var(--space-sm);
+    border-top: 1px solid var(--color-border);
+  }
+  .ss-card__stat { flex: 1; text-align: center; }
+  .ss-card__stat-value {
+    display: block;
+    font-weight: 700;
+    font-size: 0.9375rem;
+    color: var(--color-dark-text);
+  }
+  .ss-card__stat-value--accent { color: var(--color-accent); }
+  .ss-card__stat-label {
+    display: block;
+    font-size: 0.6875rem;
+    color: var(--color-light-text);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-top: 2px;
+  }
+
+  /* Hidden state for filter animation */
+  .ss-card--hidden {
+    display: none;
+  }
+</style>
+
+<script>
+  // Filter functionality
+  const filters = document.getElementById('ss-filters');
+  if (filters) {
+    const buttons = filters.querySelectorAll('.ss-filter-btn');
+    const cards = document.querySelectorAll('.ss-card');
+
+    buttons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const filter = (btn as HTMLElement).dataset.filter;
+
+        // Update active state
+        buttons.forEach((b) => b.classList.remove('ss-filter-btn--active'));
+        btn.classList.add('ss-filter-btn--active');
+
+        // Filter cards
+        cards.forEach((card) => {
+          const situation = (card as HTMLElement).dataset.situation;
+          if (filter === 'all' || situation === filter) {
+            card.classList.remove('ss-card--hidden');
+          } else {
+            card.classList.add('ss-card--hidden');
+          }
+        });
+      });
+    });
+  }
+</script>
