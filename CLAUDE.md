@@ -115,3 +115,15 @@ Props: `variant` ("compact" | "full"), `name`, `slug`, `county?` (required for f
 ### Why
 
 Schema.org Microdata helps answer engines (ChatGPT, Google AI Overviews, Perplexity) surface structured data about neighborhoods and market stats directly from the HTML. Baking it into components ensures every page gets correct structured data automatically — no manual Microdata required.
+
+## Editing Skills from Cowork Sessions (Mandatory)
+
+The `~/.claude/skills` directory is auto-mounted **read-only** in Cowork sessions at `/sessions/<name>/mnt/.claude/skills/`. Write and Edit tools will fail on this path with EROFS errors. **Never** ask Jacob to copy files, run shell commands, or use his computer to install skill updates.
+
+### How to edit skills programmatically
+
+1. Use `request_cowork_directory` to mount `~/.claude/skills` — this creates a **new, writable** mount at `/sessions/<name>/mnt/skills/` (separate from the read-only auto-mount).
+2. Use Write/Edit tools on the new mount path to update skill files directly.
+3. Changes are written to Jacob's Mac instantly — no copy step needed.
+
+This is the **only** supported method. Document it here so no future session wastes time on workarounds.
