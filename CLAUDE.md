@@ -4,7 +4,7 @@
 
 ### Before making changes
 
-Run `git pull --rebase origin main` to sync with what's already deployed. Without this, you risk duplicating work that another conversation already pushed.
+Read `DEPLOY_QUEUE.md` and `DEPLOY_LOG.md` to understand what's pending and what's already deployed. The GitHub API push script handles atomic commits — no need to sync or pull. If you need to verify the current state of a file on `main`, use the GitHub API: `curl -sf -H "Authorization: token $PAT" https://api.github.com/repos/selling303/selling303-site/contents/<path>?ref=main`.
 
 ### Two-branch system
 
@@ -13,9 +13,7 @@ Run `git pull --rebase origin main` to sync with what's already deployed. Withou
 
 ### Pushing changes (Mandatory)
 
-Every session that edits site files MUST push to `main` before closing. Do NOT commit locally — push directly to `main` via the `deploy-to-netlify` skill. This keeps work visible to all sessions and prevents duplication.
-
-Use the `deploy-to-netlify` skill for all pushes — never attempt `git push` from the sandbox. The skill handles syncing, validation, and logging.
+Every session that edits site files MUST push to `main` before closing. Use the `deploy-to-netlify` skill for all pushes — it uses the GitHub REST API (`scripts/github-api-push.sh`) to push changed files directly. Never use `git clone`, `git push`, or any git commands in the sandbox. The API approach uses zero disk space and has no FUSE issues.
 
 ### Deploying to production
 
@@ -29,7 +27,7 @@ When Jacob confirms changes are "good to go" or "ready to push," that means push
 
 ### Logging changes
 
-When making changes to the repo, log each change as a bullet in `DEPLOY_QUEUE.md` with the date and a brief description. Before logging, verify the change is actually needed — check `git log` and `DEPLOY_LOG.md` to confirm it wasn't already deployed.
+When making changes to the repo, log each change as a bullet in `DEPLOY_QUEUE.md` with the date and a brief description. Before logging, verify the change is actually needed — check `DEPLOY_LOG.md` to confirm it wasn't already deployed.
 
 ### Two-file system
 
