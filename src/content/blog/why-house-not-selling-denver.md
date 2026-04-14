@@ -109,6 +109,26 @@ relatedPosts:
   <li>Opportunity cost (your cash tied up longer)</li>
 </ul>
 
+<h3 id="overpricing-diagnostic">How to Tell How Overpriced You Are (By Showing Activity)</h3>
+
+<p>Your showing activity is a real-time signal of where your price sits relative to the market. Industry benchmarks built from decades of agent experience break it down into four tiers:</p>
+
+<table>
+  <thead>
+    <tr><th>What You're Seeing</th><th>What It Likely Means</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Only drive-bys and online views — no showing requests</td><td>~13% or more above market value</td></tr>
+    <tr><td>Low or infrequent showings</td><td>~9% above market value</td></tr>
+    <tr><td>Regular showings but no offers</td><td>~5% above market value</td></tr>
+    <tr><td>Showings with offers coming in</td><td>Priced within range — negotiate from strength</td></tr>
+  </tbody>
+</table>
+
+<p>These tiers aren't from a single study — they reflect conventional wisdom refined across thousands of agents over 20+ years of listing data. The pattern holds because buyer behavior is predictable: the further a home sits above market value, the fewer buyers even bother to schedule a tour.</p>
+
+<p>NAR's <a href="https://www.nar.realtor/research-and-statistics/research-reports/realtors-confidence-index" style="color: var(--color-accent); font-weight: 600;">REALTORS® Confidence Index</a> reinforces the bottom tier — homes priced correctly sell within 30 days and close at 99% of list price on average. The gap between that outcome and a stale listing sitting at 60+ DOM is almost always a pricing gap, not a market gap.</p>
+
 <p><strong>The fix:</strong> Price based on recent comps, not sentiment. A good agent pulls comps from the last 90 to 180 days, adjusts for your home's condition and updates, and lands on a defensible price within 5% of market value.</p>
 
 <p><a href="../index.html#home-value" style="color: var(--color-accent); font-weight: 600;">Get a free home value estimate</a> — I'll give you a range based on actual recent sales, not wishful thinking.</p>
