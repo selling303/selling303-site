@@ -1,14 +1,59 @@
 # Netlify redirects for selling303.com
-# Clean URLs
+# Processed top-to-bottom; first match wins.
+# Netlify serves existing static files before applying 200 rewrites,
+# so Astro-generated pages (e.g. /neighborhoods/highlands-ranch) are unaffected.
+
+# --- Clean URLs ---
 /index       /           301
 /home        /           301
 
-# Common patterns
-/neighborhoods/*  /neighborhoods.html  200
-/search      /neighborhoods.html  301
-/listings    /properties.html     301
+# --- Common patterns ---
+/search      /neighborhoods  301
+/search/     /neighborhoods  301
+/listings    /properties     301
 /schedule    https://calendly.com/jacob-realtor  302
 /call        https://calendly.com/jacob-realtor  302
 
-# SPA-style fallback (optional, for future use)
-# /*          /index.html   200
+# --- Old Framer static pages ---
+/about-jacob-stark   /about        301
+/myhome              /              301
+/sidebar             /              301
+/postcard            /              301
+/blog-post-template  /blog          301
+/preferred-lenders   /              301
+/preferred-lenders/  /              301
+
+# --- Old Framer neighborhood pages (no /neighborhoods/ prefix) ---
+/neighborhood-highlands-ranch  /neighborhoods/highlands-ranch  301
+/neighborhood-lakewood         /neighborhoods/lakewood         301
+/neighborhood-littleton        /neighborhoods/littleton        301
+/neighborhood-centennial       /neighborhoods/centennial       301
+/neighborhood-englewood        /neighborhoods/englewood        301
+/neighborhood-parker           /neighborhoods/parker           301
+/neighborhood-lone-tree        /neighborhoods/lone-tree        301
+/neighborhood-castle-pines     /neighborhoods/castle-pines     301
+/neighborhood-greenwood-village /neighborhoods/greenwood-village 301
+
+# --- Old Framer blog posts → closest Astro equivalent ---
+/blog/best-time-to-sell-home-littleton-co                                                                      /blog/relist-home-littleton-after-expired-listing          301
+/blog/is-now-a-good-time-to-upsize-in-highlands-ranch-or-lone-tree-or-are-prices-expected-to-drop-further      /blog/best-neighborhoods-south-denver-move-up-buyers       301
+/blog/is-2025-a-good-year-to-upsize-your-home-in-south-denver                                                  /blog/best-neighborhoods-south-denver-move-up-buyers       301
+/blog/south-denver-suburbs-community-happenings-mid-october-2025                                                /blog                                                      301
+
+# --- Old Framer broken/junk URLs ---
+/blog/:qGAS1Evcm  /blog  301
+
+# --- Old Framer listing/address pages → properties ---
+/9559-w-coal-mine-avenue-unit-a-littleton-co-80123       /properties  301
+/8781-flora-ct-arvada-co-80005                           /properties  301
+/21069-woodside-lane-parker-co-80138                     /properties  301
+/301-w-lehow-ave-14b-englewood-co-80110                  /properties  301
+/4360-w-wagon-trail-dr-denver-co-80123                   /properties  301
+/2993-s-jericho-ct-aurora-co-80013                       /properties  301
+/6566-s-flower-st-littleton-co-80123                     /properties  301
+/8965-e-phillips-dr-centennial-co-80122                  /properties  301
+/22461-e-union-cir-aurora-co-80015                       /properties  301
+/14556-w-3rd-ave-golden-co-80401                         /properties  301
+/6720-s-holland-way-littleton-co-80128                   /properties  301
+/10315-ravenswood-lane-highlands-ranch-co-80130          /properties  301
+/6718-s-holland-way-littleton-co-80128                   /properties  301
