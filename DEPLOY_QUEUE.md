@@ -30,6 +30,14 @@ Changes waiting to be pushed to production. Each conversation logs what it chang
   - 6566 S Flower St, Littleton — Pre-Sale Renovation (Woodmar Village, concierge program, 9 DOM)
   - 21069 Woodside Lane, Parker — Selling in a Tough Market (holiday season, $10K over, 10 DOM)
   - 2993 S Jericho Ct, Aurora — Life Transition (Conservatory Park, $31K over, 4 DOM)
-- 2026-04-14: NOTE: All 8 new stories need listing photos added to src/assets/images/success-stories/
+- 2026-04-14: 6 listing-only success story placeholder files (property data + FAQs, story TBD via interview):
+  - 8781 Flora Ct, Arvada — Whisper Creek mountain views ($919,900)
+  - 22461 E Union Circle, Aurora — Luxury home ($689,000)
+  - 4360 W Wagon Trail Dr, Denver — Spacious 1964 home ($625,000)
+  - 9559 W Coal Mine Ave Unit A, Littleton — Condo ($385,000)
+  - 301 W Lehow Ave #14B, Englewood — Condo ($300,000)
+  - 10315 Ravenswood Lane, Highlands Ranch — Family home ($600,000)
+- 2026-04-14: NOTE: All 14 new stories need listing photos added to src/assets/images/success-stories/
+- 2026-04-14: NOTE: 6 listing-only stories need real results data + client stories via interview skill
 - 2026-04-14: SEO meta optimization — updated titles and descriptions on all 6 specialization pages: added "Colorado" to titles, neighborhood names to descriptions for long-tail query matching
 - 2026-04-14: SEO meta optimization — updated descriptions on all 9 neighborhood pages: enriched with specialization keywords (buying, selling, relocating, relisting, new construction) and unique neighborhood character
