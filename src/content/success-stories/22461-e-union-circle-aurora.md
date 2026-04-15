@@ -42,3 +42,4 @@ faqSchema:
   - question: "What luxury features does 22461 E Union Circle have?"
     answer: "This Aurora home boasts premium finishes, high-end appliances, granite countertops, and an open floor plan ideal for entertaining. The seamless layout connects living spaces for modern family comfort."
 sortOrder: 11
+---

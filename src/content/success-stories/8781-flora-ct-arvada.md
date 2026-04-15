@@ -42,3 +42,4 @@ faqSchema:
   - question: "What neighborhood is 8781 Flora Ct in?"
     answer: "8781 Flora Ct is located in Whisper Creek, one of Arvada's most coveted neighborhoods, known for its majestic mountain and vibrant valley views."
 sortOrder: 10
+---

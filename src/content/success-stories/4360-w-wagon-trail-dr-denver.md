@@ -42,3 +42,4 @@ faqSchema:
   - question: "What are the key features of 4360 W Wagon Trail Dr?"
     answer: "Built in 1964, this property offers spacious living with a well-designed floor plan and natural light throughout. The home features plenty of room for family living and entertaining in a sought-after Denver location."
 sortOrder: 12
+---
