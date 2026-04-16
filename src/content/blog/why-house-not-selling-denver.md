@@ -301,12 +301,41 @@ relatedPosts:
 <p>Okay, I said it's never the market. But timing <em>is</em> a factor.</p>
 
 <p><strong>Right now in Denver Metro (Feb 2026, DMAR):</strong></p>
-<ul>
-  <li>Active listings: 8,351 (-12.4% YoY) — inventory is actually lower than last year, but buyer behavior has shifted</li>
-  <li>Median DOM: 64 days (+6.7% YoY) — homes are sitting longer than a year ago</li>
-  <li>Median sale price: $605,000 (-2.3% YoY) — prices are off slightly from peak</li>
-  <li>Under contract: 3,732 (+19.0% YoY) — demand is picking up, but selectively; well-priced homes move, overpriced ones don't</li>
-</ul>
+
+<div style="display: flex; flex-wrap: wrap; gap: 1rem; max-width: 720px; margin: 2rem auto;">
+  <div style="flex: 1 1 150px; background: white; border: 1px solid rgba(0,42,58,0.08); border-radius: 12px; padding: 1.25rem 1rem; box-shadow: 0 2px 12px rgba(0,42,58,0.10); text-align: center;">
+    <div style="font-size: 1.75rem; font-weight: 800; color: #002a3a; line-height: 1;">8,351</div>
+    <div style="font-size: 0.75rem; color: #81848a; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 0.5rem; font-weight: 600;">Active Listings</div>
+    <div style="display: inline-flex; align-items: center; gap: 0.3rem; margin-top: 0.75rem; padding: 0.3rem 0.65rem; background: rgba(139,58,58,0.08); color: #8b3a3a; font-size: 0.8rem; font-weight: 700; border-radius: 20px;">
+      <span style="font-size: 0.7rem;">&#9660;</span> 12.4% YoY
+    </div>
+  </div>
+  <div style="flex: 1 1 150px; background: white; border: 1px solid rgba(0,42,58,0.08); border-radius: 12px; padding: 1.25rem 1rem; box-shadow: 0 2px 12px rgba(0,42,58,0.10); text-align: center;">
+    <div style="font-size: 1.75rem; font-weight: 800; color: #002a3a; line-height: 1;">64<span style="font-size: 1rem; font-weight: 600; color: #81848a; margin-left: 0.2rem;">days</span></div>
+    <div style="font-size: 0.75rem; color: #81848a; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 0.5rem; font-weight: 600;">Median DOM</div>
+    <div style="display: inline-flex; align-items: center; gap: 0.3rem; margin-top: 0.75rem; padding: 0.3rem 0.65rem; background: rgba(74,124,89,0.1); color: #4a7c59; font-size: 0.8rem; font-weight: 700; border-radius: 20px;">
+      <span style="font-size: 0.7rem;">&#9650;</span> 6.7% YoY
+    </div>
+  </div>
+  <div style="flex: 1 1 150px; background: white; border: 1px solid rgba(0,42,58,0.08); border-radius: 12px; padding: 1.25rem 1rem; box-shadow: 0 2px 12px rgba(0,42,58,0.10); text-align: center;">
+    <div style="font-size: 1.75rem; font-weight: 800; color: #002a3a; line-height: 1;">$605K</div>
+    <div style="font-size: 0.75rem; color: #81848a; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 0.5rem; font-weight: 600;">Median Sale Price</div>
+    <div style="display: inline-flex; align-items: center; gap: 0.3rem; margin-top: 0.75rem; padding: 0.3rem 0.65rem; background: rgba(139,58,58,0.08); color: #8b3a3a; font-size: 0.8rem; font-weight: 700; border-radius: 20px;">
+      <span style="font-size: 0.7rem;">&#9660;</span> 2.3% YoY
+    </div>
+  </div>
+  <div style="flex: 1 1 150px; background: white; border: 1px solid rgba(0,42,58,0.08); border-radius: 12px; padding: 1.25rem 1rem; box-shadow: 0 2px 12px rgba(0,42,58,0.10); text-align: center;">
+    <div style="font-size: 1.75rem; font-weight: 800; color: #002a3a; line-height: 1;">3,732</div>
+    <div style="font-size: 0.75rem; color: #81848a; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 0.5rem; font-weight: 600;">Under Contract</div>
+    <div style="display: inline-flex; align-items: center; gap: 0.3rem; margin-top: 0.75rem; padding: 0.3rem 0.65rem; background: rgba(74,124,89,0.1); color: #4a7c59; font-size: 0.8rem; font-weight: 700; border-radius: 20px;">
+      <span style="font-size: 0.7rem;">&#9650;</span> 19.0% YoY
+    </div>
+  </div>
+</div>
+
+<p style="text-align: center; font-size: 0.8rem; color: #81848a; margin-top: -0.75rem; margin-bottom: 2rem;">Source: DMAR February 2026 Market Trends Report</p>
+
+<p>The pattern beneath these numbers: inventory is tighter than a year ago, yet homes are still sitting longer and selling for slightly less. Buyer behavior has shifted — buyers have more patience, more choice within their price band, and less tolerance for overpriced listings. The 19% jump in homes under contract says demand is returning, but selectively: well-priced homes move, overpriced ones don't.</p>
 
 <p>This is a balanced-to-soft market. Buyers have more choices and more patience than they did in 2021–2022. Precision matters.</p>
 

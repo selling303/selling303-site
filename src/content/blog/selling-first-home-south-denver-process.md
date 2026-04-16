@@ -81,15 +81,69 @@ relatedPosts:
 
 <p>On a Centennial home selling at the Q1 2026 median of $689,000, here's a realistic cost breakdown:</p>
 
-<ul>
-<li><strong>Agent commissions:</strong> 5–6% ($34,450–$41,340). This covers both listing agent and buyer agent compensation, structured per the listing agreement.</li>
-<li><strong>Title insurance and closing fees:</strong> ~1% ($6,000–$7,500). Colorado sellers typically pay for the owner's title policy.</li>
-<li><strong>Prorated property taxes:</strong> Variable — Arapahoe County taxes are due in arrears, so you'll owe a prorated amount through closing day.</li>
-<li><strong>Seller concessions:</strong> 0–3% ($0–$20,670). Buyer-requested credits for closing costs or rate buydowns.</li>
-<li><strong>Pre-listing prep:</strong> $2,000–$8,000. Repairs, staging, deep cleaning, and photography.</li>
-</ul>
+<div style="max-width: 720px; margin: 2rem auto;">
+  <div style="background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 12px rgba(0,42,58,0.10); border: 1px solid rgba(0,42,58,0.08);">
+    <div style="text-align: center; margin-bottom: 1.25rem;">
+      <div style="font-size: 0.75rem; color: #81848a; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Net Sheet on a $689K Centennial Sale</div>
+      <div style="font-size: 1.75rem; font-weight: 800; color: #002a3a; margin-top: 0.25rem; line-height: 1;">~$626K <span style="font-size: 0.9rem; color: #4a7c59; font-weight: 700;">take-home</span></div>
+      <div style="font-size: 0.8rem; color: #81848a; margin-top: 0.4rem;">after ~9% in total selling costs</div>
+    </div>
+    <div style="display: flex; width: 100%; height: 48px; border-radius: 8px; overflow: hidden; margin-bottom: 1.25rem; box-shadow: inset 0 0 0 1px rgba(0,42,58,0.06);">
+      <div style="flex: 91; background: #4a7c59;" title="Seller Net"></div>
+      <div style="flex: 5.5; background: #002a3a;" title="Agent Commissions"></div>
+      <div style="flex: 1.5; background: #81848a;" title="Concessions"></div>
+      <div style="flex: 1; background: #a5a7a9;" title="Title + Closing"></div>
+      <div style="flex: 1; background: #c8c9cb;" title="Pre-Listing Prep"></div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.75rem 1rem; font-size: 0.875rem; line-height: 1.5;">
+      <div itemscope itemtype="https://schema.org/PropertyValue" style="display: flex; align-items: flex-start; gap: 0.6rem;">
+        <meta itemprop="minValue" content="620000" />
+        <meta itemprop="maxValue" content="641000" />
+        <meta itemprop="unitCode" content="USD" />
+        <span style="width: 14px; height: 14px; background: #4a7c59; border-radius: 3px; flex-shrink: 0; margin-top: 3px;"></span>
+        <span><strong itemprop="name" style="color: #002a3a;">Seller Net</strong><br><span style="color: #81848a;">~91% &middot; ~$626K</span></span>
+      </div>
+      <div itemscope itemtype="https://schema.org/PropertyValue" style="display: flex; align-items: flex-start; gap: 0.6rem;">
+        <meta itemprop="minValue" content="34450" />
+        <meta itemprop="maxValue" content="41340" />
+        <meta itemprop="unitCode" content="USD" />
+        <span style="width: 14px; height: 14px; background: #002a3a; border-radius: 3px; flex-shrink: 0; margin-top: 3px;"></span>
+        <span><strong itemprop="name" style="color: #002a3a;">Agent Commissions</strong><br><span style="color: #81848a;">5&ndash;6% &middot; $34K&ndash;$41K</span></span>
+      </div>
+      <div itemscope itemtype="https://schema.org/PropertyValue" style="display: flex; align-items: flex-start; gap: 0.6rem;">
+        <meta itemprop="minValue" content="0" />
+        <meta itemprop="maxValue" content="20670" />
+        <meta itemprop="unitCode" content="USD" />
+        <span style="width: 14px; height: 14px; background: #81848a; border-radius: 3px; flex-shrink: 0; margin-top: 3px;"></span>
+        <span><strong itemprop="name" style="color: #002a3a;">Seller Concessions</strong><br><span style="color: #81848a;">0&ndash;3% &middot; $0&ndash;$21K</span></span>
+      </div>
+      <div itemscope itemtype="https://schema.org/PropertyValue" style="display: flex; align-items: flex-start; gap: 0.6rem;">
+        <meta itemprop="minValue" content="6000" />
+        <meta itemprop="maxValue" content="7500" />
+        <meta itemprop="unitCode" content="USD" />
+        <span style="width: 14px; height: 14px; background: #a5a7a9; border-radius: 3px; flex-shrink: 0; margin-top: 3px;"></span>
+        <span><strong itemprop="name" style="color: #002a3a;">Title + Closing</strong><br><span style="color: #81848a;">~1% &middot; $6K&ndash;$7.5K</span></span>
+      </div>
+      <div itemscope itemtype="https://schema.org/PropertyValue" style="display: flex; align-items: flex-start; gap: 0.6rem;">
+        <meta itemprop="minValue" content="2000" />
+        <meta itemprop="maxValue" content="8000" />
+        <meta itemprop="unitCode" content="USD" />
+        <span style="width: 14px; height: 14px; background: #c8c9cb; border-radius: 3px; flex-shrink: 0; margin-top: 3px;"></span>
+        <span><strong itemprop="name" style="color: #002a3a;">Pre-Listing Prep</strong><br><span style="color: #81848a;">$2K&ndash;$8K</span></span>
+      </div>
+      <div itemscope itemtype="https://schema.org/PropertyValue" style="display: flex; align-items: flex-start; gap: 0.6rem;">
+        <meta itemprop="description" content="Variable amount paid in arrears through closing day (Arapahoe County)" />
+        <meta itemprop="unitCode" content="USD" />
+        <span style="width: 14px; height: 14px; background: rgba(129,132,138,0.15); border: 1px dashed #81848a; border-radius: 3px; flex-shrink: 0; margin-top: 3px;"></span>
+        <span><strong itemprop="name" style="color: #002a3a;">Prorated Taxes</strong><br><span style="color: #81848a;">variable &middot; paid in arrears</span></span>
+      </div>
+    </div>
+  </div>
+</div>
 
-<p>Total: roughly $48,000 to $69,000 on a $689,000 sale. That's real money — and it catches first-time sellers off guard when they see the final settlement statement. For a deeper breakdown of every line item, see the full guide on <a href="/blog/cost-to-sell-house-colorado-2026">the cost to sell a house in Colorado</a>.</p>
+<p style="text-align: center; font-size: 0.8rem; color: #81848a; margin-top: -0.75rem; margin-bottom: 2rem;">Midpoint estimates on a $689,000 sale (Q1 2026 Centennial median, REcolorado). Actual costs vary by contract terms and property condition.</p>
+
+<p>Total costs typically run $48,000 to $69,000 on a $689,000 sale — roughly 7–10% of the gross. That's real money, and it catches first-time sellers off guard when they see the final settlement statement. For a deeper breakdown of every line item, see the full guide on <a href="/blog/cost-to-sell-house-colorado-2026">the cost to sell a house in Colorado</a>.</p>
 
 <h2 id="pricing">Why Is Pricing the Biggest Mistake First-Time Sellers Make?</h2>
 
@@ -158,7 +212,11 @@ relatedPosts:
 <li><strong>Weeks 6–9:</strong> Under contract through closing — inspection, appraisal, title work, and final walkthrough. A typical closing takes 30 to 35 days from executed contract.</li>
 </ul>
 
-<p>From prep to proceeds, a well-executed first-time sale in Centennial takes roughly 10 to 14 weeks. Knowing that timeline upfront — and planning your next housing move around it — prevents the scramble that catches so many first-time sellers off guard. If you're selling and buying simultaneously, the coordination gets more complex. Jacob Stark's guide to <a href="/blog/selling-centennial-buying-highlands-ranch-coordinate-transactions">coordinating a dual transaction in Centennial</a> covers the bridge strategies and contingency mechanics.</p>
+<p>From prep to proceeds, a well-executed first-time sale in Centennial takes roughly 10 to 14 weeks. Knowing that timeline upfront — and planning your next housing move around it — prevents the scramble that catches so many first-time sellers off guard.</p>
+
+<p>That said, this is the ideal arc, not the only one. If your situation calls for a faster sale — a job change, relocation, family timing, or a personal deadline — a compressed timeline is often workable with the right strategy. <a href="https://calendly.com/jacob-realtor">Reach out and we can walk through what's realistic</a> for your specific window before you commit to a plan.</p>
+
+<p>If you're selling and buying simultaneously, the coordination gets more complex. Jacob Stark's guide to <a href="/blog/selling-centennial-buying-highlands-ranch-coordinate-transactions">coordinating a dual transaction in Centennial</a> covers the bridge strategies and contingency mechanics.</p>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 
