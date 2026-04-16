@@ -95,7 +95,7 @@
   - Target keywords: Littleton vs Centennial, best suburb Denver relocation, South Denver suburb comparison
 
 #### Day 11 — Monday, April 14
-- [x] **"Selling Your First Home in South Denver: What No One Tells You About the Process"** *(drafted 2026-04-14)*
+- [x] **"Selling Your First Home in South Denver: What No One Tells You About the Process"** *(drafted 2026-04-14)* *(published 2026-04-15)*
   - Specialization: `/first-time-homesellers` | Geographic: `/centennial`
   - Type: Seller advice | Funnel: MOFU
   - Angle: Common first-time seller mistakes. Net sheet surprises, staging ROI, inspection negotiations.

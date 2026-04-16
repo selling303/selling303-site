@@ -4,6 +4,48 @@ Permanent record of deployed changes. The deploy-to-netlify skill moves items he
 
 ---
 
+## 2026-04-15 — commit 47824c8 | Credits used: 15 | Credits remaining: 200
+
+### Performance
+- Inlined critical above-the-fold CSS (8.6 KB minified) in BaseLayout.astro `<head>` — eliminates render-blocking stylesheet for first paint
+- Deferred full stylesheet load via `media="print" onload="this.media='all'"` pattern with `<noscript>` fallback — full CSS at `/css/styles.css`
+- Removed Astro CSS import from BaseLayout.astro (was creating a render-blocking `<link>` tag)
+- Copied full styles.css to `public/css/styles.css` for deferred loading
+- Fixed `.hero::before` background to use `var(--hero-bg)` CSS variable instead of hardcoded relative path — works with Astro's `getImage()` pipeline
+- Removed RealScout preconnect from SEO.astro (widget is lazy-loaded, preconnect was wasted)
+- Added `/css/*` cache header (24hr with revalidation)
+
+### Success Stories System (new)
+- New content collection schema + [slug].astro template (SCAR framework) + index page with filter cards
+- First story: 14556 W 3rd Ave Golden (Buy Before You Sell, $55K over list) — 46 listing photos with descriptive alt text, hero lightbox gallery with photo count badge + keyboard/swipe nav, sticky sidebar, mid-page strategy CTA
+- 6 JSON-LD schemas per page: RealEstateListing, Review, Article, ImageObject, BreadcrumbList, FAQPage
+- FAQ uses site-wide accordion pattern (one-at-a-time toggle)
+- Success Stories added to Sell dropdown in Header.astro
+- PhotoGallery.astro reusable component created (available for other pages)
+- Made sqft optional in successStories schema + conditional display in template
+- 8 new SCAR-framework stories (FAQs + Schema.org metadata): 7307 S Birch St Centennial (Buy & Sell Simultaneously, $82K over, 4 DOM); 8965 E Phillips Dr Centennial (Relocation, $25K over, 1 DOM, pre-market); 7327 S Carr Ct Littleton (As-Is / Lifestyle, Stony Creek, 9 DOM); 6718 S Holland Way Littleton (Quick Sale, Dutch Ridge, $5K over, 4 DOM); 6720 S Holland Way Littleton (Move-Up, Dutch Ridge, multiple offers, 5 DOM); 6566 S Flower St Littleton (Pre-Sale Reno, Woodmar Village, concierge, 9 DOM); 21069 Woodside Lane Parker (Tough Market, holiday, $10K over, 10 DOM); 2993 S Jericho Ct Aurora (Life Transition, Conservatory Park, $31K over, 4 DOM)
+- 6 listing-only placeholder stories (property + FAQs, story TBD via interview): 8781 Flora Ct Arvada ($919,900); 22461 E Union Circle Aurora ($689,000); 4360 W Wagon Trail Dr Denver ($625,000); 9559 W Coal Mine Ave Unit A Littleton ($385,000); 301 W Lehow Ave #14B Englewood ($300,000); 10315 Ravenswood Lane Highlands Ranch ($600,000)
+- HOTFIX: Added missing closing `---` frontmatter delimiter to 3 placeholder stories (22461-e-union-circle-aurora, 4360-w-wagon-trail-dr-denver, 8781-flora-ct-arvada) — missing delimiter caused Astro content collection schema validation to fail
+- NOTE: All 14 new stories need listing photos added to src/assets/images/success-stories/
+- NOTE: 6 listing-only stories need real results data + client stories via interview skill
+
+### SEO meta optimization
+- Updated titles and descriptions on all 6 specialization pages: added "Colorado" to titles, neighborhood names to descriptions for long-tail query matching
+- Updated descriptions on all 9 neighborhood pages: enriched with specialization keywords (buying, selling, relocating, relisting, new construction) and unique neighborhood character
+
+### New blog post: Day 11
+- "Selling Your First Home in South Denver: What No One Tells You About the Process" (`src/content/blog/selling-first-home-south-denver-process.md`). First-Time Home Sellers pillar + Centennial geographic pillar. MOFU. DMAR March 2026 data (63.14% concessions, $590K metro median, 16 DOM), REcolorado Q1 2026 Centennial closed data (269 sales, $689K median, 13 median DOM, 94% close-to-original-list).
+- Net Sheet cost-breakdown visual: horizontal stacked bar on $689K Centennial sale — Seller Net (~91%, brand green), Agent Commissions, Concessions, Title+Closing, Pre-Listing Prep, plus Prorated Taxes as variable. Legend grid with $ ranges + %. Each legend item wrapped in Schema.org `PropertyValue` microdata (itemprop name, minValue, maxValue, unitCode=USD) for AEO structured-data signals — same pattern as MarketStatTile component.
+- Selling Timeline: added encouragement for sellers facing tighter timelines (relocation, job change, family timing, personal deadline) to reach out for a compressed-timeline discussion before committing to a plan. Inline CTA links to calendly.
+
+### Updates to existing blog post
+- `why-house-not-selling-denver.md` Reason #7 (Market Timing): replaced bullet list of Feb 2026 DMAR stats with 4-card horizontal stat strip (Active Listings, Median DOM, Median Sale Price, Under Contract). Directional YoY trend pills (brick for down, green for up), brand-aligned colors, same shadow system as overpricing diagnostic. Added interpretive paragraph covering buyer behavior shift and selective demand.
+
+### Git hygiene
+- NOTE: Force-pushed `live` to match `main` to resolve divergence left over from the April 14 netlify.toml-bug recovery chain. Three commits were dropped from live's history (no content loss — all changes already on main): `ffb959c` (deploy-trigger comment in DEPLOY_QUEUE.md), `56cc089` (netlify.toml plugins-block fix — identical version already on main), `683c68` (merge commit). See April 14 entry for context on the original chain. Live and main are now fully synchronized; future deploys should fast-forward cleanly.
+
+---
+
 ## 2026-04-14 — commit 683c688 | Credits used: 30 | Credits remaining: 215
 
 - Added GA4 `page_not_found` custom event to 404.astro (tracks broken URL path, referrer, and full URL)
