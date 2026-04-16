@@ -1,5 +1,6 @@
 ---
 title: "4360 W Wagon Trail Dr, Denver"
+draft: true
 metaTitle: "4360 W Wagon Trail Dr Denver — Spacious 4-Bed Home | Selling 303"
 description: "Spacious 4-bedroom, 3-bathroom home with 2,342 sqft on 0.11 acres in Denver. Listed at $625,000."
 headline: "Spacious Denver home with great potential and a well-designed floor plan"

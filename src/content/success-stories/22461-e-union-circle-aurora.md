@@ -1,5 +1,6 @@
 ---
 title: "22461 E Union Circle, Aurora"
+draft: true
 metaTitle: "22461 E Union Circle Aurora — Luxury Home With Premium Finishes | Selling 303"
 description: "4-bedroom, 4-bathroom luxury home with 3,689 sqft and premium finishes in Aurora. Listed at $689,000."
 headline: "Luxury Aurora home with exceptional finishes and open floor plan"

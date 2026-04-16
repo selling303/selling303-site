@@ -6,7 +6,10 @@ import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import TrustSignals from '../../../components/TrustSignals.astro';
 import CTABanner from '../../../components/CTABanner.astro';
 
-const stories = await getCollection('successStories');
+const allStories = await getCollection('successStories');
+
+// Hide drafts from the public index (pages still render at direct URLs but carry noindex)
+const stories = allStories.filter((s) => !s.data.draft);
 
 // Sort by sortOrder (if present), then by close date descending
 const sorted = stories.sort((a, b) => {

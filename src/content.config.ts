@@ -136,6 +136,7 @@ const successStories = defineCollection({
     })).optional(),
     ogImage: z.string().optional(),
     sortOrder: z.number().optional(),
+    draft: z.boolean().optional(),
   }),
 });
 

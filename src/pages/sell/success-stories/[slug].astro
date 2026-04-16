@@ -167,14 +167,19 @@ const ogImage = data.ogImage || heroSrc;
   headerVariant="solid"
 >
   <Fragment slot="head">
-    <script type="application/ld+json" is:inline set:html={JSON.stringify(listingSchema)} />
-    <script type="application/ld+json" is:inline set:html={JSON.stringify(reviewSchema)} />
-    <script type="application/ld+json" is:inline set:html={JSON.stringify(articleSchema)} />
-    {imageSchemaObjects.map((obj) => (
-      <script type="application/ld+json" is:inline set:html={JSON.stringify(obj)} />
-    ))}
-    {faqPageSchema && (
-      <script type="application/ld+json" is:inline set:html={JSON.stringify(faqPageSchema)} />
+    {data.draft && <meta name="robots" content="noindex, nofollow" />}
+    {!data.draft && (
+      <Fragment>
+        <script type="application/ld+json" is:inline set:html={JSON.stringify(listingSchema)} />
+        <script type="application/ld+json" is:inline set:html={JSON.stringify(reviewSchema)} />
+        <script type="application/ld+json" is:inline set:html={JSON.stringify(articleSchema)} />
+        {imageSchemaObjects.map((obj) => (
+          <script type="application/ld+json" is:inline set:html={JSON.stringify(obj)} />
+        ))}
+        {faqPageSchema && (
+          <script type="application/ld+json" is:inline set:html={JSON.stringify(faqPageSchema)} />
+        )}
+      </Fragment>
     )}
   </Fragment>
 

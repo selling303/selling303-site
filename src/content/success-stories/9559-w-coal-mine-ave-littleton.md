@@ -1,5 +1,6 @@
 ---
 title: "9559 W Coal Mine Ave Unit A, Littleton"
+draft: true
 metaTitle: "9559 W Coal Mine Ave Littleton — Well-Maintained Condo | Selling 303"
 description: "Well-maintained 2-bedroom, 2-bathroom condo with 1,297 sqft in a prime Littleton location. Listed at $385,000."
 headline: "Well-maintained Littleton condo in a prime location with modern finishes"

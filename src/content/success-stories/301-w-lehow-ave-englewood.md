@@ -1,5 +1,6 @@
 ---
 title: "301 W Lehow Ave #14B, Englewood"
+draft: true
 metaTitle: "301 W Lehow Ave Englewood — Efficient Condo for Professionals | Selling 303"
 description: "1-bedroom, 2-bathroom condo with 1,066 sqft in Englewood. Ideal for professionals or downsizers with easy access to shopping and transit. Listed at $300,000."
 headline: "Efficient Englewood condo ideal for professionals and downsizers"

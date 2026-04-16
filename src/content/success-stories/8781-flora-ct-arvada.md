@@ -1,5 +1,6 @@
 ---
 title: "8781 Flora Ct, Arvada"
+draft: true
 metaTitle: "8781 Flora Ct Arvada — Whisper Creek Mountain View Home | Selling 303"
 description: "4-bedroom, 4-bathroom home with breathtaking mountain and valley views in Arvada's Whisper Creek neighborhood. Listed at $919,900."
 headline: "Breathtaking mountain views from this Whisper Creek home in Arvada"

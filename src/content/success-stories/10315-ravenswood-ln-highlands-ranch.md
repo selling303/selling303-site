@@ -1,5 +1,6 @@
 ---
 title: "10315 Ravenswood Lane, Highlands Ranch"
+draft: true
 metaTitle: "10315 Ravenswood Lane Highlands Ranch — Family Home Near Top Schools | Selling 303"
 description: "3-bedroom, 3-bathroom family home with 2,134 sqft in Highlands Ranch. Excellent schools and suburban comfort. Listed at $600,000."
 headline: "Spacious Highlands Ranch family home near top-rated schools"
