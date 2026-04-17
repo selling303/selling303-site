@@ -85,6 +85,47 @@ relatedPosts:
 
 <p>That gives the seller roughly $310,000–$385,000 in gross equity before selling costs. Netting out agent commissions (both sides), title and escrow fees, prorated taxes, and typical concessions runs about 7 to 8 percent of sale price — call it $50,000 at the median. Net equity lands in the $260,000–$335,000 range for the typical move-up seller.</p>
 
+<div itemscope itemtype="https://schema.org/Place" style="max-width: 720px; margin: 2rem auto;">
+<meta itemprop="name" content="Highlands Ranch, Colorado" />
+<div style="background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 12px rgba(0,42,58,0.10); border: 1px solid rgba(0,42,58,0.08);">
+<div style="text-align: center; margin-bottom: 1.25rem;">
+<div style="font-size: 0.75rem; color: #81848a; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Where a $725K Highlands Ranch Sale Goes</div>
+<div style="font-size: 1.75rem; font-weight: 800; color: #002a3a; margin-top: 0.25rem; line-height: 1;">~$340K <span style="font-size: 0.9rem; color: #4a7c59; font-weight: 700;">take-home equity</span></div>
+<div style="font-size: 0.8rem; color: #81848a; margin-top: 0.4rem;">midpoint scenario: $335K mortgage payoff, ~7% selling costs</div>
+</div>
+<div style="display: flex; width: 100%; height: 48px; border-radius: 8px; overflow: hidden; margin-bottom: 1.25rem; box-shadow: inset 0 0 0 1px rgba(0,42,58,0.06);">
+<div style="flex: 47; background: #4a7c59;" title="Seller Take-Home"></div>
+<div style="flex: 46; background: #002a3a;" title="Mortgage Payoff"></div>
+<div style="flex: 7; background: #81848a;" title="Selling Costs"></div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem 1rem; font-size: 0.875rem; line-height: 1.5;">
+<div itemscope itemtype="https://schema.org/PropertyValue" style="display: flex; align-items: flex-start; gap: 0.6rem;">
+<meta itemprop="minValue" content="260000" />
+<meta itemprop="maxValue" content="335000" />
+<meta itemprop="unitCode" content="USD" />
+<span style="width: 14px; height: 14px; background: #4a7c59; border-radius: 3px; flex-shrink: 0; margin-top: 3px;"></span>
+<span><strong itemprop="name" style="color: #002a3a;">Seller Take-Home</strong><br><span style="color: #81848a;">~47% &middot; $260K&ndash;$335K</span></span>
+</div>
+<div itemscope itemtype="https://schema.org/PropertyValue" style="display: flex; align-items: flex-start; gap: 0.6rem;">
+<meta itemprop="minValue" content="325000" />
+<meta itemprop="maxValue" content="340000" />
+<meta itemprop="unitCode" content="USD" />
+<span style="width: 14px; height: 14px; background: #002a3a; border-radius: 3px; flex-shrink: 0; margin-top: 3px;"></span>
+<span><strong itemprop="name" style="color: #002a3a;">Mortgage Payoff</strong><br><span style="color: #81848a;">~46% &middot; $325K&ndash;$340K</span></span>
+</div>
+<div itemscope itemtype="https://schema.org/PropertyValue" style="display: flex; align-items: flex-start; gap: 0.6rem;">
+<meta itemprop="minValue" content="45000" />
+<meta itemprop="maxValue" content="58000" />
+<meta itemprop="unitCode" content="USD" />
+<span style="width: 14px; height: 14px; background: #81848a; border-radius: 3px; flex-shrink: 0; margin-top: 3px;"></span>
+<span><strong itemprop="name" style="color: #002a3a;">Selling Costs</strong><br><span style="color: #81848a;">~7% &middot; $45K&ndash;$58K</span></span>
+</div>
+</div>
+</div>
+</div>
+
+<p style="text-align: center; font-size: 0.8rem; color: #81848a; margin-top: -0.75rem; margin-bottom: 2rem;">Midpoint scenario on a $725,000 Highlands Ranch sale (near Q1 2026 median). Mortgage balance assumes a 2019&ndash;2020 purchase with typical amortization. Selling costs include commissions, title, concessions, and prep. Actuals vary by contract.</p>
+
 <p>That number is the real starting point. Everything downstream — down payment, reserves, rate-buydown cash, pre-listing prep budget — comes out of it.</p>
 
 <h2 id="equity-math">How Much Equity Does a Typical Highlands Ranch Move-Up Need?</h2>
@@ -112,11 +153,25 @@ relatedPosts:
 
 <p>Compare a current $325,000 mortgage at 4 percent (a typical Highlands Ranch seller's existing loan from 2019–2020) to a new $880,000 mortgage at 6.25 percent on a $1,100,000 purchase with 20 percent down:</p>
 
-<ul>
-<li><strong>Current payment (principal + interest, $325K at 4%):</strong> ~$1,550/month</li>
-<li><strong>New payment (principal + interest, $880K at 6.25%):</strong> ~$5,420/month</li>
-<li><strong>Monthly payment increase before taxes and insurance:</strong> ~$3,870</li>
-</ul>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; max-width: 720px; margin: 2rem auto;">
+  <div style="background: white; border: 1px solid rgba(0,42,58,0.08); border-radius: 12px; padding: 1.25rem 1.25rem 1.1rem; box-shadow: 0 2px 12px rgba(0,42,58,0.10);">
+    <div style="font-size: 0.72rem; color: #81848a; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Current Payment</div>
+    <div style="font-size: 1.9rem; font-weight: 800; color: #002a3a; line-height: 1; margin-top: 0.45rem;">$1,550<span style="font-size: 0.9rem; font-weight: 600; color: #81848a; margin-left: 0.15rem;">/mo</span></div>
+    <div style="font-size: 0.82rem; color: #81848a; margin-top: 0.55rem; line-height: 1.45;">$325K balance &middot; 4.00% rate<br>Principal + interest only</div>
+  </div>
+  <div style="background: white; border: 1px solid rgba(0,42,58,0.08); border-radius: 12px; padding: 1.25rem 1.25rem 1.1rem; box-shadow: 0 2px 12px rgba(0,42,58,0.10);">
+    <div style="font-size: 0.72rem; color: #81848a; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">New Payment</div>
+    <div style="font-size: 1.9rem; font-weight: 800; color: #002a3a; line-height: 1; margin-top: 0.45rem;">$5,420<span style="font-size: 0.9rem; font-weight: 600; color: #81848a; margin-left: 0.15rem;">/mo</span></div>
+    <div style="font-size: 0.82rem; color: #81848a; margin-top: 0.55rem; line-height: 1.45;">$880K loan &middot; 6.25% rate<br>$1.1M purchase, 20% down</div>
+  </div>
+  <div style="background: linear-gradient(135deg, #002a3a 0%, #003d52 100%); border: 1px solid rgba(0,42,58,0.08); border-radius: 12px; padding: 1.25rem 1.25rem 1.1rem; box-shadow: 0 2px 12px rgba(0,42,58,0.10); color: white;">
+    <div style="font-size: 0.72rem; color: rgba(255,255,255,0.72); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Monthly Increase</div>
+    <div style="font-size: 1.9rem; font-weight: 800; color: white; line-height: 1; margin-top: 0.45rem;">+$3,870<span style="font-size: 0.9rem; font-weight: 600; color: rgba(255,255,255,0.72); margin-left: 0.15rem;">/mo</span></div>
+    <div style="font-size: 0.82rem; color: rgba(255,255,255,0.72); margin-top: 0.55rem; line-height: 1.45;">Before taxes + insurance on the higher-priced home (expect ~$4,200+ all-in)</div>
+  </div>
+</div>
+
+<p style="text-align: center; font-size: 0.8rem; color: #81848a; margin-top: -0.75rem; margin-bottom: 2rem;">Illustrative P&amp;I calculations only. Actual rates, fees, and payments vary by lender, credit profile, and loan structure. Check the current week's 30-year rate via the Freddie Mac Primary Mortgage Market Survey.</p>
 
 <p>Before layering in the higher property tax and insurance on a more expensive home, the move-up seller is looking at a monthly payment increase of around $4,000. That is the number that needs to clear the household budget before the tour schedule starts. Freddie Mac publishes the weekly <a href="https://www.freddiemac.com/pmms" target="_blank" rel="noopener">Primary Mortgage Market Survey</a> — check the current week's average 30-year rate before running final numbers.</p>
 

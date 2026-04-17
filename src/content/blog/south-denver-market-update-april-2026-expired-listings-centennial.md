@@ -81,18 +81,38 @@ relatedPosts:
 
 <div itemscope itemtype="https://schema.org/Place" style="margin: 2rem 0;">
 <meta itemprop="name" content="South Denver Metro, Colorado" />
-<div style="background: #f5f5f3; border-radius: 12px; padding: 1.5rem;">
-<p style="font-weight: 700; margin-top: 0; margin-bottom: 1rem; color: #002a3a; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.85rem;">Denver Metro Snapshot — March 2026 (DMAR)</p>
-<ul style="margin: 0; padding-left: 1.25rem; line-height: 1.9;">
-<li><strong>Median close price:</strong> $590,000 (up 2.61% month-over-month)</li>
-<li><strong>Median days in MLS:</strong> 16 days (down 50% month-over-month)</li>
-<li><strong>Close-price-to-list-price ratio:</strong> 99.13%</li>
-<li><strong>Pending sales:</strong> up 30.69% month-over-month</li>
-<li><strong>New listings:</strong> up 19.94% month-over-month</li>
-<li><strong>Active inventory:</strong> 9,846 (up 9.55% month-over-month, +0.84% YoY)</li>
-<li><strong>Sellers offering concessions:</strong> 63.14% (up 3.82% YoY)</li>
-</ul>
+<p style="font-weight: 700; margin: 0 auto 1rem; max-width: 720px; color: #002a3a; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.85rem; text-align: center;">Denver Metro Snapshot — March 2026 Month-Over-Month</p>
+<div style="display: flex; flex-wrap: wrap; gap: 1rem; max-width: 720px; margin: 0 auto;">
+  <div style="flex: 1 1 150px; background: white; border: 1px solid rgba(0,42,58,0.08); border-radius: 12px; padding: 1.25rem 1rem; box-shadow: 0 2px 12px rgba(0,42,58,0.10); text-align: center;">
+    <div style="font-size: 1.75rem; font-weight: 800; color: #002a3a; line-height: 1;">+30.69<span style="font-size: 1rem; font-weight: 600; color: #81848a; margin-left: 0.1rem;">%</span></div>
+    <div style="font-size: 0.75rem; color: #81848a; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 0.5rem; font-weight: 600;">Pending Sales</div>
+    <div style="display: inline-flex; align-items: center; gap: 0.3rem; margin-top: 0.75rem; padding: 0.3rem 0.65rem; background: rgba(74,124,89,0.1); color: #4a7c59; font-size: 0.8rem; font-weight: 700; border-radius: 20px;">
+      <span style="font-size: 0.7rem;">&#9650;</span> MoM
+    </div>
+  </div>
+  <div style="flex: 1 1 150px; background: white; border: 1px solid rgba(0,42,58,0.08); border-radius: 12px; padding: 1.25rem 1rem; box-shadow: 0 2px 12px rgba(0,42,58,0.10); text-align: center;">
+    <div style="font-size: 1.75rem; font-weight: 800; color: #002a3a; line-height: 1;">16<span style="font-size: 1rem; font-weight: 600; color: #81848a; margin-left: 0.2rem;">days</span></div>
+    <div style="font-size: 0.75rem; color: #81848a; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 0.5rem; font-weight: 600;">Median DIM</div>
+    <div style="display: inline-flex; align-items: center; gap: 0.3rem; margin-top: 0.75rem; padding: 0.3rem 0.65rem; background: rgba(139,58,58,0.08); color: #8b3a3a; font-size: 0.8rem; font-weight: 700; border-radius: 20px;">
+      <span style="font-size: 0.7rem;">&#9660;</span> 50% MoM
+    </div>
+  </div>
+  <div style="flex: 1 1 150px; background: white; border: 1px solid rgba(0,42,58,0.08); border-radius: 12px; padding: 1.25rem 1rem; box-shadow: 0 2px 12px rgba(0,42,58,0.10); text-align: center;">
+    <div style="font-size: 1.75rem; font-weight: 800; color: #002a3a; line-height: 1;">$590K</div>
+    <div style="font-size: 0.75rem; color: #81848a; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 0.5rem; font-weight: 600;">Median Close</div>
+    <div style="display: inline-flex; align-items: center; gap: 0.3rem; margin-top: 0.75rem; padding: 0.3rem 0.65rem; background: rgba(74,124,89,0.1); color: #4a7c59; font-size: 0.8rem; font-weight: 700; border-radius: 20px;">
+      <span style="font-size: 0.7rem;">&#9650;</span> 2.61% MoM
+    </div>
+  </div>
+  <div style="flex: 1 1 150px; background: white; border: 1px solid rgba(0,42,58,0.08); border-radius: 12px; padding: 1.25rem 1rem; box-shadow: 0 2px 12px rgba(0,42,58,0.10); text-align: center;">
+    <div style="font-size: 1.75rem; font-weight: 800; color: #002a3a; line-height: 1;">+19.94<span style="font-size: 1rem; font-weight: 600; color: #81848a; margin-left: 0.1rem;">%</span></div>
+    <div style="font-size: 0.75rem; color: #81848a; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 0.5rem; font-weight: 600;">New Listings</div>
+    <div style="display: inline-flex; align-items: center; gap: 0.3rem; margin-top: 0.75rem; padding: 0.3rem 0.65rem; background: rgba(74,124,89,0.1); color: #4a7c59; font-size: 0.8rem; font-weight: 700; border-radius: 20px;">
+      <span style="font-size: 0.7rem;">&#9650;</span> MoM
+    </div>
+  </div>
 </div>
+<p style="text-align: center; font-size: 0.8rem; color: #81848a; margin: 0.75rem auto 0; max-width: 720px;">Source: DMAR March 2026 Market Trends Report. Close-to-list ratio 99.13%. Active inventory 9,846 (+9.55% MoM, +0.84% YoY). Sellers offering concessions 63.14%.</p>
 </div>
 
 <p>The tension in that data is what matters for expired-listing sellers. Inventory grew. New listings surged. But demand grew faster. Pending sales up 30.69% against new listings up 19.94% means buyers absorbed the increase — they didn't just step back and wait.</p>
