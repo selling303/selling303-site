@@ -19,6 +19,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - Why Homes Sit on the Market in South Denver (`/blog/why-homes-sit-on-market-south-denver`)
 - Your Listing Expired in Highlands Ranch — Here's What Actually Went Wrong (`/blog/expired-listing-highlands-ranch`)
 - How to Relist and Sell a Home in Littleton After an Expired Listing (`/blog/relist-home-littleton-after-expired-listing`)
+- South Denver Market Update: What April 2026 Means for Sellers Sitting on Expired Listings (`/blog/south-denver-market-update-april-2026-expired-listings-centennial`)
 
 ### 2. Move-Up Sellers (`/move-up-sellers`)
 **Primary geographic ties:** Highlands Ranch, Centennial, Parker (highest move-up activity — families upgrading within the metro)
@@ -27,6 +28,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - Cost to Sell a House in Colorado 2026 (`/blog/cost-to-sell-house-colorado-2026`)
 - When to Sell Your Parker Home and Move Up — 5 Signs You've Outgrown It (`/blog/when-to-sell-parker-home-move-up`)
 - Selling in Centennial and Buying in Highlands Ranch: How to Coordinate Two Transactions (`/blog/selling-centennial-buying-highlands-ranch-coordinate-transactions`)
+- How Much Equity Do You Need to Move Up in Highlands Ranch? (`/blog/equity-to-move-up-highlands-ranch`)
 
 ### 3. First-Time Homebuyers (`/first-time-homebuyers`)
 **Primary geographic ties:** Littleton, Englewood, Centennial (most affordable entry points in the metro)

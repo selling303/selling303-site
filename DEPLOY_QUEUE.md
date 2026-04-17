@@ -27,3 +27,11 @@ Changes waiting to be pushed to production. Each conversation logs what it chang
 - Added two new Track Record credential tiles: "Top 10 — Agent by Verified Sales — RealTrends" and "Top 1.5% — of U.S. Real Estate Professionals."
 - CSS: fixed logo clipping (height-based sizing with width:auto), removed opacity fade on badges.
 
+## 2026-04-16 — Two blog posts (Day 12 recovery + Day 13)
+
+- Day 12 recovery: "South Denver Market Update: What April 2026 Means for Sellers Sitting on Expired Listings" (`src/content/blog/south-denver-market-update-april-2026-expired-listings-centennial.md`). Drafted 2026-04-15 in the nightly task but the session was interrupted before the calendar update, cluster-map update, and GitHub push ran. File is complete and schema-valid — recovering the bookkeeping in this push. Expired Listings pillar + Centennial geographic pillar. MOFU market update. DMAR March 2026 data (30.69% MoM pending growth, 16 median DIM, 99.13% CP/LP, $590K metro median), REcolorado Q1 2026 Centennial expired cohort (39 expired + 5 withdrawn, median original list $850K, 119 avg days before expiration), Centennial closed comps ($689K median, 13 median DOM, 94% CP/OLP avg).
+- Day 13 new draft: "How Much Equity Do You Need to Move Up in Highlands Ranch?" (`src/content/blog/equity-to-move-up-highlands-ranch.md`). Move-Up Sellers pillar + Highlands Ranch geographic pillar. MOFU. REcolorado Q1 2026 Highlands Ranch closed data (198 sales, $742,500 median close, $873,461 avg, 16 median DIM, 98% CP/OLP), DMAR March 2026 rate/pending/CP-LP context. Payment comparison table ($325K @ 4% → $880K @ 6.25% = ~$3,870/mo increase), three payment-shrinking levers (more down, rate buydown, right-size target), sell-first vs. buy-first decision framework.
+- Updated content-calendar-2026.md — marked Days 12 and 13 as drafted.
+- Updated content-cluster-map.md — added Day 12 to Expired Listings cluster and Day 13 to Move-Up Sellers cluster.
+- Ride-along with next production deploy — no standalone push needed.
+
