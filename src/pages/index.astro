@@ -50,53 +50,15 @@ const nbCentennial = await getImage({ src: nbCentennialSrc, format: 'webp', qual
       }
     </style>
 
-    <!-- Schema: LocalBusiness -->
+    <!-- Schema: Person + RealEstateAgent (unified entity) -->
     <script type="application/ld+json" is:inline>
     {
       "@context": "https://schema.org",
-      "@type": "RealEstateAgent",
-      "name": "Jacob Stark — Selling 303",
-      "description": "Your guide through South Denver Metro real estate — helping families buy and sell with clarity, confidence, and control.",
-      "url": "https://selling303.com",
-      "telephone": "+1-303-997-0634",
-      "email": "jacob@selling303.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Littleton",
-        "addressRegion": "CO",
-        "postalCode": "80120",
-        "addressCountry": "US"
-      },
-      "areaServed": [
-        {"@type": "City", "name": "Littleton"},
-        {"@type": "City", "name": "Highlands Ranch"},
-        {"@type": "City", "name": "Centennial"},
-        {"@type": "City", "name": "Englewood"},
-        {"@type": "City", "name": "Parker"},
-        {"@type": "City", "name": "Lakewood"},
-        {"@type": "City", "name": "Lone Tree"},
-        {"@type": "City", "name": "Castle Pines"},
-        {"@type": "City", "name": "Greenwood Village"}
-      ],
-      "memberOf": {
-        "@type": "Organization",
-        "name": "8z Real Estate"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "52"
-      }
-    }
-    </script>
-
-    <!-- RealEstateAgent Schema -->
-    <script type="application/ld+json" is:inline>
-    {
-      "@context": "https://schema.org",
-      "@type": "RealEstateAgent",
+      "@type": ["Person", "RealEstateAgent"],
       "@id": "https://selling303.com/#agent",
       "name": "Jacob Stark",
+      "alternateName": "Selling 303",
+      "jobTitle": "REALTOR®",
       "url": "https://selling303.com/",
       "image": "https://selling303.com/images/jacob-stark-headshot.png",
       "telephone": "+1-303-997-0634",
@@ -156,7 +118,9 @@ const nbCentennial = await getImage({ src: nbCentennialSrc, format: 'webp', qual
         "https://www.facebook.com/jacobstarkrealtor/",
         "https://www.youtube.com/@selling303",
         "https://www.youtube.com/channel/UCTr7LNftWL7F63Bw-rcdxLg",
-        "https://www.fastexpert.com/agents/jacob-stark-109720/"
+        "https://www.fastexpert.com/agents/jacob-stark-109720/",
+        "https://www.homes.com/real-estate-agents/jacob-stark/fr1k64r/",
+        "https://nextdoor.com/pages/jacob-stark-realtor-greenwood-village-co/"
       ]
     }
     </script>

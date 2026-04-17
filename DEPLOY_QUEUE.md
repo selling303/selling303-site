@@ -14,3 +14,9 @@ Changes waiting to be pushed to production. Each conversation logs what it chang
 - Verified via local build: 0 draft slugs in rendered index, 0 draft URLs in sitemap-0.xml, draft pages include the robots meta, non-draft pages unchanged.
 - Ride-along with tomorrow's nightly blog deploy — no standalone production push needed.
 
+## 2026-04-16 — Schema markup upgrade for AI entity recognition
+
+- Homepage (`index.astro`): merged two duplicate `RealEstateAgent` schema blocks into one unified `["Person", "RealEstateAgent"]` block with `@id`, `jobTitle`, `alternateName`. Fixed stale `reviewCount` from 52 → 47 (matches current Google reviews). Added Homes.com and Nextdoor URLs to `sameAs` array.
+- About page (`about.astro`): upgraded thin `Person` schema to full `["Person", "RealEstateAgent"]` with `@id` linking to homepage entity, `mainEntityOfPage`, `image`, `address`, `areaServed` (9 cities), `aggregateRating`, `hasCredential`, `knowsAbout`, and full `sameAs` array (12 URLs).
+- Ride-along with nightly blog deploy.
+
