@@ -4,6 +4,36 @@ Permanent record of deployed changes. The deploy-to-netlify skill moves items he
 
 ---
 
+## 2026-04-17 — commit 183e7a7 | Credits used: 15 | Credits remaining: 185
+
+### New blog posts (2)
+- **Day 12:** "South Denver Market Update: What April 2026 Means for Sellers Sitting on Expired Listings" (`src/content/blog/south-denver-market-update-april-2026-expired-listings-centennial.md`). Expired Listings pillar + Centennial geographic pillar. MOFU market update. DMAR March 2026 data (30.69% MoM pending growth, 16 median DIM, 99.13% CP/LP, $590K metro median) + REcolorado Q1 2026 Centennial expired cohort (39 expired + 5 withdrawn, median original list $850K, 119 avg days before expiration) + Centennial closed comps ($689K median, 13 median DOM, 94% CP/OLP avg). Includes inline 4-card stat strip visualizing MoM pending/DIM/price/new-listing deltas. Voice fix: replaced stray first-person "I pulled" with "Jacob Stark pulled" (commit 183e7a7).
+- **Day 13:** "How Much Equity Do You Need to Move Up in Highlands Ranch?" (`src/content/blog/equity-to-move-up-highlands-ranch.md`). Move-Up Sellers pillar + Highlands Ranch geographic pillar. MOFU costs/pricing. REcolorado Q1 2026 Highlands Ranch closed data (198 sales, $742,500 median, $873,461 avg, 16 median DIM, 98% CP/OLP) + DMAR March 2026. Two inline visuals: horizontal stacked bar showing equity decomposition on a $725K HR sale (Seller Take-Home 47% / Mortgage Payoff 46% / Selling Costs 7%) and side-by-side payment comparison cards ($1,550/mo current vs. $5,420/mo new vs. $3,870/mo increase). Sell-first vs. buy-first framework.
+
+### Success Story placeholder hide (from Apr 15 queue)
+- Added optional `draft: z.boolean()` field to `successStories` Zod schema in `src/content.config.ts`.
+- Marked 6 placeholder success stories as `draft: true` (listing data only, stories pending client interviews): 8781-flora-ct-arvada, 22461-e-union-circle-aurora, 4360-w-wagon-trail-dr-denver, 9559-w-coal-mine-ave-littleton, 301-w-lehow-ave-englewood, 10315-ravenswood-ln-highlands-ranch.
+- `/sell/success-stories/` index page now filters out drafts from the card grid and CollectionPage ItemList schema.
+- `[slug].astro` template: draft stories render with `<meta name="robots" content="noindex, nofollow" />` and skip all Schema.org structured-data scripts (RealEstateListing / Review / Article / ImageObject / FAQPage) to avoid thin-content + structured-data-mismatch flags.
+- `astro.config.mjs`: added sitemap `filter` that excludes the 6 draft slugs. Single source of truth — remove a slug from the `DRAFT_SUCCESS_STORY_SLUGS` array when its story is completed.
+- Verified via local build: 0 draft slugs in rendered index, 0 draft URLs in sitemap-0.xml, draft pages include the robots meta, non-draft pages unchanged.
+
+### Schema markup upgrade for AI entity recognition (from Apr 16 queue)
+- Homepage (`index.astro`): merged two duplicate `RealEstateAgent` schema blocks into one unified `["Person", "RealEstateAgent"]` block with `@id`, `jobTitle`, `alternateName`. Fixed stale `reviewCount` from 52 → 47 (matches current Google reviews). Added Homes.com and Nextdoor URLs to `sameAs` array.
+- About page (`about.astro`): upgraded thin `Person` schema to full `["Person", "RealEstateAgent"]` with `@id` linking to homepage entity, `mainEntityOfPage`, `image`, `address`, `areaServed` (9 cities), `aggregateRating`, `hasCredential`, `knowsAbout`, and full `sameAs` array (12 URLs).
+- Added awards (DMAR Excellence 2024–2026, 5280 Black Diamond, Real Trends Verified), credentials (Who's Who in Luxury RE), and memberOf (DMAR, Who's Who) to both homepage and about page schema. Added Real Trends and 5280 directory URLs to `sameAs`.
+- Added Wikidata entity URL (Q139385406) to `sameAs` on both homepage and about page.
+- Added visual badge/awards section to about page: DMAR Excellence Gold, 5280 Top Producer, Real Trends Verified, Who's Who in Luxury RE, RENE. White background section between Track Record and CTA.
+- Badge images: all five logos imported as PNGs through Astro `<Image>` pipeline (ea25_digitalawards_gold.png, 5280-magazine-black.png, rtv-black.png, WWLRE_BLACK.png, rene-color.png).
+- Three badges linked to profile pages: DMAR → excellenceawards, 5280 → directory profile, Real Trends → agent profile.
+- Added two new Track Record credential tiles: "Top 10 — Agent by Verified Sales — RealTrends" and "Top 1.5% — of U.S. Real Estate Professionals."
+- CSS: fixed logo clipping (height-based sizing with width:auto), removed opacity fade on badges.
+
+### Housekeeping
+- Deleted stale repo-root files: `blog-post-writer-SKILL-UPDATED.md` (0-byte stub) and `blog-post-writer.skill` (April 10 zip, superseded).
+
+---
+
 ## 2026-04-15 — commit 47824c8 | Credits used: 15 | Credits remaining: 200
 
 ### Performance
