@@ -39,10 +39,10 @@ testimonials:
     text: "Jacob was astonishing to work with. He took the time to listen to my concerns and answered all my questions. When things changed, on my part, he was flexible and tolerant. He seemed to me to be the kind of person who could work with anyone. I wasn't an easy client either but he made me feel like I was. I'd recommend him to anyone asking! In my opinion, he's a rock star!"
     rating: 5
 heroImage:
-  src: "7327-s-carr-ct-littleton/01-exterior.jpg"
+  src: "7327-s-carr-ct-littleton/1-web-or-mls-#4336 - Jacob Stark - 7327 S Carr Ct, Littleton, CO 80128_100.jpg"
   alt: "Exterior of 7327 S Carr Ct in the Stony Creek neighborhood of Littleton Colorado"
 images:
-  - src: "7327-s-carr-ct-littleton/01-exterior.jpg"
+  - src: "7327-s-carr-ct-littleton/1-web-or-mls-#4336 - Jacob Stark - 7327 S Carr Ct, Littleton, CO 80128_100.jpg"
     alt: "Exterior of 7327 S Carr Ct in the Stony Creek neighborhood of Littleton Colorado"
 faqSchema:
   - question: "How much did the Stony Creek home at 7327 S Carr Ct sell for in Littleton?"

@@ -35,10 +35,10 @@ story:
   strategyNarrative: "When life forces a move, having a team that handles the details makes all the difference. New carpet, deep cleaning, and staging transformed the home's presentation. The result: $31,000 over list price in just 4 days."
 testimonials: []
 heroImage:
-  src: "2993-s-jericho-ct-aurora/01-exterior.jpg"
+  src: "2993-s-jericho-ct-aurora/1-web-or-mls-#5178 - Jacob Stark - 2993 S Jericho Ct, Aurora, CO 80013_99.jpg"
   alt: "Exterior of 2993 S Jericho Ct in Conservatory Park Aurora Colorado"
 images:
-  - src: "2993-s-jericho-ct-aurora/01-exterior.jpg"
+  - src: "2993-s-jericho-ct-aurora/1-web-or-mls-#5178 - Jacob Stark - 2993 S Jericho Ct, Aurora, CO 80013_99.jpg"
     alt: "Exterior of 2993 S Jericho Ct in Conservatory Park Aurora Colorado"
 faqSchema:
   - question: "How do you sell a home when life transitions force a quick sale?"

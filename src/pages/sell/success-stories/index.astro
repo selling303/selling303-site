@@ -68,7 +68,8 @@ const collectionSchema = {
     subtext="Every home sale has a story. Here's how we helped South Denver Metro homeowners navigate their unique situations with clarity, control, and confidence."
   />
 
-  <div class="container" style="margin-top: calc(-1 * var(--space-md));">
+  <!-- Breadcrumbs: JSON-LD only, visually hidden -->
+  <div class="sr-only">
     <Breadcrumbs items={[
       { label: 'Home', url: '/' },
       { label: 'Sell', url: '/sell/success-stories' },
@@ -76,13 +77,71 @@ const collectionSchema = {
     ]} />
   </div>
 
-  <!-- Trust Signals -->
-  <TrustSignals />
+  <!-- Featured Stories (first 3) — immediate hook before credibility -->
+  <section class="section" style="padding-bottom: 0;">
+    <div class="container">
+      <div class="ss-featured-grid">
+        {sorted.slice(0, 3).map((story) => {
+          const d = story.data;
+          const heroSrc = resolveImage(d.heroImage.src);
+          const overUnder = d.results.closedPrice - d.results.listPrice;
+          const overFormatted = overUnder >= 0
+            ? `+${new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(overUnder)}`
+            : new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(overUnder);
 
-  <!-- Filter Bar -->
+          return (
+            <a href={`/sell/success-stories/${story.id}`} class="ss-card" data-situation={d.situationType}>
+              <div class="ss-card__image">
+                <img
+                  src={heroSrc}
+                  alt={d.heroImage.alt}
+                  loading="eager"
+                  decoding="async"
+                  width="600"
+                  height="400"
+                />
+                <span class="ss-card__badge">{d.situationType}</span>
+              </div>
+              <div class="ss-card__body">
+                <h3 class="ss-card__title">{d.headline}</h3>
+                <p class="ss-card__address">{d.address.street}, {d.address.city}</p>
+                <div class="ss-card__stats">
+                  <div class="ss-card__stat">
+                    <span class="ss-card__stat-value">{formatPrice(d.results.closedPrice)}</span>
+                    <span class="ss-card__stat-label">Sold</span>
+                  </div>
+                  <div class="ss-card__stat">
+                    <span class="ss-card__stat-value ss-card__stat-value--accent">{overFormatted}</span>
+                    <span class="ss-card__stat-label">{overUnder >= 0 ? 'Over List' : 'Under List'}</span>
+                  </div>
+                  <div class="ss-card__stat">
+                    <span class="ss-card__stat-value">{d.results.daysOnMarket}d</span>
+                    <span class="ss-card__stat-label">DOM</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- Credibility Tiles -->
+  <TrustSignals stats={[
+    { number: "$46M+", label: "Career Sales Volume" },
+    { number: "83", label: "Families Helped" },
+    { number: "Top 10", label: "Agent by Verified Sales — RealTrends" },
+    { number: "Top 1.5%", label: "of U.S. Real Estate Professionals" },
+    { number: "100.6%", label: "Avg Sale-to-List" },
+    { number: "5.0", label: "Google Rating" },
+  ]} />
+
+  <!-- Filter Bar + All Remaining Stories -->
   {situationTypes.length > 1 && (
     <section class="section" style="padding-bottom: 0;">
       <div class="container">
+        <h2 style="text-align: center; margin-bottom: var(--space-md); font-size: 1.75rem;">Browse All Stories</h2>
         <div class="ss-index-filters" id="ss-filters">
           <button class="ss-filter-btn ss-filter-btn--active" data-filter="all">All Stories</button>
           {situationTypes.map((type) => (
@@ -93,7 +152,7 @@ const collectionSchema = {
     </section>
   )}
 
-  <!-- Story Cards Grid -->
+  <!-- Story Cards Grid (all stories including featured — filter applies here) -->
   <section class="section">
     <div class="container">
       <div class="ss-index-grid" id="ss-grid">
@@ -181,6 +240,19 @@ const collectionSchema = {
     background: var(--color-primary-light);
     border-color: var(--color-primary-light);
     color: #fff;
+  }
+
+  /* ── Featured Grid (top 3 stories) ── */
+  .ss-featured-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+  }
+  @media (max-width: 900px) {
+    .ss-featured-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .ss-featured-grid { grid-template-columns: 1fr; }
   }
 
   /* ── Card Grid ── */

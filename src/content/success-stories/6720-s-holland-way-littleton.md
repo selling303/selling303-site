@@ -35,10 +35,10 @@ story:
   strategyNarrative: "Staging and photography made all the difference in overcoming the outdated finishes. Smart pricing in a high-rate environment still generated multiple competing offers, allowing Christine to move forward with her next home purchase."
 testimonials: []
 heroImage:
-  src: "6720-s-holland-way-littleton/01-exterior.jpg"
+  src: "6720-s-holland-way-littleton/1-web-or-mls-#4362 - Jacob Stark - 6720 S Holland Way Littleton CO 80128_100.jpg"
   alt: "Exterior of 6720 S Holland Way townhome in Dutch Ridge Littleton Colorado"
 images:
-  - src: "6720-s-holland-way-littleton/01-exterior.jpg"
+  - src: "6720-s-holland-way-littleton/1-web-or-mls-#4362 - Jacob Stark - 6720 S Holland Way Littleton CO 80128_100.jpg"
     alt: "Exterior of 6720 S Holland Way townhome in Dutch Ridge Littleton Colorado"
 faqSchema:
   - question: "How do you sell an outdated home in a high interest rate environment?"

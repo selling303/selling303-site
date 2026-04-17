@@ -16,3 +16,12 @@ Changes waiting to be pushed to production. Each conversation logs what it chang
 - Timing section closer: stopped directing readers to DMAR and CAR as research they should do themselves. Reframed as "reach out to Jacob for a move-up conversation — he pulls from these sources to build the local read." Links retained as source attribution only.
 - Illustrative-calculations footnote: swapped "check the Freddie Mac PMMS" for "a trusted local lender should run the specific scenario for your situation."
 - Voice pattern captured for future reviewer-skill corpus: *direct-to-consumer source references and generic authority-site recommendations instead of lender/agent recommendations.*
+
+## 2026-04-17 — Seller Success Stories migration (Framer → Astro)
+
+- **8 full success story content files** created with SCAR narratives, 5 FAQs each, testimonials, structured data: Golden, Centennial (Birch St), Centennial (Phillips Dr), Littleton (Carr Ct), Littleton (Holland Way x2), Littleton (Flower St), Parker (Woodside Ln), Aurora (Jericho Ct)
+- **6 listing-only placeholder content files** for stories pending client interviews: Arvada (Flora Ct), Aurora (Union Circle), Denver (Wagon Trail), Littleton (Coal Mine), Englewood (Lehow), Highlands Ranch (Ravenswood)
+- **[slug].astro template**: Added auto-image-discovery via `import.meta.glob` — stories auto-find all images in their folder. Only Golden uses manual frontmatter image list (46 custom alt texts). Made sqft display conditional.
+- **content.config.ts**: Made `sqft` optional in successStories schema
+- **Index page rewrite**: Hidden breadcrumbs (sr-only for SEO), 3 featured stories above credibility tiles, 6-stat credibility tiles matching about page, "Browse All Stories" heading + filter + full grid below
+- **Hero image paths wired** for all 9 stories with photos to match actual filenames in each folder

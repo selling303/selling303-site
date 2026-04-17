@@ -30,10 +30,10 @@ story:
     - "Strategy details pending — to be completed via client interview."
 testimonials: []
 heroImage:
-  src: "8781-flora-ct-arvada/01-exterior.jpg"
+  src: "8781-flora-ct-arvada/1-04 8781 Flora Ct.jpg"
   alt: "Exterior of 8781 Flora Ct with mountain views in Whisper Creek Arvada Colorado"
 images:
-  - src: "8781-flora-ct-arvada/01-exterior.jpg"
+  - src: "8781-flora-ct-arvada/1-04 8781 Flora Ct.jpg"
     alt: "Exterior of 8781 Flora Ct with mountain views in Whisper Creek Arvada Colorado"
 faqSchema:
   - question: "What is the price of 8781 Flora Ct, Arvada?"

@@ -40,10 +40,10 @@ testimonials:
     text: "We can't thank Jacob enough for all the work he did in selling our home and finding our dream home in this insane market! Jacob is extremely knowledgeable about this industry but more importantly his passion for real-estate and people shines through in every interaction."
     rating: 5
 heroImage:
-  src: "7307-s-birch-st-centennial/01-exterior.jpg"
+  src: "7307-s-birch-st-centennial/1.jpg"
   alt: "Exterior of 7307 S Birch Street in the Nob Hill neighborhood of Centennial Colorado"
 images:
-  - src: "7307-s-birch-st-centennial/01-exterior.jpg"
+  - src: "7307-s-birch-st-centennial/1.jpg"
     alt: "Exterior of 7307 S Birch Street in the Nob Hill neighborhood of Centennial Colorado"
 faqSchema:
   - question: "How much did 7307 S Birch Street sell for in Centennial?"
