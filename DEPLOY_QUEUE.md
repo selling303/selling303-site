@@ -20,4 +20,5 @@ Changes waiting to be pushed to production. Each conversation logs what it chang
 - About page (`about.astro`): upgraded thin `Person` schema to full `["Person", "RealEstateAgent"]` with `@id` linking to homepage entity, `mainEntityOfPage`, `image`, `address`, `areaServed` (9 cities), `aggregateRating`, `hasCredential`, `knowsAbout`, and full `sameAs` array (12 URLs).
 - Ride-along with nightly blog deploy.
 - Added awards (DMAR Excellence 2024–2026, 5280 Black Diamond, Real Trends Verified), credentials (Who's Who in Luxury RE), and memberOf (DMAR, Who's Who) to both homepage and about page schema. Added Real Trends and 5280 directory URLs to `sameAs`.
+- Added Wikidata entity URL (Q139385406) to `sameAs` on both homepage and about page.
 
