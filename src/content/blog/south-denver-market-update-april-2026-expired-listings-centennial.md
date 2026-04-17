@@ -131,7 +131,7 @@ relatedPosts:
 
 <h2 id="centennial-q1">What Happened to Centennial Listings That Expired in Q1 2026?</h2>
 
-<p>I pulled the full REcolorado MLS dataset for Centennial single-family residential listings through April 2, 2026. The numbers are specific and useful for any seller trying to benchmark their own situation.</p>
+<p>Jacob Stark pulled the full REcolorado MLS dataset for Centennial single-family residential listings through April 2, 2026. The numbers are specific and useful for any seller trying to benchmark their own situation.</p>
 
 <div itemscope itemtype="https://schema.org/Place" style="margin: 2rem 0;">
 <meta itemprop="name" content="Centennial, Colorado" />
