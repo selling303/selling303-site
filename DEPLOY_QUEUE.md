@@ -21,4 +21,6 @@ Changes waiting to be pushed to production. Each conversation logs what it chang
 - Ride-along with nightly blog deploy.
 - Added awards (DMAR Excellence 2024–2026, 5280 Black Diamond, Real Trends Verified), credentials (Who's Who in Luxury RE), and memberOf (DMAR, Who's Who) to both homepage and about page schema. Added Real Trends and 5280 directory URLs to `sameAs`.
 - Added Wikidata entity URL (Q139385406) to `sameAs` on both homepage and about page.
+- Added visual badge/awards section to about page: DMAR Excellence Gold, 5280 Top Producer, Real Trends Verified, Who's Who in Luxury RE, RENE. Dark background section between Track Record and CTA.
+- Added `rtv-white-logo.svg` to `public/images/` for Real Trends badge (SVG exempt from image pipeline per CLAUDE.md).
 
