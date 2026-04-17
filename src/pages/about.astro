@@ -6,9 +6,10 @@ import { Image } from 'astro:assets';
 import headshotSrc from '../assets/images/jacob-stark-headshot.png';
 import lifestyleKitchenSrc from '../assets/images/jacob-lifestyle-kitchen.jpg';
 import badgeDmar from '../assets/images/ea25_digitalawards_gold.png';
-import badgeRene from '../assets/images/RENE_LGO_BW_REV-HI.png';
-import badgeWwlre from '../assets/images/WWLRE_WHITE.png';
-import badge5280 from '../assets/images/5280-white-logo.png';
+import badgeRene from '../assets/images/rene-color.png';
+import badgeWwlre from '../assets/images/WWLRE_BLACK.png';
+import badge5280 from '../assets/images/5280-magazine-black.png';
+import badgeRtv from '../assets/images/rtv-black.png';
 ---
 
 <BaseLayout
@@ -187,6 +188,14 @@ import badge5280 from '../assets/images/5280-white-logo.png';
           <span class="credential__label">Families Helped</span>
         </div>
         <div class="credential">
+          <span class="credential__number">Top 10</span>
+          <span class="credential__label">Agent by Verified Sales — RealTrends</span>
+        </div>
+        <div class="credential">
+          <span class="credential__number">Top 1.5%</span>
+          <span class="credential__label">of U.S. Real Estate Professionals</span>
+        </div>
+        <div class="credential">
           <span class="credential__number">100.6%</span>
           <span class="credential__label">Avg Sale-to-List</span>
         </div>
@@ -199,48 +208,46 @@ import badge5280 from '../assets/images/5280-white-logo.png';
   </section>
 
   <!-- ========== AWARDS & RECOGNITION ========== -->
-  <section class="section section--dark badges-section">
+  <section class="section section--white badges-section">
     <div class="container text-center">
       <span class="section-label">Recognition</span>
       <h2 class="section-heading">Awards & Designations</h2>
       <div class="badge-bar">
-        <div class="badge-item">
+        <a href="https://www.dmarealtors.com/excellenceawards" target="_blank" rel="noopener" class="badge-item badge-item--dmar">
           <Image
             src={badgeDmar}
             alt="Denver Metro Association of REALTORS Excellence Award — Gold Level, 2025"
-            width={140}
-            height={140}
+            width={300}
             format="webp"
             quality={85}
             loading="lazy"
           />
-        </div>
-        <div class="badge-item">
+        </a>
+        <a href="https://directory.5280.com/real_estate_agent/jacob-stark/" target="_blank" rel="noopener" class="badge-item">
           <Image
             src={badge5280}
             alt="5280 Magazine Top Real Estate Producer — Black Diamond"
-            width={160}
-            height={70}
+            width={400}
             format="webp"
             quality={85}
             loading="lazy"
           />
-        </div>
-        <div class="badge-item">
-          <img
-            src="/images/rtv-white-logo.svg"
+        </a>
+        <a href="https://www.realtrends.com/agent-profile/jacob-stark-colorado/" target="_blank" rel="noopener" class="badge-item">
+          <Image
+            src={badgeRtv}
             alt="Real Trends Verified Agent"
-            width="160"
-            height="50"
+            width={400}
+            format="webp"
+            quality={85}
             loading="lazy"
           />
-        </div>
+        </a>
         <div class="badge-item">
           <Image
             src={badgeWwlre}
             alt="Who's Who in Luxury Real Estate member"
-            width={160}
-            height={70}
+            width={400}
             format="webp"
             quality={85}
             loading="lazy"
@@ -250,8 +257,7 @@ import badge5280 from '../assets/images/5280-white-logo.png';
           <Image
             src={badgeRene}
             alt="Real Estate Negotiation Expert (RENE) certification"
-            width={140}
-            height={80}
+            width={400}
             format="webp"
             quality={85}
             loading="lazy"
@@ -270,8 +276,9 @@ import badge5280 from '../assets/images/5280-white-logo.png';
 
 <style>
   .badges-section {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+    border-top: 1px solid #e8e8e8;
   }
 
   .badge-bar {
@@ -279,7 +286,7 @@ import badge5280 from '../assets/images/5280-white-logo.png';
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 2.5rem;
+    gap: 3rem;
     margin-top: 2rem;
   }
 
@@ -287,36 +294,30 @@ import badge5280 from '../assets/images/5280-white-logo.png';
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0.9;
-    transition: opacity 0.2s ease;
-  }
-
-  .badge-item:hover {
-    opacity: 1;
   }
 
   .badge-item img {
-    max-height: 80px;
-    width: auto;
+    height: 65px;
+    width: auto !important;
+    max-width: none !important;
     object-fit: contain;
   }
 
-  /* DMAR gold badge is taller */
-  .badge-item:first-child img {
-    max-height: 120px;
+  .badge-item--dmar img {
+    height: 110px;
   }
 
   @media (max-width: 768px) {
     .badge-bar {
-      gap: 1.5rem;
+      gap: 2rem;
     }
 
     .badge-item img {
-      max-height: 60px;
+      height: 45px;
     }
 
-    .badge-item:first-child img {
-      max-height: 90px;
+    .badge-item--dmar img {
+      height: 80px;
     }
   }
 </style>
