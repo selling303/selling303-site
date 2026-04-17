@@ -171,9 +171,9 @@ relatedPosts:
   </div>
 </div>
 
-<p style="text-align: center; font-size: 0.8rem; color: #81848a; margin-top: -0.75rem; margin-bottom: 2rem;">Illustrative P&amp;I calculations only. Actual rates, fees, and payments vary by lender, credit profile, and loan structure. Check the current week's 30-year rate via the Freddie Mac Primary Mortgage Market Survey.</p>
+<p style="text-align: center; font-size: 0.8rem; color: #81848a; margin-top: -0.75rem; margin-bottom: 2rem;">Illustrative P&amp;I calculations only. Actual rates, fees, and payments vary by lender, credit profile, and loan structure — a trusted local lender should run the specific scenario for your situation.</p>
 
-<p>Before layering in the higher property tax and insurance on a more expensive home, the move-up seller is looking at a monthly payment increase of around $4,000. That is the number that needs to clear the household budget before the tour schedule starts. Freddie Mac publishes the weekly <a href="https://www.freddiemac.com/pmms" target="_blank" rel="noopener">Primary Mortgage Market Survey</a> — check the current week's average 30-year rate before running final numbers.</p>
+<p>Before layering in the higher property tax and insurance on a more expensive home, the move-up seller is looking at a monthly payment increase of around $4,000. That is the number that needs to clear the household budget before the tour schedule starts. These figures are illustrative — a trusted local lender is the right person to run a specific pre-approval and payment scenario against your actual rate, credit profile, and loan structure. Jacob Stark partners with several South Denver lenders and can make an introduction if you need one.</p>
 
 <h3>How to shrink the payment gap</h3>
 
@@ -209,7 +209,7 @@ relatedPosts:
 
 <p>On the buy side, the same absorption pressure means upgrade homes at the $1M+ tier move quickly too. The move-up seller shopping a luxury Highlands Ranch home needs to be ready to write a confident offer inside 24–48 hours of the right listing hitting the market. Pre-approval, a ready offer template, and an agent coordinated on both sides of the transaction are the baseline.</p>
 
-<p>A Highlands Ranch move-up seller who has run the equity math, knows the payment increase they can absorb, and is ready to list in April is in the best combined seller-and-buyer position of the calendar year. That window closes as summer inventory climbs and the market flattens through June and July. For additional context on metro-wide trends, review the <a href="https://www.dmarealtors.com/market-trends-report" target="_blank" rel="noopener">DMAR Market Trends Report</a> and the Colorado Association of REALTORS' <a href="https://www.coloradorealtors.com/market-trends/" target="_blank" rel="noopener">statewide housing data</a>.</p>
+<p>A Highlands Ranch move-up seller who has run the equity math, knows the payment increase they can absorb, and is ready to list in April is in the best combined seller-and-buyer position of the calendar year. That window closes as summer inventory climbs and the market flattens through June and July. If you want to talk through how the current metro-wide trends apply to your specific Highlands Ranch property and move-up target, reach out to Jacob Stark for a move-up conversation — he pulls from the <a href="https://www.dmarealtors.com/market-trends-report" target="_blank" rel="noopener">DMAR Market Trends Report</a> and the Colorado Association of REALTORS' <a href="https://www.coloradorealtors.com/market-trends/" target="_blank" rel="noopener">statewide housing data</a> to build the local read, and can walk you through what those numbers mean for your timeline.</p>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 
