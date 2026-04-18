@@ -158,48 +158,48 @@ relatedPosts:
 <p style="margin: 0 0 1.25rem; font-size: 0.95rem; color: #4b5563;">What percentage of the seller's original asking price did the winning offer pay? Below 100 percent means the buyer negotiated down. Exactly 100 percent means full price. Above 100 percent means buyers bid over asking. Both scenarios are happening in Littleton this spring — at different price brackets.</p>
 
 <!-- Scenario A: Below list -->
-<div style="max-width: 520px; margin: 0 auto 1.25rem;">
+<div style="max-width: 560px; margin: 0 auto 1.25rem;">
   <p style="margin: 0 0 0.5rem; font-size: 0.85rem; color: #4b5563;"><strong style="color: #002a3a;">Scenario A — Citywide median:</strong> 98% of original list</p>
   <div style="margin-bottom: 0.5rem;">
     <div style="display: flex; align-items: center; gap: 0.75rem;">
-      <div style="width: 96px; font-size: 0.78rem; color: #002a3a; font-weight: 600;">Original List</div>
-      <div style="flex: 1; background: #e5e7eb; border-radius: 4px; overflow: hidden; height: 22px; position: relative;">
-        <div style="width: 85%; height: 100%; background: #81848a;"></div>
-        <div style="position: absolute; top: 50%; left: calc(85% + 8px); transform: translateY(-50%); font-size: 0.72rem; color: #002a3a; font-weight: 600; white-space: nowrap;">$700,000</div>
+      <div style="width: 96px; flex-shrink: 0; font-size: 0.78rem; color: #002a3a; font-weight: 600;">Original List</div>
+      <div style="flex: 1; min-width: 0; height: 22px; position: relative;">
+        <div style="width: 90%; height: 100%; background: #81848a; border-radius: 4px;"></div>
       </div>
+      <div style="width: 110px; flex-shrink: 0; font-size: 0.78rem; color: #002a3a; font-weight: 600; text-align: left;">$700,000</div>
     </div>
   </div>
   <div>
     <div style="display: flex; align-items: center; gap: 0.75rem;">
-      <div style="width: 96px; font-size: 0.78rem; color: #002a3a; font-weight: 600;">Close Price</div>
-      <div style="flex: 1; background: #e5e7eb; border-radius: 4px; overflow: hidden; height: 22px; position: relative;">
-        <div style="width: 83.3%; height: 100%; background: #002a3a;"></div>
-        <div style="position: absolute; top: 50%; left: calc(83.3% + 8px); transform: translateY(-50%); font-size: 0.72rem; color: #002a3a; font-weight: 600; white-space: nowrap;">$686,000 (98%)</div>
+      <div style="width: 96px; flex-shrink: 0; font-size: 0.78rem; color: #002a3a; font-weight: 600;">Close Price</div>
+      <div style="flex: 1; min-width: 0; height: 22px; position: relative;">
+        <div style="width: 88.2%; height: 100%; background: #002a3a; border-radius: 4px;"></div>
       </div>
+      <div style="width: 110px; flex-shrink: 0; font-size: 0.78rem; color: #002a3a; font-weight: 600; text-align: left;">$686,000 (98%)</div>
     </div>
   </div>
   <p style="margin: 0.55rem 0 0; font-size: 0.82rem; color: #4b5563;">A home listed at $700,000 typically closed near $686,000. Sellers gave up about two percent — tight, but not no-negotiation.</p>
 </div>
 
 <!-- Scenario B: Above list -->
-<div style="max-width: 520px; margin: 0 auto;">
+<div style="max-width: 560px; margin: 0 auto;">
   <p style="margin: 0 0 0.5rem; font-size: 0.85rem; color: #4b5563;"><strong style="color: #002a3a;">Scenario B — Competitive entry-level bracket:</strong> 104% of original list</p>
   <div style="margin-bottom: 0.5rem;">
     <div style="display: flex; align-items: center; gap: 0.75rem;">
-      <div style="width: 96px; font-size: 0.78rem; color: #002a3a; font-weight: 600;">Original List</div>
-      <div style="flex: 1; background: #e5e7eb; border-radius: 4px; overflow: hidden; height: 22px; position: relative;">
-        <div style="width: 85%; height: 100%; background: #81848a;"></div>
-        <div style="position: absolute; top: 50%; left: calc(85% + 8px); transform: translateY(-50%); font-size: 0.72rem; color: #002a3a; font-weight: 600; white-space: nowrap;">$525,000</div>
+      <div style="width: 96px; flex-shrink: 0; font-size: 0.78rem; color: #002a3a; font-weight: 600;">Original List</div>
+      <div style="flex: 1; min-width: 0; height: 22px; position: relative;">
+        <div style="width: 90%; height: 100%; background: #81848a; border-radius: 4px;"></div>
       </div>
+      <div style="width: 110px; flex-shrink: 0; font-size: 0.78rem; color: #002a3a; font-weight: 600; text-align: left;">$525,000</div>
     </div>
   </div>
   <div>
     <div style="display: flex; align-items: center; gap: 0.75rem;">
-      <div style="width: 96px; font-size: 0.78rem; color: #002a3a; font-weight: 600;">Close Price</div>
-      <div style="flex: 1; background: #e5e7eb; border-radius: 4px; overflow: hidden; height: 22px; position: relative;">
-        <div style="width: 88.4%; height: 100%; background: #4a7c59;"></div>
-        <div style="position: absolute; top: 50%; left: calc(88.4% + 8px); transform: translateY(-50%); font-size: 0.72rem; color: #4a7c59; font-weight: 700; white-space: nowrap;">$546,000 (104%)</div>
+      <div style="width: 96px; flex-shrink: 0; font-size: 0.78rem; color: #002a3a; font-weight: 600;">Close Price</div>
+      <div style="flex: 1; min-width: 0; height: 22px; position: relative;">
+        <div style="width: 93.6%; height: 100%; background: #4a7c59; border-radius: 4px;"></div>
       </div>
+      <div style="width: 140px; flex-shrink: 0; font-size: 0.78rem; color: #4a7c59; font-weight: 700; text-align: left;">$546,000 (104%)</div>
     </div>
   </div>
   <p style="margin: 0.55rem 0 0; font-size: 0.82rem; color: #4b5563;">A home listed at $525,000 drew multiple offers and closed at $546,000 — $21,000 above asking. This is the scenario first-time buyers in Littleton's sub-$600K bracket are actually competing in.</p>
