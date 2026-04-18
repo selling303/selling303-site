@@ -3,7 +3,6 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import PageHero from '../../../components/PageHero.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
-import TrustSignals from '../../../components/TrustSignals.astro';
 import CTABanner from '../../../components/CTABanner.astro';
 
 const allStories = await getCollection('successStories');
@@ -77,71 +76,42 @@ const collectionSchema = {
     ]} />
   </div>
 
-  <!-- Featured Stories (first 3) — immediate hook before credibility -->
-  <section class="section" style="padding-bottom: 0;">
+  <!-- Trust Ribbon — compact credibility bar -->
+  <section class="ss-trust-ribbon">
     <div class="container">
-      <div class="ss-featured-grid">
-        {sorted.slice(0, 3).map((story) => {
-          const d = story.data;
-          const heroSrc = resolveImage(d.heroImage.src);
-          const overUnder = d.results.closedPrice - d.results.listPrice;
-          const overFormatted = overUnder >= 0
-            ? `+${new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(overUnder)}`
-            : new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(overUnder);
-
-          return (
-            <a href={`/sell/success-stories/${story.id}`} class="ss-card" data-situation={d.situationType}>
-              <div class="ss-card__image">
-                <img
-                  src={heroSrc}
-                  alt={d.heroImage.alt}
-                  loading="eager"
-                  decoding="async"
-                  width="600"
-                  height="400"
-                />
-                <span class="ss-card__badge">{d.situationType}</span>
-              </div>
-              <div class="ss-card__body">
-                <h3 class="ss-card__title">{d.headline}</h3>
-                <p class="ss-card__address">{d.address.street}, {d.address.city}</p>
-                <div class="ss-card__stats">
-                  <div class="ss-card__stat">
-                    <span class="ss-card__stat-value">{formatPrice(d.results.closedPrice)}</span>
-                    <span class="ss-card__stat-label">Sold</span>
-                  </div>
-                  <div class="ss-card__stat">
-                    <span class="ss-card__stat-value ss-card__stat-value--accent">{overFormatted}</span>
-                    <span class="ss-card__stat-label">{overUnder >= 0 ? 'Over List' : 'Under List'}</span>
-                  </div>
-                  <div class="ss-card__stat">
-                    <span class="ss-card__stat-value">{d.results.daysOnMarket}d</span>
-                    <span class="ss-card__stat-label">DOM</span>
-                  </div>
-                </div>
-              </div>
-            </a>
-          );
-        })}
+      <div class="ss-trust-ribbon__inner">
+        <div class="ss-trust-ribbon__stat">
+          <span class="ss-trust-ribbon__number">$46M+</span>
+          <span class="ss-trust-ribbon__label">Sales Volume</span>
+        </div>
+        <span class="ss-trust-ribbon__divider" aria-hidden="true"></span>
+        <div class="ss-trust-ribbon__stat">
+          <span class="ss-trust-ribbon__number">83</span>
+          <span class="ss-trust-ribbon__label">Families Helped</span>
+        </div>
+        <span class="ss-trust-ribbon__divider" aria-hidden="true"></span>
+        <div class="ss-trust-ribbon__stat">
+          <span class="ss-trust-ribbon__number">Top 10</span>
+          <span class="ss-trust-ribbon__label">RealTrends Verified</span>
+        </div>
+        <span class="ss-trust-ribbon__divider" aria-hidden="true"></span>
+        <div class="ss-trust-ribbon__stat">
+          <span class="ss-trust-ribbon__number">100.6%</span>
+          <span class="ss-trust-ribbon__label">Avg Sale-to-List</span>
+        </div>
+        <span class="ss-trust-ribbon__divider" aria-hidden="true"></span>
+        <div class="ss-trust-ribbon__stat">
+          <span class="ss-trust-ribbon__number">5.0 ★</span>
+          <span class="ss-trust-ribbon__label">Google Rating</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Credibility Tiles -->
-  <TrustSignals stats={[
-    { number: "$46M+", label: "Career Sales Volume" },
-    { number: "83", label: "Families Helped" },
-    { number: "Top 10", label: "Agent by Verified Sales — RealTrends" },
-    { number: "Top 1.5%", label: "of U.S. Real Estate Professionals" },
-    { number: "100.6%", label: "Avg Sale-to-List" },
-    { number: "5.0", label: "Google Rating" },
-  ]} />
-
-  <!-- Filter Bar + All Remaining Stories -->
+  <!-- Filter Bar -->
   {situationTypes.length > 1 && (
-    <section class="section" style="padding-bottom: 0;">
+    <section class="ss-filter-section">
       <div class="container">
-        <h2 style="text-align: center; margin-bottom: var(--space-md); font-size: 1.75rem;">Browse All Stories</h2>
         <div class="ss-index-filters" id="ss-filters">
           <button class="ss-filter-btn ss-filter-btn--active" data-filter="all">All Stories</button>
           {situationTypes.map((type) => (
@@ -152,11 +122,11 @@ const collectionSchema = {
     </section>
   )}
 
-  <!-- Story Cards Grid (all stories including featured — filter applies here) -->
-  <section class="section">
+  <!-- Story Cards Grid (all stories — filter applies here) -->
+  <section class="ss-grid-section">
     <div class="container">
       <div class="ss-index-grid" id="ss-grid">
-        {sorted.map((story) => {
+        {sorted.map((story, idx) => {
           const d = story.data;
           const heroSrc = resolveImage(d.heroImage.src);
           const overUnder = d.results.closedPrice - d.results.listPrice;
@@ -170,7 +140,7 @@ const collectionSchema = {
                 <img
                   src={heroSrc}
                   alt={d.heroImage.alt}
-                  loading="lazy"
+                  loading={idx < 3 ? "eager" : "lazy"}
                   decoding="async"
                   width="600"
                   height="400"
@@ -209,6 +179,14 @@ const collectionSchema = {
 </BaseLayout>
 
 <style>
+  /* ── Filter + Grid Sections (tighter spacing) ── */
+  .ss-filter-section {
+    padding: var(--space-xl) 0 0;
+  }
+  .ss-grid-section {
+    padding: var(--space-md) 0 var(--space-xl);
+  }
+
   /* ── Filters ── */
   .ss-index-filters {
     display: flex;
@@ -242,17 +220,57 @@ const collectionSchema = {
     color: #fff;
   }
 
-  /* ── Featured Grid (top 3 stories) ── */
-  .ss-featured-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-md);
+  /* ── Page-level overrides ── */
+  :global(.page-hero) {
+    padding-bottom: var(--space-lg) !important;
   }
-  @media (max-width: 900px) {
-    .ss-featured-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* ── Trust Ribbon ── */
+  .ss-trust-ribbon {
+    background: var(--color-primary);
+    padding: 20px 0;
   }
-  @media (max-width: 600px) {
-    .ss-featured-grid { grid-template-columns: 1fr; }
+  .ss-trust-ribbon__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    flex-wrap: wrap;
+  }
+  .ss-trust-ribbon__stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4px 28px;
+  }
+  .ss-trust-ribbon__number {
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+  }
+  .ss-trust-ribbon__label {
+    font-size: 0.6875rem;
+    color: rgba(255, 255, 255, 0.55);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-top: 2px;
+  }
+  .ss-trust-ribbon__divider {
+    width: 1px;
+    height: 28px;
+    background: rgba(255, 255, 255, 0.15);
+    flex-shrink: 0;
+  }
+  @media (max-width: 768px) {
+    .ss-trust-ribbon__inner { gap: 4px 0; }
+    .ss-trust-ribbon__stat { padding: 6px 16px; }
+    .ss-trust-ribbon__divider { display: none; }
+  }
+  @media (max-width: 480px) {
+    .ss-trust-ribbon { padding: 16px 0; }
+    .ss-trust-ribbon__stat { min-width: 33.33%; }
   }
 
   /* ── Card Grid ── */

@@ -56,4 +56,5 @@ faqSchema:
   - question: "Should I renovate my home before selling if it's only half-done?"
     answer: "Not necessarily. If it's expensive or time-consuming to finish, price the home to reflect its current condition and market to buyers who value the projects you've completed and are ready to tackle the rest. A competitive price often sells faster than waiting for a complete renovation."
 sortOrder: 4
+draft: true
 ---

@@ -38,10 +38,10 @@ testimonials:
     text: "Jacob is a very professional, knowledgeable agent that I would refer and recommend to anyone buying or selling a home."
     rating: 5
 heroImage:
-  src: "6718-s-holland-way-littleton/1-02 6718 S Holland Way.jpg"
+  src: "6718-s-holland-way-littleton/1-web-or-mls-4362 - Jacob Stark - 6718 S Holland Way Littleton CO 80128_100.jpg"
   alt: "Exterior of 6718 S Holland Way townhome in Dutch Ridge Littleton Colorado"
 images:
-  - src: "6718-s-holland-way-littleton/1-02 6718 S Holland Way.jpg"
+  - src: "6718-s-holland-way-littleton/1-web-or-mls-4362 - Jacob Stark - 6718 S Holland Way Littleton CO 80128_100.jpg"
     alt: "Exterior of 6718 S Holland Way townhome in Dutch Ridge Littleton Colorado"
 faqSchema:
   - question: "How much did the Dutch Ridge townhome at 6718 S Holland Way sell for?"
