@@ -4,6 +4,19 @@ Changes waiting to be pushed to production. Each conversation logs what it chang
 
 ---
 
+## 2026-04-17 — Day 14 blog post (Littleton first-time buyer bidding)
+
+- **New blog post:** "What First-Time Buyers Should Know About Bidding in Littleton's Spring Market" (`src/content/blog/first-time-buyer-bidding-littleton-spring-2026.md`). Day 14 of content calendar. First-Time Homebuyers pillar + Littleton geographic pillar. MOFU buyer advice on offer strategy.
+- **Data sourcing:** Littleton Q1 2026 REcolorado MLS (433 closed SFRs, $720K median close, 98% median CP/OLP, 23 median DIM) + DMAR March 2026 (99.13% CP/LP metro, 16 median DIM, pending +30.69% MoM, 63.14% concessions). Entry-level pattern documented for sub-$600K bracket — multiple closings at 100–107% of OLP in 1–10 DIM.
+- **Structure:** Snippet answer + Key Takeaways + TOC + 7 H2 sections (all phrased as questions) + FAQ + CTA + data attribution.
+- **Visual produced inline:** "First-Time Buyer's Offer Toolkit" — stacked three-card tiered visual (escalation clause / appraisal gap / inspection flexibility) using brand colors (#002a3a / #4a7c59 / #9e6b3a brick/olive accent palette), inline styles, text in DOM, source attribution beneath.
+- **External authority links:** DMAR Market Trends, Colorado Association of REALTORS Legal Hotline.
+- **Pillar links within first 200 words:** `/first-time-homebuyers` and `/neighborhoods/littleton` in the intro.
+- Marked Day 14 `[x] (drafted 2026-04-17)` in content-calendar-2026.md.
+- Added post to First-Time Homebuyers cluster in content-cluster-map.md.
+
+---
+
 ## 2026-04-17 — Homepage PageSpeed fixes
 
 - **LCP fix:** Added `.hero::before` rule to the critical inlined CSS in `BaseLayout.astro`. Previously `.hero::before` (which renders the hero background image via `var(--hero-bg)`) only existed in the deferred `/css/styles.css`. This caused a late layout recalc when the deferred stylesheet loaded, pushing out the subtitle's LCP timestamp to ~2,460ms element render delay per PSI. With the rule in critical CSS, the hero image positioning element exists at first paint and the subtitle's LCP fires at the correct moment.
