@@ -116,7 +116,7 @@
   - Target keywords: equity to move up Highlands Ranch, Highlands Ranch home equity 2026, upgrade home Highlands Ranch
 
 #### Day 14 — Thursday, April 17
-- [x] **"What First-Time Buyers Should Know About Bidding in Littleton's Spring Market"** *(drafted 2026-04-17)*
+- [x] **"What First-Time Buyers Should Know About Bidding in Littleton's Spring Market"** *(drafted 2026-04-17)* *(published 2026-04-18)*
   - Specialization: `/first-time-homebuyers` | Geographic: `/littleton`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Offer strategy for entry-level buyers competing in Littleton. Escalation clauses, appraisal gaps, inspection flexibility.
