@@ -39,10 +39,10 @@ testimonials:
     text: "Jacob was extremely organized and professional. From our first meeting and until closing, he provided excellent advice and kept me informed timely of all the developments with the sale of my property. He was willing to go the extra mile to make sure I was well taken care of. It was a great experience. I would recommend Jacob anytime."
     rating: 5
 heroImage:
-  src: "8965-e-phillips-dr-centennial/01-exterior.jpg"
+  src: "8965-e-phillips-dr-centennial/1-web-or-mls-2740 - Jacob Stark - 8965 E Phillips Dr, Centennial, CO 80112_3404.jpg"
   alt: "Exterior of 8965 E Phillips Dr townhome in Centennial Colorado"
 images:
-  - src: "8965-e-phillips-dr-centennial/01-exterior.jpg"
+  - src: "8965-e-phillips-dr-centennial/1-web-or-mls-2740 - Jacob Stark - 8965 E Phillips Dr, Centennial, CO 80112_3404.jpg"
     alt: "Exterior of 8965 E Phillips Dr townhome in Centennial Colorado"
 faqSchema:
   - question: "How much did the townhome at 8965 E Phillips Dr sell for in Centennial?"

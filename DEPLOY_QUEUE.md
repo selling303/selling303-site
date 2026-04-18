@@ -4,34 +4,43 @@ Changes waiting to be pushed to production. Each conversation logs what it chang
 
 ---
 
-## 2026-04-15 — Success Story placeholder hide
+## 2026-04-17 — Day 14 blog post (Littleton first-time buyer bidding)
 
-- Added optional `draft: z.boolean()` field to `successStories` Zod schema in `src/content.config.ts`.
-- Marked 6 placeholder success stories as `draft: true` (listing data only, stories pending client interviews): 8781-flora-ct-arvada, 22461-e-union-circle-aurora, 4360-w-wagon-trail-dr-denver, 9559-w-coal-mine-ave-littleton, 301-w-lehow-ave-englewood, 10315-ravenswood-ln-highlands-ranch.
-- `/sell/success-stories/` index page now filters out drafts from the card grid and CollectionPage ItemList schema.
-- `[slug].astro` template: draft stories render with `<meta name="robots" content="noindex, nofollow" />` and skip all Schema.org structured-data scripts (RealEstateListing / Review / Article / ImageObject / FAQPage) to avoid thin-content + structured-data-mismatch flags.
-- `astro.config.mjs`: added sitemap `filter` that excludes the 6 draft slugs. Single source of truth — remove a slug from the `DRAFT_SUCCESS_STORY_SLUGS` array when its story is completed.
-- Verified via local build: 0 draft slugs in rendered index, 0 draft URLs in sitemap-0.xml, draft pages include the robots meta, non-draft pages unchanged.
-- Ride-along with tomorrow's nightly blog deploy — no standalone production push needed.
+- **New blog post:** "What First-Time Buyers Should Know About Bidding in Littleton's Spring Market" (`src/content/blog/first-time-buyer-bidding-littleton-spring-2026.md`). Day 14 of content calendar. First-Time Homebuyers pillar + Littleton geographic pillar. MOFU buyer advice on offer strategy.
+- **Data sourcing:** Littleton Q1 2026 REcolorado MLS (433 closed SFRs, $720K median close, 98% median CP/OLP, 23 median DIM) + DMAR March 2026 (99.13% CP/LP metro, 16 median DIM, pending +30.69% MoM, 63.14% concessions). Entry-level pattern documented for sub-$600K bracket — multiple closings at 100–107% of OLP in 1–10 DIM.
+- **Structure:** Snippet answer + Key Takeaways + TOC + 7 H2 sections (all phrased as questions) + FAQ + CTA + data attribution.
+- **Visual produced inline:** "First-Time Buyer's Offer Toolkit" — stacked three-card tiered visual (escalation clause / appraisal gap / inspection flexibility) using brand colors (#002a3a / #4a7c59 / #9e6b3a brick/olive accent palette), inline styles, text in DOM, source attribution beneath.
+- **External authority links:** DMAR Market Trends.
+- **Pillar links within first 200 words:** `/first-time-homebuyers` and `/neighborhoods/littleton` in the intro.
+- Marked Day 14 `[x] (drafted 2026-04-17)` in content-calendar-2026.md.
+- Added post to First-Time Homebuyers cluster in content-cluster-map.md.
 
-## 2026-04-16 — Schema markup upgrade for AI entity recognition
+### 2026-04-18 Jacob-review revisions (round 2 includes close-to-list dual scenario)
+- **New second visual — "How to Read the Spring 2026 Littleton Numbers":** replaced the citywide-stats bullet list with a three-panel educational block that translates median, average, and close-to-original-list ratio into plain-English meaning. Panel 1 shows median as the middle value in a sorted row of Littleton home prices (bar heights scale with price, middle bar highlighted as MEDIAN). Panel 2 shows average skewed up by a luxury outlier (brick-colored $4.25M bar pulling the mean above the median, labeled OUTLIER). Panel 3 shows CP/OLP ratio in TWO paired scenarios — Scenario A (citywide median, 98% CP/OLP, dark brand bar shorter than list bar) and Scenario B (competitive entry-level bracket, 104% CP/OLP, brand-green bar extending past list bar). Both list bars rendered at the same fixed reference width so the visual communicates ratio, not absolute dollar size. Brand colors only, inline styles, text in DOM, source attribution line. Final layout revisions: values moved into their own dedicated column (110px) at the end of each row, empty gray "track" removed (was visually meaningless), bar reference widths tuned to 90% so bars end close to their value labels without dead space.
+- **Inspection flexibility section rewrite:** removed the "informational-only inspection" bullet entirely. Added an explicit opening paragraph stating Jacob will never recommend skipping the inspection itself — a full professional inspection is non-negotiable, and the flexibility is only in how the buyer uses the findings. Kept "shorten the deadline" and "limit objection scope to material defects" bullets. Folded the concrete dollar-threshold option (no objection items under $1K / $2K / $5K) into the same bullet as scope-limiting, framed as a level-further extension of the same tactic (not a replacement) per Jacob's review note.
+- **CAR Legal Hotline link removed:** the hotline is a Realtor-only resource, not a consumer resource. Sentence tightened to attribute the guidance to Jacob's coaching rather than an external link that would mislead readers.
+- `dateModified: "April 18, 2026"` updated.
 
-- Homepage (`index.astro`): merged two duplicate `RealEstateAgent` schema blocks into one unified `["Person", "RealEstateAgent"]` block with `@id`, `jobTitle`, `alternateName`. Fixed stale `reviewCount` from 52 → 47 (matches current Google reviews). Added Homes.com and Nextdoor URLs to `sameAs` array.
-- About page (`about.astro`): upgraded thin `Person` schema to full `["Person", "RealEstateAgent"]` with `@id` linking to homepage entity, `mainEntityOfPage`, `image`, `address`, `areaServed` (9 cities), `aggregateRating`, `hasCredential`, `knowsAbout`, and full `sameAs` array (12 URLs).
-- Ride-along with nightly blog deploy.
-- Added awards (DMAR Excellence 2024–2026, 5280 Black Diamond, Real Trends Verified), credentials (Who's Who in Luxury RE), and memberOf (DMAR, Who's Who) to both homepage and about page schema. Added Real Trends and 5280 directory URLs to `sameAs`.
-- Added Wikidata entity URL (Q139385406) to `sameAs` on both homepage and about page.
-- Added visual badge/awards section to about page: DMAR Excellence Gold, 5280 Top Producer, Real Trends Verified, Who's Who in Luxury RE, RENE. White background section between Track Record and CTA.
-- Badge images: all five logos imported as PNGs through Astro `<Image>` pipeline (ea25_digitalawards_gold.png, 5280-magazine-black.png, rtv-black.png, WWLRE_BLACK.png, rene-color.png).
-- Three badges linked to profile pages: DMAR → excellenceawards, 5280 → directory profile, Real Trends → agent profile.
-- Added two new Track Record credential tiles: "Top 10 — Agent by Verified Sales — RealTrends" and "Top 1.5% — of U.S. Real Estate Professionals."
-- CSS: fixed logo clipping (height-based sizing with width:auto), removed opacity fade on badges.
+---
 
-## 2026-04-16 — Two blog posts (Day 12 recovery + Day 13)
+## 2026-04-17 — Homepage PageSpeed fixes
 
-- Day 12 recovery: "South Denver Market Update: What April 2026 Means for Sellers Sitting on Expired Listings" (`src/content/blog/south-denver-market-update-april-2026-expired-listings-centennial.md`). Drafted 2026-04-15 in the nightly task but the session was interrupted before the calendar update, cluster-map update, and GitHub push ran. File is complete and schema-valid — recovering the bookkeeping in this push. Expired Listings pillar + Centennial geographic pillar. MOFU market update. DMAR March 2026 data (30.69% MoM pending growth, 16 median DIM, 99.13% CP/LP, $590K metro median), REcolorado Q1 2026 Centennial expired cohort (39 expired + 5 withdrawn, median original list $850K, 119 avg days before expiration), Centennial closed comps ($689K median, 13 median DOM, 94% CP/OLP avg).
-- Day 13 new draft: "How Much Equity Do You Need to Move Up in Highlands Ranch?" (`src/content/blog/equity-to-move-up-highlands-ranch.md`). Move-Up Sellers pillar + Highlands Ranch geographic pillar. MOFU. REcolorado Q1 2026 Highlands Ranch closed data (198 sales, $742,500 median close, $873,461 avg, 16 median DIM, 98% CP/OLP), DMAR March 2026 rate/pending/CP-LP context. Payment comparison table ($325K @ 4% → $880K @ 6.25% = ~$3,870/mo increase), three payment-shrinking levers (more down, rate buydown, right-size target), sell-first vs. buy-first decision framework.
-- Updated content-calendar-2026.md — marked Days 12 and 13 as drafted.
-- Updated content-cluster-map.md — added Day 12 to Expired Listings cluster and Day 13 to Move-Up Sellers cluster.
-- Ride-along with next production deploy — no standalone push needed.
+- **LCP fix:** Added `.hero::before` rule to the critical inlined CSS in `BaseLayout.astro`. Previously `.hero::before` (which renders the hero background image via `var(--hero-bg)`) only existed in the deferred `/css/styles.css`. This caused a late layout recalc when the deferred stylesheet loaded, pushing out the subtitle's LCP timestamp to ~2,460ms element render delay per PSI. With the rule in critical CSS, the hero image positioning element exists at first paint and the subtitle's LCP fires at the correct moment.
+- **Forced-reflow fix:** Rewrote the GA4 init script in `SEO.astro` to defer initialization until first user interaction (scroll/click/keydown/mousemove/touchstart) or idle/3s timeout. Previously the inline `gtag('config', ...)` call fired during initial HTML parse, triggering 64ms of forced reflow on selling303.com line 154 (plus GTM's own internal reflows). Pageviews still register — only very short zero-interaction bounces under 3s are missed. Preconnect to googletagmanager.com kept for fast TLS handshake when GA does fire.
+- Only affects the homepage hero (only page using `.hero` + `--hero-bg`). Other pages use `.page-hero`, unaffected.
 
+## 2026-04-17 — Day 13 HR equity post voice edits (Jacob review)
+
+- Payment section: removed direct Freddie Mac PMMS "check the rate" call-to-action; replaced with recommendation to talk to a trusted local lender for a specific pre-approval/payment scenario, and noted Jacob can make an introduction.
+- Timing section closer: stopped directing readers to DMAR and CAR as research they should do themselves. Reframed as "reach out to Jacob for a move-up conversation — he pulls from these sources to build the local read." Links retained as source attribution only.
+- Illustrative-calculations footnote: swapped "check the Freddie Mac PMMS" for "a trusted local lender should run the specific scenario for your situation."
+- Voice pattern captured for future reviewer-skill corpus: *direct-to-consumer source references and generic authority-site recommendations instead of lender/agent recommendations.*
+
+## 2026-04-17 — Seller Success Stories migration (Framer → Astro)
+
+- **8 full success story content files** created with SCAR narratives, 5 FAQs each, testimonials, structured data: Golden, Centennial (Birch St), Centennial (Phillips Dr), Littleton (Carr Ct), Littleton (Holland Way x2), Littleton (Flower St), Parker (Woodside Ln), Aurora (Jericho Ct)
+- **6 listing-only placeholder content files** for stories pending client interviews: Arvada (Flora Ct), Aurora (Union Circle), Denver (Wagon Trail), Littleton (Coal Mine), Englewood (Lehow), Highlands Ranch (Ravenswood)
+- **[slug].astro template**: Added auto-image-discovery via `import.meta.glob` — stories auto-find all images in their folder. Only Golden uses manual frontmatter image list (46 custom alt texts). Made sqft display conditional.
+- **content.config.ts**: Made `sqft` optional in successStories schema
+- **Index page rewrite**: Hidden breadcrumbs (sr-only for SEO), 3 featured stories above credibility tiles, 6-stat credibility tiles matching about page, "Browse All Stories" heading + filter + full grid below
+- **Hero image paths wired** for all 9 stories with photos to match actual filenames in each folder

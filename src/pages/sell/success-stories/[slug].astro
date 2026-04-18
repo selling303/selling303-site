@@ -25,18 +25,28 @@ const formatPrice = (n: number) => new Intl.NumberFormat('en-US', { style: 'curr
 // Dynamically import all success story images
 const allImages = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/success-stories/**/*.{jpg,jpeg,png,webp}', { eager: true });
 
-// Resolve images for this story — match by slug folder name
+// Auto-discover all images in this story's folder
 const storySlug = entry.id;
-const resolvedImages = data.images
-  .map((img) => {
-    // Try to find the image in the glob results
-    const key = Object.keys(allImages).find((k) => k.includes(img.src));
-    if (key && allImages[key]) {
-      return { src: allImages[key].default.src, alt: img.alt };
-    }
-    // Fallback: use src as-is (for external URLs or already-resolved paths)
-    return { src: img.src, alt: img.alt };
-  });
+const storyFolder = `/${storySlug}/`;
+const autoImages = Object.entries(allImages)
+  .filter(([key]) => key.includes(storyFolder))
+  .sort(([a], [b]) => a.localeCompare(b, undefined, { numeric: true }))
+  .map(([key, mod]) => ({
+    src: mod.default.src,
+    alt: `Listing photo of ${addr.street}, ${addr.city}, ${addr.state}`,
+  }));
+
+// Use frontmatter images if detailed list provided (>1 entry with custom alt text),
+// otherwise use auto-discovered images from the folder
+const resolvedImages = data.images.length > 1
+  ? data.images.map((img) => {
+      const key = Object.keys(allImages).find((k) => k.includes(img.src));
+      if (key && allImages[key]) {
+        return { src: allImages[key].default.src, alt: img.alt };
+      }
+      return { src: img.src, alt: img.alt };
+    })
+  : autoImages;
 
 // Resolve hero image
 const heroKey = Object.keys(allImages).find((k) => k.includes(data.heroImage.src));

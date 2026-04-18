@@ -46,12 +46,40 @@ const {
 
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-<!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WLGW57VN8C" is:inline></script>
+<!-- Google Analytics 4 — deferred until first interaction or idle to eliminate
+     critical-path forced reflow (GA's early gtag('config') reads layout properties).
+     Pageviews still fire as soon as GA initializes; only very short bounces (<3s, no interaction) are missed. -->
 <script is:inline>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-WLGW57VN8C');
+  (function () {
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { dataLayer.push(arguments); };
+
+    var initialized = false;
+    function initGA() {
+      if (initialized) return;
+      initialized = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-WLGW57VN8C';
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', 'G-WLGW57VN8C');
+    }
+
+    // Initialize on first meaningful user interaction
+    var events = ['scroll', 'click', 'keydown', 'mousemove', 'touchstart'];
+    function onInteraction() {
+      events.forEach(function (e) { window.removeEventListener(e, onInteraction, { passive: true }); });
+      initGA();
+    }
+    events.forEach(function (e) { window.addEventListener(e, onInteraction, { once: true, passive: true }); });
+
+    // Fallback: initialize after idle / 3s timeout so zero-interaction visits still register
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(initGA, { timeout: 3000 });
+    } else {
+      setTimeout(initGA, 3000);
+    }
+  })();
 </script>
 

@@ -102,21 +102,21 @@
   - Target keywords: selling first home South Denver, first-time seller mistakes, what to expect selling house Centennial
 
 #### Day 12 — Tuesday, April 15
-- [x] **"South Denver Market Update: What April 2026 Means for Sellers Sitting on Expired Listings"** *(drafted 2026-04-15)*
+- [x] **"South Denver Market Update: What April 2026 Means for Sellers Sitting on Expired Listings"** *(drafted 2026-04-15)* *(published 2026-04-17)*
   - Specialization: `/expired-listings` | Geographic: `/centennial`
   - Type: Market update | Funnel: MOFU
   - Angle: Spring market data tied to expired listing opportunity. Absorption rate, new inventory impact, pricing reset window.
   - Target keywords: South Denver market update April 2026, expired listing spring market, Centennial real estate market
 
 #### Day 13 — Wednesday, April 16
-- [x] **"How Much Equity Do You Need to Move Up in Highlands Ranch?"** *(drafted 2026-04-16)*
+- [x] **"How Much Equity Do You Need to Move Up in Highlands Ranch?"** *(drafted 2026-04-16)* *(published 2026-04-17)*
   - Specialization: `/move-up-sellers` | Geographic: `/highlands-ranch`
   - Type: Buyer/seller advice | Funnel: MOFU
   - Angle: Equity math for the move-up decision. Home value appreciation data, down payment scenarios, carrying cost comparison.
   - Target keywords: equity to move up Highlands Ranch, Highlands Ranch home equity 2026, upgrade home Highlands Ranch
 
 #### Day 14 — Thursday, April 17
-- [ ] **"What First-Time Buyers Should Know About Bidding in Littleton's Spring Market"**
+- [x] **"What First-Time Buyers Should Know About Bidding in Littleton's Spring Market"** *(drafted 2026-04-17)*
   - Specialization: `/first-time-homebuyers` | Geographic: `/littleton`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Offer strategy for entry-level buyers competing in Littleton. Escalation clauses, appraisal gaps, inspection flexibility.
