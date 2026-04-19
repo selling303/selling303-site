@@ -1,0 +1,679 @@
+---
+/**
+ * HomeEquityCalculator.astro
+ *
+ * Interactive equity & affordability calculator for move-up sellers.
+ * Used on:
+ *   - /tools/home-equity-calculator (standalone)
+ *   - /move-up-sellers (embedded)
+ *
+ * All computation is native (no external embed) so the HTML is
+ * crawlable by Google and citable by ChatGPT / Perplexity / Google AI Overviews.
+ */
+
+interface Props {
+  showHeader?: boolean; // set false when embedded inside a page that already has a heading
+}
+
+const { showHeader = true } = Astro.props;
+
+// --- Defaults (server-rendered so initial HTML shows real numbers, not zeros) ---
+const d_homeValue = 700000;
+const d_mortgage = 300000;
+const d_nextPrice = 950000;
+const d_dpPct = 20;
+const d_rate = 6.5;
+const d_txPct = 8;
+
+// Initial computation (mirrors JS logic; kept here so SSR output is meaningful)
+const netEquity = d_homeValue - d_mortgage - d_homeValue * (d_txPct / 100);
+const requiredDp = d_nextPrice * (d_dpPct / 100);
+const cashReserve = netEquity - requiredDp;
+const loanAmount = d_nextPrice - requiredDp;
+const monthlyRate = d_rate / 100 / 12;
+const n = 360;
+const pAndI =
+  (loanAmount * monthlyRate * Math.pow(1 + monthlyRate, n)) /
+  (Math.pow(1 + monthlyRate, n) - 1);
+const taxIns = (d_nextPrice * 0.01) / 12; // ~1% annually for Colorado T&I rough est
+const totalMonthly = pAndI + taxIns;
+
+const fmt = (v: number) =>
+  new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    maximumFractionDigits: 0,
+  }).format(Math.max(0, Math.round(v)));
+---
+
+<div class="hec" data-calculator="home-equity">
+  {showHeader && (
+    <div class="hec__intro">
+      <span class="section-label">Free Tool</span>
+      <h2 class="hec__title">Home Equity &amp; Affordability Calculator</h2>
+      <p class="hec__subtitle">
+        Estimate your net equity, available down payment, and monthly cost
+        for your next South Denver home &mdash; in under 30 seconds.
+      </p>
+    </div>
+  )}
+
+  <div class="hec__grid">
+    <!-- INPUTS -->
+    <form class="hec__inputs" onsubmit="return false;">
+      <h3 class="hec__section-heading">Your Numbers</h3>
+
+      <label class="hec__field">
+        <span class="hec__label">Current home value</span>
+        <span class="hec__input-row">
+          <span class="hec__prefix">$</span>
+          <input
+            type="number"
+            data-input="homeValue"
+            value={d_homeValue}
+            min="200000"
+            max="3000000"
+            step="5000"
+            inputmode="numeric"
+          />
+        </span>
+        <input
+          type="range"
+          data-range="homeValue"
+          value={d_homeValue}
+          min="200000"
+          max="3000000"
+          step="5000"
+          aria-label="Current home value slider"
+        />
+      </label>
+
+      <label class="hec__field">
+        <span class="hec__label">Remaining mortgage balance</span>
+        <span class="hec__input-row">
+          <span class="hec__prefix">$</span>
+          <input
+            type="number"
+            data-input="mortgage"
+            value={d_mortgage}
+            min="0"
+            max="3000000"
+            step="5000"
+            inputmode="numeric"
+          />
+        </span>
+        <input
+          type="range"
+          data-range="mortgage"
+          value={d_mortgage}
+          min="0"
+          max="3000000"
+          step="5000"
+          aria-label="Remaining mortgage balance slider"
+        />
+      </label>
+
+      <label class="hec__field">
+        <span class="hec__label">Target next-home price</span>
+        <span class="hec__input-row">
+          <span class="hec__prefix">$</span>
+          <input
+            type="number"
+            data-input="nextPrice"
+            value={d_nextPrice}
+            min="200000"
+            max="5000000"
+            step="5000"
+            inputmode="numeric"
+          />
+        </span>
+        <input
+          type="range"
+          data-range="nextPrice"
+          value={d_nextPrice}
+          min="200000"
+          max="5000000"
+          step="5000"
+          aria-label="Target next home price slider"
+        />
+      </label>
+
+      <label class="hec__field">
+        <span class="hec__label">Down payment</span>
+        <span class="hec__input-row">
+          <input
+            type="number"
+            data-input="dpPct"
+            value={d_dpPct}
+            min="3"
+            max="50"
+            step="1"
+            inputmode="numeric"
+          />
+          <span class="hec__suffix">%</span>
+        </span>
+        <input
+          type="range"
+          data-range="dpPct"
+          value={d_dpPct}
+          min="3"
+          max="50"
+          step="1"
+          aria-label="Down payment percent slider"
+        />
+      </label>
+
+      <details class="hec__advanced">
+        <summary>Advanced assumptions</summary>
+        <div class="hec__advanced-grid">
+          <label class="hec__field hec__field--small">
+            <span class="hec__label">Mortgage rate (%)</span>
+            <input
+              type="number"
+              data-input="rate"
+              value={d_rate}
+              min="3"
+              max="12"
+              step="0.125"
+              inputmode="decimal"
+            />
+          </label>
+          <label class="hec__field hec__field--small">
+            <span class="hec__label">Sale transaction cost (%)</span>
+            <input
+              type="number"
+              data-input="txPct"
+              value={d_txPct}
+              min="4"
+              max="12"
+              step="0.5"
+              inputmode="decimal"
+            />
+          </label>
+        </div>
+        <p class="hec__fine-print">
+          Transaction cost default is 8% (agent commissions, title, transfer tax,
+          minor prep). Rate default is 6.5%. Adjust for your situation.
+        </p>
+      </details>
+    </form>
+
+    <!-- OUTPUTS -->
+    <div class="hec__outputs">
+      <h3 class="hec__section-heading">Your Results</h3>
+
+      <div class="hec__result hec__result--primary">
+        <span class="hec__result-label">Estimated net equity from sale</span>
+        <span class="hec__result-value" data-output="netEquity">
+          {fmt(netEquity)}
+        </span>
+        <span class="hec__result-note">After mortgage payoff and transaction costs.</span>
+      </div>
+
+      <div class="hec__result-grid">
+        <div class="hec__result">
+          <span class="hec__result-label">Required down payment</span>
+          <span class="hec__result-value hec__result-value--md" data-output="requiredDp">
+            {fmt(requiredDp)}
+          </span>
+        </div>
+
+        <div class="hec__result">
+          <span class="hec__result-label">Cash reserve after down payment</span>
+          <span class="hec__result-value hec__result-value--md" data-output="cashReserve">
+            {fmt(cashReserve)}
+          </span>
+          <span class="hec__result-note">For closing, moving, reserves.</span>
+        </div>
+
+        <div class="hec__result">
+          <span class="hec__result-label">New loan amount</span>
+          <span class="hec__result-value hec__result-value--md" data-output="loanAmount">
+            {fmt(loanAmount)}
+          </span>
+        </div>
+
+        <div class="hec__result">
+          <span class="hec__result-label">Estimated monthly payment</span>
+          <span class="hec__result-value hec__result-value--md" data-output="totalMonthly">
+            {fmt(totalMonthly)}
+          </span>
+          <span class="hec__result-note">
+            P&amp;I + est. taxes and insurance. 30-year fixed.
+          </span>
+        </div>
+      </div>
+
+      <div class="hec__verdict" data-verdict>
+        <span class="hec__verdict-label" data-verdict-label>Your situation</span>
+        <p class="hec__verdict-text" data-verdict-text>
+          Calculating&hellip;
+        </p>
+      </div>
+
+      <div class="hec__cta">
+        <a
+          href="https://calendly.com/jacob-realtor"
+          class="btn btn--primary btn--lg"
+          target="_blank"
+          rel="noopener"
+        >
+          Book my equity analysis
+        </a>
+        <a
+          href="sms:+13039970634?&body=Hi%20Jacob%2C%20I%20ran%20the%20home%20equity%20calculator%20and%20have%20a%20question."
+          class="btn btn--outline-dark btn--lg"
+        >
+          Text me: 303-997-0634
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <p class="hec__disclaimer">
+    Estimates only. Actual equity depends on your final sale price, specific mortgage payoff, and negotiated closing costs. Monthly payment estimates assume a 30-year fixed conventional loan; your actual rate, taxes, and insurance will vary by lender and property. This tool is not a loan approval, pre-qualification, or mortgage offer. For precise figures, consult a licensed mortgage lender and Jacob Stark for a current comparative market analysis.
+  </p>
+</div>
+
+<style>
+  .hec {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-md);
+    box-shadow: var(--shadow-md);
+  }
+
+  .hec__intro {
+    text-align: center;
+    margin-bottom: var(--space-md);
+  }
+
+  .hec__title {
+    margin-bottom: var(--space-xs);
+  }
+
+  .hec__subtitle {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .hec__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+  }
+
+  @media (max-width: 860px) {
+    .hec__grid {
+      grid-template-columns: 1fr;
+    }
+    .hec {
+      padding: var(--space-sm);
+    }
+  }
+
+  .hec__section-heading {
+    font-size: 1.0625rem;
+    margin-bottom: var(--space-sm);
+    padding-bottom: var(--space-xs);
+    border-bottom: 2px solid var(--color-accent);
+    display: inline-block;
+  }
+
+  /* --- INPUTS --- */
+  .hec__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .hec__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .hec__label {
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-dark-text);
+  }
+
+  .hec__input-row {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: var(--color-white);
+    transition: border-color var(--transition);
+  }
+  .hec__input-row:focus-within {
+    border-color: var(--color-primary);
+  }
+  .hec__prefix {
+    padding: 0 0.75rem;
+    color: var(--color-body-text);
+    font-weight: 600;
+    border-right: 1px solid var(--color-border);
+  }
+  .hec__suffix {
+    padding: 0 0.75rem;
+    color: var(--color-body-text);
+    font-weight: 600;
+    border-left: 1px solid var(--color-border);
+  }
+  .hec__input-row input[type="number"] {
+    flex: 1;
+    padding: 0.75rem;
+    border: none;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-dark-text);
+    background: transparent;
+    width: 100%;
+  }
+  .hec__input-row input[type="number"]:focus {
+    outline: none;
+  }
+  .hec__field input[type="range"] {
+    width: 100%;
+    accent-color: var(--color-accent);
+  }
+
+  .hec__advanced {
+    margin-top: var(--space-sm);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: var(--space-sm) var(--space-md);
+    background: var(--color-background);
+  }
+  .hec__advanced summary {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--color-primary);
+    padding: 0.25rem 0;
+    list-style: none;
+  }
+  .hec__advanced summary::-webkit-details-marker {
+    display: none;
+  }
+  .hec__advanced summary::before {
+    content: "⚙  ";
+    margin-right: 0.25rem;
+  }
+  .hec__advanced-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm);
+    margin-top: var(--space-sm);
+  }
+  @media (max-width: 520px) {
+    .hec__advanced-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .hec__field--small .hec__label {
+    font-size: 0.8125rem;
+  }
+  .hec__field--small input {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    width: 100%;
+  }
+  .hec__fine-print {
+    font-size: 0.75rem;
+    color: var(--color-light-text);
+    margin-top: var(--space-sm);
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
+
+  /* --- OUTPUTS --- */
+  .hec__outputs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .hec__result {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .hec__result-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-light-text);
+    font-weight: 600;
+  }
+  .hec__result-value {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    line-height: 1.1;
+  }
+  .hec__result-value--md {
+    font-size: 1.25rem;
+  }
+  .hec__result--primary .hec__result-value {
+    font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+  }
+  .hec__result--primary {
+    background: var(--color-background);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--color-accent);
+  }
+  .hec__result-note {
+    font-size: 0.7rem;
+    color: var(--color-body-text);
+  }
+  .hec__result-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm);
+  }
+  @media (max-width: 480px) {
+    .hec__result-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* --- VERDICT --- */
+  .hec__verdict {
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    background: var(--color-white);
+    transition: background-color var(--transition), border-color var(--transition);
+  }
+  .hec__verdict[data-state="strong"] {
+    background: #ecf7ee;
+    border-color: #9ed4a6;
+  }
+  .hec__verdict[data-state="adequate"] {
+    background: #fff7e6;
+    border-color: #e6c878;
+  }
+  .hec__verdict[data-state="tight"] {
+    background: #fdecec;
+    border-color: #e6a1a1;
+  }
+  .hec__verdict-label {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 0.25rem;
+  }
+  .hec__verdict-text {
+    margin: 0;
+    color: var(--color-dark-text);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+  }
+
+  /* --- CTA --- */
+  .hec__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-top: var(--space-xs);
+  }
+  .hec__cta .btn {
+    flex: 1;
+    min-width: 200px;
+    white-space: nowrap;
+  }
+
+  /* --- DISCLAIMER --- */
+  .hec__disclaimer {
+    margin-top: var(--space-md);
+    padding-top: var(--space-sm);
+    border-top: 1px solid var(--color-border);
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: var(--color-light-text);
+  }
+</style>
+
+<script>
+  // Self-initialize every calculator instance on the page.
+  // Supports multiple embeds safely (e.g., standalone page + move-up-sellers).
+  (function initHomeEquityCalculators() {
+    const instances = document.querySelectorAll<HTMLElement>(
+      '[data-calculator="home-equity"]'
+    );
+    instances.forEach((root) => initOne(root));
+
+    function initOne(root: HTMLElement) {
+      const q = <T extends Element = HTMLElement>(sel: string) =>
+        root.querySelector(sel) as T | null;
+      const qAll = (sel: string) =>
+        Array.from(root.querySelectorAll<HTMLElement>(sel));
+
+      const inputs = {
+        homeValue: q<HTMLInputElement>('[data-input="homeValue"]')!,
+        mortgage: q<HTMLInputElement>('[data-input="mortgage"]')!,
+        nextPrice: q<HTMLInputElement>('[data-input="nextPrice"]')!,
+        dpPct: q<HTMLInputElement>('[data-input="dpPct"]')!,
+        rate: q<HTMLInputElement>('[data-input="rate"]')!,
+        txPct: q<HTMLInputElement>('[data-input="txPct"]')!,
+      };
+      const ranges = {
+        homeValue: q<HTMLInputElement>('[data-range="homeValue"]')!,
+        mortgage: q<HTMLInputElement>('[data-range="mortgage"]')!,
+        nextPrice: q<HTMLInputElement>('[data-range="nextPrice"]')!,
+        dpPct: q<HTMLInputElement>('[data-range="dpPct"]')!,
+      };
+      const outputs = {
+        netEquity: q('[data-output="netEquity"]')!,
+        requiredDp: q('[data-output="requiredDp"]')!,
+        cashReserve: q('[data-output="cashReserve"]')!,
+        loanAmount: q('[data-output="loanAmount"]')!,
+        totalMonthly: q('[data-output="totalMonthly"]')!,
+      };
+      const verdict = q<HTMLElement>('[data-verdict]')!;
+      const verdictText = q('[data-verdict-text]')!;
+
+      const fmt = (v: number) =>
+        new Intl.NumberFormat("en-US", {
+          style: "currency",
+          currency: "USD",
+          maximumFractionDigits: 0,
+        }).format(Math.max(0, Math.round(v)));
+
+      function num(el: HTMLInputElement, fallback: number) {
+        const v = parseFloat(el.value);
+        return isFinite(v) ? v : fallback;
+      }
+
+      function compute() {
+        const homeValue = num(inputs.homeValue, 700000);
+        const mortgage = num(inputs.mortgage, 300000);
+        const nextPrice = num(inputs.nextPrice, 950000);
+        const dpPct = num(inputs.dpPct, 20);
+        const rate = num(inputs.rate, 6.5);
+        const txPct = num(inputs.txPct, 8);
+
+        const txCost = homeValue * (txPct / 100);
+        const netEquity = homeValue - mortgage - txCost;
+        const requiredDp = nextPrice * (dpPct / 100);
+        const cashReserve = netEquity - requiredDp;
+        const loanAmount = nextPrice - requiredDp;
+
+        const monthlyRate = rate / 100 / 12;
+        const n = 360;
+        let pAndI = 0;
+        if (monthlyRate > 0) {
+          pAndI =
+            (loanAmount * monthlyRate * Math.pow(1 + monthlyRate, n)) /
+            (Math.pow(1 + monthlyRate, n) - 1);
+        } else {
+          pAndI = loanAmount / n;
+        }
+        const taxIns = (nextPrice * 0.01) / 12;
+        const totalMonthly = pAndI + taxIns;
+
+        outputs.netEquity.textContent = fmt(netEquity);
+        outputs.requiredDp.textContent = fmt(requiredDp);
+        outputs.cashReserve.textContent = fmt(cashReserve);
+        outputs.loanAmount.textContent = fmt(loanAmount);
+        outputs.totalMonthly.textContent = fmt(totalMonthly);
+
+        // Verdict
+        let state = "tight";
+        let text =
+          "Your equity covers less than the down payment needed. Explore a sell-first strategy, a lower target price, or alternative down payment options before you shop.";
+        if (netEquity >= requiredDp * 2) {
+          state = "strong";
+          text =
+            "You're in equity-strong territory. You likely have the cushion to make a non-contingent offer — a bridge loan or recast strategy is worth exploring to unlock maximum negotiating power.";
+        } else if (netEquity >= requiredDp) {
+          state = "adequate";
+          text =
+            "Your equity covers the down payment with a modest cushion. Most South Denver move-up sellers in your position use a contingent offer or a short bridge — the right call depends on your timeline and target neighborhood.";
+        }
+        verdict.setAttribute("data-state", state);
+        verdictText.textContent = text;
+      }
+
+      // Two-way sync between number inputs and range sliders
+      function syncPair(
+        numEl: HTMLInputElement | null,
+        rangeEl: HTMLInputElement | null
+      ) {
+        if (!numEl || !rangeEl) return;
+        numEl.addEventListener("input", () => {
+          rangeEl.value = numEl.value;
+          compute();
+        });
+        rangeEl.addEventListener("input", () => {
+          numEl.value = rangeEl.value;
+          compute();
+        });
+      }
+
+      syncPair(inputs.homeValue, ranges.homeValue);
+      syncPair(inputs.mortgage, ranges.mortgage);
+      syncPair(inputs.nextPrice, ranges.nextPrice);
+      syncPair(inputs.dpPct, ranges.dpPct);
+
+      // Simple inputs (no slider twin) — advanced fields only
+      [inputs.rate, inputs.txPct].forEach((el) => {
+        el?.addEventListener("input", compute);
+      });
+
+      // Initial compute on load (re-runs defaults through the logic)
+      compute();
+    }
+  })();
+</script>

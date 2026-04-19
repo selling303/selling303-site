@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import HomeEquityCalculator from '../components/calculators/HomeEquityCalculator.astro';
 ---
 
 <BaseLayout
@@ -117,6 +118,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <li><a href="#the-problem" class="pillar-toc__link">The Problem</a></li>
           <li><a href="#common-challenges" class="pillar-toc__link">Common Challenges</a></li>
           <li><a href="#the-approach" class="pillar-toc__link">The Approach</a></li>
+          <li><a href="#equity-calculator" class="pillar-toc__link">Equity Calculator</a></li>
           <li><a href="#areas-served" class="pillar-toc__link">Areas Served</a></li>
           <li><a href="#faq" class="pillar-toc__link">FAQ</a></li>
           <li><a href="#related-reading" class="pillar-toc__link">Related Reading</a></li>
@@ -227,6 +229,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <p>Ready to talk strategy? Schedule a no-pressure call to review your options.</p>
             <a href="https://calendly.com/jacob-realtor" class="btn btn--primary btn--sm" target="_blank" rel="noopener">Schedule a Call</a>
           </div>
+        </div>
+
+
+        <!-- EQUITY CALCULATOR -->
+        <div id="equity-calculator" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Run Your Numbers</span>
+          <h2 class="section-heading">Home Equity &amp; Affordability Calculator</h2>
+          <p style="margin-bottom: var(--space-lg);">Before the strategy call, it helps to have a directional read on your own numbers. Estimate your net equity, required down payment, and monthly cost for your next South Denver home. No email required — adjust the inputs to match your situation.</p>
+          <HomeEquityCalculator showHeader={false} />
+          <p style="margin-top: var(--space-md); font-size: 0.875rem; color: var(--color-body-text);">Want the precise version? <a href="/tools/home-equity-calculator" style="color: var(--color-primary); text-decoration: underline;">Open the full calculator page</a> with explainers on how Colorado equity math works, or <a href="https://calendly.com/jacob-realtor" target="_blank" rel="noopener" style="color: var(--color-primary); text-decoration: underline;">book a free equity analysis call</a>.</p>
         </div>
 
 
