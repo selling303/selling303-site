@@ -81,38 +81,36 @@ relatedPosts:
 
 <p>Lone Tree sits on the south end of the metro along I-25 and the RTD E Line light rail, anchored by Park Meadows Mall and the RidgeGate master-planned community. The city's new construction activity concentrates on two sides — the established Heritage Hills and Heritage Estates area to the west, and the newer RidgeGate / NorthStar neighborhoods east of I-25 near Lincoln Station and the Charles Schwab campus.</p>
 
-<div itemscope itemtype="https://schema.org/Place" style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.25rem 1.5rem; margin: 1.75rem 0 1rem; box-shadow: 0 2px 12px rgba(0,42,58,0.10);">
+<div itemscope itemtype="https://schema.org/Place" style="margin: 1.75rem 0 1rem;">
   <meta itemprop="name" content="Lone Tree, Colorado" />
-  <div style="font-size: 0.78rem; color: #4a7c59; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; margin-bottom: 0.15rem;">Where the incentive leverage is</div>
-  <div style="font-size: 1rem; color: #002a3a; font-weight: 600; margin-bottom: 1rem;">Lone Tree Q1 2026 — days in MLS, closed vs. active</div>
+  <div style="text-align: center; font-size: 1.05rem; font-weight: 700; color: #002a3a; margin-bottom: 0.3rem;">The longer a Lone Tree home sits, the bigger the builder's discount gets.</div>
+  <div style="text-align: center; font-size: 0.88rem; color: #81848a; margin-bottom: 1.25rem;">Here's how long the two groups of homes take to sell in Lone Tree right now:</div>
 
-  <div style="margin-bottom: 1rem;">
-    <div style="display: flex; justify-content: space-between; align-items: baseline; font-size: 0.88rem; margin-bottom: 0.3rem;">
-      <span style="color: #002a3a; font-weight: 600;">Closed homes <span style="color: #81848a; font-weight: 400;">(36 transactions)</span></span>
-      <span style="color: #4a7c59; font-weight: 700;">13 days</span>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem;">
+    <div style="background: #fff; border: 1px solid #e5e7eb; border-top: 5px solid #4a7c59; border-radius: 6px; padding: 1.1rem 1.25rem; box-shadow: 0 2px 12px rgba(0,42,58,0.10);">
+      <div style="font-size: 0.72rem; color: #4a7c59; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">Homes that sold fast</div>
+      <div style="font-size: 1.75rem; font-weight: 700; color: #002a3a; margin: 0.3rem 0 0.1rem; line-height: 1.1;">About 2 weeks</div>
+      <div style="font-size: 0.88rem; color: #81848a; margin-bottom: 0.7rem;">13 days on the market</div>
+      <div style="background: #e5e7eb; border-radius: 4px; height: 10px; overflow: hidden; margin-bottom: 0.7rem;">
+        <div style="background: #4a7c59; width: 19%; height: 100%; border-radius: 4px;"></div>
+      </div>
+      <div style="font-size: 0.9rem; color: #002a3a;">Priced to sell. Buyers paid close to full asking price.</div>
+      <div style="font-size: 0.82rem; color: #8b3a3a; margin-top: 0.4rem; font-weight: 600;">&rarr; Little room to negotiate a discount.</div>
     </div>
-    <div style="background: #e5e7eb; border-radius: 4px; height: 18px; overflow: hidden;">
-      <div style="background: #4a7c59; width: 19%; height: 100%; border-radius: 4px;"></div>
-    </div>
-    <div style="font-size: 0.82rem; color: #81848a; margin-top: 0.3rem;">Priced right. Closed at 98% of list. Little room for buyer leverage.</div>
-  </div>
 
-  <div>
-    <div style="display: flex; justify-content: space-between; align-items: baseline; font-size: 0.88rem; margin-bottom: 0.3rem;">
-      <span style="color: #002a3a; font-weight: 600;">Active listings <span style="color: #81848a; font-weight: 400;">(44 on market)</span></span>
-      <span style="color: #9e6b3a; font-weight: 700;">67 days (avg)</span>
+    <div style="background: #fff; border: 1px solid #e5e7eb; border-top: 5px solid #9e6b3a; border-radius: 6px; padding: 1.1rem 1.25rem; box-shadow: 0 2px 12px rgba(0,42,58,0.10);">
+      <div style="font-size: 0.72rem; color: #9e6b3a; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">Homes still sitting unsold</div>
+      <div style="font-size: 1.75rem; font-weight: 700; color: #002a3a; margin: 0.3rem 0 0.1rem; line-height: 1.1;">Over 2 months</div>
+      <div style="font-size: 0.88rem; color: #81848a; margin-bottom: 0.7rem;">67 days on the market (average)</div>
+      <div style="background: #e5e7eb; border-radius: 4px; height: 10px; overflow: hidden; margin-bottom: 0.7rem;">
+        <div style="background: #9e6b3a; width: 100%; height: 100%; border-radius: 4px;"></div>
+      </div>
+      <div style="font-size: 0.9rem; color: #002a3a;">Every extra day costs the builder money in taxes, HOA, and loan interest.</div>
+      <div style="font-size: 0.82rem; color: #4a7c59; margin-top: 0.4rem; font-weight: 600;">&rarr; This is where the big incentives show up.</div>
     </div>
-    <div style="background: #e5e7eb; border-radius: 4px; height: 18px; overflow: hidden;">
-      <div style="background: #9e6b3a; width: 100%; height: 100%; border-radius: 4px;"></div>
-    </div>
-    <div style="font-size: 0.82rem; color: #81848a; margin-top: 0.3rem;">Aged standing inventory. This is where builders open the incentive playbook.</div>
-  </div>
-
-  <div style="margin-top: 1rem; padding-top: 0.85rem; border-top: 1px solid #e5e7eb; font-size: 0.88rem; color: #002a3a;">
-    <strong>The takeaway:</strong> Lone Tree closes fast when homes are priced right — but the active tail is 5x longer, and that's where builder incentive packages get richest.
   </div>
 </div>
-<p style="text-align: center; font-size: 0.8rem; color: #81848a; margin-top: -0.25rem; margin-bottom: 2rem;">Source: REcolorado MLS, Lone Tree single-family residential, Q1 2026 (Jan 1 – Mar 31). 109 total listings; median list $1,130,353.</p>
+<p style="text-align: center; font-size: 0.8rem; color: #81848a; margin-top: 0.75rem; margin-bottom: 2rem;">Source: REcolorado MLS, Lone Tree single-family homes, Q1 2026 (Jan 1 – Mar 31). 36 closed sales, 44 still listed.</p>
 
 
 <p>First-quarter 2026 MLS data tells the pricing story. Across 109 Lone Tree single-family listings in Q1 (active, pending, closed, withdrawn, and expired combined), the median list price was $1,130,353 and the median sale price came in at $962,769 — a roughly 94% list-to-close relationship at the aggregate level, pulled down by withdrawn and expired listings at the top of the market. On closed transactions alone, sellers achieved 98% of list price at a median of 13 days in the MLS.</p>
