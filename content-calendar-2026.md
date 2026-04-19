@@ -123,7 +123,7 @@
   - Target keywords: buying first home Littleton CO, Littleton spring real estate, first-time buyer offer strategy Denver
 
 #### Day 15 — Friday, April 18
-- [ ] **"Lone Tree New Construction: Builder Incentives and What They Actually Mean for Your Bottom Line"**
+- [x] **"Lone Tree New Construction: Builder Incentives and What They Actually Mean for Your Bottom Line"** *(drafted 2026-04-18)*
   - Specialization: `/new-construction` | Geographic: `/lone-tree`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Decode builder incentives (rate buydowns, closing cost credits, upgrade packages). What's real value vs. marketing.
