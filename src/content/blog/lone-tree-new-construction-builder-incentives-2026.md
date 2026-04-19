@@ -79,28 +79,41 @@ relatedPosts:
 
 <h2 id="lone-tree-market">What Does the Lone Tree New Construction Market Look Like in 2026?</h2>
 
-<div itemscope itemtype="https://schema.org/Place" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.75rem; margin: 1.5rem 0 2rem;">
+<p>Lone Tree sits on the south end of the metro along I-25 and the RTD E Line light rail, anchored by Park Meadows Mall and the RidgeGate master-planned community. The city's new construction activity concentrates on two sides — the established Heritage Hills and Heritage Estates area to the west, and the newer RidgeGate / NorthStar neighborhoods east of I-25 near Lincoln Station and the Charles Schwab campus.</p>
+
+<div itemscope itemtype="https://schema.org/Place" style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.25rem 1.5rem; margin: 1.75rem 0 1rem; box-shadow: 0 2px 12px rgba(0,42,58,0.10);">
   <meta itemprop="name" content="Lone Tree, Colorado" />
-  <div style="background: #f4f7f9; border-left: 3px solid #002a3a; padding: 0.85rem 1rem; border-radius: 0 6px 6px 0; box-shadow: 0 2px 12px rgba(0,42,58,0.10);">
-    <div style="font-size: 1.35rem; font-weight: 700; color: #002a3a; line-height: 1.1;">44</div>
-    <div style="font-size: 0.78rem; color: #81848a; text-transform: uppercase; letter-spacing: 0.03em; margin-top: 0.2rem;">Active Listings</div>
+  <div style="font-size: 0.78rem; color: #4a7c59; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700; margin-bottom: 0.15rem;">Where the incentive leverage is</div>
+  <div style="font-size: 1rem; color: #002a3a; font-weight: 600; margin-bottom: 1rem;">Lone Tree Q1 2026 — days in MLS, closed vs. active</div>
+
+  <div style="margin-bottom: 1rem;">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; font-size: 0.88rem; margin-bottom: 0.3rem;">
+      <span style="color: #002a3a; font-weight: 600;">Closed homes <span style="color: #81848a; font-weight: 400;">(36 transactions)</span></span>
+      <span style="color: #4a7c59; font-weight: 700;">13 days</span>
+    </div>
+    <div style="background: #e5e7eb; border-radius: 4px; height: 18px; overflow: hidden;">
+      <div style="background: #4a7c59; width: 19%; height: 100%; border-radius: 4px;"></div>
+    </div>
+    <div style="font-size: 0.82rem; color: #81848a; margin-top: 0.3rem;">Priced right. Closed at 98% of list. Little room for buyer leverage.</div>
   </div>
-  <div style="background: #f4f7f9; border-left: 3px solid #002a3a; padding: 0.85rem 1rem; border-radius: 0 6px 6px 0; box-shadow: 0 2px 12px rgba(0,42,58,0.10);">
-    <div style="font-size: 1.35rem; font-weight: 700; color: #002a3a; line-height: 1.1;">$1.21M</div>
-    <div style="font-size: 0.78rem; color: #81848a; text-transform: uppercase; letter-spacing: 0.03em; margin-top: 0.2rem;">Median List Price</div>
+
+  <div>
+    <div style="display: flex; justify-content: space-between; align-items: baseline; font-size: 0.88rem; margin-bottom: 0.3rem;">
+      <span style="color: #002a3a; font-weight: 600;">Active listings <span style="color: #81848a; font-weight: 400;">(44 on market)</span></span>
+      <span style="color: #9e6b3a; font-weight: 700;">67 days (avg)</span>
+    </div>
+    <div style="background: #e5e7eb; border-radius: 4px; height: 18px; overflow: hidden;">
+      <div style="background: #9e6b3a; width: 100%; height: 100%; border-radius: 4px;"></div>
+    </div>
+    <div style="font-size: 0.82rem; color: #81848a; margin-top: 0.3rem;">Aged standing inventory. This is where builders open the incentive playbook.</div>
   </div>
-  <div style="background: #f4f7f9; border-left: 3px solid #4a7c59; padding: 0.85rem 1rem; border-radius: 0 6px 6px 0; box-shadow: 0 2px 12px rgba(0,42,58,0.10);">
-    <div style="font-size: 1.35rem; font-weight: 700; color: #002a3a; line-height: 1.1;">98%</div>
-    <div style="font-size: 0.78rem; color: #81848a; text-transform: uppercase; letter-spacing: 0.03em; margin-top: 0.2rem;">Close-to-List Ratio</div>
-  </div>
-  <div style="background: #f4f7f9; border-left: 3px solid #4a7c59; padding: 0.85rem 1rem; border-radius: 0 6px 6px 0; box-shadow: 0 2px 12px rgba(0,42,58,0.10);">
-    <div style="font-size: 1.35rem; font-weight: 700; color: #002a3a; line-height: 1.1;">13 days</div>
-    <div style="font-size: 0.78rem; color: #81848a; text-transform: uppercase; letter-spacing: 0.03em; margin-top: 0.2rem;">Median DIM (Closed)</div>
+
+  <div style="margin-top: 1rem; padding-top: 0.85rem; border-top: 1px solid #e5e7eb; font-size: 0.88rem; color: #002a3a;">
+    <strong>The takeaway:</strong> Lone Tree closes fast when homes are priced right — but the active tail is 5x longer, and that's where builder incentive packages get richest.
   </div>
 </div>
-<p style="text-align: center; font-size: 0.8rem; color: #81848a; margin-top: -1rem; margin-bottom: 2rem;">Source: REcolorado MLS, Lone Tree single-family residential, Q1 2026 (Jan 1 – Mar 31).</p>
+<p style="text-align: center; font-size: 0.8rem; color: #81848a; margin-top: -0.25rem; margin-bottom: 2rem;">Source: REcolorado MLS, Lone Tree single-family residential, Q1 2026 (Jan 1 – Mar 31). 109 total listings; median list $1,130,353.</p>
 
-<p>Lone Tree sits on the south end of the metro along I-25 and the RTD E Line light rail, anchored by Park Meadows Mall and the RidgeGate master-planned community. The city's new construction activity concentrates on two sides — the established Heritage Hills and Heritage Estates area to the west, and the newer RidgeGate / NorthStar neighborhoods east of I-25 near Lincoln Station and the Charles Schwab campus.</p>
 
 <p>First-quarter 2026 MLS data tells the pricing story. Across 109 Lone Tree single-family listings in Q1 (active, pending, closed, withdrawn, and expired combined), the median list price was $1,130,353 and the median sale price came in at $962,769 — a roughly 94% list-to-close relationship at the aggregate level, pulled down by withdrawn and expired listings at the top of the market. On closed transactions alone, sellers achieved 98% of list price at a median of 13 days in the MLS.</p>
 
