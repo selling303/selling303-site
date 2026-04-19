@@ -97,7 +97,6 @@ relatedPosts:
       <div style="font-size: 0.9rem; color: #002a3a;">Priced to sell. Buyers paid close to full asking price.</div>
       <div style="font-size: 0.82rem; color: #8b3a3a; margin-top: 0.4rem; font-weight: 600;">&rarr; Little room to negotiate a discount.</div>
     </div>
-
     <div style="background: #fff; border: 1px solid #e5e7eb; border-top: 5px solid #9e6b3a; border-radius: 6px; padding: 1.1rem 1.25rem; box-shadow: 0 2px 12px rgba(0,42,58,0.10);">
       <div style="font-size: 0.72rem; color: #9e6b3a; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">Homes still sitting unsold</div>
       <div style="font-size: 1.75rem; font-weight: 700; color: #002a3a; margin: 0.3rem 0 0.1rem; line-height: 1.1;">Over 2 months</div>
