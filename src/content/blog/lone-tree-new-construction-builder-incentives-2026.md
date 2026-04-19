@@ -79,6 +79,27 @@ relatedPosts:
 
 <h2 id="lone-tree-market">What Does the Lone Tree New Construction Market Look Like in 2026?</h2>
 
+<div itemscope itemtype="https://schema.org/Place" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.75rem; margin: 1.5rem 0 2rem;">
+  <meta itemprop="name" content="Lone Tree, Colorado" />
+  <div style="background: #f4f7f9; border-left: 3px solid #002a3a; padding: 0.85rem 1rem; border-radius: 0 6px 6px 0; box-shadow: 0 2px 12px rgba(0,42,58,0.10);">
+    <div style="font-size: 1.35rem; font-weight: 700; color: #002a3a; line-height: 1.1;">44</div>
+    <div style="font-size: 0.78rem; color: #81848a; text-transform: uppercase; letter-spacing: 0.03em; margin-top: 0.2rem;">Active Listings</div>
+  </div>
+  <div style="background: #f4f7f9; border-left: 3px solid #002a3a; padding: 0.85rem 1rem; border-radius: 0 6px 6px 0; box-shadow: 0 2px 12px rgba(0,42,58,0.10);">
+    <div style="font-size: 1.35rem; font-weight: 700; color: #002a3a; line-height: 1.1;">$1.21M</div>
+    <div style="font-size: 0.78rem; color: #81848a; text-transform: uppercase; letter-spacing: 0.03em; margin-top: 0.2rem;">Median List Price</div>
+  </div>
+  <div style="background: #f4f7f9; border-left: 3px solid #4a7c59; padding: 0.85rem 1rem; border-radius: 0 6px 6px 0; box-shadow: 0 2px 12px rgba(0,42,58,0.10);">
+    <div style="font-size: 1.35rem; font-weight: 700; color: #002a3a; line-height: 1.1;">98%</div>
+    <div style="font-size: 0.78rem; color: #81848a; text-transform: uppercase; letter-spacing: 0.03em; margin-top: 0.2rem;">Close-to-List Ratio</div>
+  </div>
+  <div style="background: #f4f7f9; border-left: 3px solid #4a7c59; padding: 0.85rem 1rem; border-radius: 0 6px 6px 0; box-shadow: 0 2px 12px rgba(0,42,58,0.10);">
+    <div style="font-size: 1.35rem; font-weight: 700; color: #002a3a; line-height: 1.1;">13 days</div>
+    <div style="font-size: 0.78rem; color: #81848a; text-transform: uppercase; letter-spacing: 0.03em; margin-top: 0.2rem;">Median DIM (Closed)</div>
+  </div>
+</div>
+<p style="text-align: center; font-size: 0.8rem; color: #81848a; margin-top: -1rem; margin-bottom: 2rem;">Source: REcolorado MLS, Lone Tree single-family residential, Q1 2026 (Jan 1 – Mar 31).</p>
+
 <p>Lone Tree sits on the south end of the metro along I-25 and the RTD E Line light rail, anchored by Park Meadows Mall and the RidgeGate master-planned community. The city's new construction activity concentrates on two sides — the established Heritage Hills and Heritage Estates area to the west, and the newer RidgeGate / NorthStar neighborhoods east of I-25 near Lincoln Station and the Charles Schwab campus.</p>
 
 <p>First-quarter 2026 MLS data tells the pricing story. Across 109 Lone Tree single-family listings in Q1 (active, pending, closed, withdrawn, and expired combined), the median list price was $1,130,353 and the median sale price came in at $962,769 — a roughly 94% list-to-close relationship at the aggregate level, pulled down by withdrawn and expired listings at the top of the market. On closed transactions alone, sellers achieved 98% of list price at a median of 13 days in the MLS.</p>
@@ -103,6 +124,28 @@ relatedPosts:
 
 <p>On the same $900,000 mortgage at a 6.5% note rate, a 2-1 buydown saves roughly $1,100/month in year one and $600/month in year two — a total of about $20,400 over two years. Real money, but meaningfully less than a permanent buydown. And the rate snaps back to 6.5% in year three, which is the year most buyers are least prepared for.</p>
 
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin: 1.75rem 0;">
+  <div style="background: #fff; border: 1px solid #e5e7eb; border-top: 4px solid #4a7c59; padding: 1.1rem 1.25rem; border-radius: 6px; box-shadow: 0 2px 12px rgba(0,42,58,0.10);">
+    <div style="font-size: 0.72rem; color: #4a7c59; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">Permanent Buydown (1.0 point)</div>
+    <div style="font-size: 1.5rem; font-weight: 700; color: #002a3a; margin: 0.4rem 0 0.1rem;">~$600 / mo</div>
+    <div style="font-size: 0.85rem; color: #81848a;">saved, every month, for 30 years</div>
+    <div style="border-top: 1px solid #e5e7eb; margin: 0.75rem 0; padding-top: 0.75rem; font-size: 0.9rem; color: #002a3a;">
+      <strong>Total savings:</strong> ~$216,000<br>
+      <strong>Builder cost:</strong> ~$36,000 (4 pts)
+    </div>
+  </div>
+  <div style="background: #fff; border: 1px solid #e5e7eb; border-top: 4px solid #9e6b3a; padding: 1.1rem 1.25rem; border-radius: 6px; box-shadow: 0 2px 12px rgba(0,42,58,0.10);">
+    <div style="font-size: 0.72rem; color: #9e6b3a; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">Temporary 2-1 Buydown</div>
+    <div style="font-size: 1.5rem; font-weight: 700; color: #002a3a; margin: 0.4rem 0 0.1rem;">~$1,100 → $600 → reset</div>
+    <div style="font-size: 0.85rem; color: #81848a;">saved year 1, year 2, then note rate</div>
+    <div style="border-top: 1px solid #e5e7eb; margin: 0.75rem 0; padding-top: 0.75rem; font-size: 0.9rem; color: #002a3a;">
+      <strong>Total savings:</strong> ~$20,400<br>
+      <strong>Builder cost:</strong> ~$9,000–$18,000 (1–2 pts)
+    </div>
+  </div>
+</div>
+<p style="text-align: center; font-size: 0.8rem; color: #81848a; margin-top: -0.75rem; margin-bottom: 2rem;">Illustrative: $900,000 mortgage, 6.5% note rate. Actual savings depend on loan amount, rate environment, and lender fees.</p>
+
 <h3>What to watch for</h3>
 
 <p>Builders often tie the buydown to financing through their in-house lender. That lender sometimes charges a slightly higher note rate or higher lender fees than the market — which can erode 20–40% of the buydown's value. Always model the builder-lender offer against an independent quote before you accept.</p>
@@ -124,6 +167,20 @@ relatedPosts:
 <p>Builders control design center pricing. A $3,000 tile upgrade at retail often shows up as $6,000 to $9,000 at the design center. Extended hardwood floors, cabinet upgrades, lighting packages, countertop tiers, appliance packages — nearly every category is marked up 50% to 200% over what you would pay for an equivalent upgrade through an independent contractor.</p>
 
 <p>A "free $20,000 in upgrades" incentive, therefore, is rarely $20,000 of retail value. It is $20,000 of credit applied against design center pricing that was set by the same builder issuing the credit. Real-world value is closer to $8,000 to $12,000.</p>
+
+<div style="display: flex; align-items: stretch; gap: 0; margin: 1.75rem 0; border-radius: 6px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,42,58,0.10); flex-wrap: wrap;">
+  <div style="flex: 1 1 180px; background: #002a3a; color: #fff; padding: 1.1rem 1.25rem; text-align: center;">
+    <div style="font-size: 0.72rem; opacity: 0.85; text-transform: uppercase; letter-spacing: 0.05em;">Advertised Credit</div>
+    <div style="font-size: 1.75rem; font-weight: 700; margin-top: 0.25rem;">$20,000</div>
+    <div style="font-size: 0.82rem; opacity: 0.85; margin-top: 0.25rem;">"free design center upgrades"</div>
+  </div>
+  <div style="flex: 1 1 180px; background: #8b3a3a; color: #fff; padding: 1.1rem 1.25rem; text-align: center;">
+    <div style="font-size: 0.72rem; opacity: 0.9; text-transform: uppercase; letter-spacing: 0.05em;">Real Market Value</div>
+    <div style="font-size: 1.75rem; font-weight: 700; margin-top: 0.25rem;">~$8,000–$12,000</div>
+    <div style="font-size: 0.82rem; opacity: 0.9; margin-top: 0.25rem;">after builder markup of 50–200%</div>
+  </div>
+</div>
+<p style="text-align: center; font-size: 0.8rem; color: #81848a; margin-top: -0.75rem; margin-bottom: 2rem;">Source: Comparison of design center pricing vs. retail pricing for equivalent upgrades across South Denver builder communities, Q1 2026.</p>
 
 <p>That does not make the incentive worthless. Some upgrades — structural changes, foundation extensions, window upgrades — are effectively impossible to add after closing. For those, paying builder markup to lock them in during construction makes sense. But for cosmetic upgrades like flooring, paint, lighting fixtures, and countertops, you are almost always better off taking a cash credit (closing costs or rate buydown) and doing the upgrades yourself after move-in.</p>
 
