@@ -134,7 +134,7 @@
 ### Week 3: April 19–25
 
 #### Day 16 — Saturday, April 19
-- [ ] **"Relocating to Parker, Colorado: What Families Moving from Out of State Need to Know"**
+- [x] **"Relocating to Parker, Colorado: What Families Moving from Out of State Need to Know"** *(drafted 2026-04-19)*
   - Specialization: `/relocation` | Geographic: `/parker`
   - Type: Local area topic | Funnel: TOFU
   - Angle: Family-focused relocation guide. Parker's community feel, commute realities, price points, HOA landscape.
