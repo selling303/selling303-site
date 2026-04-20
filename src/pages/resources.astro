@@ -1,0 +1,207 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import CTABanner from '../components/CTABanner.astro';
+
+interface ResourceCategory {
+  title: string;
+  description: string;
+  href: string;
+  linkText: string;
+  badge?: string;
+  available: boolean;
+}
+
+const categories: ResourceCategory[] = [
+  {
+    title: "Tools & Calculators",
+    description: "Free Colorado-accurate calculators for home equity, closing costs, rent estimates, and more. Run the numbers before you make the call.",
+    href: "/tools",
+    linkText: "Browse tools",
+    available: true,
+  },
+  {
+    title: "Blog & Market Insights",
+    description: "Neighborhood deep-dives, monthly South Denver market updates, seller and buyer advice, and answers to the questions clients ask most.",
+    href: "/blog",
+    linkText: "Read the blog",
+    available: true,
+  },
+  {
+    title: "Investor Resources",
+    description: "For anyone evaluating rental property, flips, or investment real estate in South Denver. Jacob was an investor before he was an agent.",
+    href: "/investor-tools",
+    linkText: "Explore investor resources",
+    available: true,
+  },
+  {
+    title: "Free Guides & Downloads",
+    description: "Printable checklists, timeline planners, and situational guides for buying, selling, and relocating in Colorado. Delivered to your inbox.",
+    href: "#",
+    linkText: "Coming soon",
+    badge: "Coming Soon",
+    available: false,
+  },
+];
+---
+
+<BaseLayout
+  title="Resources for South Denver Home Buyers and Sellers | Jacob Stark"
+  description="Free tools, calculators, blog articles, investor resources, and guides for buying and selling homes in South Denver Metro. Everything Jacob Stark publishes, in one place."
+  ogUrl="https://selling303.com/resources"
+  ogImage="https://selling303.com/images/og-default.jpg"
+  currentPage="resources"
+  headerVariant="solid"
+>
+  <Fragment slot="head">
+    <!-- Schema: CollectionPage for the resources hub -->
+    <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Resources for South Denver Home Buyers and Sellers",
+      "url": "https://selling303.com/resources",
+      "description": "Free tools, calculators, blog articles, investor resources, and guides for real estate in South Denver Metro, Colorado.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "url": "https://selling303.com",
+        "name": "Selling 303"
+      },
+      "about": {
+        "@type": "RealEstateAgent",
+        "name": "Jacob Stark",
+        "url": "https://selling303.com"
+      }
+    }
+    </script>
+  </Fragment>
+
+  <!-- ========== PAGE HERO ========== -->
+  <PageHero
+    label="Resources"
+    heading="Everything You Need — In One Place"
+    subtext="Tools, guides, market insights, and investor resources for South Denver Metro real estate. Free to use, Colorado-accurate, and built to help at every stage of your decision."
+  />
+
+  <!-- ========== CATEGORY GRID ========== -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="resource-grid">
+        {categories.map((cat) => (
+          cat.available ? (
+            <a href={cat.href} class="resource-card">
+              <h2 class="resource-card__title">{cat.title}</h2>
+              <p class="resource-card__desc">{cat.description}</p>
+              <span class="resource-card__cta">{cat.linkText} <span aria-hidden="true">→</span></span>
+            </a>
+          ) : (
+            <div class="resource-card resource-card--coming-soon">
+              {cat.badge && <span class="resource-card__badge">{cat.badge}</span>}
+              <h2 class="resource-card__title">{cat.title}</h2>
+              <p class="resource-card__desc">{cat.description}</p>
+              <span class="resource-card__cta resource-card__cta--muted">{cat.linkText}</span>
+            </div>
+          )
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HOW JACOB PUBLISHES ========== -->
+  <section class="section">
+    <div class="container" style="max-width: 800px; text-align: center;">
+      <span class="section-label">Philosophy</span>
+      <h2 class="section-heading">How this works</h2>
+      <p style="margin-bottom: var(--space-md);">
+        Buying or selling a home is one of the biggest financial decisions most people make — and the worst thing you can do is walk in without information. Most of what's here is free and instant: use a calculator, read a blog article, check a neighborhood breakdown. No signup required.
+      </p>
+      <p style="margin-bottom: var(--space-md);">
+        A few of the deeper resources — full strategy guides, custom market reports, personalized analyses — ask for your email before we send them. That's often the best way to get the resource to you: we can tailor it to your situation, deliver a clean document you can save to your inbox, and make sure you can reference it any time without digging back through the site.
+      </p>
+      <p>
+        Either way, no pressure and no pitch. If the tools and guides help you make a better decision, that's the point. If you decide you want a conversation after, <a href="https://calendly.com/jacob-realtor" target="_blank" rel="noopener" style="color: var(--color-primary); text-decoration: underline;">book a free call</a>. If you don't, the information still did its job.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== CTA BANNER ========== -->
+  <CTABanner
+    heading="Have a question that's not covered here?"
+    subtext="If the resources don't answer what you need, a conversation will. Book a free call with Jacob Stark — no pressure, no pitch."
+    primaryHref="https://calendly.com/jacob-realtor"
+    primaryText="Schedule a Free Call"
+    secondaryHref="sms:+13039970634?&body=Hi%20Jacob%2C%20I%20have%20a%20question."
+    secondaryText="Text 303-997-0634"
+  />
+</BaseLayout>
+
+<style>
+  .resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--space-md);
+  }
+
+  .resource-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    transition: all var(--transition);
+    position: relative;
+    min-height: 220px;
+  }
+  .resource-card:not(.resource-card--coming-soon):hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+
+  .resource-card__title {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    font-size: 1.375rem;
+    margin-bottom: var(--space-sm);
+    line-height: 1.25;
+  }
+
+  .resource-card__desc {
+    color: var(--color-body-text);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    flex: 1;
+    margin-bottom: var(--space-md);
+  }
+
+  .resource-card__cta {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    align-self: flex-start;
+  }
+  .resource-card__cta--muted {
+    color: var(--color-light-text);
+    font-style: italic;
+  }
+
+  .resource-card__badge {
+    position: absolute;
+    top: var(--space-sm);
+    right: var(--space-sm);
+    background: var(--color-accent);
+    color: var(--color-white);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.625rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .resource-card--coming-soon {
+    background: var(--color-background);
+    opacity: 0.85;
+  }
+</style>

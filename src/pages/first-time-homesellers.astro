@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ClosingCostEstimator from '../components/calculators/ClosingCostEstimator.astro';
 ---
 
 <BaseLayout
@@ -117,6 +118,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <li><a href="#the-problem" class="pillar-toc__link">The Problem</a></li>
           <li><a href="#selling-path" class="pillar-toc__link">The Selling Process</a></li>
           <li><a href="#how-jacob-works" class="pillar-toc__link">How Jacob Works</a></li>
+          <li><a href="#closing-costs" class="pillar-toc__link">Closing Costs</a></li>
           <li><a href="#areas-served" class="pillar-toc__link">Areas Served</a></li>
           <li><a href="#faq" class="pillar-toc__link">FAQ</a></li>
           <li><a href="#related-reading" class="pillar-toc__link">Related Reading</a></li>
@@ -227,6 +229,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <p>Ready to take the first step? Talk to Jacob about your home and what selling looks like.</p>
             <a href="https://calendly.com/jacob-realtor" class="btn btn--primary btn--sm" target="_blank" rel="noopener">Schedule a Call</a>
           </div>
+        </div>
+
+
+        <!-- CLOSING COST ESTIMATOR -->
+        <div id="closing-costs" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Run Your Numbers</span>
+          <h2 class="section-heading">Closing Cost Estimator</h2>
+          <p style="margin-bottom: var(--space-lg);">Before the listing meeting, it helps to have a rough read on your net proceeds. Adjust the sale price and agent commission — the Colorado-specific line-item breakdown and estimated net proceeds update live. No email required.</p>
+          <ClosingCostEstimator showHeader={false} defaultSide="seller" />
+          <p style="margin-top: var(--space-md); font-size: 0.875rem; color: var(--color-body-text);">Want the full explainer? <a href="/tools/closing-cost-estimator" style="color: var(--color-primary); text-decoration: underline;">Open the full calculator page</a> with a Colorado-specific guide to every line item, or <a href="https://calendly.com/jacob-realtor" target="_blank" rel="noopener" style="color: var(--color-primary); text-decoration: underline;">book a free call</a> to walk through your exact numbers.</p>
         </div>
 
 
