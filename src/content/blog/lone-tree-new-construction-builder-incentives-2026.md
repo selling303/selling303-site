@@ -43,13 +43,13 @@ relatedPosts:
 ---
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
-<strong>What do builder incentives in Lone Tree new construction actually mean for your bottom line?</strong> In Lone Tree, builder incentive packages typically range from $20,000 to $75,000 — but real value varies widely. Rate buydowns and closing cost credits carry close to face value. "Free" upgrades and design center credits often translate to 40–60 cents on the dollar because the builder controls the underlying price.
+<strong>What do builder incentives in Lone Tree new construction actually mean for your bottom line?</strong> Builder incentive packages in Lone Tree typically run $20,000 to $75,000 — but real value varies widely. Rate buydowns and closing cost credits carry close to face value. "Free" upgrades and design center credits often translate to 40–60 cents on the dollar because the builder controls the underlying price. The richest packages attach to standing spec inventory that has aged past 60 days.
 </div>
 
 <div style="background: #f0f4f0; border-left: 4px solid #4a7c59; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>Key Takeaways</strong>
 <ul style="margin: 0.75rem 0 0 1.25rem; padding: 0;">
-<li><strong>Lone Tree Q1 2026: 44 active listings, median list $1,212,500</strong> — a higher-priced new-build market anchored by RidgeGate and Heritage Hills. Closed sales landed at a median of $859,500 and 98% of list price per REcolorado MLS data.</li>
+<li><strong>Lone Tree new construction spec inventory (Q1 2026): 10 active, 5 closed</strong> — concentrated in the RidgeGate expansion communities. Active specs are sitting a median 122 days on the market, with several past 200 days. The 5 closed transactions took a median 77 days to sell at 97% of list price per REcolorado MLS data. Build-to-order custom homes close directly between builder and buyer and don't appear in these numbers.</li>
 <li><strong>Rate buydowns are the highest-value incentive</strong> — a permanent 1.0-point buydown on a $900,000 loan saves roughly $600 per month, or more than $200,000 over a 30-year term. Temporary 2-1 buydowns are weaker but still meaningful in year one and year two.</li>
 <li><strong>Closing cost credits are close to face value</strong> — a $15,000 credit is usually $15,000 of real money off your cash-to-close, assuming it is not tied to financing with an in-house lender at an inflated rate.</li>
 <li><strong>Upgrade credits are the least valuable</strong> — builders mark up design center pricing 50–200 percent, so a $20,000 upgrade credit often represents $8,000–$10,000 of real value at retail.</li>
@@ -83,40 +83,38 @@ relatedPosts:
 
 <div itemscope itemtype="https://schema.org/Place" style="margin: 1.75rem 0 1rem;">
   <meta itemprop="name" content="Lone Tree, Colorado" />
-  <div style="text-align: center; font-size: 1.05rem; font-weight: 700; color: #002a3a; margin-bottom: 0.3rem;">The longer a Lone Tree home sits, the bigger the builder's discount gets.</div>
-  <div style="text-align: center; font-size: 0.88rem; color: #81848a; margin-bottom: 1.25rem;">Here's how long the two groups of homes take to sell in Lone Tree right now:</div>
+  <div style="text-align: center; font-size: 1.05rem; font-weight: 700; color: #002a3a; margin-bottom: 0.3rem;">The longer a builder's spec home sits in Lone Tree, the bigger the discount gets.</div>
+  <div style="text-align: center; font-size: 0.88rem; color: #81848a; margin-bottom: 1.25rem;">Here's how long new construction spec homes are taking to sell in Lone Tree right now:</div>
 
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem;">
     <div style="background: #fff; border: 1px solid #e5e7eb; border-top: 5px solid #4a7c59; border-radius: 6px; padding: 1.1rem 1.25rem; box-shadow: 0 2px 12px rgba(0,42,58,0.10);">
-      <div style="font-size: 0.72rem; color: #4a7c59; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">Homes that sold fast</div>
-      <div style="font-size: 1.75rem; font-weight: 700; color: #002a3a; margin: 0.3rem 0 0.1rem; line-height: 1.1;">About 2 weeks</div>
-      <div style="font-size: 0.88rem; color: #81848a; margin-bottom: 0.7rem;">13 days on the market</div>
+      <div style="font-size: 0.72rem; color: #4a7c59; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">Spec homes that sold (Q1 2026)</div>
+      <div style="font-size: 1.75rem; font-weight: 700; color: #002a3a; margin: 0.3rem 0 0.1rem; line-height: 1.1;">~2.5 months</div>
+      <div style="font-size: 0.88rem; color: #81848a; margin-bottom: 0.7rem;">77 days on the market (median)</div>
       <div style="background: #e5e7eb; border-radius: 4px; height: 10px; overflow: hidden; margin-bottom: 0.7rem;">
-        <div style="background: #4a7c59; width: 19%; height: 100%; border-radius: 4px;"></div>
+        <div style="background: #4a7c59; width: 63%; height: 100%; border-radius: 4px;"></div>
       </div>
-      <div style="font-size: 0.9rem; color: #002a3a;">Priced to sell. Buyers paid close to full asking price.</div>
-      <div style="font-size: 0.82rem; color: #8b3a3a; margin-top: 0.4rem; font-weight: 600;">&rarr; Little room to negotiate a discount.</div>
+      <div style="font-size: 0.9rem; color: #002a3a;">5 closed sales at 97% of list price. Most of the incentive room had already been priced in by closing.</div>
     </div>
     <div style="background: #fff; border: 1px solid #e5e7eb; border-top: 5px solid #9e6b3a; border-radius: 6px; padding: 1.1rem 1.25rem; box-shadow: 0 2px 12px rgba(0,42,58,0.10);">
-      <div style="font-size: 0.72rem; color: #9e6b3a; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">Homes still sitting unsold</div>
-      <div style="font-size: 1.75rem; font-weight: 700; color: #002a3a; margin: 0.3rem 0 0.1rem; line-height: 1.1;">Over 2 months</div>
-      <div style="font-size: 0.88rem; color: #81848a; margin-bottom: 0.7rem;">67 days on the market (average)</div>
+      <div style="font-size: 0.72rem; color: #9e6b3a; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 700;">Spec homes still unsold</div>
+      <div style="font-size: 1.75rem; font-weight: 700; color: #002a3a; margin: 0.3rem 0 0.1rem; line-height: 1.1;">~4 months</div>
+      <div style="font-size: 0.88rem; color: #81848a; margin-bottom: 0.7rem;">122 days on the market (median)</div>
       <div style="background: #e5e7eb; border-radius: 4px; height: 10px; overflow: hidden; margin-bottom: 0.7rem;">
         <div style="background: #9e6b3a; width: 100%; height: 100%; border-radius: 4px;"></div>
       </div>
-      <div style="font-size: 0.9rem; color: #002a3a;">Every extra day costs the builder money in taxes, HOA, and loan interest.</div>
-      <div style="font-size: 0.82rem; color: #4a7c59; margin-top: 0.4rem; font-weight: 600;">&rarr; This is where the big incentives show up.</div>
+      <div style="font-size: 0.9rem; color: #002a3a;">10 standing listings. Several have been sitting 200+ days. Every extra day costs the builder taxes, HOA, and construction-loan interest.</div>
+      <div style="font-size: 0.82rem; color: #4a7c59; margin-top: 0.4rem; font-weight: 600;">&rarr; This is where the biggest incentive packages stack.</div>
     </div>
   </div>
 </div>
-<p style="text-align: center; font-size: 0.8rem; color: #81848a; margin-top: 0.75rem; margin-bottom: 2rem;">Source: REcolorado MLS, Lone Tree single-family homes, Q1 2026 (Jan 1 – Mar 31). 36 closed sales, 44 still listed.</p>
+<p style="text-align: center; font-size: 0.8rem; color: #81848a; margin-top: 0.75rem; margin-bottom: 2rem;">Source: REcolorado MLS, Lone Tree single-family homes built in 2024 or later, Q1 2026 — used as a proxy for builder spec inventory. 5 closed, 10 active, 2 pending. Build-to-order custom homes close directly between builder and buyer and aren't represented here.</p>
 
+<p>These are the homes builders put on the open market when they want broader exposure — finished or nearly-finished specs they need to move. Build-to-order homes, like a buyer contracting with Shea to build on a purchased lot, never hit the MLS at all because they aren't being marketed to the public. That scoping note matters: the numbers above describe standing inventory under incentive pressure, not the full universe of new construction activity in Lone Tree.</p>
 
-<p>First-quarter 2026 MLS data tells the pricing story. Across 109 Lone Tree single-family listings in Q1 (active, pending, closed, withdrawn, and expired combined), the median list price was $1,130,353 and the median sale price came in at $962,769 — a roughly 94% list-to-close relationship at the aggregate level, pulled down by withdrawn and expired listings at the top of the market. On closed transactions alone, sellers achieved 98% of list price at a median of 13 days in the MLS.</p>
+<p>Across the 17 spec listings, the median list price was $1,110,158 and the 5 closed transactions landed at a median of $1,176,000 at 97% of list. The two pending specs had been listed a median of 148 days before going under contract — another signal that even the homes selling right now are selling after meaningful time on the market. For comparison, the broader Lone Tree resale market closed Q1 at a median of 13 days in the MLS. Spec new construction is its own animal, and the longer DIM is exactly what creates the incentive leverage.</p>
 
-<p>Days in the MLS is the data point that matters most for new construction buyers. Finished spec homes that sit past 60 days are where incentive budgets open up. Of the 44 active Lone Tree listings at the end of Q1, the median DIM was 35 days, but the average was 67 days — meaning the market has a meaningful tail of aged inventory. That tail is where builder incentives get most aggressive.</p>
-
-<p>For broader context, the Denver Metro median close price in March 2026 hit $590,000 per the <a href="https://www.dmarealtors.com/market-trends" rel="noopener" target="_blank">DMAR Market Trends Report</a>, with close-price-to-list ratio at 99.13% and days in the MLS dropping 50% month-over-month to just 16 days. Rates climbed back above 6% in March, and the $1 million-plus segment carried 62 average days on market year-to-date. Lone Tree is firmly in that premium segment, and rate pressure is the backdrop builders are fighting with incentive packages.</p>
+<p>For broader context, the Denver Metro median close price in March 2026 hit $590,000 per the <a href="https://www.dmarealtors.com/market-trends" rel="noopener" target="_blank">DMAR Market Trends Report</a>, with close-price-to-list ratio at 99.13% and days in the MLS dropping 50% month-over-month to just 16 days. The $1 million-plus segment carried 62 average days on market year-to-date. Lone Tree spec inventory sits well above that — which is exactly why incentive packages show up here more aggressively than in lower price tiers.</p>
 
 <h2 id="rate-buydowns">How Do Builder Rate Buydowns Actually Work?</h2>
 
@@ -273,4 +271,4 @@ relatedPosts:
 <p style="margin: 0 0 0.75rem;"><strong>Thinking about a new construction home in Lone Tree?</strong> Jacob Stark represents buyers — not builders — and models the full incentive package against independent quotes so you know what the real dollar value is before you sign. Call 303-997-0634 or <a href="https://calendly.com/jacob-realtor" style="color: #002a3a; text-decoration: underline;">book a free new construction consultation</a>.</p>
 </blockquote>
 
-<p style="font-size: 0.85rem; color: #81848a; margin-top: 2rem;"><em>Data sources: REcolorado MLS Q1 2026 listing exports for Lone Tree; DMAR Market Trends Report, March 2026. Builder incentive ranges reflect typical Q1 2026 offerings across South Denver new construction communities and are not guaranteed for any specific home or builder.</em></p>
+<p style="font-size: 0.85rem; color: #81848a; margin-top: 2rem;"><em>Data sources: REcolorado MLS Q1 2026 listing exports for Lone Tree, filtered to single-family homes built in 2024 or later as a proxy for builder spec inventory; DMAR Market Trends Report, March 2026. Build-to-order custom homes and off-MLS direct builder sales are not included in the MLS-derived numbers. Builder incentive ranges reflect typical Q1 2026 offerings across South Denver new construction communities and are not guaranteed for any specific home or builder.</em></p>
