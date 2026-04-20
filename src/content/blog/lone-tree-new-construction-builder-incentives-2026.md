@@ -254,7 +254,7 @@ relatedPosts:
 
 <p><strong>Protects inspection and walkthrough rights.</strong> Many builder contracts nudge buyers toward accepting the home "as-is" after final walkthrough. A third-party inspection by a certified inspector before closing — which a good buyer's agent insists on — routinely catches missing finishes, code issues, and construction defects that would otherwise become the buyer's problem.</p>
 
-<p>If you are evaluating Lone Tree new construction, representation is not optional. It is priced into the transaction whether you use it or not.</p>
+<p>If you are evaluating Lone Tree new construction, the cost of representation is already priced into the home whether you bring an agent or not. Choosing to go without one doesn't save you money — it just means the builder keeps the commission and you absorb the contract, upgrade pricing, and inspection terms on your own.</p>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 
