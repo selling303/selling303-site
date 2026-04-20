@@ -123,7 +123,7 @@
   - Target keywords: buying first home Littleton CO, Littleton spring real estate, first-time buyer offer strategy Denver
 
 #### Day 15 — Friday, April 18
-- [x] **"Lone Tree New Construction: Builder Incentives and What They Actually Mean for Your Bottom Line"** *(drafted 2026-04-18)*
+- [x] **"Lone Tree New Construction: Builder Incentives and What They Actually Mean for Your Bottom Line"** *(drafted 2026-04-18)* *(published 2026-04-20)*
   - Specialization: `/new-construction` | Geographic: `/lone-tree`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Decode builder incentives (rate buydowns, closing cost credits, upgrade packages). What's real value vs. marketing.
@@ -134,7 +134,7 @@
 ### Week 3: April 19–25
 
 #### Day 16 — Saturday, April 19
-- [x] **"Relocating to Parker, Colorado: What Families Moving from Out of State Need to Know"** *(drafted 2026-04-19)*
+- [x] **"Relocating to Parker, Colorado: What Families Moving from Out of State Need to Know"** *(drafted 2026-04-19)* *(published 2026-04-20)*
   - Specialization: `/relocation` | Geographic: `/parker`
   - Type: Local area topic | Funnel: TOFU
   - Angle: Family-focused relocation guide. Parker's community feel, commute realities, price points, HOA landscape.
