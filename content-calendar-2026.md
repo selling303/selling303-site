@@ -116,14 +116,14 @@
   - Target keywords: equity to move up Highlands Ranch, Highlands Ranch home equity 2026, upgrade home Highlands Ranch
 
 #### Day 14 — Thursday, April 17
-- [x] **"What First-Time Buyers Should Know About Bidding in Littleton's Spring Market"** *(drafted 2026-04-17)*
+- [x] **"What First-Time Buyers Should Know About Bidding in Littleton's Spring Market"** *(drafted 2026-04-17)* *(published 2026-04-18)*
   - Specialization: `/first-time-homebuyers` | Geographic: `/littleton`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Offer strategy for entry-level buyers competing in Littleton. Escalation clauses, appraisal gaps, inspection flexibility.
   - Target keywords: buying first home Littleton CO, Littleton spring real estate, first-time buyer offer strategy Denver
 
 #### Day 15 — Friday, April 18
-- [ ] **"Lone Tree New Construction: Builder Incentives and What They Actually Mean for Your Bottom Line"**
+- [x] **"Lone Tree New Construction: Builder Incentives and What They Actually Mean for Your Bottom Line"** *(drafted 2026-04-18)*
   - Specialization: `/new-construction` | Geographic: `/lone-tree`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Decode builder incentives (rate buydowns, closing cost credits, upgrade packages). What's real value vs. marketing.
@@ -134,7 +134,7 @@
 ### Week 3: April 19–25
 
 #### Day 16 — Saturday, April 19
-- [ ] **"Relocating to Parker, Colorado: What Families Moving from Out of State Need to Know"**
+- [x] **"Relocating to Parker, Colorado: What Families Moving from Out of State Need to Know"** *(drafted 2026-04-19)*
   - Specialization: `/relocation` | Geographic: `/parker`
   - Type: Local area topic | Funnel: TOFU
   - Angle: Family-focused relocation guide. Parker's community feel, commute realities, price points, HOA landscape.

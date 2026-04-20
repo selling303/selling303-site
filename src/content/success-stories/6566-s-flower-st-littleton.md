@@ -36,10 +36,10 @@ story:
   strategyNarrative: "The concierge program removed the financial barrier, allowing Crystal to make strategic improvements without depleting her reserves. The renovations transformed the home's presentation and buyer perception. The result: a sale at full asking price with renovation costs deducted at closing."
 testimonials: []
 heroImage:
-  src: "6566-s-flower-st-littleton/1-01 6566 S Flower St.jpg"
+  src: "6566-s-flower-st-littleton/1-web-or-mls-4492 - Jacob Stark - 6566 S Flower St Littleton CO 80123_100 copy.jpg"
   alt: "Exterior of 6566 S Flower St in Woodmar Village Littleton Colorado"
 images:
-  - src: "6566-s-flower-st-littleton/1-01 6566 S Flower St.jpg"
+  - src: "6566-s-flower-st-littleton/1-web-or-mls-4492 - Jacob Stark - 6566 S Flower St Littleton CO 80123_100 copy.jpg"
     alt: "Exterior of 6566 S Flower St in Woodmar Village Littleton Colorado"
 faqSchema:
   - question: "What is a concierge renovation program for home sellers?"

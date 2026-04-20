@@ -1,0 +1,161 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import DirectAnswer from '../../components/DirectAnswer.astro';
+import HomeEquityCalculator from '../../components/calculators/HomeEquityCalculator.astro';
+import FAQ from '../../components/FAQ.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const faqItems = [
+  {
+    question: "How do I calculate my home equity in Colorado?",
+    answer: "Home equity is your current home value minus your remaining mortgage balance and transaction costs. In Colorado, sellers typically pay 7–9% in combined transaction costs — agent commissions (both sides), title insurance, transfer fees, and basic prep. Subtract that from your estimated sale price, then subtract your mortgage payoff, and the remainder is your net equity. Our home equity calculator above runs this math live as you adjust the inputs."
+  },
+  {
+    question: "What are typical closing costs for sellers in South Denver?",
+    answer: "South Denver sellers typically pay 7–9% of the sale price in closing costs. That includes roughly 5–6% in combined agent commissions (seller and buyer agent), 0.5–1% in title insurance and escrow fees, 0.01% in Colorado state transfer tax, and varying prep costs like staging, photography, and minor repairs. The 8% default in our calculator reflects a realistic midpoint for most South Denver neighborhoods including Littleton, Highlands Ranch, and Centennial."
+  },
+  {
+    question: "Should I sell my current home first or buy the next one first?",
+    answer: "The right answer depends on your equity cushion, target neighborhood, and risk tolerance. Sellers with strong equity (net equity more than 2x the required down payment) often buy first with a bridge loan, which allows non-contingent offers and stronger negotiating power. Sellers with adequate equity (covering the down payment with a modest cushion) typically use a contingent offer or sell first to keep finances simple. Sellers with tight equity should almost always sell first. Jacob Stark runs a personalized equity analysis with current South Denver market velocity data to make this call for your specific situation."
+  },
+  {
+    question: "How much of a down payment do I need for a move-up purchase?",
+    answer: "Down payment requirements vary by loan type. Conventional loans typically require 5–20% down; 20% avoids PMI and generally produces the strongest offer in competitive South Denver markets. FHA allows as low as 3.5% but has loan limits and mortgage insurance. Jumbo loans (required for most homes above $806,500 in the Denver metro for 2026) often require 10–20% down depending on the lender. For move-up buyers using home sale equity, 20% is the most common target because it avoids PMI and maximizes monthly cash flow."
+  },
+  {
+    question: "How accurate is this home equity calculator?",
+    answer: "The calculator provides a directional estimate based on the inputs you provide. Actual net equity depends on precise final sale price, current mortgage payoff quote (which includes interest through the closing date), specific title and escrow fees, and any seller-paid concessions negotiated during the transaction. For a precise analysis, Jacob Stark runs a full CMA (comparative market analysis) on your current home plus a detailed closing cost estimate specific to your target price range."
+  }
+];
+---
+
+<BaseLayout
+  title="Home Equity & Affordability Calculator | South Denver | Jacob Stark"
+  description="Free Colorado home equity calculator. Estimate net equity after sale, required down payment, and monthly cost for your next South Denver home. No email required."
+  ogUrl="https://selling303.com/tools/home-equity-calculator"
+  ogImage="https://selling303.com/images/og-default.jpg"
+  currentPage="tools"
+  headerVariant="solid"
+>
+  <Fragment slot="head">
+    <!-- Schema: WebApplication / SoftwareApplication for the tool itself -->
+    <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Home Equity & Affordability Calculator",
+      "url": "https://selling303.com/tools/home-equity-calculator",
+      "description": "Free calculator that estimates net home equity after sale, required down payment, and monthly mortgage cost for move-up home buyers in South Denver Metro, Colorado.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "RealEstateAgent",
+        "name": "Jacob Stark",
+        "url": "https://selling303.com"
+      }
+    }
+    </script>
+  </Fragment>
+
+  <!-- ========== PAGE HERO ========== -->
+  <PageHero
+    label="Free Tool"
+    heading="Home Equity & Affordability Calculator"
+    subtext="Estimate your net equity, available down payment, and monthly cost for your next South Denver home — in under 30 seconds. No email required."
+  />
+
+  <!-- ========== DIRECT ANSWER + CALCULATOR ========== -->
+  <section class="section section--white">
+    <div class="container">
+      <DirectAnswer
+        question="How do I calculate my home equity and next-home affordability?"
+        answer="Your net home equity equals your current home value minus your remaining mortgage balance and transaction costs (typically 7–9% in Colorado). Your next-home affordability is driven by how much of that equity covers the down payment, plus how the new loan's monthly payment fits your budget. The calculator below runs both calculations together so you can see your full picture at once."
+      />
+
+      <div style="max-width: 1100px; margin: 0 auto;">
+        <HomeEquityCalculator showHeader={false} />
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HOW EQUITY WORKS IN COLORADO ========== -->
+  <section class="section">
+    <div class="container" style="max-width: 900px;">
+      <span class="section-label">Understanding the Numbers</span>
+      <h2 class="section-heading">How home equity works in Colorado</h2>
+      <p>
+        Home equity is the difference between what your home is worth on today's market and what you still owe on your mortgage — minus the costs of actually getting the equity out through a sale. In South Denver Metro, sellers typically net 91–93 cents on the dollar of their sale price after commissions, title fees, Colorado transfer tax, and basic prep.
+      </p>
+      <p>
+        For most move-up sellers in Littleton, Highlands Ranch, Centennial, Parker, and surrounding communities, the big lever isn't the commission percentage — it's the sale price itself. A home priced aggressively and marketed well sells in 14 days at full list; a mispriced home sits 60+ days and takes a price reduction. Jacob Stark's sellers average 100.6% sale-to-list ratio, which compounds directly into more equity available for the next purchase.
+      </p>
+
+      <h3 style="margin-top: 2.5rem;">What South Denver sellers typically net</h3>
+      <p>
+        Below is a directional model for a $700,000 South Denver home with a $300,000 mortgage balance. Actual results depend on your specific mortgage payoff, negotiated concessions, and prep costs — but this is a realistic starting point.
+      </p>
+      <ul style="list-style: disc; padding-left: 1.5rem; margin-bottom: 1.5rem;">
+        <li><strong>Sale price:</strong> $700,000</li>
+        <li><strong>Agent commissions (~5.5%):</strong> −$38,500</li>
+        <li><strong>Title, escrow, transfer tax (~1%):</strong> −$7,000</li>
+        <li><strong>Prep &amp; misc. (~1.5%):</strong> −$10,500</li>
+        <li><strong>Mortgage payoff:</strong> −$300,000</li>
+        <li><strong>Net equity at closing:</strong> <span style="color: var(--color-primary); font-weight: 700;">$344,000</span></li>
+      </ul>
+
+      <h3 style="margin-top: 2.5rem;">Bridge loan vs. contingent offer math</h3>
+      <p>
+        The calculator's verdict block tells you which approach typically fits your equity position — but here's the underlying math. A bridge loan typically costs 0.5–1.5% in origination plus an interest rate 1–2% higher than a conventional 30-year. On a $300,000 bridge, that's roughly $3,000–$4,500 in origination plus maybe $1,500–$3,000 in extra interest for the 30–90 days you hold it. Total cost: $4,500–$7,500.
+      </p>
+      <p>
+        A contingent offer typically costs you 2–5% of your target home's purchase price because sellers in competitive markets discount contingent offers when ranking bids. On a $950,000 target, that's $19,000–$47,500 in lost negotiating leverage. In a balanced market the gap narrows, but in a seller's market — where South Denver has sat for most of 2024 and 2025 — non-contingent almost always wins.
+      </p>
+      <p style="margin-top: 1.5rem;">
+        Want to see whether a bridge loan actually pencils for your situation?
+        <a href="/move-up-sellers" style="color: var(--color-primary); text-decoration: underline;">Start here with the full move-up sellers guide</a>,
+        or <a href="https://calendly.com/jacob-realtor" style="color: var(--color-primary); text-decoration: underline;" target="_blank" rel="noopener">book a free 30-minute equity strategy call</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== RELATED TOOLS / CROSS-LINKS ========== -->
+  <section class="section section--white">
+    <div class="container" style="max-width: 900px;">
+      <span class="section-label">Keep Going</span>
+      <h2 class="section-heading">More tools and guides</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+        <a href="/move-up-sellers" style="background: var(--color-background); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); display: block; transition: all 0.2s;">
+          <h3 style="font-size: 1.125rem; margin-bottom: 0.5rem;">Move-Up Sellers Guide</h3>
+          <p style="font-size: 0.9375rem; margin: 0;">Full playbook for coordinating a sell-and-buy in South Denver.</p>
+        </a>
+        <a href="/expired-listings" style="background: var(--color-background); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); display: block; transition: all 0.2s;">
+          <h3 style="font-size: 1.125rem; margin-bottom: 0.5rem;">Expired Listings</h3>
+          <p style="font-size: 0.9375rem; margin: 0;">If your home didn't sell the first time, start here.</p>
+        </a>
+        <a href="/neighborhoods" style="background: var(--color-background); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); display: block; transition: all 0.2s;">
+          <h3 style="font-size: 1.125rem; margin-bottom: 0.5rem;">South Denver Neighborhoods</h3>
+          <p style="font-size: 0.9375rem; margin: 0;">Market data and feel for all nine South Denver communities.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <FAQ items={faqItems} />
+
+  <!-- ========== CTA BANNER ========== -->
+  <CTABanner
+    heading="Ready for a personalized equity analysis?"
+    subtext="Book a free 30-minute call with Jacob Stark — he'll pull your home's real-time market value, run a current-mortgage payoff estimate, and map out your move-up strategy."
+    primaryHref="https://calendly.com/jacob-realtor"
+    primaryText="Schedule Your Free Call"
+    secondaryHref="sms:+13039970634?&body=Hi%20Jacob%2C%20I%20have%20a%20question%20about%20my%20home%20equity."
+    secondaryText="Text 303-997-0634"
+  />
+</BaseLayout>

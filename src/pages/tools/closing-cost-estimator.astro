@@ -1,0 +1,205 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import DirectAnswer from '../../components/DirectAnswer.astro';
+import ClosingCostEstimator from '../../components/calculators/ClosingCostEstimator.astro';
+import FAQ from '../../components/FAQ.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const faqItems = [
+  {
+    question: "How much are closing costs in Colorado?",
+    answer: "In Colorado, buyers typically pay 2–4% of the purchase price in closing costs and sellers typically pay 7–9% (including both agent commissions). Colorado is cheaper than many states because there are no closing attorneys required and the state documentary fee is just 0.01% (one cent per $100 of sale price). On a $600,000 South Denver home, a buyer would pay roughly $12,000–$24,000 at closing and a seller would pay roughly $42,000–$54,000. The calculator above gives you a personalized estimate for either side."
+  },
+  {
+    question: "Does the buyer or seller pay title insurance in Colorado?",
+    answer: "In Colorado, both buyer and seller pay separate title insurance policies, but they cover different things. The seller traditionally pays for the owner's title insurance policy (protecting the buyer's ownership against prior claims), and the buyer pays for the lender's title insurance policy (protecting their mortgage lender). Each policy typically costs around 0.3% of the purchase price. In South Denver Metro, who pays for what is sometimes negotiated as part of the contract."
+  },
+  {
+    question: "What closing costs does the seller pay in South Denver?",
+    answer: "South Denver sellers typically pay agent commissions (roughly 5.5–6% combined for both sides), owner's title insurance (~0.3% of sale price), escrow and settlement fees (~$500–$800), Colorado's documentary fee (0.01% of sale price), recording fees (~$50–$100), HOA transfer fees (~$300–$500 if applicable), and any seller concessions negotiated with the buyer. Total seller closing costs in Colorado typically run 7–9% of the sale price. Jacob Stark negotiates aggressively on your behalf to minimize these costs where possible."
+  },
+  {
+    question: "What closing costs does the buyer pay in Colorado?",
+    answer: "Buyers in Colorado typically pay lender origination and underwriting fees, lender's title insurance, escrow and settlement fees, an appraisal ($550–$700), a home inspection ($400–$600), prepaid property taxes and homeowners insurance (escrowed at closing), recording fees, and any HOA transfer costs. Buyers using FHA loans pay an additional 1.75% upfront mortgage insurance premium; VA loan borrowers pay a funding fee (typically 2.15% for first-time use). Total buyer closing costs in Colorado typically run 2–4% of the purchase price, with cash buyers paying considerably less."
+  },
+  {
+    question: "Can you negotiate closing costs in Colorado?",
+    answer: "Yes. Many closing costs in Colorado are negotiable, though some are fixed. Fixed costs include the state documentary fee, recording fees, and third-party services like appraisals and inspections. Negotiable costs include agent commissions (especially post-2024 NAR settlement), seller concessions to the buyer, who pays the owner's title policy, lender origination fees, and escrow/settlement fees (which sometimes have flexibility depending on the title company). Jacob Stark identifies which costs are negotiable on every deal and pushes for the best outcome on your side."
+  },
+  {
+    question: "How accurate is this closing cost estimator?",
+    answer: "The estimator provides a directional estimate based on typical Colorado fee ranges. Actual closing costs depend on your specific lender (origination fees vary widely), title company (escrow fees vary), HOA (transfer fees vary), negotiated contract terms (seller concessions, who pays for what), and property specifics (inspection scope, repair credits, etc.). For precise figures, request a Loan Estimate from your lender (they're required to provide one within 3 days of application) and an Estimated Closing Statement from your title company once you're under contract. Jacob Stark reviews these documents with every client to ensure nothing is out of line."
+  }
+];
+---
+
+<BaseLayout
+  title="Colorado Closing Cost Estimator | Buyer & Seller | Jacob Stark"
+  description="Free Colorado closing cost estimator for buyers and sellers in South Denver. Estimate total costs, line-item breakdown, and net proceeds. No email required."
+  ogUrl="https://selling303.com/tools/closing-cost-estimator"
+  ogImage="https://selling303.com/images/og-default.jpg"
+  currentPage="tools"
+  headerVariant="solid"
+>
+  <Fragment slot="head">
+    <!-- Schema: WebApplication / SoftwareApplication for the tool -->
+    <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Colorado Closing Cost Estimator",
+      "url": "https://selling303.com/tools/closing-cost-estimator",
+      "description": "Free calculator that estimates closing costs for buyers and sellers in Colorado, with a complete line-item breakdown including agent commissions, title insurance, escrow fees, and Colorado-specific documentary fees.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "RealEstateAgent",
+        "name": "Jacob Stark",
+        "url": "https://selling303.com"
+      }
+    }
+    </script>
+  </Fragment>
+
+  <!-- ========== PAGE HERO ========== -->
+  <PageHero
+    label="Free Tool"
+    heading="Colorado Closing Cost Estimator"
+    subtext="Buyer or seller, estimate your closing costs with a Colorado-accurate line-item breakdown. No email required — adjust the inputs to match your situation."
+  />
+
+  <!-- ========== DIRECT ANSWER + CALCULATOR ========== -->
+  <section class="section section--white">
+    <div class="container">
+      <DirectAnswer
+        question="How much are closing costs in Colorado?"
+        answer="Buyers in Colorado typically pay 2–4% of the purchase price in closing costs. Sellers typically pay 7–9% of the sale price (including both agent commissions). Colorado is cheaper than most states because there are no closing attorneys required and the documentary fee is just 0.01%. The calculator below breaks down every line item for both sides."
+      />
+
+      <div style="max-width: 1100px; margin: 0 auto;">
+        <ClosingCostEstimator showHeader={false} defaultSide="buyer" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXPLAINER — BUYER SIDE ========== -->
+  <section class="section">
+    <div class="container" style="max-width: 900px;">
+      <span class="section-label">Buyer Closing Costs</span>
+      <h2 class="section-heading">What buyers pay at closing in Colorado</h2>
+      <p>
+        If you're buying a home in South Denver Metro, expect to bring 2–4% of the purchase price to closing on top of your down payment. On a $600,000 home with a conventional loan at 20% down, that's roughly $12,000–$24,000 in closing costs. The biggest line items are lender fees (origination and underwriting), title insurance (lender's policy), and prepaids — your first year of property tax and homeowners insurance, held in escrow.
+      </p>
+      <p>
+        Colorado-specific items that affect buyers: there's no attorney required at closing (which saves $500–$1,500 compared to attorney-closing states), and the state's documentary fee is just $0.01 per $100 of purchase price — essentially nothing. Recording fees are also modest (~$175 total).
+      </p>
+      <p>
+        Loan-type matters. FHA loans add a 1.75% upfront mortgage insurance premium. VA loans carry a funding fee of roughly 2.15% for first-time use (often financed into the loan rather than paid upfront). Cash buyers skip lender fees entirely — the estimator reflects each of these when you change the loan type.
+      </p>
+
+      <h3 style="margin-top: 2.5rem;">Typical buyer breakdown on a $600K conventional purchase</h3>
+      <ul style="list-style: disc; padding-left: 1.5rem; margin-bottom: 1.5rem;">
+        <li><strong>Lender fees (origination, underwriting):</strong> ~$5,100</li>
+        <li><strong>Title insurance (lender's policy):</strong> ~$1,800</li>
+        <li><strong>Escrow / settlement fee:</strong> ~$650</li>
+        <li><strong>Appraisal:</strong> ~$625</li>
+        <li><strong>Inspection:</strong> ~$500</li>
+        <li><strong>Prepaids (taxes, insurance, interest):</strong> ~$9,000</li>
+        <li><strong>Recording fees:</strong> ~$175</li>
+        <li><strong>HOA transfer (if applicable):</strong> ~$400</li>
+        <li><strong>Total estimated closing costs:</strong> <span style="color: var(--color-primary); font-weight: 700;">~$18,250 (3.0%)</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ========== EXPLAINER — SELLER SIDE ========== -->
+  <section class="section section--white">
+    <div class="container" style="max-width: 900px;">
+      <span class="section-label">Seller Closing Costs</span>
+      <h2 class="section-heading">What sellers pay at closing in Colorado</h2>
+      <p>
+        South Denver sellers typically pay 7–9% of the sale price in closing costs. The dominant line item is agent commissions (default 6% combined for both agents), followed by owner's title insurance (~0.3% of sale price), escrow and settlement fees, and Colorado's tiny documentary fee.
+      </p>
+      <p>
+        Since the 2024 NAR settlement, buyer agent commissions are negotiable on every deal — sellers are no longer required to offer a set commission to the buyer's agent. In practice, most South Denver transactions still include a buyer-agent commission paid by the seller because it expands the buyer pool and strengthens offers, but the rate is now openly negotiated per transaction. The calculator's combined commission slider lets you model scenarios where you offer less, or more, than the default.
+      </p>
+      <p>
+        Colorado's documentary fee is 0.01% of the sale price (one cent per $100) — essentially a rounding error. HOA transfer fees ($300–$500) apply if your property is in an HOA. Seller concessions (credits you offer the buyer at closing for rate buydowns, repairs, or closing help) are optional but common in slower markets.
+      </p>
+
+      <h3 style="margin-top: 2.5rem;">Typical seller breakdown on a $600K sale</h3>
+      <ul style="list-style: disc; padding-left: 1.5rem; margin-bottom: 1.5rem;">
+        <li><strong>Agent commissions (6% combined):</strong> $36,000</li>
+        <li><strong>Owner's title insurance:</strong> ~$1,800</li>
+        <li><strong>Escrow / settlement fee:</strong> ~$650</li>
+        <li><strong>Colorado documentary fee (0.01%):</strong> $60</li>
+        <li><strong>Recording fees:</strong> ~$75</li>
+        <li><strong>HOA transfer:</strong> ~$400</li>
+        <li><strong>Seller concessions:</strong> $0 (varies)</li>
+        <li><strong>Total estimated closing costs:</strong> <span style="color: var(--color-primary); font-weight: 700;">~$38,985 (6.5%)</span></li>
+        <li><strong>Estimated net proceeds (before mortgage payoff):</strong> <span style="color: var(--color-primary); font-weight: 700;">~$561,015</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ========== WHY COLORADO IS CHEAPER ========== -->
+  <section class="section">
+    <div class="container" style="max-width: 900px;">
+      <span class="section-label">Colorado vs. Other States</span>
+      <h2 class="section-heading">Why Colorado closing costs are lower than most states</h2>
+      <p>
+        If you're relocating to Colorado from New York, Pennsylvania, Illinois, or most Northeast states, you'll notice significantly lower closing costs here. Two big reasons:
+      </p>
+      <p>
+        <strong>No closing attorneys required.</strong> Colorado handles real estate closings through title companies, not attorneys. In attorney-closing states (New York, Massachusetts, Illinois, etc.), buyers and sellers each pay $500–$2,000 in legal fees. In Colorado, that line item simply doesn't exist — your REALTOR® and the title company coordinate everything.
+      </p>
+      <p>
+        <strong>Negligible transfer taxes.</strong> Colorado's documentary fee is 0.01% of the sale price — one cent per $100. By contrast: Pennsylvania charges 2%, New York charges 0.4% state plus up to 2.625% local, Delaware charges 4%. On a $600,000 home, Colorado's fee is $60; Pennsylvania's would be $12,000.
+      </p>
+      <p style="margin-top: 1.5rem;">
+        Relocating to Colorado and want to understand the full picture? <a href="/relocation" style="color: var(--color-primary); text-decoration: underline;">See the relocation guide</a>, or <a href="https://calendly.com/jacob-realtor" style="color: var(--color-primary); text-decoration: underline;" target="_blank" rel="noopener">book a free call with Jacob Stark</a> to map out your move.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== RELATED TOOLS / CROSS-LINKS ========== -->
+  <section class="section section--white">
+    <div class="container" style="max-width: 900px;">
+      <span class="section-label">Keep Going</span>
+      <h2 class="section-heading">More tools and guides</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+        <a href="/first-time-homebuyers" style="background: var(--color-background); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); display: block;">
+          <h3 style="font-size: 1.125rem; margin-bottom: 0.5rem;">First-Time Buyers Guide</h3>
+          <p style="font-size: 0.9375rem; margin: 0;">Education-first guide to buying your first home in South Denver.</p>
+        </a>
+        <a href="/first-time-homesellers" style="background: var(--color-background); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); display: block;">
+          <h3 style="font-size: 1.125rem; margin-bottom: 0.5rem;">First-Time Sellers Guide</h3>
+          <p style="font-size: 0.9375rem; margin: 0;">What to expect when listing your first home in Colorado.</p>
+        </a>
+        <a href="/tools/home-equity-calculator" style="background: var(--color-background); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); display: block;">
+          <h3 style="font-size: 1.125rem; margin-bottom: 0.5rem;">Home Equity Calculator</h3>
+          <p style="font-size: 0.9375rem; margin: 0;">If you're moving up, run your net equity and affordability here.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <FAQ items={faqItems} />
+
+  <!-- ========== CTA BANNER ========== -->
+  <CTABanner
+    heading="Want a precise closing cost review?"
+    subtext="Book a free call with Jacob Stark — he'll walk through your specific transaction, flag which costs are negotiable, and help you budget accurately before you commit."
+    primaryHref="https://calendly.com/jacob-realtor"
+    primaryText="Schedule Your Free Call"
+    secondaryHref="sms:+13039970634?&body=Hi%20Jacob%2C%20I%20have%20a%20question%20about%20closing%20costs."
+    secondaryText="Text 303-997-0634"
+  />
+</BaseLayout>

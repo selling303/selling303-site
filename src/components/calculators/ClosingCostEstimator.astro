@@ -1,0 +1,961 @@
+---
+/**
+ * ClosingCostEstimator.astro
+ *
+ * Interactive closing cost estimator for Colorado buyers and sellers.
+ * Toggleable: Buyer ↔ Seller views inside a single component.
+ *
+ * Used on:
+ *   - /tools/closing-cost-estimator (standalone, default: buyer)
+ *   - /first-time-homebuyers (embedded, default: buyer)
+ *   - /first-time-homesellers (embedded, default: seller)
+ *   - /move-up-sellers (embedded, default: seller — future)
+ *
+ * All computation is native — crawlable by Google, citable by ChatGPT / Perplexity.
+ */
+
+interface Props {
+  showHeader?: boolean;
+  defaultSide?: "buyer" | "seller";
+}
+
+const { showHeader = true, defaultSide = "buyer" } = Astro.props;
+
+// --- Defaults ---
+const d_price = 600000;
+const d_loan = "conventional"; // conventional | fha | va | cash
+const d_dpPct = 20;
+const d_rate = 6.5;
+const d_commissionPct = 6;
+const d_concessionPct = 0;
+
+// --- Initial server-side computation (so the rendered HTML has real numbers) ---
+// Buyer-side defaults (conventional, 20% down on $600K)
+const loanAmount_initial = d_price * (1 - d_dpPct / 100);
+const lenderFees_initial = loanAmount_initial * 0.008 + 1200;
+const titleIns_buyer_initial = d_price * 0.003;
+const escrow_initial = 650;
+const appraisal_initial = 625;
+const inspection_initial = 500;
+const prepaids_initial = d_price * 0.015;
+const recording_initial = 175;
+const hoa_initial = 400;
+const buyerTotal_initial =
+  lenderFees_initial +
+  titleIns_buyer_initial +
+  escrow_initial +
+  appraisal_initial +
+  inspection_initial +
+  prepaids_initial +
+  recording_initial +
+  hoa_initial;
+const cashAtClosing_initial = d_price * (d_dpPct / 100) + buyerTotal_initial;
+
+const monthlyRate_initial = d_rate / 100 / 12;
+const pAndI_initial =
+  (loanAmount_initial * monthlyRate_initial * Math.pow(1 + monthlyRate_initial, 360)) /
+  (Math.pow(1 + monthlyRate_initial, 360) - 1);
+const taxIns_initial = (d_price * 0.01) / 12;
+const monthlyTotal_initial = pAndI_initial + taxIns_initial;
+
+// Seller-side defaults
+const commissions_initial = d_price * (d_commissionPct / 100);
+const titleIns_seller_initial = d_price * 0.003;
+const documentary_initial = d_price * 0.0001;
+const sellerRecording_initial = 75;
+const sellerHOA_initial = 400;
+const sellerEscrow_initial = 650;
+const concessions_initial = d_price * (d_concessionPct / 100);
+const sellerTotal_initial =
+  commissions_initial +
+  titleIns_seller_initial +
+  documentary_initial +
+  sellerRecording_initial +
+  sellerHOA_initial +
+  sellerEscrow_initial +
+  concessions_initial;
+const netProceeds_initial = d_price - sellerTotal_initial;
+
+const fmt = (v: number) =>
+  new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    maximumFractionDigits: 0,
+  }).format(Math.max(0, Math.round(v)));
+---
+
+<div class="cce" data-calculator="closing-cost" data-side={defaultSide}>
+  {showHeader && (
+    <div class="cce__intro">
+      <span class="section-label">Free Tool</span>
+      <h2 class="cce__title">Colorado Closing Cost Estimator</h2>
+      <p class="cce__subtitle">
+        Estimate your closing costs for a buyer or seller transaction in South Denver
+        &mdash; with a Colorado-accurate breakdown of every line item.
+      </p>
+    </div>
+  )}
+
+  <!-- SIDE TOGGLE -->
+  <div class="cce__toggle" role="tablist" aria-label="Transaction side">
+    <button
+      type="button"
+      class="cce__toggle-btn"
+      data-side-toggle="buyer"
+      role="tab"
+      aria-selected={defaultSide === "buyer" ? "true" : "false"}
+    >
+      I&apos;m Buying
+    </button>
+    <button
+      type="button"
+      class="cce__toggle-btn"
+      data-side-toggle="seller"
+      role="tab"
+      aria-selected={defaultSide === "seller" ? "true" : "false"}
+    >
+      I&apos;m Selling
+    </button>
+  </div>
+
+  <div class="cce__grid">
+    <!-- ============================ INPUTS ============================ -->
+    <form class="cce__inputs" onsubmit="return false;">
+      <h3 class="cce__section-heading">Your Numbers</h3>
+
+      <!-- Shared: price -->
+      <label class="cce__field">
+        <span class="cce__label" data-price-label>
+          {defaultSide === "buyer" ? "Purchase price" : "Sale price"}
+        </span>
+        <span class="cce__input-row">
+          <span class="cce__prefix">$</span>
+          <input
+            type="number"
+            data-input="price"
+            value={d_price}
+            min="100000"
+            max="3000000"
+            step="5000"
+            inputmode="numeric"
+          />
+        </span>
+        <input
+          type="range"
+          data-range="price"
+          value={d_price}
+          min="100000"
+          max="3000000"
+          step="5000"
+          aria-label="Price slider"
+        />
+      </label>
+
+      <!-- BUYER-ONLY INPUTS -->
+      <div class="cce__buyer-only" data-show-for="buyer">
+        <label class="cce__field">
+          <span class="cce__label">Loan type</span>
+          <select data-input="loan" class="cce__select">
+            <option value="conventional" selected={d_loan === "conventional"}>Conventional</option>
+            <option value="fha" selected={d_loan === "fha"}>FHA</option>
+            <option value="va" selected={d_loan === "va"}>VA</option>
+            <option value="cash" selected={d_loan === "cash"}>Cash</option>
+          </select>
+        </label>
+
+        <label class="cce__field" data-hide-if="cash">
+          <span class="cce__label">Down payment</span>
+          <span class="cce__input-row">
+            <input
+              type="number"
+              data-input="dpPct"
+              value={d_dpPct}
+              min="3"
+              max="50"
+              step="1"
+              inputmode="numeric"
+            />
+            <span class="cce__suffix">%</span>
+          </span>
+          <input
+            type="range"
+            data-range="dpPct"
+            value={d_dpPct}
+            min="3"
+            max="50"
+            step="1"
+            aria-label="Down payment percent slider"
+          />
+        </label>
+
+        <details class="cce__advanced" data-hide-if="cash">
+          <summary>Advanced assumptions</summary>
+          <label class="cce__field cce__field--small">
+            <span class="cce__label">Mortgage rate (%)</span>
+            <input
+              type="number"
+              data-input="rate"
+              value={d_rate}
+              min="3"
+              max="12"
+              step="0.125"
+              inputmode="decimal"
+            />
+          </label>
+          <p class="cce__fine-print">
+            Used only for the monthly payment estimate, which appears in the results.
+          </p>
+        </details>
+      </div>
+
+      <!-- SELLER-ONLY INPUTS -->
+      <div class="cce__seller-only" data-show-for="seller" hidden>
+        <label class="cce__field">
+          <span class="cce__label">
+            Total agent commissions <span class="cce__label-hint">(both sides combined)</span>
+          </span>
+          <span class="cce__input-row">
+            <input
+              type="number"
+              data-input="commissionPct"
+              value={d_commissionPct}
+              min="0"
+              max="10"
+              step="0.1"
+              inputmode="decimal"
+            />
+            <span class="cce__suffix">%</span>
+          </span>
+          <input
+            type="range"
+            data-range="commissionPct"
+            value={d_commissionPct}
+            min="0"
+            max="10"
+            step="0.1"
+            aria-label="Total agent commission slider"
+          />
+        </label>
+
+        <details class="cce__advanced">
+          <summary>Advanced assumptions</summary>
+          <label class="cce__field cce__field--small">
+            <span class="cce__label">Seller concessions (% of sale)</span>
+            <input
+              type="number"
+              data-input="concessionPct"
+              value={d_concessionPct}
+              min="0"
+              max="5"
+              step="0.1"
+              inputmode="decimal"
+            />
+          </label>
+          <p class="cce__fine-print">
+            Concessions are credits you offer the buyer at closing (rate buydowns, repairs, closing help).
+            Default zero; budget 1&ndash;3% in slower markets.
+          </p>
+        </details>
+      </div>
+    </form>
+
+    <!-- ============================ OUTPUTS ============================ -->
+    <div class="cce__outputs">
+      <h3 class="cce__section-heading" data-outputs-heading>
+        {defaultSide === "buyer" ? "What You'll Pay at Closing" : "What You'll Pay at Closing"}
+      </h3>
+
+      <!-- PRIMARY RESULT -->
+      <div class="cce__result cce__result--primary">
+        <span class="cce__result-label">
+          <span data-primary-label>
+            {defaultSide === "buyer"
+              ? "Estimated total closing costs"
+              : "Estimated total closing costs"}
+          </span>
+        </span>
+        <span class="cce__result-value" data-output="total">
+          {fmt(defaultSide === "buyer" ? buyerTotal_initial : sellerTotal_initial)}
+        </span>
+        <span class="cce__result-note">
+          <span data-output="totalPct">
+            {(
+              ((defaultSide === "buyer" ? buyerTotal_initial : sellerTotal_initial) /
+                d_price) *
+              100
+            ).toFixed(1)}
+          </span>% of <span data-price-word>{defaultSide === "buyer" ? "purchase" : "sale"}</span> price
+        </span>
+      </div>
+
+      <!-- SECONDARY RESULT: cash at closing (buyer) / net proceeds (seller) -->
+      <div class="cce__result cce__result--secondary">
+        <span class="cce__result-label" data-secondary-label>
+          {defaultSide === "buyer" ? "Total cash needed at closing" : "Estimated net proceeds"}
+        </span>
+        <span class="cce__result-value cce__result-value--md" data-output="secondary">
+          {fmt(defaultSide === "buyer" ? cashAtClosing_initial : netProceeds_initial)}
+        </span>
+        <span class="cce__result-note" data-secondary-note>
+          {defaultSide === "buyer"
+            ? "Down payment + closing costs."
+            : "Before mortgage payoff. Add your current loan payoff to estimate final proceeds."}
+        </span>
+      </div>
+
+      <!-- MONTHLY PAYMENT (buyer only) -->
+      <div class="cce__result cce__result--monthly" data-show-for="buyer">
+        <span class="cce__result-label">Estimated monthly payment</span>
+        <span class="cce__result-value cce__result-value--md" data-output="monthly">
+          {fmt(monthlyTotal_initial)}
+        </span>
+        <span class="cce__result-note">P&amp;I + est. taxes and insurance. 30-year fixed.</span>
+      </div>
+
+      <!-- LINE-ITEM BREAKDOWN -->
+      <div class="cce__breakdown">
+        <span class="cce__result-label">Line-item breakdown</span>
+        <table class="cce__table" data-breakdown-table>
+          <!-- Buyer rows -->
+          <tbody data-show-for="buyer">
+            <tr><td>Lender fees (origination, underwriting, application)</td><td data-line="lenderFees">{fmt(lenderFees_initial)}</td></tr>
+            <tr><td>Title insurance (buyer&rsquo;s policy)</td><td data-line="titleIns">{fmt(titleIns_buyer_initial)}</td></tr>
+            <tr><td>Escrow / settlement fee</td><td data-line="escrow">{fmt(escrow_initial)}</td></tr>
+            <tr><td>Appraisal</td><td data-line="appraisal">{fmt(appraisal_initial)}</td></tr>
+            <tr><td>Inspection</td><td data-line="inspection">{fmt(inspection_initial)}</td></tr>
+            <tr><td>Prepaids (property tax escrow, HOI, interest)</td><td data-line="prepaids">{fmt(prepaids_initial)}</td></tr>
+            <tr><td>Recording fees</td><td data-line="recording">{fmt(recording_initial)}</td></tr>
+            <tr><td>HOA transfer &amp; documents (if applicable)</td><td data-line="hoa">{fmt(hoa_initial)}</td></tr>
+            <tr class="cce__table-loan-extra" data-line-row="loanExtra" hidden>
+              <td data-line-extra-label>FHA upfront MIP</td>
+              <td data-line="loanExtra">$0</td>
+            </tr>
+          </tbody>
+          <!-- Seller rows -->
+          <tbody data-show-for="seller" hidden>
+            <tr><td>Agent commissions (both sides)</td><td data-line="commissions">{fmt(commissions_initial)}</td></tr>
+            <tr><td>Owner&rsquo;s title insurance</td><td data-line="sellerTitle">{fmt(titleIns_seller_initial)}</td></tr>
+            <tr><td>Escrow / settlement fee</td><td data-line="sellerEscrow">{fmt(sellerEscrow_initial)}</td></tr>
+            <tr><td>Colorado documentary fee (0.01%)</td><td data-line="documentary">{fmt(documentary_initial)}</td></tr>
+            <tr><td>Recording fees</td><td data-line="sellerRecording">{fmt(sellerRecording_initial)}</td></tr>
+            <tr><td>HOA transfer &amp; documents</td><td data-line="sellerHOA">{fmt(sellerHOA_initial)}</td></tr>
+            <tr class="cce__table-loan-extra" data-line-row="concessions" hidden>
+              <td>Seller concessions</td>
+              <td data-line="concessions">{fmt(concessions_initial)}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- CTA -->
+      <div class="cce__cta">
+        <a
+          href="https://calendly.com/jacob-realtor"
+          class="btn btn--primary btn--lg"
+          target="_blank"
+          rel="noopener"
+        >
+          Book my closing cost review
+        </a>
+        <a
+          href="sms:+13039970634?&body=Hi%20Jacob%2C%20I%20ran%20the%20closing%20cost%20estimator%20and%20have%20a%20question."
+          class="btn btn--outline-dark btn--lg"
+        >
+          Text me: 303-997-0634
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <p class="cce__disclaimer">
+    Estimates only. Actual closing costs depend on your specific lender, title company, HOA, property type, and negotiated terms. Line-item amounts reflect typical Colorado ranges and are not a guarantee. This tool is not a loan approval, pre-qualification, or mortgage offer. For precise figures, request a Loan Estimate from a licensed lender and a closing statement from your title company, and consult Jacob Stark for a transaction-specific review.
+  </p>
+</div>
+
+<style>
+  .cce {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-md);
+    box-shadow: var(--shadow-md);
+  }
+
+  .cce__intro {
+    text-align: center;
+    margin-bottom: var(--space-md);
+  }
+  .cce__title {
+    margin-bottom: var(--space-xs);
+  }
+  .cce__subtitle {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* --- TOGGLE --- */
+  .cce__toggle {
+    display: flex;
+    gap: 2px;
+    background: var(--color-background);
+    border-radius: var(--radius-sm);
+    padding: 4px;
+    margin-bottom: var(--space-md);
+    max-width: 420px;
+  }
+  .cce__toggle-btn {
+    flex: 1;
+    padding: 0.625rem 1rem;
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-body-text);
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all var(--transition);
+  }
+  .cce__toggle-btn[aria-selected="true"] {
+    background: var(--color-primary);
+    color: var(--color-white);
+    box-shadow: var(--shadow-sm);
+  }
+  .cce__toggle-btn:hover:not([aria-selected="true"]) {
+    background: rgba(0, 42, 58, 0.06);
+  }
+
+  /* --- GRID --- */
+  .cce__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+  }
+  @media (max-width: 860px) {
+    .cce__grid {
+      grid-template-columns: 1fr;
+    }
+    .cce {
+      padding: var(--space-sm);
+    }
+  }
+
+  .cce__section-heading {
+    font-size: 1.0625rem;
+    margin-bottom: var(--space-sm);
+    padding-bottom: var(--space-xs);
+    border-bottom: 2px solid var(--color-accent);
+    display: inline-block;
+  }
+
+  /* --- INPUTS --- */
+  .cce__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+  .cce__buyer-only,
+  .cce__seller-only {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+  .cce__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .cce__label {
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-dark-text);
+  }
+  .cce__label-hint {
+    font-weight: 400;
+    color: var(--color-light-text);
+    font-size: 0.8125rem;
+  }
+  .cce__input-row {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: var(--color-white);
+    transition: border-color var(--transition);
+  }
+  .cce__input-row:focus-within {
+    border-color: var(--color-primary);
+  }
+  .cce__prefix {
+    padding: 0 0.75rem;
+    color: var(--color-body-text);
+    font-weight: 600;
+    border-right: 1px solid var(--color-border);
+  }
+  .cce__suffix {
+    padding: 0 0.75rem;
+    color: var(--color-body-text);
+    font-weight: 600;
+    border-left: 1px solid var(--color-border);
+  }
+  .cce__input-row input[type="number"] {
+    flex: 1;
+    padding: 0.75rem;
+    border: none;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-dark-text);
+    background: transparent;
+    width: 100%;
+  }
+  .cce__input-row input[type="number"]:focus {
+    outline: none;
+  }
+  .cce__field input[type="range"] {
+    width: 100%;
+    accent-color: var(--color-accent);
+  }
+  .cce__select {
+    padding: 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: var(--color-white);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-dark-text);
+    cursor: pointer;
+  }
+
+  .cce__advanced {
+    margin-top: var(--space-xs);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: var(--space-sm) var(--space-md);
+    background: var(--color-background);
+  }
+  .cce__advanced summary {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--color-primary);
+    list-style: none;
+  }
+  .cce__advanced summary::-webkit-details-marker {
+    display: none;
+  }
+  .cce__advanced summary::before {
+    content: "⚙  ";
+    margin-right: 0.25rem;
+  }
+  .cce__field--small {
+    margin-top: var(--space-sm);
+  }
+  .cce__field--small input {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    width: 100%;
+  }
+  .cce__fine-print {
+    font-size: 0.75rem;
+    color: var(--color-light-text);
+    margin-top: var(--space-sm);
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
+
+  /* --- OUTPUTS --- */
+  .cce__outputs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+  .cce__result {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .cce__result-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-light-text);
+    font-weight: 600;
+  }
+  .cce__result-value {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    line-height: 1.1;
+  }
+  .cce__result-value--md {
+    font-size: 1.25rem;
+  }
+  .cce__result--primary .cce__result-value {
+    font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+  }
+  .cce__result--primary {
+    background: var(--color-background);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--color-accent);
+  }
+  .cce__result-note {
+    font-size: 0.7rem;
+    color: var(--color-body-text);
+  }
+
+  /* --- BREAKDOWN TABLE --- */
+  .cce__breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .cce__table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+  }
+  .cce__table td {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-body-text);
+  }
+  .cce__table td:last-child {
+    text-align: right;
+    color: var(--color-dark-text);
+    font-weight: 600;
+    white-space: nowrap;
+    padding-left: 1rem;
+  }
+  .cce__table tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* --- CTA --- */
+  .cce__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-top: var(--space-xs);
+  }
+  .cce__cta .btn {
+    flex: 1;
+    min-width: 200px;
+    white-space: nowrap;
+  }
+
+  /* --- DISCLAIMER --- */
+  .cce__disclaimer {
+    margin-top: var(--space-md);
+    padding-top: var(--space-sm);
+    border-top: 1px solid var(--color-border);
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: var(--color-light-text);
+  }
+
+  /* Visibility toggles controlled by JS via [hidden] */
+  [hidden] {
+    display: none !important;
+  }
+</style>
+
+<script>
+  (function initClosingCostEstimators() {
+    const instances = document.querySelectorAll<HTMLElement>(
+      '[data-calculator="closing-cost"]'
+    );
+    instances.forEach((root) => initOne(root));
+
+    function initOne(root: HTMLElement) {
+      const q = <T extends Element = HTMLElement>(sel: string) =>
+        root.querySelector(sel) as T | null;
+
+      const inputs = {
+        price: q<HTMLInputElement>('[data-input="price"]')!,
+        loan: q<HTMLSelectElement>('[data-input="loan"]')!,
+        dpPct: q<HTMLInputElement>('[data-input="dpPct"]')!,
+        rate: q<HTMLInputElement>('[data-input="rate"]')!,
+        commissionPct: q<HTMLInputElement>('[data-input="commissionPct"]')!,
+        concessionPct: q<HTMLInputElement>('[data-input="concessionPct"]')!,
+      };
+      const ranges = {
+        price: q<HTMLInputElement>('[data-range="price"]')!,
+        dpPct: q<HTMLInputElement>('[data-range="dpPct"]')!,
+        commissionPct: q<HTMLInputElement>('[data-range="commissionPct"]')!,
+      };
+      const outputs = {
+        total: q('[data-output="total"]')!,
+        totalPct: q('[data-output="totalPct"]')!,
+        secondary: q('[data-output="secondary"]')!,
+        monthly: q('[data-output="monthly"]')!,
+        // Buyer line items
+        lenderFees: q('[data-line="lenderFees"]')!,
+        titleIns: q('[data-line="titleIns"]')!,
+        escrow: q('[data-line="escrow"]')!,
+        appraisal: q('[data-line="appraisal"]')!,
+        inspection: q('[data-line="inspection"]')!,
+        prepaids: q('[data-line="prepaids"]')!,
+        recording: q('[data-line="recording"]')!,
+        hoa: q('[data-line="hoa"]')!,
+        loanExtra: q('[data-line="loanExtra"]')!,
+        loanExtraLabel: q('[data-line-extra-label]')!,
+        loanExtraRow: q<HTMLElement>('[data-line-row="loanExtra"]')!,
+        // Seller line items
+        commissions: q('[data-line="commissions"]')!,
+        sellerTitle: q('[data-line="sellerTitle"]')!,
+        sellerEscrow: q('[data-line="sellerEscrow"]')!,
+        documentary: q('[data-line="documentary"]')!,
+        sellerRecording: q('[data-line="sellerRecording"]')!,
+        sellerHOA: q('[data-line="sellerHOA"]')!,
+        concessions: q('[data-line="concessions"]')!,
+        concessionsRow: q<HTMLElement>('[data-line-row="concessions"]')!,
+      };
+      const priceLabel = q('[data-price-label]')!;
+      const priceWord = q('[data-price-word]')!;
+      const secondaryLabel = q('[data-secondary-label]')!;
+      const secondaryNote = q('[data-secondary-note]')!;
+      const primaryLabel = q('[data-primary-label]')!;
+
+      const sideSections = root.querySelectorAll<HTMLElement>(
+        "[data-show-for]"
+      );
+      const toggleBtns = root.querySelectorAll<HTMLElement>("[data-side-toggle]");
+      const hideIfCashEls = root.querySelectorAll<HTMLElement>(
+        "[data-hide-if]"
+      );
+
+      const fmt = (v: number) =>
+        new Intl.NumberFormat("en-US", {
+          style: "currency",
+          currency: "USD",
+          maximumFractionDigits: 0,
+        }).format(Math.max(0, Math.round(v)));
+
+      function num(el: HTMLInputElement | null, fallback: number) {
+        if (!el) return fallback;
+        const v = parseFloat(el.value);
+        return isFinite(v) ? v : fallback;
+      }
+
+      function getSide(): "buyer" | "seller" {
+        return (root.getAttribute("data-side") as "buyer" | "seller") || "buyer";
+      }
+
+      function setSide(side: "buyer" | "seller") {
+        root.setAttribute("data-side", side);
+        // Toggle button ARIA state
+        toggleBtns.forEach((btn) => {
+          const btnSide = btn.getAttribute("data-side-toggle");
+          btn.setAttribute(
+            "aria-selected",
+            btnSide === side ? "true" : "false"
+          );
+        });
+        // Show/hide side-specific sections
+        sideSections.forEach((el) => {
+          const target = el.getAttribute("data-show-for");
+          if (target === side) {
+            el.removeAttribute("hidden");
+          } else {
+            el.setAttribute("hidden", "");
+          }
+        });
+        // Update labels
+        priceLabel.textContent = side === "buyer" ? "Purchase price" : "Sale price";
+        priceWord.textContent = side === "buyer" ? "purchase" : "sale";
+        primaryLabel.textContent = "Estimated total closing costs";
+        secondaryLabel.textContent =
+          side === "buyer" ? "Total cash needed at closing" : "Estimated net proceeds";
+        secondaryNote.textContent =
+          side === "buyer"
+            ? "Down payment + closing costs."
+            : "Before mortgage payoff. Add your current loan payoff to estimate final proceeds.";
+        compute();
+      }
+
+      function applyCashVisibility() {
+        const isCash = inputs.loan && inputs.loan.value === "cash";
+        hideIfCashEls.forEach((el) => {
+          if (el.getAttribute("data-hide-if") === "cash") {
+            if (isCash) {
+              el.setAttribute("hidden", "");
+            } else {
+              el.removeAttribute("hidden");
+            }
+          }
+        });
+      }
+
+      function compute() {
+        const side = getSide();
+        const price = num(inputs.price, 600000);
+
+        if (side === "buyer") {
+          const loan = inputs.loan?.value || "conventional";
+          const dpPct = loan === "cash" ? 100 : num(inputs.dpPct, 20);
+          const rate = num(inputs.rate, 6.5);
+          const loanAmount = price * (1 - dpPct / 100);
+
+          // Base Colorado buyer closing costs
+          const isCash = loan === "cash";
+          const lenderFees = isCash ? 0 : loanAmount * 0.008 + 1200;
+          const titleIns = price * 0.003;
+          const escrow = 650;
+          const appraisal = isCash ? 0 : 625;
+          const inspection = 500;
+          const prepaids = isCash ? 0 : price * 0.015;
+          const recording = 175;
+          const hoa = 400;
+
+          // Loan-type-specific extras (FHA MIP / VA funding fee)
+          let loanExtra = 0;
+          let loanExtraLabel = "";
+          if (loan === "fha") {
+            loanExtra = loanAmount * 0.0175; // FHA upfront MIP 1.75%
+            loanExtraLabel = "FHA upfront mortgage insurance (1.75%)";
+          } else if (loan === "va") {
+            loanExtra = loanAmount * 0.0215; // VA funding fee ~2.15% first use (varies)
+            loanExtraLabel = "VA funding fee (est. 2.15%)";
+          }
+
+          const total =
+            lenderFees +
+            titleIns +
+            escrow +
+            appraisal +
+            inspection +
+            prepaids +
+            recording +
+            hoa +
+            loanExtra;
+          const cashAtClosing = price * (dpPct / 100) + total;
+
+          // Monthly payment
+          let pAndI = 0;
+          if (!isCash && loanAmount > 0) {
+            const monthlyRate = rate / 100 / 12;
+            pAndI =
+              (loanAmount * monthlyRate * Math.pow(1 + monthlyRate, 360)) /
+              (Math.pow(1 + monthlyRate, 360) - 1);
+          }
+          const taxIns = (price * 0.01) / 12;
+          const monthlyTotal = isCash ? taxIns : pAndI + taxIns;
+
+          // Update outputs
+          outputs.total.textContent = fmt(total);
+          outputs.totalPct.textContent = ((total / price) * 100).toFixed(1);
+          outputs.secondary.textContent = fmt(cashAtClosing);
+          outputs.monthly.textContent = fmt(monthlyTotal);
+
+          // Buyer line items
+          outputs.lenderFees.textContent = fmt(lenderFees);
+          outputs.titleIns.textContent = fmt(titleIns);
+          outputs.escrow.textContent = fmt(escrow);
+          outputs.appraisal.textContent = fmt(appraisal);
+          outputs.inspection.textContent = fmt(inspection);
+          outputs.prepaids.textContent = fmt(prepaids);
+          outputs.recording.textContent = fmt(recording);
+          outputs.hoa.textContent = fmt(hoa);
+
+          if (loanExtra > 0) {
+            outputs.loanExtraLabel.textContent = loanExtraLabel;
+            outputs.loanExtra.textContent = fmt(loanExtra);
+            outputs.loanExtraRow.removeAttribute("hidden");
+          } else {
+            outputs.loanExtraRow.setAttribute("hidden", "");
+          }
+
+          applyCashVisibility();
+        } else {
+          // SELLER SIDE
+          const commissionPct = num(inputs.commissionPct, 6);
+          const concessionPct = num(inputs.concessionPct, 0);
+
+          const commissionTotal = price * (commissionPct / 100);
+          const titleIns = price * 0.003;
+          const escrow = 650;
+          const documentary = price * 0.0001;
+          const recording = 75;
+          const hoa = 400;
+          const concessions = price * (concessionPct / 100);
+
+          const total =
+            commissionTotal +
+            titleIns +
+            escrow +
+            documentary +
+            recording +
+            hoa +
+            concessions;
+          const netProceeds = price - total;
+
+          outputs.total.textContent = fmt(total);
+          outputs.totalPct.textContent = ((total / price) * 100).toFixed(1);
+          outputs.secondary.textContent = fmt(netProceeds);
+
+          // Seller line items
+          outputs.commissions.textContent = fmt(commissionTotal);
+          outputs.sellerTitle.textContent = fmt(titleIns);
+          outputs.sellerEscrow.textContent = fmt(escrow);
+          outputs.documentary.textContent = fmt(documentary);
+          outputs.sellerRecording.textContent = fmt(recording);
+          outputs.sellerHOA.textContent = fmt(hoa);
+
+          if (concessions > 0) {
+            outputs.concessions.textContent = fmt(concessions);
+            outputs.concessionsRow.removeAttribute("hidden");
+          } else {
+            outputs.concessionsRow.setAttribute("hidden", "");
+          }
+        }
+      }
+
+      // Hook up number <-> range syncing
+      function syncPair(
+        numEl: HTMLInputElement | null,
+        rangeEl: HTMLInputElement | null
+      ) {
+        if (!numEl || !rangeEl) return;
+        numEl.addEventListener("input", () => {
+          rangeEl.value = numEl.value;
+          compute();
+        });
+        rangeEl.addEventListener("input", () => {
+          numEl.value = rangeEl.value;
+          compute();
+        });
+      }
+
+      syncPair(inputs.price, ranges.price);
+      syncPair(inputs.dpPct, ranges.dpPct);
+      syncPair(inputs.commissionPct, ranges.commissionPct);
+
+      // Simple inputs
+      inputs.rate?.addEventListener("input", compute);
+      inputs.concessionPct?.addEventListener("input", compute);
+      inputs.loan?.addEventListener("change", () => {
+        applyCashVisibility();
+        compute();
+      });
+
+      // Toggle handlers
+      toggleBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const side = btn.getAttribute("data-side-toggle") as
+            | "buyer"
+            | "seller"
+            | null;
+          if (side) setSide(side);
+        });
+      });
+
+      // Initial state
+      applyCashVisibility();
+      setSide(getSide());
+    }
+  })();
+</script>

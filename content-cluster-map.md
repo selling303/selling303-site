@@ -52,6 +52,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - Littleton vs. Highlands Ranch (`/blog/littleton-vs-highlands-ranch`)
 - Moving to Highlands Ranch from Out of State: A Relocation Guide for 2026 (`/blog/moving-to-highlands-ranch-relocation-guide-2026`)
 - Littleton vs. Centennial: Which South Denver Suburb Fits Your Relocation? (`/blog/littleton-vs-centennial-south-denver-relocation`)
+- Relocating to Parker, Colorado: What Families Moving from Out of State Need to Know (`/blog/moving-to-parker-colorado-relocation-guide-2026`)
 
 ### 6. New Construction (`/new-construction`)
 **Primary geographic ties:** Parker, Castle Pines, Highlands Ranch, Lone Tree (active builder communities)
@@ -60,6 +61,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - Best Neighborhoods in South Denver for Move-Up Buyers (`/blog/best-neighborhoods-south-denver-move-up-buyers`)
 - New Construction Communities in Castle Pines and Parker: What Buyers Need to Know in 2026 (`/blog/new-construction-castle-pines-parker-2026`)
 - Do You Need a Real Estate Agent for New Construction in Colorado? (`/blog/real-estate-agent-new-construction-colorado`)
+- Lone Tree New Construction: Builder Incentives and What They Actually Mean for Your Bottom Line (`/blog/lone-tree-new-construction-builder-incentives-2026`)
 
 ---
 

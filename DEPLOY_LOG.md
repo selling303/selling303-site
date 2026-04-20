@@ -4,6 +4,33 @@ Permanent record of deployed changes. The deploy-to-netlify skill moves items he
 
 ---
 
+## 2026-04-18 — commit 642acdc (merge 52ca1b6 on live) | Credits used: 15 | Credits remaining: 170
+
+### New blog post (1)
+- **Day 14:** "What First-Time Buyers Should Know About Bidding in Littleton's Spring Market" (`src/content/blog/first-time-buyer-bidding-littleton-spring-2026.md`). First-Time Homebuyers pillar + Littleton geographic pillar. MOFU buyer advice on offer strategy. Data: Littleton Q1 2026 REcolorado MLS (433 closed SFRs, $720K median, 98% median CP/OLP, 23 median DIM) + DMAR March 2026 (99.13% CP/LP, 16 median DIM, pending +30.69% MoM, 63.14% concessions, rates back above 6%). Entry-level pattern for sub-$600K bracket documented (100–107% of OLP in 1–10 DIM).
+- **Two inline visuals:** (1) "First-Time Buyer's Offer Toolkit" — stacked tiered cards mapping escalation clause / appraisal gap / inspection flexibility to the problem each solves; (2) "How to Read the Spring 2026 Littleton Numbers" — three-panel data translator explaining median (middle-of-sorted-row visual), average (skewed by luxury outlier), and close-to-original-list ratio (two paired scenarios: Scenario A citywide median 98% and Scenario B competitive entry-level bracket 104% — brand-green bar extending past list bar on Scenario B visualizes "over asking").
+- **Jacob-review revisions (same-day):** dropped the "informational-only inspection" bullet, added explicit "inspection itself is non-negotiable" opening, folded dollar-threshold tactic ($1K/$2K/$5K objection floor) into scope-limiting bullet as a concrete extension. Removed CAR Legal Hotline external link (hotline is Realtor-only, not a consumer resource).
+- Content calendar Day 14 marked `[x] (drafted 2026-04-17)(published 2026-04-18)`; added to First-Time Homebuyers cluster in content-cluster-map.md.
+
+### Homepage PageSpeed fixes
+- **LCP fix:** added `.hero::before` rule to critical inlined CSS in `BaseLayout.astro`. Previously `.hero::before` (which renders the hero background via `var(--hero-bg)`) only existed in deferred `/css/styles.css`, causing a late layout recalc that pushed LCP to ~2,460ms element render delay. Rule now in critical CSS so the positioning element exists at first paint.
+- **Forced-reflow fix:** rewrote GA4 init in `SEO.astro` to defer until first user interaction (scroll/click/keydown/mousemove/touchstart) or idle/3s timeout. Eliminates 64ms of forced reflow on homepage line 154. Pageviews still register — only sub-3s zero-interaction bounces are missed. Preconnect to googletagmanager.com retained.
+- Only affects homepage hero (the only page using `.hero` + `--hero-bg`).
+
+### Day 13 HR equity post voice edits
+- `equity-to-move-up-highlands-ranch.md` — removed direct Freddie Mac PMMS "check the rate" consumer CTA, replaced with recommendation to talk to a trusted local lender (Jacob can introduce). Timing-section closer reframed so DMAR/CAR appear only as Jacob's source attribution, not as research readers should do themselves.
+
+### Seller Success Stories migration (Framer → Astro, second wave)
+- **14 story content files** added in this batch: 8 full SCAR narratives (with FAQs, testimonials, Schema.org data) and 6 listing-only placeholders pending client interviews (marked `draft: true` so they're excluded from the index grid and sitemap). Counties: Centennial (Birch, Phillips), Littleton (Carr, Holland x2, Flower), Parker (Woodside), Aurora (Jericho), plus placeholders across Arvada/Aurora/Denver/Littleton/Englewood/HR.
+- **`[slug].astro` template:** added auto-image-discovery via `import.meta.glob` — stories auto-find all images in their folder. Made sqft display conditional.
+- **Index page rewrite:** hidden breadcrumbs (sr-only for SEO), 3 featured stories above credibility tiles, 6-stat credibility tiles matching About page, "Browse All Stories" filter + full grid below.
+- Hero image paths wired for all 9 stories with photos. Content config `sqft` made optional.
+
+### Session notes
+- Chrome MCP disconnected partway through the deploy window because the Claude in Chrome extension was signed out post-update. Re-signing in restored the connection. Documented behavioral principle in `~/.claude/CLAUDE.md`: flag broken required tools, don't improvise around them.
+
+---
+
 ## 2026-04-17 — commit 183e7a7 | Credits used: 15 | Credits remaining: 185
 
 ### New blog posts (2)

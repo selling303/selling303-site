@@ -1,0 +1,201 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+interface Tool {
+  title: string;
+  description: string;
+  href: string;
+  badge?: string;
+  external?: boolean;
+  available: boolean;
+}
+
+const tools: Tool[] = [
+  {
+    title: "Home Equity & Affordability Calculator",
+    description: "Estimate net equity after sale, available down payment, and monthly cost for your next South Denver home. Ideal for move-up sellers.",
+    href: "/tools/home-equity-calculator",
+    available: true,
+  },
+  {
+    title: "Colorado Closing Cost Estimator",
+    description: "Toggle between buyer and seller views for a Colorado-accurate, line-item breakdown of closing costs. Works for any price point.",
+    href: "/tools/closing-cost-estimator",
+    available: true,
+  },
+  {
+    title: "Rent Estimate & Investor Analysis",
+    description: "Powered by Rentometer, with Jacob's investor-minded approach layered on top. Ideal for evaluating rental property potential.",
+    href: "/investor-tools",
+    available: true,
+  },
+  {
+    title: "Cost-of-Living Compare",
+    description: "Compare your current city vs. South Denver across housing, taxes, groceries, and utilities. Built for relocation decisions.",
+    href: "#",
+    badge: "Coming Soon",
+    available: false,
+  },
+];
+---
+
+<BaseLayout
+  title="Free Tools & Calculators for Colorado Buyers and Sellers | Jacob Stark"
+  description="Free home equity calculator, closing cost estimator, rent estimator, and more. Colorado-accurate tools for South Denver buyers, sellers, and investors. No email required."
+  ogUrl="https://selling303.com/tools"
+  ogImage="https://selling303.com/images/og-default.jpg"
+  currentPage="tools"
+  headerVariant="solid"
+>
+  <Fragment slot="head">
+    <!-- Schema: ItemList for the tools hub -->
+    <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Free Tools and Calculators for Colorado Real Estate",
+      "url": "https://selling303.com/tools",
+      "description": "Collection of free, Colorado-accurate real estate calculators and tools for buyers, sellers, and investors in South Denver Metro.",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://selling303.com/tools/home-equity-calculator",
+          "name": "Home Equity & Affordability Calculator"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://selling303.com/tools/closing-cost-estimator",
+          "name": "Colorado Closing Cost Estimator"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "url": "https://selling303.com/investor-tools",
+          "name": "Rent Estimate & Investor Analysis"
+        }
+      ]
+    }
+    </script>
+  </Fragment>
+
+  <!-- ========== PAGE HERO ========== -->
+  <PageHero
+    label="Free Tools"
+    heading="Free Colorado Real Estate Tools"
+    subtext="Calculators and estimators built for South Denver Metro buyers and sellers. Every tool on this page is free to use without signing up — just answers."
+  />
+
+  <!-- ========== TOOLS GRID ========== -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="tools-grid">
+        {tools.map((tool) => (
+          tool.available ? (
+            <a href={tool.href} class="tool-card">
+              <h2 class="tool-card__title">{tool.title}</h2>
+              <p class="tool-card__desc">{tool.description}</p>
+              <span class="tool-card__cta">Open tool <span aria-hidden="true">→</span></span>
+            </a>
+          ) : (
+            <div class="tool-card tool-card--coming-soon">
+              {tool.badge && <span class="tool-card__badge">{tool.badge}</span>}
+              <h2 class="tool-card__title">{tool.title}</h2>
+              <p class="tool-card__desc">{tool.description}</p>
+              <span class="tool-card__cta tool-card__cta--muted">Coming soon</span>
+            </div>
+          )
+        ))}
+      </div>
+
+      <p style="text-align: center; margin-top: var(--space-xl); font-size: 0.9375rem; color: var(--color-body-text);">
+        More tools launching soon &mdash; gated guides, neighborhood comparison tools, and quizzes are in the queue.
+        <a href="https://calendly.com/jacob-realtor" target="_blank" rel="noopener" style="color: var(--color-primary); text-decoration: underline;">Want to suggest one? Let Jacob know.</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== CTA BANNER ========== -->
+  <CTABanner
+    heading="Need help beyond the numbers?"
+    subtext="Tools give you directional estimates. For a real strategy — pricing, timing, negotiation — book a free call with Jacob Stark."
+    primaryHref="https://calendly.com/jacob-realtor"
+    primaryText="Schedule a Free Call"
+    secondaryHref="sms:+13039970634?&body=Hi%20Jacob%2C%20I%20have%20a%20question%20about%20one%20of%20your%20tools."
+    secondaryText="Text 303-997-0634"
+  />
+</BaseLayout>
+
+<style>
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-md);
+  }
+
+  .tool-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    transition: all var(--transition);
+    position: relative;
+    min-height: 220px;
+  }
+  .tool-card:not(.tool-card--coming-soon):hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+
+  .tool-card__title {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    font-size: 1.25rem;
+    margin-bottom: var(--space-sm);
+    line-height: 1.25;
+  }
+
+  .tool-card__desc {
+    color: var(--color-body-text);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    flex: 1;
+    margin-bottom: var(--space-md);
+  }
+
+  .tool-card__cta {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    align-self: flex-start;
+  }
+  .tool-card__cta--muted {
+    color: var(--color-light-text);
+    font-style: italic;
+  }
+
+  .tool-card__badge {
+    position: absolute;
+    top: var(--space-sm);
+    right: var(--space-sm);
+    background: var(--color-accent);
+    color: var(--color-white);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.625rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .tool-card--coming-soon {
+    background: var(--color-background);
+    opacity: 0.85;
+  }
+</style>

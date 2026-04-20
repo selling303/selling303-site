@@ -35,10 +35,10 @@ story:
   strategyNarrative: "While other homes sat unsold, Daniel's stood out because of thoughtful preparation and smart positioning. The pre-listing touch-ups and strategic pricing attracted serious buyers, and they sold over asking in 10 days during what most consider the worst time to sell."
 testimonials: []
 heroImage:
-  src: "21069-woodside-ln-parker/1-01 21069 Woodside Ln.jpg"
+  src: "21069-woodside-ln-parker/1-web-or-mls-4568 - Jacob Stark - 21069 Woodside Ln, Parker, CO 80138_99.jpg"
   alt: "Exterior of 21069 Woodside Lane single-family home in Parker Colorado"
 images:
-  - src: "21069-woodside-ln-parker/1-01 21069 Woodside Ln.jpg"
+  - src: "21069-woodside-ln-parker/1-web-or-mls-4568 - Jacob Stark - 21069 Woodside Ln, Parker, CO 80138_99.jpg"
     alt: "Exterior of 21069 Woodside Lane single-family home in Parker Colorado"
 faqSchema:
   - question: "Is the holiday season the worst time to sell a home?"
