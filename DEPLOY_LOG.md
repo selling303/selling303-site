@@ -4,6 +4,36 @@ Permanent record of deployed changes. The deploy-to-netlify skill moves items he
 
 ---
 
+## 2026-04-20 — commit 03b0893 (merge a4af39d on live) | Credits used: 15 | Credits remaining: 155
+
+### New blog posts (2)
+- **Day 15 — "Lone Tree New Construction: Builder Incentives and What They Actually Mean for Your Bottom Line"** (`src/content/blog/lone-tree-new-construction-builder-incentives-2026.md`). New Construction pillar + Lone Tree geographic pillar. MOFU buyer advice decoding rate buydowns, closing cost credits, and upgrade packages. Data scoped to REcolorado MLS builder spec inventory (Year Built 2024+): 10 active / 5 closed / 2 pending, median DIM 122 days active vs. 77 days closed, 97% CP/OLP. Explicitly excludes build-to-order custom homes (methodology note included). Three inline visuals: (1) spec DIM divergence bar chart (sold vs. still-unsold), (2) permanent vs. 2-1 buydown side-by-side comparison, (3) upgrade credit "advertised $20K vs. real ~$8-12K" reality check, plus the original tiered incentive-value card (4-band ranking).
+- **Day 16 — "Relocating to Parker, Colorado: What Families Moving from Out of State Need to Know"** (`src/content/blog/moving-to-parker-colorado-relocation-guide-2026.md`). Relocation pillar + Parker geographic pillar. TOFU family-focused relocation guide. Inline price-point table (4-tier entry/core/move-up/luxury). Data from REcolorado Q1 2026 Parker closed SFRs (330 sales, $717,450 median, 98% CP/OLP, 24 median DIM) and DMAR March 2026. Internal link to South Denver watering restrictions guide.
+
+### Lone Tree post iteration (same session as deploy)
+- Data rescoping mid-draft: original version used aggregate Lone Tree SFR data (44 active, 36 closed). Caught by Jacob that the "new construction DIM" thesis was unsupported by resale-inclusive data. Rescoped visual and prose to Year Built 2024+ spec inventory only. Methodology note added.
+- Visual iteration: stat-tile grid → DIM-divergence bar chart → plain-English rewrite → 8th-grade-reading-level headline ("The longer a builder's spec home sits, the bigger the discount gets"). Markdown code-block rendering bug fixed (blank line between cards at 4-space indent was breaking parser).
+- "Representation is not optional" closer rewritten to be accurate (cost is priced in either way; buyer's choice).
+
+### Conversion sprint Week 1 — two new interactive calculators
+- **Home Equity & Affordability Calculator** — new component at `src/components/calculators/HomeEquityCalculator.astro`, standalone page at `/tools/home-equity-calculator`, embedded on `/move-up-sellers` with a new TOC entry. Includes WebApplication + FAQPage schema, SMS-deeplink CTA to 303-997-0634 alongside the Calendly primary.
+- **Closing Cost Estimator** — new component at `src/components/calculators/ClosingCostEstimator.astro` (buyer/seller toggle, Colorado-accurate line items, bundled 6% commission default), standalone page at `/tools/closing-cost-estimator`, embedded on `/first-time-homebuyers` (buyer default) and `/first-time-homesellers` (seller default).
+
+### New hub pages
+- `/tools` — ItemList schema, coming-soon cards for future calculators.
+- `/resources` — CollectionPage schema, umbrella landing.
+- `Header.astro` Resources dropdown updated with "All Resources" and "Tools" items.
+
+### Seller Success Stories — index page rewrite + content tweaks
+- `src/pages/sell/success-stories/index.astro` reworked (+90 / -72 lines).
+- 4 success story content files updated: Woodside (Parker), Flower / Holland / Carr (Littleton).
+
+### Session notes
+- Two sessions contributed to this deploy: nightly blog task (Day 15 + Day 16 posts + conversion sprint calculators pushed via another session) and iterative data-quality refinement on the Lone Tree post with Jacob.
+- Data-sourcing guardrail validated: Jacob caught the new-construction-vs-resale MLS filter issue mid-review, asked for methodology transparency, and approved the rescoped version. DEPLOY_QUEUE.md entry for Closing Cost Estimator was initially stale (files not yet pushed) but was resolved when the other session pushed commit a1d3463.
+
+---
+
 ## 2026-04-18 — commit 642acdc (merge 52ca1b6 on live) | Credits used: 15 | Credits remaining: 170
 
 ### New blog post (1)

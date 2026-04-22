@@ -1,0 +1,801 @@
+---
+/**
+ * CostOfLivingCalculator.astro
+ *
+ * Compares cost of living between the user's current city and South Denver Metro.
+ * Answers "How much do I need to earn in South Denver to maintain my current lifestyle?"
+ *
+ * Used on:
+ *   - /tools/cost-of-living-calculator (standalone)
+ *   - /relocation (embedded)
+ *
+ * Data is static — sourced from BLS CPI, Tax Foundation, and median housing indices
+ * (Zillow / Redfin) as of April 2026. Data last-updated stamp is visible to users.
+ */
+
+interface Props {
+  showHeader?: boolean;
+  defaultCity?: string;
+}
+
+const { showHeader = true, defaultCity = "los-angeles" } = Astro.props;
+
+/**
+ * City cost-of-living data.
+ * All indices use U.S. National Average = 100.
+ * stateTax is the effective middle-income state income tax rate (approximate).
+ * Data last updated: April 2026 (BLS CPI regional data, Tax Foundation, Zillow home value index).
+ */
+interface CityData {
+  slug: string;
+  name: string;
+  state: string;
+  overall: number;
+  housing: number;
+  groceries: number;
+  utilities: number;
+  transportation: number;
+  healthcare: number;
+  stateTax: number;
+}
+
+const cities: CityData[] = [
+  // Top Redfin origin cities
+  { slug: "miami",          name: "Miami",          state: "FL", overall: 118, housing: 135, groceries: 106, utilities: 110, transportation: 108, healthcare: 102, stateTax: 0 },
+  { slug: "dallas",         name: "Dallas",         state: "TX", overall: 102, housing: 105, groceries: 96,  utilities: 108, transportation: 98,  healthcare: 98,  stateTax: 0 },
+  { slug: "los-angeles",    name: "Los Angeles",    state: "CA", overall: 151, housing: 215, groceries: 110, utilities: 103, transportation: 128, healthcare: 110, stateTax: 9.3 },
+  // Tech / remote-work corridor
+  { slug: "san-francisco",  name: "San Francisco",  state: "CA", overall: 178, housing: 290, groceries: 115, utilities: 100, transportation: 135, healthcare: 112, stateTax: 9.3 },
+  { slug: "san-jose",       name: "San Jose",       state: "CA", overall: 175, housing: 285, groceries: 114, utilities: 102, transportation: 130, healthcare: 110, stateTax: 9.3 },
+  { slug: "san-diego",      name: "San Diego",      state: "CA", overall: 142, housing: 205, groceries: 108, utilities: 98,  transportation: 125, healthcare: 108, stateTax: 9.3 },
+  { slug: "seattle",        name: "Seattle",        state: "WA", overall: 152, housing: 215, groceries: 110, utilities: 95,  transportation: 120, healthcare: 108, stateTax: 0 },
+  { slug: "portland",       name: "Portland",       state: "OR", overall: 130, housing: 170, groceries: 108, utilities: 95,  transportation: 112, healthcare: 105, stateTax: 8.75 },
+  { slug: "austin",         name: "Austin",         state: "TX", overall: 119, housing: 145, groceries: 98,  utilities: 108, transportation: 102, healthcare: 100, stateTax: 0 },
+  // Northeast
+  { slug: "new-york",       name: "New York",       state: "NY", overall: 172, housing: 240, groceries: 118, utilities: 115, transportation: 130, healthcare: 115, stateTax: 6.33 },
+  { slug: "boston",         name: "Boston",         state: "MA", overall: 148, housing: 195, groceries: 112, utilities: 112, transportation: 118, healthcare: 112, stateTax: 5 },
+  { slug: "washington-dc",  name: "Washington, DC", state: "DC", overall: 145, housing: 195, groceries: 108, utilities: 108, transportation: 120, healthcare: 108, stateTax: 7.75 },
+  { slug: "philadelphia",   name: "Philadelphia",   state: "PA", overall: 101, housing: 95,  groceries: 104, utilities: 108, transportation: 108, healthcare: 105, stateTax: 3.07 },
+  // Midwest
+  { slug: "chicago",        name: "Chicago",        state: "IL", overall: 107, housing: 105, groceries: 104, utilities: 108, transportation: 110, healthcare: 102, stateTax: 4.95 },
+  { slug: "minneapolis",    name: "Minneapolis",    state: "MN", overall: 103, housing: 100, groceries: 102, utilities: 105, transportation: 100, healthcare: 105, stateTax: 6.8 },
+  { slug: "kansas-city",    name: "Kansas City",    state: "MO", overall: 92,  housing: 78,  groceries: 95,  utilities: 100, transportation: 98,  healthcare: 98,  stateTax: 4.7 },
+  { slug: "st-louis",       name: "St. Louis",      state: "MO", overall: 90,  housing: 75,  groceries: 94,  utilities: 100, transportation: 98,  healthcare: 98,  stateTax: 4.7 },
+  { slug: "detroit",        name: "Detroit",        state: "MI", overall: 88,  housing: 70,  groceries: 94,  utilities: 105, transportation: 100, healthcare: 100, stateTax: 4.25 },
+  // Southeast / Sunbelt
+  { slug: "atlanta",        name: "Atlanta",        state: "GA", overall: 105, housing: 110, groceries: 98,  utilities: 102, transportation: 102, healthcare: 100, stateTax: 5.75 },
+  { slug: "nashville",      name: "Nashville",      state: "TN", overall: 107, housing: 118, groceries: 98,  utilities: 102, transportation: 100, healthcare: 98,  stateTax: 0 },
+  { slug: "orlando",        name: "Orlando",        state: "FL", overall: 104, housing: 115, groceries: 100, utilities: 108, transportation: 100, healthcare: 98,  stateTax: 0 },
+  { slug: "tampa",          name: "Tampa",          state: "FL", overall: 105, housing: 115, groceries: 100, utilities: 108, transportation: 100, healthcare: 98,  stateTax: 0 },
+  { slug: "houston",        name: "Houston",        state: "TX", overall: 96,  housing: 95,  groceries: 94,  utilities: 108, transportation: 95,  healthcare: 96,  stateTax: 0 },
+  // Mountain / Southwest
+  { slug: "phoenix",        name: "Phoenix",        state: "AZ", overall: 108, housing: 120, groceries: 100, utilities: 112, transportation: 100, healthcare: 100, stateTax: 2.5 },
+  { slug: "salt-lake-city", name: "Salt Lake City", state: "UT", overall: 109, housing: 130, groceries: 98,  utilities: 95,  transportation: 100, healthcare: 98,  stateTax: 4.85 },
+  { slug: "las-vegas",      name: "Las Vegas",      state: "NV", overall: 108, housing: 115, groceries: 104, utilities: 105, transportation: 102, healthcare: 100, stateTax: 0 },
+  { slug: "sacramento",     name: "Sacramento",     state: "CA", overall: 117, housing: 160, groceries: 106, utilities: 100, transportation: 115, healthcare: 105, stateTax: 9.3 },
+];
+
+// South Denver Metro reference values
+const sdmOverall = 118;       // reflects desirable suburbs (Littleton, Highlands Ranch, Centennial)
+const sdmHousing = 155;
+const sdmGroceries = 103;
+const sdmUtilities = 99;
+const sdmTransportation = 105;
+const sdmHealthcare = 100;
+const sdmStateTax = 4.4;       // Colorado flat rate
+
+// --- Defaults for initial render ---
+const d_city = cities.find((c) => c.slug === defaultCity) || cities[0];
+const d_income = 150000;
+
+// --- Initial server-side computation ---
+const equivIncome_initial = d_income * (sdmOverall / d_city.overall);
+const incomeDelta_initial = equivIncome_initial - d_income;
+const taxDelta_initial = d_income * ((sdmStateTax - d_city.stateTax) / 100);
+
+const fmt = (v: number) =>
+  new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    maximumFractionDigits: 0,
+  }).format(Math.round(v));
+
+const pctDiff = (sdm: number, current: number) =>
+  ((sdm - current) / current) * 100;
+
+// Pre-render category pct deltas for initial HTML (defaulted to LA)
+const housingPct_initial = pctDiff(sdmHousing, d_city.housing);
+const groceriesPct_initial = pctDiff(sdmGroceries, d_city.groceries);
+const utilitiesPct_initial = pctDiff(sdmUtilities, d_city.utilities);
+const transportationPct_initial = pctDiff(sdmTransportation, d_city.transportation);
+const healthcarePct_initial = pctDiff(sdmHealthcare, d_city.healthcare);
+
+const fmtPct = (v: number) => {
+  const sign = v > 0 ? "+" : "";
+  return `${sign}${v.toFixed(1)}%`;
+};
+---
+
+<div class="coli" data-calculator="cost-of-living" data-current-city={d_city.slug}>
+  {showHeader && (
+    <div class="coli__intro">
+      <span class="section-label">Free Tool</span>
+      <h2 class="coli__title">South Denver vs. Your City &mdash; Cost of Living</h2>
+      <p class="coli__subtitle">
+        See how much your income needs to be in South Denver Metro to maintain your
+        current lifestyle. Includes housing, groceries, utilities, transportation,
+        healthcare, and state income tax.
+      </p>
+    </div>
+  )}
+
+  <div class="coli__grid">
+    <!-- INPUTS -->
+    <form class="coli__inputs" onsubmit="return false;">
+      <h3 class="coli__section-heading">Your Numbers</h3>
+
+      <label class="coli__field">
+        <span class="coli__label">Where are you moving from?</span>
+        <select data-input="city" class="coli__select">
+          {cities.map((c) => (
+            <option value={c.slug} selected={c.slug === d_city.slug}>
+              {c.name}, {c.state}
+            </option>
+          ))}
+        </select>
+      </label>
+
+      <label class="coli__field">
+        <span class="coli__label">Current household income</span>
+        <span class="coli__input-row">
+          <span class="coli__prefix">$</span>
+          <input
+            type="number"
+            data-input="income"
+            value={d_income}
+            min="30000"
+            max="1000000"
+            step="5000"
+            inputmode="numeric"
+          />
+        </span>
+        <input
+          type="range"
+          data-range="income"
+          value={d_income}
+          min="30000"
+          max="1000000"
+          step="5000"
+          aria-label="Current income slider"
+        />
+      </label>
+    </form>
+
+    <!-- OUTPUTS -->
+    <div class="coli__outputs">
+      <h3 class="coli__section-heading">Your Results</h3>
+
+      <!-- PRIMARY -->
+      <div class="coli__result coli__result--primary">
+        <span class="coli__result-label">
+          Equivalent income needed in South Denver
+        </span>
+        <span class="coli__result-value" data-output="equivIncome">
+          {fmt(equivIncome_initial)}
+        </span>
+        <span class="coli__result-note">
+          To maintain your current lifestyle
+          from <span data-output="currentCityName">{d_city.name}</span>.
+        </span>
+      </div>
+
+      <!-- SECONDARY: net delta -->
+      <div class="coli__result coli__result--delta" data-state={incomeDelta_initial < 0 ? "save" : incomeDelta_initial > 0 ? "need" : "even"}>
+        <span class="coli__result-label" data-output="deltaLabel">
+          {incomeDelta_initial < 0
+            ? "You could earn less and keep the same lifestyle"
+            : incomeDelta_initial > 0
+            ? "You'd need more income to match your current lifestyle"
+            : "Equivalent &mdash; no income change needed"}
+        </span>
+        <span class="coli__result-value coli__result-value--md" data-output="incomeDelta">
+          {fmt(Math.abs(incomeDelta_initial))}/yr
+        </span>
+        <span class="coli__result-note" data-output="incomeDeltaMonthly">
+          {fmt(Math.abs(incomeDelta_initial) / 12)}/mo
+        </span>
+      </div>
+
+      <!-- CATEGORY BREAKDOWN -->
+      <div class="coli__breakdown">
+        <span class="coli__result-label">Category breakdown vs. South Denver</span>
+        <table class="coli__table">
+          <tbody>
+            <tr>
+              <td>Housing</td>
+              <td data-output="housingPct" data-pct-sign={housingPct_initial >= 0 ? "pos" : "neg"}>
+                {fmtPct(housingPct_initial)}
+              </td>
+            </tr>
+            <tr>
+              <td>Groceries</td>
+              <td data-output="groceriesPct" data-pct-sign={groceriesPct_initial >= 0 ? "pos" : "neg"}>
+                {fmtPct(groceriesPct_initial)}
+              </td>
+            </tr>
+            <tr>
+              <td>Utilities</td>
+              <td data-output="utilitiesPct" data-pct-sign={utilitiesPct_initial >= 0 ? "pos" : "neg"}>
+                {fmtPct(utilitiesPct_initial)}
+              </td>
+            </tr>
+            <tr>
+              <td>Transportation</td>
+              <td data-output="transportationPct" data-pct-sign={transportationPct_initial >= 0 ? "pos" : "neg"}>
+                {fmtPct(transportationPct_initial)}
+              </td>
+            </tr>
+            <tr>
+              <td>Healthcare</td>
+              <td data-output="healthcarePct" data-pct-sign={healthcarePct_initial >= 0 ? "pos" : "neg"}>
+                {fmtPct(healthcarePct_initial)}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="coli__breakdown-note">
+          Percentages show how South Denver compares to your current city. Positive = more expensive here; negative = cheaper here.
+        </p>
+      </div>
+
+      <!-- STATE TAX CALLOUT -->
+      <div class="coli__tax-callout">
+        <span class="coli__tax-label">State income tax</span>
+        <div class="coli__tax-row">
+          <div class="coli__tax-side">
+            <span class="coli__tax-amount" data-output="currentTax">
+              {d_city.stateTax.toFixed(2)}%
+            </span>
+            <span class="coli__tax-city">
+              <span data-output="currentCityNameTax">{d_city.name}, {d_city.state}</span>
+            </span>
+          </div>
+          <span class="coli__tax-vs">vs.</span>
+          <div class="coli__tax-side">
+            <span class="coli__tax-amount">4.40%</span>
+            <span class="coli__tax-city">Colorado (flat)</span>
+          </div>
+        </div>
+        <p class="coli__tax-delta" data-output="taxDeltaText">
+          {taxDelta_initial < 0
+            ? `You'd save approximately ${fmt(Math.abs(taxDelta_initial))}/yr in state income tax.`
+            : taxDelta_initial > 0
+            ? `You'd pay approximately ${fmt(taxDelta_initial)} more/yr in state income tax.`
+            : "Your state tax burden would be roughly the same."}
+        </p>
+      </div>
+
+      <!-- VERDICT -->
+      <div class="coli__verdict" data-verdict data-state={incomeDelta_initial < -10000 ? "save" : incomeDelta_initial > 10000 ? "need" : "even"}>
+        <span class="coli__verdict-label">Your takeaway</span>
+        <p class="coli__verdict-text" data-verdict-text>
+          {incomeDelta_initial < -10000
+            ? "Moving to South Denver should improve your financial picture significantly — your income can stretch further than it does in your current city."
+            : incomeDelta_initial > 10000
+            ? "South Denver's cost of living is higher than your current city — you'll need more income to maintain the same lifestyle, though quality-of-life and tax advantages may offset the gap."
+            : "Your cost of living is roughly equivalent between the two cities — the decision comes down to lifestyle fit, career opportunity, and quality-of-life factors."}
+        </p>
+      </div>
+
+      <!-- CTA -->
+      <div class="coli__cta">
+        <a
+          href="https://calendly.com/jacob-realtor"
+          class="btn btn--primary btn--lg"
+          target="_blank"
+          rel="noopener"
+        >
+          Book my relocation call
+        </a>
+        <a
+          href="sms:+13039970634?&body=Hi%20Jacob%2C%20I%27m%20considering%20moving%20to%20South%20Denver%20and%20ran%20the%20cost-of-living%20calculator."
+          class="btn btn--outline-dark btn--lg"
+        >
+          Text me: 303-997-0634
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <p class="coli__disclaimer">
+    <strong>Estimates only.</strong> Directional tool for planning purposes, not financial advice. Actual costs vary by neighborhood, household size, lifestyle, and specific housing choices. Cost-of-living indices use U.S. national average = 100 and reflect typical middle-income household spending. South Denver Metro figures reflect desirable suburbs (Littleton, Highlands Ranch, Centennial) and are higher than the broader Denver metro average. <strong>Data last updated: April 2026.</strong> Sources:
+    <a href="https://www.bls.gov/cpi/regional-resources.htm" target="_blank" rel="noopener">BLS Consumer Price Index (regional)</a>,
+    <a href="https://taxfoundation.org/data/all/state/state-income-tax-rates/" target="_blank" rel="noopener">Tax Foundation state income tax data</a>,
+    <a href="https://www.zillow.com/research/data/" target="_blank" rel="noopener">Zillow Home Value Index</a>.
+  </p>
+</div>
+
+<style>
+  .coli {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-md);
+    box-shadow: var(--shadow-md);
+  }
+
+  .coli__intro {
+    text-align: center;
+    margin-bottom: var(--space-md);
+  }
+  .coli__title {
+    margin-bottom: var(--space-xs);
+  }
+  .coli__subtitle {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .coli__grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--space-md);
+  }
+  @media (max-width: 860px) {
+    .coli__grid {
+      grid-template-columns: 1fr;
+    }
+    .coli {
+      padding: var(--space-sm);
+    }
+  }
+
+  .coli__section-heading {
+    font-size: 1.0625rem;
+    margin-bottom: var(--space-sm);
+    padding-bottom: var(--space-xs);
+    border-bottom: 2px solid var(--color-accent);
+    display: inline-block;
+  }
+
+  /* INPUTS */
+  .coli__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+  .coli__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .coli__label {
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-dark-text);
+  }
+  .coli__input-row {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: var(--color-white);
+    transition: border-color var(--transition);
+  }
+  .coli__input-row:focus-within {
+    border-color: var(--color-primary);
+  }
+  .coli__prefix {
+    padding: 0 0.75rem;
+    color: var(--color-body-text);
+    font-weight: 600;
+    border-right: 1px solid var(--color-border);
+  }
+  .coli__input-row input[type="number"] {
+    flex: 1;
+    padding: 0.75rem;
+    border: none;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-dark-text);
+    background: transparent;
+    width: 100%;
+  }
+  .coli__input-row input[type="number"]:focus {
+    outline: none;
+  }
+  .coli__field input[type="range"] {
+    width: 100%;
+    accent-color: var(--color-accent);
+  }
+  .coli__select {
+    padding: 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: var(--color-white);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-dark-text);
+    cursor: pointer;
+  }
+
+  /* OUTPUTS */
+  .coli__outputs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+  .coli__result {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .coli__result-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-light-text);
+    font-weight: 600;
+  }
+  .coli__result-value {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    line-height: 1.1;
+  }
+  .coli__result-value--md {
+    font-size: 1.375rem;
+  }
+  .coli__result--primary .coli__result-value {
+    font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+  }
+  .coli__result--primary {
+    background: var(--color-background);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--color-accent);
+  }
+  .coli__result-note {
+    font-size: 0.75rem;
+    color: var(--color-body-text);
+  }
+
+  .coli__result--delta[data-state="save"] .coli__result-value {
+    color: #2d7a40;
+  }
+  .coli__result--delta[data-state="need"] .coli__result-value {
+    color: #b04a2e;
+  }
+
+  /* CATEGORY BREAKDOWN */
+  .coli__breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .coli__table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+  }
+  .coli__table td {
+    padding: 0.45rem 0;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-body-text);
+  }
+  .coli__table td:last-child {
+    text-align: right;
+    font-weight: 700;
+    white-space: nowrap;
+    padding-left: 1rem;
+  }
+  .coli__table tr:last-child td {
+    border-bottom: none;
+  }
+  .coli__table td[data-pct-sign="pos"] {
+    color: #b04a2e;
+  }
+  .coli__table td[data-pct-sign="neg"] {
+    color: #2d7a40;
+  }
+  .coli__breakdown-note {
+    font-size: 0.7rem;
+    color: var(--color-light-text);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* TAX CALLOUT */
+  .coli__tax-callout {
+    border: 1px solid var(--color-border);
+    background: var(--color-background);
+    border-radius: var(--radius-md);
+    padding: var(--space-sm) var(--space-md);
+  }
+  .coli__tax-label {
+    display: block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-light-text);
+    font-weight: 600;
+    margin-bottom: var(--space-xs);
+  }
+  .coli__tax-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xs);
+  }
+  .coli__tax-side {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex: 1;
+  }
+  .coli__tax-amount {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--color-primary);
+    line-height: 1.1;
+  }
+  .coli__tax-city {
+    font-size: 0.75rem;
+    color: var(--color-body-text);
+  }
+  .coli__tax-vs {
+    font-size: 0.8125rem;
+    color: var(--color-light-text);
+    font-style: italic;
+  }
+  .coli__tax-delta {
+    margin: 0;
+    font-size: 0.8125rem;
+    color: var(--color-dark-text);
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  /* VERDICT */
+  .coli__verdict {
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    background: var(--color-white);
+    transition: background-color var(--transition), border-color var(--transition);
+  }
+  .coli__verdict[data-state="save"] {
+    background: #ecf7ee;
+    border-color: #9ed4a6;
+  }
+  .coli__verdict[data-state="need"] {
+    background: #fdecec;
+    border-color: #e6a1a1;
+  }
+  .coli__verdict[data-state="even"] {
+    background: #fff7e6;
+    border-color: #e6c878;
+  }
+  .coli__verdict-label {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 0.25rem;
+  }
+  .coli__verdict-text {
+    margin: 0;
+    color: var(--color-dark-text);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+  }
+
+  /* CTA */
+  .coli__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-top: var(--space-xs);
+  }
+  .coli__cta .btn {
+    flex: 1;
+    min-width: 200px;
+    white-space: nowrap;
+  }
+
+  /* DISCLAIMER */
+  .coli__disclaimer {
+    margin-top: var(--space-md);
+    padding-top: var(--space-sm);
+    border-top: 1px solid var(--color-border);
+    font-size: 0.75rem;
+    line-height: 1.6;
+    color: var(--color-light-text);
+  }
+  .coli__disclaimer a {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+  .coli__disclaimer a:hover {
+    color: var(--color-accent);
+  }
+  .coli__disclaimer strong {
+    color: var(--color-body-text);
+  }
+</style>
+
+<script>
+  (function initCostOfLivingCalculators() {
+    // City data must mirror the frontmatter array. Keep in sync on edit.
+    const cities: Record<string, {
+      name: string;
+      state: string;
+      overall: number;
+      housing: number;
+      groceries: number;
+      utilities: number;
+      transportation: number;
+      healthcare: number;
+      stateTax: number;
+    }> = {
+      "miami": { name: "Miami", state: "FL", overall: 118, housing: 135, groceries: 106, utilities: 110, transportation: 108, healthcare: 102, stateTax: 0 },
+      "dallas": { name: "Dallas", state: "TX", overall: 102, housing: 105, groceries: 96, utilities: 108, transportation: 98, healthcare: 98, stateTax: 0 },
+      "los-angeles": { name: "Los Angeles", state: "CA", overall: 151, housing: 215, groceries: 110, utilities: 103, transportation: 128, healthcare: 110, stateTax: 9.3 },
+      "san-francisco": { name: "San Francisco", state: "CA", overall: 178, housing: 290, groceries: 115, utilities: 100, transportation: 135, healthcare: 112, stateTax: 9.3 },
+      "san-jose": { name: "San Jose", state: "CA", overall: 175, housing: 285, groceries: 114, utilities: 102, transportation: 130, healthcare: 110, stateTax: 9.3 },
+      "san-diego": { name: "San Diego", state: "CA", overall: 142, housing: 205, groceries: 108, utilities: 98, transportation: 125, healthcare: 108, stateTax: 9.3 },
+      "seattle": { name: "Seattle", state: "WA", overall: 152, housing: 215, groceries: 110, utilities: 95, transportation: 120, healthcare: 108, stateTax: 0 },
+      "portland": { name: "Portland", state: "OR", overall: 130, housing: 170, groceries: 108, utilities: 95, transportation: 112, healthcare: 105, stateTax: 8.75 },
+      "austin": { name: "Austin", state: "TX", overall: 119, housing: 145, groceries: 98, utilities: 108, transportation: 102, healthcare: 100, stateTax: 0 },
+      "new-york": { name: "New York", state: "NY", overall: 172, housing: 240, groceries: 118, utilities: 115, transportation: 130, healthcare: 115, stateTax: 6.33 },
+      "boston": { name: "Boston", state: "MA", overall: 148, housing: 195, groceries: 112, utilities: 112, transportation: 118, healthcare: 112, stateTax: 5 },
+      "washington-dc": { name: "Washington, DC", state: "DC", overall: 145, housing: 195, groceries: 108, utilities: 108, transportation: 120, healthcare: 108, stateTax: 7.75 },
+      "philadelphia": { name: "Philadelphia", state: "PA", overall: 101, housing: 95, groceries: 104, utilities: 108, transportation: 108, healthcare: 105, stateTax: 3.07 },
+      "chicago": { name: "Chicago", state: "IL", overall: 107, housing: 105, groceries: 104, utilities: 108, transportation: 110, healthcare: 102, stateTax: 4.95 },
+      "minneapolis": { name: "Minneapolis", state: "MN", overall: 103, housing: 100, groceries: 102, utilities: 105, transportation: 100, healthcare: 105, stateTax: 6.8 },
+      "kansas-city": { name: "Kansas City", state: "MO", overall: 92, housing: 78, groceries: 95, utilities: 100, transportation: 98, healthcare: 98, stateTax: 4.7 },
+      "st-louis": { name: "St. Louis", state: "MO", overall: 90, housing: 75, groceries: 94, utilities: 100, transportation: 98, healthcare: 98, stateTax: 4.7 },
+      "detroit": { name: "Detroit", state: "MI", overall: 88, housing: 70, groceries: 94, utilities: 105, transportation: 100, healthcare: 100, stateTax: 4.25 },
+      "atlanta": { name: "Atlanta", state: "GA", overall: 105, housing: 110, groceries: 98, utilities: 102, transportation: 102, healthcare: 100, stateTax: 5.75 },
+      "nashville": { name: "Nashville", state: "TN", overall: 107, housing: 118, groceries: 98, utilities: 102, transportation: 100, healthcare: 98, stateTax: 0 },
+      "orlando": { name: "Orlando", state: "FL", overall: 104, housing: 115, groceries: 100, utilities: 108, transportation: 100, healthcare: 98, stateTax: 0 },
+      "tampa": { name: "Tampa", state: "FL", overall: 105, housing: 115, groceries: 100, utilities: 108, transportation: 100, healthcare: 98, stateTax: 0 },
+      "houston": { name: "Houston", state: "TX", overall: 96, housing: 95, groceries: 94, utilities: 108, transportation: 95, healthcare: 96, stateTax: 0 },
+      "phoenix": { name: "Phoenix", state: "AZ", overall: 108, housing: 120, groceries: 100, utilities: 112, transportation: 100, healthcare: 100, stateTax: 2.5 },
+      "salt-lake-city": { name: "Salt Lake City", state: "UT", overall: 109, housing: 130, groceries: 98, utilities: 95, transportation: 100, healthcare: 98, stateTax: 4.85 },
+      "las-vegas": { name: "Las Vegas", state: "NV", overall: 108, housing: 115, groceries: 104, utilities: 105, transportation: 102, healthcare: 100, stateTax: 0 },
+      "sacramento": { name: "Sacramento", state: "CA", overall: 117, housing: 160, groceries: 106, utilities: 100, transportation: 115, healthcare: 105, stateTax: 9.3 },
+    };
+
+    const sdm = { overall: 118, housing: 155, groceries: 103, utilities: 99, transportation: 105, healthcare: 100, stateTax: 4.4 };
+
+    const instances = document.querySelectorAll<HTMLElement>('[data-calculator="cost-of-living"]');
+    instances.forEach((root) => initOne(root));
+
+    function initOne(root: HTMLElement) {
+      const q = <T extends Element = HTMLElement>(sel: string) =>
+        root.querySelector(sel) as T | null;
+
+      const citySelect = q<HTMLSelectElement>('[data-input="city"]')!;
+      const incomeInput = q<HTMLInputElement>('[data-input="income"]')!;
+      const incomeRange = q<HTMLInputElement>('[data-range="income"]')!;
+
+      const outputs = {
+        equivIncome: q('[data-output="equivIncome"]')!,
+        currentCityName: q('[data-output="currentCityName"]')!,
+        currentCityNameTax: q('[data-output="currentCityNameTax"]')!,
+        deltaLabel: q('[data-output="deltaLabel"]')!,
+        incomeDelta: q('[data-output="incomeDelta"]')!,
+        incomeDeltaMonthly: q('[data-output="incomeDeltaMonthly"]')!,
+        housingPct: q('[data-output="housingPct"]')!,
+        groceriesPct: q('[data-output="groceriesPct"]')!,
+        utilitiesPct: q('[data-output="utilitiesPct"]')!,
+        transportationPct: q('[data-output="transportationPct"]')!,
+        healthcarePct: q('[data-output="healthcarePct"]')!,
+        currentTax: q('[data-output="currentTax"]')!,
+        taxDeltaText: q('[data-output="taxDeltaText"]')!,
+      };
+      const deltaWrap = root.querySelector<HTMLElement>('.coli__result--delta')!;
+      const verdict = root.querySelector<HTMLElement>('[data-verdict]')!;
+      const verdictText = root.querySelector<HTMLElement>('[data-verdict-text]')!;
+
+      const fmt = (v: number) =>
+        new Intl.NumberFormat("en-US", {
+          style: "currency",
+          currency: "USD",
+          maximumFractionDigits: 0,
+        }).format(Math.round(v));
+
+      const fmtPct = (v: number) => {
+        const sign = v > 0 ? "+" : "";
+        return `${sign}${v.toFixed(1)}%`;
+      };
+
+      const pctDiff = (s: number, c: number) => ((s - c) / c) * 100;
+
+      function setPct(el: HTMLElement, pct: number) {
+        el.textContent = fmtPct(pct);
+        el.setAttribute("data-pct-sign", pct >= 0 ? "pos" : "neg");
+      }
+
+      function compute() {
+        const cityKey = citySelect.value;
+        const city = cities[cityKey];
+        if (!city) return;
+
+        const income = parseFloat(incomeInput.value) || 0;
+
+        const equivIncome = income * (sdm.overall / city.overall);
+        const incomeDelta = equivIncome - income;
+        const taxDelta = income * ((sdm.stateTax - city.stateTax) / 100);
+
+        outputs.equivIncome.textContent = fmt(equivIncome);
+        outputs.currentCityName.textContent = city.name;
+        outputs.currentCityNameTax.textContent = `${city.name}, ${city.state}`;
+        outputs.currentTax.textContent = `${city.stateTax.toFixed(2)}%`;
+
+        // Delta framing
+        if (incomeDelta < -1) {
+          outputs.deltaLabel.textContent = "You could earn less and keep the same lifestyle";
+          deltaWrap.setAttribute("data-state", "save");
+        } else if (incomeDelta > 1) {
+          outputs.deltaLabel.textContent = "You'd need more income to match your current lifestyle";
+          deltaWrap.setAttribute("data-state", "need");
+        } else {
+          outputs.deltaLabel.textContent = "Equivalent — no income change needed";
+          deltaWrap.setAttribute("data-state", "even");
+        }
+        outputs.incomeDelta.textContent = `${fmt(Math.abs(incomeDelta))}/yr`;
+        outputs.incomeDeltaMonthly.textContent = `${fmt(Math.abs(incomeDelta) / 12)}/mo`;
+
+        // Category breakdown
+        setPct(outputs.housingPct, pctDiff(sdm.housing, city.housing));
+        setPct(outputs.groceriesPct, pctDiff(sdm.groceries, city.groceries));
+        setPct(outputs.utilitiesPct, pctDiff(sdm.utilities, city.utilities));
+        setPct(outputs.transportationPct, pctDiff(sdm.transportation, city.transportation));
+        setPct(outputs.healthcarePct, pctDiff(sdm.healthcare, city.healthcare));
+
+        // Tax delta text
+        if (taxDelta < -1) {
+          outputs.taxDeltaText.textContent = `You'd save approximately ${fmt(Math.abs(taxDelta))}/yr in state income tax.`;
+        } else if (taxDelta > 1) {
+          outputs.taxDeltaText.textContent = `You'd pay approximately ${fmt(taxDelta)} more/yr in state income tax.`;
+        } else {
+          outputs.taxDeltaText.textContent = "Your state tax burden would be roughly the same.";
+        }
+
+        // Verdict
+        let state = "even";
+        let text = "Your cost of living is roughly equivalent between the two cities — the decision comes down to lifestyle fit, career opportunity, and quality-of-life factors.";
+        if (incomeDelta < -10000) {
+          state = "save";
+          text = "Moving to South Denver should improve your financial picture significantly — your income can stretch further than it does in your current city.";
+        } else if (incomeDelta > 10000) {
+          state = "need";
+          text = "South Denver's cost of living is higher than your current city — you'll need more income to maintain the same lifestyle, though quality-of-life and tax advantages may offset the gap.";
+        }
+        verdict.setAttribute("data-state", state);
+        verdictText.textContent = text;
+
+        // Sync root attr for any downstream styling
+        root.setAttribute("data-current-city", cityKey);
+      }
+
+      // Sync hybrid inputs
+      incomeInput.addEventListener("input", () => {
+        incomeRange.value = incomeInput.value;
+        compute();
+      });
+      incomeRange.addEventListener("input", () => {
+        incomeInput.value = incomeRange.value;
+        compute();
+      });
+      citySelect.addEventListener("change", compute);
+
+      compute();
+    }
+  })();
+</script>
