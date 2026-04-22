@@ -1,0 +1,203 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import DirectAnswer from '../../components/DirectAnswer.astro';
+import CostOfLivingCalculator from '../../components/calculators/CostOfLivingCalculator.astro';
+import FAQ from '../../components/FAQ.astro';
+import CTABanner from '../../components/CTABanner.astro';
+
+const faqItems = [
+  {
+    question: "How does the cost of living in South Denver compare to other major cities?",
+    answer: "South Denver Metro sits roughly 18% above the U.S. national average for cost of living — meaningfully cheaper than Los Angeles (+51%), San Francisco (+78%), New York (+72%), Seattle (+52%), and Boston (+48%), but moderately more expensive than Dallas, Phoenix, Chicago, and most Midwest or Southeast metros. Housing is the primary driver: desirable South Denver suburbs like Littleton, Highlands Ranch, and Centennial are meaningfully cheaper than coastal alternatives but cost more than the typical Sunbelt metro."
+  },
+  {
+    question: "How does Colorado's state income tax compare to California, New York, and Texas?",
+    answer: "Colorado uses a flat 4.40% state income tax rate in 2026. That's significantly lower than California (up to 9.3% for middle incomes), Oregon (~8.75%), Washington, DC (~7.75%), Minnesota (6.8%), and New York (~6.33% for middle earners). It's higher than Texas, Florida, Tennessee, Nevada, and Washington — all of which have no state income tax. For a household earning $150,000 moving from California to Colorado, the state income tax savings alone are roughly $7,350 per year."
+  },
+  {
+    question: "What does $100,000 in California buy me in South Denver?",
+    answer: "On the overall cost-of-living index, $100,000 of purchasing power in Los Angeles is equivalent to approximately $78,000 in South Denver Metro. In San Francisco, $100,000 is equivalent to roughly $66,000 in South Denver. The savings come primarily from housing — median home prices in desirable South Denver suburbs run $650,000 to $800,000, compared to $900,000+ in most California metros. Utility and transportation costs are also somewhat lower, and state income taxes drop from 9.3% to 4.4%."
+  },
+  {
+    question: "Is South Denver cheaper than Austin or Dallas?",
+    answer: "Not quite. Dallas is roughly 15% cheaper than South Denver Metro on overall cost of living, primarily because Texas has no state income tax and median Dallas home prices are lower. Austin is roughly equivalent to South Denver overall, though housing is cheaper in Dallas than in either Austin or South Denver. The Texas-vs-Colorado decision usually comes down to lifestyle — mountains, weather, and no state income tax differ in different ways, and many relocators find South Denver's climate and outdoor access worth the modest cost premium over Texas metros."
+  },
+  {
+    question: "Why is South Denver Metro more expensive than the broader Denver area?",
+    answer: "The South Denver Metro suburbs — Littleton, Highlands Ranch, Centennial, Greenwood Village, Castle Pines, Parker, and surrounding areas — are among the most desirable residential communities in Colorado. They offer top-ranked school districts, lower crime rates, established neighborhoods, and proximity to both downtown Denver and the foothills. That demand drives median home prices roughly 15–25% above the broader Denver metro average. Our calculator reflects these suburban submarkets, not the cheaper bare-Denver average you might see in generic cost-of-living tools."
+  },
+  {
+    question: "How accurate is this cost-of-living calculator?",
+    answer: "This is a directional tool, not a precise budget. Actual costs vary significantly by neighborhood, household composition, lifestyle choices, and housing specifics. The indices use U.S. national average = 100 and reflect typical middle-income household spending patterns. The data was last updated in April 2026 using BLS Consumer Price Index regional data, Tax Foundation state income tax rates, and Zillow home value indices. For a relocation-specific analysis that factors in your actual target neighborhood, school priorities, commute, and housing type, book a free call with Jacob Stark."
+  }
+];
+---
+
+<BaseLayout
+  title="Denver vs Your City — Cost of Living Calculator | Jacob Stark"
+  description="Free cost-of-living calculator comparing South Denver Metro to 27 major U.S. cities. Equivalent income, category breakdown, and state tax comparison for relocators to Colorado."
+  ogUrl="https://selling303.com/tools/cost-of-living-calculator"
+  ogImage="https://selling303.com/images/og-default.jpg"
+  currentPage="tools"
+  headerVariant="solid"
+>
+  <Fragment slot="head">
+    <!-- Schema: WebApplication for the tool -->
+    <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Cost of Living Calculator — South Denver vs. Major U.S. Cities",
+      "url": "https://selling303.com/tools/cost-of-living-calculator",
+      "description": "Free calculator comparing cost of living between South Denver Metro (Littleton, Highlands Ranch, Centennial) and 27 major U.S. cities including Los Angeles, San Francisco, New York, Seattle, Miami, Dallas, and more.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "RealEstateAgent",
+        "name": "Jacob Stark",
+        "url": "https://selling303.com"
+      }
+    }
+    </script>
+  </Fragment>
+
+  <!-- ========== PAGE HERO ========== -->
+  <PageHero
+    label="Free Tool"
+    heading="Denver vs. Your City — Cost of Living"
+    subtext="Compare South Denver Metro to 27 major U.S. cities. See equivalent income, category breakdown, and how Colorado's state income tax stacks up."
+  />
+
+  <!-- ========== DIRECT ANSWER + CALCULATOR ========== -->
+  <section class="section section--white">
+    <div class="container">
+      <DirectAnswer
+        question="How much do I need to earn in South Denver to maintain my current lifestyle?"
+        answer="South Denver Metro sits roughly 18% above the U.S. national average cost of living. Your equivalent income is calculated by multiplying your current income by the ratio of South Denver's index (118) to your current city's index. For example, $150,000 in Los Angeles (151 index) equals roughly $117,000 in South Denver — meaning you can earn less here and maintain the same lifestyle. The calculator below runs this for 27 major cities and breaks it down by category."
+      />
+
+      <div style="max-width: 1100px; margin: 0 auto;">
+        <CostOfLivingCalculator showHeader={false} />
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== COLORADO TAX ADVANTAGE ========== -->
+  <section class="section">
+    <div class="container" style="max-width: 900px;">
+      <span class="section-label">Colorado Advantage</span>
+      <h2 class="section-heading">How Colorado taxes compare to other states</h2>
+      <p>
+        Colorado uses a flat 4.40% state income tax in 2026 — the same rate whether you earn $60,000 or $600,000. That simplicity alone is a draw. But the real story is how favorably it compares to high-earner states.
+      </p>
+      <p>
+        For a household earning $200,000 per year, the annual state income tax bill is:
+      </p>
+      <ul style="list-style: disc; padding-left: 1.5rem; margin-bottom: 1.5rem;">
+        <li><strong>California:</strong> ~$18,600 (9.3% effective at this income)</li>
+        <li><strong>Oregon:</strong> ~$17,500 (8.75%)</li>
+        <li><strong>Washington, DC:</strong> ~$15,500 (7.75%)</li>
+        <li><strong>Minnesota:</strong> ~$13,600 (6.8%)</li>
+        <li><strong>New York:</strong> ~$12,660 (6.33%)</li>
+        <li><strong>Colorado:</strong> <span style="color: var(--color-primary); font-weight: 700;">~$8,800 (4.40%)</span></li>
+        <li><strong>Texas, Florida, Tennessee, Nevada, Washington:</strong> $0 (no state income tax)</li>
+      </ul>
+      <p>
+        If you're relocating from California, Colorado saves roughly $9,800/year in state tax at that income level. From New York, roughly $3,860. From Texas or Florida, you're adding a state tax bill — though Colorado's overall cost of living is still lower than most coastal markets even after that.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== HOUSING COMPARISON ========== -->
+  <section class="section section--white">
+    <div class="container" style="max-width: 900px;">
+      <span class="section-label">Housing Costs</span>
+      <h2 class="section-heading">Housing costs in South Denver vs. coastal markets</h2>
+      <p>
+        Housing is the single biggest driver of cost-of-living differences between cities. Here's how median home values in desirable South Denver suburbs compare to common origin markets in 2026:
+      </p>
+      <ul style="list-style: disc; padding-left: 1.5rem; margin-bottom: 1.5rem;">
+        <li><strong>San Francisco metro:</strong> ~$1.4M median</li>
+        <li><strong>San Jose metro:</strong> ~$1.3M median</li>
+        <li><strong>Los Angeles:</strong> ~$950K median</li>
+        <li><strong>Seattle:</strong> ~$850K median</li>
+        <li><strong>New York City (outer boroughs):</strong> ~$800K median</li>
+        <li><strong>Boston:</strong> ~$780K median</li>
+        <li><strong>South Denver Metro (Littleton, Highlands Ranch, Centennial):</strong> <span style="color: var(--color-primary); font-weight: 700;">~$703K median</span></li>
+        <li><strong>Austin:</strong> ~$560K median</li>
+        <li><strong>Dallas:</strong> ~$430K median</li>
+        <li><strong>Phoenix:</strong> ~$465K median</li>
+      </ul>
+      <p>
+        A $1.2M home in San Francisco gets you a modest 3-bedroom in a walkable neighborhood. The same $1.2M in South Denver Metro buys a significantly larger home in Castle Pines, Greenwood Village, or a newer build in Highlands Ranch — often with a meaningful yard, finished basement, and mountain access.
+      </p>
+      <p style="margin-top: 1.5rem;">
+        Ready to see what your budget gets in South Denver? <a href="/neighborhoods" style="color: var(--color-primary); text-decoration: underline;">Browse the 9 South Denver neighborhoods</a> Jacob covers, or <a href="https://calendly.com/jacob-realtor" target="_blank" rel="noopener" style="color: var(--color-primary); text-decoration: underline;">book a relocation call</a> to map out your move.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== WHAT $100K LOOKS LIKE ========== -->
+  <section class="section">
+    <div class="container" style="max-width: 900px;">
+      <span class="section-label">Purchasing Power</span>
+      <h2 class="section-heading">What $100K in California looks like in Colorado</h2>
+      <p>
+        One of the most common questions from relocators: "I earn $100,000 in California — what do I need to earn in Colorado?" Using overall cost-of-living indices, here's the rough math:
+      </p>
+      <ul style="list-style: disc; padding-left: 1.5rem; margin-bottom: 1.5rem;">
+        <li><strong>San Francisco ($100K):</strong> Equivalent to ~$66,000 in South Denver</li>
+        <li><strong>San Jose ($100K):</strong> Equivalent to ~$67,000 in South Denver</li>
+        <li><strong>Los Angeles ($100K):</strong> Equivalent to ~$78,000 in South Denver</li>
+        <li><strong>San Diego ($100K):</strong> Equivalent to ~$83,000 in South Denver</li>
+        <li><strong>Seattle ($100K):</strong> Equivalent to ~$78,000 in South Denver</li>
+        <li><strong>New York ($100K):</strong> Equivalent to ~$69,000 in South Denver</li>
+        <li><strong>Boston ($100K):</strong> Equivalent to ~$80,000 in South Denver</li>
+      </ul>
+      <p>
+        This is why so many remote-work tech employees from California and Seattle have relocated to Denver since 2020 — keeping a coastal salary while living at roughly two-thirds the cost creates real wealth-building capacity over time.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== RELATED TOOLS ========== -->
+  <section class="section section--white">
+    <div class="container" style="max-width: 900px;">
+      <span class="section-label">Keep Going</span>
+      <h2 class="section-heading">More tools and guides</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+        <a href="/relocation" style="background: var(--color-background); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); display: block;">
+          <h3 style="font-size: 1.125rem; margin-bottom: 0.5rem;">Relocation Guide</h3>
+          <p style="font-size: 0.9375rem; margin: 0;">Full relocation playbook for moving to South Denver Metro.</p>
+        </a>
+        <a href="/neighborhoods" style="background: var(--color-background); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); display: block;">
+          <h3 style="font-size: 1.125rem; margin-bottom: 0.5rem;">South Denver Neighborhoods</h3>
+          <p style="font-size: 0.9375rem; margin: 0;">Market data, pricing, and vibe for all 9 communities.</p>
+        </a>
+        <a href="/tools/closing-cost-estimator" style="background: var(--color-background); padding: 1.5rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); display: block;">
+          <h3 style="font-size: 1.125rem; margin-bottom: 0.5rem;">Closing Cost Estimator</h3>
+          <p style="font-size: 0.9375rem; margin: 0;">Once you're ready to buy — estimate Colorado closing costs.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <FAQ items={faqItems} />
+
+  <!-- ========== CTA BANNER ========== -->
+  <CTABanner
+    heading="Relocating to South Denver?"
+    subtext="Book a free relocation call with Jacob Stark — he'll walk through your target neighborhoods, school priorities, commute, and budget so you land in the right community from day one."
+    primaryHref="https://calendly.com/jacob-realtor"
+    primaryText="Schedule a Free Call"
+    secondaryHref="sms:+13039970634?&body=Hi%20Jacob%2C%20I%27m%20considering%20moving%20to%20South%20Denver."
+    secondaryText="Text 303-997-0634"
+  />
+</BaseLayout>

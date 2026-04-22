@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import CostOfLivingCalculator from '../components/calculators/CostOfLivingCalculator.astro';
 ---
 
 <BaseLayout
@@ -117,6 +118,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <li><a href="#the-problem" class="pillar-toc__link">The Problem</a></li>
           <li><a href="#relocation-readiness" class="pillar-toc__link">What You Need</a></li>
           <li><a href="#the-approach" class="pillar-toc__link">The Approach</a></li>
+          <li><a href="#cost-compare" class="pillar-toc__link">Cost of Living</a></li>
           <li><a href="#neighborhood-guide" class="pillar-toc__link">Neighborhoods</a></li>
           <li><a href="#faq" class="pillar-toc__link">FAQ</a></li>
           <li><a href="#related-reading" class="pillar-toc__link">Related Reading</a></li>
@@ -227,6 +229,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <p>Ready to start your relocation journey? Jacob is here to guide you.</p>
             <a href="https://calendly.com/jacob-realtor" class="btn btn--primary btn--sm" target="_blank" rel="noopener">Schedule a Call</a>
           </div>
+        </div>
+
+
+        <!-- COST OF LIVING CALCULATOR -->
+        <div id="cost-compare" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Run Your Numbers</span>
+          <h2 class="section-heading">Cost of Living: Your City vs. South Denver</h2>
+          <p style="margin-bottom: var(--space-lg);">Before you commit to the move, it helps to see the math. Pick your current city, enter your household income, and see how far your money goes in South Denver — across housing, groceries, utilities, transportation, healthcare, and state income tax. No email required.</p>
+          <CostOfLivingCalculator showHeader={false} />
+          <p style="margin-top: var(--space-md); font-size: 0.875rem; color: var(--color-body-text);">Want a deeper dive? <a href="/tools/cost-of-living-calculator" style="color: var(--color-primary); text-decoration: underline;">Open the full calculator page</a> with category-by-category explainers and the Colorado tax advantage breakdown, or <a href="https://calendly.com/jacob-realtor" target="_blank" rel="noopener" style="color: var(--color-primary); text-decoration: underline;">book a free relocation call</a>.</p>
         </div>
 
 
