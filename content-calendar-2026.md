@@ -141,7 +141,7 @@
   - Target keywords: moving to Parker Colorado, Parker CO relocation guide, Parker Colorado families
 
 #### Day 17 — Sunday, April 20
-- [ ] **"Why Your Centennial Home Isn't Getting Offers — and How to Fix It Before Summer"**
+- [x] **"Why Your Centennial Home Isn't Getting Offers — and How to Fix It Before Summer"** *(drafted 2026-04-21)*
   - Specialization: `/expired-listings` | Geographic: `/centennial`
   - Type: Seller advice | Funnel: BOFU
   - Angle: Diagnostic approach for stale Centennial listings. Photo quality audit, pricing relative to DOM benchmarks, showing feedback patterns.

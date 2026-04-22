@@ -20,6 +20,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - Your Listing Expired in Highlands Ranch — Here's What Actually Went Wrong (`/blog/expired-listing-highlands-ranch`)
 - How to Relist and Sell a Home in Littleton After an Expired Listing (`/blog/relist-home-littleton-after-expired-listing`)
 - South Denver Market Update: What April 2026 Means for Sellers Sitting on Expired Listings (`/blog/south-denver-market-update-april-2026-expired-listings-centennial`)
+- Why Your Centennial Home Isn't Getting Offers — and How to Fix It Before Summer (`/blog/why-centennial-home-not-getting-offers`)
 
 ### 2. Move-Up Sellers (`/move-up-sellers`)
 **Primary geographic ties:** Highlands Ranch, Centennial, Parker (highest move-up activity — families upgrading within the metro)
