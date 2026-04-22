@@ -48,7 +48,7 @@ relatedPosts:
 <div style="background: #f0f4f0; border-left: 4px solid #4a7c59; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>Key Takeaways</strong>
 <ul style="margin: 0.75rem 0 0 1.25rem; padding: 0;">
-<li><strong>Centennial's successful sellers move fast</strong> — closed single-family homes in Centennial sold in a median of 13 days during Q1 2026, per REcolorado MLS data.</li>
+<li><strong>Centennial's successful sellers move fast</strong> — 51.7% of closed single-family homes in Centennial went under contract within 13 days in Q1 2026, per REcolorado MLS data (n=269).</li>
 <li><strong>Stale listings are measurable</strong> — the 39 Centennial listings that expired in Q1 sat a median of 68 days in the MLS before the contract ran out.</li>
 <li><strong>Price is the leading cause, not photos</strong> — Centennial closed sales averaged 94% of original list price, meaning overpriced homes almost always required reductions before selling.</li>
 <li><strong>Buyer feedback is diagnostic</strong> — patterns in showing comments ("too small for the price," "layout is dated," "similar to X listing") point directly at what needs to change.</li>
@@ -81,25 +81,68 @@ relatedPosts:
 
 <p>Those three numbers define a narrow window. Inside 13 days, your listing is performing like the healthy half of the market. Between 21 and 45 days, buyers are telling you the listing is off in some way — not by saying it directly, but by not writing offers. Past 45 days, you are tracking the expired listing curve, not the closed listing curve.</p>
 
-<div style="display: flex; flex-direction: column; gap: 0.75rem; margin: 2rem 0; box-shadow: 0 2px 12px rgba(0,42,58,0.10); border-radius: 8px; overflow: hidden;">
-  <div style="background: #4a7c59; color: white; padding: 1.25rem 1.5rem;">
-    <div style="font-size: 2rem; font-weight: 700; line-height: 1;">13 days</div>
-    <div style="font-size: 0.95rem; margin-top: 0.25rem; opacity: 0.95;">Median DIM for CLOSED Centennial homes — healthy zone. If you're under 2 weeks, the market is working.</div>
-  </div>
-  <div style="background: #8a7a3a; color: white; padding: 1.25rem 1.5rem;">
-    <div style="font-size: 2rem; font-weight: 700; line-height: 1;">39 days</div>
-    <div style="font-size: 0.95rem; margin-top: 0.25rem; opacity: 0.95;">Average DIM for closed Centennial homes — caution zone. Most homes that land here required a price or presentation change.</div>
-  </div>
-  <div style="background: #9e6b3a; color: white; padding: 1.25rem 1.5rem;">
-    <div style="font-size: 2rem; font-weight: 700; line-height: 1;">45+ days</div>
-    <div style="font-size: 0.95rem; margin-top: 0.25rem; opacity: 0.95;">Diagnostic zone. No offers at this point means the listing is actively misaligned with buyer expectations. Time to audit price, photos, and feedback.</div>
-  </div>
-  <div style="background: #8b3a3a; color: white; padding: 1.25rem 1.5rem;">
-    <div style="font-size: 2rem; font-weight: 700; line-height: 1;">68 days</div>
-    <div style="font-size: 0.95rem; margin-top: 0.25rem; opacity: 0.95;">Median DIM for EXPIRED Centennial listings in Q1 2026. At this point, the contract is closer to expiring than to producing an offer.</div>
-  </div>
+<h3 id="dom-distribution">How Long Did Centennial, Colorado Homes Actually Take to Sell in Q1 2026?</h3>
+
+<p>The Q1 2026 REcolorado MLS data tells a clear story when you break it down by days in the MLS. Over half of Centennial, Colorado's closed single-family homes went under contract within the first two weeks. Expired listings — where the listing contract ran out before the home sold — concentrated on the opposite end, sitting past 68 days. The chart below bins every closed single-family listing (n=269) and every expired single-family listing (n=39) in Centennial, Colorado from January 1 through March 31, 2026.</p>
+
+<div style="background: white; padding: 1rem; margin: 2rem 0 0.5rem; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,42,58,0.10);">
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="histTitle histDesc" style="width: 100%; height: auto; display: block;">
+<title id="histTitle">Days in MLS distribution for single-family home listings in Centennial, Colorado, Q1 2026 (REcolorado MLS)</title>
+<desc id="histDesc">A grouped bar chart from REcolorado MLS data comparing how long single-family home listings sat in the MLS in Centennial, Colorado during Q1 2026. 51.7% of 269 closed listings went under contract within 0 to 13 days. Only 10.3% of 39 expired listings were that fast. 30.8% of expired listings sat 121 or more days before the contract ran out, versus 8.6% for closed listings. Median days in MLS: 13 days for closed listings, 68 days for expired listings. Closed listings are defined as going under contract and closing the sale. Expired listings are defined as the listing contract running out without a sale.</desc>
+<line x1="80" y1="40" x2="780" y2="40" stroke="#e5e7e9" stroke-width="1" />
+<line x1="80" y1="83" x2="780" y2="83" stroke="#e5e7e9" stroke-width="1" />
+<line x1="80" y1="127" x2="780" y2="127" stroke="#e5e7e9" stroke-width="1" />
+<line x1="80" y1="170" x2="780" y2="170" stroke="#e5e7e9" stroke-width="1" />
+<line x1="80" y1="213" x2="780" y2="213" stroke="#e5e7e9" stroke-width="1" />
+<line x1="80" y1="257" x2="780" y2="257" stroke="#e5e7e9" stroke-width="1" />
+<line x1="80" y1="300" x2="780" y2="300" stroke="#002a3a" stroke-width="1.5" />
+<text x="72" y="44" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#002a3a">60%</text>
+<text x="72" y="87" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#002a3a">50%</text>
+<text x="72" y="131" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#002a3a">40%</text>
+<text x="72" y="174" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#002a3a">30%</text>
+<text x="72" y="217" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#002a3a">20%</text>
+<text x="72" y="261" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#002a3a">10%</text>
+<text x="72" y="304" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#002a3a">0%</text>
+<text x="30" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#002a3a" transform="rotate(-90 30 170)">% of listings</text>
+<rect x="114" y="76" width="36" height="224" fill="#4a7c59" />
+<text x="132" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#4a7c59">51.7%</text>
+<rect x="154" y="255" width="36" height="45" fill="#8b3a3a" />
+<text x="172" y="249" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#8b3a3a">10.3%</text>
+<text x="152" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#002a3a">0–13</text>
+<rect x="214" y="278" width="36" height="22" fill="#4a7c59" />
+<text x="232" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#4a7c59">5.2%</text>
+<rect x="254" y="300" width="36" height="0" fill="#8b3a3a" />
+<text x="272" y="294" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#8b3a3a">0%</text>
+<text x="252" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#002a3a">14–21</text>
+<rect x="314" y="245" width="36" height="55" fill="#4a7c59" />
+<text x="332" y="239" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#4a7c59">12.6%</text>
+<rect x="354" y="200" width="36" height="100" fill="#8b3a3a" />
+<text x="372" y="194" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#8b3a3a">23.1%</text>
+<text x="352" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#002a3a">22–45</text>
+<rect x="414" y="260" width="36" height="40" fill="#4a7c59" />
+<text x="432" y="254" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#4a7c59">9.3%</text>
+<rect x="454" y="222" width="36" height="78" fill="#8b3a3a" />
+<text x="472" y="216" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#8b3a3a">17.9%</text>
+<text x="452" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#002a3a">46–68</text>
+<rect x="514" y="245" width="36" height="55" fill="#4a7c59" />
+<text x="532" y="239" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#4a7c59">12.6%</text>
+<rect x="554" y="222" width="36" height="78" fill="#8b3a3a" />
+<text x="572" y="216" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#8b3a3a">17.9%</text>
+<text x="552" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#002a3a">69–120</text>
+<rect x="614" y="263" width="36" height="37" fill="#4a7c59" />
+<text x="632" y="257" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#4a7c59">8.6%</text>
+<rect x="654" y="167" width="36" height="133" fill="#8b3a3a" />
+<text x="672" y="161" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#8b3a3a">30.8%</text>
+<text x="652" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#002a3a">121+</text>
+<text x="430" y="346" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#002a3a">Days in MLS</text>
+<g transform="translate(500, 56)"><rect x="0" y="-12" width="265" height="50" fill="white" stroke="#e5e7e9" stroke-width="1" rx="4" /><rect x="10" y="-3" width="16" height="12" fill="#4a7c59" /><text x="32" y="7" font-family="Arial, sans-serif" font-size="12" fill="#002a3a">Closed Centennial homes (n=269)</text><rect x="10" y="17" width="16" height="12" fill="#8b3a3a" /><text x="32" y="27" font-family="Arial, sans-serif" font-size="12" fill="#002a3a">Expired Centennial listings (n=39)</text></g>
+<text x="430" y="22" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#002a3a">Days in MLS: Single-Family Homes in Centennial, Colorado — Q1 2026</text>
+<text x="430" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#81848a">Source: REcolorado MLS | Centennial, CO single-family residential | Jan 1 – Mar 31, 2026 | n=269 closed, n=39 expired | selling303.com</text>
+<text x="430" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#81848a" font-style="italic">Closed = went under contract and closed sale. Expired = listing contract ran out without a sale.</text>
+</svg>
 </div>
-<p style="text-align: center; font-size: 0.8rem; color: #81848a; margin-top: -0.75rem; margin-bottom: 2rem;">Source: REcolorado MLS listing data, Centennial single-family residential, Q1 2026 (pulled April 2, 2026).</p>
+<p style="font-size: 0.95rem; color: #002a3a; margin-top: 0.5rem; margin-bottom: 0.25rem;"><strong>Over half of closed Centennial, Colorado homes (51.7%) went under contract within the first 13 days.</strong> Expired listings skewed the opposite direction — 30.8% sat past 121 days and nearly 59% sat past 68 days before the contract ran out. If your listing is past day 21 without an offer, the distribution is already telling you where you're headed.</p>
+<p style="text-align: center; font-size: 0.8rem; color: #81848a; margin-top: 0; margin-bottom: 2rem;">Source: REcolorado MLS listing exports for Centennial, Colorado single-family residential properties, Q1 2026 (pulled April 2, 2026). Population: n=269 closed listings, n=39 expired listings — every Q1 closed or expired single-family home listing in the city.</p>
 
 <p>Use this as the trigger for the rest of the audit. If you are still under 13 days and patient, give it another week. If you are past 21 days without an offer, the next four sections are the diagnostic that separates a correctable listing from one that is drifting toward the expired column.</p>
 
@@ -109,7 +152,7 @@ relatedPosts:
 
 <p>Buyers in Centennial are comp-aware. Most of them have watched the same search alerts for weeks. They know what a 3,000-square-foot home with a finished basement in the Willow Creek or Walnut Hills submarkets should list for. When a comparable home lists $40,000 above that expected band, the listing doesn't get "too high" tags on Zillow — it simply gets skipped. Buyers with agents go see the correctly priced competitor first. Weeks pass. The stale listing becomes a negotiating anchor for the competitor instead of a contender itself.</p>
 
-<p>The fix is not a 2% trim. A trim signals indecision. A meaningful correction — one that repositions the home inside the next price band down on buyer search filters — resets the listing's visibility. If your home is priced at $829,000 and the next search tier breaks at $800,000, a drop to $799,000 does more work than a drop to $819,000. That is the same mechanic that drives <a href="/blog/why-homes-sit-on-market-south-denver">homes to sit on the market</a> despite apparently healthy demand around them.</p>
+<p>The fix is not a 2% trim. A trim signals indecision. A meaningful correction — one that repositions the home inside the next price band down on buyer search filters — resets the listing's visibility. If your home is priced at $829,000 and the next search tier breaks at $800,000, drop it to $800,000 exactly — not $819,000 and not $799,000. Portal search filters are range-based and inclusive at the boundary: a listing priced at $800,000 appears in the $750K–$800K range AND in the $800K–$850K range, effectively doubling the audience pool compared to either side of the round number. Sitting a dollar above or a dollar below the tier break cuts that pool roughly in half. That is the same mechanic that drives <a href="/blog/why-homes-sit-on-market-south-denver">homes to sit on the market</a> despite apparently healthy demand around them.</p>
 
 <h2 id="photo-audit">Are Your Listing Photos Losing Buyers Before They Click?</h2>
 
