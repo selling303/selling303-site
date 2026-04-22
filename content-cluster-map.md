@@ -45,6 +45,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - Cost to Sell a House in Colorado 2026 (`/blog/cost-to-sell-house-colorado-2026`)
 - Why Homes Sit on the Market in South Denver (`/blog/why-homes-sit-on-market-south-denver`)
 - Selling Your First Home in South Denver: What No One Tells You About the Process (`/blog/selling-first-home-south-denver-process`)
+- The Hidden Costs of Selling Your Home in Arapahoe County: A First-Time Seller's Net Sheet (`/blog/hidden-costs-selling-home-arapahoe-county-net-sheet-2026`)
 
 ### 5. Relocation (`/relocation`)
 **Primary geographic ties:** All 9 neighborhoods (relocation buyers need the full map)

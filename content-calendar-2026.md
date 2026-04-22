@@ -148,7 +148,7 @@
   - Target keywords: home not selling Centennial CO, no offers Centennial, fix expired listing Centennial
 
 #### Day 18 — Monday, April 21
-- [ ] **"The Hidden Costs of Selling Your Home in Arapahoe County — A First-Time Seller's Net Sheet"**
+- [x] **"The Hidden Costs of Selling Your Home in Arapahoe County — A First-Time Seller's Net Sheet"** *(drafted 2026-04-21)*
   - Specialization: `/first-time-homesellers` | Geographic: `/centennial`
   - Type: Seller advice | Funnel: MOFU
   - Angle: Detailed net sheet walkthrough. Transfer tax, title fees, commission structures, concession norms, surprise costs.
