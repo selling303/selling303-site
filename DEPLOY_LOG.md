@@ -4,6 +4,26 @@ Permanent record of deployed changes. The deploy-to-netlify skill moves items he
 
 ---
 
+## 2026-04-21 — commit d0f6579 (merge 6bbba0a on live) | Credits used: 15 | Credits remaining: ~140
+
+### New blog post (1)
+- **Day 17 — "Why Your Centennial Home Isn't Getting Offers — and How to Fix It Before Summer"** (`src/content/blog/why-centennial-home-not-getting-offers.md`). Expired Listings pillar + Centennial geographic pillar. BOFU seller advice. Diagnostic framework for stale Centennial, Colorado listings anchored to real Q1 2026 REcolorado MLS data (n=269 closed, n=39 expired): 51.7% of closed homes went under contract within 13 days, 58.9% of expired listings sat past 68 days before expiration. AEO-optimized inline SVG histogram with in-visual source attribution, domain term definitions ("closed" / "expired"), and state-qualified entity references for disambiguation. Iterative refinement with Jacob: stacked-card first draft rejected, dual-curve distribution rejected (pseudo-statistical), real histogram built from extracted DIM values. Tier-pricing correction in body: round number ($800K) recommended over $799K for dual-tier search-filter reach (inclusive-at-boundary mechanic).
+
+### Footer refinement
+- `Footer.astro` — renamed ClientClarity link to "ClientClarity Portal." Combined form carries proprietary tech signal for curious visitors and functional anchor for existing clients.
+
+### Conversion sprint Week 1 — final calculator
+- **Cost of Living Calculator** — new component at `src/components/calculators/CostOfLivingCalculator.astro` comparing South Denver Metro to 27 major U.S. cities with category breakdown (housing, groceries, utilities, transportation, healthcare) + state income tax callout. Data sourced from BLS CPI, Tax Foundation, Zillow (April 2026, stamped with source links in disclaimer). New standalone page at `/tools/cost-of-living-calculator` with Colorado tax advantage, housing comparison, and "what $100K looks like" explainers + FAQ. Embedded on `/relocation` with new TOC entry. Replaced Coming Soon card on `/tools` hub with active entry; updated ItemList schema. Week 1 of conversion sprint complete.
+
+### Skill update (blog-post-writer, outside this repo)
+- Added Rule #10 to Visual Opportunity Check: no blank lines inside `<svg>` blocks (Astro MD parser silent-failure fix).
+- Added AEO Optimization Checklist (Visuals) sub-section with 9 rules — entity disambiguation, citable `<title>`/`<desc>`, in-SVG source attribution, domain-term definitions, full date ranges, sample sizes in legend, population framing, headline stat in summary sentence, question-phrased H3 headings above charts.
+
+### Session notes
+- Build hook trigger required CORS workaround: fetching from `app.netlify.com` (same-origin to Netlify API) succeeded after selling303.com origin was blocked by CSP.
+
+---
+
 ## 2026-04-20 — commit 03b0893 (merge a4af39d on live) | Credits used: 15 | Credits remaining: 155
 
 ### New blog posts (2)
