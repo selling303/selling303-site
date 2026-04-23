@@ -155,7 +155,7 @@
   - Target keywords: cost to sell home Arapahoe County, seller net sheet Colorado, first-time seller costs Denver
 
 #### Day 19 — Tuesday, April 22
-- [ ] **"Move-Up Buyer's Checklist: Going from a Starter in Englewood to More Space in Parker"**
+- [x] **"Move-Up Buyer's Checklist: Going from a Starter in Englewood to More Space in Parker"** *(drafted 2026-04-22)*
   - Specialization: `/move-up-sellers` | Geographic: `/englewood`
   - Type: Buyer/seller advice | Funnel: MOFU
   - Angle: Practical checklist for the move-up journey. Timeline, financial prep, neighborhood comparison, school-adjacent lifestyle factors.
