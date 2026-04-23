@@ -99,7 +99,7 @@ relatedPosts:
 
 <p>Three sequencing strategies handle this move. Jacob walks every client through all three before recommending one, because the right answer depends on cash reserves and risk tolerance — not on a universal best practice. The <a href="/blog/selling-centennial-buying-highlands-ranch-coordinate-transactions">Centennial-to-Highlands-Ranch coordination playbook</a> covers the same three paths in deeper mechanical detail.</p>
 
-<p><strong>Sell first, then buy.</strong> List the Englewood home, negotiate a 30–60 day rent-back with the buyer, and use that window to close on Parker. This is the lowest-risk path and works for roughly 70 percent of Jacob's move-up clients. The Englewood buyer pays your rent while you shop, and the rent-back payment is typically set at the buyer's new mortgage PITI — not the seller's old one.</p>
+<p><strong>Sell first, then buy.</strong> List the Englewood home, negotiate a 30–60 day rent-back with the buyer, and use that window to close on Parker. This is the lowest-risk path for most move-up sellers because it locks in Englewood equity before committing to a new Parker mortgage. The Englewood buyer pays your rent while you shop, and the rent-back payment is typically set at the buyer's new mortgage PITI — not the seller's old one.</p>
 
 <p><strong>Buy first, then sell.</strong> Use a bridge loan or strong cash reserves to close on Parker while the Englewood home is still on the market. This path fits move-up sellers with six-figure cash reserves or a family gift available. The risk is carrying two mortgages if Englewood sits longer than expected — though with a 14-day median DIM in Englewood, that risk is modest in a strong market.</p>
 
@@ -109,7 +109,7 @@ relatedPosts:
 
 <h2 id="checklist">What's the Full Move-Up Checklist from Start to Finish?</h2>
 
-<p>The checklist below is what Jacob Stark walks every Englewood-to-Parker client through, from first conversation to keys in hand. Most moves run 90–120 days total, depending on how much prep the Englewood home needs before listing.</p>
+<p>The checklist below is what Jacob Stark walks every Englewood-to-Parker client through, from first conversation to keys in hand. Most moves run 95–125 days total, depending on how much prep the Englewood home needs before listing.</p>
 
 <div style="background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem 1.5rem; margin: 1.5rem 0 2rem; box-shadow: 0 2px 12px rgba(0,42,58,0.10);" itemscope itemtype="https://schema.org/HowTo">
 <meta itemprop="name" content="Move-Up Checklist: Englewood, Colorado to Parker, Colorado" />
@@ -128,28 +128,28 @@ relatedPosts:
 </div>
 <div style="position: relative; margin-bottom: 1.5rem;" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <div style="position: absolute; left: -2rem; top: 0; width: 2rem; height: 2rem; background: #002a3a; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem;">3</div>
-<strong itemprop="name" style="color: #002a3a;">Days 30–35: List Englewood</strong>
-<p itemprop="text" style="margin: 0.25rem 0 0;">Professional photos, video walk-through, and Tuesday-evening launch to maximize weekend showings. Price to the 97 percent close-to-original-list benchmark — slightly under comparable closings to drive multiple offers.</p>
+<strong itemprop="name" style="color: #002a3a;">Days 30–42: Coming Soon, then Active</strong>
+<p itemprop="text" style="margin: 0.25rem 0 0;">Professional photos and video walk-through, then launch as Coming Soon on a Thursday — no showings yet, just exposure. The following Thursday, flip to Active and open showings. The one-week Coming Soon window builds a buyer list before the doors open, so offers cluster in the first weekend. Price to the 97 percent close-to-original-list benchmark — slightly under comparable closings to drive multiple offers.</p>
 </div>
 <div style="position: relative; margin-bottom: 1.5rem;" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <div style="position: absolute; left: -2rem; top: 0; width: 2rem; height: 2rem; background: #002a3a; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem;">4</div>
-<strong itemprop="name" style="color: #002a3a;">Days 35–50: Offers, rent-back, under contract</strong>
+<strong itemprop="name" style="color: #002a3a;">Days 42–55: Offers, rent-back, under contract</strong>
 <p itemprop="text" style="margin: 0.25rem 0 0;">Evaluate offers for price plus seller-friendly terms — especially a 30–60 day rent-back from the buyer. Accept, open escrow, and start actively shopping Parker the next weekend.</p>
 </div>
 <div style="position: relative; margin-bottom: 1.5rem;" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <div style="position: absolute; left: -2rem; top: 0; width: 2rem; height: 2rem; background: #002a3a; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem;">5</div>
-<strong itemprop="name" style="color: #002a3a;">Days 50–75: Shop Parker, write offers</strong>
+<strong itemprop="name" style="color: #002a3a;">Days 55–80: Shop Parker, write offers</strong>
 <p itemprop="text" style="margin: 0.25rem 0 0;">Target Parker subdivisions that match the family brief — yard, finished basement, garage size, HOA tolerance. Parker's median 24-day DIM means competition exists but isn't frantic; write clean offers, not desperate ones.</p>
 </div>
 <div style="position: relative; margin-bottom: 1.5rem;" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <div style="position: absolute; left: -2rem; top: 0; width: 2rem; height: 2rem; background: #002a3a; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem;">6</div>
-<strong itemprop="name" style="color: #002a3a;">Days 75–90: Englewood closes</strong>
+<strong itemprop="name" style="color: #002a3a;">Days 80–95: Englewood closes</strong>
 <p itemprop="text" style="margin: 0.25rem 0 0;">Englewood closing funds the Parker down payment. Rent-back clock starts — 30–60 days to close Parker and move out.</p>
 </div>
 <div style="position: relative;" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
 <div style="position: absolute; left: -2rem; top: 0; width: 2rem; height: 2rem; background: #4a7c59; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem;">7</div>
-<strong itemprop="name" style="color: #002a3a;">Days 90–120: Parker closes, move in</strong>
-<p itemprop="text" style="margin: 0.25rem 0 0;">Final walk-through, closing, keys, and move — ideally before the rent-back clock expires. The whole sequence typically runs 90–120 days end-to-end.</p>
+<strong itemprop="name" style="color: #002a3a;">Days 95–125: Parker closes, move in</strong>
+<p itemprop="text" style="margin: 0.25rem 0 0;">Final walk-through, closing, keys, and move — ideally before the rent-back clock expires. The whole sequence typically runs 95–125 days end-to-end.</p>
 </div>
 </div>
 <p style="text-align: center; font-size: 0.8rem; color: #81848a; margin: 1rem 0 0;">Source: Jacob Stark, selling303.com | Move-up coordination playbook | Timeline assumes typical Q1 2026 market conditions</p>
