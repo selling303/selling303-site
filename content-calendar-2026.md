@@ -148,21 +148,21 @@
   - Target keywords: home not selling Centennial CO, no offers Centennial, fix expired listing Centennial
 
 #### Day 18 — Monday, April 21
-- [x] **"The Hidden Costs of Selling Your Home in Arapahoe County — A First-Time Seller's Net Sheet"** *(drafted 2026-04-21)*
+- [x] **"The Hidden Costs of Selling Your Home in Arapahoe County — A First-Time Seller's Net Sheet"** *(drafted 2026-04-21)* *(published 2026-04-24)*
   - Specialization: `/first-time-homesellers` | Geographic: `/centennial`
   - Type: Seller advice | Funnel: MOFU
   - Angle: Detailed net sheet walkthrough. Transfer tax, title fees, commission structures, concession norms, surprise costs.
   - Target keywords: cost to sell home Arapahoe County, seller net sheet Colorado, first-time seller costs Denver
 
 #### Day 19 — Tuesday, April 22
-- [x] **"Move-Up Buyer's Checklist: Going from a Starter in Englewood to More Space in Parker"** *(drafted 2026-04-22)*
+- [x] **"Move-Up Buyer's Checklist: Going from a Starter in Englewood to More Space in Parker"** *(drafted 2026-04-22)* *(published 2026-04-24)*
   - Specialization: `/move-up-sellers` | Geographic: `/englewood`
   - Type: Buyer/seller advice | Funnel: MOFU
   - Angle: Practical checklist for the move-up journey. Timeline, financial prep, neighborhood comparison, school-adjacent lifestyle factors.
   - Target keywords: move up from Englewood, upgrade home Parker from Englewood, South Denver move-up checklist
 
 #### Day 20 — Wednesday, April 23
-- [x] **"New Build vs. Resale in Highlands Ranch: Which Makes More Financial Sense in 2026?"** *(drafted 2026-04-23)*
+- [x] **"New Build vs. Resale in Highlands Ranch: Which Makes More Financial Sense in 2026?"** *(drafted 2026-04-23)* *(published 2026-04-24)*
   - Specialization: `/new-construction` | Geographic: `/highlands-ranch`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Head-to-head comparison. Appreciation data, customization premium, closing timeline, warranty value, total cost of ownership.
