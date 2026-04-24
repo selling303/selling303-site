@@ -30,6 +30,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - When to Sell Your Parker Home and Move Up — 5 Signs You've Outgrown It (`/blog/when-to-sell-parker-home-move-up`)
 - Selling in Centennial and Buying in Highlands Ranch: How to Coordinate Two Transactions (`/blog/selling-centennial-buying-highlands-ranch-coordinate-transactions`)
 - How Much Equity Do You Need to Move Up in Highlands Ranch? (`/blog/equity-to-move-up-highlands-ranch`)
+- Move-Up Buyer's Checklist: Going from a Starter in Englewood to More Space in Parker (`/blog/move-up-englewood-to-parker-checklist-2026`)
 
 ### 3. First-Time Homebuyers (`/first-time-homebuyers`)
 **Primary geographic ties:** Littleton, Englewood, Centennial (most affordable entry points in the metro)
@@ -45,6 +46,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - Cost to Sell a House in Colorado 2026 (`/blog/cost-to-sell-house-colorado-2026`)
 - Why Homes Sit on the Market in South Denver (`/blog/why-homes-sit-on-market-south-denver`)
 - Selling Your First Home in South Denver: What No One Tells You About the Process (`/blog/selling-first-home-south-denver-process`)
+- The Hidden Costs of Selling Your Home in Arapahoe County: A First-Time Seller's Net Sheet (`/blog/hidden-costs-selling-home-arapahoe-county-net-sheet-2026`)
 
 ### 5. Relocation (`/relocation`)
 **Primary geographic ties:** All 9 neighborhoods (relocation buyers need the full map)
@@ -63,6 +65,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - New Construction Communities in Castle Pines and Parker: What Buyers Need to Know in 2026 (`/blog/new-construction-castle-pines-parker-2026`)
 - Do You Need a Real Estate Agent for New Construction in Colorado? (`/blog/real-estate-agent-new-construction-colorado`)
 - Lone Tree New Construction: Builder Incentives and What They Actually Mean for Your Bottom Line (`/blog/lone-tree-new-construction-builder-incentives-2026`)
+- New Build vs. Resale in Highlands Ranch: Which Makes More Financial Sense in 2026? (`/blog/new-build-vs-resale-highlands-ranch-2026`)
 
 ---
 
