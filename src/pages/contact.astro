@@ -40,8 +40,11 @@ import PageHero from '../components/PageHero.astro';
         <div>
           <h2 class="section-heading">Send a Message</h2>
           <p style="margin-bottom: var(--space-lg);">Tell me a bit about your situation and I'll get back to you within a few hours.</p>
-          <form class="form" name="contact" method="POST" data-netlify="true" action="/thank-you">
+          <form class="form" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" action="/thank-you">
             <input type="hidden" name="form-name" value="contact">
+            <div style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;" aria-hidden="true">
+              <label>Don't fill this out if you're human: <input name="bot-field" type="text" tabindex="-1" autocomplete="off" /></label>
+            </div>
             <div class="form__row">
               <div class="form__group">
                 <label class="form__label" for="contact-name">Name</label>
