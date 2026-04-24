@@ -162,7 +162,7 @@
   - Target keywords: move up from Englewood, upgrade home Parker from Englewood, South Denver move-up checklist
 
 #### Day 20 — Wednesday, April 23
-- [ ] **"New Build vs. Resale in Highlands Ranch: Which Makes More Financial Sense in 2026?"**
+- [x] **"New Build vs. Resale in Highlands Ranch: Which Makes More Financial Sense in 2026?"** *(drafted 2026-04-23)*
   - Specialization: `/new-construction` | Geographic: `/highlands-ranch`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Head-to-head comparison. Appreciation data, customization premium, closing timeline, warranty value, total cost of ownership.

@@ -65,6 +65,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - New Construction Communities in Castle Pines and Parker: What Buyers Need to Know in 2026 (`/blog/new-construction-castle-pines-parker-2026`)
 - Do You Need a Real Estate Agent for New Construction in Colorado? (`/blog/real-estate-agent-new-construction-colorado`)
 - Lone Tree New Construction: Builder Incentives and What They Actually Mean for Your Bottom Line (`/blog/lone-tree-new-construction-builder-incentives-2026`)
+- New Build vs. Resale in Highlands Ranch: Which Makes More Financial Sense in 2026? (`/blog/new-build-vs-resale-highlands-ranch-2026`)
 
 ---
 
