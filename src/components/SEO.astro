@@ -54,6 +54,21 @@ const {
     window.dataLayer = window.dataLayer || [];
     window.gtag = function () { dataLayer.push(arguments); };
 
+    // Phone-link click tracking — fires the tel_click conversion event whenever
+    // a user taps any <a href="tel:..."> on the site. Registered globally so it
+    // covers FloatingCTA, Footer, CTABanner, and every pillar/contact page CTA
+    // without per-page changes. Use capture phase so the event queues before
+    // the browser hands the click off to the dialer.
+    document.addEventListener('click', function (e) {
+      var a = e.target && e.target.closest && e.target.closest('a[href^="tel:"]');
+      if (!a) return;
+      gtag('event', 'tel_click', {
+        link_url: a.href,
+        link_text: (a.textContent || '').trim().slice(0, 80),
+        page_path: location.pathname
+      });
+    }, { capture: true });
+
     var initialized = false;
     function initGA() {
       if (initialized) return;
