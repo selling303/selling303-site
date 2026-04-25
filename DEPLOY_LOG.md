@@ -4,6 +4,24 @@ Permanent record of deployed changes. The deploy-to-netlify skill moves items he
 
 ---
 
+## 2026-04-24 — commit 5a0465a (merge eedf53c on live) | Credits used: 15 | Credits remaining: ~125
+
+### New blog posts (3 — deploy bundle)
+- **Day 18 — "The Hidden Costs of Selling Your Home in Arapahoe County — A First-Time Seller's Net Sheet"** (`src/content/blog/hidden-costs-selling-home-arapahoe-county-net-sheet-2026.md`). First-Time Sellers pillar + Centennial geographic pillar. MOFU seller advice. Uses Centennial Q1 2026 REcolorado MLS data (n=269 closed SFR). Visual: inline proportional net-sheet cost-breakdown bars.
+- **Day 19 — "Move-Up Buyer's Checklist: Going from a Starter in Englewood to More Space in Parker"** (`src/content/blog/move-up-englewood-to-parker-checklist-2026.md`). Move-Up Sellers pillar + Englewood geographic pillar. MOFU. Uses Englewood + Parker Q1 2026 REcolorado MLS data (n=138 Englewood / n=330 Parker closed SFR) + DMAR March 2026. Visual: inline HowTo step-tracker (7-step move-up timeline, Days 0–120) with Schema.org HowTo microdata. Revised 2026-04-23 to remove fabricated stat and correct listing launch process (Thursday Coming Soon → following Thursday Active).
+- **Day 20 — "New Build vs. Resale in Highlands Ranch: Which Makes More Financial Sense in 2026?"** (`src/content/blog/new-build-vs-resale-highlands-ranch-2026.md`). New Construction pillar + Highlands Ranch geographic pillar. MOFU buyer advice. Uses HR Q1 2026 REcolorado MLS (n=198 closed SFR, $742,500 median) + Lone Tree builder spec comp + DMAR March 2026. Head-to-head on price/sqft, timeline, warranty, Year 1 total cost. Visual: inline 2-column side-by-side comparison card (Resale vs. New Build) with 8 data points each.
+
+### Netlify Forms detection enabled
+- Prior to this deploy, Netlify Forms detection was OFF in the dashboard despite `data-netlify="true"` markup being correct on both `contact.astro` and `Footer.astro`. Form POSTs were landing at `/thank-you` and being silently discarded. GA4 recorded 4 `form_submit` events in the 83-day GA4 baseline window that were NOT captured by Netlify (lost leads, unrecoverable). Form detection enabled in Netlify UI before this deploy; deploy re-parsed forms at build time so submissions begin being captured from this deploy forward. Verified via Netlify MCP after deploy: `extraFeatures.forms: "enabled"`. Jacob still needs to configure email notifications (Site configuration → Notifications → Add notification → Email notification → New form submission → jacob@selling303.com) for both `contact` and `newsletter` forms.
+
+### Skill update (outside this repo)
+- `~/.claude/skills/deploy-to-netlify/SKILL.md` — removed obsolete Path B (Chrome MCP) workflow and April 21 PREFLIGHT block from Mode 2 Step 4. `api.netlify.com` has been reachable from the sandbox since the 2026-04-21 allowlist change, so direct curl to the build hook is now the only supported path.
+
+### Session notes
+- Deploy executed during SEO/AEO Expert project session. Netlify MCP had extended outages during the session — recovered after manual disconnect/reconnect + retries.
+
+---
+
 ## 2026-04-21 — commit d0f6579 (merge 6bbba0a on live) | Credits used: 15 | Credits remaining: ~140
 
 ### New blog post (1)
