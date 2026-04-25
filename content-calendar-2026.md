@@ -169,7 +169,7 @@
   - Target keywords: new construction vs resale Highlands Ranch, buy new build Highlands Ranch 2026, Highlands Ranch home comparison
 
 #### Day 21 — Thursday, April 24
-- [ ] **"What Out-of-State Buyers Get Wrong About the Denver Suburbs (and How to Avoid the Same Mistakes)"**
+- [x] **"What Out-of-State Buyers Get Wrong About the Denver Suburbs (and How to Avoid the Same Mistakes)"** *(drafted 2026-04-24)*
   - Specialization: `/relocation` | Geographic: `/centennial`
   - Type: Buyer advice | Funnel: TOFU
   - Angle: Common misconceptions (commute times, altitude adjustment, seasonal pricing, HOA surprises). Centennial as the case study.
