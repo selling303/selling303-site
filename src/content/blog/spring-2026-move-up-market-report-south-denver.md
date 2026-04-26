@@ -140,9 +140,9 @@ relatedPosts:
 .aeo-comp-table figcaption { font-size: 0.8rem; color: #81848a; padding: 0.85rem 1.25rem 1rem; line-height: 1.55; border-top: 1px solid #e6e8ea; background: #fafbfc; }
 
 @media (max-width: 700px) {
-  .aeo-comp-table caption { padding: 1rem 1.1rem; font-size: 0.95rem; }
+  .aeo-comp-table table, .aeo-comp-table caption, .aeo-comp-table tbody, .aeo-comp-table tbody tr, .aeo-comp-table tbody th, .aeo-comp-table tbody td { display: block; width: 100%; box-sizing: border-box; }
+  .aeo-comp-table caption { padding: 1rem 1.1rem; font-size: 0.95rem; line-height: 1.4; }
   .aeo-comp-table thead { display: none; }
-  .aeo-comp-table table, .aeo-comp-table tbody, .aeo-comp-table tbody tr, .aeo-comp-table tbody th, .aeo-comp-table tbody td { display: block; width: 100%; }
   .aeo-comp-table tbody tr { border-bottom: none; padding: 0; }
   .aeo-comp-table tbody tr + tr { border-top: 1px solid #e6e8ea; }
   .aeo-comp-table tbody th[scope="row"] { padding: 1rem 1.25rem 0.6rem; background: #fafbfc; }
