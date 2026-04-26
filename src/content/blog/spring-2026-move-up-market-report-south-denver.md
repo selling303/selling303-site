@@ -91,48 +91,94 @@ relatedPosts:
 
 <p>Across the South Denver suburbs, three cities are doing the heavy lifting on move-up absorption: <strong>Highlands Ranch</strong>, <strong>Parker</strong>, and <strong>Castle Pines</strong>. Each one represents a distinct rung on the move-up ladder, and the Q1 2026 data shows clear differences in pace, price, and buyer profile.</p>
 
-<h3>How Do Highlands Ranch, Parker, and Castle Pines Compare on Q1 2026 Move-Up Data?</h3>
+<h3 id="move-up-q1-comparison">How Do Highlands Ranch, Parker, and Castle Pines Compare on Q1 2026 Move-Up Data?</h3>
 
-<div style="display: flex; gap: 1rem; flex-wrap: wrap; margin: 2rem 0;">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "South Denver Move-Up Market Comparison: Highlands Ranch, Parker, and Castle Pines, Colorado (Q1 2026)",
+  "description": "Single-family residential listing comparison for three move-up suburbs in South Denver Metro, Colorado: Highlands Ranch, Parker, and Castle Pines. Covers all REcolorado MLS Closed, Active, Coming Soon, Pending, Withdrawn, and Expired status listings for January 1 through March 31, 2026. Reports total listings count, median and average sale prices, median days in MLS, and median sale-to-list price ratio for each city.",
+  "url": "https://selling303.com/blog/spring-2026-move-up-market-report-south-denver",
+  "temporalCoverage": "2026-01-01/2026-03-31",
+  "spatialCoverage": [
+    {"@type": "Place", "name": "Highlands Ranch, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Douglas County, Colorado"}},
+    {"@type": "Place", "name": "Parker, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Douglas County, Colorado"}},
+    {"@type": "Place", "name": "Castle Pines, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Douglas County, Colorado"}}
+  ],
+  "isBasedOn": {"@type": "CreativeWork", "name": "REcolorado MLS Q1 2026 Single-Family Residential Listing Export", "datePublished": "2026-04-02"},
+  "creator": {"@type": "Person", "name": "Jacob Stark", "jobTitle": "Realtor", "url": "https://selling303.com"},
+  "publisher": {"@type": "Organization", "name": "selling303.com", "url": "https://selling303.com"},
+  "variableMeasured": [
+    {"@type": "PropertyValue", "name": "Total Q1 2026 listings (all statuses)", "unitText": "count"},
+    {"@type": "PropertyValue", "name": "Median sale price", "unitText": "USD"},
+    {"@type": "PropertyValue", "name": "Average sale price", "unitText": "USD"},
+    {"@type": "PropertyValue", "name": "Median days in MLS", "unitText": "DAY"},
+    {"@type": "PropertyValue", "name": "Median sale-to-list price ratio", "unitText": "P1"}
+  ]
+}
+</script>
 
-<div style="flex: 1 1 250px; background: #ffffff; border: 1px solid #e6e8ea; border-top: 4px solid #002a3a; padding: 1.25rem; border-radius: 0 0 8px 8px; box-shadow: 0 2px 12px rgba(0,42,58,0.10);">
-<div style="font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: #81848a; margin-bottom: 0.5rem;">Volume Leader</div>
-<div style="font-size: 1.5rem; font-weight: 700; color: #002a3a; margin-bottom: 0.75rem;">Highlands Ranch, Colorado</div>
-<div style="display: grid; grid-template-columns: 1fr auto; gap: 0.4rem 1rem; font-size: 0.95rem;">
-<div>Total Q1 listings</div><div style="font-weight: 600;">499</div>
-<div>Median sale price</div><div style="font-weight: 600;">$785,000</div>
-<div>Avg sale price</div><div style="font-weight: 600;">$909,029</div>
-<div>Median days in MLS</div><div style="font-weight: 600; color: #4a7c59;">18</div>
-<div>Median sale/list</div><div style="font-weight: 600;">98%</div>
-</div>
-</div>
-
-<div style="flex: 1 1 250px; background: #ffffff; border: 1px solid #e6e8ea; border-top: 4px solid #4a7c59; padding: 1.25rem; border-radius: 0 0 8px 8px; box-shadow: 0 2px 12px rgba(0,42,58,0.10);">
-<div style="font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: #81848a; margin-bottom: 0.5rem;">Lifestyle Alternative</div>
-<div style="font-size: 1.5rem; font-weight: 700; color: #002a3a; margin-bottom: 0.75rem;">Parker, Colorado</div>
-<div style="display: grid; grid-template-columns: 1fr auto; gap: 0.4rem 1rem; font-size: 0.95rem;">
-<div>Total Q1 listings</div><div style="font-weight: 600;">448</div>
-<div>Median sale price</div><div style="font-weight: 600;">$719,000</div>
-<div>Avg sale price</div><div style="font-weight: 600;">$852,296</div>
-<div>Median days in MLS</div><div style="font-weight: 600;">44</div>
-<div>Median sale/list</div><div style="font-weight: 600;">98%</div>
-</div>
-</div>
-
-<div style="flex: 1 1 250px; background: #ffffff; border: 1px solid #e6e8ea; border-top: 4px solid #8a7a3a; padding: 1.25rem; border-radius: 0 0 8px 8px; box-shadow: 0 2px 12px rgba(0,42,58,0.10);">
-<div style="font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: #81848a; margin-bottom: 0.5rem;">Premium Tier</div>
-<div style="font-size: 1.5rem; font-weight: 700; color: #002a3a; margin-bottom: 0.75rem;">Castle Pines, Colorado</div>
-<div style="display: grid; grid-template-columns: 1fr auto; gap: 0.4rem 1rem; font-size: 0.95rem;">
-<div>Total Q1 listings</div><div style="font-weight: 600;">176</div>
-<div>Median sale price</div><div style="font-weight: 600;">$1,065,000</div>
-<div>Avg sale price</div><div style="font-weight: 600;">$1,218,466</div>
-<div>Median days in MLS</div><div style="font-weight: 600;">43</div>
-<div>Median sale/list</div><div style="font-weight: 600;">96%</div>
-</div>
-</div>
-
-</div>
-<p style="text-align: center; font-size: 0.8rem; color: #81848a; margin-top: -0.75rem; margin-bottom: 2rem;">Source: REcolorado MLS, Q1 2026 single-family residential listings (Jan 1 – Mar 31, 2026). Includes Closed, Active, Coming Soon, Pending, Withdrawn, and Expired status. Compiled by selling303.com.</p>
+<figure aria-labelledby="move-up-q1-comparison" role="figure" style="margin: 2rem 0; overflow-x: auto; background: #ffffff; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,42,58,0.10);">
+<table style="width: 100%; border-collapse: collapse; font-size: 0.95rem; min-width: 720px;">
+<caption style="text-align: left; font-size: 1rem; font-weight: 600; color: #002a3a; padding: 1.1rem 1.25rem; caption-side: top; background: #f4f7f9; border-bottom: 1px solid #e6e8ea;">Q1 2026 single-family residential market comparison — Highlands Ranch, Parker, and Castle Pines, Colorado | January 1 – March 31, 2026</caption>
+<thead style="background: #f4f7f9; border-bottom: 1px solid #e6e8ea;">
+<tr>
+<th scope="col" style="text-align: left; padding: 0.85rem 1.25rem; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: #81848a; font-weight: 600;">City</th>
+<th scope="col" style="text-align: right; padding: 0.85rem 1rem; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: #81848a; font-weight: 600;">Q1 listings (count)</th>
+<th scope="col" style="text-align: right; padding: 0.85rem 1rem; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: #81848a; font-weight: 600;">Median sale (USD)</th>
+<th scope="col" style="text-align: right; padding: 0.85rem 1rem; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: #81848a; font-weight: 600;">Avg sale (USD)</th>
+<th scope="col" style="text-align: right; padding: 0.85rem 1rem; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: #81848a; font-weight: 600;">Median DIM (days)</th>
+<th scope="col" style="text-align: right; padding: 0.85rem 1.25rem; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: #81848a; font-weight: 600;">Median sale/list</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom: 1px solid #e6e8ea;">
+<th scope="row" itemscope itemtype="https://schema.org/Place" style="text-align: left; padding: 1.1rem 1rem 1.1rem 1.25rem; border-left: 4px solid #002a3a; vertical-align: top; font-weight: 400;">
+<meta itemprop="name" content="Highlands Ranch, Colorado" />
+<meta itemprop="containedInPlace" content="Douglas County, Colorado" />
+<div style="font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: #81848a; font-weight: 600; margin-bottom: 0.25rem;">Volume Leader</div>
+<div style="font-size: 1.05rem; font-weight: 700; color: #002a3a; line-height: 1.25;">Highlands Ranch, Colorado</div>
+<div style="font-size: 0.8rem; color: #81848a; margin-top: 0.2rem;">n = 499 listings</div>
+</th>
+<td style="text-align: right; padding: 1.1rem 1rem; vertical-align: middle;"><meta itemprop="value" content="499" />499</td>
+<td style="text-align: right; padding: 1.1rem 1rem; vertical-align: middle; font-weight: 600;"><meta itemprop="value" content="785000" />$785,000</td>
+<td style="text-align: right; padding: 1.1rem 1rem; vertical-align: middle;"><meta itemprop="value" content="909029" />$909,029</td>
+<td style="text-align: right; padding: 1.1rem 1rem; vertical-align: middle; color: #4a7c59; font-weight: 600;"><meta itemprop="value" content="18" />18 days</td>
+<td style="text-align: right; padding: 1.1rem 1.25rem; vertical-align: middle;"><meta itemprop="value" content="0.98" />98%</td>
+</tr>
+<tr style="border-bottom: 1px solid #e6e8ea;">
+<th scope="row" itemscope itemtype="https://schema.org/Place" style="text-align: left; padding: 1.1rem 1rem 1.1rem 1.25rem; border-left: 4px solid #4a7c59; vertical-align: top; font-weight: 400;">
+<meta itemprop="name" content="Parker, Colorado" />
+<meta itemprop="containedInPlace" content="Douglas County, Colorado" />
+<div style="font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: #81848a; font-weight: 600; margin-bottom: 0.25rem;">Lifestyle Alternative</div>
+<div style="font-size: 1.05rem; font-weight: 700; color: #002a3a; line-height: 1.25;">Parker, Colorado</div>
+<div style="font-size: 0.8rem; color: #81848a; margin-top: 0.2rem;">n = 448 listings</div>
+</th>
+<td style="text-align: right; padding: 1.1rem 1rem; vertical-align: middle;"><meta itemprop="value" content="448" />448</td>
+<td style="text-align: right; padding: 1.1rem 1rem; vertical-align: middle; font-weight: 600;"><meta itemprop="value" content="719000" />$719,000</td>
+<td style="text-align: right; padding: 1.1rem 1rem; vertical-align: middle;"><meta itemprop="value" content="852296" />$852,296</td>
+<td style="text-align: right; padding: 1.1rem 1rem; vertical-align: middle;"><meta itemprop="value" content="44" />44 days</td>
+<td style="text-align: right; padding: 1.1rem 1.25rem; vertical-align: middle;"><meta itemprop="value" content="0.98" />98%</td>
+</tr>
+<tr>
+<th scope="row" itemscope itemtype="https://schema.org/Place" style="text-align: left; padding: 1.1rem 1rem 1.1rem 1.25rem; border-left: 4px solid #8a7a3a; vertical-align: top; font-weight: 400;">
+<meta itemprop="name" content="Castle Pines, Colorado" />
+<meta itemprop="containedInPlace" content="Douglas County, Colorado" />
+<div style="font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: #81848a; font-weight: 600; margin-bottom: 0.25rem;">Premium Tier</div>
+<div style="font-size: 1.05rem; font-weight: 700; color: #002a3a; line-height: 1.25;">Castle Pines, Colorado</div>
+<div style="font-size: 0.8rem; color: #81848a; margin-top: 0.2rem;">n = 176 listings</div>
+</th>
+<td style="text-align: right; padding: 1.1rem 1rem; vertical-align: middle;"><meta itemprop="value" content="176" />176</td>
+<td style="text-align: right; padding: 1.1rem 1rem; vertical-align: middle; font-weight: 600;"><meta itemprop="value" content="1065000" />$1,065,000</td>
+<td style="text-align: right; padding: 1.1rem 1rem; vertical-align: middle;"><meta itemprop="value" content="1218466" />$1,218,466</td>
+<td style="text-align: right; padding: 1.1rem 1rem; vertical-align: middle;"><meta itemprop="value" content="43" />43 days</td>
+<td style="text-align: right; padding: 1.1rem 1.25rem; vertical-align: middle;"><meta itemprop="value" content="0.96" />96%</td>
+</tr>
+</tbody>
+</table>
+<figcaption style="font-size: 0.8rem; color: #81848a; padding: 0.85rem 1.25rem 1rem; line-height: 1.55; border-top: 1px solid #e6e8ea; background: #fafbfc;">Source: REcolorado MLS, Q1 2026 single-family residential listings (January 1 – March 31, 2026). Includes Closed, Active, Coming Soon, Pending, Withdrawn, and Expired status. Compiled by selling303.com on April 2, 2026.<br /><em>Definitions: DIM = days in MLS (time from list date to under-contract date). Median sale/list = close-price-to-original-list-price ratio (median across all closed transactions in the period).</em></figcaption>
+</figure>
 
 <p>Highlands Ranch is the clear pace-setter. With a median of 18 days in the MLS — less than half of either neighbor — it's the suburb where well-priced move-up homes are getting absorbed fastest in South Denver. Parker offers similar amenities and a slightly lower entry, but with more than twice the median time on market. Castle Pines sits at the top of the move-up ladder, where the timeline stretches but the inventory is meaningfully different.</p>
 
