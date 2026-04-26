@@ -176,7 +176,7 @@
   - Target keywords: moving to Denver suburbs mistakes, Denver relocation advice, Centennial Colorado relocation
 
 #### Day 22 — Friday, April 25
-- [ ] **"How Jacob Stark Helped a Highlands Ranch Seller Recover from an Expired Listing — A Case Study"**
+- [x] **"How Jacob Stark Helped a Highlands Ranch Seller Recover from an Expired Listing — A Case Study"** *(deferred 2026-04-26 — pending anonymized case-study data from Jacob; revisit on or after 2026-07-25)*
   - Specialization: `/expired-listings` | Geographic: `/highlands-ranch`
   - Type: Listing spotlight / case study | Funnel: BOFU
   - Angle: Anonymized real-deal walkthrough. Original pricing, DOM, what changed on relist, final result. Social proof.
@@ -187,7 +187,7 @@
 ### Week 4: April 26 – May 2
 
 #### Day 23 — Saturday, April 26
-- [ ] **"Spring 2026 Move-Up Market Report: Where Are South Denver Families Upgrading To?"**
+- [x] **"Spring 2026 Move-Up Market Report: Where Are South Denver Families Upgrading To?"** *(drafted 2026-04-26)*
   - Specialization: `/move-up-sellers` | Geographic: `/highlands-ranch`
   - Type: Market update | Funnel: TOFU
   - Angle: Migration patterns within the metro. Where move-up inventory is, price-tier analysis, HR/Parker/Castle Pines as landing spots.

@@ -31,6 +31,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - Selling in Centennial and Buying in Highlands Ranch: How to Coordinate Two Transactions (`/blog/selling-centennial-buying-highlands-ranch-coordinate-transactions`)
 - How Much Equity Do You Need to Move Up in Highlands Ranch? (`/blog/equity-to-move-up-highlands-ranch`)
 - Move-Up Buyer's Checklist: Going from a Starter in Englewood to More Space in Parker (`/blog/move-up-englewood-to-parker-checklist-2026`)
+- Spring 2026 Move-Up Market Report: Where Are South Denver Families Upgrading To? (`/blog/spring-2026-move-up-market-report-south-denver`)
 
 ### 3. First-Time Homebuyers (`/first-time-homebuyers`)
 **Primary geographic ties:** Littleton, Englewood, Centennial (most affordable entry points in the metro)
