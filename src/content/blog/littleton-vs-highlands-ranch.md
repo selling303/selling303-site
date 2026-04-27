@@ -80,7 +80,7 @@ relatedPosts:
 
 <h2>Why This Matters (And Why I'm Not Picking a Winner)</h2>
 
-<p>You're probably looking at South Denver because you work here, your family's here, or you want that balance between city access and suburban space. Both Littleton and Highlands Ranch offer that. But they're different enough that the "right" choice depends entirely on <em>you</em>. If you're <a href="../relocation.html" style="color: var(--color-accent); font-weight: 600;">relocating to Denver</a> and trying to choose between these two popular neighborhoods, this comparison will help you understand which one's personality and lifestyle match where you're headed next.</p>
+<p>You're probably looking at South Denver because you work here, your family's here, or you want that balance between city access and suburban space. Both <a href="/neighborhoods/littleton" style="color: var(--color-accent); font-weight: 600;">Littleton</a> and <a href="/neighborhoods/highlands-ranch" style="color: var(--color-accent); font-weight: 600;">Highlands Ranch</a> offer that. But they're different enough that the "right" choice depends entirely on <em>you</em>. If you're <a href="../relocation.html" style="color: var(--color-accent); font-weight: 600;">relocating to Denver</a> and trying to choose between these two popular neighborhoods, this comparison will help you understand which one's personality and lifestyle match where you're headed next.</p>
 
 <p>I'm not going to tell you "Littleton is better" or "Highlands Ranch is better." Instead, I'll lay out the real differences so you can decide which fits your life.</p>
 

@@ -84,7 +84,7 @@ A listing agent handles pricing strategy, professional photography, marketing, s
 </ol>
 </nav>
 
-<p>It's a fair question — and one that too many agents dodge. If you're selling a $700,000 home in Highlands Ranch or Littleton and writing a check for $35,000 to $42,000 in commission at closing, you deserve to know exactly what that money is paying for. Not in vague terms. In specific, accountable ones.</p>
+<p>It's a fair question — and one that too many agents dodge. If you're selling a $700,000 home in <a href="/neighborhoods/highlands-ranch" style="color: var(--color-accent); font-weight: 600;">Highlands Ranch</a> or Littleton and writing a check for $35,000 to $42,000 in commission at closing, you deserve to know exactly what that money is paying for. Not in vague terms. In specific, accountable ones.</p>
 
 <p>The real estate industry hasn't always been great at answering this question transparently. Some agents quietly collect a commission check after doing the bare minimum. Others put in months of skilled work — pricing strategy, professional marketing, tough negotiations, and transaction management through dozens of potential deal-killing moments — and never bother to explain what they did or why it mattered.</p>
 

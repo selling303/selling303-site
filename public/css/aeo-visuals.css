@@ -1,0 +1,247 @@
+/*
+ * aeo-visuals.css — Global stylesheet for AEO-optimized data visuals.
+ *
+ * Source of truth: ~/.claude/skills/aeo-visual-builder/SKILL.md
+ * Reference template: src/content/blog/spring-2026-move-up-market-report-south-denver.md
+ *
+ * Every visual class here is paired with required HTML/schema markup defined
+ * in the aeo-visual-builder skill. Do not edit the markup conventions in
+ * isolation — update the skill first, then the CSS, so the contract stays
+ * coherent across surfaces (blog, pillar pages, neighborhood pages, glossary,
+ * testimonials, author page).
+ *
+ * Brand color references: defined in BaseLayout.astro :root.
+ *   --color-primary:    #002a3a
+ *   --color-body-text:  #81848a
+ *   --color-light-text: #a5a7a9
+ *   --color-accent:     #c8965a
+ *   --color-border:     #e5e5e5
+ *
+ * AEO accent green: #4a7c59 (used for "speed" / "advantage" stats)
+ */
+
+/* ============================================================
+ * COMPARISON TABLE — .aeo-comp-table
+ * Use case: side-by-side data comparison across 2+ entities.
+ * Schema pairing: <figure> + <figcaption> + JSON-LD Dataset +
+ *   per-row Schema.org Place Microdata (or other entity type).
+ * Reference: spring-2026-move-up-market-report-south-denver.md
+ * ============================================================ */
+
+.aeo-comp-table {
+  margin: 2rem 0;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 42, 58, 0.10);
+  overflow: hidden;
+}
+
+.aeo-comp-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.aeo-comp-table caption {
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #002a3a;
+  padding: 1.1rem 1.25rem;
+  caption-side: top;
+  background: #f4f7f9;
+  border-bottom: 1px solid #e6e8ea;
+}
+
+.aeo-comp-table thead {
+  background: #f4f7f9;
+  border-bottom: 1px solid #e6e8ea;
+}
+
+.aeo-comp-table thead th {
+  text-align: right;
+  padding: 0.85rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #81848a;
+  font-weight: 600;
+  vertical-align: bottom;
+}
+
+.aeo-comp-table thead th:first-child {
+  text-align: left;
+  padding-left: 1.25rem;
+}
+
+.aeo-comp-table thead th:last-child {
+  padding-right: 1.25rem;
+}
+
+.aeo-comp-table tbody tr {
+  border-bottom: 1px solid #e6e8ea;
+}
+
+.aeo-comp-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.aeo-comp-table tbody th[scope="row"] {
+  text-align: left;
+  padding: 1.1rem 0.85rem 1.1rem 1.25rem;
+  vertical-align: top;
+  font-weight: 400;
+}
+
+.aeo-comp-table tbody td {
+  text-align: right;
+  padding: 1.1rem 0.85rem;
+  vertical-align: middle;
+}
+
+.aeo-comp-table tbody td:last-child {
+  padding-right: 1.25rem;
+}
+
+.aeo-comp-table .tier-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #81848a;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.aeo-comp-table .city-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #002a3a;
+  line-height: 1.25;
+}
+
+.aeo-comp-table .sample-size {
+  font-size: 0.8rem;
+  color: #81848a;
+  font-weight: 400;
+  margin-top: 0.2rem;
+}
+
+.aeo-comp-table .hero-stat {
+  font-weight: 600;
+}
+
+.aeo-comp-table .speed-stat {
+  color: #4a7c59;
+  font-weight: 600;
+}
+
+.aeo-comp-table figcaption {
+  font-size: 0.8rem;
+  color: #81848a;
+  padding: 0.85rem 1.25rem 1rem;
+  line-height: 1.55;
+  border-top: 1px solid #e6e8ea;
+  background: #fafbfc;
+}
+
+@media (max-width: 700px) {
+  .aeo-comp-table table,
+  .aeo-comp-table caption,
+  .aeo-comp-table tbody,
+  .aeo-comp-table tbody tr,
+  .aeo-comp-table tbody th,
+  .aeo-comp-table tbody td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .aeo-comp-table caption {
+    padding: 1rem 1.1rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .aeo-comp-table thead {
+    display: none;
+  }
+
+  .aeo-comp-table tbody tr {
+    border-bottom: none;
+    padding: 0;
+  }
+
+  .aeo-comp-table tbody tr + tr {
+    border-top: 1px solid #e6e8ea;
+  }
+
+  .aeo-comp-table tbody th[scope="row"] {
+    padding: 1rem 1.25rem 0.6rem;
+    background: #fafbfc;
+  }
+
+  .aeo-comp-table tbody td {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.55rem 1.25rem;
+    text-align: right;
+    gap: 1rem;
+    border-top: 1px dashed #f0f2f4;
+  }
+
+  .aeo-comp-table tbody td:first-of-type {
+    border-top: none;
+    padding-top: 0.7rem;
+  }
+
+  .aeo-comp-table tbody td:last-of-type {
+    padding-bottom: 1rem;
+  }
+
+  .aeo-comp-table tbody td::before {
+    content: attr(data-label);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #81848a;
+    font-weight: 600;
+    text-align: left;
+    flex: 0 0 auto;
+  }
+}
+
+/* ============================================================
+ * PLACEHOLDER CLASSES — built out in Phase 2–4 of the
+ * Site-Wide Visual Standard plan. Kept here as anchors so the
+ * skill can ship templates that reference them without forward
+ * references breaking the build.
+ * ============================================================ */
+
+/* .aeo-tier-list — tiered/ranked breakdowns (severity scales,
+ * price brackets, quality tiers). Schema: per-tier ItemList +
+ * ListItem with position + Microdata where entities apply.
+ * Phase 3 build target. */
+
+/* .aeo-process-steps — vertical step tracker for HowTo content
+ * (listing-to-close, relist workflow, dual-transaction
+ * coordination). Schema: HowTo + HowToStep JSON-LD generated
+ * from an <ol>. Phase 4 build target. */
+
+/* .aeo-cost-breakdown — horizontal stacked bars or proportional
+ * tables for cost decomposition (closing costs, commission
+ * splits, carrying costs). Schema: Dataset or PriceSpecification.
+ * Phase 3 build target. */
+
+/* .aeo-chart-figure — inline SVG chart wrapper with title/desc/
+ * source-line-as-svg-text and machine-readable Microdata layer.
+ * Schema: Dataset + per-data-point Observation. Phase 3 build
+ * target — promotes the SVG section of blog-post-writer's
+ * existing AEO Optimization Checklist from optional to required. */
+
+/* .aeo-glossary-entry — DefinedTerm card layout for the
+ * /glossary page. Schema: DefinedTerm + DefinedTermSet
+ * relationship. Phase 4 build target. */
+
+/* .aeo-review-card — testimonial layout with Schema.org Review +
+ * AggregateRating Microdata. Phase 4 build target. */

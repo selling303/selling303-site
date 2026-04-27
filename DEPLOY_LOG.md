@@ -4,6 +4,22 @@ Permanent record of deployed changes. The deploy-to-netlify skill moves items he
 
 ---
 
+## 2026-04-25 — commit 19e929e (merge b6326ff on live) | Credits used: 15 | Credits remaining: ~110
+
+### New blog post (1 — Day 21)
+- **Day 21 — "What Out-of-State Buyers Get Wrong About the Denver Suburbs (and How to Avoid the Same Mistakes)"** (`src/content/blog/out-of-state-buyer-mistakes-denver-suburbs-centennial.md`). Relocation pillar + Centennial geographic pillar. TOFU buyer advice for out-of-state relocation buyers, with Centennial as the running case study. Uses Q1 2026 REcolorado MLS Centennial single-family closed-sale data (n=269 closed, $700K median, 13-day median DIM, 98% median CP/OLP) and the DMAR March 2026 Market Trends Report (metro pending +30.69% MoM, DIM down 50% to 16 days, close-to-list 99.13%). Five misconceptions covered (commute, altitude, season, HOA + metro district stack, water restrictions / Stage 1 drought) with cross-links to `/relocation`, `/neighborhoods/centennial`, the Littleton vs. Centennial comparison, the closing-costs guide, and the South Denver watering restrictions guide. Visual: inline 5-card stacked color-band "Misconceptions vs. Reality" block using the brand red→clay→olive→green→navy progression with source attribution beneath.
+
+### Form spam prevention (2026-04-24 work, deployed today)
+- Added honeypot spam prevention to both forms (`contact.astro` and `Footer.astro`). Each form gets `netlify-honeypot="bot-field"` on the `<form>` plus a hidden `bot-field` input off-screen (`position: absolute; left: -9999px`), `aria-hidden="true"` on the container, `tabindex="-1"` and `autocomplete="off"` on the input so screen readers, keyboard users, and password managers don't trip it. Netlify strips the `netlify-honeypot` attribute at build time and rejects any submission where `bot-field` has a value. Goal: catch bots before Akismet so fewer real submissions get false-positive spam-flagged. No change to form submission logic — real users unaffected.
+
+### GA4 tel_click event listener (Conversion sprint)
+- Added global `tel_click` GA4 event listener to `src/components/SEO.astro` (capture-phase click delegate on `a[href^="tel:"]`). Fires `gtag('event', 'tel_click', {link_url, link_text, page_path})` for every phone-link tap sitewide — covers FloatingCTA, Footer, CTABanner, contact page, and all pillar-page CTAs without per-page changes. Pairs with `form_submit` flagged as key event in GA4 Admin (also 2026-04-25). Together they unblock the Conversion category in the SEO/AEO weekly audit; before today, GA4 reported 0 conversions for 90 days because no events were flagged. Detailed entry in `~/Documents/Claude/Projects/AEO & SEO Expert/DEPLOY_QUEUE.md`.
+
+### Session notes
+- Nightly blog task ran autonomously and pushed to `main`. Jacob approved a bundled production deploy ("deploy all to live") which merged `main` into `live`, triggered the build hook, and shipped all three pending items in one credit charge. Production verified — `https://selling303.com/blog/out-of-state-buyer-mistakes-denver-suburbs-centennial` returns 200 with fresh cache.
+
+---
+
 ## 2026-04-24 — commit 5a0465a (merge eedf53c on live) | Credits used: 15 | Credits remaining: ~125
 
 ### New blog posts (3 — deploy bundle)

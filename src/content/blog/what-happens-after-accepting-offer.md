@@ -96,7 +96,7 @@ relatedPosts:
 <h2 id="day-1-under-contract">What Happens on Day 1 When Your Listing Goes Under Contract?</h2>
 
 <p><strong>What happens immediately:</strong><br>
-I share the contract with my team to start processing the transaction, and I update your listing status to Under Contract/Pending on REcolorado MLS. That tells every other agent and buyer — whether they're searching in Highlands Ranch (80126), Littleton (80120), Centennial (80112), or anywhere across the South Denver Metro — that your home is spoken for. It's the official starting gun on the 30-day clock.</p>
+I share the contract with my team to start processing the transaction, and I update your listing status to Under Contract/Pending on REcolorado MLS. That tells every other agent and buyer — whether they're searching in Highlands Ranch (80126), Littleton (80120), <a href="/neighborhoods/centennial" style="color: var(--color-accent); font-weight: 600;">Centennial</a> (80112), or anywhere across the South Denver Metro — that your home is spoken for. It's the official starting gun on the 30-day clock.</p>
 
 <p><strong>A note on backup offers:</strong><br>
 We also typically note in the listing that we're accepting backup offers. A backup offer is an agreement where a second interested buyer is next in line if the primary contract terminates for any reason. This matters more than it sounds: if your primary buyer walks during inspection or can't get financing, you already have a qualified backup ready to step in rather than relaunching to market from scratch. It's a layer of protection worth having, and I'll make sure you understand exactly what a backup offer means before we decide whether to accept one.</p>

@@ -91,7 +91,7 @@ The highest-ROI pre-listing upgrades are neutral paint, deep cleaning and declut
 
 <p>Preparing a home for sale is one of the most overwhelming parts of the selling process — not because the work is hard, but because it's hard to know where to start. Do you repaint the kitchen? Replace the carpet? Add a deck? The options are endless, the costs can spiral, and the timeline is always shorter than you expected.</p>
 
-<p>Here's the thing: most sellers in Highlands Ranch, Littleton, Centennial, and across the South Denver Metro don't need to do a lot before listing. They need to do the <em>right</em> things. The upgrades that eliminate buyer hesitation, not the ones that add features buyers weren't looking for to begin with.</p>
+<p>Here's the thing: most sellers in <a href="/neighborhoods/highlands-ranch" style="color: var(--color-accent); font-weight: 600;">Highlands Ranch</a>, Littleton, Centennial, and across the South Denver Metro don't need to do a lot before listing. They need to do the <em>right</em> things. The upgrades that eliminate buyer hesitation, not the ones that add features buyers weren't looking for to begin with.</p>
 
 <p>This post is a practical guide to the seven upgrades that consistently move the needle — based on what buyers are responding to in the current market, what the data says about condition and presentation, and what a good listing agent will tell you before a single showing is scheduled.</p>
 

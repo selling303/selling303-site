@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import MarketStatTile from '../../components/MarketStatTile.astro';
 import RealScoutLoader from '../../components/RealScoutLoader.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 
 export async function getStaticPaths() {
   const neighborhoods = await getCollection('neighborhoods');
@@ -51,6 +52,11 @@ const schemaJson = JSON.stringify({
 >
   <Fragment slot="head">
     <script type="application/ld+json" is:inline set:html={schemaJson} />
+    <Breadcrumbs schemaOnly items={[
+      { label: 'Home', url: '/' },
+      { label: 'Neighborhoods', url: '/neighborhoods' },
+      { label: `${data.title}, Colorado`, url: null },
+    ]} />
   </Fragment>
 
   <!-- PAGE HERO -->
