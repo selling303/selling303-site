@@ -7,6 +7,7 @@
 - After publishing, mark the entry `[x]` so the task skips it
 - Funnel stage (TOFU/MOFU/BOFU) guides CTA strength
 - Post type drives structure (see blog-post-writer skill)
+- **Visual opportunity** — each entry should specify a `Visual:` line declaring the intended `aeo-visual-builder` pattern (`comparison-table`, `howto`, `defined-term`, `review`, `cost-breakdown`, `tier-list`, `svg-chart`, `none`, or `flag-only` if the pattern isn't built yet). This intentionally distributes visual types across the catalog instead of defaulting to comparison tables. Pattern types currently flag-only: `tier-list`, `cost-breakdown` (Phase 3 builds); `howto`, `defined-term`, `review` (Phase 4 builds).
 
 **Cluster coverage targets (30 days):**
 - Expired Listings: 6 posts
@@ -194,7 +195,7 @@
   - Target keywords: South Denver move-up market 2026, where to upgrade home Denver, Highlands Ranch move-up report
 
 #### Day 24 — Sunday, April 27
-- [ ] **"Closing Costs Breakdown for First-Time Buyers in Littleton (2026 Update)"**
+- [x] **"Closing Costs Breakdown for First-Time Buyers in Littleton (2026 Update)"** *(drafted 2026-04-26)*
   - Specialization: `/first-time-homebuyers` | Geographic: `/littleton`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Littleton-specific closing cost breakdown. Lender fees, title, HOA transfer, prepaid items. Reference the existing Colorado-wide closing costs post and go deeper.

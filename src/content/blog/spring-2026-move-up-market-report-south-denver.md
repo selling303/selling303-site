@@ -119,39 +119,7 @@ relatedPosts:
 }
 </script>
 
-<style>
-.aeo-comp-table { margin: 2rem 0; background: #ffffff; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,42,58,0.10); overflow: hidden; }
-.aeo-comp-table table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
-.aeo-comp-table caption { text-align: left; font-size: 1rem; font-weight: 600; color: #002a3a; padding: 1.1rem 1.25rem; caption-side: top; background: #f4f7f9; border-bottom: 1px solid #e6e8ea; }
-.aeo-comp-table thead { background: #f4f7f9; border-bottom: 1px solid #e6e8ea; }
-.aeo-comp-table thead th { text-align: right; padding: 0.85rem 0.85rem; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: #81848a; font-weight: 600; vertical-align: bottom; }
-.aeo-comp-table thead th:first-child { text-align: left; padding-left: 1.25rem; }
-.aeo-comp-table thead th:last-child { padding-right: 1.25rem; }
-.aeo-comp-table tbody tr { border-bottom: 1px solid #e6e8ea; }
-.aeo-comp-table tbody tr:last-child { border-bottom: none; }
-.aeo-comp-table tbody th[scope="row"] { text-align: left; padding: 1.1rem 0.85rem 1.1rem 1.25rem; vertical-align: top; font-weight: 400; }
-.aeo-comp-table tbody td { text-align: right; padding: 1.1rem 0.85rem; vertical-align: middle; }
-.aeo-comp-table tbody td:last-child { padding-right: 1.25rem; }
-.aeo-comp-table .tier-label { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: #81848a; font-weight: 600; margin-bottom: 0.25rem; }
-.aeo-comp-table .city-name { font-size: 1.05rem; font-weight: 700; color: #002a3a; line-height: 1.25; }
-.aeo-comp-table .sample-size { font-size: 0.8rem; color: #81848a; font-weight: 400; margin-top: 0.2rem; }
-.aeo-comp-table .hero-stat { font-weight: 600; }
-.aeo-comp-table .speed-stat { color: #4a7c59; font-weight: 600; }
-.aeo-comp-table figcaption { font-size: 0.8rem; color: #81848a; padding: 0.85rem 1.25rem 1rem; line-height: 1.55; border-top: 1px solid #e6e8ea; background: #fafbfc; }
-
-@media (max-width: 700px) {
-  .aeo-comp-table table, .aeo-comp-table caption, .aeo-comp-table tbody, .aeo-comp-table tbody tr, .aeo-comp-table tbody th, .aeo-comp-table tbody td { display: block; width: 100%; box-sizing: border-box; }
-  .aeo-comp-table caption { padding: 1rem 1.1rem; font-size: 0.95rem; line-height: 1.4; }
-  .aeo-comp-table thead { display: none; }
-  .aeo-comp-table tbody tr { border-bottom: none; padding: 0; }
-  .aeo-comp-table tbody tr + tr { border-top: 1px solid #e6e8ea; }
-  .aeo-comp-table tbody th[scope="row"] { padding: 1rem 1.25rem 0.6rem; background: #fafbfc; }
-  .aeo-comp-table tbody td { display: flex; justify-content: space-between; align-items: baseline; padding: 0.55rem 1.25rem; text-align: right; gap: 1rem; border-top: 1px dashed #f0f2f4; }
-  .aeo-comp-table tbody td:first-of-type { border-top: none; padding-top: 0.7rem; }
-  .aeo-comp-table tbody td:last-of-type { padding-bottom: 1rem; }
-  .aeo-comp-table tbody td::before { content: attr(data-label); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: #81848a; font-weight: 600; text-align: left; flex: 0 0 auto; }
-}
-</style>
+<!-- Visual styling provided by /css/aeo-visuals.css (loaded via BaseLayout). Class: .aeo-comp-table -->
 
 <figure class="aeo-comp-table" aria-labelledby="move-up-q1-comparison" role="figure">
 <table>
