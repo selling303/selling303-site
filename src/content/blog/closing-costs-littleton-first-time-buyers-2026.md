@@ -189,54 +189,85 @@ relatedPosts:
 
 <h2 id="example">What Does a $475,000 Littleton Closing Sheet Actually Look Like?</h2>
 
-<p>Pulling the four buckets together, here is a realistic snapshot of what a first-time buyer with a 5 percent down conventional loan would bring to closing on a $475,000 Littleton home in spring 2026.</p>
+<p>Pulling every line together, here is a realistic snapshot of what a first-time buyer with a 5 percent down conventional loan brings to closing on a $475,000 Littleton home in spring 2026 — formatted the way a settlement statement actually reads.</p>
 
-<table>
-<thead>
-<tr>
-<th>Line Item</th>
-<th>Typical Range</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Down payment (5 percent)</td>
-<td>$23,750</td>
-</tr>
-<tr>
-<td>Lender fees (origination, appraisal, underwriting, credit, flood)</td>
-<td>$3,200 – $7,200</td>
-</tr>
-<tr>
-<td>Title fees (lender's policy, search and exam, closing fee)</td>
-<td>$1,000 – $2,000</td>
-</tr>
-<tr>
-<td>Homeowners insurance (1 year prepaid)</td>
-<td>$1,800 – $3,000</td>
-</tr>
-<tr>
-<td>Prepaid interest (varies by closing date)</td>
-<td>$500 – $2,500</td>
-</tr>
-<tr>
-<td>Property tax escrow (2–3 month cushion)</td>
-<td>$1,500 – $4,500</td>
-</tr>
-<tr>
-<td>HOA transfer + prorated dues (if applicable)</td>
-<td>$250 – $700</td>
-</tr>
-<tr>
-<td>County recording fees</td>
-<td>$100 – $250</td>
-</tr>
-<tr>
-<td><strong>Total cash to close (down payment + closing costs)</strong></td>
-<td><strong>$32,000 – $43,900</strong></td>
-</tr>
-</tbody>
-</table>
+<figure style="margin: 2rem 0;" aria-labelledby="example">
+<div style="background: #ffffff; border: 1px solid #e6e8ea; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,42,58,0.10);">
+<div style="background: #002a3a; color: #ffffff; padding: 1.25rem 1.5rem;">
+<div style="font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.75; margin-bottom: 0.3rem;">Estimated Cash to Close</div>
+<div style="font-weight: 700; font-size: 1.05rem; line-height: 1.3;">$475,000 First-Time Buyer Home — Littleton, Colorado</div>
+<div style="font-size: 0.85rem; opacity: 0.85; margin-top: 0.35rem;">Conventional loan · 5% down · Q1 2026 (Jan 1 – Mar 31)</div>
+</div>
+<div style="padding: 0.5rem 1.5rem 1.25rem 1.5rem;">
+<div style="padding: 1rem 0 0.85rem 0; border-bottom: 1px solid #e6e8ea;">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;">
+<div>
+<div style="color: #002a3a; text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.1em; font-weight: 700;">Down Payment</div>
+<div style="font-size: 0.82rem; color: #81848a; margin-top: 0.2rem;">5% of $475,000 purchase price</div>
+</div>
+<span style="font-weight: 700; color: #002a3a; font-size: 1.02rem; font-variant-numeric: tabular-nums; white-space: nowrap;">$23,750</span>
+</div>
+</div>
+<div style="padding: 0.95rem 0 0.85rem 0; border-bottom: 1px solid #e6e8ea;">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-bottom: 0.35rem;">
+<div style="color: #002a3a; text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.1em; font-weight: 700;">Lender Fees</div>
+<span style="font-weight: 700; color: #002a3a; font-size: 1.02rem; font-variant-numeric: tabular-nums; white-space: nowrap;">$3,200 – $7,200</span>
+</div>
+<div style="font-size: 0.82rem; color: #4a4f55;">Origination, appraisal, underwriting, credit report, flood certification</div>
+</div>
+<div style="padding: 0.95rem 0 0.85rem 0; border-bottom: 1px solid #e6e8ea;">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-bottom: 0.35rem;">
+<div style="color: #002a3a; text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.1em; font-weight: 700;">Title Fees</div>
+<span style="font-weight: 700; color: #002a3a; font-size: 1.02rem; font-variant-numeric: tabular-nums; white-space: nowrap;">$1,000 – $2,000</span>
+</div>
+<div style="font-size: 0.82rem; color: #4a4f55;">Lender's title insurance policy, search and exam share, closing fee</div>
+</div>
+<div style="padding: 0.95rem 0 0.85rem 0; border-bottom: 1px solid #e6e8ea;">
+<div style="color: #002a3a; text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.1em; font-weight: 700; margin-bottom: 0.5rem;">Prepaid Items</div>
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: 0.25rem 0;">
+<span style="font-size: 0.92rem; color: #002a3a;">Homeowners insurance (1 year prepaid)</span>
+<span style="color: #002a3a; font-variant-numeric: tabular-nums; white-space: nowrap;">$1,800 – $3,000</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: 0.25rem 0;">
+<span style="font-size: 0.92rem; color: #002a3a;">Prepaid interest (varies by closing date)</span>
+<span style="color: #002a3a; font-variant-numeric: tabular-nums; white-space: nowrap;">$500 – $2,500</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: 0.25rem 0;">
+<span style="font-size: 0.92rem; color: #002a3a;">Property tax escrow (2–3 month cushion)</span>
+<span style="color: #002a3a; font-variant-numeric: tabular-nums; white-space: nowrap;">$1,500 – $4,500</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-top: 0.5rem; padding-top: 0.45rem; border-top: 1px dashed #e6e8ea;">
+<span style="font-size: 0.78rem; color: #81848a; font-style: italic; text-transform: uppercase; letter-spacing: 0.05em;">Subtotal</span>
+<span style="font-weight: 700; color: #002a3a; font-variant-numeric: tabular-nums; white-space: nowrap;">$3,800 – $10,000</span>
+</div>
+</div>
+<div style="padding: 0.95rem 0 0.85rem 0; border-bottom: 1px solid #e6e8ea;">
+<div style="color: #002a3a; text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.1em; font-weight: 700; margin-bottom: 0.5rem;">Other Costs</div>
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: 0.25rem 0;">
+<span style="font-size: 0.92rem; color: #002a3a;">HOA transfer fee + prorated dues (if applicable)</span>
+<span style="color: #002a3a; font-variant-numeric: tabular-nums; white-space: nowrap;">$250 – $700</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: 0.25rem 0;">
+<span style="font-size: 0.92rem; color: #002a3a;">County recording fees</span>
+<span style="color: #002a3a; font-variant-numeric: tabular-nums; white-space: nowrap;">$100 – $250</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-top: 0.5rem; padding-top: 0.45rem; border-top: 1px dashed #e6e8ea;">
+<span style="font-size: 0.78rem; color: #81848a; font-style: italic; text-transform: uppercase; letter-spacing: 0.05em;">Subtotal</span>
+<span style="font-weight: 700; color: #002a3a; font-variant-numeric: tabular-nums; white-space: nowrap;">$350 – $950</span>
+</div>
+</div>
+<div style="margin-top: 0.85rem; padding: 1rem 1.15rem; background: #002a3a; color: #ffffff; border-radius: 8px; display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap;">
+<div>
+<div style="font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.85;">Estimated Total</div>
+<div style="font-size: 0.95rem; font-weight: 700; margin-top: 0.15rem;">Cash to Close</div>
+</div>
+<span style="font-weight: 700; font-size: 1.35rem; font-variant-numeric: tabular-nums; white-space: nowrap;">$32,000 – $43,900</span>
+</div>
+</div>
+<div style="font-size: 0.7rem; color: #81848a; text-align: center; padding: 0.85rem 1.5rem; border-top: 1px solid #f0f0f0; background: #fafbfc;">Source: Jacob Stark, selling303.com | Composite of typical Littleton, Colorado first-time buyer closings | Q1 2026 (Jan 1 – Mar 31)</div>
+</div>
+<figcaption style="font-size: 0.85rem; color: #81848a; text-align: center; margin-top: 0.75rem; font-style: italic;">Sample settlement statement format. Actual figures depend on lender, loan program, exact property location, closing date, and HOA. Earnest money paid earlier in the contract typically credits back toward this total at closing.</figcaption>
+</figure>
 
 <p>Earnest money paid earlier in the contract typically credits back toward this total at closing. Seller concessions, if negotiated, reduce the closing cost portion (not the down payment). And remember: this assumes a conventional loan with 5 percent down. FHA buyers will see PMI handled differently, VA buyers may avoid certain fees entirely, and CHFA first-time buyer programs add their own structure.</p>
 
