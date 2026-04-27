@@ -82,7 +82,7 @@ relatedPosts:
 
 <p>Selling a house costs money. Not surprise-you-at-closing money, but planned money. Let me walk you through exactly what comes out of your pocket and why.</p>
 
-<p>The biggest misconception? That selling is "free" if you list with an agent. It's not. You're paying for expertise, marketing reach, negotiation skill, and legal compliance — including managing the offer process and a 30-day closing from start to finish. That's not free. If you're in a <a href="../move-up-sellers.html" style="color: var(--color-accent); font-weight: 600;">move-up seller situation</a>, coordinating the sale and purchase timeline adds complexity — understanding your selling costs upfront helps you plan the financial bridge between homes.</p>
+<p>The biggest misconception? That selling is "free" if you list with an agent. It's not. You're paying for expertise, marketing reach, negotiation skill, and legal compliance — including managing the offer process and a 30-day closing from start to finish. That's not free. If you're in a <a href="../move-up-sellers.html" style="color: var(--color-accent); font-weight: 600;">move-up seller situation</a> — common in <a href="/neighborhoods/highlands-ranch" style="color: var(--color-accent); font-weight: 600;">Highlands Ranch</a> and the rest of the South Denver Metro — coordinating the sale and purchase timeline adds complexity, and understanding your selling costs upfront helps you plan the financial bridge between homes.</p>
 
 <p>Here's what you actually face:</p>
 

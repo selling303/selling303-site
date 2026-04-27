@@ -92,7 +92,7 @@ The most common reasons are overpricing relative to condition, poor presentation
 
 <h2 id="overpricing">Is Your Home Priced for How Buyers Actually Shop?</h2>
 
-<p>Pricing is the first filter, and it's the most unforgiving. Every buyer searching for a home in Centennial, Littleton, Englewood, or anywhere in the South Denver Metro starts with a price range. If your home is listed above what comparable sales support, it doesn't just fail to attract offers — it often fails to get seen at all.</p>
+<p>Pricing is the first filter, and it's the most unforgiving. Every buyer searching for a home in <a href="/neighborhoods/centennial" style="color: var(--color-accent); font-weight: 600;">Centennial</a>, Littleton, Englewood, or anywhere in the South Denver Metro starts with a price range. If your home is listed above what comparable sales support, it doesn't just fail to attract offers — it often fails to get seen at all.</p>
 
 <p>In February 2026, detached homes across the Denver Metro sold at a median of $630,000, with a close-price-to-list-price ratio of 98.89%, per DMAR data sourced from <a href="https://www.recolorado.com" target="_blank" rel="noopener noreferrer">REcolorado</a>. That ratio tells you something important: homes that are priced correctly are selling at almost exactly what they're listed for. Sellers aren't giving away equity — but they're also not extracting premiums from a market that doesn't support them.</p>
 

@@ -6,9 +6,10 @@ interface BreadcrumbItem {
 
 interface Props {
   items: BreadcrumbItem[];
+  schemaOnly?: boolean;
 }
 
-const { items } = Astro.props;
+const { items, schemaOnly = false } = Astro.props;
 
 // Generate JSON-LD BreadcrumbList schema
 const breadcrumbSchema = {
@@ -23,19 +24,21 @@ const breadcrumbSchema = {
 };
 ---
 
-<div style="font-size: 0.875rem; padding: var(--space-sm) 0; color: var(--color-body-text);">
-  {items.map((item, index) => (
-    <>
-      {item.url ? (
-        <a href={item.url} style="color: var(--color-accent);">
-          {item.label}
-        </a>
-      ) : (
-        <span>{item.label}</span>
-      )}
-      {index < items.length - 1 && <span style="margin: 0 0.5rem;"> > </span>}
-    </>
-  ))}
-</div>
+{!schemaOnly && (
+  <div style="font-size: 0.875rem; padding: var(--space-sm) 0; color: var(--color-body-text);">
+    {items.map((item, index) => (
+      <>
+        {item.url ? (
+          <a href={item.url} style="color: var(--color-accent);">
+            {item.label}
+          </a>
+        ) : (
+          <span>{item.label}</span>
+        )}
+        {index < items.length - 1 && <span style="margin: 0 0.5rem;"> > </span>}
+      </>
+    ))}
+  </div>
+)}
 
-<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+<script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbSchema)} />

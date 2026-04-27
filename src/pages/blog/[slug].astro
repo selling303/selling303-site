@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import { Image } from 'astro:assets';
 import avatarSrc from '../../assets/images/jacob-stark-avatar.png';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -122,6 +123,11 @@ const ogImage = data.ogImage || data.cardImage?.url || "https://selling303.com/i
   <Fragment slot="head">
     <script type="application/ld+json" is:inline set:html={articleSchemaJson} />
     {faqSchemaJson && <script type="application/ld+json" is:inline set:html={faqSchemaJson} />}
+    <Breadcrumbs schemaOnly items={[
+      { label: 'Home', url: '/' },
+      { label: 'Blog', url: '/blog' },
+      { label: data.title, url: null },
+    ]} />
   </Fragment>
 
   <!-- PAGE HERO -->

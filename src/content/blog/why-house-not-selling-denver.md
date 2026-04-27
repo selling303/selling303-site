@@ -85,7 +85,7 @@ relatedPosts:
 
 <p>Your house isn't selling for a reason. It's almost never "the market." It's almost always something specific and fixable.</p>
 
-<p>In the South Denver Metro right now (Feb 2026), the median DOM is 64 days (+6.7% year-over-year, DMAR). That's longer than last year, but homes <em>are</em> selling — 2,688 closed in February alone. What's different about the homes that sell? Usually one or more of these seven things. If your home has already expired on the market or you're looking at relisting, our guide on <a href="../expired-listings.html" style="color: var(--color-accent); font-weight: 600;">expired listing strategy</a> walks you through the recovery plan.</p>
+<p>In the South Denver Metro right now (Feb 2026), the median DOM is 64 days (+6.7% year-over-year, DMAR). That's longer than last year, but homes <em>are</em> selling — 2,688 closed in February alone, including pockets like <a href="/neighborhoods/highlands-ranch" style="color: var(--color-accent); font-weight: 600;">Highlands Ranch</a> where well-priced listings are still moving. What's different about the homes that sell? Usually one or more of these seven things. If your home has already expired on the market or you're looking at relisting, our guide on <a href="../expired-listings.html" style="color: var(--color-accent); font-weight: 600;">expired listing strategy</a> walks you through the recovery plan.</p>
 
 <h2 id="reason-1">Reason #1: You're Overpriced (And You Don't Realize It)</h2>
 

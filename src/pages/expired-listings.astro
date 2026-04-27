@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 ---
 
 <BaseLayout
@@ -12,6 +13,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   headerVariant="solid"
 >
   <Fragment slot="head">
+    <Breadcrumbs schemaOnly items={[
+      { label: 'Home', url: '/' },
+      { label: 'Expired Listings', url: null },
+    ]} />
     <!-- Schema: RealEstateAgent + Service -->
     <script type="application/ld+json" is:inline>
     {

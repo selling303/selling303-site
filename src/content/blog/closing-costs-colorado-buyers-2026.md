@@ -84,7 +84,7 @@ Colorado buyers typically pay <strong>2–5% of the purchase price</strong> in c
 
 <p>Nobody loves surprises at the closing table. You've already negotiated the price, gotten through inspection, and survived the appraisal — and then your lender hands you a number that's thousands of dollars higher than the down payment you've been mentally preparing for. If you're a <a href="/first-time-homebuyers" style="color: var(--color-accent); font-weight: 600;">first-time buyer</a>, closing costs can feel especially daunting — this guide walks you through every line item so there are no surprises.</p>
 
-<p>That's what closing costs feel like when you haven't planned for them. But here's the thing: they're not unpredictable. Once you understand what you're paying and why, they become just another number to plan around — like every other part of buying a home in the South Denver Metro.</p>
+<p>That's what closing costs feel like when you haven't planned for them. But here's the thing: they're not unpredictable. Once you understand what you're paying and why, they become just another number to plan around — like every other part of buying a home in the South Denver Metro, whether you're shopping in <a href="/neighborhoods/centennial" style="color: var(--color-accent); font-weight: 600;">Centennial</a>, Littleton, or anywhere else around Denver.</p>
 
 <p>Here's a straightforward breakdown of what Colorado buyers actually pay.</p>
 
