@@ -4,6 +4,36 @@ Permanent record of deployed changes. The deploy-to-netlify skill moves items he
 
 ---
 
+## 2026-04-27 — commit 8e273cf (merge 2561921 on live) | Credits used: 15 | Credits remaining: ~95
+
+### New blog posts (2 — Days 23 and 24)
+- **Day 23 — "Where South Denver Families Are Moving Up in 2026"** (`src/content/blog/spring-2026-move-up-market-report-south-denver.md`). Move-Up Sellers pillar + Highlands Ranch geographic pillar. TOFU market update. Uses Q1 2026 REcolorado MLS data for HR (n=499, $785K median, 18-day median DIM, 98% sale/list), Parker (n=448, $719K, 44 DIM, 98%), and Castle Pines (n=176, $1.07M, 43 DIM, 96%) plus DMAR March 2026 metro context (pending +30.69% MoM, DIM 16, CP/LP 99.13%). Visual: fully optimized comparison table — real `<table>` with `<caption>`, scoped `<th>`, JSON-LD `Dataset` schema (temporalCoverage, spatialCoverage, variableMeasured, creator, publisher), Schema.org `Place` Microdata per row with `containedInPlace`, per-cell `<meta itemprop="value">` machine-readable values, sample sizes inline (n=499/448/176), spelled-out date range, term definitions in `<figcaption>`. CSS scoped via `.aeo-comp-table` class in the new global stylesheet, fully responsive (table flips to stacked card layout at ≤700px). Title shortened from 80 → 49 chars for SERP CTR; original keyword-rich title preserved in `headline` field for JSON-LD.
+- **Day 24 — "Closing Costs Breakdown for First-Time Buyers in Littleton (2026 Update)"** (`src/content/blog/closing-costs-littleton-first-time-buyers-2026.md`). First-Time Homebuyers pillar + Littleton geographic pillar. MOFU buyer advice. Q1 2026 REcolorado Littleton closed data (n=433) + March 2026 DMAR. Uses $475K entry-level price example, walks through 4 cost buckets with inline cost-breakdown visual, addresses Littleton's 3-county quirk (Arapahoe/Jefferson/Douglas), HOA transfer fees, and seller concession strategy.
+
+### AEO Visual Standard Foundation (Phase 1)
+- Created global stylesheet at `public/css/aeo-visuals.css` with `.aeo-comp-table` class (lifted from move-up post inline `<style>`) plus placeholder classes for `tier-list`, `process-steps`, `cost-breakdown`, `chart-figure`, `glossary-entry`, `review-card`. Wired into `BaseLayout.astro` via deferred-load pattern (`media="print" onload="this.media='all'"`) for Core Web Vitals.
+- Refactored `spring-2026-move-up-market-report-south-denver.md` to drop its inline `<style>` block and rely on the global stylesheet. Visual parity preserved on desktop and mobile.
+- Created `visual-inventory.md` with baseline scan of all 33 blog posts (1 optimized, 12 needs-upgrade, 20 review-needed) plus pillar-page placeholders for Phase 2 retroactive audit.
+- Updated `content-calendar-2026.md` header to require a `Visual:` line per future entry, mapping to `aeo-visual-builder` pattern types.
+- **Skill changes (outside this repo):** Created standalone `~/.claude/skills/aeo-visual-builder/SKILL.md` for visual construction. Updated `~/.claude/skills/blog-post-writer/SKILL.md` Visual Opportunity Check to delegate visual production to the new skill.
+
+### SEO/AEO Foundation Improvements
+- **Twitter Cards (`src/components/SEO.astro`):** Added `twitter:card=summary_large_image`, `twitter:site=@selling303`, `twitter:creator=@selling303`, plus title/description/image. Forces large-image preview when selling303.com URLs are shared on X. Score lift: +0.4 (On-page +5).
+- **BreadcrumbList JSON-LD on 8 templates:** Added structured breadcrumb schema to `blog/[slug]`, `neighborhoods/[slug]`, and 6 specialization pillars (`expired-listings`, `move-up-sellers`, `first-time-homebuyers`, `first-time-homesellers`, `new-construction`, `relocation`). Used existing `Breadcrumbs.astro` component with new `schemaOnly` prop (default false; preserves visible breadcrumbs on success-stories). Hierarchy: Home → Section → Page. Zero visual impact on the 8 new templates. Score lift: +1.0 (On-page +15 from 0/15).
+- **Geo pillar links added to 9 existing blog posts:** `7-smartest-home-upgrades-before-selling-2026` (HR), `closing-costs-colorado-buyers-2026` (Centennial), `cost-to-sell-house-colorado-2026` (HR), `littleton-vs-highlands-ranch` (both), `parker-vs-castle-pines` (both), `what-happens-after-accepting-offer` (Centennial), `what-realtor-does-to-earn-commission` (HR), `why-homes-sit-on-market-south-denver` (Centennial), `why-house-not-selling-denver` (HR). Single contextual `/neighborhoods/<slug>` link per post intro, no other body changes. Score lift: +1.4 (Content 60.5 → ~67).
+
+### Visual + title polish on Day 23 post
+- Move-up comparison visual went through 3 in-session iterations during Jacob's review: (1) initial three-card flex layout → (2) full no-compromise rebuild as real `<table>` with `<figure>`, JSON-LD `Dataset`, `Place` Microdata, and `figcaption` → (3) responsive mobile fix (removed `min-width: 720px`, added stacked card layout via `display: block` + `td::before { content: attr(data-label) }`). Final caption-width fix added `caption` to the mobile `display: block; width: 100%; box-sizing: border-box;` rule.
+- Title shortened from "Spring 2026 Move-Up Market Report: Where Are South Denver Families Upgrading To?" (80 chars) → "Where South Denver Families Are Moving Up in 2026" (49 chars) for SERP CTR. Subtitle "in Q1 data" phrase removed (redundant). Original longer title preserved in `headline` frontmatter field for JSON-LD/AI engine pickup.
+- Day 22 (HR expired-listing case study) deferred 90 days pending anonymized real-deal data from Jacob; revisit on or after 2026-07-25.
+
+### Session notes
+- Cowork session and SEO/AEO Expert project session pushed to `main` in parallel throughout the day. All commits intentional, no conflicts. Bundled deploy of 9 commits → live in one credit charge.
+- Verified post-deploy via Netlify MCP: `currentDeploy.state: ready`, deploy ID `69eef42aff9f8200089a80bc`.
+- Handoff doc created at `~/Library/Application Support/Claude/local-agent-mode-sessions/SEO-AEO-Visual-Standard-Handoff.md` for ongoing visual standard work in the SEO/AEO Expert project (Phases 2-5 still ahead: FAQ markup audit, retroactive comparison post upgrade, HowTo retrofit, glossary buildout, testimonials with Review schema, homepage Local Business audit, Author/Person schema in BaseLayout, title length audit across all existing posts).
+
+---
+
 ## 2026-04-25 — commit 19e929e (merge b6326ff on live) | Credits used: 15 | Credits remaining: ~110
 
 ### New blog post (1 — Day 21)

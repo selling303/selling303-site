@@ -188,14 +188,14 @@
 ### Week 4: April 26 – May 2
 
 #### Day 23 — Saturday, April 26
-- [x] **"Spring 2026 Move-Up Market Report: Where Are South Denver Families Upgrading To?"** *(drafted 2026-04-26)*
+- [x] **"Where South Denver Families Are Moving Up in 2026"** *(drafted 2026-04-26)* *(published 2026-04-27)* *(title shortened from "Spring 2026 Move-Up Market Report: Where Are South Denver Families Upgrading To?" for SERP CTR; original preserved in `headline` frontmatter field)*
   - Specialization: `/move-up-sellers` | Geographic: `/highlands-ranch`
   - Type: Market update | Funnel: TOFU
   - Angle: Migration patterns within the metro. Where move-up inventory is, price-tier analysis, HR/Parker/Castle Pines as landing spots.
   - Target keywords: South Denver move-up market 2026, where to upgrade home Denver, Highlands Ranch move-up report
 
 #### Day 24 — Sunday, April 27
-- [x] **"Closing Costs Breakdown for First-Time Buyers in Littleton (2026 Update)"** *(drafted 2026-04-26)*
+- [x] **"Closing Costs Breakdown for First-Time Buyers in Littleton (2026 Update)"** *(drafted 2026-04-26)* *(published 2026-04-27)*
   - Specialization: `/first-time-homebuyers` | Geographic: `/littleton`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Littleton-specific closing cost breakdown. Lender fees, title, HOA transfer, prepaid items. Reference the existing Colorado-wide closing costs post and go deeper.
