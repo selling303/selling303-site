@@ -4,6 +4,19 @@ Permanent record of deployed changes. The deploy-to-netlify skill moves items he
 
 ---
 
+## 2026-04-26 — commit 7b74623 (merge bd45f43 on live) | Credits used: 15 | Credits remaining: ~80
+
+### Fix — Day 24 blog post (Littleton closing costs)
+- **`closing-costs-littleton-first-time-buyers-2026.md`** — geographic accuracy + cost-range refresh after a post-deploy audit caught the issues:
+  - **County Quirk section rewritten.** Original copy incorrectly placed Ken Caryl Ranch and Roxborough inside Littleton city limits — both are unincorporated areas (Jefferson and Douglas Counties respectively) with a Littleton mailing address. Reframed the section around the mailing-address-vs-city-limits distinction (ZIPs 80120–80129 cover three counties; incorporated Littleton is overwhelmingly Arapahoe with small extensions into Jeffco and Douglas).
+  - **Removed inaccurate tax escrow example.** "A Littleton home in Highlands Ranch Metro District" was wrong — HR addresses are not Littleton. Replaced with an Arapahoe-vs-Ken-Caryl-vs-Roxborough mill-rate comparison that holds up.
+  - **Fixed similar conflations** in the price-point section (Ken Caryl Ranch now correctly described as "unincorporated Jefferson County, with a Littleton mailing address") and the HOA section ("Littleton-area inventory" instead of "Littleton inventory").
+  - **Cost ranges refreshed** to match current 2026 South Denver Metro reality: appraisal fee $550–$750 → $650–$900; HOA transfer/status letter fee $200–$500 → $250–$700 (also updated FAQ).
+  - dateModified bumped to 2026-04-26.
+- Verified post-deploy via Netlify MCP: `currentDeploy.state: ready`, deploy ID `69eef7b8e4908c00081cdd22`.
+
+---
+
 ## 2026-04-27 — commit 8e273cf (merge 2561921 on live) | Credits used: 15 | Credits remaining: ~95
 
 ### New blog posts (2 — Days 23 and 24)
