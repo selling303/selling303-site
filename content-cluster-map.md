@@ -40,6 +40,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - What Happens After Accepting an Offer (`/blog/what-happens-after-accepting-offer`)
 - First-Time Home Buyer's Guide to Englewood (`/blog/first-time-home-buyer-guide-englewood-colorado-2026`)
 - What First-Time Buyers Should Know About Bidding in Littleton's Spring Market (`/blog/first-time-buyer-bidding-littleton-spring-2026`)
+- Closing Costs Breakdown for First-Time Buyers in Littleton (2026 Update) (`/blog/closing-costs-littleton-first-time-buyers-2026`)
 
 ### 4. First-Time Home Sellers (`/first-time-homesellers`)
 **Primary geographic ties:** Centennial, Littleton, Highlands Ranch (first-time seller volume in South Denver)
