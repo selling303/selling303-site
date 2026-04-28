@@ -60,19 +60,12 @@ const articleSchema: Record<string, any> = {
   "headline": data.headline || data.title,
   "description": data.description,
   "image": data.ogImage || data.cardImage?.url || "https://selling303.com/images/og-default.jpg",
-  "author": {
-    "@type": "Person",
-    "name": "Jacob Stark",
-    "jobTitle": "REALTOR®",
-    "url": "https://selling303.com/about",
-    "worksFor": { "@type": "Organization", "name": "8z Real Estate" }
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Selling 303",
-    "url": "https://selling303.com",
-    "logo": { "@type": "ImageObject", "url": "https://selling303.com/images/selling303-logo.png" }
-  },
+  // Author + publisher reference the canonical entities defined on / (home) and /about.
+  // Replacing inline blocks with @id references unifies entity identity across all 80+
+  // pages, helping Google's knowledge graph distinguish Jacob Stark from other public
+  // figures sharing the surname (surname-pollution disambiguation, 2026-04-27).
+  "author": { "@id": "https://selling303.com/#agent" },
+  "publisher": { "@id": "https://selling303.com/#organization" },
   "datePublished": data.date,
   "dateModified": data.dateModified || data.date,
   "mainEntityOfPage": {

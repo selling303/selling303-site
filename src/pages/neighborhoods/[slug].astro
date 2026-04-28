@@ -37,7 +37,8 @@ const schemaJson = JSON.stringify({
     "name": `${data.title}, Colorado`,
     "containedInPlace": { "@type": "State", "name": "Colorado" }
   },
-  "author": { "@type": "Person", "name": "Jacob Stark" }
+  // Surname disambiguation (2026-04-27): @id ref to canonical agent entity.
+  "author": { "@id": "https://selling303.com/#agent" }
 });
 ---
 
