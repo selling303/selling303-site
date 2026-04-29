@@ -59,6 +59,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - Littleton vs. Centennial: Which South Denver Suburb Fits Your Relocation? (`/blog/littleton-vs-centennial-south-denver-relocation`)
 - Relocating to Parker, Colorado: What Families Moving from Out of State Need to Know (`/blog/moving-to-parker-colorado-relocation-guide-2026`)
 - What Out-of-State Buyers Get Wrong About the Denver Suburbs (`/blog/out-of-state-buyer-mistakes-denver-suburbs-centennial`)
+- Is Greenwood Village Worth the Price Tag? A Relocation Buyer's Honest Assessment (`/blog/greenwood-village-worth-the-price-tag-relocation-2026`)
 
 ### 6. New Construction (`/new-construction`)
 **Primary geographic ties:** Parker, Castle Pines, Highlands Ranch, Lone Tree (active builder communities)
@@ -69,6 +70,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - Do You Need a Real Estate Agent for New Construction in Colorado? (`/blog/real-estate-agent-new-construction-colorado`)
 - Lone Tree New Construction: Builder Incentives and What They Actually Mean for Your Bottom Line (`/blog/lone-tree-new-construction-builder-incentives-2026`)
 - New Build vs. Resale in Highlands Ranch: Which Makes More Financial Sense in 2026? (`/blog/new-build-vs-resale-highlands-ranch-2026`)
+- Should You Build New in Parker or Buy Resale? A Cost-Per-Square-Foot Analysis (`/blog/build-new-or-buy-resale-parker-cost-per-square-foot`)
 
 ---
 

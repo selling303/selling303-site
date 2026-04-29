@@ -202,14 +202,14 @@
   - Target keywords: closing costs Littleton CO, first-time buyer closing costs Denver, Littleton home buying costs 2026
 
 #### Day 25 — Monday, April 28
-- [ ] **"Should You Build New in Parker or Buy Resale? A Cost-Per-Square-Foot Analysis"**
+- [x] **"Should You Build New in Parker or Buy Resale? A Cost-Per-Square-Foot Analysis"** *(drafted 2026-04-28)*
   - Specialization: `/new-construction` | Geographic: `/parker`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Data comparison. Builder base price per sqft vs. resale comps, upgrade cost reality, lot premium analysis for Parker communities.
   - Target keywords: new build vs resale Parker CO, Parker new construction cost, build or buy Parker Colorado
 
 #### Day 26 — Tuesday, April 29
-- [ ] **"Is Greenwood Village Worth the Price Tag? A Relocation Buyer's Honest Assessment"**
+- [x] **"Is Greenwood Village Worth the Price Tag? A Relocation Buyer's Honest Assessment"** *(drafted 2026-04-29)*
   - Specialization: `/relocation` | Geographic: `/greenwood-village`
   - Type: Local area topic | Funnel: TOFU
   - Angle: Value proposition for GV — luxury price points, DTC proximity, lifestyle amenities. Who it's right for, who should look elsewhere.
