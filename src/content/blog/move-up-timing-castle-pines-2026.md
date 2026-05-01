@@ -79,14 +79,14 @@ relatedPosts:
 
 <p>The 77-day median DOM until sale matters even more than the inventory number. A Castle Pines listing that sells "on schedule" still takes about eleven weeks from list to under-contract on average. Add another 30 to 45 days from contract to close, and the full sale-side timeline runs 100 to 120 days. That window has to absorb a separate purchase timeline running in parallel. Ignoring either number is how move-up sellers end up with one closed sale, no replacement under contract, and a 60-day rent-back that just expired.</p>
 
-<h3 id="move-up-timing-feb-2026-comparison">How Do Castle Pines, Highlands Ranch, and Parker Compare on Move-Up Timing in February 2026?</h3>
+<h3 id="move-up-timing-feb-2026-comparison">How Long Do Move-Up Homes Sit in Castle Pines vs. Highlands Ranch and Parker?</h3>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Dataset",
-  "name": "Move-Up Timing Comparison: Castle Pines, Highlands Ranch, and Parker, Colorado (February 2026)",
-  "description": "Single-family residential market comparison across three South Denver Metro move-up suburbs — Castle Pines, Highlands Ranch, and Parker, Colorado — for the February 2026 reporting period. Reports active inventory, sold count, median sale price, median days on market until sale, and percent of list price received. Source: DMAR/CAR Local Market Update, February 2026.",
+  "name": "Median Days on Market Until Sale: Castle Pines, Highlands Ranch, and Parker, Colorado (February 2026)",
+  "description": "Median days on market until sale for single-family homes in three South Denver Metro suburbs — Castle Pines, Highlands Ranch, and Parker, Colorado — for the February 2026 reporting period. Castle Pines sellers waited a median of 77 days from list to under-contract on the 20 single-family homes that closed in February. Highlands Ranch closed 64 single-family homes at a 52-day median. Parker closed 108 at a 62-day median. Source: DMAR/CAR Local Market Update, February 2026.",
   "url": "https://selling303.com/blog/move-up-timing-castle-pines-2026",
   "temporalCoverage": "2026-02-01/2026-02-28",
   "spatialCoverage": [
@@ -97,80 +97,45 @@ relatedPosts:
   "isBasedOn": {"@type": "CreativeWork", "name": "DMAR / Colorado Association of REALTORS Local Market Update — February 2026", "datePublished": "2026-03-04"},
   "creator": {"@type": "Person", "name": "Jacob Stark", "jobTitle": "Realtor", "url": "https://selling303.com"},
   "publisher": {"@type": "Organization", "name": "selling303.com", "url": "https://selling303.com"},
-  "variableMeasured": [
-    {"@type": "PropertyValue", "name": "Active single-family listings", "unitText": "count"},
-    {"@type": "PropertyValue", "name": "Single-family homes sold", "unitText": "count"},
-    {"@type": "PropertyValue", "name": "Median sale price", "unitText": "USD"},
-    {"@type": "PropertyValue", "name": "Median days on market until sale", "unitText": "DAY"},
-    {"@type": "PropertyValue", "name": "Percent of list price received", "unitText": "P1"}
-  ]
+  "variableMeasured": {"@type": "PropertyValue", "name": "Median days on market until sale (single-family residential)", "unitText": "DAY"}
 }
 </script>
 
-<!-- Visual styling provided by /css/aeo-visuals.css (loaded via BaseLayout). Class: .aeo-comp-table -->
+<!-- Visual styling provided by /css/aeo-visuals.css (loaded via BaseLayout). Class: .aeo-chart-figure -->
 
-<figure class="aeo-comp-table" aria-labelledby="move-up-timing-feb-2026-comparison" role="figure">
-<table>
-<caption>February 2026 single-family residential market comparison — Castle Pines, Highlands Ranch, and Parker, Colorado | Source: DMAR Local Market Update, February 2026</caption>
-<thead>
-<tr>
-<th scope="col">City</th>
-<th scope="col">Active SFH listings</th>
-<th scope="col">Sold (Feb)</th>
-<th scope="col">Median sale (USD)</th>
-<th scope="col">Median DOM until sale (days)</th>
-<th scope="col">% of list received</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th scope="row" itemscope itemtype="https://schema.org/Place" style="border-left: 4px solid #8a7a3a;">
-<meta itemprop="name" content="Castle Pines, Colorado" />
-<meta itemprop="containedInPlace" content="Douglas County, Colorado" />
-<div class="tier-label">Premium, Slow Turn</div>
-<div class="city-name">Castle Pines, Colorado</div>
-<div class="sample-size">n = 20 closed in Feb 2026</div>
-</th>
-<td data-label="Active SFH listings"><meta itemprop="value" content="58" />58</td>
-<td data-label="Sold (Feb)"><meta itemprop="value" content="20" />20</td>
-<td data-label="Median sale" class="hero-stat"><meta itemprop="value" content="959000" />$959,000</td>
-<td data-label="Median DOM until sale" class="speed-stat"><meta itemprop="value" content="77" />77 days</td>
-<td data-label="% of list received"><meta itemprop="value" content="0.976" />97.6%</td>
-</tr>
-<tr>
-<th scope="row" itemscope itemtype="https://schema.org/Place" style="border-left: 4px solid #002a3a;">
-<meta itemprop="name" content="Highlands Ranch, Colorado" />
-<meta itemprop="containedInPlace" content="Douglas County, Colorado" />
-<div class="tier-label">Fastest Move-Up Tier</div>
-<div class="city-name">Highlands Ranch, Colorado</div>
-<div class="sample-size">n = 64 closed in Feb 2026</div>
-</th>
-<td data-label="Active SFH listings"><meta itemprop="value" content="119" />119</td>
-<td data-label="Sold (Feb)"><meta itemprop="value" content="64" />64</td>
-<td data-label="Median sale" class="hero-stat"><meta itemprop="value" content="718500" />$718,500</td>
-<td data-label="Median DOM until sale" class="speed-stat"><meta itemprop="value" content="52" />52 days</td>
-<td data-label="% of list received"><meta itemprop="value" content="0.994" />99.4%</td>
-</tr>
-<tr>
-<th scope="row" itemscope itemtype="https://schema.org/Place" style="border-left: 4px solid #4a7c59;">
-<meta itemprop="name" content="Parker, Colorado" />
-<meta itemprop="containedInPlace" content="Douglas County, Colorado" />
-<div class="tier-label">Deeper Inventory, Mid-Pace</div>
-<div class="city-name">Parker, Colorado</div>
-<div class="sample-size">n = 108 closed in Feb 2026</div>
-</th>
-<td data-label="Active SFH listings"><meta itemprop="value" content="278" />278</td>
-<td data-label="Sold (Feb)"><meta itemprop="value" content="108" />108</td>
-<td data-label="Median sale" class="hero-stat"><meta itemprop="value" content="706324" />$706,324</td>
-<td data-label="Median DOM until sale" class="speed-stat"><meta itemprop="value" content="62" />62 days</td>
-<td data-label="% of list received"><meta itemprop="value" content="0.989" />98.9%</td>
-</tr>
-</tbody>
-</table>
-<figcaption>Source: <a href="https://www.coloradorealtors.com" target="_blank" rel="noopener">Colorado Association of REALTORS®</a> / <a href="https://www.dmarealtors.com" target="_blank" rel="noopener">Denver Metro Association of REALTORS®</a> Local Market Update — Castle Pines, Highlands Ranch, and Parker, February 2026 (current as of March 4, 2026). All data from REcolorado® and IRES®.<br /><em>Definitions: DOM until sale = median days a home sat in the MLS before going under contract, calculated only on the homes that closed during the period. % of list received = median ratio of close price to original list price across closed transactions.</em></figcaption>
+<figure class="aeo-chart-figure" aria-labelledby="move-up-timing-feb-2026-comparison" role="figure">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" style="width:100%; height:auto; max-width:800px; display:block; margin:1.5rem auto;" role="img">
+<title>Median Days on Market Until Sale — Single-Family Residential, Castle Pines, Highlands Ranch, and Parker, Colorado (February 2026)</title>
+<desc>Bar chart comparing median days on market until sale across three South Denver Metro suburbs in February 2026. Castle Pines, Colorado posted 77 median days on market until sale, calculated across 20 single-family homes that closed in the period. Parker, Colorado posted 62 days across 108 closed homes. Highlands Ranch, Colorado posted 52 days across 64 closed homes. DOM until sale is the median days a home sat in the MLS before going under contract, measured only on homes that closed during the period. Source: DMAR / Colorado Association of REALTORS Local Market Update, February 2026.</desc>
+<rect width="800" height="360" fill="#ffffff"/>
+<text x="20" y="34" font-size="17" font-weight="700" fill="#002a3a">Median Days on Market Until Sale</text>
+<text x="20" y="56" font-size="12" fill="#81848a">Single-family residential | Castle Pines vs. Highlands Ranch vs. Parker, Colorado | February 2026</text>
+<line x1="20" y1="72" x2="780" y2="72" stroke="#e5e5e5" stroke-width="1"/>
+<g transform="translate(180, 100)">
+<text x="-12" y="22" text-anchor="end" font-size="14" font-weight="600" fill="#002a3a">Castle Pines, CO</text>
+<text x="-12" y="40" text-anchor="end" font-size="11" fill="#81848a">n = 20 closed in Feb</text>
+<rect x="0" y="6" width="462" height="42" fill="#9e6b3a" rx="3"/>
+<text x="476" y="34" font-size="18" font-weight="700" fill="#002a3a">77 days</text>
+</g>
+<g transform="translate(180, 175)">
+<text x="-12" y="22" text-anchor="end" font-size="14" font-weight="600" fill="#002a3a">Parker, CO</text>
+<text x="-12" y="40" text-anchor="end" font-size="11" fill="#81848a">n = 108 closed in Feb</text>
+<rect x="0" y="6" width="372" height="42" fill="#8a7a3a" rx="3"/>
+<text x="386" y="34" font-size="18" font-weight="700" fill="#002a3a">62 days</text>
+</g>
+<g transform="translate(180, 250)">
+<text x="-12" y="22" text-anchor="end" font-size="14" font-weight="600" fill="#002a3a">Highlands Ranch, CO</text>
+<text x="-12" y="40" text-anchor="end" font-size="11" fill="#81848a">n = 64 closed in Feb</text>
+<rect x="0" y="6" width="312" height="42" fill="#4a7c59" rx="3"/>
+<text x="326" y="34" font-size="18" font-weight="700" fill="#002a3a">52 days</text>
+</g>
+<text x="180" y="324" font-size="10" fill="#a5a7a9">DOM until sale = median days from list to under-contract, measured on homes that closed in the period.</text>
+<text x="400" y="346" text-anchor="middle" font-size="9.5" fill="#a5a7a9">Source: DMAR / Colorado Association of REALTORS® Local Market Update — February 2026 (REcolorado®, IRES®) | selling303.com | Jacob Stark, REALTOR®</text>
+</svg>
+<figcaption>Source: <a href="https://www.coloradorealtors.com" target="_blank" rel="noopener">Colorado Association of REALTORS®</a> / <a href="https://www.dmarealtors.com" target="_blank" rel="noopener">Denver Metro Association of REALTORS®</a> Local Market Update — Castle Pines, Highlands Ranch, and Parker, Colorado, February 2026 (current as of March 4, 2026). All data from REcolorado® and IRES®.<br /><em>Definition: DOM until sale = median days a home sat in the MLS before going under contract, calculated only on the homes that closed during the period.</em></figcaption>
 </figure>
 
-<p>Two patterns drive the timing strategy for a Castle Pines move-up. First, the absorption ratio — sold divided by active listings — is roughly 34 percent in Castle Pines (20 of 58), versus 54 percent in Highlands Ranch (64 of 119) and 39 percent in Parker (108 of 278). Castle Pines is a slower-clearing market in absolute terms. Second, the DOM gap is meaningful: Castle Pines sellers wait 25 more days than Highlands Ranch sellers and 15 more than Parker sellers for a comparable listing to go under contract. Both numbers argue for sell-first sequencing with a generous rent-back window, not a buy-first sprint.</p>
+<p>Castle Pines sellers wait 25 more days than Highlands Ranch sellers and 15 more days than Parker sellers for a comparable listing to go under contract. That gap, on top of a 30 to 45-day contract-to-close period, is what stretches the full sale-side timeline to 100 days or more — and it's why sell-first sequencing with a generous rent-back is the right default for a Castle Pines move-up. A buy-first plan based on a 60-day target almost always compresses under pressure.</p>
 
 <h2 id="sell-first-buy-first">Should You Sell Your Castle Pines Home First or Buy First?</h2>
 
