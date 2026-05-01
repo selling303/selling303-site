@@ -131,7 +131,7 @@ relatedPosts:
 </g>
 <text x="400" y="318" text-anchor="middle" font-size="10" fill="#a5a7a9">Source: DMAR / Colorado Association of REALTORS® Local Market Update — February 2026 (REcolorado®, IRES®) | selling303.com</text>
 </svg>
-<figcaption><em>Days on market until sale = median days a home sat in the MLS before going under contract, calculated only on homes that closed during the period.</em></figcaption>
+<figcaption>These figures count only the homes that actually closed in February. Listings that sat unsold or expired without finding a buyer aren't included — meaning the real picture for a Castle Pines seller who isn't priced to move is worse than the 77-day bar suggests.</figcaption>
 </figure>
 
 <p>Castle Pines sellers wait 25 more days than Highlands Ranch sellers and 15 more days than Parker sellers for a comparable listing to go under contract. That gap, on top of a 30 to 45-day contract-to-close period, is what stretches the full sale-side timeline to 100 days or more — and it's why sell-first sequencing with a generous rent-back is the right default for a Castle Pines move-up. A buy-first plan based on a 60-day target almost always compresses under pressure.</p>
