@@ -104,10 +104,10 @@ relatedPosts:
 <!-- Visual styling provided by /css/aeo-visuals.css (loaded via BaseLayout). Class: .aeo-chart-figure -->
 
 <figure class="aeo-chart-figure" aria-labelledby="move-up-timing-feb-2026-comparison" role="figure">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" style="width:100%; height:auto; max-width:800px; display:block; margin:1.5rem auto;" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 330" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" style="width:100%; height:auto; max-width:800px; display:block; margin:1.5rem auto;" role="img">
 <title>How Long Single-Family Listings Sit in Castle Pines, Highlands Ranch, and Parker, Colorado (February 2026)</title>
 <desc>Bar chart comparing median days on market until sale across three South Denver Metro suburbs in February 2026. Castle Pines, Colorado posted 77 median days on market until sale, calculated across 20 single-family homes that closed in the period. Parker, Colorado posted 62 days across 108 closed homes. Highlands Ranch, Colorado posted 52 days across 64 closed homes. DOM until sale is the median days a home sat in the MLS before going under contract, measured only on homes that closed during the period. Source: DMAR / Colorado Association of REALTORS Local Market Update, February 2026.</desc>
-<rect width="800" height="300" fill="#ffffff"/>
+<rect width="800" height="330" fill="#ffffff"/>
 <text x="20" y="34" font-size="17" font-weight="700" fill="#002a3a">How Long Single-Family Listings Sit Before Going Under Contract</text>
 <text x="20" y="56" font-size="12" fill="#81848a">South Denver Metro suburbs (single-family residential) | February 2026</text>
 <line x1="20" y1="72" x2="780" y2="72" stroke="#e5e5e5" stroke-width="1"/>
@@ -129,8 +129,9 @@ relatedPosts:
 <rect x="0" y="6" width="312" height="42" fill="#4a7c59" rx="3"/>
 <text x="326" y="34" font-size="18" font-weight="700" fill="#002a3a">52 days</text>
 </g>
+<text x="400" y="318" text-anchor="middle" font-size="10" fill="#a5a7a9">Source: DMAR / Colorado Association of REALTORS® Local Market Update — February 2026 (REcolorado®, IRES®) | selling303.com</text>
 </svg>
-<figcaption>Source: <a href="https://www.dmarealtors.com" target="_blank" rel="noopener">DMAR / Colorado Association of REALTORS®</a> Local Market Update, February 2026 (current as of March 4, 2026). <em>Days on market until sale = median days a home sat in the MLS before going under contract, calculated only on homes that closed during the period.</em></figcaption>
+<figcaption><em>Days on market until sale = median days a home sat in the MLS before going under contract, calculated only on homes that closed during the period.</em></figcaption>
 </figure>
 
 <p>Castle Pines sellers wait 25 more days than Highlands Ranch sellers and 15 more days than Parker sellers for a comparable listing to go under contract. That gap, on top of a 30 to 45-day contract-to-close period, is what stretches the full sale-side timeline to 100 days or more — and it's why sell-first sequencing with a generous rent-back is the right default for a Castle Pines move-up. A buy-first plan based on a 60-day target almost always compresses under pressure.</p>
