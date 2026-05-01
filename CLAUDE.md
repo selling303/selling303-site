@@ -116,14 +116,26 @@ Props: `variant` ("compact" | "full"), `name`, `slug`, `county?` (required for f
 
 Schema.org Microdata helps answer engines (ChatGPT, Google AI Overviews, Perplexity) surface structured data about neighborhoods and market stats directly from the HTML. Baking it into components ensures every page gets correct structured data automatically — no manual Microdata required.
 
-## Editing Skills from Cowork Sessions (Mandatory)
+## Editing Skills (Mandatory)
 
-The `~/.claude/skills` directory is auto-mounted **read-only** in Cowork sessions at `/sessions/<name>/mnt/.claude/skills/`. Write and Edit tools will fail on this path with EROFS errors. **Never** ask Jacob to copy files, run shell commands, or use his computer to install skill updates.
+**Skills are managed exclusively at https://claude.ai/customize/skills.** That web UI is the only source of truth for the skill registry that Cowork loads from at session start. The local `~/.claude/skills/` directory does NOT exist anymore — it was a legacy path that never synced to the cloud and was deleted on 2026-04-30 after a one-time bootstrap.
 
-### How to edit skills programmatically
+### Rules
 
-1. Use `request_cowork_directory` to mount `~/.claude/skills` — this creates a **new, writable** mount at `/sessions/<name>/mnt/skills/` (separate from the read-only auto-mount).
-2. Use Write/Edit tools on the new mount path to update skill files directly.
-3. Changes are written to Jacob's Mac instantly — no copy step needed.
+1. **Never write or edit files under `~/.claude/skills/`.** The directory is gone; recreating it does nothing because Cowork doesn't read from it. Any session that tries this is wasting time.
+2. **Never use `request_cowork_directory` to mount `~/.claude/skills/`.** Same reason.
+3. **To edit an existing skill** (e.g., `blog-post-writer`, `seo-aeo-expert`): tell Jacob to open https://claude.ai/customize/skills, click the skill in the left list, edit the markdown inline, and save. 30 seconds, no file involved.
+4. **To create a new skill**: tell Jacob to open https://claude.ai/customize/skills, click `+` → `Create skill` → `Write skill instructions` (or `Create with Claude` for chat-driven authoring), paste/type the markdown, and save.
+5. **When you (Claude in a Cowork session) author or revise skill content**: write the markdown in the chat reply, then ask Jacob to paste it into the web UI editor. Cowork has no API to write to the registry directly. (When Anthropic ships an upsert tool, this rule changes — until then, paste-via-web-UI is the workflow.)
+6. **The plugin cache** at `~/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/<session>/<user>/skills/` is a snapshot synced down from the cloud at session start. Read-only for diagnostic purposes. Never write to it — your writes get overwritten on the next sync.
 
-This is the **only** supported method. Document it here so no future session wastes time on workarounds.
+## Output Formatting (Mandatory)
+
+Always present terminal commands and preview URLs in fenced code blocks so Jacob can copy them easily. Never put commands or URLs in plain paragraph text.
+
+**Example:**
+```
+cd ~/selling303-site
+npx astro dev
+```
+Preview: `http://localhost:4321/blog/post-slug`

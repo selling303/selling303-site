@@ -96,3 +96,4 @@ The 2026-04-26 baseline shows the size of the Phase 3 retroactive cleanup and th
 **Updates since baseline:**
 - 2026-04-29 — `greenwood-village-worth-the-price-tag-relocation-2026` shipped optimized comparison-table.
 - 2026-04-30 — `expired-listing-trap-englewood-switching-agents-2026` shipped optimized comparison-table (Closed vs. Expired Englewood single-family Q1 2026). Tier-list opportunity flagged inline (root-cause severity scale) — pending Phase 3 build.
+- 2026-04-30 — `move-up-timing-castle-pines-2026` shipped optimized comparison-table (Castle Pines vs. Highlands Ranch vs. Parker single-family — DMAR Feb 2026 active inventory, sold count, median price, DOM until sale, % of list received). Dataset JSON-LD + per-row Place Microdata + per-cell `<meta itemprop="value">`. Source: DMAR / CAR Local Market Update Feb 2026.

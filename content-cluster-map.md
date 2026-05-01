@@ -33,6 +33,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - How Much Equity Do You Need to Move Up in Highlands Ranch? (`/blog/equity-to-move-up-highlands-ranch`)
 - Move-Up Buyer's Checklist: Going from a Starter in Englewood to More Space in Parker (`/blog/move-up-englewood-to-parker-checklist-2026`)
 - Where South Denver Families Are Moving Up in 2026 (`/blog/spring-2026-move-up-market-report-south-denver`)
+- How to Time Your Move-Up Sale in Castle Pines Without Ending Up Homeless (`/blog/move-up-timing-castle-pines-2026`)
 
 ### 3. First-Time Homebuyers (`/first-time-homebuyers`)
 **Primary geographic ties:** Littleton, Englewood, Centennial (most affordable entry points in the metro)

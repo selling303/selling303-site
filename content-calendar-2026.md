@@ -223,7 +223,7 @@
   - Target keywords: switch agents expired listing, Englewood home not selling, why change Realtors expired listing
 
 #### Day 28 — Thursday, May 1
-- [ ] **"How to Time Your Move-Up Sale in Castle Pines Without Ending Up Homeless"**
+- [x] **"How to Time Your Move-Up Sale in Castle Pines Without Ending Up Homeless"** *(drafted 2026-04-30)*
   - Specialization: `/move-up-sellers` | Geographic: `/castle-pines`
   - Type: Seller advice | Funnel: BOFU
   - Angle: Timing strategies — sell first vs. buy first vs. simultaneous close. Rent-back agreements, bridge loans, contingency offers. Castle Pines inventory context.
