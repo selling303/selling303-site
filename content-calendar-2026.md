@@ -216,7 +216,7 @@
   - Target keywords: Greenwood Village Colorado worth it, relocating to Greenwood Village, Greenwood Village real estate 2026
 
 #### Day 27 — Wednesday, April 30
-- [ ] **"The Expired Listing Trap: Why Switching Agents Alone Won't Sell Your Englewood Home"**
+- [x] **"The Expired Listing Trap: Why Switching Agents Alone Won't Sell Your Englewood Home"** *(drafted 2026-04-30)*
   - Specialization: `/expired-listings` | Geographic: `/englewood`
   - Type: Seller advice | Funnel: BOFU
   - Angle: What actually needs to change (pricing, presentation, strategy) vs. just getting a new yard sign. Addresses the #1 seller reaction.

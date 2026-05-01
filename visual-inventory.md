@@ -33,6 +33,7 @@ Tracking file for every page that uses a data visual. Source of truth for what v
 | `cost-to-sell-house-colorado-2026` | table (legacy), cost flow | unknown | needs upgrade — Phase 3 (cost-breakdown candidate) | — |
 | `equity-to-move-up-highlands-ranch` | none detected | — | review needed (likely cost-breakdown candidate) | — |
 | `expired-listing-highlands-ranch` | none detected | — | review needed | — |
+| `expired-listing-trap-englewood-switching-agents-2026` | comparison-table | Dataset + Place Microdata + per-cell value | **optimized** | 2026-04-30 |
 | `first-time-buyer-bidding-littleton-spring-2026` | tier-list (legacy) | unknown | needs upgrade — Phase 3 | — |
 | `greenwood-village-worth-the-price-tag-relocation-2026` | comparison-table | Place Microdata + per-cell value | **optimized** | 2026-04-29 |
 | `first-time-home-buyer-guide-englewood-colorado-2026` | none detected | — | review needed (likely howto candidate — Phase 4 flag-only) | — |
@@ -91,3 +92,7 @@ To be inventoried during Phase 2 verification sweep.
 - **Visual type coverage on optimized posts:** comparison-table only
 
 The 2026-04-26 baseline shows the size of the Phase 3 retroactive cleanup and the variety gap that Phases 3 + 4 are meant to close.
+
+**Updates since baseline:**
+- 2026-04-29 — `greenwood-village-worth-the-price-tag-relocation-2026` shipped optimized comparison-table.
+- 2026-04-30 — `expired-listing-trap-englewood-switching-agents-2026` shipped optimized comparison-table (Closed vs. Expired Englewood single-family Q1 2026). Tier-list opportunity flagged inline (root-cause severity scale) — pending Phase 3 build.
