@@ -230,7 +230,7 @@
   - Target keywords: sell and buy Castle Pines, move-up timing Castle Pines CO, coordinating sale and purchase Denver
 
 #### Day 29 — Friday, May 2
-- [ ] **"What $500K Gets You in Centennial vs. Highlands Ranch vs. Parker (Spring 2026)"**
+- [x] **"What $500K Gets You in Centennial vs. Highlands Ranch vs. Parker (Spring 2026)"** *(drafted 2026-04-30)*
   - Specialization: `/first-time-homebuyers` | Geographic: `/centennial`
   - Type: Local area topic / Buyer advice | Funnel: TOFU
   - Angle: Price-point comparison across three suburbs. Sqft, lot size, age, commute, lifestyle. Great for fence-sitters and relocation buyers.
