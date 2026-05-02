@@ -56,6 +56,7 @@ Tracking file for every page that uses a data visual. Source of truth for what v
 | `south-denver-market-update-april-2026-expired-listings-centennial` | none detected | — | review needed | — |
 | `south-denver-watering-restrictions-guide-2026` | none detected | — | review needed | — |
 | `spring-2026-move-up-market-report-south-denver` | comparison-table | Dataset + Place Microdata + per-cell value | **optimized** (reference template) | 2026-04-26 |
+| `new-construction-buyer-representation-colorado-2026` | comparison-table | Dataset + Place Microdata + per-cell value | **optimized** | 2026-05-02 |
 | `what-happens-after-accepting-offer` | table (legacy), cost flow | unknown | needs upgrade — Phase 3 (howto candidate — Phase 4 flag-only) | — |
 | `what-realtor-does-to-earn-commission` | none detected | — | review needed | — |
 | `when-to-sell-parker-home-move-up` | none detected | — | review needed | — |

@@ -241,7 +241,7 @@
 ### Days 29–30: May 2–3
 
 #### Day 29 — Saturday, May 2
-- [ ] **"New Construction Buyer Representation in Colorado: What Changed in 2026 and Why It Matters"**
+- [x] **"New Construction Buyer Representation in Colorado: What Changed in 2026 and Why It Matters"** *(drafted 2026-05-02)*
   - Specialization: `/new-construction` | Geographic: `/parker`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Post-NAR settlement implications for new construction. Buyer agency agreements at model homes, builder cooperation changes, why representation matters more now.
