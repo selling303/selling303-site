@@ -1,5 +1,6 @@
 ---
-title: "Is Greenwood Village Worth the Price Tag? A Relocation Buyer's Honest Assessment"
+title: "Is Greenwood Village Worth the Price Tag in 2026?"
+headline: "Is Greenwood Village Worth the Price Tag? A Relocation Buyer's Honest Assessment"
 description: "Greenwood Village, Colorado — DTC proximity, estate lots, and a Q1 2026 median sale of $1.875M. Honest take on who it fits, who should look elsewhere."
 date: "April 29, 2026"
 dateModified: "April 29, 2026"
@@ -42,7 +43,7 @@ relatedPosts:
 ---
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
-<strong>Is Greenwood Village, Colorado worth the price tag for relocation buyers?</strong> Greenwood Village justifies its Q1 2026 median sale price of $1,875,000 for buyers who specifically need DTC-adjacent estate-lot living, top-tier privacy, and quick C-470 / I-25 access — but lower-priced South Denver suburbs deliver better value for buyers who don't need that exact combination.
+<strong>Is Greenwood Village, Colorado worth the price tag for relocation buyers?</strong> Greenwood Village justifies its Q1 2026 median sale price of $1,875,000 for buyers who specifically need DTC proximity, estate-lot privacy, or large-acreage living inside the South Denver Metro.
 </div>
 
 <div style="background: #f0f4f0; border-left: 4px solid #4a7c59; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
@@ -83,7 +84,7 @@ relatedPosts:
 
 <p>Price-per-square-foot tells the same story from a different angle. The Q1 median PSF (finished area) was $428, with the average at $414. That's roughly comparable to other South Denver luxury suburbs on a per-foot basis, but the Greenwood Village home is bigger — average finished square footage on closed sales was 5,051 — so the all-in price climbs.</p>
 
-<p>One detail relocation buyers often miss: a meaningful portion of Greenwood Village transactions happen off-MLS. Three Q1 closed sales on Preserve Parkway recorded $0 list prices in the system, indicating pocket-listing or builder-direct deals. The implication is practical — if you're searching only what's publicly listed on Zillow, you're seeing maybe 80 percent of the actual market here. Working with a local agent who knows the off-market flow becomes more valuable as the price tier climbs.</p>
+<p>One detail relocation buyers often miss: a meaningful portion of Greenwood Village transactions happen off-MLS. Three Q1 closed sales on Preserve Parkway recorded $0 list prices in the system, indicating pocket-listing or builder-direct deals. The implication is practical — if you're searching only what's publicly listed on Zillow, you're seeing maybe 80 percent of the actual market here. The <a href="https://www.nar.realtor/research-and-statistics/research-reports/existing-home-sales" rel="noopener">National Association of REALTORS</a> tracks the broader off-MLS share at the metro level, and South Denver's luxury tier consistently runs above the national average. Working with a local agent who knows the off-market flow becomes more valuable as the price tier climbs.</p>
 
 <h2 id="who-fits">Who Is Greenwood Village Actually Right For?</h2>
 
@@ -100,6 +101,36 @@ relatedPosts:
 <h2 id="how-it-compares">How Does Greenwood Village Compare to Other South Denver Luxury Options?</h2>
 
 <p>Relocation buyers shopping at this price tier almost always have multiple South Denver suburbs on the list. The Q1 2026 MLS data lets you see the practical differences side by side. The data below covers every Q1 single-family residential listing in each city — closed, active, pending, expired, and withdrawn — pulled from REcolorado MLS on April 2, 2026.</p>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "South Denver Luxury Market Comparison: Greenwood Village, Castle Pines, Highlands Ranch, and Denver Metro Median, Colorado (Q1 2026)",
+  "description": "Single-family residential listing comparison across three South Denver luxury and move-up suburbs (Greenwood Village, Castle Pines, Highlands Ranch) and the broader Denver Metro median. Covers all REcolorado MLS Closed, Active, Coming Soon, Pending, Withdrawn, and Expired status listings for January 1 through March 31, 2026 for the three cities; metro median sourced from the DMAR Market Trends Report (March 2026 release). Reports total Q1 listings count, median and average sale prices, median days in MLS, and median sale-to-list price ratio.",
+  "url": "https://selling303.com/blog/greenwood-village-worth-the-price-tag-relocation-2026",
+  "temporalCoverage": "2026-01-01/2026-03-31",
+  "spatialCoverage": [
+    {"@type": "Place", "name": "Greenwood Village, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Arapahoe County, Colorado"}},
+    {"@type": "Place", "name": "Castle Pines, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Douglas County, Colorado"}},
+    {"@type": "Place", "name": "Highlands Ranch, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Douglas County, Colorado"}},
+    {"@type": "Place", "name": "Denver Metro, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Colorado, USA"}}
+  ],
+  "isBasedOn": [
+    {"@type": "CreativeWork", "name": "REcolorado MLS Q1 2026 Single-Family Residential Listing Export", "datePublished": "2026-04-02"},
+    {"@type": "CreativeWork", "name": "DMAR Market Trends Report, March 2026", "datePublished": "2026-04-04", "url": "https://www.dmarealtors.com/market-trends"}
+  ],
+  "creator": {"@type": "Person", "name": "Jacob Stark", "jobTitle": "Realtor", "url": "https://selling303.com"},
+  "publisher": {"@type": "Organization", "name": "selling303.com", "url": "https://selling303.com"},
+  "variableMeasured": [
+    {"@type": "PropertyValue", "name": "Total Q1 2026 listings (all statuses)", "unitText": "count"},
+    {"@type": "PropertyValue", "name": "Median sale price", "unitText": "USD"},
+    {"@type": "PropertyValue", "name": "Average sale price", "unitText": "USD"},
+    {"@type": "PropertyValue", "name": "Median days in MLS", "unitText": "DAY"},
+    {"@type": "PropertyValue", "name": "Median sale-to-list price ratio", "unitText": "P1"}
+  ]
+}
+</script>
 
 <!-- Visual styling provided by /css/aeo-visuals.css (loaded via BaseLayout). Class: .aeo-comp-table -->
 
@@ -160,8 +191,9 @@ relatedPosts:
 <td data-label="Median sale/list"><meta itemprop="value" content="0.98" />98%</td>
 </tr>
 <tr>
-<th scope="row" itemscope itemtype="https://schema.org/Place" style="border-left: 4px solid #6b6b6b;">
+<th scope="row" itemscope itemtype="https://schema.org/Place" style="border-left: 4px solid #81848a;">
 <meta itemprop="name" content="Denver Metro, Colorado" />
+<meta itemprop="containedInPlace" content="Colorado, USA" />
 <div class="tier-label">Metro Median</div>
 <div class="city-name">South Denver Metro, Colorado</div>
 <div class="sample-size">DMAR March 2026</div>
@@ -191,7 +223,7 @@ relatedPosts:
 <li><strong>Lot privacy at scale.</strong> Half-acre to multi-acre lots with mature landscaping, gates, and setbacks are routine here. In Highlands Ranch or Parker, that lot type is rare and usually requires looking at custom estates outside the master-planned communities.</li>
 <li><strong>DTC five-minute access.</strong> The Denver Tech Center sits inside Greenwood Village's boundaries. No other South Denver suburb offers that proximity.</li>
 <li><strong>Centennial Airport and aviation access.</strong> If you fly privately, Centennial Airport (KAPA) is a five- to ten-minute drive. Several Greenwood Village neighborhoods cater specifically to aviation owners.</li>
-<li><strong>Cherry Creek State Park frontage.</strong> The northern edge of the city borders Cherry Creek Reservoir, with direct trail access into the state park.</li>
+<li><strong>Cherry Creek State Park frontage.</strong> The northern edge of the city borders Cherry Creek Reservoir, with direct trail access into <a href="https://cpw.state.co.us/placestogo/parks/cherrycreek" rel="noopener">Cherry Creek State Park</a>.</li>
 <li><strong>Mature, established streets.</strong> Greenwood Village isn't a new community. Many homes are on streets that were platted 30 to 50 years ago, with mature trees and established neighborhood character that newer master-planned communities can't replicate at any price.</li>
 </ul>
 
