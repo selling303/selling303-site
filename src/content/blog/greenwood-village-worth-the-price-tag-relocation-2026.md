@@ -62,7 +62,7 @@ relatedPosts:
 <ol>
 <li><a href="#price-reality">What Does Greenwood Village Actually Cost in 2026?</a></li>
 <li><a href="#who-fits">Who Is Greenwood Village Actually Right For?</a></li>
-<li><a href="#how-it-compares">How Does Greenwood Village Compare to Other South Denver Luxury Options?</a></li>
+<li><a href="#how-it-compares">Which South Denver Suburb Fits Which Buyer Type?</a></li>
 <li><a href="#what-the-price-buys">What Does the Greenwood Village Price Tag Actually Buy You?</a></li>
 <li><a href="#wrong-fit">When Is Greenwood Village the Wrong Fit?</a></li>
 <li><a href="#market-dynamic">What Should Out-of-State Buyers Know About the GV Market Dynamic?</a></li>
@@ -98,17 +98,137 @@ relatedPosts:
 
 <p>What unites these profiles is that Greenwood Village isn't a compromise for any of them — it's a specific match. That's the test for whether the price tag is worth it: are you paying for something you genuinely need, or are you paying because the homes are pretty?</p>
 
-<h2 id="how-it-compares">How Does Greenwood Village Compare to Other South Denver Luxury Options?</h2>
+<h2 id="how-it-compares">Which South Denver Suburb Fits Which Buyer Type?</h2>
 
-<p>The price gap is obvious. The harder question is what the gap actually buys you. Below is the trade-off across the six dimensions relocation buyers consistently weigh when deciding between Greenwood Village and its closest South Denver alternatives — Castle Pines, Highlands Ranch, and Parker. Median sale prices come from REcolorado MLS Q1 2026 single-family residential data; the lifestyle dimensions are based on city geography and observable on-the-ground reality.</p>
+<p>"Is it worth it?" really means "is it the right fit for me?" The five buyer profiles below cover the relocation buyers who consistently end up shopping South Denver. For each profile, one suburb fits noticeably better than the others. Greenwood Village shows up exactly twice — for the buyers whose priority list specifically requires what its premium pays for.</p>
+
+<div style="background: #fafafa; border: 1px dashed #c8965a; padding: 0.6rem 1rem; margin: 1.25rem 0 0.5rem; border-radius: 4px; font-size: 0.85rem; color: #002a3a;"><strong>VISUAL A — Persona cards</strong> <span style="color: #81848a;">(stacked here for evaluation; one of A or B will ship)</span></div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "South Denver Relocation Buyer Personas Matched to Best-Fit Suburb (Q1 2026)",
+  "description": "Five common relocation buyer personas mapped to the South Denver suburb that best fits each profile's priorities. Greenwood Village fits the DTC-anchored executive and the estate-lot privacy buyer; Highlands Ranch fits the family-amenity buyer and the best-value-per-square-foot buyer; Parker fits the walkable-lifestyle buyer.",
+  "url": "https://selling303.com/blog/greenwood-village-worth-the-price-tag-relocation-2026#how-it-compares",
+  "numberOfItems": 5,
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "DTC-anchored executive", "item": {"@type": "Place", "name": "Greenwood Village, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Arapahoe County, Colorado"}}},
+    {"@type": "ListItem", "position": 2, "name": "Estate-lot privacy buyer", "item": {"@type": "Place", "name": "Greenwood Village, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Arapahoe County, Colorado"}}},
+    {"@type": "ListItem", "position": 3, "name": "Walkable-lifestyle buyer", "item": {"@type": "Place", "name": "Parker, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Douglas County, Colorado"}}},
+    {"@type": "ListItem", "position": 4, "name": "Family-amenity buyer", "item": {"@type": "Place", "name": "Highlands Ranch, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Douglas County, Colorado"}}},
+    {"@type": "ListItem", "position": 5, "name": "Best value-per-square-foot buyer", "item": {"@type": "Place", "name": "Highlands Ranch, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Douglas County, Colorado"}}}
+  ],
+  "creator": {"@type": "Person", "name": "Jacob Stark", "jobTitle": "Realtor", "url": "https://selling303.com"},
+  "publisher": {"@type": "Organization", "name": "selling303.com", "url": "https://selling303.com"}
+}
+</script>
+
+<figure aria-labelledby="how-it-compares" role="figure" style="margin: 1rem 0 2rem;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.85rem;">
+
+<div itemscope itemtype="https://schema.org/Person" style="background: #ffffff; border: 1px solid #e5e5e5; border-top: 4px solid #002a3a; border-radius: 6px; padding: 1.4rem 1rem 1.2rem; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+<svg viewBox="0 0 60 60" width="52" height="52" style="margin: 0 auto 0.75rem; display: block;" aria-hidden="true">
+<rect x="14" y="16" width="32" height="38" fill="#002a3a" rx="1"/>
+<rect x="18" y="20" width="4" height="5" fill="#fff"/>
+<rect x="26" y="20" width="4" height="5" fill="#fff"/>
+<rect x="34" y="20" width="4" height="5" fill="#fff"/>
+<rect x="40" y="20" width="4" height="5" fill="#fff"/>
+<rect x="18" y="28" width="4" height="5" fill="#fff"/>
+<rect x="26" y="28" width="4" height="5" fill="#fff"/>
+<rect x="34" y="28" width="4" height="5" fill="#fff"/>
+<rect x="40" y="28" width="4" height="5" fill="#fff"/>
+<rect x="18" y="36" width="4" height="5" fill="#fff"/>
+<rect x="26" y="36" width="4" height="5" fill="#fff"/>
+<rect x="34" y="36" width="4" height="5" fill="#fff"/>
+<rect x="40" y="36" width="4" height="5" fill="#fff"/>
+<rect x="27" y="44" width="6" height="10" fill="#fff"/>
+</svg>
+<div itemprop="description" style="font-weight: 700; font-size: 1rem; color: #002a3a; margin-bottom: 0.6rem; line-height: 1.25;">The DTC Executive</div>
+<div style="font-size: 0.72rem; color: #81848a; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 0.2rem;">Best match</div>
+<div itemscope itemtype="https://schema.org/Place" style="font-weight: 700; font-size: 1.05rem; color: #002a3a; line-height: 1.2; margin-bottom: 0.5rem;">
+<meta itemprop="containedInPlace" content="Arapahoe County, Colorado" />
+<span itemprop="name">Greenwood Village</span>
+</div>
+<div style="font-size: 0.82rem; color: #555; line-height: 1.4;">5-min commute. No I-25 grind.</div>
+</div>
+
+<div itemscope itemtype="https://schema.org/Person" style="background: #ffffff; border: 1px solid #e5e5e5; border-top: 4px solid #002a3a; border-radius: 6px; padding: 1.4rem 1rem 1.2rem; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+<svg viewBox="0 0 60 60" width="52" height="52" style="margin: 0 auto 0.75rem; display: block;" aria-hidden="true">
+<polygon points="30,8 39,24 35,24 41,36 37,36 44,48 16,48 23,36 19,36 25,24 21,24" fill="#4a7c59"/>
+<rect x="28" y="48" width="4" height="6" fill="#5a4a2a"/>
+</svg>
+<div itemprop="description" style="font-weight: 700; font-size: 1rem; color: #002a3a; margin-bottom: 0.6rem; line-height: 1.25;">The Estate-Lot Buyer</div>
+<div style="font-size: 0.72rem; color: #81848a; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 0.2rem;">Best match</div>
+<div itemscope itemtype="https://schema.org/Place" style="font-weight: 700; font-size: 1.05rem; color: #002a3a; line-height: 1.2; margin-bottom: 0.5rem;">
+<meta itemprop="containedInPlace" content="Arapahoe County, Colorado" />
+<span itemprop="name">Greenwood Village</span>
+</div>
+<div style="font-size: 0.82rem; color: #555; line-height: 1.4;">Half-acre+ lots are routine.</div>
+</div>
+
+<div itemscope itemtype="https://schema.org/Person" style="background: #ffffff; border: 1px solid #e5e5e5; border-top: 4px solid #c8965a; border-radius: 6px; padding: 1.4rem 1rem 1.2rem; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+<svg viewBox="0 0 60 60" width="52" height="52" style="margin: 0 auto 0.75rem; display: block;" aria-hidden="true">
+<circle cx="30" cy="13" r="5" fill="#c8965a"/>
+<line x1="30" y1="18" x2="32" y2="38" stroke="#c8965a" stroke-width="3" stroke-linecap="round"/>
+<line x1="32" y1="24" x2="22" y2="30" stroke="#c8965a" stroke-width="3" stroke-linecap="round"/>
+<line x1="32" y1="24" x2="42" y2="22" stroke="#c8965a" stroke-width="3" stroke-linecap="round"/>
+<line x1="32" y1="38" x2="24" y2="52" stroke="#c8965a" stroke-width="3" stroke-linecap="round"/>
+<line x1="32" y1="38" x2="42" y2="50" stroke="#c8965a" stroke-width="3" stroke-linecap="round"/>
+</svg>
+<div itemprop="description" style="font-weight: 700; font-size: 1rem; color: #002a3a; margin-bottom: 0.6rem; line-height: 1.25;">The Walkable-Lifestyle Buyer</div>
+<div style="font-size: 0.72rem; color: #81848a; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 0.2rem;">Best match</div>
+<div itemscope itemtype="https://schema.org/Place" style="font-weight: 700; font-size: 1.05rem; color: #c8965a; line-height: 1.2; margin-bottom: 0.5rem;">
+<meta itemprop="containedInPlace" content="Douglas County, Colorado" />
+<span itemprop="name">Parker</span>
+</div>
+<div style="font-size: 0.82rem; color: #555; line-height: 1.4;">Mainstreet shops, cafés, bars.</div>
+</div>
+
+<div itemscope itemtype="https://schema.org/Person" style="background: #ffffff; border: 1px solid #e5e5e5; border-top: 4px solid #4a7c59; border-radius: 6px; padding: 1.4rem 1rem 1.2rem; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+<svg viewBox="0 0 60 60" width="52" height="52" style="margin: 0 auto 0.75rem; display: block;" aria-hidden="true">
+<rect x="8" y="32" width="44" height="18" fill="#4a7c59" rx="2"/>
+<path d="M10 38 Q15 35 20 38 T30 38 T40 38 T50 38" stroke="#fff" stroke-width="1.6" fill="none"/>
+<path d="M10 44 Q15 41 20 44 T30 44 T40 44 T50 44" stroke="#fff" stroke-width="1.6" fill="none"/>
+<circle cx="30" cy="18" r="6" fill="#4a7c59"/>
+<line x1="30" y1="24" x2="30" y2="32" stroke="#4a7c59" stroke-width="3" stroke-linecap="round"/>
+</svg>
+<div itemprop="description" style="font-weight: 700; font-size: 1rem; color: #002a3a; margin-bottom: 0.6rem; line-height: 1.25;">The Family-Amenity Buyer</div>
+<div style="font-size: 0.72rem; color: #81848a; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 0.2rem;">Best match</div>
+<div itemscope itemtype="https://schema.org/Place" style="font-weight: 700; font-size: 1.05rem; color: #4a7c59; line-height: 1.2; margin-bottom: 0.5rem;">
+<meta itemprop="containedInPlace" content="Douglas County, Colorado" />
+<span itemprop="name">Highlands Ranch</span>
+</div>
+<div style="font-size: 0.82rem; color: #555; line-height: 1.4;">4 rec centers. 70+ mi trails.</div>
+</div>
+
+<div itemscope itemtype="https://schema.org/Person" style="background: #ffffff; border: 1px solid #e5e5e5; border-top: 4px solid #4a7c59; border-radius: 6px; padding: 1.4rem 1rem 1.2rem; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+<svg viewBox="0 0 60 60" width="52" height="52" style="margin: 0 auto 0.75rem; display: block;" aria-hidden="true">
+<polygon points="30,10 50,28 46,28 46,52 14,52 14,28 10,28" fill="#4a7c59"/>
+<text x="30" y="46" text-anchor="middle" fill="#fff" font-size="20" font-weight="700" font-family="Georgia, serif">$</text>
+</svg>
+<div itemprop="description" style="font-weight: 700; font-size: 1rem; color: #002a3a; margin-bottom: 0.6rem; line-height: 1.25;">The Best-Value Buyer</div>
+<div style="font-size: 0.72rem; color: #81848a; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 0.2rem;">Best match</div>
+<div itemscope itemtype="https://schema.org/Place" style="font-weight: 700; font-size: 1.05rem; color: #4a7c59; line-height: 1.2; margin-bottom: 0.5rem;">
+<meta itemprop="containedInPlace" content="Douglas County, Colorado" />
+<span itemprop="name">Highlands Ranch / Parker</span>
+</div>
+<div style="font-size: 0.82rem; color: #555; line-height: 1.4;">More space under $800K.</div>
+</div>
+
+</div>
+<figcaption style="font-size: 0.82rem; color: #81848a; line-height: 1.5; margin-top: 1rem;">Sources: REcolorado MLS Q1 2026 single-family residential listings (January 1 – March 31, 2026); city geography and observable infrastructure. Compiled by selling303.com on April 29, 2026. <em>Personas are composite profiles based on common South Denver relocation buyer priorities; "best match" reflects the suburb where each profile most often finds the bundle of features it prioritizes at the price tier each typically searches.</em></figcaption>
+</figure>
+
+<div style="background: #fafafa; border: 1px dashed #c8965a; padding: 0.6rem 1rem; margin: 2rem 0 0.5rem; border-radius: 4px; font-size: 0.85rem; color: #002a3a;"><strong>VISUAL B — Visual fingerprints</strong> <span style="color: #81848a;">(same data, profile-shape encoding)</span></div>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Dataset",
-  "name": "Greenwood Village Value Trade-Off Comparison: Price vs. Lifestyle Dimensions Across Four South Denver Suburbs (Q1 2026)",
-  "description": "Side-by-side trade-off comparison of Greenwood Village, Castle Pines, Highlands Ranch, and Parker, Colorado across the six dimensions relocation buyers weigh: Q1 2026 median single-family sale price, prevalence of half-acre-plus estate lots, direct access to the Denver Tech Center, walkable downtown / Mainstreet character, HOA-managed recreation centers and trails, and Centennial Airport (KAPA) proximity. Median sale prices pulled from REcolorado MLS Q1 2026 single-family residential listings (January 1 through March 31, 2026). Lifestyle dimensions sourced from city geography and observable infrastructure.",
-  "url": "https://selling303.com/blog/greenwood-village-worth-the-price-tag-relocation-2026",
+  "name": "South Denver Suburb Profile Fingerprints — Greenwood Village, Castle Pines, Highlands Ranch, Parker (Q1 2026)",
+  "description": "Profile-shape comparison of four South Denver suburbs across five lifestyle dimensions: half-acre-plus estate lots, direct DTC access, walkable downtown, HOA-managed rec centers and trails, and Centennial Airport (KAPA) proximity. Each suburb's profile shape shows where it leads, lags, or sits middle. Greenwood Village's profile is uniquely tall on three dimensions (lot size, DTC, KAPA); the other three suburbs each lead on one dimension or sit middle across the board.",
+  "url": "https://selling303.com/blog/greenwood-village-worth-the-price-tag-relocation-2026#how-it-compares",
   "temporalCoverage": "2026-01-01/2026-03-31",
   "spatialCoverage": [
     {"@type": "Place", "name": "Greenwood Village, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Arapahoe County, Colorado"}},
@@ -116,105 +236,111 @@ relatedPosts:
     {"@type": "Place", "name": "Highlands Ranch, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Douglas County, Colorado"}},
     {"@type": "Place", "name": "Parker, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Douglas County, Colorado"}}
   ],
-  "isBasedOn": [
-    {"@type": "CreativeWork", "name": "REcolorado MLS Q1 2026 Single-Family Residential Listing Export", "datePublished": "2026-04-02"}
-  ],
+  "isBasedOn": [{"@type": "CreativeWork", "name": "REcolorado MLS Q1 2026 Single-Family Residential Listing Export", "datePublished": "2026-04-02"}],
   "creator": {"@type": "Person", "name": "Jacob Stark", "jobTitle": "Realtor", "url": "https://selling303.com"},
   "publisher": {"@type": "Organization", "name": "selling303.com", "url": "https://selling303.com"},
   "variableMeasured": [
-    {"@type": "PropertyValue", "name": "Q1 2026 median single-family sale price", "unitText": "USD"},
-    {"@type": "PropertyValue", "name": "Half-acre-plus estate lots common", "unitText": "categorical"},
-    {"@type": "PropertyValue", "name": "Direct DTC access", "unitText": "minutes"},
-    {"@type": "PropertyValue", "name": "Walkable downtown or Mainstreet", "unitText": "categorical"},
-    {"@type": "PropertyValue", "name": "HOA-managed rec centers and trails", "unitText": "categorical"},
-    {"@type": "PropertyValue", "name": "Centennial Airport (KAPA) access", "unitText": "minutes"}
+    {"@type": "PropertyValue", "name": "Half-acre-plus estate lots prevalence", "unitText": "ordinal"},
+    {"@type": "PropertyValue", "name": "Direct DTC access", "unitText": "ordinal"},
+    {"@type": "PropertyValue", "name": "Walkable downtown / Mainstreet", "unitText": "ordinal"},
+    {"@type": "PropertyValue", "name": "HOA-managed rec centers and trails", "unitText": "ordinal"},
+    {"@type": "PropertyValue", "name": "Centennial Airport (KAPA) access", "unitText": "ordinal"}
   ]
 }
 </script>
 
-<!-- Visual styling provided by /css/aeo-visuals.css (loaded via BaseLayout). Class: .aeo-comp-table -->
+<figure aria-labelledby="how-it-compares" role="figure" style="margin: 1rem 0 2rem;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.85rem;">
 
-<figure class="aeo-comp-table" aria-labelledby="how-it-compares" role="figure">
-<table>
-<caption>Greenwood Village value trade-off — price vs. lifestyle dimensions across four South Denver suburbs, Colorado | Q1 2026 (January 1 – March 31, 2026)</caption>
-<thead>
-<tr>
-<th scope="col">City</th>
-<th scope="col">Q1 median sale</th>
-<th scope="col">Half-acre+ estate lots</th>
-<th scope="col">Direct DTC access</th>
-<th scope="col">Walkable downtown</th>
-<th scope="col">HOA rec centers + trails</th>
-<th scope="col">KAPA airport access</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th scope="row" itemscope itemtype="https://schema.org/Place" style="border-left: 4px solid #002a3a;">
-<meta itemprop="name" content="Greenwood Village, Colorado" />
+<div itemscope itemtype="https://schema.org/Place" style="background: #ffffff; border: 1px solid #e5e5e5; border-top: 4px solid #002a3a; border-radius: 6px; padding: 1rem 0.85rem; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
 <meta itemprop="containedInPlace" content="Arapahoe County, Colorado" />
-<div class="tier-label">Estate Tier</div>
-<div class="city-name">Greenwood Village, Colorado</div>
-<div class="sample-size">n = 85 listings</div>
-</th>
-<td data-label="Q1 median sale" class="hero-stat"><meta itemprop="value" content="1875000" />$1,875,000</td>
-<td data-label="Half-acre+ estate lots"><strong>✓ Routine</strong></td>
-<td data-label="Direct DTC access"><strong>✓ 5–10 min</strong></td>
-<td data-label="Walkable downtown">✗ None</td>
-<td data-label="HOA rec centers + trails">✗ Limited</td>
-<td data-label="KAPA airport access"><strong>✓ 5–10 min</strong></td>
-</tr>
-<tr>
-<th scope="row" itemscope itemtype="https://schema.org/Place" style="border-left: 4px solid #8a7a3a;">
-<meta itemprop="name" content="Castle Pines, Colorado" />
+<div itemprop="name" style="font-weight: 700; font-size: 1rem; color: #002a3a;">Greenwood Village</div>
+<div style="font-size: 0.78rem; color: #81848a; margin-bottom: 0.6rem;">$1,875,000 · n = 85</div>
+<svg viewBox="0 0 200 130" style="width: 100%; height: auto; max-width: 240px;" role="img" aria-labelledby="gv-fp-title gv-fp-desc">
+<title id="gv-fp-title">Greenwood Village, Colorado profile fingerprint</title>
+<desc id="gv-fp-desc">Greenwood Village leads on lot size, direct DTC access, and KAPA airport proximity (tall bars). It lags on walkable downtown and HOA-managed rec centers (short bars). The shape is tall-tall-short-short-tall.</desc>
+<line x1="20" y1="105" x2="195" y2="105" stroke="#e5e5e5" stroke-width="1"/>
+<rect x="25" y="15" width="22" height="90" fill="#002a3a"/>
+<rect x="60" y="15" width="22" height="90" fill="#002a3a"/>
+<rect x="95" y="90" width="22" height="15" fill="#d5d5d5"/>
+<rect x="130" y="80" width="22" height="25" fill="#d5d5d5"/>
+<rect x="165" y="15" width="22" height="90" fill="#002a3a"/>
+<text x="36" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">LOT</text>
+<text x="71" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">DTC</text>
+<text x="106" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">WALK</text>
+<text x="141" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">REC</text>
+<text x="176" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">KAPA</text>
+</svg>
+</div>
+
+<div itemscope itemtype="https://schema.org/Place" style="background: #ffffff; border: 1px solid #e5e5e5; border-top: 4px solid #8a7a3a; border-radius: 6px; padding: 1rem 0.85rem; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
 <meta itemprop="containedInPlace" content="Douglas County, Colorado" />
-<div class="tier-label">Premium Tier</div>
-<div class="city-name">Castle Pines, Colorado</div>
-<div class="sample-size">n = 176 listings</div>
-</th>
-<td data-label="Q1 median sale" class="hero-stat"><meta itemprop="value" content="1065000" />$1,065,000</td>
-<td data-label="Half-acre+ estate lots">Partial (Country Club)</td>
-<td data-label="Direct DTC access">✗ 25–30 min</td>
-<td data-label="Walkable downtown">✗ None</td>
-<td data-label="HOA rec centers + trails">Partial</td>
-<td data-label="KAPA airport access">Partial (15–20 min)</td>
-</tr>
-<tr>
-<th scope="row" itemscope itemtype="https://schema.org/Place" style="border-left: 4px solid #4a7c59;">
-<meta itemprop="name" content="Highlands Ranch, Colorado" />
+<div itemprop="name" style="font-weight: 700; font-size: 1rem; color: #002a3a;">Castle Pines</div>
+<div style="font-size: 0.78rem; color: #81848a; margin-bottom: 0.6rem;">$1,065,000 · n = 176</div>
+<svg viewBox="0 0 200 130" style="width: 100%; height: auto; max-width: 240px;" role="img" aria-labelledby="cp-fp-title cp-fp-desc">
+<title id="cp-fp-title">Castle Pines, Colorado profile fingerprint</title>
+<desc id="cp-fp-desc">Castle Pines sits middle across most dimensions with no clear leader. Estate lots are partial (Country Club enclaves only). Walkable downtown is absent. Profile shape is medium-medium-short-medium-medium.</desc>
+<line x1="20" y1="105" x2="195" y2="105" stroke="#e5e5e5" stroke-width="1"/>
+<rect x="25" y="55" width="22" height="50" fill="#c8965a"/>
+<rect x="60" y="80" width="22" height="25" fill="#d5d5d5"/>
+<rect x="95" y="90" width="22" height="15" fill="#d5d5d5"/>
+<rect x="130" y="55" width="22" height="50" fill="#c8965a"/>
+<rect x="165" y="55" width="22" height="50" fill="#c8965a"/>
+<text x="36" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">LOT</text>
+<text x="71" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">DTC</text>
+<text x="106" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">WALK</text>
+<text x="141" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">REC</text>
+<text x="176" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">KAPA</text>
+</svg>
+</div>
+
+<div itemscope itemtype="https://schema.org/Place" style="background: #ffffff; border: 1px solid #e5e5e5; border-top: 4px solid #4a7c59; border-radius: 6px; padding: 1rem 0.85rem; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
 <meta itemprop="containedInPlace" content="Douglas County, Colorado" />
-<div class="tier-label">Move-Up Tier</div>
-<div class="city-name">Highlands Ranch, Colorado</div>
-<div class="sample-size">n = 499 listings</div>
-</th>
-<td data-label="Q1 median sale" class="hero-stat"><meta itemprop="value" content="785000" />$785,000</td>
-<td data-label="Half-acre+ estate lots">✗ Rare</td>
-<td data-label="Direct DTC access">✗ 25–35 min</td>
-<td data-label="Walkable downtown">✗ None</td>
-<td data-label="HOA rec centers + trails"><strong>✓ Best in class</strong></td>
-<td data-label="KAPA airport access">✗ 20+ min</td>
-</tr>
-<tr>
-<th scope="row" itemscope itemtype="https://schema.org/Place" style="border-left: 4px solid #c8965a;">
-<meta itemprop="name" content="Parker, Colorado" />
+<div itemprop="name" style="font-weight: 700; font-size: 1rem; color: #002a3a;">Highlands Ranch</div>
+<div style="font-size: 0.78rem; color: #81848a; margin-bottom: 0.6rem;">$785,000 · n = 499</div>
+<svg viewBox="0 0 200 130" style="width: 100%; height: auto; max-width: 240px;" role="img" aria-labelledby="hr-fp-title hr-fp-desc">
+<title id="hr-fp-title">Highlands Ranch, Colorado profile fingerprint</title>
+<desc id="hr-fp-desc">Highlands Ranch's profile is dominated by HOA-managed rec centers and trails — its single tall bar. Lots are rare; DTC access is moderate; walkable downtown absent; KAPA access limited. Shape is short-short-short-tall-short.</desc>
+<line x1="20" y1="105" x2="195" y2="105" stroke="#e5e5e5" stroke-width="1"/>
+<rect x="25" y="90" width="22" height="15" fill="#d5d5d5"/>
+<rect x="60" y="80" width="22" height="25" fill="#d5d5d5"/>
+<rect x="95" y="90" width="22" height="15" fill="#d5d5d5"/>
+<rect x="130" y="15" width="22" height="90" fill="#4a7c59"/>
+<rect x="165" y="80" width="22" height="25" fill="#d5d5d5"/>
+<text x="36" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">LOT</text>
+<text x="71" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">DTC</text>
+<text x="106" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">WALK</text>
+<text x="141" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">REC</text>
+<text x="176" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">KAPA</text>
+</svg>
+</div>
+
+<div itemscope itemtype="https://schema.org/Place" style="background: #ffffff; border: 1px solid #e5e5e5; border-top: 4px solid #c8965a; border-radius: 6px; padding: 1rem 0.85rem; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
 <meta itemprop="containedInPlace" content="Douglas County, Colorado" />
-<div class="tier-label">Lifestyle Alternative</div>
-<div class="city-name">Parker, Colorado</div>
-<div class="sample-size">n = 448 listings</div>
-</th>
-<td data-label="Q1 median sale" class="hero-stat"><meta itemprop="value" content="719000" />$719,000</td>
-<td data-label="Half-acre+ estate lots">✗ Rare</td>
-<td data-label="Direct DTC access">✗ 35–45 min</td>
-<td data-label="Walkable downtown"><strong>✓ Mainstreet</strong></td>
-<td data-label="HOA rec centers + trails">Partial</td>
-<td data-label="KAPA airport access">✗ 25+ min</td>
-</tr>
-</tbody>
-</table>
-<figcaption>Sources: REcolorado MLS, Q1 2026 single-family residential listings (January 1 – March 31, 2026) for the median sale prices — includes Closed, Active, Coming Soon, Pending, Withdrawn, and Expired status. Lifestyle dimensions (estate lots, DTC access, walkable downtown, HOA rec centers, KAPA airport) sourced from city geography, observable infrastructure, and Google Maps drive-time estimates from the geographic center of each city. Compiled by selling303.com on April 29, 2026.<br /><em>Definitions: DTC = Denver Tech Center commercial corridor along I-25 between Belleview and Orchard. KAPA = Centennial Airport, the primary general-aviation airport for the South Denver Metro. "HOA-managed rec centers and trails" describes a unified community-association infrastructure (the gold standard is the Highlands Ranch Community Association: 4 rec centers, 26 parks, 70+ miles of trails). "Routine" indicates the dimension is the prevailing pattern for the city; "Partial" indicates it exists in some neighborhoods but isn't city-wide; "Limited" indicates it exists at a smaller scale than peer suburbs.</em></figcaption>
+<div itemprop="name" style="font-weight: 700; font-size: 1rem; color: #002a3a;">Parker</div>
+<div style="font-size: 0.78rem; color: #81848a; margin-bottom: 0.6rem;">$719,000 · n = 448</div>
+<svg viewBox="0 0 200 130" style="width: 100%; height: auto; max-width: 240px;" role="img" aria-labelledby="pk-fp-title pk-fp-desc">
+<title id="pk-fp-title">Parker, Colorado profile fingerprint</title>
+<desc id="pk-fp-desc">Parker leads on walkable downtown (Mainstreet) — its single tall bar. Lots are rare; DTC access lags (35-45 minutes); rec infrastructure is partial; KAPA access lags. Shape is short-short-tall-medium-short.</desc>
+<line x1="20" y1="105" x2="195" y2="105" stroke="#e5e5e5" stroke-width="1"/>
+<rect x="25" y="90" width="22" height="15" fill="#d5d5d5"/>
+<rect x="60" y="90" width="22" height="15" fill="#d5d5d5"/>
+<rect x="95" y="15" width="22" height="90" fill="#c8965a"/>
+<rect x="130" y="55" width="22" height="50" fill="#c8965a"/>
+<rect x="165" y="90" width="22" height="15" fill="#d5d5d5"/>
+<text x="36" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">LOT</text>
+<text x="71" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">DTC</text>
+<text x="106" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">WALK</text>
+<text x="141" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">REC</text>
+<text x="176" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">KAPA</text>
+</svg>
+</div>
+
+</div>
+<figcaption style="font-size: 0.82rem; color: #81848a; line-height: 1.5; margin-top: 1rem;">Sources: REcolorado MLS Q1 2026 single-family residential listings (January 1 – March 31, 2026) for median sale prices and listing counts. Lifestyle dimensions sourced from city geography, observable infrastructure, and Google Maps drive-time estimates. Compiled by selling303.com on April 29, 2026.<br /><em>Bar abbreviations: LOT = half-acre-plus estate lots common · DTC = direct Denver Tech Center access (drive time) · WALK = walkable downtown / Mainstreet present · REC = HOA-managed rec centers and trails · KAPA = Centennial Airport access. Tall bar = the suburb leads on this dimension; medium = partial / city-section only; short = rare or limited.</em></figcaption>
 </figure>
 
-<p>Greenwood Village uniquely wins on three dimensions — half-acre-plus estate lots, direct DTC access, and Centennial Airport proximity — and loses on two (no walkable downtown, limited HOA-managed rec infrastructure). Every other suburb in the comparison wins on at most one of these dimensions. That single-row scan is the answer to "is the price tag worth it?": the premium is justified <em>only</em> if your relocation list specifically requires the three things the GV row marks ✓. If your priority list is "walkable downtown" or "rec center for the kids," you're paying $1M+ for capabilities you don't need while losing the ones you do.</p>
+<p>Greenwood Village's profile is uniquely shaped — tall on three dimensions (estate lots, DTC, KAPA) where every other South Denver suburb has at most one tall bar. That asymmetry is the answer to "is the price tag worth it?": the premium is justified <em>only</em> if your priority list specifically requires the things Greenwood Village uniquely delivers. If walkable downtown or family rec infrastructure tops your list, you're paying $1M+ extra for capabilities you don't need while losing the ones you do.</p>
 
 <p>One related data point worth knowing: the Q1 2026 median days-in-MLS for closed Greenwood Village transactions was 5 days, while the average was 50 days and 8 homes expired without selling. The luxury tier rewards pricing precision more harshly than the broader metro. <a href="/blog/why-homes-sit-on-market-south-denver">Why homes sit on the market in South Denver</a> covers the dynamic broadly; in Greenwood Village it's the difference between selling in a week and sitting through a full season.</p>
 
