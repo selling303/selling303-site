@@ -248,7 +248,7 @@
   - Target keywords: buyer agent new construction Colorado 2026, new build representation rules, Parker new construction buyer agent
 
 #### Day 30 — Sunday, May 3
-- [ ] **"Move-Up Seller Myth: 'I'll Wait Until the Market Gets Better' — Why That's Costing You Money in Lakewood"**
+- [x] **"Move-Up Seller Myth: 'I'll Wait Until the Market Gets Better' — Why That's Costing You Money in Lakewood"** *(drafted 2026-05-02)*
   - Specialization: `/move-up-sellers` | Geographic: `/lakewood`
   - Type: Seller advice | Funnel: BOFU
   - Angle: Opportunity cost analysis for waiting. Equity erosion scenarios, rate lock math, move-up spread dynamics. Lakewood as the case study.
