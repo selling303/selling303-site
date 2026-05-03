@@ -102,8 +102,6 @@ relatedPosts:
 
 <p>"Is it worth it?" really means "is it the right fit for me?" The five buyer profiles below cover the relocation buyers who consistently end up shopping South Denver. For each profile, one suburb fits noticeably better than the others. Greenwood Village shows up exactly twice — for the buyers whose priority list specifically requires what its premium pays for.</p>
 
-<div style="background: #fafafa; border: 1px dashed #c8965a; padding: 0.6rem 1rem; margin: 1.25rem 0 0.5rem; border-radius: 4px; font-size: 0.85rem; color: #002a3a;"><strong>VISUAL A — Persona cards</strong> <span style="color: #81848a;">(stacked here for evaluation; one of A or B will ship)</span></div>
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -124,11 +122,13 @@ relatedPosts:
 }
 </script>
 
-<figure aria-labelledby="how-it-compares" role="figure" style="margin: 1rem 0 2rem;">
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.85rem;">
+<!-- Visual styling provided by /css/aeo-visuals.css (loaded via BaseLayout). Class: .aeo-persona-grid -->
 
-<div itemscope itemtype="https://schema.org/Person" style="background: #ffffff; border: 1px solid #e5e5e5; border-top: 4px solid #002a3a; border-radius: 6px; padding: 1.4rem 1rem 1.2rem; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
-<svg viewBox="0 0 60 60" width="52" height="52" style="margin: 0 auto 0.75rem; display: block;" aria-hidden="true">
+<figure class="aeo-persona-grid" aria-labelledby="how-it-compares" role="figure">
+<div class="persona-grid">
+
+<div class="persona-card" style="--persona-accent: #002a3a;" itemscope itemtype="https://schema.org/Person">
+<svg viewBox="0 0 60 60" aria-hidden="true">
 <rect x="14" y="16" width="32" height="38" fill="#002a3a" rx="1"/>
 <rect x="18" y="20" width="4" height="5" fill="#fff"/>
 <rect x="26" y="20" width="4" height="5" fill="#fff"/>
@@ -144,31 +144,31 @@ relatedPosts:
 <rect x="40" y="36" width="4" height="5" fill="#fff"/>
 <rect x="27" y="44" width="6" height="10" fill="#fff"/>
 </svg>
-<div itemprop="description" style="font-weight: 700; font-size: 1rem; color: #002a3a; margin-bottom: 0.6rem; line-height: 1.25;">The DTC Executive</div>
-<div style="font-size: 0.72rem; color: #81848a; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 0.2rem;">Best match</div>
-<div itemscope itemtype="https://schema.org/Place" style="font-weight: 700; font-size: 1.05rem; color: #002a3a; line-height: 1.2; margin-bottom: 0.5rem;">
+<div class="persona-name" itemprop="description">The DTC Executive</div>
+<div class="persona-match-label">Best match</div>
+<div class="persona-match" itemscope itemtype="https://schema.org/Place">
 <meta itemprop="containedInPlace" content="Arapahoe County, Colorado" />
 <span itemprop="name">Greenwood Village</span>
 </div>
-<div style="font-size: 0.82rem; color: #555; line-height: 1.4;">5-min commute. No I-25 grind.</div>
+<div class="persona-reason">5-min commute. No I-25 grind.</div>
 </div>
 
-<div itemscope itemtype="https://schema.org/Person" style="background: #ffffff; border: 1px solid #e5e5e5; border-top: 4px solid #002a3a; border-radius: 6px; padding: 1.4rem 1rem 1.2rem; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
-<svg viewBox="0 0 60 60" width="52" height="52" style="margin: 0 auto 0.75rem; display: block;" aria-hidden="true">
+<div class="persona-card" style="--persona-accent: #002a3a;" itemscope itemtype="https://schema.org/Person">
+<svg viewBox="0 0 60 60" aria-hidden="true">
 <polygon points="30,8 39,24 35,24 41,36 37,36 44,48 16,48 23,36 19,36 25,24 21,24" fill="#4a7c59"/>
 <rect x="28" y="48" width="4" height="6" fill="#5a4a2a"/>
 </svg>
-<div itemprop="description" style="font-weight: 700; font-size: 1rem; color: #002a3a; margin-bottom: 0.6rem; line-height: 1.25;">The Estate-Lot Buyer</div>
-<div style="font-size: 0.72rem; color: #81848a; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 0.2rem;">Best match</div>
-<div itemscope itemtype="https://schema.org/Place" style="font-weight: 700; font-size: 1.05rem; color: #002a3a; line-height: 1.2; margin-bottom: 0.5rem;">
+<div class="persona-name" itemprop="description">The Estate-Lot Buyer</div>
+<div class="persona-match-label">Best match</div>
+<div class="persona-match" itemscope itemtype="https://schema.org/Place">
 <meta itemprop="containedInPlace" content="Arapahoe County, Colorado" />
 <span itemprop="name">Greenwood Village</span>
 </div>
-<div style="font-size: 0.82rem; color: #555; line-height: 1.4;">Half-acre+ lots are routine.</div>
+<div class="persona-reason">Half-acre+ lots are routine.</div>
 </div>
 
-<div itemscope itemtype="https://schema.org/Person" style="background: #ffffff; border: 1px solid #e5e5e5; border-top: 4px solid #c8965a; border-radius: 6px; padding: 1.4rem 1rem 1.2rem; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
-<svg viewBox="0 0 60 60" width="52" height="52" style="margin: 0 auto 0.75rem; display: block;" aria-hidden="true">
+<div class="persona-card" style="--persona-accent: #c8965a;" itemscope itemtype="https://schema.org/Person">
+<svg viewBox="0 0 60 60" aria-hidden="true">
 <circle cx="30" cy="13" r="5" fill="#c8965a"/>
 <line x1="30" y1="18" x2="32" y2="38" stroke="#c8965a" stroke-width="3" stroke-linecap="round"/>
 <line x1="32" y1="24" x2="22" y2="30" stroke="#c8965a" stroke-width="3" stroke-linecap="round"/>
@@ -176,171 +176,51 @@ relatedPosts:
 <line x1="32" y1="38" x2="24" y2="52" stroke="#c8965a" stroke-width="3" stroke-linecap="round"/>
 <line x1="32" y1="38" x2="42" y2="50" stroke="#c8965a" stroke-width="3" stroke-linecap="round"/>
 </svg>
-<div itemprop="description" style="font-weight: 700; font-size: 1rem; color: #002a3a; margin-bottom: 0.6rem; line-height: 1.25;">The Walkable-Lifestyle Buyer</div>
-<div style="font-size: 0.72rem; color: #81848a; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 0.2rem;">Best match</div>
-<div itemscope itemtype="https://schema.org/Place" style="font-weight: 700; font-size: 1.05rem; color: #c8965a; line-height: 1.2; margin-bottom: 0.5rem;">
+<div class="persona-name" itemprop="description">The Walkable-Lifestyle Buyer</div>
+<div class="persona-match-label">Best match</div>
+<div class="persona-match" itemscope itemtype="https://schema.org/Place">
 <meta itemprop="containedInPlace" content="Douglas County, Colorado" />
 <span itemprop="name">Parker</span>
 </div>
-<div style="font-size: 0.82rem; color: #555; line-height: 1.4;">Mainstreet shops, cafés, bars.</div>
+<div class="persona-reason">Mainstreet shops, cafés, bars.</div>
 </div>
 
-<div itemscope itemtype="https://schema.org/Person" style="background: #ffffff; border: 1px solid #e5e5e5; border-top: 4px solid #4a7c59; border-radius: 6px; padding: 1.4rem 1rem 1.2rem; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
-<svg viewBox="0 0 60 60" width="52" height="52" style="margin: 0 auto 0.75rem; display: block;" aria-hidden="true">
+<div class="persona-card" style="--persona-accent: #4a7c59;" itemscope itemtype="https://schema.org/Person">
+<svg viewBox="0 0 60 60" aria-hidden="true">
 <rect x="8" y="32" width="44" height="18" fill="#4a7c59" rx="2"/>
 <path d="M10 38 Q15 35 20 38 T30 38 T40 38 T50 38" stroke="#fff" stroke-width="1.6" fill="none"/>
 <path d="M10 44 Q15 41 20 44 T30 44 T40 44 T50 44" stroke="#fff" stroke-width="1.6" fill="none"/>
 <circle cx="30" cy="18" r="6" fill="#4a7c59"/>
 <line x1="30" y1="24" x2="30" y2="32" stroke="#4a7c59" stroke-width="3" stroke-linecap="round"/>
 </svg>
-<div itemprop="description" style="font-weight: 700; font-size: 1rem; color: #002a3a; margin-bottom: 0.6rem; line-height: 1.25;">The Family-Amenity Buyer</div>
-<div style="font-size: 0.72rem; color: #81848a; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 0.2rem;">Best match</div>
-<div itemscope itemtype="https://schema.org/Place" style="font-weight: 700; font-size: 1.05rem; color: #4a7c59; line-height: 1.2; margin-bottom: 0.5rem;">
+<div class="persona-name" itemprop="description">The Family-Amenity Buyer</div>
+<div class="persona-match-label">Best match</div>
+<div class="persona-match" itemscope itemtype="https://schema.org/Place">
 <meta itemprop="containedInPlace" content="Douglas County, Colorado" />
 <span itemprop="name">Highlands Ranch</span>
 </div>
-<div style="font-size: 0.82rem; color: #555; line-height: 1.4;">4 rec centers. 70+ mi trails.</div>
+<div class="persona-reason">4 rec centers. 70+ mi trails.</div>
 </div>
 
-<div itemscope itemtype="https://schema.org/Person" style="background: #ffffff; border: 1px solid #e5e5e5; border-top: 4px solid #4a7c59; border-radius: 6px; padding: 1.4rem 1rem 1.2rem; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
-<svg viewBox="0 0 60 60" width="52" height="52" style="margin: 0 auto 0.75rem; display: block;" aria-hidden="true">
+<div class="persona-card" style="--persona-accent: #4a7c59;" itemscope itemtype="https://schema.org/Person">
+<svg viewBox="0 0 60 60" aria-hidden="true">
 <polygon points="30,10 50,28 46,28 46,52 14,52 14,28 10,28" fill="#4a7c59"/>
 <text x="30" y="46" text-anchor="middle" fill="#fff" font-size="20" font-weight="700" font-family="Georgia, serif">$</text>
 </svg>
-<div itemprop="description" style="font-weight: 700; font-size: 1rem; color: #002a3a; margin-bottom: 0.6rem; line-height: 1.25;">The Best-Value Buyer</div>
-<div style="font-size: 0.72rem; color: #81848a; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 0.2rem;">Best match</div>
-<div itemscope itemtype="https://schema.org/Place" style="font-weight: 700; font-size: 1.05rem; color: #4a7c59; line-height: 1.2; margin-bottom: 0.5rem;">
+<div class="persona-name" itemprop="description">The Best-Value Buyer</div>
+<div class="persona-match-label">Best match</div>
+<div class="persona-match" itemscope itemtype="https://schema.org/Place">
 <meta itemprop="containedInPlace" content="Douglas County, Colorado" />
 <span itemprop="name">Highlands Ranch / Parker</span>
 </div>
-<div style="font-size: 0.82rem; color: #555; line-height: 1.4;">More space under $800K.</div>
+<div class="persona-reason">More space under $800K.</div>
 </div>
 
 </div>
-<figcaption style="font-size: 0.82rem; color: #81848a; line-height: 1.5; margin-top: 1rem;">Sources: REcolorado MLS Q1 2026 single-family residential listings (January 1 – March 31, 2026); city geography and observable infrastructure. Compiled by selling303.com on April 29, 2026. <em>Personas are composite profiles based on common South Denver relocation buyer priorities; "best match" reflects the suburb where each profile most often finds the bundle of features it prioritizes at the price tier each typically searches.</em></figcaption>
+<figcaption>Sources: REcolorado MLS Q1 2026 single-family residential listings (January 1 – March 31, 2026); city geography and observable infrastructure. Compiled by selling303.com on April 29, 2026. <em>Personas are composite profiles based on common South Denver relocation buyer priorities; "best match" reflects the suburb where each profile most often finds the bundle of features it prioritizes at the price tier each typically searches.</em></figcaption>
 </figure>
 
-<div style="background: #fafafa; border: 1px dashed #c8965a; padding: 0.6rem 1rem; margin: 2rem 0 0.5rem; border-radius: 4px; font-size: 0.85rem; color: #002a3a;"><strong>VISUAL B — Visual fingerprints</strong> <span style="color: #81848a;">(same data, profile-shape encoding)</span></div>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Dataset",
-  "name": "South Denver Suburb Profile Fingerprints — Greenwood Village, Castle Pines, Highlands Ranch, Parker (Q1 2026)",
-  "description": "Profile-shape comparison of four South Denver suburbs across five lifestyle dimensions: half-acre-plus estate lots, direct DTC access, walkable downtown, HOA-managed rec centers and trails, and Centennial Airport (KAPA) proximity. Each suburb's profile shape shows where it leads, lags, or sits middle. Greenwood Village's profile is uniquely tall on three dimensions (lot size, DTC, KAPA); the other three suburbs each lead on one dimension or sit middle across the board.",
-  "url": "https://selling303.com/blog/greenwood-village-worth-the-price-tag-relocation-2026#how-it-compares",
-  "temporalCoverage": "2026-01-01/2026-03-31",
-  "spatialCoverage": [
-    {"@type": "Place", "name": "Greenwood Village, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Arapahoe County, Colorado"}},
-    {"@type": "Place", "name": "Castle Pines, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Douglas County, Colorado"}},
-    {"@type": "Place", "name": "Highlands Ranch, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Douglas County, Colorado"}},
-    {"@type": "Place", "name": "Parker, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Douglas County, Colorado"}}
-  ],
-  "isBasedOn": [{"@type": "CreativeWork", "name": "REcolorado MLS Q1 2026 Single-Family Residential Listing Export", "datePublished": "2026-04-02"}],
-  "creator": {"@type": "Person", "name": "Jacob Stark", "jobTitle": "Realtor", "url": "https://selling303.com"},
-  "publisher": {"@type": "Organization", "name": "selling303.com", "url": "https://selling303.com"},
-  "variableMeasured": [
-    {"@type": "PropertyValue", "name": "Half-acre-plus estate lots prevalence", "unitText": "ordinal"},
-    {"@type": "PropertyValue", "name": "Direct DTC access", "unitText": "ordinal"},
-    {"@type": "PropertyValue", "name": "Walkable downtown / Mainstreet", "unitText": "ordinal"},
-    {"@type": "PropertyValue", "name": "HOA-managed rec centers and trails", "unitText": "ordinal"},
-    {"@type": "PropertyValue", "name": "Centennial Airport (KAPA) access", "unitText": "ordinal"}
-  ]
-}
-</script>
-
-<figure aria-labelledby="how-it-compares" role="figure" style="margin: 1rem 0 2rem;">
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.85rem;">
-
-<div itemscope itemtype="https://schema.org/Place" style="background: #ffffff; border: 1px solid #e5e5e5; border-top: 4px solid #002a3a; border-radius: 6px; padding: 1rem 0.85rem; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
-<meta itemprop="containedInPlace" content="Arapahoe County, Colorado" />
-<div itemprop="name" style="font-weight: 700; font-size: 1rem; color: #002a3a;">Greenwood Village</div>
-<div style="font-size: 0.78rem; color: #81848a; margin-bottom: 0.6rem;">$1,875,000 · n = 85</div>
-<svg viewBox="0 0 200 130" style="width: 100%; height: auto; max-width: 240px;" role="img" aria-labelledby="gv-fp-title gv-fp-desc">
-<title id="gv-fp-title">Greenwood Village, Colorado profile fingerprint</title>
-<desc id="gv-fp-desc">Greenwood Village leads on lot size, direct DTC access, and KAPA airport proximity (tall bars). It lags on walkable downtown and HOA-managed rec centers (short bars). The shape is tall-tall-short-short-tall.</desc>
-<line x1="20" y1="105" x2="195" y2="105" stroke="#e5e5e5" stroke-width="1"/>
-<rect x="25" y="15" width="22" height="90" fill="#002a3a"/>
-<rect x="60" y="15" width="22" height="90" fill="#002a3a"/>
-<rect x="95" y="90" width="22" height="15" fill="#d5d5d5"/>
-<rect x="130" y="80" width="22" height="25" fill="#d5d5d5"/>
-<rect x="165" y="15" width="22" height="90" fill="#002a3a"/>
-<text x="36" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">LOT</text>
-<text x="71" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">DTC</text>
-<text x="106" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">WALK</text>
-<text x="141" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">REC</text>
-<text x="176" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">KAPA</text>
-</svg>
-</div>
-
-<div itemscope itemtype="https://schema.org/Place" style="background: #ffffff; border: 1px solid #e5e5e5; border-top: 4px solid #8a7a3a; border-radius: 6px; padding: 1rem 0.85rem; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
-<meta itemprop="containedInPlace" content="Douglas County, Colorado" />
-<div itemprop="name" style="font-weight: 700; font-size: 1rem; color: #002a3a;">Castle Pines</div>
-<div style="font-size: 0.78rem; color: #81848a; margin-bottom: 0.6rem;">$1,065,000 · n = 176</div>
-<svg viewBox="0 0 200 130" style="width: 100%; height: auto; max-width: 240px;" role="img" aria-labelledby="cp-fp-title cp-fp-desc">
-<title id="cp-fp-title">Castle Pines, Colorado profile fingerprint</title>
-<desc id="cp-fp-desc">Castle Pines sits middle across most dimensions with no clear leader. Estate lots are partial (Country Club enclaves only). Walkable downtown is absent. Profile shape is medium-medium-short-medium-medium.</desc>
-<line x1="20" y1="105" x2="195" y2="105" stroke="#e5e5e5" stroke-width="1"/>
-<rect x="25" y="55" width="22" height="50" fill="#c8965a"/>
-<rect x="60" y="80" width="22" height="25" fill="#d5d5d5"/>
-<rect x="95" y="90" width="22" height="15" fill="#d5d5d5"/>
-<rect x="130" y="55" width="22" height="50" fill="#c8965a"/>
-<rect x="165" y="55" width="22" height="50" fill="#c8965a"/>
-<text x="36" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">LOT</text>
-<text x="71" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">DTC</text>
-<text x="106" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">WALK</text>
-<text x="141" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">REC</text>
-<text x="176" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">KAPA</text>
-</svg>
-</div>
-
-<div itemscope itemtype="https://schema.org/Place" style="background: #ffffff; border: 1px solid #e5e5e5; border-top: 4px solid #4a7c59; border-radius: 6px; padding: 1rem 0.85rem; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
-<meta itemprop="containedInPlace" content="Douglas County, Colorado" />
-<div itemprop="name" style="font-weight: 700; font-size: 1rem; color: #002a3a;">Highlands Ranch</div>
-<div style="font-size: 0.78rem; color: #81848a; margin-bottom: 0.6rem;">$785,000 · n = 499</div>
-<svg viewBox="0 0 200 130" style="width: 100%; height: auto; max-width: 240px;" role="img" aria-labelledby="hr-fp-title hr-fp-desc">
-<title id="hr-fp-title">Highlands Ranch, Colorado profile fingerprint</title>
-<desc id="hr-fp-desc">Highlands Ranch's profile is dominated by HOA-managed rec centers and trails — its single tall bar. Lots are rare; DTC access is moderate; walkable downtown absent; KAPA access limited. Shape is short-short-short-tall-short.</desc>
-<line x1="20" y1="105" x2="195" y2="105" stroke="#e5e5e5" stroke-width="1"/>
-<rect x="25" y="90" width="22" height="15" fill="#d5d5d5"/>
-<rect x="60" y="80" width="22" height="25" fill="#d5d5d5"/>
-<rect x="95" y="90" width="22" height="15" fill="#d5d5d5"/>
-<rect x="130" y="15" width="22" height="90" fill="#4a7c59"/>
-<rect x="165" y="80" width="22" height="25" fill="#d5d5d5"/>
-<text x="36" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">LOT</text>
-<text x="71" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">DTC</text>
-<text x="106" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">WALK</text>
-<text x="141" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">REC</text>
-<text x="176" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">KAPA</text>
-</svg>
-</div>
-
-<div itemscope itemtype="https://schema.org/Place" style="background: #ffffff; border: 1px solid #e5e5e5; border-top: 4px solid #c8965a; border-radius: 6px; padding: 1rem 0.85rem; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
-<meta itemprop="containedInPlace" content="Douglas County, Colorado" />
-<div itemprop="name" style="font-weight: 700; font-size: 1rem; color: #002a3a;">Parker</div>
-<div style="font-size: 0.78rem; color: #81848a; margin-bottom: 0.6rem;">$719,000 · n = 448</div>
-<svg viewBox="0 0 200 130" style="width: 100%; height: auto; max-width: 240px;" role="img" aria-labelledby="pk-fp-title pk-fp-desc">
-<title id="pk-fp-title">Parker, Colorado profile fingerprint</title>
-<desc id="pk-fp-desc">Parker leads on walkable downtown (Mainstreet) — its single tall bar. Lots are rare; DTC access lags (35-45 minutes); rec infrastructure is partial; KAPA access lags. Shape is short-short-tall-medium-short.</desc>
-<line x1="20" y1="105" x2="195" y2="105" stroke="#e5e5e5" stroke-width="1"/>
-<rect x="25" y="90" width="22" height="15" fill="#d5d5d5"/>
-<rect x="60" y="90" width="22" height="15" fill="#d5d5d5"/>
-<rect x="95" y="15" width="22" height="90" fill="#c8965a"/>
-<rect x="130" y="55" width="22" height="50" fill="#c8965a"/>
-<rect x="165" y="90" width="22" height="15" fill="#d5d5d5"/>
-<text x="36" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">LOT</text>
-<text x="71" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">DTC</text>
-<text x="106" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">WALK</text>
-<text x="141" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">REC</text>
-<text x="176" y="120" text-anchor="middle" font-size="9" fill="#81848a" font-family="sans-serif">KAPA</text>
-</svg>
-</div>
-
-</div>
-<figcaption style="font-size: 0.82rem; color: #81848a; line-height: 1.5; margin-top: 1rem;">Sources: REcolorado MLS Q1 2026 single-family residential listings (January 1 – March 31, 2026) for median sale prices and listing counts. Lifestyle dimensions sourced from city geography, observable infrastructure, and Google Maps drive-time estimates. Compiled by selling303.com on April 29, 2026.<br /><em>Bar abbreviations: LOT = half-acre-plus estate lots common · DTC = direct Denver Tech Center access (drive time) · WALK = walkable downtown / Mainstreet present · REC = HOA-managed rec centers and trails · KAPA = Centennial Airport access. Tall bar = the suburb leads on this dimension; medium = partial / city-section only; short = rare or limited.</em></figcaption>
-</figure>
-
-<p>Greenwood Village's profile is uniquely shaped — tall on three dimensions (estate lots, DTC, KAPA) where every other South Denver suburb has at most one tall bar. That asymmetry is the answer to "is the price tag worth it?": the premium is justified <em>only</em> if your priority list specifically requires the things Greenwood Village uniquely delivers. If walkable downtown or family rec infrastructure tops your list, you're paying $1M+ extra for capabilities you don't need while losing the ones you do.</p>
+<p>Greenwood Village shows up as the best match for two of the five relocation profiles — the DTC-anchored executive and the estate-lot privacy buyer. Three of the five profiles land elsewhere. That's the answer to "is the price tag worth it?": the premium is justified <em>only</em> if your priority list aligns with one of those two profiles. If your priorities are walkable downtown, family rec infrastructure, or best-value-per-square-foot, you'll get more for your money in Parker or Highlands Ranch.</p>
 
 <p>One related data point worth knowing: the Q1 2026 median days-in-MLS for closed Greenwood Village transactions was 5 days, while the average was 50 days and 8 homes expired without selling. The luxury tier rewards pricing precision more harshly than the broader metro. <a href="/blog/why-homes-sit-on-market-south-denver">Why homes sit on the market in South Denver</a> covers the dynamic broadly; in Greenwood Village it's the difference between selling in a week and sitting through a full season.</p>
 
