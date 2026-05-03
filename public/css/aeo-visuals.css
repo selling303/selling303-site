@@ -212,7 +212,90 @@
 }
 
 /* ============================================================
- * PLACEHOLDER CLASSES — built out in Phase 2–4 of the
+ * .aeo-persona-grid — buyer-persona match cards. Use when a
+ * post's argument is "which buyer profile fits which option"
+ * (relocation, move-up, builder selection, neighborhood
+ * selection). 4–6 cards per grid; auto-fits responsive columns.
+ *
+ * Schema (required by aeo-visual-builder skill):
+ *   - Wrapping <script type="application/ld+json"> ItemList block
+ *     above the figure with numberOfItems and per-card ListItem
+ *     entries pointing to the matched Place.
+ *   - Each .persona-card has itemscope itemtype="schema.org/Person".
+ *   - .persona-match contains itemscope itemtype="schema.org/Place"
+ *     with itemprop="name" and meta containedInPlace.
+ *
+ * Per-card accent: set --persona-accent inline on .persona-card
+ * (e.g. style="--persona-accent: #002a3a;"). Drives the top
+ * border and the suburb-name color.
+ * ============================================================ */
+
+.aeo-persona-grid {
+  margin: 1.25rem 0 2rem;
+}
+
+.aeo-persona-grid .persona-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.85rem;
+}
+
+.aeo-persona-grid .persona-card {
+  background: #ffffff;
+  border: 1px solid var(--color-border, #e5e5e5);
+  border-top: 4px solid var(--persona-accent, #002a3a);
+  border-radius: 6px;
+  padding: 1.4rem 1rem 1.2rem;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.aeo-persona-grid .persona-card svg {
+  display: block;
+  margin: 0 auto 0.75rem;
+  width: 52px;
+  height: 52px;
+}
+
+.aeo-persona-grid .persona-name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-primary, #002a3a);
+  margin-bottom: 0.6rem;
+  line-height: 1.25;
+}
+
+.aeo-persona-grid .persona-match-label {
+  font-size: 0.72rem;
+  color: var(--color-body-text, #81848a);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 0.2rem;
+}
+
+.aeo-persona-grid .persona-match {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--persona-accent, #002a3a);
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.aeo-persona-grid .persona-reason {
+  font-size: 0.82rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+.aeo-persona-grid figcaption {
+  font-size: 0.82rem;
+  color: var(--color-body-text, #81848a);
+  line-height: 1.5;
+  margin-top: 1rem;
+}
+
+/* ============================================================
+ * PLACEHOLDER CLASSES — built out in later phases of the
  * Site-Wide Visual Standard plan. Kept here as anchors so the
  * skill can ship templates that reference them without forward
  * references breaking the build.
