@@ -36,7 +36,7 @@ Tracking file for every page that uses a data visual. Source of truth for what v
 | `500k-home-centennial-highlands-ranch-parker-2026` | comparison-table | Dataset + Place Microdata + per-cell value | **optimized** | 2026-04-30 |
 | `expired-listing-trap-englewood-switching-agents-2026` | comparison-table | Dataset + Place Microdata + per-cell value | **optimized** | 2026-04-30 |
 | `first-time-buyer-bidding-littleton-spring-2026` | tier-list (legacy) | unknown | needs upgrade — Phase 3 | — |
-| `greenwood-village-worth-the-price-tag-relocation-2026` | comparison-table | Place Microdata + per-cell value | **optimized** | 2026-04-29 |
+| `greenwood-village-worth-the-price-tag-relocation-2026` | comparison-table (value trade-off matrix) | Dataset JSON-LD + Place Microdata + machine-readable value on price cells | **optimized** | 2026-04-29 |
 | `first-time-home-buyer-guide-englewood-colorado-2026` | none detected | — | review needed (likely howto candidate — Phase 4 flag-only) | — |
 | `hidden-costs-selling-home-arapahoe-county-net-sheet-2026` | tier-list (legacy), cost flow | unknown | needs upgrade — Phase 3 (cost-breakdown candidate) | — |
 | `littleton-vs-centennial-south-denver-relocation` | none detected | — | review needed (likely comparison-table candidate) | — |

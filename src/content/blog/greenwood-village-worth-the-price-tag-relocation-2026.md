@@ -100,34 +100,34 @@ relatedPosts:
 
 <h2 id="how-it-compares">How Does Greenwood Village Compare to Other South Denver Luxury Options?</h2>
 
-<p>Relocation buyers shopping at this price tier almost always have multiple South Denver suburbs on the list. The Q1 2026 MLS data lets you see the practical differences side by side. The data below covers every Q1 single-family residential listing in each city — closed, active, pending, expired, and withdrawn — pulled from REcolorado MLS on April 2, 2026.</p>
+<p>The price gap is obvious. The harder question is what the gap actually buys you. Below is the trade-off across the six dimensions relocation buyers consistently weigh when deciding between Greenwood Village and its closest South Denver alternatives — Castle Pines, Highlands Ranch, and Parker. Median sale prices come from REcolorado MLS Q1 2026 single-family residential data; the lifestyle dimensions are based on city geography and observable on-the-ground reality.</p>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Dataset",
-  "name": "South Denver Luxury Market Comparison: Greenwood Village, Castle Pines, Highlands Ranch, and Denver Metro Median, Colorado (Q1 2026)",
-  "description": "Single-family residential listing comparison across three South Denver luxury and move-up suburbs (Greenwood Village, Castle Pines, Highlands Ranch) and the broader Denver Metro median. Covers all REcolorado MLS Closed, Active, Coming Soon, Pending, Withdrawn, and Expired status listings for January 1 through March 31, 2026 for the three cities; metro median sourced from the DMAR Market Trends Report (March 2026 release). Reports total Q1 listings count, median and average sale prices, median days in MLS, and median sale-to-list price ratio.",
+  "name": "Greenwood Village Value Trade-Off Comparison: Price vs. Lifestyle Dimensions Across Four South Denver Suburbs (Q1 2026)",
+  "description": "Side-by-side trade-off comparison of Greenwood Village, Castle Pines, Highlands Ranch, and Parker, Colorado across the six dimensions relocation buyers weigh: Q1 2026 median single-family sale price, prevalence of half-acre-plus estate lots, direct access to the Denver Tech Center, walkable downtown / Mainstreet character, HOA-managed recreation centers and trails, and Centennial Airport (KAPA) proximity. Median sale prices pulled from REcolorado MLS Q1 2026 single-family residential listings (January 1 through March 31, 2026). Lifestyle dimensions sourced from city geography and observable infrastructure.",
   "url": "https://selling303.com/blog/greenwood-village-worth-the-price-tag-relocation-2026",
   "temporalCoverage": "2026-01-01/2026-03-31",
   "spatialCoverage": [
     {"@type": "Place", "name": "Greenwood Village, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Arapahoe County, Colorado"}},
     {"@type": "Place", "name": "Castle Pines, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Douglas County, Colorado"}},
     {"@type": "Place", "name": "Highlands Ranch, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Douglas County, Colorado"}},
-    {"@type": "Place", "name": "Denver Metro, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Colorado, USA"}}
+    {"@type": "Place", "name": "Parker, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Douglas County, Colorado"}}
   ],
   "isBasedOn": [
-    {"@type": "CreativeWork", "name": "REcolorado MLS Q1 2026 Single-Family Residential Listing Export", "datePublished": "2026-04-02"},
-    {"@type": "CreativeWork", "name": "DMAR Market Trends Report, March 2026", "datePublished": "2026-04-04", "url": "https://www.dmarealtors.com/market-trends"}
+    {"@type": "CreativeWork", "name": "REcolorado MLS Q1 2026 Single-Family Residential Listing Export", "datePublished": "2026-04-02"}
   ],
   "creator": {"@type": "Person", "name": "Jacob Stark", "jobTitle": "Realtor", "url": "https://selling303.com"},
   "publisher": {"@type": "Organization", "name": "selling303.com", "url": "https://selling303.com"},
   "variableMeasured": [
-    {"@type": "PropertyValue", "name": "Total Q1 2026 listings (all statuses)", "unitText": "count"},
-    {"@type": "PropertyValue", "name": "Median sale price", "unitText": "USD"},
-    {"@type": "PropertyValue", "name": "Average sale price", "unitText": "USD"},
-    {"@type": "PropertyValue", "name": "Median days in MLS", "unitText": "DAY"},
-    {"@type": "PropertyValue", "name": "Median sale-to-list price ratio", "unitText": "P1"}
+    {"@type": "PropertyValue", "name": "Q1 2026 median single-family sale price", "unitText": "USD"},
+    {"@type": "PropertyValue", "name": "Half-acre-plus estate lots common", "unitText": "categorical"},
+    {"@type": "PropertyValue", "name": "Direct DTC access", "unitText": "minutes"},
+    {"@type": "PropertyValue", "name": "Walkable downtown or Mainstreet", "unitText": "categorical"},
+    {"@type": "PropertyValue", "name": "HOA-managed rec centers and trails", "unitText": "categorical"},
+    {"@type": "PropertyValue", "name": "Centennial Airport (KAPA) access", "unitText": "minutes"}
   ]
 }
 </script>
@@ -136,15 +136,16 @@ relatedPosts:
 
 <figure class="aeo-comp-table" aria-labelledby="how-it-compares" role="figure">
 <table>
-<caption>Q1 2026 single-family residential market comparison — Greenwood Village, Castle Pines, Highlands Ranch, and South Denver Metro median, Colorado | January 1 – March 31, 2026</caption>
+<caption>Greenwood Village value trade-off — price vs. lifestyle dimensions across four South Denver suburbs, Colorado | Q1 2026 (January 1 – March 31, 2026)</caption>
 <thead>
 <tr>
 <th scope="col">City</th>
-<th scope="col">Q1 listings (count)</th>
-<th scope="col">Median sale (USD)</th>
-<th scope="col">Avg sale (USD)</th>
-<th scope="col">Median DIM (days)</th>
-<th scope="col">Median sale/list</th>
+<th scope="col">Q1 median sale</th>
+<th scope="col">Half-acre+ estate lots</th>
+<th scope="col">Direct DTC access</th>
+<th scope="col">Walkable downtown</th>
+<th scope="col">HOA rec centers + trails</th>
+<th scope="col">KAPA airport access</th>
 </tr>
 </thead>
 <tbody>
@@ -156,11 +157,12 @@ relatedPosts:
 <div class="city-name">Greenwood Village, Colorado</div>
 <div class="sample-size">n = 85 listings</div>
 </th>
-<td data-label="Q1 listings"><meta itemprop="value" content="85" />85</td>
-<td data-label="Median sale" class="hero-stat"><meta itemprop="value" content="1875000" />$1,875,000</td>
-<td data-label="Avg sale"><meta itemprop="value" content="2036265" />$2,036,265</td>
-<td data-label="Median DIM" class="speed-stat"><meta itemprop="value" content="5" />5 days</td>
-<td data-label="Median sale/list"><meta itemprop="value" content="0.97" />97%</td>
+<td data-label="Q1 median sale" class="hero-stat"><meta itemprop="value" content="1875000" />$1,875,000</td>
+<td data-label="Half-acre+ estate lots"><strong>✓ Routine</strong></td>
+<td data-label="Direct DTC access"><strong>✓ 5–10 min</strong></td>
+<td data-label="Walkable downtown">✗ None</td>
+<td data-label="HOA rec centers + trails">✗ Limited</td>
+<td data-label="KAPA airport access"><strong>✓ 5–10 min</strong></td>
 </tr>
 <tr>
 <th scope="row" itemscope itemtype="https://schema.org/Place" style="border-left: 4px solid #8a7a3a;">
@@ -170,11 +172,12 @@ relatedPosts:
 <div class="city-name">Castle Pines, Colorado</div>
 <div class="sample-size">n = 176 listings</div>
 </th>
-<td data-label="Q1 listings"><meta itemprop="value" content="176" />176</td>
-<td data-label="Median sale" class="hero-stat"><meta itemprop="value" content="1065000" />$1,065,000</td>
-<td data-label="Avg sale"><meta itemprop="value" content="1218466" />$1,218,466</td>
-<td data-label="Median DIM"><meta itemprop="value" content="43" />43 days</td>
-<td data-label="Median sale/list"><meta itemprop="value" content="0.96" />96%</td>
+<td data-label="Q1 median sale" class="hero-stat"><meta itemprop="value" content="1065000" />$1,065,000</td>
+<td data-label="Half-acre+ estate lots">Partial (Country Club)</td>
+<td data-label="Direct DTC access">✗ 25–30 min</td>
+<td data-label="Walkable downtown">✗ None</td>
+<td data-label="HOA rec centers + trails">Partial</td>
+<td data-label="KAPA airport access">Partial (15–20 min)</td>
 </tr>
 <tr>
 <th scope="row" itemscope itemtype="https://schema.org/Place" style="border-left: 4px solid #4a7c59;">
@@ -184,34 +187,36 @@ relatedPosts:
 <div class="city-name">Highlands Ranch, Colorado</div>
 <div class="sample-size">n = 499 listings</div>
 </th>
-<td data-label="Q1 listings"><meta itemprop="value" content="499" />499</td>
-<td data-label="Median sale" class="hero-stat"><meta itemprop="value" content="785000" />$785,000</td>
-<td data-label="Avg sale"><meta itemprop="value" content="909029" />$909,029</td>
-<td data-label="Median DIM"><meta itemprop="value" content="18" />18 days</td>
-<td data-label="Median sale/list"><meta itemprop="value" content="0.98" />98%</td>
+<td data-label="Q1 median sale" class="hero-stat"><meta itemprop="value" content="785000" />$785,000</td>
+<td data-label="Half-acre+ estate lots">✗ Rare</td>
+<td data-label="Direct DTC access">✗ 25–35 min</td>
+<td data-label="Walkable downtown">✗ None</td>
+<td data-label="HOA rec centers + trails"><strong>✓ Best in class</strong></td>
+<td data-label="KAPA airport access">✗ 20+ min</td>
 </tr>
 <tr>
-<th scope="row" itemscope itemtype="https://schema.org/Place" style="border-left: 4px solid #81848a;">
-<meta itemprop="name" content="Denver Metro, Colorado" />
-<meta itemprop="containedInPlace" content="Colorado, USA" />
-<div class="tier-label">Metro Median</div>
-<div class="city-name">South Denver Metro, Colorado</div>
-<div class="sample-size">DMAR March 2026</div>
+<th scope="row" itemscope itemtype="https://schema.org/Place" style="border-left: 4px solid #c8965a;">
+<meta itemprop="name" content="Parker, Colorado" />
+<meta itemprop="containedInPlace" content="Douglas County, Colorado" />
+<div class="tier-label">Lifestyle Alternative</div>
+<div class="city-name">Parker, Colorado</div>
+<div class="sample-size">n = 448 listings</div>
 </th>
-<td data-label="Q1 listings">—</td>
-<td data-label="Median sale" class="hero-stat"><meta itemprop="value" content="590000" />$590,000</td>
-<td data-label="Avg sale"><meta itemprop="value" content="711493" />$711,493</td>
-<td data-label="Median DIM"><meta itemprop="value" content="16" />16 days</td>
-<td data-label="Median sale/list"><meta itemprop="value" content="0.9913" />99%</td>
+<td data-label="Q1 median sale" class="hero-stat"><meta itemprop="value" content="719000" />$719,000</td>
+<td data-label="Half-acre+ estate lots">✗ Rare</td>
+<td data-label="Direct DTC access">✗ 35–45 min</td>
+<td data-label="Walkable downtown"><strong>✓ Mainstreet</strong></td>
+<td data-label="HOA rec centers + trails">Partial</td>
+<td data-label="KAPA airport access">✗ 25+ min</td>
 </tr>
 </tbody>
 </table>
-<figcaption>Sources: REcolorado MLS, Q1 2026 single-family residential listings (January 1 – March 31, 2026) for Greenwood Village, Castle Pines, and Highlands Ranch — includes Closed, Active, Coming Soon, Pending, Withdrawn, and Expired status. Metro median pulled from the DMAR Market Trends Report (March 2026 data, single-family detached). Compiled by selling303.com on April 2, 2026.<br /><em>Definitions: DIM = days in MLS (time from list date to under-contract date, closed transactions only). Median sale/list = close-price-to-original-list-price ratio (median across closed transactions in the period).</em></figcaption>
+<figcaption>Sources: REcolorado MLS, Q1 2026 single-family residential listings (January 1 – March 31, 2026) for the median sale prices — includes Closed, Active, Coming Soon, Pending, Withdrawn, and Expired status. Lifestyle dimensions (estate lots, DTC access, walkable downtown, HOA rec centers, KAPA airport) sourced from city geography, observable infrastructure, and Google Maps drive-time estimates from the geographic center of each city. Compiled by selling303.com on April 29, 2026.<br /><em>Definitions: DTC = Denver Tech Center commercial corridor along I-25 between Belleview and Orchard. KAPA = Centennial Airport, the primary general-aviation airport for the South Denver Metro. "HOA-managed rec centers and trails" describes a unified community-association infrastructure (the gold standard is the Highlands Ranch Community Association: 4 rec centers, 26 parks, 70+ miles of trails). "Routine" indicates the dimension is the prevailing pattern for the city; "Partial" indicates it exists in some neighborhoods but isn't city-wide; "Limited" indicates it exists at a smaller scale than peer suburbs.</em></figcaption>
 </figure>
 
-<p>The Q1 2026 median sale price in Greenwood Village ($1,875,000) is 76 percent above Castle Pines and 139 percent above Highlands Ranch — and more than triple the metro median.</p>
+<p>Greenwood Village uniquely wins on three dimensions — half-acre-plus estate lots, direct DTC access, and Centennial Airport proximity — and loses on two (no walkable downtown, limited HOA-managed rec infrastructure). Every other suburb in the comparison wins on at most one of these dimensions. That single-row scan is the answer to "is the price tag worth it?": the premium is justified <em>only</em> if your relocation list specifically requires the three things the GV row marks ✓. If your priority list is "walkable downtown" or "rec center for the kids," you're paying $1M+ for capabilities you don't need while losing the ones you do.</p>
 
-<p>The other striking number is the median days in the MLS: 5 days. That's faster than any other South Denver suburb in the comparison and faster than the metro median of 16. The reading isn't that Greenwood Village is a hotter market overall — the average DIM in GV was 50 days, with eight homes expiring in Q1. The reading is that there are two GV markets stacked on top of each other: the well-priced, well-prepared listings that sell almost immediately, and the misaligned listings that sit and eventually expire. <a href="/blog/why-homes-sit-on-market-south-denver">Why homes sit on the market in South Denver</a> covers this dynamic broadly, but it's especially pronounced at the luxury tier.</p>
+<p>One related data point worth knowing: the Q1 2026 median days-in-MLS for closed Greenwood Village transactions was 5 days, while the average was 50 days and 8 homes expired without selling. The luxury tier rewards pricing precision more harshly than the broader metro. <a href="/blog/why-homes-sit-on-market-south-denver">Why homes sit on the market in South Denver</a> covers the dynamic broadly; in Greenwood Village it's the difference between selling in a week and sitting through a full season.</p>
 
 <h2 id="what-the-price-buys">What Does the Greenwood Village Price Tag Actually Buy You?</h2>
 
