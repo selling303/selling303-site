@@ -209,28 +209,28 @@
   - Target keywords: new build vs resale Parker CO, Parker new construction cost, build or buy Parker Colorado
 
 #### Day 26 — Tuesday, April 29
-- [x] **"Is Greenwood Village Worth the Price Tag? A Relocation Buyer's Honest Assessment"** *(drafted 2026-04-29)*
+- [x] **"Is Greenwood Village Worth the Price Tag? A Relocation Buyer's Honest Assessment"** *(drafted 2026-04-29)* *(published 2026-05-04)*
   - Specialization: `/relocation` | Geographic: `/greenwood-village`
   - Type: Local area topic | Funnel: TOFU
   - Angle: Value proposition for GV — luxury price points, DTC proximity, lifestyle amenities. Who it's right for, who should look elsewhere.
   - Target keywords: Greenwood Village Colorado worth it, relocating to Greenwood Village, Greenwood Village real estate 2026
 
 #### Day 27 — Wednesday, April 30
-- [x] **"The Expired Listing Trap: Why Switching Agents Alone Won't Sell Your Englewood Home"** *(drafted 2026-04-30)*
+- [x] **"The Expired Listing Trap: Why Switching Agents Alone Won't Sell Your Englewood Home"** *(drafted 2026-04-30)* *(published 2026-05-04)*
   - Specialization: `/expired-listings` | Geographic: `/englewood`
   - Type: Seller advice | Funnel: BOFU
   - Angle: What actually needs to change (pricing, presentation, strategy) vs. just getting a new yard sign. Addresses the #1 seller reaction.
   - Target keywords: switch agents expired listing, Englewood home not selling, why change Realtors expired listing
 
 #### Day 28 — Thursday, May 1
-- [x] **"How to Time Your Move-Up Sale in Castle Pines Without Ending Up Homeless"** *(drafted 2026-04-30)*
+- [x] **"How to Time Your Move-Up Sale in Castle Pines Without Ending Up Homeless"** *(drafted 2026-04-30)* *(published 2026-05-04)*
   - Specialization: `/move-up-sellers` | Geographic: `/castle-pines`
   - Type: Seller advice | Funnel: BOFU
   - Angle: Timing strategies — sell first vs. buy first vs. simultaneous close. Rent-back agreements, bridge loans, contingency offers. Castle Pines inventory context.
   - Target keywords: sell and buy Castle Pines, move-up timing Castle Pines CO, coordinating sale and purchase Denver
 
 #### Day 29 — Friday, May 2
-- [x] **"What $500K Gets You in Centennial vs. Highlands Ranch vs. Parker (Spring 2026)"** *(drafted 2026-04-30)*
+- [x] **"What $500K Gets You in Centennial vs. Highlands Ranch vs. Parker (Spring 2026)"** *(drafted 2026-04-30)* *(published 2026-05-04)*
   - Specialization: `/first-time-homebuyers` | Geographic: `/centennial`
   - Type: Local area topic / Buyer advice | Funnel: TOFU
   - Angle: Price-point comparison across three suburbs. Sqft, lot size, age, commute, lifestyle. Great for fence-sitters and relocation buyers.
@@ -241,14 +241,14 @@
 ### Days 29–30: May 2–3
 
 #### Day 29 — Saturday, May 2
-- [x] **"New Construction Buyer Representation in Colorado: What Changed in 2026 and Why It Matters"** *(drafted 2026-05-02)*
+- [x] **"New Construction Buyer Representation in Colorado: What Changed in 2026 and Why It Matters"** *(drafted 2026-05-02)* *(published 2026-05-04)*
   - Specialization: `/new-construction` | Geographic: `/parker`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Post-NAR settlement implications for new construction. Buyer agency agreements at model homes, builder cooperation changes, why representation matters more now.
   - Target keywords: buyer agent new construction Colorado 2026, new build representation rules, Parker new construction buyer agent
 
 #### Day 30 — Sunday, May 3
-- [x] **"Move-Up Seller Myth: 'I'll Wait Until the Market Gets Better' — Why That's Costing You Money in Lakewood"** *(drafted 2026-05-02)*
+- [x] **"Move-Up Seller Myth: 'I'll Wait Until the Market Gets Better' — Why That's Costing You Money in Lakewood"** *(drafted 2026-05-02)* *(published 2026-05-04)*
   - Specialization: `/move-up-sellers` | Geographic: `/lakewood`
   - Type: Seller advice | Funnel: BOFU
   - Angle: Opportunity cost analysis for waiting. Equity erosion scenarios, rate lock math, move-up spread dynamics. Lakewood as the case study.
@@ -261,7 +261,7 @@
 The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad hoc as the nightly task fired past the planned window. **Action item:** generate a fresh 30-day calendar covering May 4 – June 2 to restore the planned cluster-coverage targets.
 
 #### Day 31 — Monday, May 4
-- [x] **"South Denver April 2026 Closings: What Move-Up Sellers Need to Know Heading Into May"** *(drafted 2026-05-04)*
+- [x] **"South Denver April 2026 Closings: What Move-Up Sellers Need to Know Heading Into May"** *(drafted 2026-05-04)* *(published 2026-05-04)*
   - Specialization: `/move-up-sellers` | Geographic: `/highlands-ranch`
   - Type: Market update | Funnel: TOFU
   - Angle: First post using the new monthly Stock/Flow MLS pull workflow. Cross-suburb April 2026 closings (1,085), pending pipeline (1,208), active inventory (2,515), and 20.6% withdrawn-plus-expired failure rate. Highlands Ranch leads with 8-day median DIM and 99% close-to-list.
