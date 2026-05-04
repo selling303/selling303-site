@@ -256,6 +256,20 @@
 
 ---
 
+### Calendar Extension (post-30-day plan)
+
+The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad hoc as the nightly task fired past the planned window. **Action item:** generate a fresh 30-day calendar covering May 4 – June 2 to restore the planned cluster-coverage targets.
+
+#### Day 31 — Monday, May 4
+- [x] **"South Denver April 2026 Closings: What Move-Up Sellers Need to Know Heading Into May"** *(drafted 2026-05-04)*
+  - Specialization: `/move-up-sellers` | Geographic: `/highlands-ranch`
+  - Type: Market update | Funnel: TOFU
+  - Angle: First post using the new monthly Stock/Flow MLS pull workflow. Cross-suburb April 2026 closings (1,085), pending pipeline (1,208), active inventory (2,515), and 20.6% withdrawn-plus-expired failure rate. Highlands Ranch leads with 8-day median DIM and 99% close-to-list.
+  - Target keywords: South Denver April 2026 market update, Highlands Ranch closings, move-up sellers May 2026, Colorado real estate April 2026
+  - Visual: comparison-table (9 suburbs × 4 metrics — Closed/Pending/Active/Failed, April 2026, REcolorado MLS)
+
+---
+
 ## Cluster Coverage Summary
 
 | Specialization Pillar | Posts | Geographic Pillars Covered |

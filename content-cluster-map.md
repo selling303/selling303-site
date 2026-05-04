@@ -35,6 +35,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - Where South Denver Families Are Moving Up in 2026 (`/blog/spring-2026-move-up-market-report-south-denver`)
 - How to Time Your Move-Up Sale in Castle Pines Without Ending Up Homeless (`/blog/move-up-timing-castle-pines-2026`)
 - Move-Up Seller Myth: Why "Waiting for the Market" Is Costing You Money in Lakewood (`/blog/move-up-seller-myth-waiting-market-better-lakewood-2026`)
+- South Denver April 2026 Closings: What Move-Up Sellers Need to Know Heading Into May (`/blog/south-denver-april-2026-closings-move-up-sellers`)
 
 ### 3. First-Time Homebuyers (`/first-time-homebuyers`)
 **Primary geographic ties:** Littleton, Englewood, Centennial (most affordable entry points in the metro)

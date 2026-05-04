@@ -58,6 +58,7 @@ Tracking file for every page that uses a data visual. Source of truth for what v
 | `spring-2026-move-up-market-report-south-denver` | comparison-table | Dataset + Place Microdata + per-cell value | **optimized** (reference template) | 2026-04-26 |
 | `new-construction-buyer-representation-colorado-2026` | comparison-table | Dataset + Place Microdata + per-cell value | **optimized** | 2026-05-02 |
 | `move-up-seller-myth-waiting-market-better-lakewood-2026` | comparison-table (Lakewood YoY vs. Jeffco vs. Metro) | Dataset + Place/AdministrativeArea Microdata + per-cell value | **optimized** | 2026-05-02 |
+| `south-denver-april-2026-closings-move-up-sellers` | comparison-table (9 South Denver suburbs × 4 metrics — Closed/Pending/Active/Failed, April 2026) | Dataset + Place Microdata + per-cell value | **optimized** | 2026-05-04 |
 | `what-happens-after-accepting-offer` | table (legacy), cost flow | unknown | needs upgrade — Phase 3 (howto candidate — Phase 4 flag-only) | — |
 | `what-realtor-does-to-earn-commission` | none detected | — | review needed | — |
 | `when-to-sell-parker-home-move-up` | none detected | — | review needed | — |
