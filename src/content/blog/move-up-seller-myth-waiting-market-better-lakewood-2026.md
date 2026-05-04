@@ -84,16 +84,7 @@ relatedPosts:
 
 <p>The cleanest way to answer that question is to compare the Lakewood, Jefferson County, and Denver Metro single-family numbers between the same reporting period last year and this year. The CAR/DMAR Local Market Updates use a common methodology and a common reporting cadence, which lets the comparison stay apples-to-apples. The visual below combines the February 2025 versus February 2026 single-family residential data for all three geographies.</p>
 
-<h3 id="lakewood-yoy-comparison">How Much Did Lakewood Sellers Give Up by Waiting From February 2025 to February 2026?</h3>
-
-<p>The cleanest read on the wait cost is to compare the Lakewood single-family numbers from February 2025 against the same reporting period in February 2026 — same data source, same methodology, same definition of every metric. Both visuals below tell the same story from the same data — pick the one that reads most clearly.</p>
-
-<!-- ============================================================
-     OPTION A — Rebuilt comparison-table (4×4 then-vs-now)
-     Status: in preview. After Jacob picks, remove the unused option.
-     ============================================================ -->
-
-<p style="margin-top:2rem; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.08em; color:#81848a; border-top:2px solid #e5e5e5; padding-top:1rem;"><strong>Option A — Then-vs-Now Comparison Table</strong></p>
+<h3 id="lakewood-yoy-comparison">How Much Did Waiting Cost Lakewood Sellers Last Year?</h3>
 
 <script type="application/ld+json">
 {
@@ -122,7 +113,7 @@ relatedPosts:
 <meta itemprop="name" content="Lakewood, Colorado" />
 <meta itemprop="containedInPlace" content="Jefferson County, Colorado" />
 <table>
-<caption>Lakewood, Colorado single-family residential year-over-year comparison | February 2025 vs. February 2026 (n = 72 closed in Feb 2025, n = 69 closed in Feb 2026)</caption>
+<caption>Every Lakewood, Colorado single-family metric moved against the seller — February 2025 vs. February 2026 (n = 72 closings in Feb 2025, n = 69 closings in Feb 2026)</caption>
 <thead>
 <tr>
 <th scope="col">Lakewood SF Metric</th>
@@ -173,68 +164,7 @@ relatedPosts:
 <figcaption>Source: Colorado Association of REALTORS / Denver Metro Association of REALTORS Local Market Update for February 2026, current as of March 4, 2026 (REcolorado MLS, IRES). Compiled by selling303.com on May 3, 2026.<br /><em>Definitions: DOM (days on market until sale) = median days a closed listing sat in the MLS before going under contract. New listings = single-family residential listings newly entered into the MLS during the reporting month. Percent of list price received = close price divided by final list price (median across closed transactions).</em></figcaption>
 </figure>
 
-<!-- ============================================================
-     OPTION B — SVG-chart (year-over-year deltas, sorted by magnitude)
-     Status: in preview. After Jacob picks, remove the unused option.
-     ============================================================ -->
-
-<p style="margin-top:2rem; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.08em; color:#81848a; border-top:2px solid #e5e5e5; padding-top:1rem;"><strong>Option B — YoY Change Bar Chart</strong></p>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Dataset",
-  "name": "Lakewood, Colorado Single-Family Year-Over-Year Change Magnitudes (February 2025 to February 2026)",
-  "description": "Magnitude of year-over-year change in three Lakewood, Colorado single-family residential metrics between February 2025 and February 2026. New listings entered into the MLS during the month surged 41.2 percent. Median days on market until sale climbed 8.3 percent. Median sale price fell 2.0 percent. All three metrics moved against the seller. Sample: 72 closed Lakewood single-family transactions in February 2025, 69 closed in February 2026. Source: CAR/DMAR Local Market Update for February 2026.",
-  "url": "https://selling303.com/blog/move-up-seller-myth-waiting-market-better-lakewood-2026",
-  "temporalCoverage": "2025-02-01/2026-02-28",
-  "spatialCoverage": {"@type": "Place", "name": "Lakewood, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Jefferson County, Colorado"}},
-  "isBasedOn": {"@type": "CreativeWork", "name": "CAR/DMAR Local Market Update — February 2026", "datePublished": "2026-03-04"},
-  "creator": {"@type": "Person", "name": "Jacob Stark", "jobTitle": "Realtor", "url": "https://selling303.com"},
-  "publisher": {"@type": "Organization", "name": "selling303.com", "url": "https://selling303.com"},
-  "variableMeasured": [
-    {"@type": "PropertyValue", "name": "New listings YoY change (single-family)", "unitText": "P1", "value": "0.412"},
-    {"@type": "PropertyValue", "name": "Median days on market until sale YoY change", "unitText": "P1", "value": "0.083"},
-    {"@type": "PropertyValue", "name": "Median sale price YoY change (single-family)", "unitText": "P1", "value": "-0.020"}
-  ]
-}
-</script>
-
-<!-- Visual styling provided by /css/aeo-visuals.css (loaded via BaseLayout). Class: .aeo-chart-figure -->
-
-<figure class="aeo-chart-figure" aria-labelledby="lakewood-yoy-comparison" role="figure">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" style="width:100%; height:auto; max-width:800px; display:block; margin:1.5rem auto;" role="img">
-<title>Lakewood, Colorado Single-Family Year-Over-Year Change in Three Metrics (February 2025 to February 2026)</title>
-<desc>Horizontal bar chart showing the magnitude of year-over-year change in three Lakewood, Colorado single-family residential metrics between February 2025 and February 2026. New listings entered into the MLS surged 41.2 percent (from 85 in February 2025 to 120 in February 2026). Median days on market until sale climbed 8.3 percent (from 36 to 39 days). Median sale price fell 2.0 percent (from $650,000 to $636,900). Bars are sorted by magnitude. All three metrics moved against the seller — more competition, slower turnover, and lower equity. Sample: 72 closed Lakewood single-family transactions in February 2025, 69 in February 2026. Source: CAR/DMAR Local Market Update for February 2026.</desc>
-<rect width="800" height="360" fill="#ffffff"/>
-<text x="20" y="34" font-size="17" font-weight="700" fill="#002a3a">What Waiting From Feb 2025 to Feb 2026 Cost Lakewood Sellers</text>
-<text x="20" y="56" font-size="12" fill="#81848a">Lakewood, Colorado single-family residential | All three metrics moved against the seller</text>
-<line x1="20" y1="72" x2="780" y2="72" stroke="#e5e5e5" stroke-width="1"/>
-<g transform="translate(280, 92)">
-<text x="-12" y="22" text-anchor="end" font-size="14" font-weight="600" fill="#002a3a">New listings (competition)</text>
-<text x="-12" y="40" text-anchor="end" font-size="11" fill="#81848a">85 → 120 listings</text>
-<rect x="0" y="6" width="453" height="42" fill="#8b3a3a" rx="3"/>
-<text x="467" y="34" font-size="20" font-weight="700" fill="#002a3a">+41.2%</text>
-</g>
-<g transform="translate(280, 167)">
-<text x="-12" y="22" text-anchor="end" font-size="14" font-weight="600" fill="#002a3a">Median DOM until sale</text>
-<text x="-12" y="40" text-anchor="end" font-size="11" fill="#81848a">36 → 39 days</text>
-<rect x="0" y="6" width="92" height="42" fill="#9e6b3a" rx="3"/>
-<text x="106" y="34" font-size="20" font-weight="700" fill="#002a3a">+8.3%</text>
-</g>
-<g transform="translate(280, 242)">
-<text x="-12" y="22" text-anchor="end" font-size="14" font-weight="600" fill="#002a3a">Median sale price</text>
-<text x="-12" y="40" text-anchor="end" font-size="11" fill="#81848a">$650,000 → $636,900</text>
-<rect x="0" y="6" width="22" height="42" fill="#8a7a3a" rx="3"/>
-<text x="36" y="34" font-size="20" font-weight="700" fill="#002a3a">−2.0%</text>
-</g>
-<text x="280" y="318" font-size="10" font-style="italic" fill="#81848a">Bar length = magnitude of YoY change. All bars represent moves against the seller.</text>
-<text x="400" y="345" text-anchor="middle" font-size="10" fill="#a5a7a9">Source: DMAR / Colorado Association of REALTORS® Local Market Update — February 2026 (REcolorado®, IRES®) | n = 72 closed Feb 2025, 69 closed Feb 2026 | selling303.com</text>
-</svg>
-<figcaption>Three Lakewood, Colorado single-family metrics, year-over-year. <em>Definitions: New listings = single-family residential listings newly entered into the MLS during the reporting month. DOM (days on market until sale) = median days a closed listing sat in the MLS before going under contract. Median sale price = median close price across all single-family residential transactions that closed in the reporting month.</em> Source: Colorado Association of REALTORS / Denver Metro Association of REALTORS Local Market Update for February 2026, current as of March 4, 2026.</figcaption>
-</figure>
-
-<p>The headline reads off either visual in seconds: in <strong>Lakewood, Colorado</strong>, every single-family metric a move-up seller cares about moved against the seller in the past 12 months. New listings — the supply of competing homes the next Lakewood listing will face — surged 41.2 percent. Median time on market grew. Median sale price slipped. The percent of list price received tightened. None of those moves is the "market getting better" the wait-and-see seller is hoping for. The same broad pattern shows up in the Jefferson County and Denver Metro Feb 2025-vs-Feb 2026 numbers, which is why this is not a Lakewood-only story — it's the wait-cost dynamic for the whole west side.</p>
+<p>The headline reads off the table in seconds: in <strong>Lakewood, Colorado</strong>, every single-family metric a move-up seller cares about moved against the seller in the past 12 months. New listings — the supply of competing homes the next Lakewood listing will face — surged 41.2 percent. Median time on market grew. Median sale price slipped. The percent of list price received tightened. None of those moves is the "market getting better" the wait-and-see seller is hoping for. The same broad pattern shows up in the Jefferson County and Denver Metro Feb 2025-vs-Feb 2026 numbers, which is why this is not a Lakewood-only story — it's the wait-cost dynamic for the whole west side.</p>
 
 <p>For a Lakewood move-up seller who held off from February 2025, the most concrete way to think about the cost is in dollars: a $650,000 home from last February that sits at the new median is worth roughly $13,000 less today on the same price-per-square-foot basis. That's pre-concessions and pre-rate impact. Add the percent-of-list-price slip and the typical concession (63.14 percent of metro sellers offered one in March 2026, per DMAR), and the real net-proceeds gap is wider still. The detailed concession and net-sheet picture is laid out in <a href="/blog/cost-to-sell-house-colorado-2026">cost to sell a house in Colorado 2026</a>.</p>
 
