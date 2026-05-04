@@ -113,7 +113,7 @@ relatedPosts:
 <meta itemprop="name" content="Lakewood, Colorado" />
 <meta itemprop="containedInPlace" content="Jefferson County, Colorado" />
 <table>
-<caption>Every Lakewood, Colorado single-family metric moved against the seller — February 2025 vs. February 2026 (n = 72 closings in Feb 2025, n = 69 closings in Feb 2026)</caption>
+<caption>Every Lakewood, Colorado single-family metric moved against the seller<span style="display:block; margin-top:0.45rem; font-size:0.8rem; font-weight:400; color:#81848a; line-height:1.45;">February 2025 vs. February 2026 · n = 72 closings (Feb 2025), n = 69 closings (Feb 2026)</span></caption>
 <thead>
 <tr>
 <th scope="col">Lakewood SF Metric</th>
