@@ -1,6 +1,7 @@
 ---
-title: "New Construction Buyer Representation in Colorado: What Changed in 2026 and Why It Matters"
-description: "The 2024 NAR settlement rewrote how buyer agents work at new construction model homes. Here's what changed in Colorado, and why representation matters more now."
+title: "What Changed for Colorado New Construction Buyers in 2026"
+headline: "New Construction Buyer Representation in Colorado: What Changed in 2026 and Why It Matters"
+description: "What changed for new construction buyer representation in Colorado after the 2024 NAR settlement — and why representation matters more in 2026."
 date: "May 2, 2026"
 dateModified: "May 2, 2026"
 category: "What to Expect"
@@ -42,7 +43,7 @@ relatedPosts:
 ---
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
-<strong>What changed for new construction buyer representation in Colorado in 2026?</strong> Following the NAR settlement effective August 17, 2024, a written buyer agency agreement must now be in place before a Colorado licensee shows you any home — including new construction model homes. Buyer agent compensation must be disclosed in writing up front, and most Parker builders enforce strict pre-registration rules. Skipping representation today carries more risk than it did before the settlement, not less.
+<strong>What changed for Colorado new construction buyers in 2026?</strong> Since the NAR settlement took effect August 17, 2024, a written buyer agency agreement must be in place before any Colorado home showing — including new construction model homes in Parker. Skipping representation today carries more risk, not less.
 </div>
 
 <div style="background: #f0f4f0; border-left: 4px solid #4a7c59; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
