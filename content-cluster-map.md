@@ -21,6 +21,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - How to Relist and Sell a Home in Littleton After an Expired Listing (`/blog/relist-home-littleton-after-expired-listing`)
 - South Denver Market Update: What April 2026 Means for Sellers Sitting on Expired Listings (`/blog/south-denver-market-update-april-2026-expired-listings-centennial`)
 - Why Your Centennial Home Isn't Getting Offers — and How to Fix It Before Summer (`/blog/why-centennial-home-not-getting-offers`)
+- The Expired Listing Trap: Why Switching Agents Alone Won't Sell Your Englewood Home (`/blog/expired-listing-trap-englewood-switching-agents-2026`)
 
 ### 2. Move-Up Sellers (`/move-up-sellers`)
 **Primary geographic ties:** Highlands Ranch, Centennial, Parker (highest move-up activity — families upgrading within the metro)
@@ -32,6 +33,9 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - How Much Equity Do You Need to Move Up in Highlands Ranch? (`/blog/equity-to-move-up-highlands-ranch`)
 - Move-Up Buyer's Checklist: Going from a Starter in Englewood to More Space in Parker (`/blog/move-up-englewood-to-parker-checklist-2026`)
 - Where South Denver Families Are Moving Up in 2026 (`/blog/spring-2026-move-up-market-report-south-denver`)
+- How to Time Your Move-Up Sale in Castle Pines Without Ending Up Homeless (`/blog/move-up-timing-castle-pines-2026`)
+- Move-Up Seller Myth: Why "Waiting for the Market" Is Costing You Money in Lakewood (`/blog/move-up-seller-myth-waiting-market-better-lakewood-2026`)
+- South Denver April 2026 Closings: What Move-Up Sellers Need to Know Heading Into May (`/blog/south-denver-april-2026-closings-move-up-sellers`)
 
 ### 3. First-Time Homebuyers (`/first-time-homebuyers`)
 **Primary geographic ties:** Littleton, Englewood, Centennial (most affordable entry points in the metro)
@@ -41,6 +45,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - First-Time Home Buyer's Guide to Englewood (`/blog/first-time-home-buyer-guide-englewood-colorado-2026`)
 - What First-Time Buyers Should Know About Bidding in Littleton's Spring Market (`/blog/first-time-buyer-bidding-littleton-spring-2026`)
 - Closing Costs Breakdown for First-Time Buyers in Littleton (2026 Update) (`/blog/closing-costs-littleton-first-time-buyers-2026`)
+- What $500K Gets You in Centennial vs. Highlands Ranch vs. Parker (Spring 2026) (`/blog/500k-home-centennial-highlands-ranch-parker-2026`)
 
 ### 4. First-Time Home Sellers (`/first-time-homesellers`)
 **Primary geographic ties:** Centennial, Littleton, Highlands Ranch (first-time seller volume in South Denver)
@@ -59,6 +64,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - Littleton vs. Centennial: Which South Denver Suburb Fits Your Relocation? (`/blog/littleton-vs-centennial-south-denver-relocation`)
 - Relocating to Parker, Colorado: What Families Moving from Out of State Need to Know (`/blog/moving-to-parker-colorado-relocation-guide-2026`)
 - What Out-of-State Buyers Get Wrong About the Denver Suburbs (`/blog/out-of-state-buyer-mistakes-denver-suburbs-centennial`)
+- Is Greenwood Village Worth the Price Tag? A Relocation Buyer's Honest Assessment (`/blog/greenwood-village-worth-the-price-tag-relocation-2026`)
 
 ### 6. New Construction (`/new-construction`)
 **Primary geographic ties:** Parker, Castle Pines, Highlands Ranch, Lone Tree (active builder communities)
@@ -69,6 +75,8 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - Do You Need a Real Estate Agent for New Construction in Colorado? (`/blog/real-estate-agent-new-construction-colorado`)
 - Lone Tree New Construction: Builder Incentives and What They Actually Mean for Your Bottom Line (`/blog/lone-tree-new-construction-builder-incentives-2026`)
 - New Build vs. Resale in Highlands Ranch: Which Makes More Financial Sense in 2026? (`/blog/new-build-vs-resale-highlands-ranch-2026`)
+- Should You Build New in Parker or Buy Resale? A Cost-Per-Square-Foot Analysis (`/blog/build-new-or-buy-resale-parker-cost-per-square-foot`)
+- New Construction Buyer Representation in Colorado: What Changed in 2026 and Why It Matters (`/blog/new-construction-buyer-representation-colorado-2026`)
 
 ---
 

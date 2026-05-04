@@ -151,6 +151,33 @@ const nbCentennial = await getImage({ src: nbCentennialSrc, format: 'webp', qual
       ]
     }
     </script>
+
+    <!-- Schema: Organization (Selling 303 brand entity). Canonical "@id" used as the
+         publisher reference across all Article schema. Defined here AND on /about so
+         the home page reinforces the same identity. Surname disambiguation, 2026-04-27. -->
+    <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://selling303.com/#organization",
+      "name": "Selling 303",
+      "alternateName": "Selling303",
+      "url": "https://selling303.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://selling303.com/images/selling303-logo.png"
+      },
+      "description": "Selling 303 is the South Denver Metro real estate practice of REALTOR Jacob Stark at 8z Real Estate, serving Littleton, Highlands Ranch, Centennial, Englewood, Parker, Lone Tree, Castle Pines, Lakewood, and Greenwood Village.",
+      "founder": { "@id": "https://selling303.com/#agent" },
+      "employee": { "@id": "https://selling303.com/#agent" },
+      "sameAs": [
+        "https://www.instagram.com/jacobstark_realtor/",
+        "https://www.facebook.com/jacobstarkrealtor/",
+        "https://www.youtube.com/@selling303",
+        "https://www.linkedin.com/in/jacobstark"
+      ]
+    }
+    </script>
   </Fragment>
 
   <!-- ========== HERO ========== -->

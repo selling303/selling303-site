@@ -33,7 +33,10 @@ Tracking file for every page that uses a data visual. Source of truth for what v
 | `cost-to-sell-house-colorado-2026` | table (legacy), cost flow | unknown | needs upgrade — Phase 3 (cost-breakdown candidate) | — |
 | `equity-to-move-up-highlands-ranch` | none detected | — | review needed (likely cost-breakdown candidate) | — |
 | `expired-listing-highlands-ranch` | none detected | — | review needed | — |
+| `500k-home-centennial-highlands-ranch-parker-2026` | comparison-table | Dataset + Place Microdata + per-cell value | **optimized** | 2026-04-30 |
+| `expired-listing-trap-englewood-switching-agents-2026` | comparison-table | Dataset + Place Microdata + per-cell value | **optimized** | 2026-04-30 |
 | `first-time-buyer-bidding-littleton-spring-2026` | tier-list (legacy) | unknown | needs upgrade — Phase 3 | — |
+| `greenwood-village-worth-the-price-tag-relocation-2026` | persona-card-grid | ItemList JSON-LD + per-card Person Microdata + Place Microdata for matched suburbs | **optimized** | 2026-04-29 |
 | `first-time-home-buyer-guide-englewood-colorado-2026` | none detected | — | review needed (likely howto candidate — Phase 4 flag-only) | — |
 | `hidden-costs-selling-home-arapahoe-county-net-sheet-2026` | tier-list (legacy), cost flow | unknown | needs upgrade — Phase 3 (cost-breakdown candidate) | — |
 | `littleton-vs-centennial-south-denver-relocation` | none detected | — | review needed (likely comparison-table candidate) | — |
@@ -53,6 +56,9 @@ Tracking file for every page that uses a data visual. Source of truth for what v
 | `south-denver-market-update-april-2026-expired-listings-centennial` | none detected | — | review needed | — |
 | `south-denver-watering-restrictions-guide-2026` | none detected | — | review needed | — |
 | `spring-2026-move-up-market-report-south-denver` | comparison-table | Dataset + Place Microdata + per-cell value | **optimized** (reference template) | 2026-04-26 |
+| `new-construction-buyer-representation-colorado-2026` | comparison-table | Dataset + Place Microdata + per-cell value | **optimized** | 2026-05-02 |
+| `move-up-seller-myth-waiting-market-better-lakewood-2026` | comparison-table (Lakewood YoY vs. Jeffco vs. Metro) | Dataset + Place/AdministrativeArea Microdata + per-cell value | **optimized** | 2026-05-02 |
+| `south-denver-april-2026-closings-move-up-sellers` | comparison-table (9 South Denver suburbs × 4 metrics — Closed/Pending/Active/Failed, April 2026) | Dataset + Place Microdata + per-cell value | **optimized** | 2026-05-04 |
 | `what-happens-after-accepting-offer` | table (legacy), cost flow | unknown | needs upgrade — Phase 3 (howto candidate — Phase 4 flag-only) | — |
 | `what-realtor-does-to-earn-commission` | none detected | — | review needed | — |
 | `when-to-sell-parker-home-move-up` | none detected | — | review needed | — |
@@ -90,3 +96,9 @@ To be inventoried during Phase 2 verification sweep.
 - **Visual type coverage on optimized posts:** comparison-table only
 
 The 2026-04-26 baseline shows the size of the Phase 3 retroactive cleanup and the variety gap that Phases 3 + 4 are meant to close.
+
+**Updates since baseline:**
+- 2026-04-29 — `greenwood-village-worth-the-price-tag-relocation-2026` shipped optimized comparison-table.
+- 2026-04-30 — `expired-listing-trap-englewood-switching-agents-2026` shipped optimized comparison-table (Closed vs. Expired Englewood single-family Q1 2026). Tier-list opportunity flagged inline (root-cause severity scale) — pending Phase 3 build.
+- 2026-04-30 — `move-up-timing-castle-pines-2026` shipped optimized **svg-chart** (single-metric horizontal bar chart of median DOM until sale: Castle Pines 77 days, Parker 62, Highlands Ranch 52 — Feb 2026). SVG `<title>` + 4-sentence `<desc>` + in-SVG term definition + source `<text>` line + parallel JSON-LD `Dataset` block. Severity coloring: amber (slowest) → olive → green (fastest). Replaces an earlier 5-column comparison-table draft (over-broad for the article's timing thesis). First svg-chart visual on the site — establishes the canonical pattern for `aeo-visual-builder`'s svg-chart catalog entry. Source: DMAR / CAR Local Market Update Feb 2026.
+- 2026-04-30 — `500k-home-centennial-highlands-ranch-parker-2026` shipped optimized comparison-table (6-column $500K market comparison — Centennial / Highlands Ranch / Parker single-family). Q1 2026 closings count, typical sqft, DMAR Feb 2026 SF median sale, SF DOM, typical home type. Place Microdata per row, per-cell `<meta itemprop="value">`, parallel JSON-LD Dataset block with `temporalCoverage`, `spatialCoverage`, `variableMeasured`, `creator`, `publisher`, `isBasedOn`. Source: REcolorado MLS Q1 2026 + DMAR/CAR Feb 2026 LMU.

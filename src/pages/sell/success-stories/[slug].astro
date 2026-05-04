@@ -121,17 +121,9 @@ const articleSchema = {
   "headline": data.headline,
   "description": data.description,
   "image": heroSrc,
-  "author": {
-    "@type": "Person",
-    "name": "Jacob Stark",
-    "jobTitle": "REALTOR®",
-    "url": "https://selling303.com/about",
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Selling 303",
-    "url": "https://selling303.com",
-  },
+  // Surname-pollution disambiguation (2026-04-27): use @id refs to canonical entities.
+  "author": { "@id": "https://selling303.com/#agent" },
+  "publisher": { "@id": "https://selling303.com/#organization" },
   "datePublished": data.closeDate,
   "mainEntityOfPage": {
     "@type": "WebPage",
