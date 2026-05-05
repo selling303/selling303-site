@@ -292,12 +292,12 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
 ### Week 1: May 5–11
 
 #### Day 1 — Tuesday, May 5
-- [ ] **"First-Time Home Buyer's Guide to Lakewood, Colorado (2026)"**
+- [x] **"First-Time Home Buyer's Guide to Lakewood, Colorado (2026)"** *(drafted 2026-05-05)*
   - Specialization: `/first-time-homebuyers` | Geographic: `/lakewood`
   - Type: Buyer advice / Local area topic | Funnel: TOFU
   - Angle: Entry-level price points across Lakewood's ZIPs (80214, 80215, 80226, 80227, 80228, 80232), FHA/conventional loan thresholds, condo-vs-SFR trade-offs, and what first-time buyers actually get for $400K–$550K in Jefferson County's largest city.
   - Target keywords: first-time home buyer Lakewood CO, Lakewood Colorado homes for sale 2026, buying a house in Lakewood, Jefferson County first-time buyer
-  - Visual: comparison-table (Lakewood ZIPs × price/sqft/typical home type)
+  - Visual: comparison-table (price tier × typical home type/sqft/ZIP concentration — substituted from spec'd "ZIPs × price" because PDF-source data isn't ZIP-segmented; tier-based version is more honest and more useful for first-time buyers)
 
 #### Day 2 — Wednesday, May 6
 - [ ] **"RidgeGate vs. Heritage Hills: A Lone Tree New Construction Update for 2026"**
