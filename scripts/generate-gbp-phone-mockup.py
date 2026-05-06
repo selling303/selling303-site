@@ -1,0 +1,369 @@
+#!/usr/bin/env python3
+"""
+generate-gbp-phone-mockup.py — Phone-mockup-style GBP image generator.
+
+Renders a 1200x1200 PNG of a stylized iPhone-shaped frame containing a
+brand-faithful rendering of the post's hero widget. Same visual language
+as the live site but without depending on a browser screenshot — fast,
+reliable, brand-cohesive.
+
+Usage:
+    python3 generate-gbp-phone-mockup.py \\
+        --output /path/to/out.png \\
+        --eyebrow "ARAPAHOE / DOUGLAS / JEFFERSON · 2026 NOV" \\
+        --title "Should you protest? Run the numbers." \\
+        --countdown-label "until June 1" \\
+        --countdown-value "26d 9h" \\
+        --above-phone "Try the new 2026 NOV calculator" \\
+        --url "selling303.com/blog/2026-notice-of-valuation-protest-playbook-south-denver"
+"""
+
+import argparse
+import os
+from PIL import Image, ImageDraw, ImageFilter, ImageFont
+
+NAVY = (0, 42, 58)
+NAVY_DARK = (0, 60, 82)
+NAVY_DARKER = (0, 32, 45)
+GOLD = (200, 150, 90)
+GOLD_LIGHT = (240, 200, 154)
+GREEN = (74, 124, 89)
+GREEN_LIGHT = (240, 244, 240)
+LIGHT_BG = (249, 251, 252)
+WHITE = (255, 255, 255)
+WHITE_DIM = (200, 215, 220)
+GRAY_BORDER = (214, 224, 230)
+TEXT_GRAY = (85, 85, 85)
+PHONE_FRAME = (24, 30, 38)
+PHONE_BEZEL = (8, 12, 16)
+
+FONT_HEAVY = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+FONT_BOLD = "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf"
+FONT_REG = "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf"
+
+
+def vertical_gradient(size, top_color, bottom_color):
+    w, h = size
+    img = Image.new("RGB", size)
+    px = img.load()
+    for y in range(h):
+        t = y / max(h - 1, 1)
+        r = int(top_color[0] + (bottom_color[0] - top_color[0]) * t)
+        g = int(top_color[1] + (bottom_color[1] - top_color[1]) * t)
+        b = int(top_color[2] + (bottom_color[2] - top_color[2]) * t)
+        for x in range(w):
+            px[x, y] = (r, g, b)
+    return img
+
+
+def draw_centered(draw, text, font, y, color, canvas_w, x_offset=0):
+    bbox = draw.textbbox((0, 0), text, font=font)
+    w = bbox[2] - bbox[0]
+    x = (canvas_w - w) // 2 - bbox[0] + x_offset
+    draw.text((x, y), text, font=font, fill=color)
+    return bbox[3] - bbox[1]
+
+
+def rounded_rect(draw, xy, radius, fill=None, outline=None, width=1):
+    """Wrapper for rounded_rectangle that handles older Pillow."""
+    draw.rounded_rectangle(xy, radius=radius, fill=fill,
+                           outline=outline, width=width)
+
+
+def shadow_layer(size, x, y, w, h, radius, blur, color=(0, 0, 0, 180)):
+    """Drop-shadow helper."""
+    layer = Image.new("RGBA", size, (0, 0, 0, 0))
+    d = ImageDraw.Draw(layer)
+    d.rounded_rectangle([(x, y), (x + w, y + h)], radius=radius, fill=color)
+    return layer.filter(ImageFilter.GaussianBlur(blur))
+
+
+def render_phone_mockup(
+    output_path,
+    eyebrow,
+    title,
+    countdown_label,
+    countdown_value,
+    above_phone,
+    url,
+    canvas_size=1200,
+):
+    W = H = canvas_size
+
+    # Background — navy gradient
+    img = vertical_gradient((W, H), NAVY, NAVY_DARK).convert("RGBA")
+    draw = ImageDraw.Draw(img)
+
+    # Header copy above the phone
+    f_above = ImageFont.truetype(FONT_BOLD, 44)
+    draw_centered(draw, above_phone, f_above, 70, WHITE, W)
+
+    # Subtle gold accent rule under the headline
+    rule_w = 100
+    draw.rectangle([((W - rule_w) // 2, 130), ((W + rule_w) // 2, 134)], fill=GOLD)
+
+    # === PHONE FRAME ===
+    phone_w, phone_h = 540, 920
+    phone_x = (W - phone_w) // 2
+    phone_y = 170
+    phone_radius = 56
+
+    # Drop shadow under the phone
+    shadow = shadow_layer((W, H), phone_x + 18, phone_y + 28,
+                          phone_w, phone_h, phone_radius, 30,
+                          color=(0, 0, 0, 160))
+    img = Image.alpha_composite(img, shadow)
+    draw = ImageDraw.Draw(img)
+
+    # Outer dark frame
+    rounded_rect(draw, [(phone_x, phone_y),
+                        (phone_x + phone_w, phone_y + phone_h)],
+                 phone_radius, fill=PHONE_FRAME)
+    # Inner bezel highlight
+    rounded_rect(draw, [(phone_x + 4, phone_y + 4),
+                        (phone_x + phone_w - 4, phone_y + phone_h - 4)],
+                 phone_radius - 4, fill=PHONE_BEZEL)
+
+    # Screen area
+    screen_inset = 14
+    sx = phone_x + screen_inset
+    sy = phone_y + screen_inset
+    sw = phone_w - screen_inset * 2
+    sh = phone_h - screen_inset * 2
+    screen_radius = phone_radius - 12
+    rounded_rect(draw, [(sx, sy), (sx + sw, sy + sh)],
+                 screen_radius, fill=LIGHT_BG)
+
+    # Notch / dynamic-island
+    notch_w = 130
+    notch_h = 30
+    notch_x = phone_x + (phone_w - notch_w) // 2
+    notch_y = phone_y + 22
+    rounded_rect(draw, [(notch_x, notch_y),
+                        (notch_x + notch_w, notch_y + notch_h)],
+                 14, fill=PHONE_BEZEL)
+
+    # === SCREEN CONTENT — render a brand-faithful Gap Calculator hero ===
+
+    # Browser-bar URL strip at top of screen
+    bar_y = sy + 8
+    bar_h = 36
+    rounded_rect(draw, [(sx + 16, bar_y), (sx + sw - 16, bar_y + bar_h)],
+                 8, fill=(232, 238, 242))
+    f_url = ImageFont.truetype(FONT_REG, 14)
+    short_url = url.replace("https://", "").replace("http://", "")
+    if len(short_url) > 38:
+        short_url = short_url[:36] + "…"
+    draw.text((sx + 30, bar_y + 10), short_url, font=f_url, fill=TEXT_GRAY)
+    # Lock icon (small dot)
+    draw.ellipse([(sx + 20, bar_y + 14), (sx + 28, bar_y + 22)], fill=GREEN)
+
+    # Widget container starts below browser bar — extends to fill screen
+    wx = sx + 22
+    wy = bar_y + bar_h + 22
+    ww = sw - 44
+    wh = sh - (bar_y + bar_h + 22 - sy) - 22
+    # Widget shadow
+    wshadow = shadow_layer((W, H), wx + 4, wy + 6, ww, wh, 14, 12,
+                           color=(0, 42, 58, 60))
+    img = Image.alpha_composite(img, wshadow)
+    draw = ImageDraw.Draw(img)
+
+    rounded_rect(draw, [(wx, wy), (wx + ww, wy + wh)], 14,
+                 fill=WHITE, outline=GRAY_BORDER, width=1)
+
+    # Widget header — navy gradient band
+    header_h = 130
+    header_layer = Image.new("RGBA", (ww, header_h), (0, 0, 0, 0))
+    px = header_layer.load()
+    for y in range(header_h):
+        t = y / max(header_h - 1, 1)
+        r = int(NAVY[0] + (NAVY_DARK[0] - NAVY[0]) * t)
+        g = int(NAVY[1] + (NAVY_DARK[1] - NAVY[1]) * t)
+        b = int(NAVY[2] + (NAVY_DARK[2] - NAVY[2]) * t)
+        for x in range(ww):
+            px[x, y] = (r, g, b, 255)
+
+    # Mask the header to round the top corners
+    mask = Image.new("L", (ww, header_h), 0)
+    mdraw = ImageDraw.Draw(mask)
+    mdraw.rounded_rectangle([(0, 0), (ww, header_h)],
+                            radius=14, fill=255)
+    # Force bottom of header to be square
+    mdraw.rectangle([(0, header_h // 2), (ww, header_h)], fill=255)
+    img.paste(header_layer, (wx, wy), mask)
+    draw = ImageDraw.Draw(img)
+
+    # Eyebrow
+    f_eyebrow = ImageFont.truetype(FONT_BOLD, 11)
+    eyebrow_upper = eyebrow.upper()
+    draw.text((wx + 18, wy + 16), eyebrow_upper, font=f_eyebrow,
+              fill=(220, 230, 235))
+
+    # Title
+    f_title = ImageFont.truetype(FONT_BOLD, 22)
+    # Wrap title to ~280px
+    words = title.split()
+    lines = []
+    cur = words[0]
+    for w in words[1:]:
+        test = cur + " " + w
+        bb = draw.textbbox((0, 0), test, font=f_title)
+        if bb[2] - bb[0] <= ww - 180:
+            cur = test
+        else:
+            lines.append(cur)
+            cur = w
+    lines.append(cur)
+    ty = wy + 40
+    for line in lines[:2]:
+        draw.text((wx + 18, ty), line, font=f_title, fill=WHITE)
+        ty += 28
+
+    # Countdown badge top-right
+    badge_w = 110
+    badge_h = 56
+    bx = wx + ww - badge_w - 16
+    by = wy + 18
+    rounded_rect(draw, [(bx, by), (bx + badge_w, by + badge_h)], 6,
+                 fill=(40, 70, 90), outline=GOLD, width=1)
+    f_b_label = ImageFont.truetype(FONT_BOLD, 10)
+    f_b_value = ImageFont.truetype(FONT_BOLD, 18)
+    draw.text((bx + 12, by + 8), countdown_label.upper(),
+              font=f_b_label, fill=GOLD_LIGHT)
+    draw.text((bx + 12, by + 24), countdown_value,
+              font=f_b_value, fill=GOLD_LIGHT)
+
+    # Body — county selector
+    body_y = wy + header_h + 18
+    f_lbl = ImageFont.truetype(FONT_BOLD, 11)
+    draw.text((wx + 18, body_y), "1. SELECT YOUR COUNTY",
+              font=f_lbl, fill=GREEN)
+    btn_y = body_y + 22
+    counties = ["Arapahoe", "Douglas", "Jefferson"]
+    f_btn = ImageFont.truetype(FONT_BOLD, 14)
+    btn_x = wx + 18
+    for c in counties:
+        bb = draw.textbbox((0, 0), c, font=f_btn)
+        cw = bb[2] - bb[0] + 26
+        rounded_rect(draw, [(btn_x, btn_y), (btn_x + cw, btn_y + 36)], 6,
+                     fill=WHITE, outline=GRAY_BORDER, width=2)
+        draw.text((btn_x + 13, btn_y + 9), c, font=f_btn, fill=NAVY)
+        btn_x += cw + 8
+
+    # Two input fields side-by-side
+    in_y = btn_y + 60
+    in_h = 50
+    in_w = (ww - 36 - 12) // 2
+    for i, (lbl, val) in enumerate([
+        ("2. YOUR 2026 NOV VALUE", "$ 0"),
+        ("3. YOUR ESTIMATED MARKET VALUE", "$ 0"),
+    ]):
+        ix = wx + 18 + i * (in_w + 12)
+        draw.text((ix, in_y), lbl, font=f_lbl, fill=GREEN)
+        rounded_rect(draw, [(ix, in_y + 22), (ix + in_w, in_y + 22 + in_h)],
+                     6, fill=WHITE, outline=GRAY_BORDER, width=2)
+        f_v = ImageFont.truetype(FONT_BOLD, 22)
+        draw.text((ix + 14, in_y + 36), val, font=f_v, fill=NAVY)
+
+    # Gap readout below
+    gap_y = in_y + 22 + in_h + 18
+    gap_h = 56
+    rounded_rect(draw, [(wx + 18, gap_y), (wx + ww - 18, gap_y + gap_h)],
+                 6, fill=WHITE, outline=GRAY_BORDER, width=1)
+    f_gap_lbl = ImageFont.truetype(FONT_BOLD, 11)
+    draw.text((wx + 30, gap_y + 12), "GAP", font=f_gap_lbl, fill=TEXT_GRAY)
+    f_gap_msg = ImageFont.truetype(FONT_REG, 12)
+    draw.text((wx + 30, gap_y + 28),
+              "Pick a county and enter your two values.",
+              font=f_gap_msg, fill=TEXT_GRAY)
+    f_gap_pct = ImageFont.truetype(FONT_HEAVY, 28)
+    draw.text((wx + ww - 90, gap_y + 14), "— %",
+              font=f_gap_pct, fill=(153, 173, 184))
+
+    # Section divider + path cards preview
+    cards_section_y = gap_y + gap_h + 22
+    f_sec = ImageFont.truetype(FONT_BOLD, 11)
+    draw.text((wx + 18, cards_section_y), "YOUR POTENTIAL PATH",
+              font=f_sec, fill=NAVY)
+
+    # 3 path cards stacked vertically (more readable in narrow phone width)
+    cards_top = cards_section_y + 22
+    card_h = 70
+    card_gap = 8
+    paths = [
+        ("PATH 1", "Protest", "File by June 1", GREEN, GREEN_LIGHT),
+        ("PATH 2", "Skip", "No filing this cycle", (153, 173, 184), (244, 247, 249)),
+        ("PATH 3", "Abate", "File by July 20", NAVY, (244, 247, 249)),
+    ]
+    f_pc_label = ImageFont.truetype(FONT_BOLD, 10)
+    f_pc_name = ImageFont.truetype(FONT_BOLD, 18)
+    f_pc_chip = ImageFont.truetype(FONT_BOLD, 11)
+    for i, (label, name, chip, accent, chip_bg) in enumerate(paths):
+        cy = cards_top + i * (card_h + card_gap)
+        rounded_rect(draw, [(wx + 18, cy), (wx + ww - 18, cy + card_h)], 8,
+                     fill=WHITE, outline=GRAY_BORDER, width=1)
+        # Top accent stripe
+        draw.rectangle([(wx + 18, cy), (wx + ww - 18, cy + 4)], fill=accent)
+        # Path label + name (left)
+        draw.text((wx + 30, cy + 14), label, font=f_pc_label, fill=accent)
+        draw.text((wx + 30, cy + 28), name, font=f_pc_name, fill=NAVY)
+        # Chip (right)
+        chip_bb = draw.textbbox((0, 0), chip, font=f_pc_chip)
+        cw = chip_bb[2] - chip_bb[0] + 18
+        cx = wx + ww - cw - 30
+        cy_chip = cy + (card_h - 24) // 2
+        rounded_rect(draw, [(cx, cy_chip), (cx + cw, cy_chip + 24)], 12,
+                     fill=chip_bg, outline=accent, width=1)
+        draw.text((cx + 9, cy_chip + 6), chip, font=f_pc_chip, fill=NAVY)
+
+    # === Below phone: URL caption ===
+    cap_y = phone_y + phone_h + 35
+    f_caption = ImageFont.truetype(FONT_REG, 22)
+    draw_centered(draw, url, f_caption, cap_y, GOLD_LIGHT, W)
+
+    # === Footer band ===
+    footer_h = 100
+    draw.rectangle([(0, H - footer_h), (W, H)], fill=NAVY_DARK)
+    draw.rectangle([(0, H - footer_h - 2), (W, H - footer_h)], fill=GOLD)
+    f_foot = ImageFont.truetype(FONT_BOLD, 26)
+    foot_y = H - footer_h + (footer_h - 26) // 2 - 4
+    draw_centered(draw, "JACOB STARK · 8Z REAL ESTATE · 303-997-0634",
+                  f_foot, foot_y, WHITE, W)
+
+    # Top-left wordmark + corner mark
+    f_brand = ImageFont.truetype(FONT_BOLD, 22)
+    # (skip brand mark on top — the "above-phone" headline carries identity)
+
+    out = img.convert("RGB")
+    os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
+    out.save(output_path, "PNG", optimize=True)
+    return output_path
+
+
+def main():
+    p = argparse.ArgumentParser()
+    p.add_argument("--output", required=True)
+    p.add_argument("--eyebrow", required=True)
+    p.add_argument("--title", required=True)
+    p.add_argument("--countdown-label", required=True)
+    p.add_argument("--countdown-value", required=True)
+    p.add_argument("--above-phone", required=True)
+    p.add_argument("--url", required=True)
+    p.add_argument("--canvas-size", type=int, default=1200)
+    args = p.parse_args()
+    out = render_phone_mockup(
+        output_path=args.output,
+        eyebrow=args.eyebrow,
+        title=args.title,
+        countdown_label=args.countdown_label,
+        countdown_value=args.countdown_value,
+        above_phone=args.above_phone,
+        url=args.url,
+        canvas_size=args.canvas_size,
+    )
+    print(f"Wrote {out}")
+
+
+if __name__ == "__main__":
+    main()
