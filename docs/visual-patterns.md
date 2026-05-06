@@ -28,12 +28,64 @@ When all four are true, the writer adds a new entry below using the same shape a
 ## Brand color reference (used by every pattern)
 
 - **Navy** `#002a3a` — primary, headers, text on light backgrounds, key bars
+- **Gold accent** `#c8965a` — answer pointers, "look here" callouts inside dark headers
 - **Green accent** `#4a7c59` — labels, sub-headings, borders for positive rows
 - **Light blue-gray bg** `#f4f7f9` — snippet block, alternating cards
 - **Light green bg** `#f0f4f0` — Key Takeaways, tier chips
 - **Border gray** `#d6e0e6` — card borders, dividers
 - **Body text** `#333` — main copy
 - **Secondary text** `#555` — captions, sources, secondary labels
+
+---
+
+## Visual Hero Rule (applies to every pattern)
+
+**Every visual's hero element must lead with the compelling question the visual is answering — not a context label, not a category eyebrow, not a budget banner.** The hero is the question. The body of the visual is the answer.
+
+This applies regardless of pattern:
+
+- **`comparison-table`** — `<caption>` reads as the compelling question (or a tight paraphrase). Not "Q1 2026 South Denver Comparison." Yes "How do Highlands Ranch, Parker, and Castle Pines compare on Q1 2026 move-up data?"
+- **`two-path-diptych`** — navy header banner is the question, prominent, large type. Below it, a 1-line gold-accent answer-pointer ("Two paths fit ↓" / "The right one depends on ___ ↓"). The eyebrow label, if any, only adds audience context ("FOR FIRST-TIME BUYERS").
+- **`profile-card-grid`** — the H3 above the grid IS the question; no banner needed. If a banner is added, it must be the question.
+- **`price-ladder-svg`** — SVG `<title>` element AND the visible chart title both read as the question ("What does $X buy at each Lakewood price tier?").
+- **`single-metric-bar-chart`** — SVG `<title>` AND visible chart title both read as the question, naming the qualified entity AND the metric.
+- **`decision-path`** — root node IS the question. Branches are the answers.
+- **`settlement-statement`** — navy header strip is the question ("What does closing day actually cost on a $475K Littleton FHA purchase?"). Date and source go in a sub-strip below.
+
+**The 5-second test:** a reader who sees only the hero of the visual should know exactly what question it answers. If they have to scan the body to figure out what the visual is FOR, the hero failed and the visual is wrong.
+
+**Why:** AI engines look for question-shaped hooks in image alt text, captions, and SVG titles when ranking visuals as direct-answer surfaces. Question-led heroes also outperform on CTR for SERP image carousels and for scroll-pause behavior on the page itself. Both audiences (human and AI) reward the question.
+
+---
+
+## Source Placement Rule (applies to every pattern)
+
+**Source attribution must live both structurally inside the Schema.org wrapper AND visually bound to the visual block — never as a floating paragraph below.** The visual is the unit; the source is part of the unit, not a footnote that follows it.
+
+Two failure modes this rule prevents:
+
+1. **Structural drift.** Source `<p>` lives OUTSIDE the `<div itemscope itemtype="https://schema.org/Dataset">` wrapper. Schema.org parsers bind props by DOM ancestry — a citation outside the wrapper is unbound, and Rich Results Test reports the citation as floating context rather than as part of the dataset. AEO concern: the source doesn't propagate to the dataset's `isBasedOn` / `citation` / `sourceOrganization` semantics.
+
+2. **Visual detachment.** Source `<p>` sits below the visual block with margin-gap separating them. Reads as a footnote. Worse — when the visual gets scraped as an image (Google Images, AI engine, social share), the source line doesn't travel with the bitmap. The image circulates without provenance. AEO concern: source authority signal lost on image-scraped surfaces.
+
+**Best-practice combination — applies to every pattern:**
+
+1. **Source row lives INSIDE the Schema.org itemscope wrapper.** No exception. The wrapper opens at the top of the visual block and closes after the source row, not before it.
+2. **Visually bound to the visual block.** No `margin-top` gap. Light gray (`#f8f9fa`) or white background, flat top border (`border-top: 1px solid #d6e0e6`), bottom border-radius matching the visual's outer radius. Reads as the footer-of-the-visual, not a paragraph that happens to be below.
+3. **For SVG-based patterns** (`price-ladder-svg`, `single-metric-bar-chart`), source ALSO baked into the SVG itself as a `<text>` element near the bottom — so when the SVG is rasterized and shared as an image, the source travels with the pixels.
+4. **Source string format:** `Source: [data source] | [scope] | [date range] | [sample size] | selling303.com`. Inline `<strong>` on "Source:" for visual emphasis. Date range is always spelled out ("April 1–30, 2026" not "April 2026").
+
+**Per-pattern source-row requirements:**
+
+- **`comparison-table`** — source goes in the `<figcaption>`, which is structurally inside the `<figure>` wrapper. Visually bound by the `<figcaption>` styling — no extra paragraph below the figure.
+- **`two-path-diptych`** — source row added immediately after the 2-column card grid, INSIDE the outer wrapper. Card grid loses its bottom border-radius; source row gets it. Light gray background, flat top border, no margin.
+- **`profile-card-grid`** — source row added below the persona grid, INSIDE the `<figure>` wrapper, styled as a bound footer of the figure.
+- **`price-ladder-svg`** — source baked into SVG `<text>` AND in `<figcaption>` outside the SVG. Both inside the `<figure>` wrapper.
+- **`single-metric-bar-chart`** — same as price-ladder-svg.
+- **`decision-path`** — source row at the bottom of the path block, INSIDE the wrapper, bound styling.
+- **`settlement-statement`** — source goes in the navy/sub-strip footer of the statement block, INSIDE the wrapper.
+
+**Verification check:** before shipping any visual, confirm by inspecting the rendered DOM that the source `<p>` (or `<text>` for SVG) is a child of the `itemscope` wrapper. If it's a sibling that follows the wrapper, the binding is broken.
 
 ---
 
@@ -75,18 +127,18 @@ When all four are true, the writer adds a new entry below using the same shape a
 **Raw data shape:** A shared constraint (budget, timeline, neighborhood) at the top. Two paths below, each with: price/range, key dimension (sqft, DOM, etc.), best-fit context (ZIPs, builder type, etc.), build era / vintage, and a labeled trade-off paragraph.
 
 **Brand styling:**
-- Navy header banner with shared constraint and SVG icon
-- 2-column card grid below (auto-fit `minmax(280px, 1fr)` for mobile reflow)
+- **Navy header banner leads with the post's compelling question, not a context label.** Question is large (1.5rem+), bold, white-on-navy. Optional small uppercase eyebrow above for audience context (e.g., "FOR FIRST-TIME BUYERS"). Below the question, a 1-line gold-accent (`#c8965a`) answer-pointer with a downward arrow ("Two paths fit. Pick your trade-off ↓"). NO wallet/budget icons, NO generic banner copy. The question is the visual identity. See Visual Hero Rule above.
+- 2-column card grid below (auto-fit `minmax(280px, 1fr)` for mobile reflow). Card grid has no bottom border-radius — the source row gets it.
 - Left card: `#f4f7f9` background. Right card: white background. Subtle vertical divider between.
 - Each card: 40×40 SVG icon, "Path 1 / Path 2" eyebrow label, headline, 2×2 attribute grid, labeled trade-off section
-- Source attribution below
+- **Source row bound to the card grid** (no margin gap) per the Source Placement Rule — light gray (`#f8f9fa`) background, flat top border, bottom border-radius (`0 0 8px 8px`) matching the original card-grid radius, INSIDE the outer Schema.org wrapper. Format: `<strong>Source:</strong> ...` per the standard source string format.
 
 **Schema.org payload:**
 - Outer `<div itemscope itemtype="https://schema.org/Dataset">` for the whole comparison
 - Each path: `<div itemscope itemtype="https://schema.org/PropertyValue">` with name + machine-readable value range
 - All key labels are real text (not images) for AI engine parseability
 
-**Lift from:** `src/content/blog/first-time-home-buyer-guide-lakewood-colorado-2026.md` — `<h2 id="price-tiers">` section. Single-family path vs. condo/townhome path at $400–550K Lakewood budget.
+**Lift from:** `src/content/blog/first-time-home-buyer-guide-lakewood-colorado-2026.md` — `<h2 id="price-tiers">` section. Question-led navy banner ("What does $400K–$550K actually buy in Lakewood, Colorado?"), single-family path vs. condo/townhome path below.
 
 **When NOT to use:** if the post has 3+ legitimate paths (use `profile-card-grid`), if the paths aren't actually distinct (use `comparison-table`), or if there's a ranking among them (use `single-metric-bar-chart`).
 

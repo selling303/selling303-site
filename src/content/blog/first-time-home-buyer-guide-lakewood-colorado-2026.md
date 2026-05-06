@@ -113,12 +113,13 @@ relatedPosts:
 <meta itemprop="creator" content="Jacob Stark, selling303.com">
 <meta itemprop="publisher" content="REcolorado MLS">
 
-<div style="background: #002a3a; color: #fff; padding: 1.25rem 1.5rem; border-radius: 8px 8px 0 0; text-align: center;">
-<div style="display: inline-flex; align-items: center; gap: 0.75rem;"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#fff" stroke-width="1.5" aria-hidden="true"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20"/><circle cx="17" cy="14" r="1.5" fill="#fff"/></svg><div><div style="font-size: 0.85rem; opacity: 0.85; text-transform: uppercase; letter-spacing: 0.08em;">Your $400K–$550K budget in</div><div style="font-size: 1.4rem; font-weight: 700;">Lakewood, Colorado</div></div></div>
-<div style="margin-top: 0.75rem; font-size: 0.9rem; opacity: 0.9;">Two paths fit this band. Pick the trade-off that matches your priorities.</div>
+<div style="background: #002a3a; color: #fff; padding: 1.75rem 1.5rem 1.5rem; border-radius: 8px 8px 0 0; text-align: center;">
+<div style="font-size: 0.75rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.65rem;">For First-Time Buyers</div>
+<div style="font-size: 1.5rem; font-weight: 700; line-height: 1.35; max-width: 640px; margin: 0 auto;">What does $400K–$550K actually buy in Lakewood, Colorado?</div>
+<div style="margin-top: 0.95rem; font-size: 0.95rem; font-weight: 600; color: #c8965a; letter-spacing: 0.02em;">Two paths fit. Pick your trade-off ↓</div>
 </div>
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0; border: 1px solid #d6e0e6; border-top: none; border-radius: 0 0 8px 8px; overflow: hidden;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0; border: 1px solid #d6e0e6; border-top: none; overflow: hidden;">
 
 <div itemscope itemtype="https://schema.org/PropertyValue" style="padding: 1.5rem; background: #f4f7f9; border-right: 1px solid #d6e0e6;">
 <meta itemprop="name" content="Lakewood single-family path for first-time buyers">
@@ -153,7 +154,7 @@ relatedPosts:
 </div>
 
 </div>
-<p style="font-size: 0.8rem; color: #555; margin-top: 0.5rem;">Source: REcolorado MLS Market Analysis Summary, Lakewood, Colorado | April 1–30, 2026 | n=864 (closed + pending + expired + withdrawn) | selling303.com</p>
+<div style="background: #f8f9fa; border: 1px solid #d6e0e6; border-top: none; border-radius: 0 0 8px 8px; padding: 0.75rem 1.25rem; font-size: 0.8rem; color: #555; line-height: 1.5;"><strong style="color: #002a3a;">Source:</strong> REcolorado MLS Market Analysis Summary, Lakewood, Colorado | April 1–30, 2026 | n=864 (closed + pending + expired + withdrawn) | selling303.com</div>
 </div>
 
 <p><strong>Over half of Lakewood's pending inventory (median list $562,500) sits inside the first-time buyer price band</strong>, with a 14-day median time on market. The takeaway for a buyer at $475K isn't "you're priced out of Lakewood." It's "you have real options on either path — but you need to be ready to move when the right one lists."</p>
