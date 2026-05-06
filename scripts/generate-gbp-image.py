@@ -89,39 +89,41 @@ def generate_hero_card(
     output_path,
     hero_color=GOLD,
     footer_line="JACOB STARK · 8z REAL ESTATE · 303-997-0634",
-    canvas_size=1200,
+    canvas_width=1200,
+    canvas_height=900,
 ):
-    W = H = canvas_size
+    """Render a 4:3 hero card. 1200x900 fits GBP feed-card thumbnails fully."""
+    W = canvas_width
+    H = canvas_height
 
     # 1. Background — vertical gradient navy → slightly lighter navy
     img = vertical_gradient((W, H), NAVY, NAVY_DARK)
     draw = ImageDraw.Draw(img)
 
-    # 2. (No top-right corner mark — wordmark in top-left carries identity.)
+    # 2. Top wordmark — small "selling303.com" top-left
+    f_brand = ImageFont.truetype(FONT_BOLD, 24)
+    draw.text((40, 28), "selling303.com", font=f_brand, fill=WHITE)
+    draw.ellipse([(228, 40), (240, 52)], fill=hero_color)
 
-    # 3. Hero number — auto-fit font size up to ~560px so very long numbers still fit
-    font_size = 560
-    while font_size > 200:
+    # 3. Hero number — auto-fit, scaled for 4:3
+    font_size = 420
+    while font_size > 180:
         f_hero = ImageFont.truetype(FONT_HEAVY, font_size)
         bbox = draw.textbbox((0, 0), hero_number, font=f_hero)
         if bbox[2] - bbox[0] <= int(W * 0.85):
             break
         font_size -= 20
-    hero_y = 230
+    hero_y = 90
     bbox = draw.textbbox((0, 0), hero_number, font=f_hero)
     hero_w = bbox[2] - bbox[0]
     hero_h = bbox[3] - bbox[1]
     hero_x = (W - hero_w) // 2 - bbox[0]
     draw.text((hero_x, hero_y - bbox[1]), hero_number, font=f_hero, fill=hero_color)
 
-    # 4. Hero label — small uppercase letter-spaced under the hero number
-    f_label = ImageFont.truetype(FONT_BOLD, 38)
-    label_y = hero_y + hero_h + 30
-    spaced = "  ".join(list(hero_label))  # letter-space by inserting spaces between chars
-    # Use light spacing instead of full-letter for readability
-    spaced = " ".join(hero_label.split())  # collapse multi-space to single
-    spaced = spaced.upper()
-    # Manual letter-spacing via tracking
+    # 4. Hero label
+    f_label = ImageFont.truetype(FONT_BOLD, 30)
+    label_y = hero_y + hero_h + 14
+    spaced = " ".join(hero_label.split()).upper()
     total_w = 0
     for ch in spaced:
         bb = draw.textbbox((0, 0), ch, font=f_label)
@@ -133,37 +135,29 @@ def generate_hero_card(
         draw.text((cx, label_y), ch, font=f_label, fill=hero_color)
         cx += (bb[2] - bb[0]) + 4
 
-    # 5. Gold accent line below label
-    rule_y = label_y + 70
-    rule_w = 220
+    # 5. Gold accent line
+    rule_y = label_y + 52
+    rule_w = 180
     draw.rectangle([((W - rule_w) // 2, rule_y),
-                    ((W + rule_w) // 2, rule_y + 5)], fill=hero_color)
+                    ((W + rule_w) // 2, rule_y + 4)], fill=hero_color)
 
-    # 6. Headline — wrapped, white, large bold
-    f_head = ImageFont.truetype(FONT_BOLD, 62)
-    head_max_w = int(W * 0.84)
+    # 6. Headline
+    f_head = ImageFont.truetype(FONT_BOLD, 46)
+    head_max_w = int(W * 0.86)
     lines = wrap_text_to_width(draw, headline, f_head, head_max_w)
-    head_y = rule_y + 60
-    line_height = 78
+    head_y = rule_y + 30
+    line_height = 58
     for line in lines:
         draw_centered_text(draw, line, f_head, head_y, WHITE, W)
         head_y += line_height
 
-    # 7. Footer band — slightly darker rectangle at bottom
-    footer_h = 100
+    # 7. Footer band
+    footer_h = 70
     draw.rectangle([(0, H - footer_h), (W, H)], fill=NAVY_DARK)
-    # subtle gold rule above footer
     draw.rectangle([(0, H - footer_h - 2), (W, H - footer_h)], fill=hero_color)
-
-    f_foot = ImageFont.truetype(FONT_BOLD, 26)
-    foot_y = H - footer_h + (footer_h - 26) // 2 - 4
+    f_foot = ImageFont.truetype(FONT_BOLD, 22)
+    foot_y = H - footer_h + (footer_h - 22) // 2 - 3
     draw_centered_text(draw, footer_line.upper(), f_foot, foot_y, WHITE, W)
-
-    # 8. Top wordmark — small "selling303.com" top-left corner
-    f_brand = ImageFont.truetype(FONT_BOLD, 26)
-    draw.text((50, 38), "selling303.com", font=f_brand, fill=WHITE)
-    # gold dot accent
-    draw.ellipse([(50 + 200, 50), (50 + 212, 62)], fill=hero_color)
 
     os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
     img.save(output_path, "PNG", optimize=True)
@@ -179,7 +173,8 @@ def main():
     p.add_argument("--hero-color", default="#c8965a")
     p.add_argument("--footer-line",
                    default="JACOB STARK · 8z REAL ESTATE · 303-997-0634")
-    p.add_argument("--canvas-size", type=int, default=1200)
+    p.add_argument("--canvas-width", type=int, default=1200)
+    p.add_argument("--canvas-height", type=int, default=900)
     args = p.parse_args()
 
     hc = args.hero_color.lstrip("#")
@@ -192,7 +187,8 @@ def main():
         output_path=args.output,
         hero_color=hero_color_rgb,
         footer_line=args.footer_line,
-        canvas_size=args.canvas_size,
+        canvas_width=args.canvas_width,
+        canvas_height=args.canvas_height,
     )
     print(f"Wrote {out}")
 

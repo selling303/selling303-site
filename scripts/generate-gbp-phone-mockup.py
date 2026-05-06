@@ -86,27 +86,28 @@ def render_phone_mockup(
     countdown_value,
     above_phone,
     url,
-    canvas_size=1200,
+    canvas_width=1200,
+    canvas_height=900,
 ):
-    W = H = canvas_size
+    """4:3 side-by-side: phone left, big headline right. Optimized for GBP
+    feed-card thumbnails — full image visible, headline readable at small size."""
+    W = canvas_width
+    H = canvas_height
 
     # Background — navy gradient
     img = vertical_gradient((W, H), NAVY, NAVY_DARK).convert("RGBA")
     draw = ImageDraw.Draw(img)
 
-    # Header copy above the phone
-    f_above = ImageFont.truetype(FONT_BOLD, 44)
-    draw_centered(draw, above_phone, f_above, 70, WHITE, W)
+    # Top wordmark (small)
+    f_brand = ImageFont.truetype(FONT_BOLD, 22)
+    draw.text((40, 28), "selling303.com", font=f_brand, fill=WHITE)
+    draw.ellipse([(216, 38), (228, 50)], fill=GOLD)
 
-    # Subtle gold accent rule under the headline
-    rule_w = 100
-    draw.rectangle([((W - rule_w) // 2, 130), ((W + rule_w) // 2, 134)], fill=GOLD)
-
-    # === PHONE FRAME ===
-    phone_w, phone_h = 540, 920
-    phone_x = (W - phone_w) // 2
-    phone_y = 170
-    phone_radius = 56
+    # === PHONE FRAME (left side) ===
+    phone_w, phone_h = 440, 720
+    phone_x = 70
+    phone_y = 90
+    phone_radius = 46
 
     # Drop shadow under the phone
     shadow = shadow_layer((W, H), phone_x + 18, phone_y + 28,
@@ -317,23 +318,53 @@ def render_phone_mockup(
                      fill=chip_bg, outline=accent, width=1)
         draw.text((cx + 9, cy_chip + 6), chip, font=f_pc_chip, fill=NAVY)
 
-    # === Below phone: URL caption ===
-    cap_y = phone_y + phone_h + 35
-    f_caption = ImageFont.truetype(FONT_REG, 22)
-    draw_centered(draw, url, f_caption, cap_y, GOLD_LIGHT, W)
+    # === Right column — big headline + supporting copy ===
+    rx = phone_x + phone_w + 70  # x-anchor of right column
+    rx_max = W - 60
+    rx_w = rx_max - rx
+
+    # Eyebrow tag
+    f_r_eye = ImageFont.truetype(FONT_BOLD, 18)
+    draw.text((rx, 130), "INTERACTIVE TOOL", font=f_r_eye, fill=GOLD)
+    draw.rectangle([(rx, 162), (rx + 50, 165)], fill=GOLD)
+
+    # Big headline (3 lines max, ~58px)
+    f_r_head = ImageFont.truetype(FONT_BOLD, 58)
+    head_lines = []
+    words = above_phone.split()
+    cur = words[0]
+    for w in words[1:]:
+        test = cur + " " + w
+        bb = draw.textbbox((0, 0), test, font=f_r_head)
+        if bb[2] - bb[0] <= rx_w:
+            cur = test
+        else:
+            head_lines.append(cur)
+            cur = w
+    head_lines.append(cur)
+    head_y = 200
+    for line in head_lines[:4]:
+        draw.text((rx, head_y), line, font=f_r_head, fill=WHITE)
+        head_y += 70
+
+    # Supporting line + URL
+    f_r_sub = ImageFont.truetype(FONT_BOLD, 22)
+    draw.text((rx, head_y + 30), "Free calculator · 30 seconds",
+              font=f_r_sub, fill=GOLD_LIGHT)
+    f_r_url = ImageFont.truetype(FONT_REG, 18)
+    short_url = url.replace("https://", "").replace("http://", "")
+    if len(short_url) > 56:
+        short_url = short_url[:54] + "…"
+    draw.text((rx, head_y + 70), short_url, font=f_r_url, fill=WHITE_DIM)
 
     # === Footer band ===
-    footer_h = 100
+    footer_h = 70
     draw.rectangle([(0, H - footer_h), (W, H)], fill=NAVY_DARK)
     draw.rectangle([(0, H - footer_h - 2), (W, H - footer_h)], fill=GOLD)
-    f_foot = ImageFont.truetype(FONT_BOLD, 26)
-    foot_y = H - footer_h + (footer_h - 26) // 2 - 4
+    f_foot = ImageFont.truetype(FONT_BOLD, 22)
+    foot_y = H - footer_h + (footer_h - 22) // 2 - 3
     draw_centered(draw, "JACOB STARK · 8Z REAL ESTATE · 303-997-0634",
                   f_foot, foot_y, WHITE, W)
-
-    # Top-left wordmark + corner mark
-    f_brand = ImageFont.truetype(FONT_BOLD, 22)
-    # (skip brand mark on top — the "above-phone" headline carries identity)
 
     out = img.convert("RGB")
     os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
@@ -350,7 +381,8 @@ def main():
     p.add_argument("--countdown-value", required=True)
     p.add_argument("--above-phone", required=True)
     p.add_argument("--url", required=True)
-    p.add_argument("--canvas-size", type=int, default=1200)
+    p.add_argument("--canvas-width", type=int, default=1200)
+    p.add_argument("--canvas-height", type=int, default=900)
     args = p.parse_args()
     out = render_phone_mockup(
         output_path=args.output,
@@ -360,7 +392,8 @@ def main():
         countdown_value=args.countdown_value,
         above_phone=args.above_phone,
         url=args.url,
-        canvas_size=args.canvas_size,
+        canvas_width=args.canvas_width,
+        canvas_height=args.canvas_height,
     )
     print(f"Wrote {out}")
 

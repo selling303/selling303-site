@@ -104,44 +104,46 @@ def render_deadline_spine(
     hero_unit,
     milestones,
     footer,
-    canvas_size=1200,
+    canvas_width=1200,
+    canvas_height=900,
 ):
-    W = H = canvas_size
+    """4:3 deadline spine. 1200x900 fits GBP feed-card thumbnails fully."""
+    W = canvas_width
+    H = canvas_height
     img = vertical_gradient((W, H), NAVY, NAVY_DARK)
     draw = ImageDraw.Draw(img)
 
-    # === HEADER (0-360): navy block with hero countdown ===
-    draw.rectangle([(0, 0), (W, 360)], fill=NAVY)
+    # === HEADER (0-280): navy block with hero countdown ===
+    draw.rectangle([(0, 0), (W, 280)], fill=NAVY)
 
     # Top wordmark
-    f_brand = ImageFont.truetype(FONT_BOLD, 26)
-    draw.text((50, 38), "selling303.com", font=f_brand, fill=WHITE)
-    draw.ellipse([(255, 50), (267, 62)], fill=GOLD)
-    # (No top-right corner mark — wordmark in top-left carries identity.)
+    f_brand = ImageFont.truetype(FONT_BOLD, 24)
+    draw.text((40, 28), "selling303.com", font=f_brand, fill=WHITE)
+    draw.ellipse([(228, 40), (240, 52)], fill=GOLD)
 
-    # Headline (small caption above the hero number)
-    f_caption = ImageFont.truetype(FONT_BOLD, 30)
-    draw_centered(draw, headline, f_caption, 110, WHITE_DIM, W)
+    # Headline caption above the hero number
+    f_caption = ImageFont.truetype(FONT_BOLD, 26)
+    draw_centered(draw, headline, f_caption, 80, WHITE_DIM, W)
 
-    # Hero number + unit (inline horizontally)
-    f_hero = ImageFont.truetype(FONT_HEAVY, 220)
-    f_unit = ImageFont.truetype(FONT_BOLD, 56)
+    # Hero number + unit
+    f_hero = ImageFont.truetype(FONT_HEAVY, 170)
+    f_unit = ImageFont.truetype(FONT_BOLD, 46)
 
     n_bb = draw.textbbox((0, 0), hero_number, font=f_hero)
     u_bb = draw.textbbox((0, 0), hero_unit, font=f_unit)
     n_w = n_bb[2] - n_bb[0]
     u_w = u_bb[2] - u_bb[0]
-    gap = 24
+    gap = 18
     total_w = n_w + gap + u_w
     start_x = (W - total_w) // 2
-    n_y = 160
+    n_y = 120
     draw.text((start_x - n_bb[0], n_y - n_bb[1]), hero_number, font=f_hero, fill=GOLD)
-    u_y = n_y + (n_bb[3] - n_bb[1]) - (u_bb[3] - u_bb[1]) - 28
+    u_y = n_y + (n_bb[3] - n_bb[1]) - (u_bb[3] - u_bb[1]) - 22
     draw.text((start_x + n_w + gap - u_bb[0], u_y - u_bb[1]),
               hero_unit, font=f_unit, fill=GOLD_LIGHT)
 
-    # === TIMELINE (360-820): horizontal spine with 5 milestones ===
-    timeline_y = 600
+    # === TIMELINE (280-650): horizontal spine ===
+    timeline_y = 480
 
     # Track baseline (gray)
     draw.line([(120, timeline_y), (1080, timeline_y)],
@@ -226,27 +228,27 @@ def render_deadline_spine(
             today["desc"], font=f_m_desc, fill=WHITE,
         )
 
-    # === DETAIL BLOCK (820-1100): supporting copy + URL ===
-    f_q = ImageFont.truetype(FONT_BOLD, 36)
-    detail_y = 870
+    # === DETAIL BLOCK (650-820): supporting copy + URL ===
+    f_q = ImageFont.truetype(FONT_BOLD, 30)
+    detail_y = 680
     q_lines = [
         "Pick your county. Type your numbers.",
         "The calculator lights up your path.",
     ]
     for line in q_lines:
         draw_centered(draw, line, f_q, detail_y, WHITE, W)
-        detail_y += 50
+        detail_y += 42
 
-    f_url = ImageFont.truetype(FONT_REG, 22)
-    draw_centered(draw, footer, f_url, detail_y + 16, GOLD_LIGHT, W)
+    f_url = ImageFont.truetype(FONT_REG, 18)
+    draw_centered(draw, footer, f_url, detail_y + 14, GOLD_LIGHT, W)
 
-    # === FOOTER BAND (1100-1200) ===
-    footer_h = 100
+    # === FOOTER BAND (830-900) ===
+    footer_h = 70
     draw.rectangle([(0, H - footer_h), (W, H)], fill=NAVY_DARK)
     draw.rectangle([(0, H - footer_h - 2), (W, H - footer_h)], fill=GOLD)
 
-    f_foot = ImageFont.truetype(FONT_BOLD, 26)
-    foot_y = H - footer_h + (footer_h - 26) // 2 - 4
+    f_foot = ImageFont.truetype(FONT_BOLD, 22)
+    foot_y = H - footer_h + (footer_h - 22) // 2 - 3
     draw_centered(draw, "JACOB STARK · 8Z REAL ESTATE · 303-997-0634",
                   f_foot, foot_y, WHITE, W)
 
@@ -265,7 +267,8 @@ def main():
     p.add_argument("--hero-unit", default="days")
     p.add_argument("--milestones", required=True)
     p.add_argument("--footer", required=True)
-    p.add_argument("--canvas-size", type=int, default=1200)
+    p.add_argument("--canvas-width", type=int, default=1200)
+    p.add_argument("--canvas-height", type=int, default=900)
     args = p.parse_args()
 
     if args.template == "deadline-spine":
@@ -276,7 +279,8 @@ def main():
             hero_unit=args.hero_unit,
             milestones=parse_milestones(args.milestones),
             footer=args.footer,
-            canvas_size=args.canvas_size,
+            canvas_width=args.canvas_width,
+            canvas_height=args.canvas_height,
         )
         print(f"Wrote {out}")
 
