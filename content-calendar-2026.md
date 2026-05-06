@@ -300,7 +300,7 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: comparison-table (price tier × typical home type/sqft/ZIP concentration — substituted from spec'd "ZIPs × price" because PDF-source data isn't ZIP-segmented; tier-based version is more honest and more useful for first-time buyers)
 
 #### Day 2 — Wednesday, May 6
-- [ ] **"RidgeGate vs. Heritage Hills: A Lone Tree New Construction Update for 2026"**
+- [x] **"RidgeGate vs. Heritage Hills: A Lone Tree New Construction Update for 2026"** *(drafted 2026-05-05)*
   - Specialization: `/new-construction` | Geographic: `/lone-tree`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Side-by-side update on the two flagship Lone Tree builder communities — base pricing, lot premium ranges, current builder incentives, HOA stack, and which buyer profile each fits.

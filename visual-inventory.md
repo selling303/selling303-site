@@ -50,6 +50,7 @@ Tracking file for every page that uses a data visual. Source of truth for what v
 | `new-construction-castle-pines-parker-2026` | none detected | — | review needed (likely comparison-table candidate) | — |
 | `out-of-state-buyer-mistakes-denver-suburbs-centennial` | tier-list (legacy) | unknown | needs upgrade — Phase 3 | — |
 | `parker-vs-castle-pines` | none detected | — | review needed (likely comparison-table candidate) | — |
+| `ridgegate-vs-heritage-hills-lone-tree-new-construction-2026` | comparison-table (RidgeGate vs. Heritage Hills × 6 metrics — construction profile, Q1 2026 closings, median close price, typical price entry, HOA & amenity stack, buyer profile) | Dataset + Place Microdata + per-cell PropertyValue | **optimized** | 2026-05-06 |
 | `real-estate-agent-new-construction-colorado` | none detected | — | review needed | — |
 | `relist-home-littleton-after-expired-listing` | none detected | — | review needed (howto candidate — Phase 4 flag-only) | — |
 | `selling-centennial-buying-highlands-ranch-coordinate-transactions` | table (legacy), svg-chart, cost flow | unknown | needs upgrade — Phase 3 (howto + comparison-table + cost-breakdown candidate) | — |
