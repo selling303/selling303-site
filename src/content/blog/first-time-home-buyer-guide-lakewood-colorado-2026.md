@@ -45,7 +45,7 @@ relatedPosts:
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <p style="margin: 0; font-size: 1.05rem;"><strong>Is Lakewood, Colorado a good place for first-time home buyers in 2026?</strong></p>
-<p style="margin: 0.5rem 0 0;">Yes. Lakewood closed 199 residential transactions in April 2026 at a $600,670 median sale price (REcolorado MLS), with active inventory starting in the $170s and FHA-eligible single-family options between $400K and $550K across most of the city's six ZIP codes.</p>
+<p style="margin: 0.5rem 0 0;">Yes. Lakewood closed 199 residential transactions in April 2026 at a $600,670 median sale price, with active inventory from $169,900 and FHA-eligible single-family options between $400K and $550K across the city's six ZIP codes.</p>
 </div>
 
 <div style="background: #f0f4f0; border-left: 4px solid #4a7c59; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
@@ -152,7 +152,7 @@ relatedPosts:
 
 <h2 id="fha">How does FHA financing work for a Lakewood condo or single-family home?</h2>
 
-<p>FHA financing is the most common first-time buyer path in Lakewood, and the rules are slightly different for single-family homes versus condos. Both come with FHA's 3.5% minimum down payment and the agency's 2026 loan limits for Jefferson County (currently $850,000 for a single-unit property — well above any entry-level Lakewood price band).</p>
+<p>FHA financing is the most common first-time buyer path in Lakewood, and the rules are slightly different for single-family homes versus condos. Both come with FHA's 3.5% minimum down payment and the agency's <a href="https://www.hud.gov/program_offices/housing/sfh/lender/origination/mortgage_limits">2026 FHA loan limits</a> for Jefferson County (currently $850,000 for a single-unit property — well above any entry-level Lakewood price band).</p>
 
 <p>For a single-family home, the main FHA hurdle is the appraisal. The property has to meet HUD's minimum property standards: no exposed wiring, working HVAC, intact roof, no peeling paint on pre-1978 homes (lead-paint risk), no foundation cracks beyond cosmetic. A lot of older Lakewood ZIP 80214 and 80232 inventory technically qualifies, but homes that have been deferred-maintenance for too long can fail. Plan for an FHA-friendly inspection contingency.</p>
 
@@ -162,9 +162,11 @@ relatedPosts:
 
 <h2 id="speed">How fast are entry-level Lakewood homes selling — and how should a first-time buyer prepare?</h2>
 
-<p>Speed is the underrated variable in the Lakewood first-time buyer market. April 2026 closings had a 17-day median DIM. The 186 listings that went pending during April had a 14-day median DIM. The metro-wide DMAR March 2026 close-price-to-list-price ratio of 99.13% confirms the pattern — well-priced homes are not sitting. They're going under contract inside two weeks, often with multiple offers in the entry-level price tier.</p>
+<p>Speed is the underrated variable in the Lakewood first-time buyer market. April 2026 closings had a 17-day median DIM. The 186 listings that went pending during April had a 14-day median DIM. The metro-wide <a href="https://www.dmarealtors.com/market-trends">DMAR March 2026</a> close-price-to-list-price ratio of 99.13% confirms the pattern — well-priced homes are not sitting. They're going under contract inside two weeks, often with multiple offers in the entry-level price tier.</p>
 
 <p>What this means for a first-time buyer in practice: lender prep matters more than deal-hunting. The buyers who close in Lakewood are the ones who walk in with a fully underwritten pre-approval, not just a pre-qualification letter. They've reviewed their inspection contingencies in advance, they've talked to their lender about appraisal-gap coverage, and they understand whether they can offer a rate buy-down or seller concession instead of a price reduction.</p>
+
+<p>Jacob Stark coordinates Lakewood first-time buyer offers with a fully underwritten pre-approval, an appraisal-gap clause, and a rate buy-down concession built in — the package that wins a 14-day-DIM listing.</p>
 
 <p>The Lakewood listings that expired in April 2026 — 48 of them, a meaningful share of total inventory — had a 90-day median DIM. That's the failure mode: priced wrong, overcondition, or in a building with FHA disqualifications. They sit for three months and come off the market. A buyer who waits to "see what happens" with a stale listing is usually buying the wrong property. Negotiate hard on listings that have hit 60+ days; move fast on listings that hit MLS in the last week. For more on how this plays out from the seller side, see <a href="/blog/move-up-seller-myth-waiting-market-better-lakewood-2026">why waiting to sell your Lakewood home is costing you money</a>.</p>
 
