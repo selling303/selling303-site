@@ -1,6 +1,6 @@
 # Visual Patterns Library — selling303.com
 
-The single source of truth for visuals on selling303.com blog posts, pillar pages, and neighborhood pages. Six shipped patterns, each grounded in a real post that proved it works. The blog-post-writer and aeo-visual-builder skills both reference this file when selecting a pattern at draft time.
+The single source of truth for visuals on selling303.com blog posts, pillar pages, and neighborhood pages. Seven shipped patterns, each grounded in a real post that proved it works. The blog-post-writer and aeo-visual-builder skills both reference this file when selecting a pattern at draft time.
 
 ---
 
@@ -37,7 +37,7 @@ When all four are true, the writer adds a new entry below using the same shape a
 
 ---
 
-# The Six Patterns
+# The Seven Patterns
 
 ## 1. `comparison-table`
 
@@ -178,7 +178,39 @@ When all four are true, the writer adds a new entry below using the same shape a
 
 ---
 
-## 6. `settlement-statement`
+## 6. `decision-path`
+
+**Use when the compelling question is:** *"How do I decide between [Path A] and [Path B]?"* — when the post answers a binary fork by routing the reader through 3–5 prioritized questions, each with answer pills that point to one path or the other.
+
+**Narrative type:** Procedural decision routing. The reader has a real choice to make and the post identifies the 3–5 questions that actually drive that choice. Each question carries 2 (sometimes 3) answer pills that route to a named path. Best when the path-fit hinges on a small number of priority weights, not on dimensional comparison or square-footage scaling. Worst when the paths can be mapped on a clean continuum (use `single-metric-bar-chart` or `comparison-table` instead).
+
+**Raw data shape:** 3–5 numbered question rows. Each row: a question (1 sentence, framed in second person), 2–3 answer pills with strong/qualifier text and a routing arrow to the named path. Plus a Decision Rule footer explaining how to read the tally (e.g., "3+ answers pointing to Path A → start there. Mixed answers → tour both.").
+
+**Brand styling:**
+- Question-led navy banner: location eyebrow (0.7rem uppercase, opacity 0.75) → question headline (1.6rem white bold, line-height 1.2) → answer-shape subhead (0.95rem opacity 0.9, max-width 540px)
+- White-bg card stack with thin gray border (`#d6e0e6`)
+- Each row: 32px navy numbered circle (left) + question text (top of right column) + answer-pill row (below)
+- Pill colors carry routing weight:
+  - Green-bordered pill (`#4a7c59` border on `#f0f4f0` bg) → routes to Path A (the green-coded path)
+  - Navy-bordered pill (`#002a3a` border on `#f4f7f9` bg) → routes to Path B (the navy-coded path)
+  - Gray pill (`#d6e0e6` border on `#f9fafb` bg) → "either path open" / neutral
+- Decision Rule footer: light green (`#f0f4f0`) bg with green eyebrow label, navy body
+- Source footer: light gray (`#f9fafb`) bg, flat top border touching the rule footer, gets bottom border-radius — bound flush, no margin gap, structurally inside the wrapper for `isBasedOn` propagation
+- Mobile responsive: question rows reflow with `flex-wrap: wrap`; pill row wraps below question on narrow viewports
+
+**Schema.org payload:**
+- Outer `<div itemscope itemtype="https://schema.org/HowTo">` with `name`, `description`, `totalTime` (`PT5M` typical for a 4-question path)
+- Each question row: `<div itemscope itemtype="https://schema.org/HowToStep" itemprop="step">` with `position` and `name` (the question text)
+- Each answer pill: `itemprop="itemListElement"` for AI-engine parseability of the routing options
+- Source attribution as bound footer inside the HowTo wrapper
+
+**Lift from:** `src/content/blog/ridgegate-vs-heritage-hills-lone-tree-new-construction-2026.md` — first decision-path on the site. 4-question routing (new vs. established / light-rail commute / gated preference / budget ceiling) with green-vs-navy pill routing to RidgeGate vs. Heritage Hills, Decision Rule tally footer, bound source. Won a stretch-vs-library head-to-head against `two-path-diptych` (corrected hero) on 2026-05-06. Promoted to the library on 2026-05-06.
+
+**When NOT to use:** if the choice is dimensional with multiple metrics that all matter (use `comparison-table`); if the paths split cleanly on price-band trade-offs alone (use `two-path-diptych`); if the data is single-metric (use `single-metric-bar-chart`); if the question is "what does it cost?" (use `settlement-statement`).
+
+---
+
+## 7. `settlement-statement`
 
 **Use when the compelling question is:** *"What does [a transaction] actually cost, line by line?"* — when the post is a financial breakdown and the reader needs to see categories and a total.
 
@@ -217,6 +249,7 @@ A quick lookup for the writer's brainstorming step:
 | "Which entity / persona / place is right for me?" (3–8 self-select options) | `profile-card-grid` |
 | "What does $X buy at each tier?" (tiered progression with scale) | `price-ladder-svg` |
 | "How does X compare on this one metric?" (single number across 3–5 entities) | `single-metric-bar-chart` |
+| "How do I decide between Path A and Path B?" (3–5 priority-routing questions) | `decision-path` |
 | "What does a transaction actually cost?" (financial line-by-line breakdown) | `settlement-statement` |
 | None of the above is a strong fit | **Library Gap trigger — prototype 2–3 stretch candidates** |
 
