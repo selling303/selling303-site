@@ -1,5 +1,6 @@
 ---
-title: "RidgeGate vs. Heritage Hills: A Lone Tree New Construction Update for 2026"
+title: "RidgeGate vs. Heritage Hills in Lone Tree, 2026"
+headline: "RidgeGate vs. Heritage Hills: A Lone Tree New Construction Update for 2026"
 description: "RidgeGate vs. Heritage Hills in Lone Tree CO — base pricing, builder incentives, HOA stack, and which buyer profile fits each in 2026."
 date: "May 6, 2026"
 dateModified: "May 6, 2026"
@@ -46,7 +47,7 @@ relatedPosts:
 ---
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
-<strong>RidgeGate vs. Heritage Hills — what's the actual difference for a Lone Tree, Colorado new construction buyer in 2026?</strong> RidgeGate is the active new-construction master plan east of I-25, with Q1 2026 new builds closing at a median $1,176,000 (97% of list, 77 days). Heritage Hills is the gated resale luxury community west of I-25 — essentially zero new construction, with April 2026 active inventory ranging $1.4M to $4.5M. Buyers comparing the two are really choosing between brand-new at one price point and established luxury resale at another.
+<strong>What's the difference between RidgeGate and Heritage Hills in Lone Tree, CO?</strong> RidgeGate is the active new-construction master plan ($1.18M Q1 2026 median, 97% of list). Heritage Hills is gated resale luxury ($1.4M–$4.5M, no new builds).
 </div>
 
 <div style="background: #f0f4f0; border-left: 4px solid #4a7c59; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
