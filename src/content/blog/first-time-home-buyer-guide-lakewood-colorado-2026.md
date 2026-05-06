@@ -45,7 +45,7 @@ relatedPosts:
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <p style="margin: 0; font-size: 1.05rem;"><strong>Is Lakewood, Colorado a good place for first-time home buyers in 2026?</strong></p>
-<p style="margin: 0.5rem 0 0;">Yes. Lakewood closed 199 residential transactions in April 2026 at a $600,670 median sale price (REcolorado MLS), with active inventory starting in the $170s and FHA-eligible single-family options between $400K and $550K across most of the city's six ZIP codes.</p>
+<p style="margin: 0.5rem 0 0;">Yes. Lakewood closed 199 residential transactions in April 2026 at a $600,670 median sale price, with active inventory from $169,900 and FHA-eligible single-family options between $400K and $550K across the city's six ZIP codes.</p>
 </div>
 
 <div style="background: #f0f4f0; border-left: 4px solid #4a7c59; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
@@ -104,55 +104,64 @@ relatedPosts:
 
 <h2 id="price-tiers">What does $400K to $550K actually buy in Lakewood right now?</h2>
 
-<p>Generic price ranges don't help you write an offer. The question first-time buyers actually need answered is what kind of home, in what condition, in what part of Lakewood, lands inside their budget. The table below maps four price bands against what April 2026 closings and current pending inventory show, drawn from the REcolorado MLS pulls dated May 3, 2026. Every closing, expired, withdrawn, and pending Lakewood residential listing is included in the dataset (n=864).</p>
+<p>Generic price ranges don't help you write an offer. The question first-time buyers actually need answered is which path their budget actually buys — a lower-end single-family home or a higher-end condo / townhome. The diptych below maps each path against current April 2026 REcolorado MLS data (n=864 across closed, pending, expired, and withdrawn Lakewood listings, pulled May 3, 2026).</p>
 
-<figure class="aeo-comp-table" itemscope itemtype="https://schema.org/Dataset" aria-labelledby="price-tiers" style="margin: 2rem 0;">
-<meta itemprop="name" content="Lakewood, Colorado first-time buyer price-tier breakdown — April 2026 REcolorado MLS data">
+<div style="margin: 2rem 0;" itemscope itemtype="https://schema.org/Dataset" aria-labelledby="price-tiers">
+<meta itemprop="name" content="Lakewood Colorado first-time buyer two-path comparison April 2026">
 <meta itemprop="temporalCoverage" content="2026-04-01/2026-05-01">
 <meta itemprop="spatialCoverage" content="Lakewood, Colorado, Jefferson County">
-<meta itemprop="variableMeasured" content="Typical home type, square footage range, ZIP concentration">
 <meta itemprop="creator" content="Jacob Stark, selling303.com">
 <meta itemprop="publisher" content="REcolorado MLS">
-<table>
-<caption>Lakewood, Colorado first-time buyer price tiers — April 2026 closings and active inventory. Data: REcolorado MLS, pulled May 3, 2026 (n=864 across closed, pending, expired, withdrawn).</caption>
-<thead>
-<tr><th scope="col">Price Tier</th><th scope="col">Typical Home Type</th><th scope="col">Square Footage</th><th scope="col">ZIP Concentration</th></tr>
-</thead>
-<tbody>
-<tr itemscope itemtype="https://schema.org/PropertyValue">
-<th scope="row" itemprop="name">$170K–$300K</th>
-<td>Older condos, 1- to 2-bedroom units, some HOA-heavy townhomes</td>
-<td>500–1,000 sq ft</td>
-<td>80232, 80214, scattered 80226</td>
-</tr>
-<tr itemscope itemtype="https://schema.org/PropertyValue">
-<th scope="row" itemprop="name">$300K–$425K</th>
-<td>Larger condos, smaller townhomes, the smallest single-family bungalows</td>
-<td>900–1,400 sq ft</td>
-<td>80214, 80232, eastern 80226</td>
-</tr>
-<tr itemscope itemtype="https://schema.org/PropertyValue">
-<th scope="row" itemprop="name">$425K–$550K</th>
-<td>Single-family ranches and bi-levels, often dated, sometimes updated; newer townhomes near Belmar</td>
-<td>1,000–1,800 sq ft</td>
-<td>80214, 80232, 80227, 80226</td>
-</tr>
-<tr itemscope itemtype="https://schema.org/PropertyValue">
-<th scope="row" itemprop="name">$550K–$700K</th>
-<td>Updated single-family ranches, larger bi-levels, some newer construction</td>
-<td>1,800–2,400 sq ft</td>
-<td>80215, 80227, 80228, 80226</td>
-</tr>
-</tbody>
-</table>
-<figcaption style="font-size: 0.875rem; color: #555; margin-top: 0.75rem;"><strong>DIM (Days in MLS):</strong> the number of days a listing was active in REcolorado MLS before going under contract. Lakewood's April 2026 closing median was 17 days; pending median was 14 days. <strong>Source:</strong> REcolorado MLS Market Analysis Summary, Lakewood, Colorado | April 1–30, 2026 | n=864 (closed + pending + expired + withdrawn) | selling303.com</figcaption>
-</figure>
 
-<p><strong>Over half of Lakewood's pending inventory (median list $562,500) sits inside the first-time buyer price band</strong>, with a 14-day median time on market. The takeaway for a buyer at $475K isn't "you're priced out of Lakewood." It's "you have real options, but you need to be ready to move when the right one lists."</p>
+<div style="background: #002a3a; color: #fff; padding: 1.75rem 1.5rem 1.5rem; border-radius: 8px 8px 0 0; text-align: center;">
+<div style="font-size: 0.75rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.65rem;">For First-Time Buyers</div>
+<div style="font-size: 1.5rem; font-weight: 700; line-height: 1.35; max-width: 640px; margin: 0 auto;">What does $400K–$550K actually buy in Lakewood, Colorado?</div>
+<div style="margin-top: 0.95rem; font-size: 0.95rem; font-weight: 600; color: #c8965a; letter-spacing: 0.02em;">Two paths fit. Pick your trade-off ↓</div>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0; border: 1px solid #d6e0e6; border-top: none; overflow: hidden;">
+
+<div itemscope itemtype="https://schema.org/PropertyValue" style="padding: 1.5rem; background: #f4f7f9; border-right: 1px solid #d6e0e6;">
+<meta itemprop="name" content="Lakewood single-family path for first-time buyers">
+<meta itemprop="value" content="425000-550000">
+<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;"><svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="#002a3a" stroke-width="1.5" aria-hidden="true"><path d="M3 12l9-7 9 7"/><path d="M5 11v8h14v-8"/><rect x="10" y="14" width="4" height="5"/></svg><div><div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #4a7c59; font-weight: 600;">Path 1</div><div style="font-size: 1.25rem; font-weight: 700; color: #002a3a;">Single-family home</div></div></div>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1rem;">
+<div><div style="font-size: 0.7rem; text-transform: uppercase; color: #555; letter-spacing: 0.05em;">Price</div><div style="font-size: 1rem; font-weight: 600; color: #002a3a;">$425K–$550K</div></div>
+<div><div style="font-size: 0.7rem; text-transform: uppercase; color: #555; letter-spacing: 0.05em;">Square footage</div><div style="font-size: 1rem; font-weight: 600; color: #002a3a;">1,000–1,800</div></div>
+<div><div style="font-size: 0.7rem; text-transform: uppercase; color: #555; letter-spacing: 0.05em;">Best ZIPs</div><div style="font-size: 0.95rem; color: #002a3a;">80214 · 80232 · 80227</div></div>
+<div><div style="font-size: 0.7rem; text-transform: uppercase; color: #555; letter-spacing: 0.05em;">Build era</div><div style="font-size: 0.95rem; color: #002a3a;">1955–1985</div></div>
+</div>
+<div style="border-top: 1px solid #d6e0e6; padding-top: 1rem;">
+<div style="font-size: 0.75rem; text-transform: uppercase; color: #4a7c59; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.4rem;">Trade-off</div>
+<p style="margin: 0; font-size: 0.9rem; color: #333;">Older finishes, smaller bedrooms, deferred maintenance — but you own the lot, no HOA, and the math gets better the longer you stay.</p>
+</div>
+</div>
+
+<div itemscope itemtype="https://schema.org/PropertyValue" style="padding: 1.5rem; background: #fff;">
+<meta itemprop="name" content="Lakewood condo or townhome path for first-time buyers">
+<meta itemprop="value" content="300000-450000">
+<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;"><svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="#002a3a" stroke-width="1.5" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1"/><line x1="8" y1="7" x2="10" y2="7"/><line x1="14" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="10" y2="11"/><line x1="14" y1="11" x2="16" y2="11"/><line x1="8" y1="15" x2="10" y2="15"/><line x1="14" y1="15" x2="16" y2="15"/><rect x="11" y="17" width="2" height="4"/></svg><div><div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #4a7c59; font-weight: 600;">Path 2</div><div style="font-size: 1.25rem; font-weight: 700; color: #002a3a;">Condo or townhome</div></div></div>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1rem;">
+<div><div style="font-size: 0.7rem; text-transform: uppercase; color: #555; letter-spacing: 0.05em;">Price</div><div style="font-size: 1rem; font-weight: 600; color: #002a3a;">$300K–$450K</div></div>
+<div><div style="font-size: 0.7rem; text-transform: uppercase; color: #555; letter-spacing: 0.05em;">Square footage</div><div style="font-size: 1rem; font-weight: 600; color: #002a3a;">900–1,400</div></div>
+<div><div style="font-size: 0.7rem; text-transform: uppercase; color: #555; letter-spacing: 0.05em;">Best ZIPs</div><div style="font-size: 0.95rem; color: #002a3a;">80226 (Belmar) · 80214</div></div>
+<div><div style="font-size: 0.7rem; text-transform: uppercase; color: #555; letter-spacing: 0.05em;">Build era</div><div style="font-size: 0.95rem; color: #002a3a;">1970s–new</div></div>
+</div>
+<div style="border-top: 1px solid #d6e0e6; padding-top: 1rem;">
+<div style="font-size: 0.75rem; text-transform: uppercase; color: #4a7c59; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.4rem;">Trade-off</div>
+<p style="margin: 0; font-size: 0.9rem; color: #333;">HOA dues ($200–$600/mo) and FHA-approval requirements — but newer finishes, lower maintenance, and walkable Belmar locations.</p>
+</div>
+</div>
+
+</div>
+<div style="background: #f8f9fa; border: 1px solid #d6e0e6; border-top: none; border-radius: 0 0 8px 8px; padding: 0.75rem 1.25rem; font-size: 0.8rem; color: #555; line-height: 1.5;"><strong style="color: #002a3a;">Source:</strong> REcolorado MLS Market Analysis Summary, Lakewood, Colorado | April 1–30, 2026 | n=864 (closed + pending + expired + withdrawn) | selling303.com</div>
+</div>
+
+<p><strong>Over half of Lakewood's pending inventory (median list $562,500) sits inside the first-time buyer price band</strong>, with a 14-day median time on market. The takeaway for a buyer at $475K isn't "you're priced out of Lakewood." It's "you have real options on either path — but you need to be ready to move when the right one lists."</p>
 
 <h2 id="fha">How does FHA financing work for a Lakewood condo or single-family home?</h2>
 
-<p>FHA financing is the most common first-time buyer path in Lakewood, and the rules are slightly different for single-family homes versus condos. Both come with FHA's 3.5% minimum down payment and the agency's 2026 loan limits for Jefferson County (currently $850,000 for a single-unit property — well above any entry-level Lakewood price band).</p>
+<p>FHA financing is the most common first-time buyer path in Lakewood, and the rules are slightly different for single-family homes versus condos. Both come with FHA's 3.5% minimum down payment and the agency's <a href="https://www.hud.gov/program_offices/housing/sfh/lender/origination/mortgage_limits">2026 FHA loan limits</a> for Jefferson County (currently $850,000 for a single-unit property — well above any entry-level Lakewood price band).</p>
 
 <p>For a single-family home, the main FHA hurdle is the appraisal. The property has to meet HUD's minimum property standards: no exposed wiring, working HVAC, intact roof, no peeling paint on pre-1978 homes (lead-paint risk), no foundation cracks beyond cosmetic. A lot of older Lakewood ZIP 80214 and 80232 inventory technically qualifies, but homes that have been deferred-maintenance for too long can fail. Plan for an FHA-friendly inspection contingency.</p>
 
@@ -162,9 +171,11 @@ relatedPosts:
 
 <h2 id="speed">How fast are entry-level Lakewood homes selling — and how should a first-time buyer prepare?</h2>
 
-<p>Speed is the underrated variable in the Lakewood first-time buyer market. April 2026 closings had a 17-day median DIM. The 186 listings that went pending during April had a 14-day median DIM. The metro-wide DMAR March 2026 close-price-to-list-price ratio of 99.13% confirms the pattern — well-priced homes are not sitting. They're going under contract inside two weeks, often with multiple offers in the entry-level price tier.</p>
+<p>Speed is the underrated variable in the Lakewood first-time buyer market. April 2026 closings had a 17-day median DIM. The 186 listings that went pending during April had a 14-day median DIM. The metro-wide <a href="https://www.dmarealtors.com/market-trends">DMAR March 2026</a> close-price-to-list-price ratio of 99.13% confirms the pattern — well-priced homes are not sitting. They're going under contract inside two weeks, often with multiple offers in the entry-level price tier.</p>
 
 <p>What this means for a first-time buyer in practice: lender prep matters more than deal-hunting. The buyers who close in Lakewood are the ones who walk in with a fully underwritten pre-approval, not just a pre-qualification letter. They've reviewed their inspection contingencies in advance, they've talked to their lender about appraisal-gap coverage, and they understand whether they can offer a rate buy-down or seller concession instead of a price reduction.</p>
+
+<p>Jacob Stark coordinates Lakewood first-time buyer offers with a fully underwritten pre-approval, an appraisal-gap clause, and a rate buy-down concession built in — the package that wins a 14-day-DIM listing.</p>
 
 <p>The Lakewood listings that expired in April 2026 — 48 of them, a meaningful share of total inventory — had a 90-day median DIM. That's the failure mode: priced wrong, overcondition, or in a building with FHA disqualifications. They sit for three months and come off the market. A buyer who waits to "see what happens" with a stale listing is usually buying the wrong property. Negotiate hard on listings that have hit 60+ days; move fast on listings that hit MLS in the last week. For more on how this plays out from the seller side, see <a href="/blog/move-up-seller-myth-waiting-market-better-lakewood-2026">why waiting to sell your Lakewood home is costing you money</a>.</p>
 

@@ -38,7 +38,7 @@ Tracking file for every page that uses a data visual. Source of truth for what v
 | `first-time-buyer-bidding-littleton-spring-2026` | tier-list (legacy) | unknown | needs upgrade — Phase 3 | — |
 | `greenwood-village-worth-the-price-tag-relocation-2026` | persona-card-grid | ItemList JSON-LD + per-card Person Microdata + Place Microdata for matched suburbs | **optimized** | 2026-04-29 |
 | `first-time-home-buyer-guide-englewood-colorado-2026` | none detected | — | review needed (likely howto candidate — Phase 4 flag-only) | — |
-| `first-time-home-buyer-guide-lakewood-colorado-2026` | comparison-table (4 price tiers × home type / sqft / ZIP concentration) | Dataset Microdata + per-row PropertyValue + `<caption>` + `<figcaption>` term defs + source attribution | **optimized** | 2026-05-05 |
+| `first-time-home-buyer-guide-lakewood-colorado-2026` | two-path-diptych (SFR vs. condo/townhome at $400-550K) — navy header + 2-column card grid + per-path icons + trade-off section | Dataset Microdata + per-path PropertyValue + machine-readable price ranges + source attribution | **optimized** | 2026-05-05 |
 | `hidden-costs-selling-home-arapahoe-county-net-sheet-2026` | tier-list (legacy), cost flow | unknown | needs upgrade — Phase 3 (cost-breakdown candidate) | — |
 | `littleton-vs-centennial-south-denver-relocation` | none detected | — | review needed (likely comparison-table candidate) | — |
 | `littleton-vs-highlands-ranch` | table (legacy) | unknown | needs upgrade — Phase 3 (comparison-table candidate) | — |
@@ -50,6 +50,7 @@ Tracking file for every page that uses a data visual. Source of truth for what v
 | `new-construction-castle-pines-parker-2026` | none detected | — | review needed (likely comparison-table candidate) | — |
 | `out-of-state-buyer-mistakes-denver-suburbs-centennial` | tier-list (legacy) | unknown | needs upgrade — Phase 3 | — |
 | `parker-vs-castle-pines` | none detected | — | review needed (likely comparison-table candidate) | — |
+| `ridgegate-vs-heritage-hills-lone-tree-new-construction-2026` | decision-path (4-question routing: new vs. established → RidgeGate or Heritage Hills / light-rail commute → RidgeGate or either / gated preference → Heritage Hills or RidgeGate / budget ceiling → RidgeGate or either) — question-led navy hero with location eyebrow + answer-shape subhead, white-bg card stack with 32px navy numbered circles, green-vs-navy answer pills with routing arrows, Decision Rule tally footer, bound source footer. **First library entry of the new `decision-path` pattern** — promoted from stretch on 2026-05-06 after winning A/B vs. corrected two-path-diptych. | HowTo + 4× HowToStep + per-pill itemListElement + bound source attribution inside HowTo wrapper | **optimized** | 2026-05-06 |
 | `real-estate-agent-new-construction-colorado` | none detected | — | review needed | — |
 | `relist-home-littleton-after-expired-listing` | none detected | — | review needed (howto candidate — Phase 4 flag-only) | — |
 | `selling-centennial-buying-highlands-ranch-coordinate-transactions` | table (legacy), svg-chart, cost flow | unknown | needs upgrade — Phase 3 (howto + comparison-table + cost-breakdown candidate) | — |

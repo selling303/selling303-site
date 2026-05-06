@@ -4,6 +4,20 @@ Permanent record of deployed changes. The deploy-to-netlify skill moves items he
 
 ---
 
+## 2026-05-05 — commit fe83fa7 (merge into live) | Credits used: 15 | Credits remaining: ~50
+
+### New blog post
+- **Day 1 — "First-Time Home Buyer's Guide to Lakewood, Colorado (2026)"** (`first-time-home-buyer-guide-lakewood-colorado-2026.md`). First-Time Homebuyers × Lakewood. TOFU. April 2026 REcolorado MLS data. Visual: comparison-table (4 price tiers). 4 internal cross-links, 3 external authority links.
+- Calendar and cluster map updated.
+
+### Success stories migration
+- 15 seller success stories migrated from Framer to Astro content collection. ~500 listing photos committed (filenames sanitized — `#` chars stripped for Vite compatibility).
+- Index page redesigned: removed featured section + credibility tiles, added slim dark-blue trust ribbon with 5 stats ($46M+, 75+, 99.2%, 5.0★, 15+).
+- 3 hero images fixed (Holland Way, Flower St, Woodside Ln — swapped floorplans for exterior photos).
+- Carr St story hidden (`draft: true`) — showed $52K below-list outcome.
+
+---
+
 ## 2026-05-04 — commit ab9b9ac (merge 515f6d5 on live) | Credits used: 15 | Credits remaining: ~65 | Deploy ID: 69f84481ba0fd50008eaa952
 
 ### New blog posts (7 — Days 26 through 31, 8-day backlog bundled)
