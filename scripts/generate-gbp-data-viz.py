@@ -117,8 +117,7 @@ def render_deadline_spine(
     f_brand = ImageFont.truetype(FONT_BOLD, 26)
     draw.text((50, 38), "selling303.com", font=f_brand, fill=WHITE)
     draw.ellipse([(255, 50), (267, 62)], fill=GOLD)
-    f_corner = ImageFont.truetype(FONT_HEAVY, 22)
-    draw.text((W - 95, 42), "303", font=f_corner, fill=GOLD)
+    # (No top-right corner mark — wordmark in top-left carries identity.)
 
     # Headline (small caption above the hero number)
     f_caption = ImageFont.truetype(FONT_BOLD, 30)

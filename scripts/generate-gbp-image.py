@@ -97,10 +97,7 @@ def generate_hero_card(
     img = vertical_gradient((W, H), NAVY, NAVY_DARK)
     draw = ImageDraw.Draw(img)
 
-    # 2. Top-right corner mark — small gold "303" accent (subtle brand cue,
-    #    won't compete with the corner wordmark).
-    f_corner = ImageFont.truetype(FONT_HEAVY, 22)
-    draw.text((W - 95, 42), "303", font=f_corner, fill=hero_color)
+    # 2. (No top-right corner mark — wordmark in top-left carries identity.)
 
     # 3. Hero number — auto-fit font size up to ~560px so very long numbers still fit
     font_size = 560
