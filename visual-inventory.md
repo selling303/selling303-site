@@ -38,7 +38,7 @@ Tracking file for every page that uses a data visual. Source of truth for what v
 | `first-time-buyer-bidding-littleton-spring-2026` | tier-list (legacy) | unknown | needs upgrade — Phase 3 | — |
 | `greenwood-village-worth-the-price-tag-relocation-2026` | persona-card-grid | ItemList JSON-LD + per-card Person Microdata + Place Microdata for matched suburbs | **optimized** | 2026-04-29 |
 | `first-time-home-buyer-guide-englewood-colorado-2026` | none detected | — | review needed (likely howto candidate — Phase 4 flag-only) | — |
-| `first-time-home-buyer-guide-lakewood-colorado-2026` | comparison-table (4 price tiers × home type / sqft / ZIP concentration) | Dataset Microdata + per-row PropertyValue + `<caption>` + `<figcaption>` term defs + source attribution | **optimized** | 2026-05-05 |
+| `first-time-home-buyer-guide-lakewood-colorado-2026` | two-path-diptych (SFR vs. condo/townhome at $400-550K) — navy header + 2-column card grid + per-path icons + trade-off section | Dataset Microdata + per-path PropertyValue + machine-readable price ranges + source attribution | **optimized** | 2026-05-05 |
 | `hidden-costs-selling-home-arapahoe-county-net-sheet-2026` | tier-list (legacy), cost flow | unknown | needs upgrade — Phase 3 (cost-breakdown candidate) | — |
 | `littleton-vs-centennial-south-denver-relocation` | none detected | — | review needed (likely comparison-table candidate) | — |
 | `littleton-vs-highlands-ranch` | table (legacy) | unknown | needs upgrade — Phase 3 (comparison-table candidate) | — |

@@ -104,130 +104,14 @@ relatedPosts:
 
 <h2 id="price-tiers">What does $400K to $550K actually buy in Lakewood right now?</h2>
 
-<p>Generic price ranges don't help you write an offer. The question first-time buyers actually need answered is what kind of home, in what condition, in what part of Lakewood, lands inside their budget. The table below maps four price bands against what April 2026 closings and current pending inventory show, drawn from the REcolorado MLS pulls dated May 3, 2026. Every closing, expired, withdrawn, and pending Lakewood residential listing is included in the dataset (n=864).</p>
+<p>Generic price ranges don't help you write an offer. The question first-time buyers actually need answered is which path their budget actually buys — a lower-end single-family home or a higher-end condo / townhome. The diptych below maps each path against current April 2026 REcolorado MLS data (n=864 across closed, pending, expired, and withdrawn Lakewood listings, pulled May 3, 2026).</p>
 
-<figure class="aeo-comp-table" itemscope itemtype="https://schema.org/Dataset" aria-labelledby="price-tiers" style="margin: 2rem 0;">
-<meta itemprop="name" content="Lakewood, Colorado first-time buyer price-tier breakdown — April 2026 REcolorado MLS data">
-<meta itemprop="temporalCoverage" content="2026-04-01/2026-05-01">
-<meta itemprop="spatialCoverage" content="Lakewood, Colorado, Jefferson County">
-<meta itemprop="variableMeasured" content="Typical home type, square footage range, ZIP concentration">
-<meta itemprop="creator" content="Jacob Stark, selling303.com">
-<meta itemprop="publisher" content="REcolorado MLS">
-<table>
-<caption>Lakewood, Colorado first-time buyer price tiers — April 2026 closings and active inventory. Data: REcolorado MLS, pulled May 3, 2026 (n=864 across closed, pending, expired, withdrawn).</caption>
-<thead>
-<tr><th scope="col">Price Tier</th><th scope="col">Typical Home Type</th><th scope="col">Square Footage</th><th scope="col">ZIP Concentration</th></tr>
-</thead>
-<tbody>
-<tr itemscope itemtype="https://schema.org/PropertyValue">
-<th scope="row" itemprop="name">$170K–$300K</th>
-<td>Older condos, 1- to 2-bedroom units, some HOA-heavy townhomes</td>
-<td>500–1,000 sq ft</td>
-<td>80232, 80214, scattered 80226</td>
-</tr>
-<tr itemscope itemtype="https://schema.org/PropertyValue">
-<th scope="row" itemprop="name">$300K–$425K</th>
-<td>Larger condos, smaller townhomes, the smallest single-family bungalows</td>
-<td>900–1,400 sq ft</td>
-<td>80214, 80232, eastern 80226</td>
-</tr>
-<tr itemscope itemtype="https://schema.org/PropertyValue">
-<th scope="row" itemprop="name">$425K–$550K</th>
-<td>Single-family ranches and bi-levels, often dated, sometimes updated; newer townhomes near Belmar</td>
-<td>1,000–1,800 sq ft</td>
-<td>80214, 80232, 80227, 80226</td>
-</tr>
-<tr itemscope itemtype="https://schema.org/PropertyValue">
-<th scope="row" itemprop="name">$550K–$700K</th>
-<td>Updated single-family ranches, larger bi-levels, some newer construction</td>
-<td>1,800–2,400 sq ft</td>
-<td>80215, 80227, 80228, 80226</td>
-</tr>
-</tbody>
-</table>
-<figcaption style="font-size: 0.875rem; color: #555; margin-top: 0.75rem;"><strong>DIM (Days in MLS):</strong> the number of days a listing was active in REcolorado MLS before going under contract. Lakewood's April 2026 closing median was 17 days; pending median was 14 days. <strong>Source:</strong> REcolorado MLS Market Analysis Summary, Lakewood, Colorado | April 1–30, 2026 | n=864 (closed + pending + expired + withdrawn) | selling303.com</figcaption>
-</figure>
-
-<p><strong>Over half of Lakewood's pending inventory (median list $562,500) sits inside the first-time buyer price band</strong>, with a 14-day median time on market. The takeaway for a buyer at $475K isn't "you're priced out of Lakewood." It's "you have real options, but you need to be ready to move when the right one lists."</p>
-
-<!-- REVIEW VARIANTS START — three visual options for Jacob to pick from. Strip 2 of 3 and the existing table above before deploying to live. -->
-
-<div style="background: #fff7e6; border: 2px dashed #b07700; padding: 1rem 1.25rem; margin: 3rem 0 1rem; border-radius: 6px;">
-<p style="margin: 0; font-weight: 600; color: #6b4500;">⚠️ REVIEW VARIANTS BELOW — three visual options to choose from. The current comparison-table above ships unless you pick A, B, or C — then I'll strip the other three.</p>
-</div>
-
-<h3 style="margin-top: 2rem; color: #002a3a;">Option A — ZIP Profile Cards</h3>
-
-<div itemscope itemtype="https://schema.org/ItemList" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin: 1.5rem 0 2rem;">
-<meta itemprop="name" content="Lakewood Colorado ZIP code profiles for first-time home buyers">
-<meta itemprop="numberOfItems" content="6">
-
-<div itemscope itemtype="https://schema.org/Place" itemprop="itemListElement" style="background: #fff; border: 1px solid #d6e0e6; border-top: 4px solid #002a3a; border-radius: 8px; padding: 1.25rem;">
-<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#002a3a" stroke-width="1.5" aria-hidden="true"><rect x="4" y="4" width="16" height="14" rx="2"/><line x1="4" y1="10" x2="20" y2="10"/><circle cx="8" cy="14" r="0.9" fill="#002a3a"/><circle cx="16" cy="14" r="0.9" fill="#002a3a"/><line x1="6" y1="18" x2="6" y2="20"/><line x1="18" y1="18" x2="18" y2="20"/></svg><div style="font-size: 1.5rem; font-weight: 700; color: #002a3a;" itemprop="name">80214</div></div>
-<div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #4a7c59; font-weight: 600; margin-bottom: 0.5rem;">Eastern Lakewood · Edgewater border</div>
-<div style="display: inline-block; background: #f0f4f0; color: #2d4d3a; font-size: 0.8rem; font-weight: 600; padding: 0.2rem 0.6rem; border-radius: 999px; margin-bottom: 0.6rem;" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue"><meta itemprop="name" content="Typical price band"><span itemprop="value">$400K–$525K</span></div>
-<p style="margin: 0 0 0.5rem; font-size: 0.9rem; color: #333;">Older bungalows, bi-levels (1940s–60s). Walkable, W Line stations nearby.</p>
-<p style="margin: 0; font-size: 0.8rem; color: #555;"><strong style="color: #002a3a;">Best for:</strong> urban-leaning FTHBs who want light rail access</p>
-</div>
-
-<div itemscope itemtype="https://schema.org/Place" itemprop="itemListElement" style="background: #fff; border: 1px solid #d6e0e6; border-top: 4px solid #002a3a; border-radius: 8px; padding: 1.25rem;">
-<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#002a3a" stroke-width="1.5" aria-hidden="true"><path d="M3 11l6-5 6 5v8H3z"/><circle cx="19" cy="9" r="3"/><line x1="19" y1="12" x2="19" y2="19"/></svg><div style="font-size: 1.5rem; font-weight: 700; color: #002a3a;" itemprop="name">80215</div></div>
-<div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #4a7c59; font-weight: 600; margin-bottom: 0.5rem;">North-central · Wheat Ridge border</div>
-<div style="display: inline-block; background: #f0f4f0; color: #2d4d3a; font-size: 0.8rem; font-weight: 600; padding: 0.2rem 0.6rem; border-radius: 999px; margin-bottom: 0.6rem;" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue"><meta itemprop="name" content="Typical price band"><span itemprop="value">$525K–$650K</span></div>
-<p style="margin: 0 0 0.5rem; font-size: 0.9rem; color: #333;">Mid-century ranches on larger lots. Quiet, mature trees, no HOA.</p>
-<p style="margin: 0; font-size: 0.8rem; color: #555;"><strong style="color: #002a3a;">Best for:</strong> FTHBs stretching for a real yard</p>
-</div>
-
-<div itemscope itemtype="https://schema.org/Place" itemprop="itemListElement" style="background: #fff; border: 1px solid #d6e0e6; border-top: 4px solid #002a3a; border-radius: 8px; padding: 1.25rem;">
-<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#002a3a" stroke-width="1.5" aria-hidden="true"><path d="M5 7h14l-1 13H6z"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/></svg><div style="font-size: 1.5rem; font-weight: 700; color: #002a3a;" itemprop="name">80226</div></div>
-<div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #4a7c59; font-weight: 600; margin-bottom: 0.5rem;">Central · Belmar district</div>
-<div style="display: inline-block; background: #f0f4f0; color: #2d4d3a; font-size: 0.8rem; font-weight: 600; padding: 0.2rem 0.6rem; border-radius: 999px; margin-bottom: 0.6rem;" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue"><meta itemprop="name" content="Typical price band"><span itemprop="value">$475K–$675K</span></div>
-<p style="margin: 0 0 0.5rem; font-size: 0.9rem; color: #333;">Mix of mid-century homes plus newer townhomes around Belmar.</p>
-<p style="margin: 0; font-size: 0.8rem; color: #555;"><strong style="color: #002a3a;">Best for:</strong> walkability premium without the Denver price tag</p>
-</div>
-
-<div itemscope itemtype="https://schema.org/Place" itemprop="itemListElement" style="background: #fff; border: 1px solid #d6e0e6; border-top: 4px solid #002a3a; border-radius: 8px; padding: 1.25rem;">
-<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#002a3a" stroke-width="1.5" aria-hidden="true"><path d="M3 14c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2"/><path d="M3 18c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2"/><circle cx="12" cy="7" r="2"/></svg><div style="font-size: 1.5rem; font-weight: 700; color: #002a3a;" itemprop="name">80227</div></div>
-<div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #4a7c59; font-weight: 600; margin-bottom: 0.5rem;">South · Bear Creek Lake</div>
-<div style="display: inline-block; background: #f0f4f0; color: #2d4d3a; font-size: 0.8rem; font-weight: 600; padding: 0.2rem 0.6rem; border-radius: 999px; margin-bottom: 0.6rem;" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue"><meta itemprop="name" content="Typical price band"><span itemprop="value">$500K–$650K</span></div>
-<p style="margin: 0 0 0.5rem; font-size: 0.9rem; color: #333;">Mid-century single-family on larger lots, lake-park access.</p>
-<p style="margin: 0; font-size: 0.8rem; color: #555;"><strong style="color: #002a3a;">Best for:</strong> outdoorsy FTHBs who want a yard</p>
-</div>
-
-<div itemscope itemtype="https://schema.org/Place" itemprop="itemListElement" style="background: #fff; border: 1px solid #d6e0e6; border-top: 4px solid #002a3a; border-radius: 8px; padding: 1.25rem;">
-<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#002a3a" stroke-width="1.5" aria-hidden="true"><path d="M2 19l6-10 4 6 3-4 7 8z"/><line x1="2" y1="19" x2="22" y2="19"/></svg><div style="font-size: 1.5rem; font-weight: 700; color: #002a3a;" itemprop="name">80228</div></div>
-<div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #4a7c59; font-weight: 600; margin-bottom: 0.5rem;">Western · Green Mountain · Foothills</div>
-<div style="display: inline-block; background: #f0f4f0; color: #2d4d3a; font-size: 0.8rem; font-weight: 600; padding: 0.2rem 0.6rem; border-radius: 999px; margin-bottom: 0.6rem;" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue"><meta itemprop="name" content="Typical price band"><span itemprop="value">$575K–$750K+</span></div>
-<p style="margin: 0 0 0.5rem; font-size: 0.9rem; color: #333;">Newer construction, custom homes, foothills views. Pricier band.</p>
-<p style="margin: 0; font-size: 0.8rem; color: #555;"><strong style="color: #002a3a;">Best for:</strong> stretch buyers who want newer build quality</p>
-</div>
-
-<div itemscope itemtype="https://schema.org/Place" itemprop="itemListElement" style="background: #fff; border: 1px solid #d6e0e6; border-top: 4px solid #002a3a; border-radius: 8px; padding: 1.25rem;">
-<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#002a3a" stroke-width="1.5" aria-hidden="true"><path d="M3 12l9-7 9 7"/><path d="M5 11v8h14v-8"/><rect x="10" y="14" width="4" height="5"/></svg><div style="font-size: 1.5rem; font-weight: 700; color: #002a3a;" itemprop="name">80232</div></div>
-<div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #4a7c59; font-weight: 600; margin-bottom: 0.5rem;">South-central Lakewood</div>
-<div style="display: inline-block; background: #f0f4f0; color: #2d4d3a; font-size: 0.8rem; font-weight: 600; padding: 0.2rem 0.6rem; border-radius: 999px; margin-bottom: 0.6rem;" itemprop="additionalProperty" itemscope itemtype="https://schema.org/PropertyValue"><meta itemprop="name" content="Typical price band"><span itemprop="value">$385K–$525K</span></div>
-<p style="margin: 0 0 0.5rem; font-size: 0.9rem; color: #333;">Older ranches and bi-levels, smaller lots. Strong FHA territory.</p>
-<p style="margin: 0; font-size: 0.8rem; color: #555;"><strong style="color: #002a3a;">Best for:</strong> tightest-budget FHA single-family buyers</p>
-</div>
-
-</div>
-<p style="font-size: 0.8rem; color: #555; margin-top: -1rem;">Source: REcolorado MLS, Lakewood, Colorado | April 1–30, 2026 | n=864 (closed + pending + expired + withdrawn). Price bands reflect typical first-time-buyer-relevant inventory observed in each ZIP — not full-market medians.</p>
-
-<h3 style="margin-top: 2.5rem; color: #002a3a;">Option B — Lakewood Price Ladder</h3>
-
-<figure style="margin: 1.5rem 0 2rem; background: #fff; border: 1px solid #d6e0e6; border-radius: 8px; padding: 1.5rem;" itemscope itemtype="https://schema.org/Dataset" aria-labelledby="price-ladder-title">
-<meta itemprop="name" content="Lakewood Colorado first-time buyer price ladder April 2026">
+<div style="margin: 2rem 0;" itemscope itemtype="https://schema.org/Dataset" aria-labelledby="price-tiers">
+<meta itemprop="name" content="Lakewood Colorado first-time buyer two-path comparison April 2026">
 <meta itemprop="temporalCoverage" content="2026-04-01/2026-05-01">
 <meta itemprop="spatialCoverage" content="Lakewood, Colorado, Jefferson County">
 <meta itemprop="creator" content="Jacob Stark, selling303.com">
 <meta itemprop="publisher" content="REcolorado MLS">
-<svg viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg" role="img" style="width: 100%; height: auto; display: block;"><title id="price-ladder-title">Lakewood, Colorado First-Time Buyer Price Ladder — April 2026</title><desc>Four price tiers in Lakewood, Colorado, scaled by typical square footage. The $170K–$300K tier covers 500–1,000 sqft condos. The $300K–$425K tier covers 900–1,400 sqft larger condos and small bungalows. The $425K–$550K tier covers 1,000–1,800 sqft single-family ranches. The $550K–$700K tier covers 1,800–2,400 sqft updated single-family homes. April 2026 median sale across 199 closings: $600,670. Source: REcolorado MLS, n=864 deduplicated.</desc><text x="400" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#002a3a">Lakewood First-Time Buyer Price Ladder · April 2026</text><text x="400" y="52" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#555">Bar width scales with typical square footage at each tier · n=864 listings</text><g font-family="system-ui, sans-serif"><rect x="20" y="90" width="140" height="44" rx="6" fill="#002a3a"/><text x="90" y="112" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">$170K–$300K</text><text x="90" y="128" text-anchor="middle" font-size="11" fill="#d6e0e6">500–1,000 sqft</text><rect x="180" y="90" width="120" height="44" rx="4" fill="#d6e0e6"/><text x="190" y="118" font-size="13" fill="#002a3a" font-weight="600">Older condos · 1–2 BR</text><text x="320" y="118" font-size="11" fill="#555">80232 · 80214</text><rect x="20" y="160" width="140" height="44" rx="6" fill="#002a3a"/><text x="90" y="182" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">$300K–$425K</text><text x="90" y="198" text-anchor="middle" font-size="11" fill="#d6e0e6">900–1,400 sqft</text><rect x="180" y="160" width="200" height="44" rx="4" fill="#99adb8"/><text x="190" y="188" font-size="13" fill="#002a3a" font-weight="600">Larger condos · small bungalows</text><text x="400" y="188" font-size="11" fill="#555">80214 · 80232 · E-80226</text><rect x="20" y="230" width="140" height="44" rx="6" fill="#002a3a"/><text x="90" y="252" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">$425K–$550K</text><text x="90" y="268" text-anchor="middle" font-size="11" fill="#d6e0e6">1,000–1,800 sqft</text><rect x="180" y="230" width="290" height="44" rx="4" fill="#4a6a78"/><text x="190" y="258" font-size="13" fill="#fff" font-weight="600">SFR ranches &amp; bi-levels · Belmar townhomes</text><text x="490" y="258" font-size="11" fill="#555">80214 · 80232 · 80227</text><rect x="20" y="300" width="140" height="44" rx="6" fill="#002a3a"/><text x="90" y="322" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">$550K–$700K</text><text x="90" y="338" text-anchor="middle" font-size="11" fill="#d6e0e6">1,800–2,400 sqft</text><rect x="180" y="300" width="450" height="44" rx="4" fill="#002a3a"/><text x="190" y="328" font-size="13" fill="#fff" font-weight="600">Updated SFR · larger bi-levels · some new build</text><text x="650" y="328" font-size="11" fill="#555">80215 · 80228</text></g><line x1="20" y1="380" x2="780" y2="380" stroke="#d6e0e6" stroke-width="1"/><text x="20" y="402" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#002a3a">April 2026 median sale: $600,670 · 199 closings · 17-day median DIM · 98% close-to-list</text><text x="20" y="422" font-family="system-ui, sans-serif" font-size="11" font-style="italic" fill="#555">DIM = Days in MLS before going under contract</text><text x="20" y="442" font-family="system-ui, sans-serif" font-size="11" fill="#777">Source: REcolorado MLS Market Analysis Summary | Lakewood, Colorado | April 1–30, 2026 | n=864 | selling303.com</text></svg>
-<figcaption style="font-size: 0.875rem; color: #555; margin-top: 0.75rem;">Wider bars = more square footage at each tier. The $550K–$700K bar is roughly 4× the width of the $170K–$300K bar — the same ratio as the typical sqft you get for the money.</figcaption>
-</figure>
-
-<h3 style="margin-top: 2.5rem; color: #002a3a;">Option C — Two-Path Diptych</h3>
-
-<div style="margin: 1.5rem 0 2rem;">
 
 <div style="background: #002a3a; color: #fff; padding: 1.25rem 1.5rem; border-radius: 8px 8px 0 0; text-align: center;">
 <div style="display: inline-flex; align-items: center; gap: 0.75rem;"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#fff" stroke-width="1.5" aria-hidden="true"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20"/><circle cx="17" cy="14" r="1.5" fill="#fff"/></svg><div><div style="font-size: 0.85rem; opacity: 0.85; text-transform: uppercase; letter-spacing: 0.08em;">Your $400K–$550K budget in</div><div style="font-size: 1.4rem; font-weight: 700;">Lakewood, Colorado</div></div></div>
@@ -269,10 +153,10 @@ relatedPosts:
 </div>
 
 </div>
-<p style="font-size: 0.8rem; color: #555; margin-top: 0.5rem;">Source: REcolorado MLS Market Analysis Summary, Lakewood, Colorado | April 1–30, 2026 | n=864 | selling303.com</p>
+<p style="font-size: 0.8rem; color: #555; margin-top: 0.5rem;">Source: REcolorado MLS Market Analysis Summary, Lakewood, Colorado | April 1–30, 2026 | n=864 (closed + pending + expired + withdrawn) | selling303.com</p>
 </div>
 
-<!-- REVIEW VARIANTS END -->
+<p><strong>Over half of Lakewood's pending inventory (median list $562,500) sits inside the first-time buyer price band</strong>, with a 14-day median time on market. The takeaway for a buyer at $475K isn't "you're priced out of Lakewood." It's "you have real options on either path — but you need to be ready to move when the right one lists."</p>
 
 <h2 id="fha">How does FHA financing work for a Lakewood condo or single-family home?</h2>
 
