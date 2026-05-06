@@ -1,5 +1,19 @@
 # Deploy Log
 
+## 2026-05-06 — commit 9e57692 | Credits used: 15
+
+- **NEW POST:** RidgeGate vs. Heritage Hills in Lone Tree, 2026 (`/blog/ridgegate-vs-heritage-hills-lone-tree-new-construction-2026`) — Day 2 of May 5–June 3 calendar segment, New Construction × Lone Tree, MOFU, decision-flowchart visual (pattern #6 — Library Promotion). Q1 2026 REcolorado MLS data sourcing.
+- **Pre-deploy blog-review fix on the same post:** title shortened 74→47 chars, original preserved via new `headline:` frontmatter for JSON-LD, snippet answer trimmed 546→235 chars. First real-world validation of mandatory blog-review wiring (build Step 1).
+- **Visual System Overhaul (docs):** new canonical pattern library at `docs/visual-patterns.md` with 6 shipped patterns + Library Promotion Protocol + brand color spec + cheat sheet. Source of truth for the writer's Compelling Question Flow.
+- **Visual Hero Rule + Source Placement Rule** added to `docs/visual-patterns.md` as global principles. Per-pattern hero requirements documented; source attribution must live both inside Schema.org wrapper AND visually bound to the visual block.
+- **Lakewood FTHB post hero rebuild** — applied Visual Hero Rule (eyebrow → question-led headline → answer-pointer subhead) and Source Placement Rule (bound footer row inside Schema.org wrapper).
+- **decision-path** added as pattern #6 in `docs/visual-patterns.md` (Library Promotion executed from RidgeGate post stretch candidate winner).
+- **Visual swap on RidgeGate** — comparison-table → two-path-diptych → decision-path; Variant B picked.
+- **Hero correction + A/B variants on RidgeGate** — full hero pattern update for all future visuals.
+- Updated `content-calendar-2026.md`, `content-cluster-map.md`, `visual-inventory.md` with the new post and pattern.
+- **Build wiring validation (Step 2):** auto-fire of `gbp-post` from `deploy-to-netlify` Mode 2 — RidgeGate post detected as the only new file in `src/content/blog/`, gbp-post invoked once.
+
+
 Permanent record of deployed changes. The deploy-to-netlify skill moves items here from `DEPLOY_QUEUE.md` after each successful deploy.
 
 ---
