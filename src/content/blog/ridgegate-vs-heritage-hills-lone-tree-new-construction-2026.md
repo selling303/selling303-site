@@ -63,7 +63,7 @@ relatedPosts:
 <nav aria-label="Table of contents" style="background: #f9fafb; padding: 1rem 1.5rem; border-radius: 6px; margin-bottom: 2rem;">
 <p style="margin: 0 0 0.5rem; font-weight: 600;">In this guide:</p>
 <ol style="margin: 0; padding-left: 1.25rem;">
-<li><a href="#side-by-side" style="color: #002a3a;">How Do RidgeGate and Heritage Hills Compare Side by Side?</a></li>
+<li><a href="#side-by-side" style="color: #002a3a;">RidgeGate or Heritage Hills — Which Lone Tree Path Fits You?</a></li>
 <li><a href="#ridgegate-market" style="color: #002a3a;">What Does the RidgeGate New Construction Market Look Like in 2026?</a></li>
 <li><a href="#heritage-hills-market" style="color: #002a3a;">What's Actually Selling in Heritage Hills Right Now?</a></li>
 <li><a href="#hoa-amenities" style="color: #002a3a;">How Do the HOA and Amenity Stacks Compare?</a></li>
@@ -79,91 +79,64 @@ relatedPosts:
 
 <p>Jacob Stark sells across Lone Tree in both segments, with $46M+ sold and a 100.6% sale-to-list ratio on the representation side. The decision between RidgeGate and Heritage Hills is rarely a coin flip — it usually hinges on three or four specific buyer priorities, and the data below makes those priorities easier to weigh.</p>
 
-<h2 id="side-by-side">How Do RidgeGate and Heritage Hills Compare Side by Side?</h2>
+<h2 id="side-by-side">RidgeGate or Heritage Hills — Which Lone Tree Path Fits You?</h2>
 
-<p>The cleanest way to look at the two communities is as side-by-side market profiles. The table below pulls from the REcolorado MLS Q1 2026 Lone Tree new-construction export (year built 2024 or later, single-family residence) for the RidgeGate column, and from the April 2026 Lone Tree all-status MLS export for Heritage Hills active inventory and recent closings. Sample sizes and date ranges are spelled out in the figcaption below the table.</p>
+<p>For a buyer cross-shopping both, the choice is really a binary fork — brand-new construction inside an active master plan, or established luxury resale inside a gated community. The diptych below draws each path from the REcolorado MLS Q1 2026 Lone Tree new-construction export (year built 2024 or later, single-family residence) for the RidgeGate side, and the April 2026 Lone Tree all-status MLS export for the Heritage Hills side. Each card carries the price band, era, key Q1/April market signal, and the trade-off the path comes with.</p>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Dataset",
-  "name": "Spring 2026 Lone Tree builder community comparison — RidgeGate new construction vs. Heritage Hills resale luxury",
-  "description": "RidgeGate (Q1 2026 REcolorado MLS new construction export, year built 2024 or later, single-family residence) compared against Heritage Hills (April 2026 Lone Tree all-status MLS export, addresses inside Heritage Hills subdivision) across construction type, pricing, inventory, HOA structure, and buyer profile.",
-  "temporalCoverage": "2026-01-01/2026-04-30",
-  "spatialCoverage": [
-    {"@type": "Place", "name": "RidgeGate, Lone Tree, Colorado", "containedInPlace": {"@type": "Place", "name": "Douglas County, Colorado"}},
-    {"@type": "Place", "name": "Heritage Hills, Lone Tree, Colorado", "containedInPlace": {"@type": "Place", "name": "Douglas County, Colorado"}}
-  ],
-  "variableMeasured": [
-    {"@type": "PropertyValue", "name": "Q1 2026 new construction closings", "unitText": "count"},
-    {"@type": "PropertyValue", "name": "Median sale price Q1 2026 new construction", "unitText": "USD"},
-    {"@type": "PropertyValue", "name": "Median days on market", "unitText": "days"},
-    {"@type": "PropertyValue", "name": "April 2026 active inventory", "unitText": "count"},
-    {"@type": "PropertyValue", "name": "Active price range April 2026", "unitText": "USD"}
-  ],
-  "creator": {"@type": "RealEstateAgent", "name": "Jacob Stark", "url": "https://selling303.com"},
-  "publisher": {"@type": "Organization", "name": "selling303.com"},
-  "isBasedOn": [
-    {"@type": "CreativeWork", "name": "REcolorado MLS Q1 2026 Lone Tree New Construction Single-Family Residential Export", "datePublished": "2026-04-19"},
-    {"@type": "CreativeWork", "name": "REcolorado MLS Lone Tree April 2026 All-Status Residential Export", "datePublished": "2026-05-03"}
-  ]
-}
-</script>
+<div style="margin: 2rem 0;" itemscope itemtype="https://schema.org/Dataset" aria-labelledby="side-by-side">
+<meta itemprop="name" content="RidgeGate vs. Heritage Hills two-path comparison — Lone Tree, Colorado spring 2026">
+<meta itemprop="description" content="Two-path diptych comparing RidgeGate new construction (Q1 2026 REcolorado MLS, year built 2024+, single-family residence) against Heritage Hills established resale luxury (April 2026 Lone Tree all-status MLS, addresses inside Heritage Hills subdivision).">
+<meta itemprop="temporalCoverage" content="2026-01-01/2026-04-30">
+<meta itemprop="spatialCoverage" content="Lone Tree, Colorado, Douglas County">
+<meta itemprop="creator" content="Jacob Stark, selling303.com">
+<meta itemprop="publisher" content="REcolorado MLS">
 
-<!-- Visual styling provided by /css/aeo-visuals.css (loaded via BaseLayout). Class: .aeo-comp-table -->
+<div style="background: #002a3a; color: #fff; padding: 1.25rem 1.5rem; border-radius: 8px 8px 0 0; text-align: center;">
+<div style="display: inline-flex; align-items: center; gap: 0.75rem;"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#fff" stroke-width="1.5" aria-hidden="true"><path d="M3 12l9-7 9 7"/><path d="M5 11v8h14v-8"/><path d="M9 19v-5h6v5"/></svg><div><div style="font-size: 0.85rem; opacity: 0.85; text-transform: uppercase; letter-spacing: 0.08em;">Two distinct communities in</div><div style="font-size: 1.4rem; font-weight: 700;">Lone Tree, Colorado</div></div></div>
+<div style="margin-top: 0.75rem; font-size: 0.9rem; opacity: 0.9;">Two legitimate paths, two different buyers. Pick the trade-off that matches your priorities.</div>
+</div>
 
-<figure class="aeo-comp-table" aria-labelledby="side-by-side" role="figure">
-<table>
-<caption>RidgeGate vs. Heritage Hills — Lone Tree, Colorado builder community comparison | Q1 2026 REcolorado MLS new construction export plus April 2026 Lone Tree all-status export</caption>
-<thead>
-<tr>
-<th scope="col">Metric</th>
-<th scope="col">RidgeGate</th>
-<th scope="col">Heritage Hills</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th scope="row" itemscope itemtype="https://schema.org/Place" style="border-left: 4px solid #002a3a;">
-<meta itemprop="name" content="Construction profile" />
-Construction profile
-</th>
-<td data-label="RidgeGate">Active new-construction master plan, builds 2024+</td>
-<td data-label="Heritage Hills">Established resale, custom homes mostly 1996–2008</td>
-</tr>
-<tr>
-<th scope="row" style="border-left: 4px solid #002a3a;">Q1 2026 new construction closings (n)</th>
-<td data-label="RidgeGate" class="hero-stat"><meta itemscope itemtype="https://schema.org/PropertyValue" itemprop="value" content="5" />5</td>
-<td data-label="Heritage Hills"><meta itemscope itemtype="https://schema.org/PropertyValue" itemprop="value" content="0" />0</td>
-</tr>
-<tr>
-<th scope="row" style="border-left: 4px solid #002a3a;">Median Q1 2026 close price (new construction)</th>
-<td data-label="RidgeGate"><meta itemscope itemtype="https://schema.org/PropertyValue" itemprop="value" content="1176000" />$1,176,000</td>
-<td data-label="Heritage Hills">N/A — resale only</td>
-</tr>
-<tr>
-<th scope="row" style="border-left: 4px solid #002a3a;">Typical price entry (May 2026 active)</th>
-<td data-label="RidgeGate"><meta itemscope itemtype="https://schema.org/PropertyValue" itemprop="value" content="700000" />$700K to $1.6M (specs + build-to-order)</td>
-<td data-label="Heritage Hills"><meta itemscope itemtype="https://schema.org/PropertyValue" itemprop="value" content="1300000" />$1.3M to $4.5M (resale luxury)</td>
-</tr>
-<tr>
-<th scope="row" style="border-left: 4px solid #002a3a;">HOA &amp; amenity stack</th>
-<td data-label="RidgeGate">Sub-HOA + RidgeGate Master assessment; light-rail retail, parks, trails as base amenities</td>
-<td data-label="Heritage Hills">Single larger HOA; gated entries, private clubhouse + pool, 24/7 security patrols</td>
-</tr>
-<tr>
-<th scope="row" style="border-left: 4px solid #002a3a;">Best fit buyer profile</th>
-<td data-label="RidgeGate">New-build buyer who wants low-maintenance, transit-adjacent, walkable retail</td>
-<td data-label="Heritage Hills">Resale luxury buyer who wants gated security, mature trees, larger lot, established community</td>
-</tr>
-</tbody>
-</table>
-<figcaption>Source: REcolorado MLS Q1 2026 Lone Tree New Construction Single-Family Residential Export (Year Built 2024+), pulled April 19, 2026; REcolorado MLS Lone Tree April 2026 All-Status Residential Export, pulled May 3, 2026. RidgeGate Q1 2026 new construction sample: 17 total listings (10 active, 2 pending, 5 closed). Heritage Hills figures reflect addresses inside the Heritage Hills subdivision (e.g., Grande Vista, Vista Hill, Aspen Hill, Silent Hills, Winding Hill, Hidden Hill, Colonial, Bluffmont, Carriage Club, Montecito, Longview).<br /><em>Definitions: New construction = single-family residence with year built 2024 or later. Resale = single-family residence built before 2024. CP/OLP = sale price as percent of original list price. DIM = days in MLS until status change. Specs = builder-built standing inventory; build-to-order = home contracted before construction completes.</em></figcaption>
-</figure>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0; border: 1px solid #d6e0e6; border-top: none; border-radius: 0 0 8px 8px; overflow: hidden;">
 
-<p>Over half of RidgeGate's Q1 2026 new construction closings (3 of 5) sold within the first 90 days of MLS exposure at 96% to 100% of list price, while two sat on the market past 100 days before closing — typical of the spec inventory aging pattern at this price point. Heritage Hills had zero new-construction transactions in Q1 2026 because the subdivision is essentially built out.</p>
+<div itemscope itemtype="https://schema.org/PropertyValue" style="padding: 1.5rem; background: #f4f7f9; border-right: 1px solid #d6e0e6;">
+<meta itemprop="name" content="RidgeGate new construction path — Lone Tree, Colorado">
+<meta itemprop="value" content="700000-1600000">
+<meta itemprop="unitText" content="USD">
+<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;"><svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="#002a3a" stroke-width="1.5" aria-hidden="true"><rect x="3" y="9" width="6" height="12"/><rect x="10" y="5" width="6" height="16"/><rect x="17" y="13" width="4" height="8"/><line x1="3" y1="21" x2="22" y2="21"/><circle cx="6" cy="13" r="0.6" fill="#002a3a"/><circle cx="13" cy="9" r="0.6" fill="#002a3a"/><circle cx="13" cy="13" r="0.6" fill="#002a3a"/></svg><div><div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #4a7c59; font-weight: 600;">Path 1</div><div style="font-size: 1.25rem; font-weight: 700; color: #002a3a;">RidgeGate (new construction)</div></div></div>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1rem;">
+<div><div style="font-size: 0.7rem; text-transform: uppercase; color: #555; letter-spacing: 0.05em;">Price band</div><div style="font-size: 1rem; font-weight: 600; color: #002a3a;">$700K–$1.6M</div></div>
+<div><div style="font-size: 0.7rem; text-transform: uppercase; color: #555; letter-spacing: 0.05em;">Build era</div><div style="font-size: 1rem; font-weight: 600; color: #002a3a;">2024–new</div></div>
+<div><div style="font-size: 0.7rem; text-transform: uppercase; color: #555; letter-spacing: 0.05em;">Q1 2026 closings</div><div style="font-size: 0.95rem; color: #002a3a;">5 at $1.18M median, 77 days, 97% CP/OLP</div></div>
+<div><div style="font-size: 0.7rem; text-transform: uppercase; color: #555; letter-spacing: 0.05em;">Anchor streets</div><div style="font-size: 0.95rem; color: #002a3a;">Tenor TRL · Alla Breve CIR · Encantado TRL</div></div>
+</div>
+<div style="border-top: 1px solid #d6e0e6; padding-top: 1rem;">
+<div style="font-size: 0.75rem; text-transform: uppercase; color: #4a7c59; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.4rem;">Trade-off</div>
+<p style="margin: 0; font-size: 0.9rem; color: #333;">Brand-new construction with builder warranty, light-rail-walkable retail, and design-center customization — but the HOA stack is sub-association plus RidgeGate Master assessment, and aged spec inventory carries the deepest builder incentives.</p>
+</div>
+</div>
 
-<!-- VISUAL OPPORTUNITY: A second visual showing RidgeGate spec inventory aging distribution (DIM 0-30, 31-90, 91-180, 180+) would reinforce the "incentives ride on aged specs" point in the RidgeGate Market section. Recommended pattern: svg-chart. Status: deferred — single comparison-table visual already meets the calendar's spec; second visual would need its own dedicated H3 and would lengthen the post past target word count. -->
+<div itemscope itemtype="https://schema.org/PropertyValue" style="padding: 1.5rem; background: #fff;">
+<meta itemprop="name" content="Heritage Hills established luxury resale path — Lone Tree, Colorado">
+<meta itemprop="value" content="1300000-4500000">
+<meta itemprop="unitText" content="USD">
+<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;"><svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="#002a3a" stroke-width="1.5" aria-hidden="true"><path d="M2 21h20"/><path d="M3 21V11l9-6 9 6v10"/><path d="M9 21v-7h6v7"/><path d="M2 11h20"/><circle cx="12" cy="3" r="0.8" fill="#002a3a"/></svg><div><div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #4a7c59; font-weight: 600;">Path 2</div><div style="font-size: 1.25rem; font-weight: 700; color: #002a3a;">Heritage Hills (resale luxury)</div></div></div>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1rem;">
+<div><div style="font-size: 0.7rem; text-transform: uppercase; color: #555; letter-spacing: 0.05em;">Price band</div><div style="font-size: 1rem; font-weight: 600; color: #002a3a;">$1.3M–$4.5M</div></div>
+<div><div style="font-size: 0.7rem; text-transform: uppercase; color: #555; letter-spacing: 0.05em;">Build era</div><div style="font-size: 1rem; font-weight: 600; color: #002a3a;">1996–2008</div></div>
+<div><div style="font-size: 0.7rem; text-transform: uppercase; color: #555; letter-spacing: 0.05em;">April 2026 active</div><div style="font-size: 0.95rem; color: #002a3a;">Cluster $1.4M–$2.5M; recent closes 82–108% CP/OLP</div></div>
+<div><div style="font-size: 0.7rem; text-transform: uppercase; color: #555; letter-spacing: 0.05em;">Anchor streets</div><div style="font-size: 0.95rem; color: #002a3a;">Grande Vista CT · Vista Hill TRL · Silent Hills LN</div></div>
+</div>
+<div style="border-top: 1px solid #d6e0e6; padding-top: 1rem;">
+<div style="font-size: 0.75rem; text-transform: uppercase; color: #4a7c59; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.4rem;">Trade-off</div>
+<p style="margin: 0; font-size: 0.9rem; color: #333;">Established luxury inside a gated community with private clubhouse, pool, and 24/7 security — but homes are 18–30 years old, aspirationally priced inventory stalls past 60 days, and luxury close-to-list ratios swing widely (82% to 108%) based on pricing discipline.</p>
+</div>
+</div>
+
+</div>
+<p style="font-size: 0.8rem; color: #555; margin-top: 0.5rem;">Source: REcolorado MLS Q1 2026 Lone Tree New Construction Single-Family Residential Export (Year Built 2024+), pulled April 19, 2026; REcolorado MLS Lone Tree April 2026 All-Status Residential Export, pulled May 3, 2026. RidgeGate Q1 2026 new construction sample: 17 total listings (10 active, 2 pending, 5 closed). Heritage Hills figures reflect addresses inside Heritage Hills, Heritage Estates, and Carriage Club subdivisions. CP/OLP = close price as % of original list price. selling303.com</p>
+</div>
+
+<p>Over half of RidgeGate's Q1 2026 new construction closings (3 of 5) sold within the first 90 days of MLS exposure at 96% to 100% of list price. The Heritage Hills resale picture is wider — well-priced luxury moves quickly at full ask (one Mirabella Point closed at 108% of list with zero days on MLS), while aspirationally priced inventory stalls past 60 days and trades at 82–94%. The buyer's path question is the post's first decision; everything below builds on it.</p>
 
 <h2 id="ridgegate-market">What Does the RidgeGate New Construction Market Look Like in 2026?</h2>
 
