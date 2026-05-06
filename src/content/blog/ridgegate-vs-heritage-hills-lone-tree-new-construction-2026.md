@@ -81,9 +81,22 @@ relatedPosts:
 
 <h2 id="side-by-side">RidgeGate or Heritage Hills — Which Lone Tree Path Fits You?</h2>
 
-<p>For a buyer cross-shopping both, the choice is really a binary fork — brand-new construction inside an active master plan, or established luxury resale inside a gated community. The diptych below draws each path from the REcolorado MLS Q1 2026 Lone Tree new-construction export (year built 2024 or later, single-family residence) for the RidgeGate side, and the April 2026 Lone Tree all-status MLS export for the Heritage Hills side. Each card carries the price band, era, key Q1/April market signal, and the trade-off the path comes with.</p>
+<p>For a buyer cross-shopping both, the choice is really a binary fork — brand-new construction inside an active master plan, or established luxury resale inside a gated community. The visual below draws each path from the REcolorado MLS Q1 2026 Lone Tree new-construction export (year built 2024 or later, single-family residence) for the RidgeGate side, and the April 2026 Lone Tree all-status MLS export for the Heritage Hills side. Each path carries the price band, era, key Q1/April market signal, and the trade-off it comes with.</p>
 
-<div style="margin: 2rem 0;" itemscope itemtype="https://schema.org/Dataset" aria-labelledby="side-by-side">
+<!-- ============================================================ -->
+<!-- REVIEW VARIANTS A/B — Jacob to pick before publishing live    -->
+<!-- A = corrected two-path-diptych (library)                      -->
+<!-- B = 4-question decision-flowchart (stretch — Library Gap)     -->
+<!-- After Jacob picks: keep one, delete the other + banners,      -->
+<!-- and update visual-inventory.md status.                        -->
+<!-- ============================================================ -->
+
+<div style="background: #fff8e1; border: 2px dashed #f59e0b; padding: 1rem 1.25rem; margin: 1.5rem 0 0.75rem; border-radius: 8px;">
+<div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.4rem;"><span style="background: #f59e0b; color: #fff; font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.55rem; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.08em;">Review Variant A</span><span style="font-size: 0.85rem; font-weight: 600; color: #92400e;">two-path-diptych (library) — corrected hero</span></div>
+<p style="margin: 0; font-size: 0.85rem; color: #92400e;">Question-led hero, location as eyebrow, one-sentence answer with one number, and source bound as a footer row inside the visual block.</p>
+</div>
+
+<div style="margin: 0 0 2rem;" itemscope itemtype="https://schema.org/Dataset" aria-labelledby="side-by-side">
 <meta itemprop="name" content="RidgeGate vs. Heritage Hills two-path comparison — Lone Tree, Colorado spring 2026">
 <meta itemprop="description" content="Two-path diptych comparing RidgeGate new construction (Q1 2026 REcolorado MLS, year built 2024+, single-family residence) against Heritage Hills established resale luxury (April 2026 Lone Tree all-status MLS, addresses inside Heritage Hills subdivision).">
 <meta itemprop="temporalCoverage" content="2026-01-01/2026-04-30">
@@ -91,12 +104,13 @@ relatedPosts:
 <meta itemprop="creator" content="Jacob Stark, selling303.com">
 <meta itemprop="publisher" content="REcolorado MLS">
 
-<div style="background: #002a3a; color: #fff; padding: 1.25rem 1.5rem; border-radius: 8px 8px 0 0; text-align: center;">
-<div style="display: inline-flex; align-items: center; gap: 0.75rem;"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#fff" stroke-width="1.5" aria-hidden="true"><path d="M3 12l9-7 9 7"/><path d="M5 11v8h14v-8"/><path d="M9 19v-5h6v5"/></svg><div><div style="font-size: 0.85rem; opacity: 0.85; text-transform: uppercase; letter-spacing: 0.08em;">Two distinct communities in</div><div style="font-size: 1.4rem; font-weight: 700;">Lone Tree, Colorado</div></div></div>
-<div style="margin-top: 0.75rem; font-size: 0.9rem; opacity: 0.9;">Two legitimate paths, two different buyers. Pick the trade-off that matches your priorities.</div>
+<div style="background: #002a3a; color: #fff; padding: 1.5rem 1.5rem; border-radius: 8px 8px 0 0; text-align: center;">
+<div style="font-size: 0.7rem; opacity: 0.75; text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 0.5rem;">Lone Tree, Colorado</div>
+<div style="font-size: 1.6rem; font-weight: 700; line-height: 1.2;">RidgeGate or Heritage Hills?</div>
+<div style="margin: 0.85rem auto 0; font-size: 0.95rem; opacity: 0.9; max-width: 540px; line-height: 1.5;">All 17 Q1 2026 new-construction Lone Tree closings sat inside RidgeGate. Heritage Hills traded as resale luxury. Here's how the two paths compare so you can pick the trade-off that fits.</div>
 </div>
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0; border: 1px solid #d6e0e6; border-top: none; border-radius: 0 0 8px 8px; overflow: hidden;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0; border: 1px solid #d6e0e6; border-top: none; overflow: hidden;">
 
 <div itemscope itemtype="https://schema.org/PropertyValue" style="padding: 1.5rem; background: #f4f7f9; border-right: 1px solid #d6e0e6;">
 <meta itemprop="name" content="RidgeGate new construction path — Lone Tree, Colorado">
@@ -133,8 +147,100 @@ relatedPosts:
 </div>
 
 </div>
-<p style="font-size: 0.8rem; color: #555; margin-top: 0.5rem;">Source: REcolorado MLS Q1 2026 Lone Tree New Construction Single-Family Residential Export (Year Built 2024+), pulled April 19, 2026; REcolorado MLS Lone Tree April 2026 All-Status Residential Export, pulled May 3, 2026. RidgeGate Q1 2026 new construction sample: 17 total listings (10 active, 2 pending, 5 closed). Heritage Hills figures reflect addresses inside Heritage Hills, Heritage Estates, and Carriage Club subdivisions. CP/OLP = close price as % of original list price. selling303.com</p>
+<div style="background: #f9fafb; border: 1px solid #d6e0e6; border-top: none; border-radius: 0 0 8px 8px; padding: 0.75rem 1.25rem; font-size: 0.78rem; color: #555; line-height: 1.5;">
+<strong style="color: #002a3a;">Source:</strong> REcolorado MLS Q1 2026 Lone Tree New Construction Single-Family Residential Export (Year Built 2024+), pulled April 19, 2026; REcolorado MLS Lone Tree April 2026 All-Status Residential Export, pulled May 3, 2026. RidgeGate Q1 2026 new construction sample: 17 total listings (10 active, 2 pending, 5 closed). Heritage Hills figures reflect addresses inside Heritage Hills, Heritage Estates, and Carriage Club subdivisions. <em>CP/OLP = close price as % of original list price.</em>
 </div>
+</div>
+
+<div style="background: #fff8e1; border: 2px dashed #f59e0b; padding: 1rem 1.25rem; margin: 2.5rem 0 0.75rem; border-radius: 8px;">
+<div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.4rem;"><span style="background: #f59e0b; color: #fff; font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.55rem; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.08em;">Review Variant B</span><span style="font-size: 0.85rem; font-weight: 600; color: #92400e;">decision-flowchart (stretch — Library Gap candidate)</span></div>
+<p style="margin: 0; font-size: 0.85rem; color: #92400e;">Vertical 4-question decision path. Each row is a question with two answer pills routing to RidgeGate or Heritage Hills. If this wins, flag for Library Promotion as a new pattern (provisional name: <code>decision-path</code>).</p>
+</div>
+
+<div style="margin: 0 0 2rem;" itemscope itemtype="https://schema.org/HowTo" aria-labelledby="side-by-side">
+<meta itemprop="name" content="How to decide between RidgeGate and Heritage Hills in Lone Tree, Colorado">
+<meta itemprop="description" content="A 4-question decision path that routes the buyer toward RidgeGate new construction or Heritage Hills established resale luxury based on construction preference, commute pattern, gated-community priority, and budget ceiling.">
+<meta itemprop="totalTime" content="PT5M">
+
+<div style="background: #002a3a; color: #fff; padding: 1.5rem 1.5rem; border-radius: 8px 8px 0 0; text-align: center;">
+<div style="font-size: 0.7rem; opacity: 0.75; text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 0.5rem;">Lone Tree, Colorado</div>
+<div style="font-size: 1.6rem; font-weight: 700; line-height: 1.2;">RidgeGate or Heritage Hills?</div>
+<div style="margin: 0.85rem auto 0; font-size: 0.95rem; opacity: 0.9; max-width: 540px; line-height: 1.5;">Answer four questions. Each answer routes you to one of the two paths. The community most of your answers point to is the one to tour first.</div>
+</div>
+
+<div style="border: 1px solid #d6e0e6; border-top: none; background: #fff;">
+
+<div itemscope itemtype="https://schema.org/HowToStep" itemprop="step" style="padding: 1.25rem 1.5rem; border-bottom: 1px solid #d6e0e6;">
+<meta itemprop="position" content="1">
+<div style="display: flex; align-items: flex-start; gap: 1rem; flex-wrap: wrap;">
+<div style="background: #002a3a; color: #fff; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.95rem; flex-shrink: 0;">1</div>
+<div style="flex: 1; min-width: 220px;">
+<div itemprop="name" style="font-size: 1rem; font-weight: 600; color: #002a3a; margin-bottom: 0.7rem;">Do you want new construction or established resale?</div>
+<div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+<div itemprop="itemListElement" style="background: #f0f4f0; color: #002a3a; padding: 0.5rem 0.95rem; border-radius: 999px; font-size: 0.85rem; border: 1px solid #4a7c59; display: inline-flex; align-items: center; gap: 0.4rem;"><strong>New</strong><span style="color: #4a7c59;">→</span><span style="font-weight: 600;">RidgeGate</span></div>
+<div itemprop="itemListElement" style="background: #f4f7f9; color: #002a3a; padding: 0.5rem 0.95rem; border-radius: 999px; font-size: 0.85rem; border: 1px solid #002a3a; display: inline-flex; align-items: center; gap: 0.4rem;"><strong>Established</strong><span style="color: #002a3a;">→</span><span style="font-weight: 600;">Heritage Hills</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div itemscope itemtype="https://schema.org/HowToStep" itemprop="step" style="padding: 1.25rem 1.5rem; border-bottom: 1px solid #d6e0e6;">
+<meta itemprop="position" content="2">
+<div style="display: flex; align-items: flex-start; gap: 1rem; flex-wrap: wrap;">
+<div style="background: #002a3a; color: #fff; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.95rem; flex-shrink: 0;">2</div>
+<div style="flex: 1; min-width: 220px;">
+<div itemprop="name" style="font-size: 1rem; font-weight: 600; color: #002a3a; margin-bottom: 0.7rem;">Is light-rail commute part of your daily life?</div>
+<div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+<div itemprop="itemListElement" style="background: #f0f4f0; color: #002a3a; padding: 0.5rem 0.95rem; border-radius: 999px; font-size: 0.85rem; border: 1px solid #4a7c59; display: inline-flex; align-items: center; gap: 0.4rem;"><strong>Yes</strong><span style="color: #4a7c59;">→</span><span style="font-weight: 600;">RidgeGate</span></div>
+<div itemprop="itemListElement" style="background: #f9fafb; color: #555; padding: 0.5rem 0.95rem; border-radius: 999px; font-size: 0.85rem; border: 1px solid #d6e0e6; display: inline-flex; align-items: center; gap: 0.4rem;"><strong>No</strong><span style="color: #555;">→</span><span>either path open</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div itemscope itemtype="https://schema.org/HowToStep" itemprop="step" style="padding: 1.25rem 1.5rem; border-bottom: 1px solid #d6e0e6;">
+<meta itemprop="position" content="3">
+<div style="display: flex; align-items: flex-start; gap: 1rem; flex-wrap: wrap;">
+<div style="background: #002a3a; color: #fff; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.95rem; flex-shrink: 0;">3</div>
+<div style="flex: 1; min-width: 220px;">
+<div itemprop="name" style="font-size: 1rem; font-weight: 600; color: #002a3a; margin-bottom: 0.7rem;">Do you want gated and contained, with on-site clubhouse and security?</div>
+<div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+<div itemprop="itemListElement" style="background: #f4f7f9; color: #002a3a; padding: 0.5rem 0.95rem; border-radius: 999px; font-size: 0.85rem; border: 1px solid #002a3a; display: inline-flex; align-items: center; gap: 0.4rem;"><strong>Yes</strong><span style="color: #002a3a;">→</span><span style="font-weight: 600;">Heritage Hills</span></div>
+<div itemprop="itemListElement" style="background: #f0f4f0; color: #002a3a; padding: 0.5rem 0.95rem; border-radius: 999px; font-size: 0.85rem; border: 1px solid #4a7c59; display: inline-flex; align-items: center; gap: 0.4rem;"><strong>No</strong><span style="color: #4a7c59;">→</span><span style="font-weight: 600;">RidgeGate</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div itemscope itemtype="https://schema.org/HowToStep" itemprop="step" style="padding: 1.25rem 1.5rem;">
+<meta itemprop="position" content="4">
+<div style="display: flex; align-items: flex-start; gap: 1rem; flex-wrap: wrap;">
+<div style="background: #002a3a; color: #fff; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.95rem; flex-shrink: 0;">4</div>
+<div style="flex: 1; min-width: 220px;">
+<div itemprop="name" style="font-size: 1rem; font-weight: 600; color: #002a3a; margin-bottom: 0.7rem;">What's your honest budget ceiling?</div>
+<div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+<div itemprop="itemListElement" style="background: #f0f4f0; color: #002a3a; padding: 0.5rem 0.95rem; border-radius: 999px; font-size: 0.85rem; border: 1px solid #4a7c59; display: inline-flex; align-items: center; gap: 0.4rem;"><strong>Under $1.3M</strong><span style="color: #4a7c59;">→</span><span style="font-weight: 600;">RidgeGate</span></div>
+<div itemprop="itemListElement" style="background: #f9fafb; color: #555; padding: 0.5rem 0.95rem; border-radius: 999px; font-size: 0.85rem; border: 1px solid #d6e0e6; display: inline-flex; align-items: center; gap: 0.4rem;"><strong>$1.3M+</strong><span style="color: #555;">→</span><span>either path open</span></div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<div style="background: #f0f4f0; border: 1px solid #d6e0e6; border-top: none; padding: 1rem 1.5rem;">
+<div style="font-size: 0.7rem; text-transform: uppercase; color: #4a7c59; font-weight: 700; letter-spacing: 0.1em; margin-bottom: 0.4rem;">Decision Rule</div>
+<p style="margin: 0; font-size: 0.9rem; color: #002a3a; line-height: 1.5;">If 3 or more answers point to RidgeGate, start there. If 3 or more point to Heritage Hills, start there. Mixed answers — tour both with Jacob before locking in.</p>
+</div>
+
+<div style="background: #f9fafb; border: 1px solid #d6e0e6; border-top: none; border-radius: 0 0 8px 8px; padding: 0.75rem 1.25rem; font-size: 0.78rem; color: #555; line-height: 1.5;">
+<strong style="color: #002a3a;">Source:</strong> Decision criteria derived from REcolorado MLS Q1 2026 Lone Tree New Construction Single-Family Residential Export (Year Built 2024+), pulled April 19, 2026; REcolorado MLS Lone Tree April 2026 All-Status Residential Export, pulled May 3, 2026; HOA structures and gated-community amenities verified against Lone Tree city records and Heritage Hills HOA documentation. Decision routing reflects buyer-priority weighting Jacob Stark uses on representation calls.
+</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- END REVIEW VARIANTS A/B                                       -->
+<!-- ============================================================ -->
 
 <p>Over half of RidgeGate's Q1 2026 new construction closings (3 of 5) sold within the first 90 days of MLS exposure at 96% to 100% of list price. The Heritage Hills resale picture is wider — well-priced luxury moves quickly at full ask (one Mirabella Point closed at 108% of list with zero days on MLS), while aspirationally priced inventory stalls past 60 days and trades at 82–94%. The buyer's path question is the post's first decision; everything below builds on it.</p>
 
