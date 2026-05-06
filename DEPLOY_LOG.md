@@ -1,5 +1,16 @@
 # Deploy Log
 
+## 2026-05-06 (PM) — commit 4571cc8 / merge 7dfe407 | Credits used: 15 | Build: 39s
+
+- **NEW POST:** South Denver Homeowner's 2026 Notice of Valuation Protest Playbook (`/blog/2026-notice-of-valuation-protest-playbook-south-denver`) — ad-hoc, not from calendar. Move-Up Sellers × Highlands Ranch, BOFU. Time-sensitive (June 1, 2026 protest deadline). Sourced from topic-intelligence.md Section 4 row 1.
+- **FIRST TIER-2 INTERACTIVE WIDGET ON THE SITE:** Gap Calculator — county selector + 2 currency inputs + live gap-percentage readout + 3 path cards (Protest / Skip / Abate) that highlight on recommendation + live JS countdown to June 1 deadline. Vanilla JS inline (no framework). Static SSR'd fallback shows all 3 paths fully visible without JS — full Schema.org Dataset + ItemList + 3× RecommendAction + JSON-LD Dataset block. Mobile responsive (<600px stacking). AEO-positive, not compromised.
+- **Visual rebuild:** original comparison-table v1 was scrapped at the Visual Dignity Gate (data wall, mostly identical rows across counties). Iterated through 3-option picker (decision-path / timeline / three-paths grid) → 2-widget A/B (Gap Calculator vs Live Cycle Tracker) → final pick = Gap Calculator with Jacob's edits ("Select Your County" label, value="0" on inputs, "Your potential path" header).
+- **Library promotion candidate:** flag `interactive-calculator` as new Tier-2 pattern in `docs/visual-patterns.md` on next push (post is the lift-from). Triggers the broader library-tiering conversation Jacob flagged.
+- Updated `content-cluster-map.md` (added entry under Move-Up Sellers) and `visual-inventory.md` (Tier-2 entry, Library Promotion flag).
+- **Build wiring validated:** gbp-post auto-fires next.
+
+---
+
 ## 2026-05-06 — commit 9e57692 | Credits used: 15
 
 - **NEW POST:** RidgeGate vs. Heritage Hills in Lone Tree, 2026 (`/blog/ridgegate-vs-heritage-hills-lone-tree-new-construction-2026`) — Day 2 of May 5–June 3 calendar segment, New Construction × Lone Tree, MOFU, decision-flowchart visual (pattern #6 — Library Promotion). Q1 2026 REcolorado MLS data sourcing.
