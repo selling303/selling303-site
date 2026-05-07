@@ -1,14 +1,65 @@
 # Visual Patterns Library — selling303.com
 
-The single source of truth for visuals on selling303.com blog posts, pillar pages, and neighborhood pages. Seven shipped patterns, each grounded in a real post that proved it works. The blog-post-writer and aeo-visual-builder skills both reference this file when selecting a pattern at draft time.
+The single source of truth for visuals on selling303.com blog posts, pillar pages, and neighborhood pages. The blog-post-writer and aeo-visual-builder skills both reference this file when selecting a pattern at draft time.
+
+---
+
+## The Tier System (READ THIS FIRST)
+
+Visuals come in three interaction tiers. **Pick the tier first, then the pattern within that tier.** Tier selection comes from the post's funnel stage, narrative shape, and whether the value is computable from reader inputs.
+
+### Tier 0 — Static
+
+Schema-bound HTML, no animation, no JS state. The seven shipped patterns below all live here. Cheap, fast, AEO-baseline. The default for TOFU and most MOFU.
+
+**Use when:** the visual's job is to display a fixed truth (a comparison, a tier breakdown, a fact map). The reader looks at it and learns something.
+
+### Tier 1 — Animated / Responsive
+
+Static structure plus CSS transitions, scroll-triggered reveals, hover states, smooth color transitions. No JS state — same content for every reader, just rendered with more life. Adds visual sophistication without the cost of full interactivity.
+
+**Use when:** the visual benefits from a reveal moment (numbers counting up on scroll, a chart filling left-to-right as the reader enters viewport, hover tooltips on data points). Most MOFU posts where engagement matters but personalization doesn't.
+
+**Library entries:** TBD. As Tier 1 patterns ship, document them here with the same shape as Tier 0.
+
+### Tier 2 — Interactive Widget
+
+Full state, user inputs, computed outputs. Reusable component or scoped inline JS. The widget is the value — the reader brings inputs, the visual computes a personalized answer.
+
+**Use when:** the post's compelling question is computable from reader-supplied inputs. BOFU calculators, decision tools, lookup widgets. The reader uses the visual to make a real decision.
+
+**Library entries:**
+- **`interactive-calculator`** — lift-from `src/content/blog/2026-notice-of-valuation-protest-playbook-south-denver.md`. Gap Calculator: county selector + 2 currency inputs + live gap-percent readout + 3 path cards that highlight on recommendation + live JS countdown. Vanilla JS inline, no framework. Static SSR'd fallback shows all 3 paths fully visible without JS. Schema: outer Dataset + ItemList + 3× RecommendAction + JSON-LD Dataset block. Mobile responsive with input-grid stacking at <600px. AEO-positive — engagement signals plus "useful tool" quality signal, never compromising static-fallback content.
+
+### How to pick a tier
+
+| Post type | Default tier | Upgrade trigger |
+|---|---|---|
+| TOFU educational | Tier 0 | Almost never upgrades |
+| MOFU comparison | Tier 0 or 1 | Tier 1 when scroll-triggered reveal amplifies the contrast |
+| BOFU decision tool | Tier 2 | Default — when the reader has inputs to provide |
+| BOFU case study | Tier 0 | Static prose visual; almost never Tier 2 |
+| Market update / data | Tier 0 + chart | Tier 1 if chart benefits from animation |
+
+State the chosen tier explicitly before brainstorming candidates. Brainstorm 3 within the chosen tier (≥2 library + ≥1 stretch).
+
+### AEO doesn't suffer from interactivity (when done right)
+
+Tier 2 widgets are AEO-positive when designed correctly:
+- **Schema lives in the SSR'd HTML.** Never JS-injected. Crawlers see the full content regardless of JS execution.
+- **Static fallback is complete.** All 3 path cards visible by default; the JS layer just highlights/dims based on inputs.
+- **Engagement signals.** Time-on-page, scroll depth, interaction rate — all Google ranking factors that Tier 2 widgets generate naturally.
+- **"Useful tool" quality signal.** AI engines reward content that demonstrates utility.
+
+The bar: the static HTML must contain the full answer the AI engine would quote. The widget makes that answer feel alive, doesn't replace it.
 
 ---
 
 ## How to use this file
 
-The writer arrives here AFTER answering the post's compelling question and its one-sentence answer (per the blog-post-writer "Compelling Question Flow"). At that point, the writer scans this library for the pattern that best pays off the question, brainstorms 2 candidates from this library plus 1 stretch candidate not in this library, scores all three, and ships the winner.
+The writer arrives here AFTER answering the post's compelling question and one-sentence answer AND picking the tier. At that point, scan the chosen tier's library for the pattern that best pays off the question. Brainstorm 2 from library + 1 stretch within the chosen tier. Score all three. Ship the winner.
 
-If the stretch candidate wins, the delivery message flags it for library promotion and the new pattern gets added here on the next push. That's how the library grows — every post is potentially a library-growth moment, but only when the stretch genuinely outperforms the proven options.
+If the stretch candidate wins, the delivery message flags it for library promotion and the new pattern gets added here on the next push. That's how the library grows — every post is potentially a library-growth moment, but only when the stretch genuinely outperforms.
 
 ---
 
