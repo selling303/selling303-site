@@ -106,26 +106,57 @@ def generate_hero_card(
     f_brand = ImageFont.truetype(FONT_BOLD, 24)
     draw.text((40, 28), "selling303.com", font=f_brand, fill=WHITE)
 
-    # 3. Hero number — auto-fit, scaled for 4:3 (slightly smaller to leave more
-    #    room for a bigger headline that does real work)
-    font_size = 340
-    while font_size > 160:
+    # 3. Hero number — smaller to make room for bigger headline + vertical centering
+    font_size = 280
+    while font_size > 140:
         f_hero = ImageFont.truetype(FONT_HEAVY, font_size)
         bbox = draw.textbbox((0, 0), hero_number, font=f_hero)
-        if bbox[2] - bbox[0] <= int(W * 0.80):
+        if bbox[2] - bbox[0] <= int(W * 0.78):
             break
         font_size -= 20
-    hero_y = 100
-    bbox = draw.textbbox((0, 0), hero_number, font=f_hero)
-    hero_w = bbox[2] - bbox[0]
-    hero_h = bbox[3] - bbox[1]
-    hero_x = (W - hero_w) // 2 - bbox[0]
-    draw.text((hero_x, hero_y - bbox[1]), hero_number, font=f_hero, fill=hero_color)
 
-    # 4. Hero label
-    f_label = ImageFont.truetype(FONT_BOLD, 28)
-    label_y = hero_y + hero_h + 12
+    # Pre-measure all elements so we can vertically center the stack
+    f_label = ImageFont.truetype(FONT_BOLD, 26)
+    f_head = ImageFont.truetype(FONT_BOLD, 84)  # match Option 2
+    head_max_w = int(W * 0.78)  # narrower margins for tighter centered framing
+    lines = wrap_text_to_width(draw, headline, f_head, head_max_w)
+    line_height = 100
+
+    bbox_h = draw.textbbox((0, 0), hero_number, font=f_hero)
+    hero_h = bbox_h[3] - bbox_h[1]
+
     spaced = " ".join(hero_label.split()).upper()
+    label_h = draw.textbbox((0, 0), spaced, font=f_label)[3]
+
+    sub_h = 0
+    sub_lines = []
+    if subline:
+        f_sub = ImageFont.truetype(FONT_BOLD, 26)
+        sub_max_w = int(W * 0.78)
+        sub_lines = wrap_text_to_width(draw, subline, f_sub, sub_max_w)
+        sub_h = len(sub_lines) * 34
+
+    head_total_h = len(lines) * line_height
+    gap_hero_label = 14
+    gap_label_rule = 50
+    gap_rule_head = 36
+    gap_head_sub = 22
+
+    stack_h = (hero_h + gap_hero_label + label_h + gap_label_rule + 4
+               + gap_rule_head + head_total_h)
+    if subline:
+        stack_h += gap_head_sub + sub_h
+
+    # Center vertically
+    top_y = (H - stack_h) // 2
+
+    # Render hero
+    hero_y = top_y
+    hero_x = (W - (bbox_h[2] - bbox_h[0])) // 2 - bbox_h[0]
+    draw.text((hero_x, hero_y - bbox_h[1]), hero_number, font=f_hero, fill=hero_color)
+
+    # Label
+    label_y = hero_y + hero_h + gap_hero_label
     total_w = 0
     for ch in spaced:
         bb = draw.textbbox((0, 0), ch, font=f_label)
@@ -137,32 +168,24 @@ def generate_hero_card(
         draw.text((cx, label_y), ch, font=f_label, fill=hero_color)
         cx += (bb[2] - bb[0]) + 4
 
-    # 5. Gold accent line
-    rule_y = label_y + 46
+    # Gold rule
+    rule_y = label_y + gap_label_rule
     rule_w = 160
     draw.rectangle([((W - rule_w) // 2, rule_y),
                     ((W + rule_w) // 2, rule_y + 4)], fill=hero_color)
 
-    # 6. Headline — much bigger so the question carries real weight (was 44px,
-    #    now 60px — the number grabs attention but the question earns the click)
-    f_head = ImageFont.truetype(FONT_BOLD, 60)
-    head_max_w = int(W * 0.88)
-    lines = wrap_text_to_width(draw, headline, f_head, head_max_w)
-    head_y = rule_y + 32
-    line_height = 74
+    # Headline
+    head_y = rule_y + gap_rule_head
     for line in lines:
         draw_centered_text(draw, line, f_head, head_y, WHITE, W)
         head_y += line_height
 
-    # 7. Subline (optional supporting copy)
+    # Subline
     if subline:
-        f_sub = ImageFont.truetype(FONT_BOLD, 24)
-        sub_max_w = int(W * 0.84)
-        sub_lines = wrap_text_to_width(draw, subline, f_sub, sub_max_w)
-        sub_y = head_y + 14
+        sub_y = head_y + gap_head_sub
         for line in sub_lines:
             draw_centered_text(draw, line, f_sub, sub_y, GOLD_LIGHT, W)
-            sub_y += 32
+            sub_y += 34
 
     # 8. (No footer band — wordmark up top carries identity. Cleaner image.)
 

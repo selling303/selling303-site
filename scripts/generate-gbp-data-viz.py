@@ -208,7 +208,7 @@ def render_deadline_spine(
     # === BIG QUESTION below the timeline (the click hook) ===
 
     q_text = question if question else "Should you protest your 2026 property tax?"
-    f_q = ImageFont.truetype(FONT_BOLD, 70)
+    f_q = ImageFont.truetype(FONT_BOLD, 84)  # match Option 2 size
     q_max_w = int(W * 0.86)
 
     # Wrap to fit
@@ -225,22 +225,23 @@ def render_deadline_spine(
             cur = w
     q_lines.append(cur)
 
-    # Center vertically in the bottom area (y=440-880)
-    line_h = 84
-    total_h = len(q_lines) * line_h
-    q_y = 440 + (440 - total_h) // 2
+    # Sub-CTA setup (so we can compute total stack)
+    f_sub = ImageFont.truetype(FONT_BOLD, 24)
+    line_h = 100  # 84px font + breathing room
+    total_h = len(q_lines) * line_h + 50  # + sub block
+    # Vertically center the question stack inside (450..880)
+    q_y = 460 + (440 - total_h) // 2
     for line in q_lines[:3]:
         draw_centered(draw, line, f_q, q_y, WHITE, W)
         q_y += line_h
 
     # Small gold accent rule + sub-CTA below the question
     rule_w = 120
-    rule_y = q_y + 6
+    rule_y = q_y + 8
     draw.rectangle([((W - rule_w) // 2, rule_y),
                     ((W + rule_w) // 2, rule_y + 4)], fill=GOLD)
-    f_sub = ImageFont.truetype(FONT_BOLD, 22)
     draw_centered(draw, "Free calculator · 30 seconds",
-                  f_sub, rule_y + 22, GOLD_LIGHT, W)
+                  f_sub, rule_y + 24, GOLD_LIGHT, W)
 
     # (No footer band — wordmark up top carries identity. Cleaner image.)
 
