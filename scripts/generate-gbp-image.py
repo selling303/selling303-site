@@ -102,10 +102,9 @@ def generate_hero_card(
     img = vertical_gradient((W, H), NAVY, NAVY_DARK)
     draw = ImageDraw.Draw(img)
 
-    # 2. Top wordmark — small "selling303.com" top-left
+    # 2. Top wordmark — small "selling303.com" top-left (no decorative dot)
     f_brand = ImageFont.truetype(FONT_BOLD, 24)
     draw.text((40, 28), "selling303.com", font=f_brand, fill=WHITE)
-    draw.ellipse([(228, 40), (240, 52)], fill=hero_color)
 
     # 3. Hero number — auto-fit, scaled for 4:3
     font_size = 380
@@ -164,13 +163,7 @@ def generate_hero_card(
             draw_centered_text(draw, line, f_sub, sub_y, GOLD_LIGHT, W)
             sub_y += 32
 
-    # 8. Footer band
-    footer_h = 70
-    draw.rectangle([(0, H - footer_h), (W, H)], fill=NAVY_DARK)
-    draw.rectangle([(0, H - footer_h - 2), (W, H - footer_h)], fill=hero_color)
-    f_foot = ImageFont.truetype(FONT_BOLD, 22)
-    foot_y = H - footer_h + (footer_h - 22) // 2 - 3
-    draw_centered_text(draw, footer_line.upper(), f_foot, foot_y, WHITE, W)
+    # 8. (No footer band — wordmark up top carries identity. Cleaner image.)
 
     os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
     img.save(output_path, "PNG", optimize=True)

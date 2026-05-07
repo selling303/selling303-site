@@ -116,10 +116,9 @@ def render_deadline_spine(
     # === HEADER (0-340): navy block with bigger caption + hero countdown ===
     draw.rectangle([(0, 0), (W, 340)], fill=NAVY)
 
-    # Top wordmark
+    # Top wordmark (no decorative dot — clean)
     f_brand = ImageFont.truetype(FONT_BOLD, 24)
     draw.text((40, 28), "selling303.com", font=f_brand, fill=WHITE)
-    draw.ellipse([(228, 40), (240, 52)], fill=GOLD)
 
     # Headline caption above the hero number — enlarged for thumbnail readability
     f_caption = ImageFont.truetype(FONT_BOLD, 38)
@@ -247,15 +246,7 @@ def render_deadline_spine(
     f_url = ImageFont.truetype(FONT_REG, 18)
     draw_centered(draw, footer, f_url, detail_y + 158, WHITE_DIM, W)
 
-    # === FOOTER BAND (830-900) ===
-    footer_h = 70
-    draw.rectangle([(0, H - footer_h), (W, H)], fill=NAVY_DARK)
-    draw.rectangle([(0, H - footer_h - 2), (W, H - footer_h)], fill=GOLD)
-
-    f_foot = ImageFont.truetype(FONT_BOLD, 22)
-    foot_y = H - footer_h + (footer_h - 22) // 2 - 3
-    draw_centered(draw, "JACOB STARK · 8Z REAL ESTATE · 303-997-0634",
-                  f_foot, foot_y, WHITE, W)
+    # (No footer band — wordmark up top carries identity. Cleaner image.)
 
     os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
     img.save(output_path, "PNG", optimize=True)

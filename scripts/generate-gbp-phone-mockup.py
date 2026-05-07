@@ -98,10 +98,9 @@ def render_phone_mockup(
     img = vertical_gradient((W, H), NAVY, NAVY_DARK).convert("RGBA")
     draw = ImageDraw.Draw(img)
 
-    # Top wordmark (small)
+    # Top wordmark (small, no decorative dot — clean)
     f_brand = ImageFont.truetype(FONT_BOLD, 22)
     draw.text((40, 28), "selling303.com", font=f_brand, fill=WHITE)
-    draw.ellipse([(216, 38), (228, 50)], fill=GOLD)
 
     # === PHONE FRAME — left, narrow & tall (real iPhone-ish aspect ~9:20) ===
     phone_w, phone_h = 340, 720
@@ -344,14 +343,7 @@ def render_phone_mockup(
         short_url = short_url[:54] + "…"
     draw.text((rx, head_y + 84), short_url, font=f_r_url, fill=WHITE_DIM)
 
-    # === Footer band ===
-    footer_h = 70
-    draw.rectangle([(0, H - footer_h), (W, H)], fill=NAVY_DARK)
-    draw.rectangle([(0, H - footer_h - 2), (W, H - footer_h)], fill=GOLD)
-    f_foot = ImageFont.truetype(FONT_BOLD, 22)
-    foot_y = H - footer_h + (footer_h - 22) // 2 - 3
-    draw_centered(draw, "JACOB STARK · 8Z REAL ESTATE · 303-997-0634",
-                  f_foot, foot_y, WHITE, W)
+    # (No footer band — wordmark up top carries identity. Cleaner image.)
 
     out = img.convert("RGB")
     os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
