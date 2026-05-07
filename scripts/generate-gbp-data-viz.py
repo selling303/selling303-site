@@ -113,21 +113,21 @@ def render_deadline_spine(
     img = vertical_gradient((W, H), NAVY, NAVY_DARK)
     draw = ImageDraw.Draw(img)
 
-    # === HEADER (0-280): navy block with hero countdown ===
-    draw.rectangle([(0, 0), (W, 280)], fill=NAVY)
+    # === HEADER (0-340): navy block with bigger caption + hero countdown ===
+    draw.rectangle([(0, 0), (W, 340)], fill=NAVY)
 
     # Top wordmark
     f_brand = ImageFont.truetype(FONT_BOLD, 24)
     draw.text((40, 28), "selling303.com", font=f_brand, fill=WHITE)
     draw.ellipse([(228, 40), (240, 52)], fill=GOLD)
 
-    # Headline caption above the hero number
-    f_caption = ImageFont.truetype(FONT_BOLD, 26)
-    draw_centered(draw, headline, f_caption, 80, WHITE_DIM, W)
+    # Headline caption above the hero number — enlarged for thumbnail readability
+    f_caption = ImageFont.truetype(FONT_BOLD, 38)
+    draw_centered(draw, headline, f_caption, 90, WHITE, W)
 
     # Hero number + unit
-    f_hero = ImageFont.truetype(FONT_HEAVY, 170)
-    f_unit = ImageFont.truetype(FONT_BOLD, 46)
+    f_hero = ImageFont.truetype(FONT_HEAVY, 160)
+    f_unit = ImageFont.truetype(FONT_BOLD, 44)
 
     n_bb = draw.textbbox((0, 0), hero_number, font=f_hero)
     u_bb = draw.textbbox((0, 0), hero_unit, font=f_unit)
@@ -136,13 +136,13 @@ def render_deadline_spine(
     gap = 18
     total_w = n_w + gap + u_w
     start_x = (W - total_w) // 2
-    n_y = 120
+    n_y = 160
     draw.text((start_x - n_bb[0], n_y - n_bb[1]), hero_number, font=f_hero, fill=GOLD)
-    u_y = n_y + (n_bb[3] - n_bb[1]) - (u_bb[3] - u_bb[1]) - 22
+    u_y = n_y + (n_bb[3] - n_bb[1]) - (u_bb[3] - u_bb[1]) - 18
     draw.text((start_x + n_w + gap - u_bb[0], u_y - u_bb[1]),
               hero_unit, font=f_unit, fill=GOLD_LIGHT)
 
-    # === TIMELINE (280-650): horizontal spine ===
+    # === TIMELINE (340-580): horizontal spine — moved up tighter ===
     timeline_y = 480
 
     # Track baseline (gray)
@@ -228,19 +228,24 @@ def render_deadline_spine(
             today["desc"], font=f_m_desc, fill=WHITE,
         )
 
-    # === DETAIL BLOCK (650-820): supporting copy + URL ===
-    f_q = ImageFont.truetype(FONT_BOLD, 30)
-    detail_y = 680
-    q_lines = [
-        "Pick your county. Type your numbers.",
-        "The calculator lights up your path.",
-    ]
-    for line in q_lines:
-        draw_centered(draw, line, f_q, detail_y, WHITE, W)
-        detail_y += 42
+    # === DETAIL BLOCK (580-820): pull-quote callout + supporting copy + URL ===
 
+    # Bold CTA-style callout — larger, fills the bottom area
+    f_q = ImageFont.truetype(FONT_BOLD, 36)
+    detail_y = 620
+    draw_centered(draw, "Pick your county. Type your numbers.",
+                  f_q, detail_y, WHITE, W)
+    draw_centered(draw, "The calculator lights up your path.",
+                  f_q, detail_y + 50, WHITE, W)
+
+    # Sub-CTA — gold accent line
+    f_cta = ImageFont.truetype(FONT_BOLD, 24)
+    draw_centered(draw, "Free · 30 seconds · No login",
+                  f_cta, detail_y + 120, GOLD_LIGHT, W)
+
+    # URL link
     f_url = ImageFont.truetype(FONT_REG, 18)
-    draw_centered(draw, footer, f_url, detail_y + 14, GOLD_LIGHT, W)
+    draw_centered(draw, footer, f_url, detail_y + 158, WHITE_DIM, W)
 
     # === FOOTER BAND (830-900) ===
     footer_h = 70

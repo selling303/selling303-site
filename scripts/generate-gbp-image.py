@@ -30,6 +30,7 @@ from PIL import Image, ImageDraw, ImageFont
 NAVY = (0, 42, 58)
 NAVY_DARK = (0, 60, 82)
 GOLD = (200, 150, 90)
+GOLD_LIGHT = (240, 200, 154)
 GREEN = (74, 124, 89)
 WHITE = (255, 255, 255)
 LIGHT = (244, 247, 249)
@@ -87,6 +88,7 @@ def generate_hero_card(
     hero_label,
     headline,
     output_path,
+    subline="",
     hero_color=GOLD,
     footer_line="JACOB STARK · 8z REAL ESTATE · 303-997-0634",
     canvas_width=1200,
@@ -106,14 +108,14 @@ def generate_hero_card(
     draw.ellipse([(228, 40), (240, 52)], fill=hero_color)
 
     # 3. Hero number — auto-fit, scaled for 4:3
-    font_size = 420
+    font_size = 380
     while font_size > 180:
         f_hero = ImageFont.truetype(FONT_HEAVY, font_size)
         bbox = draw.textbbox((0, 0), hero_number, font=f_hero)
         if bbox[2] - bbox[0] <= int(W * 0.85):
             break
         font_size -= 20
-    hero_y = 90
+    hero_y = 130
     bbox = draw.textbbox((0, 0), hero_number, font=f_hero)
     hero_w = bbox[2] - bbox[0]
     hero_h = bbox[3] - bbox[1]
@@ -136,22 +138,33 @@ def generate_hero_card(
         cx += (bb[2] - bb[0]) + 4
 
     # 5. Gold accent line
-    rule_y = label_y + 52
+    rule_y = label_y + 50
     rule_w = 180
     draw.rectangle([((W - rule_w) // 2, rule_y),
                     ((W + rule_w) // 2, rule_y + 4)], fill=hero_color)
 
     # 6. Headline
-    f_head = ImageFont.truetype(FONT_BOLD, 46)
+    f_head = ImageFont.truetype(FONT_BOLD, 44)
     head_max_w = int(W * 0.86)
     lines = wrap_text_to_width(draw, headline, f_head, head_max_w)
-    head_y = rule_y + 30
-    line_height = 58
+    head_y = rule_y + 28
+    line_height = 56
     for line in lines:
         draw_centered_text(draw, line, f_head, head_y, WHITE, W)
         head_y += line_height
 
-    # 7. Footer band
+    # 7. Subline (optional supporting copy below headline — fills the bottom area
+    #    and adds CTA value)
+    if subline:
+        f_sub = ImageFont.truetype(FONT_BOLD, 24)
+        sub_max_w = int(W * 0.84)
+        sub_lines = wrap_text_to_width(draw, subline, f_sub, sub_max_w)
+        sub_y = head_y + 18
+        for line in sub_lines:
+            draw_centered_text(draw, line, f_sub, sub_y, GOLD_LIGHT, W)
+            sub_y += 32
+
+    # 8. Footer band
     footer_h = 70
     draw.rectangle([(0, H - footer_h), (W, H)], fill=NAVY_DARK)
     draw.rectangle([(0, H - footer_h - 2), (W, H - footer_h)], fill=hero_color)
@@ -170,6 +183,7 @@ def main():
     p.add_argument("--hero-number", required=True)
     p.add_argument("--hero-label", required=True)
     p.add_argument("--headline", required=True)
+    p.add_argument("--subline", default="")
     p.add_argument("--hero-color", default="#c8965a")
     p.add_argument("--footer-line",
                    default="JACOB STARK · 8z REAL ESTATE · 303-997-0634")
@@ -185,6 +199,7 @@ def main():
         hero_label=args.hero_label,
         headline=args.headline,
         output_path=args.output,
+        subline=args.subline,
         hero_color=hero_color_rgb,
         footer_line=args.footer_line,
         canvas_width=args.canvas_width,
