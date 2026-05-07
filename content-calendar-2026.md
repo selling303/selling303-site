@@ -308,12 +308,12 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: comparison-table (RidgeGate vs. Heritage Hills × 6 metrics)
 
 #### Day 3 — Thursday, May 7
-- [ ] **"Why Pricing Reductions in Highlands Ranch Don't Always Work — and What Does"**
+- [x] **"Why Pricing Reductions in Highlands Ranch Don't Always Work — and What Does"** *(drafted 2026-05-06)*
   - Specialization: `/expired-listings` | Geographic: `/highlands-ranch`
   - Type: Seller advice | Funnel: BOFU
   - Angle: Data-driven look at price-cut velocity in Highlands Ranch — how fast a reduction needs to happen, how big it needs to be relative to DOM, and why generic 5% cuts often don't recover a stalled listing. Uses April 2026 expired-vs-closed pricing patterns.
   - Target keywords: price reduction Highlands Ranch, Highlands Ranch listing not selling, when to reduce price Denver, Highlands Ranch expired listing recovery
-  - Visual: svg-chart (price-cut velocity vs. DOM, expired vs. closed listings)
+  - Visual: single-metric-bar-chart (median DIM by close-to-original-list bucket, April 2026 HR n=150 — chosen over original svg-chart spec via Compelling Question Flow; same SVG family but bucketed by outcome instead of price-cut velocity, which made the bimodal "quick or stuck" market shape land in 5 seconds)
 
 #### Day 4 — Friday, May 8
 - [ ] **"The Greenwood Village Empty-Nester Move: When the Right-Sizing Math Actually Pencils"**

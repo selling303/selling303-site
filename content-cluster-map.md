@@ -22,6 +22,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - South Denver Market Update: What April 2026 Means for Sellers Sitting on Expired Listings (`/blog/south-denver-market-update-april-2026-expired-listings-centennial`)
 - Why Your Centennial Home Isn't Getting Offers — and How to Fix It Before Summer (`/blog/why-centennial-home-not-getting-offers`)
 - The Expired Listing Trap: Why Switching Agents Alone Won't Sell Your Englewood Home (`/blog/expired-listing-trap-englewood-switching-agents-2026`)
+- Why Pricing Reductions in Highlands Ranch Don't Always Work — and What Does (`/blog/price-reductions-highlands-ranch-what-works-2026`)
 
 ### 2. Move-Up Sellers (`/move-up-sellers`)
 **Primary geographic ties:** Highlands Ranch, Centennial, Parker (highest move-up activity — families upgrading within the metro)
