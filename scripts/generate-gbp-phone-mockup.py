@@ -311,8 +311,8 @@ def render_phone_mockup(
     draw.text((rx, 130), "INTERACTIVE TOOL", font=f_r_eye, fill=GOLD)
     draw.rectangle([(rx, 162), (rx + 50, 165)], fill=GOLD)
 
-    # Big headline (3 lines max, ~72px so 3 lines fit comfortably)
-    f_r_head = ImageFont.truetype(FONT_BOLD, 72)
+    # Big headline (bigger now — 84px — to dominate at thumbnail)
+    f_r_head = ImageFont.truetype(FONT_BOLD, 84)
     head_lines = []
     words = above_phone.split()
     cur = words[0]
@@ -328,20 +328,15 @@ def render_phone_mockup(
     head_y = 200
     for line in head_lines[:4]:
         draw.text((rx, head_y), line, font=f_r_head, fill=WHITE)
-        head_y += 84
+        head_y += 96
 
     # Gold accent rule under headline
-    draw.rectangle([(rx, head_y + 16), (rx + 80, head_y + 20)], fill=GOLD)
+    draw.rectangle([(rx, head_y + 18), (rx + 90, head_y + 22)], fill=GOLD)
 
-    # Subline + URL
-    f_r_sub = ImageFont.truetype(FONT_BOLD, 26)
-    draw.text((rx, head_y + 38), "Free calculator · 30 seconds",
+    # Subline only (URL dropped — long blog URLs add noise without earning clicks)
+    f_r_sub = ImageFont.truetype(FONT_BOLD, 28)
+    draw.text((rx, head_y + 42), "Free calculator · 30 seconds",
               font=f_r_sub, fill=GOLD_LIGHT)
-    f_r_url = ImageFont.truetype(FONT_REG, 18)
-    short_url = url.replace("https://", "").replace("http://", "")
-    if len(short_url) > 56:
-        short_url = short_url[:54] + "…"
-    draw.text((rx, head_y + 84), short_url, font=f_r_url, fill=WHITE_DIM)
 
     # (No footer band — wordmark up top carries identity. Cleaner image.)
 

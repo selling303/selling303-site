@@ -104,45 +104,23 @@ def render_deadline_spine(
     hero_unit,
     milestones,
     footer,
+    question="",
     canvas_width=1200,
     canvas_height=900,
 ):
-    """4:3 deadline spine. 1200x900 fits GBP feed-card thumbnails fully."""
+    """4:3 deadline spine — minimal layout: wordmark, timeline (visual interest),
+    big question (click hook). No top header band, no URL footer."""
     W = canvas_width
     H = canvas_height
     img = vertical_gradient((W, H), NAVY, NAVY_DARK)
     draw = ImageDraw.Draw(img)
 
-    # === HEADER (0-340): navy block with bigger caption + hero countdown ===
-    draw.rectangle([(0, 0), (W, 340)], fill=NAVY)
-
-    # Top wordmark (no decorative dot — clean)
+    # Top wordmark
     f_brand = ImageFont.truetype(FONT_BOLD, 24)
     draw.text((40, 28), "selling303.com", font=f_brand, fill=WHITE)
 
-    # Headline caption above the hero number — enlarged for thumbnail readability
-    f_caption = ImageFont.truetype(FONT_BOLD, 38)
-    draw_centered(draw, headline, f_caption, 90, WHITE, W)
-
-    # Hero number + unit
-    f_hero = ImageFont.truetype(FONT_HEAVY, 160)
-    f_unit = ImageFont.truetype(FONT_BOLD, 44)
-
-    n_bb = draw.textbbox((0, 0), hero_number, font=f_hero)
-    u_bb = draw.textbbox((0, 0), hero_unit, font=f_unit)
-    n_w = n_bb[2] - n_bb[0]
-    u_w = u_bb[2] - u_bb[0]
-    gap = 18
-    total_w = n_w + gap + u_w
-    start_x = (W - total_w) // 2
-    n_y = 160
-    draw.text((start_x - n_bb[0], n_y - n_bb[1]), hero_number, font=f_hero, fill=GOLD)
-    u_y = n_y + (n_bb[3] - n_bb[1]) - (u_bb[3] - u_bb[1]) - 18
-    draw.text((start_x + n_w + gap - u_bb[0], u_y - u_bb[1]),
-              hero_unit, font=f_unit, fill=GOLD_LIGHT)
-
-    # === TIMELINE (340-580): horizontal spine — moved up tighter ===
-    timeline_y = 480
+    # === TIMELINE (moved up — anchor in upper third) ===
+    timeline_y = 240
 
     # Track baseline (gray)
     draw.line([(120, timeline_y), (1080, timeline_y)],
@@ -227,24 +205,42 @@ def render_deadline_spine(
             today["desc"], font=f_m_desc, fill=WHITE,
         )
 
-    # === DETAIL BLOCK (580-820): pull-quote callout + supporting copy + URL ===
+    # === BIG QUESTION below the timeline (the click hook) ===
 
-    # Bold CTA-style callout — larger, fills the bottom area
-    f_q = ImageFont.truetype(FONT_BOLD, 36)
-    detail_y = 620
-    draw_centered(draw, "Pick your county. Type your numbers.",
-                  f_q, detail_y, WHITE, W)
-    draw_centered(draw, "The calculator lights up your path.",
-                  f_q, detail_y + 50, WHITE, W)
+    q_text = question if question else "Should you protest your 2026 property tax?"
+    f_q = ImageFont.truetype(FONT_BOLD, 70)
+    q_max_w = int(W * 0.86)
 
-    # Sub-CTA — gold accent line
-    f_cta = ImageFont.truetype(FONT_BOLD, 24)
-    draw_centered(draw, "Free · 30 seconds · No login",
-                  f_cta, detail_y + 120, GOLD_LIGHT, W)
+    # Wrap to fit
+    q_words = q_text.split()
+    q_lines = []
+    cur = q_words[0]
+    for w in q_words[1:]:
+        test = cur + " " + w
+        bb = draw.textbbox((0, 0), test, font=f_q)
+        if bb[2] - bb[0] <= q_max_w:
+            cur = test
+        else:
+            q_lines.append(cur)
+            cur = w
+    q_lines.append(cur)
 
-    # URL link
-    f_url = ImageFont.truetype(FONT_REG, 18)
-    draw_centered(draw, footer, f_url, detail_y + 158, WHITE_DIM, W)
+    # Center vertically in the bottom area (y=440-880)
+    line_h = 84
+    total_h = len(q_lines) * line_h
+    q_y = 440 + (440 - total_h) // 2
+    for line in q_lines[:3]:
+        draw_centered(draw, line, f_q, q_y, WHITE, W)
+        q_y += line_h
+
+    # Small gold accent rule + sub-CTA below the question
+    rule_w = 120
+    rule_y = q_y + 6
+    draw.rectangle([((W - rule_w) // 2, rule_y),
+                    ((W + rule_w) // 2, rule_y + 4)], fill=GOLD)
+    f_sub = ImageFont.truetype(FONT_BOLD, 22)
+    draw_centered(draw, "Free calculator · 30 seconds",
+                  f_sub, rule_y + 22, GOLD_LIGHT, W)
 
     # (No footer band — wordmark up top carries identity. Cleaner image.)
 
@@ -262,7 +258,8 @@ def main():
     p.add_argument("--hero-number", required=True)
     p.add_argument("--hero-unit", default="days")
     p.add_argument("--milestones", required=True)
-    p.add_argument("--footer", required=True)
+    p.add_argument("--footer", default="")
+    p.add_argument("--question", default="")
     p.add_argument("--canvas-width", type=int, default=1200)
     p.add_argument("--canvas-height", type=int, default=900)
     args = p.parse_args()
@@ -275,6 +272,7 @@ def main():
             hero_unit=args.hero_unit,
             milestones=parse_milestones(args.milestones),
             footer=args.footer,
+            question=args.question,
             canvas_width=args.canvas_width,
             canvas_height=args.canvas_height,
         )

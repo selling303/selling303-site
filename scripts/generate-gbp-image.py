@@ -106,15 +106,16 @@ def generate_hero_card(
     f_brand = ImageFont.truetype(FONT_BOLD, 24)
     draw.text((40, 28), "selling303.com", font=f_brand, fill=WHITE)
 
-    # 3. Hero number — auto-fit, scaled for 4:3
-    font_size = 380
-    while font_size > 180:
+    # 3. Hero number — auto-fit, scaled for 4:3 (slightly smaller to leave more
+    #    room for a bigger headline that does real work)
+    font_size = 340
+    while font_size > 160:
         f_hero = ImageFont.truetype(FONT_HEAVY, font_size)
         bbox = draw.textbbox((0, 0), hero_number, font=f_hero)
-        if bbox[2] - bbox[0] <= int(W * 0.85):
+        if bbox[2] - bbox[0] <= int(W * 0.80):
             break
         font_size -= 20
-    hero_y = 130
+    hero_y = 100
     bbox = draw.textbbox((0, 0), hero_number, font=f_hero)
     hero_w = bbox[2] - bbox[0]
     hero_h = bbox[3] - bbox[1]
@@ -122,8 +123,8 @@ def generate_hero_card(
     draw.text((hero_x, hero_y - bbox[1]), hero_number, font=f_hero, fill=hero_color)
 
     # 4. Hero label
-    f_label = ImageFont.truetype(FONT_BOLD, 30)
-    label_y = hero_y + hero_h + 14
+    f_label = ImageFont.truetype(FONT_BOLD, 28)
+    label_y = hero_y + hero_h + 12
     spaced = " ".join(hero_label.split()).upper()
     total_w = 0
     for ch in spaced:
@@ -137,28 +138,28 @@ def generate_hero_card(
         cx += (bb[2] - bb[0]) + 4
 
     # 5. Gold accent line
-    rule_y = label_y + 50
-    rule_w = 180
+    rule_y = label_y + 46
+    rule_w = 160
     draw.rectangle([((W - rule_w) // 2, rule_y),
                     ((W + rule_w) // 2, rule_y + 4)], fill=hero_color)
 
-    # 6. Headline
-    f_head = ImageFont.truetype(FONT_BOLD, 44)
-    head_max_w = int(W * 0.86)
+    # 6. Headline — much bigger so the question carries real weight (was 44px,
+    #    now 60px — the number grabs attention but the question earns the click)
+    f_head = ImageFont.truetype(FONT_BOLD, 60)
+    head_max_w = int(W * 0.88)
     lines = wrap_text_to_width(draw, headline, f_head, head_max_w)
-    head_y = rule_y + 28
-    line_height = 56
+    head_y = rule_y + 32
+    line_height = 74
     for line in lines:
         draw_centered_text(draw, line, f_head, head_y, WHITE, W)
         head_y += line_height
 
-    # 7. Subline (optional supporting copy below headline — fills the bottom area
-    #    and adds CTA value)
+    # 7. Subline (optional supporting copy)
     if subline:
         f_sub = ImageFont.truetype(FONT_BOLD, 24)
         sub_max_w = int(W * 0.84)
         sub_lines = wrap_text_to_width(draw, subline, f_sub, sub_max_w)
-        sub_y = head_y + 18
+        sub_y = head_y + 14
         for line in sub_lines:
             draw_centered_text(draw, line, f_sub, sub_y, GOLD_LIGHT, W)
             sub_y += 32
