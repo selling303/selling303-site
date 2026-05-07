@@ -103,43 +103,11 @@ def render_phone_mockup(
     draw.text((40, 28), "selling303.com", font=f_brand, fill=WHITE)
     draw.ellipse([(216, 38), (228, 50)], fill=GOLD)
 
-    # === BIG HEADLINE — top-centered, dominant element for thumbnail ===
-    f_head = ImageFont.truetype(FONT_BOLD, 78)
-    head_max_w = int(W * 0.88)
-    words = above_phone.split()
-    head_lines = []
-    cur = words[0]
-    for w in words[1:]:
-        test = cur + " " + w
-        bb = draw.textbbox((0, 0), test, font=f_head)
-        if bb[2] - bb[0] <= head_max_w:
-            cur = test
-        else:
-            head_lines.append(cur)
-            cur = w
-    head_lines.append(cur)
-    head_y = 90
-    for line in head_lines[:3]:
-        draw_centered(draw, line, f_head, head_y, WHITE, W)
-        head_y += 92
-    head_bottom_y = head_y
-
-    # Gold rule under headline
-    rule_w = 140
-    rule_y = head_bottom_y + 12
-    draw.rectangle([((W - rule_w) // 2, rule_y),
-                    ((W + rule_w) // 2, rule_y + 4)], fill=GOLD)
-
-    # Sub-CTA below the rule
-    f_sub_cta = ImageFont.truetype(FONT_BOLD, 26)
-    draw_centered(draw, "Free interactive calculator · 30 seconds",
-                  f_sub_cta, rule_y + 22, GOLD_LIGHT, W)
-
-    # === PHONE FRAME — smaller, centered below the headline ===
-    phone_w, phone_h = 320, 380
-    phone_x = (W - phone_w) // 2
-    phone_y = rule_y + 70
-    phone_radius = 36
+    # === PHONE FRAME — left, narrow & tall (real iPhone-ish aspect ~9:20) ===
+    phone_w, phone_h = 340, 720
+    phone_x = 80
+    phone_y = 100
+    phone_radius = 42
 
     # Drop shadow under the phone
     shadow = shadow_layer((W, H), phone_x + 18, phone_y + 28,
@@ -252,7 +220,7 @@ def render_phone_mockup(
         draw.text((wx + 18, ty), line, font=f_title, fill=WHITE)
         ty += 26
 
-    # Body — simplified preview (3 county chips + a tap-CTA, fits the small phone)
+    # Body — county chips
     body_y = wy + header_h + 16
     f_lbl = ImageFont.truetype(FONT_BOLD, 10)
     draw.text((wx + 14, body_y), "PICK YOUR COUNTY", font=f_lbl, fill=GREEN)
@@ -268,56 +236,113 @@ def render_phone_mockup(
         draw.text((chip_x + 8, chip_y + 7), c, font=f_chip, fill=NAVY)
         chip_x += cw + 6
 
-    # Big tap CTA — centered, fills remaining screen vertically
-    cta_y = chip_y + 50
-    cta_h = 60
-    cta_w = ww - 28
-    cta_x = wx + 14
-    rounded_rect(draw, [(cta_x, cta_y), (cta_x + cta_w, cta_y + cta_h)], 8,
-                 fill=NAVY, outline=GOLD, width=2)
-    f_cta = ImageFont.truetype(FONT_BOLD, 18)
-    cta_text = "Run the numbers →"
-    bb = draw.textbbox((0, 0), cta_text, font=f_cta)
-    draw.text((cta_x + (cta_w - (bb[2] - bb[0])) // 2,
-               cta_y + (cta_h - (bb[3] - bb[1])) // 2 - 2),
-              cta_text, font=f_cta, fill=GOLD_LIGHT)
+    # Two input fields side-by-side
+    in_y = chip_y + 46
+    in_h = 44
+    in_w = (ww - 28 - 8) // 2
+    for i, (lbl, val) in enumerate([
+        ("YOUR NOV VALUE", "$ 0"),
+        ("MARKET VALUE", "$ 0"),
+    ]):
+        ix = wx + 14 + i * (in_w + 8)
+        draw.text((ix, in_y), lbl, font=f_lbl, fill=GREEN)
+        rounded_rect(draw, [(ix, in_y + 18), (ix + in_w, in_y + 18 + in_h)],
+                     5, fill=WHITE, outline=GRAY_BORDER, width=1)
+        f_v = ImageFont.truetype(FONT_BOLD, 18)
+        draw.text((ix + 10, in_y + 30), val, font=f_v, fill=NAVY)
 
-    # Skip the legacy body sections by short-circuiting (deceptively named to
-    # preserve the path-cards code below being skipped — uses an early-return
-    # pattern in the simplified phone preview)
-    if True:
-        # === Right side: anchor for footer alignment, then continue to footer ===
-        cards_section_y = cta_y + cta_h + 9999  # off-canvas; legacy code below is dead
+    # Gap readout
+    gap_y = in_y + 18 + in_h + 14
+    gap_h = 46
+    rounded_rect(draw, [(wx + 14, gap_y), (wx + ww - 14, gap_y + gap_h)],
+                 5, fill=WHITE, outline=GRAY_BORDER, width=1)
+    f_gap_lbl = ImageFont.truetype(FONT_BOLD, 9)
+    draw.text((wx + 24, gap_y + 8), "GAP", font=f_gap_lbl, fill=TEXT_GRAY)
+    f_gap_msg = ImageFont.truetype(FONT_REG, 10)
+    draw.text((wx + 24, gap_y + 22),
+              "Enter values to see gap.",
+              font=f_gap_msg, fill=TEXT_GRAY)
+    f_gap_pct = ImageFont.truetype(FONT_HEAVY, 22)
+    draw.text((wx + ww - 70, gap_y + 12), "— %",
+              font=f_gap_pct, fill=(153, 173, 184))
 
-    # 3 path cards stacked vertically (more readable in narrow phone width)
-    cards_top = cards_section_y + 22
-    card_h = 70
-    card_gap = 8
+    # Section divider + path cards preview
+    cards_section_y = gap_y + gap_h + 16
+    f_sec = ImageFont.truetype(FONT_BOLD, 10)
+    draw.text((wx + 14, cards_section_y), "YOUR POTENTIAL PATH",
+              font=f_sec, fill=NAVY)
+
+    # 3 path cards stacked vertically
+    cards_top = cards_section_y + 18
+    card_h = 50
+    card_gap = 6
     paths = [
-        ("PATH 1", "Protest", "File by June 1", GREEN, GREEN_LIGHT),
-        ("PATH 2", "Skip", "No filing this cycle", (153, 173, 184), (244, 247, 249)),
-        ("PATH 3", "Abate", "File by July 20", NAVY, (244, 247, 249)),
+        ("PATH 1", "Protest", "By June 1", GREEN, GREEN_LIGHT),
+        ("PATH 2", "Skip", "No filing", (153, 173, 184), (244, 247, 249)),
+        ("PATH 3", "Abate", "By July 20", NAVY, (244, 247, 249)),
     ]
-    f_pc_label = ImageFont.truetype(FONT_BOLD, 10)
-    f_pc_name = ImageFont.truetype(FONT_BOLD, 18)
-    f_pc_chip = ImageFont.truetype(FONT_BOLD, 11)
+    f_pc_label = ImageFont.truetype(FONT_BOLD, 9)
+    f_pc_name = ImageFont.truetype(FONT_BOLD, 15)
+    f_pc_chip = ImageFont.truetype(FONT_BOLD, 10)
     for i, (label, name, chip, accent, chip_bg) in enumerate(paths):
         cy = cards_top + i * (card_h + card_gap)
-        rounded_rect(draw, [(wx + 18, cy), (wx + ww - 18, cy + card_h)], 8,
+        rounded_rect(draw, [(wx + 14, cy), (wx + ww - 14, cy + card_h)], 6,
                      fill=WHITE, outline=GRAY_BORDER, width=1)
         # Top accent stripe
-        draw.rectangle([(wx + 18, cy), (wx + ww - 18, cy + 4)], fill=accent)
+        draw.rectangle([(wx + 14, cy), (wx + ww - 14, cy + 3)], fill=accent)
         # Path label + name (left)
-        draw.text((wx + 30, cy + 14), label, font=f_pc_label, fill=accent)
-        draw.text((wx + 30, cy + 28), name, font=f_pc_name, fill=NAVY)
+        draw.text((wx + 22, cy + 9), label, font=f_pc_label, fill=accent)
+        draw.text((wx + 22, cy + 22), name, font=f_pc_name, fill=NAVY)
         # Chip (right)
         chip_bb = draw.textbbox((0, 0), chip, font=f_pc_chip)
-        cw = chip_bb[2] - chip_bb[0] + 18
-        cx = wx + ww - cw - 30
-        cy_chip = cy + (card_h - 24) // 2
-        rounded_rect(draw, [(cx, cy_chip), (cx + cw, cy_chip + 24)], 12,
+        cw = chip_bb[2] - chip_bb[0] + 14
+        cx = wx + ww - cw - 22
+        cy_chip = cy + (card_h - 20) // 2
+        rounded_rect(draw, [(cx, cy_chip), (cx + cw, cy_chip + 20)], 10,
                      fill=chip_bg, outline=accent, width=1)
-        draw.text((cx + 9, cy_chip + 6), chip, font=f_pc_chip, fill=NAVY)
+        draw.text((cx + 7, cy_chip + 5), chip, font=f_pc_chip, fill=NAVY)
+
+    # === Right column — big headline + supporting copy ===
+    rx = phone_x + phone_w + 60
+    rx_max = W - 60
+    rx_w = rx_max - rx
+
+    # Eyebrow tag
+    f_r_eye = ImageFont.truetype(FONT_BOLD, 18)
+    draw.text((rx, 130), "INTERACTIVE TOOL", font=f_r_eye, fill=GOLD)
+    draw.rectangle([(rx, 162), (rx + 50, 165)], fill=GOLD)
+
+    # Big headline (3 lines max, ~72px so 3 lines fit comfortably)
+    f_r_head = ImageFont.truetype(FONT_BOLD, 72)
+    head_lines = []
+    words = above_phone.split()
+    cur = words[0]
+    for w in words[1:]:
+        test = cur + " " + w
+        bb = draw.textbbox((0, 0), test, font=f_r_head)
+        if bb[2] - bb[0] <= rx_w:
+            cur = test
+        else:
+            head_lines.append(cur)
+            cur = w
+    head_lines.append(cur)
+    head_y = 200
+    for line in head_lines[:4]:
+        draw.text((rx, head_y), line, font=f_r_head, fill=WHITE)
+        head_y += 84
+
+    # Gold accent rule under headline
+    draw.rectangle([(rx, head_y + 16), (rx + 80, head_y + 20)], fill=GOLD)
+
+    # Subline + URL
+    f_r_sub = ImageFont.truetype(FONT_BOLD, 26)
+    draw.text((rx, head_y + 38), "Free calculator · 30 seconds",
+              font=f_r_sub, fill=GOLD_LIGHT)
+    f_r_url = ImageFont.truetype(FONT_REG, 18)
+    short_url = url.replace("https://", "").replace("http://", "")
+    if len(short_url) > 56:
+        short_url = short_url[:54] + "…"
+    draw.text((rx, head_y + 84), short_url, font=f_r_url, fill=WHITE_DIM)
 
     # === Footer band ===
     footer_h = 70
