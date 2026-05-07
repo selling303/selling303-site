@@ -119,8 +119,39 @@ def render_deadline_spine(
     f_brand = ImageFont.truetype(FONT_BOLD, 24)
     draw.text((40, 28), "selling303.com", font=f_brand, fill=WHITE)
 
-    # === TIMELINE (moved up — anchor in upper third) ===
-    timeline_y = 240
+    # === Compute vertically centered stack ===
+    # Pre-measure question wrapping so we can size everything together
+    q_text = question if question else "Should you protest your 2026 property tax?"
+    f_q = ImageFont.truetype(FONT_BOLD, 84)
+    q_max_w = int(W * 0.86)
+    q_words = q_text.split()
+    q_lines = []
+    cur = q_words[0]
+    for w in q_words[1:]:
+        test = cur + " " + w
+        bb = draw.textbbox((0, 0), test, font=f_q)
+        if bb[2] - bb[0] <= q_max_w:
+            cur = test
+        else:
+            q_lines.append(cur)
+            cur = w
+    q_lines.append(cur)
+    q_lines = q_lines[:3]
+    line_h = 100
+
+    # Stack components (top→bottom):
+    #   timeline labels above (~24)  +  gap (12)  +  dot row (~24)  +
+    #   gap (12)  +  timeline labels below (~24)  +  gap (75)  +
+    #   question (N × 100)  +  gap (12)  +  rule (4)  +  gap (28)  +  sub (24)
+    timeline_block_h = 24 + 12 + 24 + 12 + 24
+    gap_timeline_question = 75
+    q_block_h = len(q_lines) * line_h
+    sub_block_h = 12 + 4 + 28 + 24
+    stack_h = timeline_block_h + gap_timeline_question + q_block_h + sub_block_h
+
+    stack_top = (H - stack_h) // 2
+    # Timeline dot row sits ~60px below stack_top (after labels-above)
+    timeline_y = stack_top + 60
 
     # Track baseline (gray)
     draw.line([(120, timeline_y), (1080, timeline_y)],
@@ -206,42 +237,21 @@ def render_deadline_spine(
         )
 
     # === BIG QUESTION below the timeline (the click hook) ===
-
-    q_text = question if question else "Should you protest your 2026 property tax?"
-    f_q = ImageFont.truetype(FONT_BOLD, 84)  # match Option 2 size
-    q_max_w = int(W * 0.86)
-
-    # Wrap to fit
-    q_words = q_text.split()
-    q_lines = []
-    cur = q_words[0]
-    for w in q_words[1:]:
-        test = cur + " " + w
-        bb = draw.textbbox((0, 0), test, font=f_q)
-        if bb[2] - bb[0] <= q_max_w:
-            cur = test
-        else:
-            q_lines.append(cur)
-            cur = w
-    q_lines.append(cur)
-
-    # Sub-CTA setup (so we can compute total stack)
+    # Position computed from the stack-centered timeline_y above.
+    # Question starts after timeline labels-below + gap.
     f_sub = ImageFont.truetype(FONT_BOLD, 24)
-    line_h = 100  # 84px font + breathing room
-    total_h = len(q_lines) * line_h + 50  # + sub block
-    # Vertically center the question stack inside (450..880)
-    q_y = 460 + (440 - total_h) // 2
-    for line in q_lines[:3]:
+    q_y = timeline_y + 56 + gap_timeline_question  # 56 = labels-below offset
+    for line in q_lines:
         draw_centered(draw, line, f_q, q_y, WHITE, W)
         q_y += line_h
 
     # Small gold accent rule + sub-CTA below the question
     rule_w = 120
-    rule_y = q_y + 8
+    rule_y = q_y + 12
     draw.rectangle([((W - rule_w) // 2, rule_y),
                     ((W + rule_w) // 2, rule_y + 4)], fill=GOLD)
     draw_centered(draw, "Free calculator · 30 seconds",
-                  f_sub, rule_y + 24, GOLD_LIGHT, W)
+                  f_sub, rule_y + 28, GOLD_LIGHT, W)
 
     # (No footer band — wordmark up top carries identity. Cleaner image.)
 
