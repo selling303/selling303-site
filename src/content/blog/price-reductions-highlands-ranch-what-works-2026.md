@@ -4,7 +4,7 @@ headline: "Why Generic 5% Price Cuts Don't Save Stalled Highlands Ranch Listings
 description: "April 2026 Highlands Ranch MLS data shows half of closed homes sold in a median 3 days at full price, while expired listings sat 87 days — many after taking 5–8% cuts that didn't work. Here's the recalibration that does."
 date: "May 7, 2026"
 dateModified: "May 7, 2026"
-category: "What Went Wrong"
+category: "Problems & Mistakes"
 tag: "Selling"
 readTime: "9 min read"
 heroLabel: "Selling"
@@ -110,51 +110,35 @@ relatedPosts:
 <text x="20" y="34" font-size="17" font-weight="700" fill="#002a3a">How Highlands Ranch Listings Clear by Sale Outcome</text>
 <text x="20" y="56" font-size="12" fill="#81848a">Median days in MLS by close-price-to-original-list bucket | April 2026 | n = 150 listings</text>
 <line x1="20" y1="72" x2="780" y2="72" stroke="#e5e5e5" stroke-width="1"/>
-<g transform="translate(280, 92)" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="name" content="Sold at or above 100% of original list price" />
-<meta itemprop="value" content="3" />
-<meta itemprop="unitText" content="DAY" />
+<g transform="translate(280, 92)">
 <text x="-12" y="22" text-anchor="end" font-size="14" font-weight="600" fill="#002a3a">Sold ≥100% of original</text>
 <text x="-12" y="40" text-anchor="end" font-size="11" fill="#81848a">n = 65 closed</text>
-<rect x="0" y="6" width="12" height="42" fill="#4a7c59" rx="3"/>
-<text x="26" y="34" font-size="18" font-weight="700" fill="#002a3a">3 days</text>
+<rect x="0" y="6" width="8" height="42" fill="#4a7c59" rx="3"/>
+<text x="22" y="34" font-size="18" font-weight="700" fill="#002a3a">3 days</text>
 </g>
-<g transform="translate(280, 162)" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="name" content="Sold at 95-99% of original list price" />
-<meta itemprop="value" content="21" />
-<meta itemprop="unitText" content="DAY" />
+<g transform="translate(280, 162)">
 <text x="-12" y="22" text-anchor="end" font-size="14" font-weight="600" fill="#002a3a">Sold 95–99% of original</text>
 <text x="-12" y="40" text-anchor="end" font-size="11" fill="#81848a">n = 44 closed (small concession)</text>
-<rect x="0" y="6" width="60" height="42" fill="#8a7a3a" rx="3"/>
-<text x="74" y="34" font-size="18" font-weight="700" fill="#002a3a">21 days</text>
+<rect x="0" y="6" width="54" height="42" fill="#8a7a3a" rx="3"/>
+<text x="68" y="34" font-size="18" font-weight="700" fill="#002a3a">21 days</text>
 </g>
-<g transform="translate(280, 232)" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="name" content="Sold at 90-94% of original list price" />
-<meta itemprop="value" content="70" />
-<meta itemprop="unitText" content="DAY" />
+<g transform="translate(280, 232)">
 <text x="-12" y="22" text-anchor="end" font-size="14" font-weight="600" fill="#002a3a">Sold 90–94% of original</text>
 <text x="-12" y="40" text-anchor="end" font-size="11" fill="#81848a">n = 9 closed (notable cut)</text>
-<rect x="0" y="6" width="192" height="42" fill="#9e6b3a" rx="3"/>
-<text x="206" y="34" font-size="18" font-weight="700" fill="#002a3a">70 days</text>
+<rect x="0" y="6" width="179" height="42" fill="#9e6b3a" rx="3"/>
+<text x="193" y="34" font-size="18" font-weight="700" fill="#002a3a">70 days</text>
 </g>
-<g transform="translate(280, 302)" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="name" content="Sold below 90% of original list price" />
-<meta itemprop="value" content="164" />
-<meta itemprop="unitText" content="DAY" />
+<g transform="translate(280, 302)">
 <text x="-12" y="22" text-anchor="end" font-size="14" font-weight="600" fill="#002a3a">Sold &lt;90% of original</text>
 <text x="-12" y="40" text-anchor="end" font-size="11" fill="#81848a">n = 10 closed (deep cut)</text>
-<rect x="0" y="6" width="450" height="42" fill="#8b3a3a" rx="3"/>
-<text x="464" y="34" font-size="18" font-weight="700" fill="#002a3a">164 days</text>
-
+<rect x="0" y="6" width="420" height="42" fill="#8b3a3a" rx="3"/>
+<text x="434" y="34" font-size="18" font-weight="700" fill="#002a3a">164 days</text>
 </g>
-<g transform="translate(280, 372)" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="name" content="Expired without selling" />
-<meta itemprop="value" content="87" />
-<meta itemprop="unitText" content="DAY" />
+<g transform="translate(280, 372)">
 <text x="-12" y="22" text-anchor="end" font-size="14" font-weight="600" fill="#002a3a">Expired (no sale)</text>
 <text x="-12" y="40" text-anchor="end" font-size="11" fill="#81848a">n = 22 expired</text>
-<rect x="0" y="6" width="238" height="42" fill="#5a5a5a" rx="3"/>
-<text x="252" y="34" font-size="18" font-weight="700" fill="#002a3a">87 days</text>
+<rect x="0" y="6" width="223" height="42" fill="#5a5a5a" rx="3"/>
+<text x="237" y="34" font-size="18" font-weight="700" fill="#002a3a">87 days</text>
 </g>
 <line x1="20" y1="430" x2="780" y2="430" stroke="#e5e5e5" stroke-width="1"/>
 <text x="400" y="450" text-anchor="middle" font-size="10" fill="#a5a7a9">Source: REcolorado® MLS Market Analysis Summary | Highlands Ranch, Colorado | April 1–30, 2026 | n = 150 single-family residential listings | selling303.com</text>
