@@ -316,12 +316,12 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: single-metric-bar-chart (median DIM by close-to-original-list bucket, April 2026 HR n=150 — chosen over original svg-chart spec via Compelling Question Flow; same SVG family but bucketed by outcome instead of price-cut velocity, which made the bimodal "quick or stuck" market shape land in 5 seconds)
 
 #### Day 4 — Friday, May 8
-- [ ] **"The Greenwood Village Empty-Nester Move: When the Right-Sizing Math Actually Pencils"**
+- [x] **"The Greenwood Village Empty-Nester Move: When the Right-Sizing Math Actually Pencils"** *(drafted 2026-05-07)*
   - Specialization: `/move-up-sellers` | Geographic: `/greenwood-village`
   - Type: Seller advice | Funnel: MOFU
   - Angle: Greenwood Village empty-nesters often have $1.5M–$3M of equity locked in a 5,000+ sqft home they barely use. The math on right-sizing — capital gains exposure, replacement housing options inside vs. outside the Cherry Creek schools area, carrying-cost differential, equity redeployment scenarios.
   - Target keywords: Greenwood Village empty nester, downsize Greenwood Village home, sell GV home move-up, Cherry Creek schools downsize
-  - Visual: cost-breakdown (flag-only — Phase 3 builder dependency)
+  - Visual: two-path-diptych (Stay in Cherry Creek schools area vs. Move down-market — chosen over original cost-breakdown spec via Compelling Question Flow because the post's narrative is fundamentally a binary fork on redeployable equity, and the cost-breakdown pattern is still flag-only Phase 3)
 
 #### Day 5 — Saturday, May 9
 - [ ] **"Moving to Littleton, Colorado: A Relocation Guide for 2026"**
