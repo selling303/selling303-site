@@ -4,7 +4,7 @@ headline: "The Greenwood Village Empty-Nester Move: When the Right-Sizing Math A
 description: "Greenwood Village empty-nesters often sit on $2M+ of equity. The 2026 right-sizing math — capital gains, replacement housing, and redeployable equity."
 date: "May 8, 2026"
 dateModified: "May 8, 2026"
-category: "Selling"
+category: "Costs & Pricing"
 tag: "Selling"
 readTime: "11 min read"
 heroLabel: "Selling"
