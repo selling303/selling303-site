@@ -324,12 +324,12 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: two-path-diptych (Stay in Cherry Creek schools area vs. Move down-market — chosen over original cost-breakdown spec via Compelling Question Flow because the post's narrative is fundamentally a binary fork on redeployable equity, and the cost-breakdown pattern is still flag-only Phase 3)
 
 #### Day 5 — Saturday, May 9
-- [ ] **"Moving to Littleton, Colorado: A Relocation Guide for 2026"**
+- [x] **"Moving to Littleton, Colorado: A Relocation Guide for 2026"** *(drafted 2026-05-08)*
   - Specialization: `/relocation` | Geographic: `/littleton`
   - Type: Local area topic | Funnel: TOFU
   - Angle: Comprehensive Littleton relocation guide. The 3-county quirk (Arapahoe/Jefferson/Douglas mailing-address overlap), historic downtown vs. master-planned-community options, commute realities to DTC and downtown Denver, school district lines, water restriction zones, and price-tier breakdowns.
   - Target keywords: moving to Littleton Colorado, Littleton CO relocation guide, relocating to Littleton, Littleton Colorado families
-  - Visual: none
+  - Visual: comparison-table (3 county segments — Arapahoe, Jefferson, Douglas — × 5 metrics: school district, water provider, sample neighborhoods, April 2026 SFR price band, typical relocation buyer; chosen via Compelling Question Flow over the original "none" spec because the 3-county quirk IS the post's spine and apples-to-apples scanning is what relocation buyers actually need)
 
 #### Day 6 — Sunday, May 10
 - [ ] **"The Englewood Photography Audit: Why Visual Presentation Sinks More Listings Than Pricing"**
