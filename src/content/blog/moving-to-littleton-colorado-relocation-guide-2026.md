@@ -114,8 +114,15 @@ relatedPosts:
 
 <!-- Visual styling provided by /css/aeo-visuals.css (loaded via BaseLayout). Class: .aeo-persona-grid -->
 
-<figure class="aeo-persona-grid" aria-labelledby="counties-compared" role="figure">
-<div class="persona-grid">
+<figure class="aeo-persona-grid" aria-labelledby="counties-compared-banner" role="figure" style="border: 1px solid #d6e0e6; border-radius: 8px; overflow: hidden; background: #fff; margin: 1.5rem 0 2rem;">
+
+<div id="counties-compared-banner" style="background: #002a3a; color: #fff; padding: 1.5rem 1.5rem 1.25rem; text-align: center;">
+<div style="font-size: 0.72rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.5rem;">For Out-of-State Buyers — Littleton, Colorado</div>
+<div style="font-size: 1.35rem; font-weight: 700; line-height: 1.3; max-width: 620px; margin: 0 auto;">Which Littleton county actually fits you?</div>
+<div style="font-size: 0.9rem; opacity: 0.85; margin-top: 0.5rem; color: #c8965a;">Three segments, three buyer profiles ↓</div>
+</div>
+
+<div class="persona-grid" style="padding: 1.25rem;">
 
 <div class="persona-card" style="--persona-accent: #002a3a;" itemscope itemtype="https://schema.org/Place">
 <svg viewBox="0 0 60 60" aria-hidden="true">
@@ -183,7 +190,7 @@ relatedPosts:
 </div>
 
 </div>
-<figcaption><strong>Source:</strong> REcolorado MLS, April 1–30, 2026 | Littleton mailing-address area | n = 292 closed residential transactions plus 379 active single-family and 246 active attached listings | selling303.com<br /><em>Price bands describe typical median-to-mid-tier inventory by county segment, not absolute min/max. Confirm county, school district, and water provider by exact address before writing an offer — boundaries shift periodically.</em></figcaption>
+<figcaption style="background: #f8f9fa; border-top: 1px solid #d6e0e6; padding: 0.85rem 1.25rem; margin: 0; font-size: 0.82rem; color: #555; line-height: 1.5;"><strong>Source:</strong> REcolorado MLS, April 1–30, 2026 | Littleton mailing-address area | n = 292 closed residential transactions plus 379 active single-family and 246 active attached listings | selling303.com<br /><em style="color: #777;">Price bands describe typical median-to-mid-tier inventory by county segment, not absolute min/max. Confirm county, school district, and water provider by exact address before writing an offer — boundaries shift periodically.</em></figcaption>
 </figure>
 
 <p>Each card is a starting point, not a verdict. The Arapahoe County segment is the Littleton most out-of-state buyers initially picture: walkable downtown grid, mature trees, original 1950s and 1960s ranch homes, plus mid-century and modern infill. The Jefferson County segment is foothills-adjacent, recreation-heavy, and typically larger-lot. The Douglas County segment is the newest housing stock, with significant new-construction inventory in Sterling Ranch and Indigo, and access to the Roxborough State Park geology.</p>
