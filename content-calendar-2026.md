@@ -308,36 +308,36 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: comparison-table (RidgeGate vs. Heritage Hills × 6 metrics)
 
 #### Day 3 — Thursday, May 7
-- [ ] **"Why Pricing Reductions in Highlands Ranch Don't Always Work — and What Does"**
+- [x] **"Why Pricing Reductions in Highlands Ranch Don't Always Work — and What Does"** *(drafted 2026-05-06)*
   - Specialization: `/expired-listings` | Geographic: `/highlands-ranch`
   - Type: Seller advice | Funnel: BOFU
   - Angle: Data-driven look at price-cut velocity in Highlands Ranch — how fast a reduction needs to happen, how big it needs to be relative to DOM, and why generic 5% cuts often don't recover a stalled listing. Uses April 2026 expired-vs-closed pricing patterns.
   - Target keywords: price reduction Highlands Ranch, Highlands Ranch listing not selling, when to reduce price Denver, Highlands Ranch expired listing recovery
-  - Visual: svg-chart (price-cut velocity vs. DOM, expired vs. closed listings)
+  - Visual: single-metric-bar-chart (median DIM by close-to-original-list bucket, April 2026 HR n=150 — chosen over original svg-chart spec via Compelling Question Flow; same SVG family but bucketed by outcome instead of price-cut velocity, which made the bimodal "quick or stuck" market shape land in 5 seconds)
 
 #### Day 4 — Friday, May 8
-- [ ] **"The Greenwood Village Empty-Nester Move: When the Right-Sizing Math Actually Pencils"**
+- [x] **"The Greenwood Village Empty-Nester Move: When the Right-Sizing Math Actually Pencils"** *(drafted 2026-05-07)*
   - Specialization: `/move-up-sellers` | Geographic: `/greenwood-village`
   - Type: Seller advice | Funnel: MOFU
   - Angle: Greenwood Village empty-nesters often have $1.5M–$3M of equity locked in a 5,000+ sqft home they barely use. The math on right-sizing — capital gains exposure, replacement housing options inside vs. outside the Cherry Creek schools area, carrying-cost differential, equity redeployment scenarios.
   - Target keywords: Greenwood Village empty nester, downsize Greenwood Village home, sell GV home move-up, Cherry Creek schools downsize
-  - Visual: cost-breakdown (flag-only — Phase 3 builder dependency)
+  - Visual: profile-card-grid (4 empty-nester personas — Network-Anchored / Lock-and-Leave Traveler / Asset-Maximizer / Family-Adjacent — each matched to a best-fit replacement path with redeployable-equity outcome; chosen on rebuild after Jacob review found the diptych premise weak. Two-path-diptych retired; profile-card-grid pays off the post's actual MOFU job — help GV empty-nesters self-recognize and pick a path. cost-breakdown pattern still flag-only Phase 3)
 
 #### Day 5 — Saturday, May 9
-- [ ] **"Moving to Littleton, Colorado: A Relocation Guide for 2026"**
+- [x] **"Moving to Littleton, Colorado: A Relocation Guide for 2026"** *(drafted 2026-05-08)*
   - Specialization: `/relocation` | Geographic: `/littleton`
   - Type: Local area topic | Funnel: TOFU
   - Angle: Comprehensive Littleton relocation guide. The 3-county quirk (Arapahoe/Jefferson/Douglas mailing-address overlap), historic downtown vs. master-planned-community options, commute realities to DTC and downtown Denver, school district lines, water restriction zones, and price-tier breakdowns.
   - Target keywords: moving to Littleton Colorado, Littleton CO relocation guide, relocating to Littleton, Littleton Colorado families
-  - Visual: none
+  - Visual: profile-card-grid (3 county cards — Arapahoe Historic Core / Jefferson West Foothills / Douglas South-New Build, each with custom SVG icon, sub-label, county name, price chip, and best-for one-liner; rebuilt 2026-05-08 from initial comparison-table after Visual Dignity Gate failure on mobile — comparison-table cells carried too much prose to reflow cleanly, profile-card-grid stacks 1-up on mobile and 3-up on desktop with no horizontal squeeze)
 
 #### Day 6 — Sunday, May 10
-- [ ] **"The Englewood Photography Audit: Why Visual Presentation Sinks More Listings Than Pricing"**
+- [x] **"Englewood Listing Photos: When to Reshoot Before Relisting"** *(drafted 2026-05-09)* *(title shortened from "The Englewood Photography Audit: Why Visual Presentation Sinks More Listings Than Pricing" for SERP CTR; original preserved in `headline` frontmatter field)*
   - Specialization: `/expired-listings` | Geographic: `/englewood`
   - Type: Seller advice | Funnel: BOFU
   - Angle: Tier-list framework for evaluating listing photography quality. Why mid-tier Englewood listings ($500K–$800K) particularly suffer from amateur or rushed photo shoots, the impact on click-through rates and DOM, and the photo-quality benchmarks that separate sold from stale.
   - Target keywords: Englewood listing photos, listing photography Denver, why my house isn't getting showings, real estate photography Englewood
-  - Visual: tier-list (flag-only — Phase 3 builder dependency)
+  - Visual: decision-path (4-question photo audit routing each answer to "Reshoot" or "Photos likely fine" with Decision Rule tally footer — chosen via Compelling Question Flow over original tier-list spec because tier-list is still flag-only Phase 3 AND because BOFU advice posts pay off harder when the visual gives the reader an actionable output, not just a rubric. Library pattern post-RidgeGate, not stretch.)
 
 #### Day 7 — Monday, May 11
 - [ ] **"Condo vs. Single-Family Residence in Littleton's Spring Market: Which Makes Sense for First-Time Buyers?"**

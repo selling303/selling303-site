@@ -22,6 +22,8 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - South Denver Market Update: What April 2026 Means for Sellers Sitting on Expired Listings (`/blog/south-denver-market-update-april-2026-expired-listings-centennial`)
 - Why Your Centennial Home Isn't Getting Offers — and How to Fix It Before Summer (`/blog/why-centennial-home-not-getting-offers`)
 - The Expired Listing Trap: Why Switching Agents Alone Won't Sell Your Englewood Home (`/blog/expired-listing-trap-englewood-switching-agents-2026`)
+- Why Pricing Reductions in Highlands Ranch Don't Always Work — and What Does (`/blog/price-reductions-highlands-ranch-what-works-2026`)
+- Englewood Listing Photos: When to Reshoot Before Relisting (`/blog/englewood-listing-photo-audit-photography-2026`)
 
 ### 2. Move-Up Sellers (`/move-up-sellers`)
 **Primary geographic ties:** Highlands Ranch, Centennial, Parker (highest move-up activity — families upgrading within the metro)
@@ -37,6 +39,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - Move-Up Seller Myth: Why "Waiting for the Market" Is Costing You Money in Lakewood (`/blog/move-up-seller-myth-waiting-market-better-lakewood-2026`)
 - South Denver April 2026 Closings: What Move-Up Sellers Need to Know Heading Into May (`/blog/south-denver-april-2026-closings-move-up-sellers`)
 - South Denver Homeowner's 2026 Notice of Valuation Protest Playbook (`/blog/2026-notice-of-valuation-protest-playbook-south-denver`)
+- The Greenwood Village Empty-Nester Move: When the Right-Sizing Math Actually Pencils (`/blog/greenwood-village-empty-nester-right-sizing-math-2026`)
 
 ### 3. First-Time Homebuyers (`/first-time-homebuyers`)
 **Primary geographic ties:** Littleton, Englewood, Centennial (most affordable entry points in the metro)
@@ -67,6 +70,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - Relocating to Parker, Colorado: What Families Moving from Out of State Need to Know (`/blog/moving-to-parker-colorado-relocation-guide-2026`)
 - What Out-of-State Buyers Get Wrong About the Denver Suburbs (`/blog/out-of-state-buyer-mistakes-denver-suburbs-centennial`)
 - Is Greenwood Village Worth the Price Tag? A Relocation Buyer's Honest Assessment (`/blog/greenwood-village-worth-the-price-tag-relocation-2026`)
+- Moving to Littleton, Colorado: A Relocation Guide for 2026 (`/blog/moving-to-littleton-colorado-relocation-guide-2026`)
 
 ### 6. New Construction (`/new-construction`)
 **Primary geographic ties:** Parker, Castle Pines, Highlands Ranch, Lone Tree (active builder communities)
