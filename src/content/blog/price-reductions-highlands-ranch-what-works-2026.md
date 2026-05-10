@@ -1,7 +1,7 @@
 ---
-title: "Why Pricing Reductions in Highlands Ranch Don't Always Work — and What Does"
-headline: "Why Generic 5% Price Cuts Don't Save Stalled Highlands Ranch Listings — and What Does"
-description: "April 2026 Highlands Ranch MLS data shows half of closed homes sold in a median 3 days at full price, while expired listings sat 87 days — many after taking 5–8% cuts that didn't work. Here's the recalibration that does."
+title: "When Highlands Ranch Price Cuts Don't Work — and What Does"
+headline: "Why Pricing Reductions in Highlands Ranch Don't Always Work — and What Does"
+description: "April 2026 Highlands Ranch MLS data: half of closed homes sold in a median 3 days; expired listings sat 87 days. Here's the recalibration that works."
 date: "May 7, 2026"
 dateModified: "May 7, 2026"
 category: "Problems & Mistakes"
@@ -43,7 +43,7 @@ relatedPosts:
 ---
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
-<strong>Why don't price reductions in Highlands Ranch always work?</strong> Because most are too small, too late, or pointed at the wrong problem. Half of Highlands Ranch April 2026 closed listings sold in a median 3 days at full price — the ones that expired sat 87 days, many after generic 5% cuts that never recovered them.
+<strong>Why don't Highlands Ranch price reductions always work?</strong> Most are too small, too late, or pointed at the wrong problem. Half of April 2026 closings sold in a median 3 days; the listings that expired sat 87 days, often after generic 5% cuts.
 </div>
 
 <div style="background: #f0f4f0; border-left: 4px solid #4a7c59; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
@@ -75,7 +75,7 @@ relatedPosts:
 
 <h2 id="april-data">What does April 2026 Highlands Ranch data actually show about price cuts and time on market?</h2>
 
-<p>The Highlands Ranch sales picture for April 2026 is unusually clean — and it tells the story sellers need to hear before they cut their price. REcolorado MLS recorded 131 closed single-family residential sales, 22 expired listings, and 4 withdrawn listings in Highlands Ranch during the period. Bucketed by close-price-to-original-list ratio, the data shows a market with a sharp split: priced right or stuck.</p>
+<p>The Highlands Ranch sales picture for April 2026 is unusually clean — and it tells the story sellers need to hear before they cut their price. <a href="https://www.recolorado.com" target="_blank" rel="noopener">REcolorado®</a> MLS recorded 131 closed single-family residential sales, 22 expired listings, and 4 withdrawn listings in Highlands Ranch during the period. Bucketed by close-price-to-original-list ratio, the data shows a market with a sharp split: priced right or stuck.</p>
 
 <script type="application/ld+json">
 {
@@ -208,4 +208,4 @@ relatedPosts:
 <p style="margin: 0;">Call Jacob Stark at <a href="tel:3039970634"><strong>303-997-0634</strong></a> or visit <a href="https://selling303.com">selling303.com</a> to schedule a 30-minute recalibration conversation. The first step is reading your showing data and feedback against current Highlands Ranch active inventory — not guessing at a percentage.</p>
 </blockquote>
 
-<p style="font-size: 0.85rem; color: #81848a; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e5e5e5;"><em>Data attribution: Highlands Ranch April 2026 closed, expired, and withdrawn listings sourced from REcolorado® MLS Market Analysis Summary, residential listings April 1–30, 2026, City equals Highlands Ranch, deduplicated for IRES cross-listings (n = 157 total: 131 closed, 22 expired, 4 withdrawn). Days in MLS (DIM) and close-price-to-original-list ratio (CP/OLP) computed per listing. Bucketing and median calculations performed by selling303.com. April 2026 metro context from Denver Metro Association of Realtors®, DMAR Market Trends Report, April 2026 Data — median Denver Metro close price $605,000, active listings 11,539, closed sales 3,926.</em></p>
+<p style="font-size: 0.85rem; color: #81848a; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e5e5e5;"><em>Data attribution: Highlands Ranch April 2026 closed, expired, and withdrawn listings sourced from REcolorado® MLS Market Analysis Summary, residential listings April 1–30, 2026, City equals Highlands Ranch, deduplicated for IRES cross-listings (n = 157 total: 131 closed, 22 expired, 4 withdrawn). Days in MLS (DIM) and close-price-to-original-list ratio (CP/OLP) computed per listing. Bucketing and median calculations performed by selling303.com. April 2026 metro context from <a href="https://www.dmarealtors.com/market-trends" target="_blank" rel="noopener">Denver Metro Association of Realtors®</a>, DMAR Market Trends Report, April 2026 Data — median Denver Metro close price $605,000, active listings 11,539, closed sales 3,926.</em></p>
