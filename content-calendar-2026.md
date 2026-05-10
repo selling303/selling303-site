@@ -321,7 +321,7 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Type: Seller advice | Funnel: MOFU
   - Angle: Greenwood Village empty-nesters often have $1.5M–$3M of equity locked in a 5,000+ sqft home they barely use. The math on right-sizing — capital gains exposure, replacement housing options inside vs. outside the Cherry Creek schools area, carrying-cost differential, equity redeployment scenarios.
   - Target keywords: Greenwood Village empty nester, downsize Greenwood Village home, sell GV home move-up, Cherry Creek schools downsize
-  - Visual: two-path-diptych (Stay in Cherry Creek schools area vs. Move down-market — chosen over original cost-breakdown spec via Compelling Question Flow because the post's narrative is fundamentally a binary fork on redeployable equity, and the cost-breakdown pattern is still flag-only Phase 3)
+  - Visual: profile-card-grid (4 empty-nester personas — Network-Anchored / Lock-and-Leave Traveler / Asset-Maximizer / Family-Adjacent — each matched to a best-fit replacement path with redeployable-equity outcome; chosen on rebuild after Jacob review found the diptych premise weak. Two-path-diptych retired; profile-card-grid pays off the post's actual MOFU job — help GV empty-nesters self-recognize and pick a path. cost-breakdown pattern still flag-only Phase 3)
 
 #### Day 5 — Saturday, May 9
 - [x] **"Moving to Littleton, Colorado: A Relocation Guide for 2026"** *(drafted 2026-05-08)*

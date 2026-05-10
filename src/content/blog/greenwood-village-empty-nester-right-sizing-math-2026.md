@@ -46,7 +46,7 @@ relatedPosts:
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <p style="margin: 0; font-size: 1.05rem;"><strong>When does the Greenwood Village empty-nester right-sizing math actually pencil?</strong></p>
-<p style="margin: 0.5rem 0 0;">Most Greenwood Village empty-nesters net roughly $1.85M on a $2.5M sale after commission, taxes, and payoff — leaving $650K to $850K of redeployable equity if they move down-market, or under $250K if they stay inside the Cherry Creek schools area.</p>
+<p style="margin: 0.5rem 0 0;">Most Greenwood Village empty-nesters net roughly $1.85M on a $2.5M sale. Four right-sizing profiles fit most situations — redeployable equity ranges from $0 (stay in GV) to $850K (move down-market to Highlands Ranch or Centennial).</p>
 </div>
 
 <div style="background: #f0f4f0; border-left: 4px solid #4a7c59; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
@@ -54,8 +54,8 @@ relatedPosts:
 <ul style="margin: 0.75rem 0 0 1.25rem; padding: 0;">
 <li><strong>Typical Greenwood Village empty-nester home</strong> — 5,000+ sqft, $2M to $3M sale price, often paid down to a low-balance or zero-balance mortgage.</li>
 <li><strong>Net after costs is roughly $1.85M on a $2.5M sale</strong> — agent commission ($125K to $150K), title and recording (~$5K), pro-rated property tax, and any remaining mortgage payoff. Capital gains exposure adds another $0 to $200K depending on tenure and filing status.</li>
-<li><strong>Two right-sizing paths exist</strong> — stay inside the Cherry Creek schools area at a $1.6M to $1.95M replacement, or move down-market to Highlands Ranch ($737K April 2026 median) or Centennial ($650K) at a $1M to $1.2M upgrade target.</li>
-<li><strong>Redeployable equity gap is roughly $600K to $850K</strong> between the two paths — that's the financial cost of staying inside the Cherry Creek schools attendance zone.</li>
+<li><strong>Four common right-sizing profiles</strong> — Network-Anchored (stay in GV at $1.6M–$1.95M), Lock-and-Leave Traveler (Landmark condo at $1.45M–$1.75M), Asset-Maximizer (Highlands Ranch or Centennial at $1M–$1.2M), Family-Adjacent (grandkids' suburb at $1M–$1.4M).</li>
+<li><strong>Redeployable equity ranges from $0 to $850K depending on the profile</strong> — roughly $0–$250K for the Network-Anchored path vs. $650K–$850K for the Asset-Maximizer move down-market. The right number is whichever profile actually fits.</li>
 <li><strong>Pricing precision matters more here than at any other tier</strong> — Q1 2026 GV listings showed 5 median days in MLS for properly priced homes but 50-day average and 8 expired listings, a bimodal market where mispricing kills the timeline.</li>
 </ul>
 </div>
@@ -64,7 +64,7 @@ relatedPosts:
 <strong style="display: block; margin-bottom: 0.5rem; color: #002a3a;">In this article</strong>
 <ol style="margin: 0; padding-left: 1.25rem;">
 <li><a href="#net-math">What does a Greenwood Village empty-nester actually net on a $2.5M sale?</a></li>
-<li><a href="#two-paths">Stay inside Cherry Creek schools, or move down-market — which path makes the math pencil?</a></li>
+<li><a href="#which-empty-nester">Which Greenwood Village empty-nester are you, and which right-sizing path fits?</a></li>
 <li><a href="#capital-gains">How does capital gains exposure change the right-sizing math?</a></li>
 <li><a href="#carrying-costs">What does the carrying-cost differential look like year over year?</a></li>
 <li><a href="#timing">When is the right time to list a Greenwood Village empty-nester home?</a></li>
@@ -84,64 +84,125 @@ relatedPosts:
 
 <p>Net after capital gains, the realistic landing zone for a $2.5M GV sale is $1.85M to $1.95M for joint filers with a $1M to $1.5M gain. That's the redeployable pool — and where it goes is the rest of the decision. For broader context on selling costs in Colorado, see <a href="/blog/cost-to-sell-house-colorado-2026">the full breakdown of what it costs to sell a house in Colorado in 2026</a>.</p>
 
-<h2 id="two-paths">Stay inside Cherry Creek schools, or move down-market — which path makes the math pencil?</h2>
+<h2 id="which-empty-nester">Which Greenwood Village empty-nester are you, and which right-sizing path fits?</h2>
 
-<p>The right-sizing decision is fundamentally a fork. Either the seller stays inside the Cherry Creek schools attendance area — preserving the social network, the property type expectations, and access to the area's amenities — or moves down-market to Highlands Ranch, Centennial, or another South Denver suburb at a meaningfully lower price point. Each path carries a different redeployable-equity outcome on the same $1.85M net. The diptych below maps the two paths against current April 2026 REcolorado MLS data (n=103 GV residential listings; n=131 Highlands Ranch closed; n=155 Centennial closed).</p>
+<p>The right-sizing decision is rarely about the math alone — it's about which version of an empty-nester the seller actually is. Most Greenwood Village right-sizers fall into one of four profiles, each with a distinct best-fit replacement strategy and a different redeployable-equity outcome on the same $1.85M net. The grid below maps the four profiles against April 2026 REcolorado MLS data (n=103 GV + n=157 Highlands Ranch + n=155 Centennial + n=181 Parker residential listings).</p>
 
-<div style="margin: 2rem 0;" itemscope itemtype="https://schema.org/Dataset" aria-labelledby="two-paths">
-<meta itemprop="name" content="Greenwood Village empty-nester right-sizing two-path comparison April 2026">
-<meta itemprop="temporalCoverage" content="2026-04-01/2026-05-01">
-<meta itemprop="spatialCoverage" content="Greenwood Village, Colorado, Arapahoe County">
-<meta itemprop="creator" content="Jacob Stark, selling303.com">
-<meta itemprop="publisher" content="REcolorado MLS">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Greenwood Village Empty-Nester Right-Sizing Personas — Best-Fit Replacement Path (April 2026)",
+  "description": "Four common Greenwood Village empty-nester profiles matched to a best-fit right-sizing replacement path. Built from REcolorado MLS data (April 1 to 30, 2026) on 103 Greenwood Village residential listings plus comparison Highlands Ranch (n=157), Centennial (n=155), and Parker (n=181) closed-comp sets. Each persona shows the recommended price band and approximate redeployable equity on a $2.5M sale netting $1.85M.",
+  "url": "https://selling303.com/blog/greenwood-village-empty-nester-right-sizing-math-2026#which-empty-nester",
+  "numberOfItems": 4,
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Network-Anchored Empty-Nester — stay inside Cherry Creek schools area", "item": {"@type": "Person", "description": "Greenwood Village empty-nester with deep Cherry Creek schools area social ties"}},
+    {"@type": "ListItem", "position": 2, "name": "Lock-and-Leave Traveler — Landmark luxury condo near DTC", "item": {"@type": "Person", "description": "Greenwood Village empty-nester traveling 4+ months a year"}},
+    {"@type": "ListItem", "position": 3, "name": "Asset-Maximizer — move down-market to Highlands Ranch or Centennial", "item": {"@type": "Person", "description": "Greenwood Village empty-nester prioritizing freed equity over location"}},
+    {"@type": "ListItem", "position": 4, "name": "Family-Adjacent Empty-Nester — move to grandkids' suburb", "item": {"@type": "Person", "description": "Greenwood Village empty-nester relocating to be closer to grandchildren"}}
+  ],
+  "isBasedOn": {"@type": "CreativeWork", "name": "REcolorado MLS Greenwood Village + Highlands Ranch + Centennial + Parker April 2026 Residential Listing Export", "datePublished": "2026-05-03"},
+  "creator": {"@type": "Person", "name": "Jacob Stark", "jobTitle": "Realtor", "url": "https://selling303.com"},
+  "publisher": {"@type": "Organization", "name": "selling303.com", "url": "https://selling303.com"}
+}
+</script>
 
-<div style="background: #002a3a; color: #fff; padding: 1.75rem 1.5rem 1.5rem; border-radius: 8px 8px 0 0; text-align: center;">
-<div style="font-size: 0.75rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.65rem;">For Greenwood Village Empty-Nesters</div>
-<div style="font-size: 1.5rem; font-weight: 700; line-height: 1.35; max-width: 640px; margin: 0 auto;">After a $2.5M sale netting $1.85M, where does the equity actually go?</div>
-<div style="margin-top: 0.95rem; font-size: 0.95rem; font-weight: 600; color: #c8965a; letter-spacing: 0.02em;">Two right-sizing paths. Pick your trade-off ↓</div>
+<!-- Visual styling provided by /css/aeo-visuals.css (loaded via BaseLayout). Class: .aeo-persona-grid -->
+
+<figure class="aeo-persona-grid" aria-labelledby="which-empty-nester-banner" role="figure" style="border: 1px solid #d6e0e6; border-radius: 8px; overflow: hidden; background: #fff; margin: 1.5rem 0 2rem;">
+
+<div id="which-empty-nester-banner" style="background: #002a3a; color: #fff; padding: 1.5rem 1.5rem 1.25rem; text-align: center;">
+<div style="font-size: 0.72rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.5rem;">For Greenwood Village Empty-Nesters</div>
+<div style="font-size: 1.35rem; font-weight: 700; line-height: 1.3; max-width: 620px; margin: 0 auto;">Which empty-nester are you — and which right-sizing path fits?</div>
+<div style="font-size: 0.9rem; opacity: 0.85; margin-top: 0.5rem; color: #c8965a;">Four profiles, four paths ↓</div>
 </div>
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0; border: 1px solid #d6e0e6; border-top: none; overflow: hidden;">
+<div class="persona-grid" style="padding: 1.25rem;">
 
-<div itemscope itemtype="https://schema.org/PropertyValue" style="padding: 1.5rem; background: #f4f7f9; border-right: 1px solid #d6e0e6;">
-<meta itemprop="name" content="Stay inside Cherry Creek schools area path">
-<meta itemprop="value" content="1600000-1950000">
-<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;"><svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="#002a3a" stroke-width="1.5" aria-hidden="true"><path d="M3 12l9-7 9 7"/><path d="M5 11v8h14v-8"/><path d="M9 19v-5h6v5"/><circle cx="12" cy="9" r="1"/></svg><div><div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #4a7c59; font-weight: 600;">Path 1</div><div style="font-size: 1.25rem; font-weight: 700; color: #002a3a;">Stay in Cherry Creek schools area</div></div></div>
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1rem;">
-<div><div style="font-size: 0.7rem; text-transform: uppercase; color: #555; letter-spacing: 0.05em;">Replacement price</div><div style="font-size: 1rem; font-weight: 600; color: #002a3a;">$1.6M–$1.95M</div></div>
-<div><div style="font-size: 0.7rem; text-transform: uppercase; color: #555; letter-spacing: 0.05em;">Typical sqft</div><div style="font-size: 1rem; font-weight: 600; color: #002a3a;">2,000–4,500</div></div>
-<div><div style="font-size: 0.7rem; text-transform: uppercase; color: #555; letter-spacing: 0.05em;">Property types</div><div style="font-size: 0.95rem; color: #002a3a;">Landmark condo · Blue Heron · Preserve patio</div></div>
-<div><div style="font-size: 0.7rem; text-transform: uppercase; color: #555; letter-spacing: 0.05em;">Redeployable equity</div><div style="font-size: 1rem; font-weight: 600; color: #4a7c59;">~$0–$250K</div></div>
+<div class="persona-card" style="--persona-accent: #002a3a;" itemscope itemtype="https://schema.org/Person">
+<svg viewBox="0 0 60 60" aria-hidden="true">
+<circle cx="20" cy="22" r="6" fill="#002a3a"/>
+<circle cx="40" cy="22" r="6" fill="#002a3a"/>
+<circle cx="30" cy="14" r="5" fill="#002a3a"/>
+<path d="M10 50 Q10 36 20 36 Q30 36 30 50 Z" fill="#002a3a"/>
+<path d="M30 50 Q30 36 40 36 Q50 36 50 50 Z" fill="#002a3a"/>
+<line x1="20" y1="22" x2="30" y2="14" stroke="#002a3a" stroke-width="1.5" opacity="0.4"/>
+<line x1="40" y1="22" x2="30" y2="14" stroke="#002a3a" stroke-width="1.5" opacity="0.4"/>
+<line x1="20" y1="22" x2="40" y2="22" stroke="#002a3a" stroke-width="1.5" opacity="0.4"/>
+</svg>
+<div class="persona-name" itemprop="description">The Network-Anchored Empty-Nester</div>
+<div class="persona-match-label">Right path</div>
+<div class="persona-match" itemscope itemtype="https://schema.org/Place">
+<meta itemprop="containedInPlace" content="Arapahoe County, Colorado" />
+<span itemprop="name">Stay in GV — Landmark or Preserve</span>
 </div>
-<div style="border-top: 1px solid #d6e0e6; padding-top: 1rem;">
-<div style="font-size: 0.75rem; text-transform: uppercase; color: #4a7c59; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.4rem;">Trade-off</div>
-<p style="margin: 0; font-size: 0.9rem; color: #333;">Preserves the schools network, social ties, and property-type expectations — but soaks up most of the redeployable equity. Inventory is thin (a dozen-ish listings at any time) and you compete with other GV right-sizers for the same homes.</p>
-</div>
-</div>
-
-<div itemscope itemtype="https://schema.org/PropertyValue" style="padding: 1.5rem; background: #fff;">
-<meta itemprop="name" content="Move down-market to Highlands Ranch or Centennial path">
-<meta itemprop="value" content="1000000-1200000">
-<div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;"><svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="#002a3a" stroke-width="1.5" aria-hidden="true"><path d="M3 12h18"/><path d="M13 6l8 6-8 6"/><circle cx="6" cy="12" r="2"/></svg><div><div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #4a7c59; font-weight: 600;">Path 2</div><div style="font-size: 1.25rem; font-weight: 700; color: #002a3a;">Move down-market</div></div></div>
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1rem;">
-<div><div style="font-size: 0.7rem; text-transform: uppercase; color: #555; letter-spacing: 0.05em;">Replacement price</div><div style="font-size: 1rem; font-weight: 600; color: #002a3a;">$1M–$1.2M</div></div>
-<div><div style="font-size: 0.7rem; text-transform: uppercase; color: #555; letter-spacing: 0.05em;">Typical sqft</div><div style="font-size: 1rem; font-weight: 600; color: #002a3a;">3,000–4,500</div></div>
-<div><div style="font-size: 0.7rem; text-transform: uppercase; color: #555; letter-spacing: 0.05em;">Markets</div><div style="font-size: 0.95rem; color: #002a3a;">Highlands Ranch · Centennial · Castle Pines</div></div>
-<div><div style="font-size: 0.7rem; text-transform: uppercase; color: #555; letter-spacing: 0.05em;">Redeployable equity</div><div style="font-size: 1rem; font-weight: 600; color: #4a7c59;">~$650K–$850K</div></div>
-</div>
-<div style="border-top: 1px solid #d6e0e6; padding-top: 1rem;">
-<div style="font-size: 0.75rem; text-transform: uppercase; color: #4a7c59; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 0.4rem;">Trade-off</div>
-<p style="margin: 0; font-size: 0.9rem; color: #333;">Frees $600K to $850K of redeployable equity for retirement income, second home, or family gifting — but trades the Cherry Creek schools network, the GV social ties, and the estate-property type for a more typical suburban single-family or single-level home.</p>
-</div>
+<div style="display: inline-block; background: #f0f4f0; color: #4a7c59; font-weight: 700; font-size: 0.85rem; padding: 0.25rem 0.75rem; border-radius: 999px; margin-bottom: 0.6rem;"><meta itemprop="additionalProperty" content="1600000" />$1.6M–$1.95M · ~$0–$250K redeployed</div>
+<div class="persona-reason">30+ years in GV, Cherry Creek schools network, country club, decade-deep neighbor ties. The ZIP is who they are. Best for: trading $600K–$850K of redeployable cash for keeping every lunch and every routine.</div>
 </div>
 
+<div class="persona-card" style="--persona-accent: #c8965a;" itemscope itemtype="https://schema.org/Person">
+<svg viewBox="0 0 60 60" aria-hidden="true">
+<rect x="14" y="22" width="32" height="22" fill="#c8965a" rx="2"/>
+<rect x="22" y="14" width="16" height="10" fill="#c8965a" rx="1"/>
+<rect x="26" y="16" width="8" height="2" fill="#fff"/>
+<line x1="30" y1="22" x2="30" y2="44" stroke="#a0763f" stroke-width="1.5"/>
+<rect x="18" y="28" width="6" height="6" fill="#fff" opacity="0.4"/>
+<rect x="36" y="28" width="6" height="6" fill="#fff" opacity="0.4"/>
+<rect x="20" y="44" width="3" height="6" fill="#5a4a2a"/>
+<rect x="37" y="44" width="3" height="6" fill="#5a4a2a"/>
+</svg>
+<div class="persona-name" itemprop="description">The Lock-and-Leave Traveler</div>
+<div class="persona-match-label">Right path</div>
+<div class="persona-match" itemscope itemtype="https://schema.org/Place">
+<meta itemprop="containedInPlace" content="Arapahoe County, Colorado" />
+<span itemprop="name">Landmark luxury condo near DTC</span>
 </div>
-<div style="background: #f8f9fa; border: 1px solid #d6e0e6; border-top: none; border-radius: 0 0 8px 8px; padding: 0.75rem 1.25rem; font-size: 0.8rem; color: #555; line-height: 1.5;"><strong style="color: #002a3a;">Source:</strong> REcolorado MLS Market Analysis Summary, Greenwood Village (n=103) + Highlands Ranch (n=157) + Centennial (n=184), Colorado | April 1–30, 2026 | pulled May 3, 2026 | redeployable equity assumes $1.85M net proceeds on a $2.5M sale | selling303.com</div>
+<div style="display: inline-block; background: #f0f4f0; color: #4a7c59; font-weight: 700; font-size: 0.85rem; padding: 0.25rem 0.75rem; border-radius: 999px; margin-bottom: 0.6rem;"><meta itemprop="additionalProperty" content="1450000" />$1.45M–$1.75M · ~$300K–$500K redeployed</div>
+<div class="persona-reason">Out of town 4+ months a year — RV, second home, frequent travel. The yard, irrigation, and pool maintenance are the enemy. Best for: trading the estate property for a 2,000–2,400 sqft lock-and-leave footprint and freeing $300K–$500K.</div>
 </div>
 
-<p>The headline number is the redeployable-equity gap. <strong>Staying inside the Cherry Creek schools area costs roughly $600K to $850K in foregone redeployable cash compared to moving down-market.</strong> Whether that's worth it depends on what the seller plans to do with that money — and on how much of the household's lifestyle is genuinely tied to the GV network versus the GV ZIP code.</p>
+<div class="persona-card" style="--persona-accent: #4a7c59;" itemscope itemtype="https://schema.org/Person">
+<svg viewBox="0 0 60 60" aria-hidden="true">
+<polygon points="30,8 50,28 46,28 46,52 14,52 14,28 10,28" fill="#4a7c59"/>
+<text x="30" y="42" text-anchor="middle" fill="#fff" font-size="22" font-weight="700" font-family="Georgia, serif">$</text>
+</svg>
+<div class="persona-name" itemprop="description">The Asset-Maximizer</div>
+<div class="persona-match-label">Right path</div>
+<div class="persona-match" itemscope itemtype="https://schema.org/Place">
+<meta itemprop="containedInPlace" content="Douglas County, Colorado" />
+<span itemprop="name">Move to Highlands Ranch or Centennial</span>
+</div>
+<div style="display: inline-block; background: #f0f4f0; color: #4a7c59; font-weight: 700; font-size: 0.85rem; padding: 0.25rem 0.75rem; border-radius: 999px; margin-bottom: 0.6rem;"><meta itemprop="additionalProperty" content="1000000" />$1M–$1.2M · ~$650K–$850K redeployed</div>
+<div class="persona-reason">Wants retirement income, second home, or family-gifting capacity. Network ties less critical than the math. Best for: an above-median Highlands Ranch ($737K April 2026 median) or Centennial ($650K) single-level, plus $30K–$60K/year of carrying-cost savings.</div>
+</div>
 
-<p>For sellers staying in GV, the realistic targets in May 2026 are the Landmark luxury condos near the Denver Tech Center (2,000 to 2,400 sqft, $1.45M to $1.95M), the Blue Heron and Preserve patio-home variants on the eastern edge of the city (3,500 to 5,000 total sqft, $1.6M to $1.85M), and a thin inventory of smaller single-family homes near Belleview at $1.5M to $1.7M. For sellers moving down-market, an above-median upgrade target of $1M to $1.2M buys a 3,000-to-4,500-sqft home on a typical suburban lot in Highlands Ranch, Centennial, or Castle Pines — see how a similar move maps in the reverse direction in <a href="/blog/equity-to-move-up-highlands-ranch">how much equity you need to move up in Highlands Ranch</a>.</p>
+<div class="persona-card" style="--persona-accent: #4a7c59;" itemscope itemtype="https://schema.org/Person">
+<svg viewBox="0 0 60 60" aria-hidden="true">
+<circle cx="22" cy="20" r="5" fill="#4a7c59"/>
+<circle cx="38" cy="20" r="5" fill="#4a7c59"/>
+<circle cx="30" cy="36" r="4" fill="#4a7c59"/>
+<path d="M14 36 Q14 26 22 26 Q30 26 30 36 Z" fill="#4a7c59"/>
+<path d="M30 36 Q30 26 38 26 Q46 26 46 36 Z" fill="#4a7c59"/>
+<path d="M22 50 Q22 42 30 42 Q38 42 38 50 Z" fill="#4a7c59"/>
+</svg>
+<div class="persona-name" itemprop="description">The Family-Adjacent Empty-Nester</div>
+<div class="persona-match-label">Right path</div>
+<div class="persona-match" itemscope itemtype="https://schema.org/Place">
+<meta itemprop="containedInPlace" content="Douglas County, Colorado" />
+<span itemprop="name">Move to grandkids' suburb</span>
+</div>
+<div style="display: inline-block; background: #f0f4f0; color: #4a7c59; font-weight: 700; font-size: 0.85rem; padding: 0.25rem 0.75rem; border-radius: 999px; margin-bottom: 0.6rem;"><meta itemprop="additionalProperty" content="1000000" />$1M–$1.4M · ~$450K–$850K redeployed</div>
+<div class="persona-reason">Grandkids in Parker, Highlands Ranch, or Castle Pines. Wants 10-minute pickup duty, not 35-minute. Geography ties to family, not GV. Best for: a single-level home in the kids' suburb at $1M–$1.4M, redeploying the rest into family use.</div>
+</div>
+
+</div>
+<figcaption style="background: #f8f9fa; border-top: 1px solid #d6e0e6; padding: 0.85rem 1.25rem; margin: 0; font-size: 0.82rem; color: #555; line-height: 1.5;"><strong>Source:</strong> REcolorado MLS, April 1–30, 2026 | n = 103 Greenwood Village + 157 Highlands Ranch + 155 Centennial + 181 Parker residential listings | redeployable equity assumes $1.85M net on a $2.5M GV sale | selling303.com<br /><em style="color: #777;">Personas are composite profiles based on common Greenwood Village empty-nester priorities; "right path" reflects the replacement strategy each profile most often selects given its priority weights. Confirm individual basis, capital gains exposure, and replacement inventory before listing.</em></figcaption>
+</figure>
+
+<p>The headline read on these four cards is the redeployable-equity spread. Staying inside the Cherry Creek schools area redeploys roughly $0–$250K of the $1.85M net — most of it absorbed by the replacement home. Moving down-market to Highlands Ranch or Centennial frees $650K–$850K. The Lock-and-Leave Landmark path lands in the middle at $300K–$500K. The right number for a given empty-nester is whichever profile actually matches their priorities — not whichever profile produces the largest redeployment.</p>
+
+<p>For broader move-up framing, see <a href="/blog/equity-to-move-up-highlands-ranch">how much equity you need to move up in Highlands Ranch</a> — the math runs the same direction in reverse, and a Greenwood Village empty-nester moving to HR is often selling to a move-up buyer working through that same equation.</p>
 
 <h2 id="capital-gains">How does capital gains exposure change the right-sizing math?</h2>
 
