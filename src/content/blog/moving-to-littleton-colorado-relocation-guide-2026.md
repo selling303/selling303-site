@@ -91,98 +91,102 @@ relatedPosts:
 
 <h2 id="counties-compared">What Does Each Littleton County Actually Mean for Relocation Buyers?</h2>
 
-<p>The three-county map breaks cleanly across the metrics that matter to a relocation buyer — school district, water provider, sample neighborhoods, April 2026 price levels, and the typical buyer profile in each segment. The comparison below is built from April 2026 REcolorado MLS data on all 292 closed Littleton residential transactions, plus active inventory and pending data current to May 3, 2026.</p>
+<p>Most relocation buyers self-select into one of three Littleton segments based on what they prioritize — walkable downtown vs. foothills recreation vs. newer construction with hill-country views. The card grid below maps the three segments side by side, drawing on April 2026 REcolorado MLS data for all 292 closed Littleton residential transactions plus active inventory current to May 3, 2026.</p>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Dataset",
-  "name": "Littleton, Colorado Three-County Relocation Comparison (April 2026)",
-  "description": "Three-county comparison of the Littleton, Colorado mailing-address area for relocation buyers. Covers Arapahoe County, Jefferson County, and Douglas County segments of the Littleton ZIP code area. Reports school district, water provider, sample neighborhoods, April 2026 single-family price levels, and typical relocation-buyer profile for each segment. Built from REcolorado MLS data (April 1 to 30, 2026) on 292 closed Littleton residential transactions plus active inventory.",
-  "url": "https://selling303.com/blog/moving-to-littleton-colorado-relocation-guide-2026",
-  "temporalCoverage": "2026-04-01/2026-04-30",
-  "spatialCoverage": [
-    {"@type": "Place", "name": "Littleton, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Arapahoe County, Colorado"}},
-    {"@type": "Place", "name": "Littleton, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Jefferson County, Colorado"}},
-    {"@type": "Place", "name": "Littleton, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Douglas County, Colorado"}}
+  "@type": "ItemList",
+  "name": "Littleton, Colorado Three-County Relocation Buyer Self-Select Map (April 2026)",
+  "description": "Three-county map of the Littleton, Colorado mailing-address area for relocation buyers. Each item profiles one county segment of Littleton — Arapahoe (Historic Core), Jefferson (West Foothills), and Douglas (South / New Build) — with school district, water provider, April 2026 single-family price band, and the relocation-buyer profile that typically self-selects into that segment. Built from REcolorado MLS data (April 1 to 30, 2026) on 292 closed Littleton residential transactions plus active inventory.",
+  "url": "https://selling303.com/blog/moving-to-littleton-colorado-relocation-guide-2026#counties-compared",
+  "numberOfItems": 3,
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Historic Core — walkable, LPS schools, downtown Denver commuters", "item": {"@type": "Place", "name": "Littleton, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Arapahoe County, Colorado"}}},
+    {"@type": "ListItem", "position": 2, "name": "West Foothills — Ken Caryl / Columbine, Jeffco schools, larger lots", "item": {"@type": "Place", "name": "Littleton, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Jefferson County, Colorado"}}},
+    {"@type": "ListItem", "position": 3, "name": "South / New Build — Roxborough / Sterling Ranch, DCSD schools, new construction", "item": {"@type": "Place", "name": "Littleton, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Douglas County, Colorado"}}}
   ],
   "isBasedOn": {"@type": "CreativeWork", "name": "REcolorado MLS Littleton April 2026 Residential Listing Export", "datePublished": "2026-05-03"},
   "creator": {"@type": "Person", "name": "Jacob Stark", "jobTitle": "Realtor", "url": "https://selling303.com"},
-  "publisher": {"@type": "Organization", "name": "selling303.com", "url": "https://selling303.com"},
-  "variableMeasured": [
-    {"@type": "PropertyValue", "name": "School district"},
-    {"@type": "PropertyValue", "name": "Primary water provider"},
-    {"@type": "PropertyValue", "name": "Sample neighborhoods"},
-    {"@type": "PropertyValue", "name": "April 2026 single-family price band", "unitText": "USD"},
-    {"@type": "PropertyValue", "name": "Typical relocation-buyer profile"}
-  ]
+  "publisher": {"@type": "Organization", "name": "selling303.com", "url": "https://selling303.com"}
 }
 </script>
 
-<!-- Visual styling provided by /css/aeo-visuals.css (loaded via BaseLayout). Class: .aeo-comp-table -->
+<!-- Visual styling provided by /css/aeo-visuals.css (loaded via BaseLayout). Class: .aeo-persona-grid -->
 
-<figure class="aeo-comp-table" aria-labelledby="littleton-three-county-comparison" role="figure">
-<table>
-<caption id="littleton-three-county-comparison">What does each Littleton county actually mean for relocation buyers? — Arapahoe, Jefferson, and Douglas County segments of the Littleton mailing-address area, April 2026</caption>
-<thead>
-<tr>
-<th scope="col">County</th>
-<th scope="col">School district</th>
-<th scope="col">Primary water provider</th>
-<th scope="col">Sample neighborhoods</th>
-<th scope="col">SFR price band (April 2026)</th>
-<th scope="col">Typical relocation buyer</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th scope="row" itemscope itemtype="https://schema.org/Place" style="border-left: 4px solid #002a3a;">
-<meta itemprop="name" content="Littleton, Colorado (Arapahoe County)" />
+<figure class="aeo-persona-grid" aria-labelledby="counties-compared" role="figure">
+<div class="persona-grid">
+
+<div class="persona-card" style="--persona-accent: #002a3a;" itemscope itemtype="https://schema.org/Place">
+<svg viewBox="0 0 60 60" aria-hidden="true">
+<rect x="8" y="22" width="14" height="28" fill="#002a3a"/>
+<rect x="11" y="26" width="3" height="3" fill="#fff"/>
+<rect x="16" y="26" width="3" height="3" fill="#fff"/>
+<rect x="11" y="32" width="3" height="3" fill="#fff"/>
+<rect x="16" y="32" width="3" height="3" fill="#fff"/>
+<rect x="13" y="40" width="4" height="10" fill="#fff"/>
+<polygon points="24,22 38,12 38,50 24,50" fill="#002a3a"/>
+<rect x="28" y="28" width="4" height="4" fill="#fff"/>
+<rect x="34" y="28" width="2" height="4" fill="#fff"/>
+<rect x="29" y="40" width="4" height="10" fill="#fff"/>
+<rect x="40" y="22" width="14" height="28" fill="#002a3a"/>
+<rect x="43" y="26" width="3" height="3" fill="#fff"/>
+<rect x="48" y="26" width="3" height="3" fill="#fff"/>
+<rect x="43" y="32" width="3" height="3" fill="#fff"/>
+<rect x="48" y="32" width="3" height="3" fill="#fff"/>
+<rect x="45" y="40" width="4" height="10" fill="#fff"/>
+</svg>
+<div class="persona-match-label">Historic Core</div>
+<div class="persona-name" itemprop="alternateName">City of Littleton</div>
+<div class="persona-match">
 <meta itemprop="containedInPlace" content="Arapahoe County, Colorado" />
-<div class="tier-label">Historic Core</div>
-<div class="city-name">Arapahoe County</div>
-<div class="sample-size">City of Littleton proper</div>
-</th>
-<td data-label="School district">Littleton Public Schools (LPS)</td>
-<td data-label="Water provider">Denver Water</td>
-<td data-label="Sample neighborhoods">Downtown Littleton, Heritage Hills, Highline, Bow Mar, Columbine Valley</td>
-<td data-label="SFR price band" class="hero-stat"><meta itemprop="value" content="600000" />$600K – $1.2M typical</td>
-<td data-label="Buyer profile">Walkability-first families, downsize buyers, downtown Denver commuters</td>
-</tr>
-<tr>
-<th scope="row" itemscope itemtype="https://schema.org/Place" style="border-left: 4px solid #4a7c59;">
-<meta itemprop="name" content="Littleton, Colorado (Jefferson County)" />
+<span itemprop="name">Arapahoe County</span>
+</div>
+<div style="display: inline-block; background: #f0f4f0; color: #4a7c59; font-weight: 700; font-size: 0.85rem; padding: 0.25rem 0.75rem; border-radius: 999px; margin-bottom: 0.6rem;"><meta itemprop="additionalProperty" content="600000" />$600K – $1.2M typical</div>
+<div class="persona-reason">Walkable downtown, LPS schools, Denver Water. Best for: walkability-first families and downtown Denver commuters.</div>
+</div>
+
+<div class="persona-card" style="--persona-accent: #4a7c59;" itemscope itemtype="https://schema.org/Place">
+<svg viewBox="0 0 60 60" aria-hidden="true">
+<polygon points="6,50 22,18 32,32 40,22 54,50" fill="#4a7c59"/>
+<polygon points="22,18 26,24 22,30 18,24" fill="#fff" opacity="0.4"/>
+<polygon points="40,22 43,28 40,32 37,28" fill="#fff" opacity="0.4"/>
+<line x1="6" y1="50" x2="54" y2="50" stroke="#4a7c59" stroke-width="2"/>
+</svg>
+<div class="persona-match-label">West Foothills</div>
+<div class="persona-name" itemprop="alternateName">Ken Caryl / Columbine</div>
+<div class="persona-match">
 <meta itemprop="containedInPlace" content="Jefferson County, Colorado" />
-<div class="tier-label">West Foothills</div>
-<div class="city-name">Jefferson County</div>
-<div class="sample-size">Ken Caryl / Columbine</div>
-</th>
-<td data-label="School district">Jefferson County Public Schools (Jeffco)</td>
-<td data-label="Water provider">Ken-Caryl Ranch Water; Columbine providers vary</td>
-<td data-label="Sample neighborhoods">Ken Caryl Ranch, Columbine, Columbine West, Deer Creek</td>
-<td data-label="SFR price band"><meta itemprop="value" content="700000" />$700K – $1.5M typical</td>
-<td data-label="Buyer profile">Outdoor-recreation families, foothills-trail buyers, larger-lot move-up</td>
-</tr>
-<tr>
-<th scope="row" itemscope itemtype="https://schema.org/Place" style="border-left: 4px solid #8a7a3a;">
-<meta itemprop="name" content="Littleton, Colorado (Douglas County)" />
+<span itemprop="name">Jefferson County</span>
+</div>
+<div style="display: inline-block; background: #f0f4f0; color: #4a7c59; font-weight: 700; font-size: 0.85rem; padding: 0.25rem 0.75rem; border-radius: 999px; margin-bottom: 0.6rem;"><meta itemprop="additionalProperty" content="700000" />$700K – $1.5M typical</div>
+<div class="persona-reason">Larger lots, foothills trails, Jeffco schools. Best for: outdoor-recreation families and foothills-trail buyers.</div>
+</div>
+
+<div class="persona-card" style="--persona-accent: #c8965a;" itemscope itemtype="https://schema.org/Place">
+<svg viewBox="0 0 60 60" aria-hidden="true">
+<polygon points="6,42 18,30 30,38 42,26 54,42 54,52 6,52" fill="#c8965a" opacity="0.35"/>
+<polygon points="22,42 22,28 30,20 38,28 38,42" fill="#c8965a"/>
+<polygon points="22,28 30,20 38,28" fill="#a0763f"/>
+<rect x="27" y="34" width="6" height="8" fill="#fff"/>
+<rect x="24" y="32" width="3" height="3" fill="#fff"/>
+<rect x="33" y="32" width="3" height="3" fill="#fff"/>
+</svg>
+<div class="persona-match-label">South / New Build</div>
+<div class="persona-name" itemprop="alternateName">Roxborough / Sterling Ranch</div>
+<div class="persona-match">
 <meta itemprop="containedInPlace" content="Douglas County, Colorado" />
-<div class="tier-label">South / New Build</div>
-<div class="city-name">Douglas County</div>
-<div class="sample-size">Roxborough / Sterling Ranch</div>
-</th>
-<td data-label="School district">Douglas County School District RE-1</td>
-<td data-label="Water provider">Centennial Water; Roxborough Park; Dominion Water</td>
-<td data-label="Sample neighborhoods">Roxborough Park, Sterling Ranch, Chatfield Farms, Indigo</td>
-<td data-label="SFR price band"><meta itemprop="value" content="650000" />$650K – $1.4M typical</td>
-<td data-label="Buyer profile">New-construction buyers, hill-country views, families prioritizing DCSD</td>
-</tr>
-</tbody>
-</table>
-<figcaption><strong>Source:</strong> REcolorado MLS, April 1–30, 2026 | Littleton mailing-address area | n = 292 closed residential transactions plus 379 active single-family and 246 active attached listings | selling303.com<br /><em>Definitions: SFR = single-family residential. Price bands describe typical median-to-mid-tier closed and active inventory by county segment, not absolute min/max. Sample neighborhoods are illustrative, not exhaustive — confirm county and school district by exact address.</em></figcaption>
+<span itemprop="name">Douglas County</span>
+</div>
+<div style="display: inline-block; background: #f0f4f0; color: #4a7c59; font-weight: 700; font-size: 0.85rem; padding: 0.25rem 0.75rem; border-radius: 999px; margin-bottom: 0.6rem;"><meta itemprop="additionalProperty" content="650000" />$650K – $1.4M typical</div>
+<div class="persona-reason">New construction, DCSD schools, hill-country views. Best for: new-build buyers and families prioritizing DCSD.</div>
+</div>
+
+</div>
+<figcaption><strong>Source:</strong> REcolorado MLS, April 1–30, 2026 | Littleton mailing-address area | n = 292 closed residential transactions plus 379 active single-family and 246 active attached listings | selling303.com<br /><em>Price bands describe typical median-to-mid-tier inventory by county segment, not absolute min/max. Confirm county, school district, and water provider by exact address before writing an offer — boundaries shift periodically.</em></figcaption>
 </figure>
 
-<p>The table above is the relocation-buyer cheat sheet — but it pays to read it twice. The Arapahoe County segment is the Littleton most out-of-state buyers initially picture: walkable downtown grid, mature trees, original 1950s and 1960s ranch homes, plus mid-century and modern infill. The Jefferson County segment is foothills-adjacent, recreation-heavy, and typically larger-lot. The Douglas County segment is the newest housing stock, with significant new-construction inventory in Sterling Ranch and Indigo, and access to the Roxborough State Park geology.</p>
+<p>Each card is a starting point, not a verdict. The Arapahoe County segment is the Littleton most out-of-state buyers initially picture: walkable downtown grid, mature trees, original 1950s and 1960s ranch homes, plus mid-century and modern infill. The Jefferson County segment is foothills-adjacent, recreation-heavy, and typically larger-lot. The Douglas County segment is the newest housing stock, with significant new-construction inventory in Sterling Ranch and Indigo, and access to the Roxborough State Park geology.</p>
 
 <p>Once you know which county segment matches your priorities, the rest of the relocation decisions cascade. School district, watering rules, transfer fees, and even the resale comp set narrow to that segment. The single biggest mistake out-of-state buyers make in Littleton is assuming the whole area shares one school district — it doesn't, and the gap between LPS, Jeffco, and DCSD is meaningful enough to drive the address decision for many families.</p>
 

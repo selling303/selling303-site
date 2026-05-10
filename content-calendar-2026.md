@@ -329,7 +329,7 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Type: Local area topic | Funnel: TOFU
   - Angle: Comprehensive Littleton relocation guide. The 3-county quirk (Arapahoe/Jefferson/Douglas mailing-address overlap), historic downtown vs. master-planned-community options, commute realities to DTC and downtown Denver, school district lines, water restriction zones, and price-tier breakdowns.
   - Target keywords: moving to Littleton Colorado, Littleton CO relocation guide, relocating to Littleton, Littleton Colorado families
-  - Visual: comparison-table (3 county segments — Arapahoe, Jefferson, Douglas — × 5 metrics: school district, water provider, sample neighborhoods, April 2026 SFR price band, typical relocation buyer; chosen via Compelling Question Flow over the original "none" spec because the 3-county quirk IS the post's spine and apples-to-apples scanning is what relocation buyers actually need)
+  - Visual: profile-card-grid (3 county cards — Arapahoe Historic Core / Jefferson West Foothills / Douglas South-New Build, each with custom SVG icon, sub-label, county name, price chip, and best-for one-liner; rebuilt 2026-05-08 from initial comparison-table after Visual Dignity Gate failure on mobile — comparison-table cells carried too much prose to reflow cleanly, profile-card-grid stacks 1-up on mobile and 3-up on desktop with no horizontal squeeze)
 
 #### Day 6 — Sunday, May 10
 - [x] **"Englewood Listing Photos: When to Reshoot Before Relisting"** *(drafted 2026-05-09)* *(title shortened from "The Englewood Photography Audit: Why Visual Presentation Sinks More Listings Than Pricing" for SERP CTR; original preserved in `headline` frontmatter field)*
