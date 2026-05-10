@@ -332,12 +332,12 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: comparison-table (3 county segments — Arapahoe, Jefferson, Douglas — × 5 metrics: school district, water provider, sample neighborhoods, April 2026 SFR price band, typical relocation buyer; chosen via Compelling Question Flow over the original "none" spec because the 3-county quirk IS the post's spine and apples-to-apples scanning is what relocation buyers actually need)
 
 #### Day 6 — Sunday, May 10
-- [ ] **"The Englewood Photography Audit: Why Visual Presentation Sinks More Listings Than Pricing"**
+- [x] **"Englewood Listing Photos: When to Reshoot Before Relisting"** *(drafted 2026-05-09)* *(title shortened from "The Englewood Photography Audit: Why Visual Presentation Sinks More Listings Than Pricing" for SERP CTR; original preserved in `headline` frontmatter field)*
   - Specialization: `/expired-listings` | Geographic: `/englewood`
   - Type: Seller advice | Funnel: BOFU
   - Angle: Tier-list framework for evaluating listing photography quality. Why mid-tier Englewood listings ($500K–$800K) particularly suffer from amateur or rushed photo shoots, the impact on click-through rates and DOM, and the photo-quality benchmarks that separate sold from stale.
   - Target keywords: Englewood listing photos, listing photography Denver, why my house isn't getting showings, real estate photography Englewood
-  - Visual: tier-list (flag-only — Phase 3 builder dependency)
+  - Visual: decision-path (4-question photo audit routing each answer to "Reshoot" or "Photos likely fine" with Decision Rule tally footer — chosen via Compelling Question Flow over original tier-list spec because tier-list is still flag-only Phase 3 AND because BOFU advice posts pay off harder when the visual gives the reader an actionable output, not just a rubric. Library pattern post-RidgeGate, not stretch.)
 
 #### Day 7 — Monday, May 11
 - [ ] **"Condo vs. Single-Family Residence in Littleton's Spring Market: Which Makes Sense for First-Time Buyers?"**
