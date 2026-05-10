@@ -1,5 +1,30 @@
 # Deploy Log
 
+## 2026-05-09 — commit c194e706 / merge 4c3e823 | Credits used: 15 | Deploy ID: 6a0026ece243800008160194
+
+### New blog posts (4 — backlog bundled with today's nightly draft)
+
+- **Day 6 May calendar — "Englewood Listing Photos: When to Reshoot Before Relisting"** (`englewood-listing-photo-audit-photography-2026.md`). Expired Listings × Englewood. BOFU. Tier 0 **decision-path** visual: 4-question photography audit (hired pro? / 25+ photos? / twilight exteriors? / staged or decluttered?) routing each answer to "Reshoot" / "Photos likely fine" with Decision Rule tally footer ("3+ Reshoot → reshoot before relist") and bound source row inside HowTo wrapper. Compelling Question Flow chose decision-path over comparison-table (Sold vs Expired × 5 metrics) and single-metric-bar-chart (12 vs 76 DIM) because BOFU advice posts pay off harder when the visual gives the reader an actionable audit, not just a data wall — and validates generalization of decision-path beyond comparison-shopping into seller-audit framing. Source: REcolorado MLS Englewood SFR April 1–30, 2026 (n=416: 68 closed at 12-day median DIM, 27 expired at 76-day, 5 withdrawn, 233 active, 78 pending, 5 coming soon). Title shortened from calendar original "The Englewood Photography Audit: Why Visual Presentation Sinks More Listings Than Pricing" for SERP CTR (58 chars); original preserved in `headline` frontmatter. Updates: `content-calendar-2026.md`, `content-cluster-map.md`, `visual-inventory.md`.
+- **Day 5 May calendar — "Moving to Littleton, Colorado: A Relocation Guide for 2026"** (`moving-to-littleton-colorado-relocation-guide-2026.md`). Relocation × Littleton. TOFU. Tier 0 **profile-card-grid** visual: 3 Littleton county segments (Arapahoe / Jefferson / Douglas) as self-select cards, each with a custom SVG icon (downtown buildings / foothills triangles / hill-country new build), accent-colored price chip, and navy/green/gold per-card top border. Question-led navy banner ("Which Littleton county actually fits you?") with audience eyebrow + gold answer-pointer, source row visually bound inside the outer figure wrapper. Two visual rebuilds during review: original comparison-table failed Visual Dignity Gate on mobile (5 cells of phrase-shaped prose collapsed columns) → swapped to profile-card-grid → rebuild #2 added question-led banner + bound source row per Visual Hero Rule + Source Placement Rule. Source: REcolorado MLS Littleton mailing-address April 2026 (n=292 closed residential, n=379 active SFR, n=246 active attached, n=48 expired, n=19 withdrawn). Drafted 2026-05-08, rebuilt 2026-05-08 (×2). Cross-skill suggestion logged: `.aeo-persona-grid` CSS doesn't ship a figure-bound source treatment by default; future CSS update would remove inline-override plumbing.
+- **Day 4 May calendar — "The Greenwood Village Empty-Nester Right-Sizing Math (2026)"** (`greenwood-village-empty-nester-right-sizing-math-2026.md`). Move-Up Sellers × Greenwood Village. MOFU. Tier 0 **profile-card-grid** visual: 4 empty-nester personas (Network-Anchored / Lock-and-Leave Traveler / Asset-Maximizer / Family-Adjacent), each matched to a best-fit replacement path with price band + redeployable-equity chip. Question-led navy banner ("Which empty-nester are you — and which right-sizing path fits?"), `.aeo-persona-grid` CSS class, custom SVG per card, ItemList JSON-LD + Person/Place Microdata, bound source row. Replaced an earlier two-path-diptych (premise was tautological — redeployable-equity gap by destination too obvious as a binary). Mid-session schema fix: `category: "Selling"` (not in the Zod enum) → `"Costs & Pricing"`. Source: REcolorado MLS GV April 2026 (n=103) + comparative HR (n=157), Centennial (n=155), Parker (n=181). Drafted 2026-05-07, visual rebuilt 2026-05-09.
+- **Day 3 May calendar — "Why Pricing Reductions in Highlands Ranch Don't Always Work — and What Does"** (`price-reductions-highlands-ranch-what-works-2026.md`). Expired Listings × Highlands Ranch. BOFU. Tier 0 **single-metric-bar-chart** visual: median DIM by 5 sale-outcome buckets (Sold ≥100% / 3 days, Sold 95–99% / 21 days, Sold 90–94% / 70 days, Sold <90% / 164 days, Expired / 87 days). Full Schema.org Microdata + parallel JSON-LD Dataset + bound source row. Source: REcolorado MLS HR April 2026 (n=150: 131 closed, 22 expired, 4 withdrawn). Drafted 2026-05-06.
+
+### Tooling
+
+- **GBP image generator scripts** in `scripts/`: `generate-gbp-image.py` (Numeric Hero Card — Tier-2 Option 1, reusable for every blog post), `generate-gbp-data-viz.py` (Live Data Snapshot — Tier-2 Option 3, deadline-spine template), `generate-gbp-phone-mockup.py` (Phone Mockup — Tier-2 Option 2, brand-faithful widget render). Python+Pillow, system-font-only, zero external dependencies. Replaces Canva for GBP image generation.
+
+### Visual library momentum
+
+- decision-path now has two shipped use cases (RidgeGate comparison-shopping on 2026-05-06, Englewood seller audit on 2026-05-09) — pattern validated as generalizable across narrative jobs.
+- profile-card-grid is the most-shipped Tier 0 pattern this batch (Littleton + GV both rebuilt to it from initial picks) — the 3–8 self-select cards shape is winning more often than initial Compelling Question Flow scoring predicts. Worth a writer-skill calibration note.
+- Tier 0 patterns shipped this batch: profile-card-grid (×2), single-metric-bar-chart, decision-path. No comparison-table this batch — first batch in a while without one.
+
+### Build wiring
+
+- Auto-fire of `gbp-post` deferred per Jacob — 4 newly-live posts is heavier than the standard 1-per-day cadence and warrants explicit template + sequence picks.
+
+---
+
 ## 2026-05-06 (PM) — commit 4571cc8 / merge 7dfe407 | Credits used: 15 | Build: 39s
 
 - **NEW POST:** South Denver Homeowner's 2026 Notice of Valuation Protest Playbook (`/blog/2026-notice-of-valuation-protest-playbook-south-denver`) — ad-hoc, not from calendar. Move-Up Sellers × Highlands Ranch, BOFU. Time-sensitive (June 1, 2026 protest deadline). Sourced from topic-intelligence.md Section 4 row 1.
