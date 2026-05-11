@@ -340,12 +340,12 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: decision-path (4-question photo audit routing each answer to "Reshoot" or "Photos likely fine" with Decision Rule tally footer — chosen via Compelling Question Flow over original tier-list spec because tier-list is still flag-only Phase 3 AND because BOFU advice posts pay off harder when the visual gives the reader an actionable output, not just a rubric. Library pattern post-RidgeGate, not stretch.)
 
 #### Day 7 — Monday, May 11
-- [ ] **"Condo vs. Single-Family Residence in Littleton's Spring Market: Which Makes Sense for First-Time Buyers?"**
+- [x] **"Condo vs. Starter House in Littleton for First-Time Buyers"** *(drafted 2026-05-10)* *(title shortened from "Condo vs. Single-Family Residence in Littleton's Spring Market: Which Makes Sense for First-Time Buyers?" for SERP CTR; original preserved in `headline` frontmatter field)*
   - Specialization: `/first-time-homebuyers` | Geographic: `/littleton`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Direct comparison for first-time buyers weighing a $400K Littleton condo vs. a $550K Littleton SFR. HOA fee differential, equity build trajectory, maintenance reality, appreciation patterns by property type, and the Q1 2026 sale velocity comparison.
   - Target keywords: condo vs single family Littleton, first-time buyer Littleton condo, Littleton townhome first-time buyer, buying first home Littleton
-  - Visual: comparison-table (condo vs SFR × 8 metrics)
+  - Visual: comparison-table (Tier 0, library) — condo / townhome under $600K (n=53) vs. starter SFR $500K–$700K (n=92) × 6 metrics (sample, median close, finished sqft, $/sqft, DIM, CP/OLP). Won Compelling Question Flow over two-path-diptych (22) and a stretch equity-curve mini-chart (18) — comparison-table 23. Calendar pre-spec of 8 metrics trimmed to 6 hard-data MLS cells; down payment math and HOA economics carried in prose to keep the table scannable on mobile.
 
 ---
 
