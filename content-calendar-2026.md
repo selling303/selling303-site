@@ -352,12 +352,12 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
 ### Week 2: May 12–18
 
 #### Day 8 — Tuesday, May 12
-- [ ] **"Spec Home vs. Custom Build in Parker: A 2026 Cost-Per-Square-Foot Comparison"**
+- [x] **"Spec Home vs. Custom Build in Parker (2026)"** *(drafted 2026-05-11)* *(title shortened from "Spec Home vs. Custom Build in Parker: A 2026 Cost-Per-Square-Foot Comparison" for SERP CTR; original preserved in `headline` frontmatter field)*
   - Specialization: `/new-construction` | Geographic: `/parker`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Real cost-per-square-foot data on Parker spec inventory vs. custom-build contracts. Builder upgrade markups, the timing trade-off, lot-premium dynamics, what's negotiable in spec vs. custom, and how 2026 builder incentive packages distort the headline price comparison.
   - Target keywords: spec home vs custom build Parker, Parker new construction cost, Parker builder upgrades, build or buy Parker Colorado
-  - Visual: comparison-table (spec vs. custom × 7 cost categories)
+  - Visual: comparison-table (Tier 0, library) — 7 cost categories × 2 paths (spec inventory vs. custom build). Won Compelling Question Flow over two-path-diptych (21) and stretch settlement-statement (19) — comparison-table 22. Spec column anchored in REcolorado MLS April 2026 Parker closings (n=181, $274 PSF Fin median, $681K median close, 16-day median DIM); custom column anchored in NAHB Cost of Constructing a Home + Front Range custom-build guidance. Data asymmetry acknowledged inline — spec captured by MLS, custom rarely on MLS.
 
 #### Day 9 — Wednesday, May 13
 - [ ] **"How to Move Up From Lakewood to Highlands Ranch: 2026 Equity and Carrying-Cost Math"**
