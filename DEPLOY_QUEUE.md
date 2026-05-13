@@ -8,6 +8,7 @@ _(queue cleared after 2026-05-09 production deploy — see DEPLOY_LOG.md)_
 
 ## Pending
 
+- **2026-05-13 [RSS feed]** Added RSS feed at `/rss.xml` for Apple News Publisher ingest and general syndication (Feedly, Perplexity discovery, etc.). New file `src/pages/rss.xml.js` using `@astrojs/rss` reads the blog content collection, sorts by date desc, renders full post body via `markdown-it` + `sanitize-html`. Added autodiscovery `<link rel="alternate" type="application/rss+xml">` to `src/layouts/BaseLayout.astro` head. New deps: `@astrojs/rss ^4.0.18`, `markdown-it ^14.1.1`, `sanitize-html ^2.17.4`. Sandbox can't run a full `npm run build` (FUSE + disk constraints) — Netlify will be the first full build verification on next `live` deploy. Code is syntactically clean (`node --check` passed) and the route is additive only (no impact on existing pages).
 - 2026-05-11 [SEO-AEO] Week 4 audit ran with fresh pull_all data (first clean weekly run). Total 29.26 / 100 (Δ -5.39 vs Wk3 monthly). Real signals: UTM bleed 89% → 53%, surname-collision dropping, CTR check shows 19/21 ranking pages leaking. Details in `~/Documents/Claude/Projects/aeo-seo-expert/DEPLOY_QUEUE.md`.
 - 2026-05-11 [SEO-AEO] Sprint #1: PSI fix on `/blog/why-house-not-selling-denver` — mobile perf 0.41 (LCP 4744ms). Single-blog regression. Profile + ship next week.
 - 2026-05-11 [SEO-AEO] Sprint #2: TITLE-LEN top-5 rewrites. 19 of 21 ranking pages leak CTR. Me drafts 3 candidates per blog; Jacob picks one each.
