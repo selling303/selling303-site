@@ -360,12 +360,12 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: comparison-table (Tier 0, library) — 7 cost categories × 2 paths (spec inventory vs. custom build). Won Compelling Question Flow over two-path-diptych (21) and stretch settlement-statement (19) — comparison-table 22. Spec column anchored in REcolorado MLS April 2026 Parker closings (n=181, $274 PSF Fin median, $681K median close, 16-day median DIM); custom column anchored in NAHB Cost of Constructing a Home + Front Range custom-build guidance. Data asymmetry acknowledged inline — spec captured by MLS, custom rarely on MLS.
 
 #### Day 9 — Wednesday, May 13
-- [ ] **"How to Move Up From Lakewood to Highlands Ranch: 2026 Equity and Carrying-Cost Math"**
+- [x] **"Move Up From Lakewood to Highlands Ranch: 2026 Cost Math"** *(drafted 2026-05-12)* *(title shortened from "How to Move Up From Lakewood to Highlands Ranch: 2026 Equity and Carrying-Cost Math" for SERP CTR; original preserved in `headline` frontmatter field)*
   - Specialization: `/move-up-sellers` | Geographic: `/lakewood`
   - Type: Seller advice | Funnel: MOFU
   - Angle: Trade-up financial path for Lakewood owners who have rebuilt equity post-2022. Median Lakewood SFR equity vs. Highlands Ranch entry price, mortgage payment differential at current rates, sell-first vs. buy-first mechanics across two counties, and the timing windows that work in spring 2026.
   - Target keywords: Lakewood to Highlands Ranch move, Jefferson County to Douglas County move, sell Lakewood buy HR, move-up from Lakewood
-  - Visual: cost-breakdown (flag-only — Phase 3 builder dependency)
+  - Visual: settlement-statement (Tier 0, library) — full Lakewood-to-HR move-up net sheet anchored in REcolorado MLS April 2026 medians (Lakewood n=199 @ $580K, HR n=131 @ $737K). Won Compelling Question Flow over two-path-diptych (22) and comparison-table (20), and over a stretch dual-column-net-sheet (21, lost on mobile). The reader's question is "do I have enough cash?" — settlement statement is the canonical pattern.
 
 #### Day 10 — Thursday, May 14
 - [ ] **"The Englewood-to-Centennial Move-Up Path: Trading Walkability for Square Footage"**
