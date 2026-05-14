@@ -368,7 +368,7 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: settlement-statement (Tier 0, library) — full Lakewood-to-HR move-up net sheet anchored in REcolorado MLS April 2026 medians (Lakewood n=199 @ $580K, HR n=131 @ $737K). Won Compelling Question Flow over two-path-diptych (22) and comparison-table (20), and over a stretch dual-column-net-sheet (21, lost on mobile). The reader's question is "do I have enough cash?" — settlement statement is the canonical pattern.
 
 #### Day 10 — Thursday, May 14
-- [ ] **"The Englewood-to-Centennial Move-Up Path: Trading Walkability for Square Footage"**
+- [x] **"The Englewood-to-Centennial Move-Up Path: Trading Walkability for Square Footage"** *(drafted 2026-05-14)* *(title shortened to "Englewood to Centennial Move-Up: 2026 Trade Math" for SERP CTR; original preserved in `headline` frontmatter field)*
   - Specialization: `/move-up-sellers` | Geographic: `/englewood`
   - Type: Seller advice | Funnel: MOFU
   - Angle: Common second-home move from Englewood ($500K–$700K starter) to Centennial ($700K–$900K family home). What you trade going east — walkability, transit, urban edge — for what you gain — square footage, lot size, schools-adjacent amenities. Equity math on the typical 5–7 year hold.

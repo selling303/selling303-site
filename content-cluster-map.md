@@ -38,6 +38,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - How to Time Your Move-Up Sale in Castle Pines Without Ending Up Homeless (`/blog/move-up-timing-castle-pines-2026`)
 - Move-Up Seller Myth: Why "Waiting for the Market" Is Costing You Money in Lakewood (`/blog/move-up-seller-myth-waiting-market-better-lakewood-2026`)
 - Move Up From Lakewood to Highlands Ranch: 2026 Cost Math (`/blog/lakewood-to-highlands-ranch-move-up-equity-carrying-cost-2026`)
+- Englewood to Centennial Move-Up: 2026 Trade Math (`/blog/englewood-to-centennial-move-up-trade-off-2026`)
 - South Denver April 2026 Closings: What Move-Up Sellers Need to Know Heading Into May (`/blog/south-denver-april-2026-closings-move-up-sellers`)
 - South Denver Homeowner's 2026 Notice of Valuation Protest Playbook (`/blog/2026-notice-of-valuation-protest-playbook-south-denver`)
 - The Greenwood Village Empty-Nester Move: When the Right-Sizing Math Actually Pencils (`/blog/greenwood-village-empty-nester-right-sizing-math-2026`)
