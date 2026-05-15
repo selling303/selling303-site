@@ -376,12 +376,12 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: none
 
 #### Day 11 — Friday, May 15
-- [ ] **"A First-Time Seller's Net Sheet for Littleton — How the 3-County Quirk Affects Your Costs"**
+- [x] **"A First-Time Seller's Net Sheet for Littleton — How the 3-County Quirk Affects Your Costs"** *(drafted 2026-05-15, slug: `littleton-first-time-seller-net-sheet-3-county-2026`, shipped as **comparison-table Tier 0**)*
   - Specialization: `/first-time-homesellers` | Geographic: `/littleton`
   - Type: Seller advice | Funnel: MOFU
-  - Angle: Littleton spans Arapahoe, Jefferson, and Douglas counties via mailing address — and each county has different transfer fees, recording costs, and title structures. Real Littleton net sheet at the $675K median, broken out by county, with side-by-side comparison of the same hypothetical home in each.
+  - Angle: Littleton spans Arapahoe, Jefferson, and Douglas counties via mailing address — and each county has different transfer fees, recording costs, and title structures. Real Littleton net sheet at the $650K April 2026 median (REcolorado MLS n=292), broken out by county, with side-by-side comparison of the same hypothetical home in each.
   - Target keywords: cost to sell home Littleton CO, Littleton net sheet, first-time seller Littleton, Littleton 3-county home sale costs
-  - Visual: cost-breakdown (flag-only — Phase 3 builder dependency)
+  - Visual: comparison-table (3 counties × 8 cost line items + total row; the original `cost-breakdown` Phase 3 builder dependency was overridden by the Compelling Question Flow — comparison-table was the canonical narrative job for the 3-way comparison)
 
 #### Day 12 — Saturday, May 16
 - [ ] **"Lone Tree Relocation Guide: DTC Commute, RidgeGate, and What Tech Professionals Should Know"**
