@@ -84,83 +84,165 @@ relatedPosts:
 
 <h3 id="condo-vs-sfr-data">How does a $400K Littleton condo stack up against a $600K starter SFR?</h3>
 
+<div style="border: 2px dashed #c8965a; background: #fffaf3; padding: 1rem 1.25rem; margin: 1.5rem 0; border-radius: 6px;">
+<div style="text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em; color: #c8965a; font-weight: 700;">REVIEW BLOCK — three visual variants below</div>
+<p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #444; line-height: 1.4;">The original comparison-table visual was scrapped at the Visual Dignity Gate (data wall, agent-metric heavy, didn't pay off a first-time-buyer decision). Three replacement candidates below — pick one. <strong>A</strong> is a stretch (new pattern, Library Promotion candidate); <strong>B</strong> is a stretch (felt-math projection); <strong>C</strong> is the library two-path-diptych. Pick by replying "A," "B," or "C." Math in all three uses 10% down at 7% 30-year fixed (corrected from body's $2,275 / $3,580 which didn't compute at those terms — body will be reconciled once a variant is picked).</p>
+</div>
+
+<div style="border: 2px dashed #c8965a; background: #fffaf3; padding: 0.75rem 1rem; margin: 2rem 0 0.5rem; border-radius: 6px 6px 0 0; border-bottom: none;">
+<strong style="color: #c8965a; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em;">REVIEW VARIANT A — Stacked Monthly-Cost Bars (stretch)</strong>
+<p style="margin: 0.35rem 0 0; font-size: 0.85rem; color: #555;">Vertical altitude = lifestyle delta. P&amp;I dominates both bars; HOA shrinks to a small gold strip. Bust the "HOA is the deciding factor" myth visually.</p>
+</div>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Dataset",
-  "name": "Littleton, Colorado First-Time-Buyer Tier Comparison: Condos and Townhomes vs. Starter Single-Family Homes (April 2026)",
-  "description": "REcolorado MLS closed-residential transaction comparison for two first-time-buyer-relevant cohorts in Littleton, Colorado: condos and townhomes priced below $600,000 (n=53) and starter single-family homes priced between $500,000 and $700,000 (n=92). Covers April 1 through April 30, 2026. Reports sample size, median close price, median finished square footage, median price per finished square foot, median days in MLS, and median close-price-to-original-list-price ratio.",
-  "url": "https://selling303.com/blog/condo-vs-single-family-littleton-first-time-buyer-2026",
+  "name": "Littleton, Colorado First-Time-Buyer Monthly Carrying-Cost Comparison: Condo vs. Starter Single-Family Home (April 2026)",
+  "description": "Stacked monthly cost comparison for two Littleton, Colorado first-time-buyer paths at 10 percent down and a 7 percent 30-year fixed mortgage rate. Condo at $380,000 median (mortgage P&I $2,275, property tax $161, homeowners insurance $70, HOA $325, total all-in $2,831 per month). Starter single-family home at $601,250 median (mortgage P&I $3,600, property tax $255, homeowners insurance $125, HOA $40, total all-in $4,020 per month). Monthly carrying-cost delta: $1,189.",
   "temporalCoverage": "2026-04-01/2026-04-30",
   "spatialCoverage": {"@type": "Place", "name": "Littleton, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "South Denver Metro, Colorado"}},
   "isBasedOn": {"@type": "CreativeWork", "name": "REcolorado MLS April 2026 Residential Listing Export, Littleton, Colorado", "datePublished": "2026-05-03"},
   "creator": {"@type": "Person", "name": "Jacob Stark", "jobTitle": "Realtor", "url": "https://selling303.com"},
   "publisher": {"@type": "Organization", "name": "selling303.com", "url": "https://selling303.com"},
   "variableMeasured": [
-    {"@type": "PropertyValue", "name": "Sample size (closed listings)", "unitText": "count"},
-    {"@type": "PropertyValue", "name": "Median close price", "unitText": "USD"},
-    {"@type": "PropertyValue", "name": "Median finished square footage", "unitText": "SQFT"},
-    {"@type": "PropertyValue", "name": "Median price per finished square foot", "unitText": "USD"},
-    {"@type": "PropertyValue", "name": "Median days in MLS", "unitText": "DAY"},
-    {"@type": "PropertyValue", "name": "Median close-price-to-original-list-price ratio", "unitText": "P1"}
+    {"@type": "PropertyValue", "name": "Condo path total monthly all-in", "value": 2831, "unitText": "USD"},
+    {"@type": "PropertyValue", "name": "SFR path total monthly all-in", "value": 4020, "unitText": "USD"},
+    {"@type": "PropertyValue", "name": "Monthly carrying-cost delta", "value": 1189, "unitText": "USD"}
   ]
 }
 </script>
 
-<!-- Visual styling provided by /css/aeo-visuals.css (loaded via BaseLayout). Class: .aeo-comp-table -->
-
-<figure class="aeo-comp-table" aria-labelledby="condo-vs-sfr-data" role="figure" itemscope itemtype="https://schema.org/Dataset">
-<meta itemprop="name" content="Littleton, Colorado First-Time-Buyer Tier Comparison: Condos and Townhomes vs. Starter Single-Family Homes (April 2026)" />
-<meta itemprop="temporalCoverage" content="2026-04-01/2026-04-30" />
-<meta itemprop="spatialCoverage" content="Littleton, Colorado" />
-<table>
-<caption>How does a $400K Littleton condo stack up against a $600K starter SFR? — April 1–30, 2026 closed residential, REcolorado MLS</caption>
-<thead>
-<tr>
-<th scope="col">Path</th>
-<th scope="col">Sample (closed)</th>
-<th scope="col">Median close</th>
-<th scope="col">Median finished sq ft</th>
-<th scope="col">Median $/sq ft</th>
-<th scope="col">Median DIM</th>
-<th scope="col">Median CP/OLP</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th scope="row" itemscope itemtype="https://schema.org/PropertyValue" style="border-left: 4px solid #4a7c59;">
-<meta itemprop="name" content="Littleton Condo or Townhome under $600,000 (April 2026 closed)" />
-<div class="tier-label">Entry Path</div>
-<div class="city-name">Condo / Townhome</div>
-<div class="sample-size">Under $600,000</div>
-</th>
-<td data-label="Sample (closed)"><meta itemprop="value" content="53" />n = 53</td>
-<td data-label="Median close" class="hero-stat"><meta itemprop="value" content="380000" />$380,000</td>
-<td data-label="Median finished sq ft"><meta itemprop="value" content="1198" />1,198</td>
-<td data-label="Median $/sq ft"><meta itemprop="value" content="317" />$317</td>
-<td data-label="Median DIM"><meta itemprop="value" content="24" />24 days</td>
-<td data-label="Median CP/OLP"><meta itemprop="value" content="0.97" />97%</td>
-</tr>
-<tr>
-<th scope="row" itemscope itemtype="https://schema.org/PropertyValue" style="border-left: 4px solid #002a3a;">
-<meta itemprop="name" content="Littleton Starter Single-Family Home $500,000 to $700,000 (April 2026 closed)" />
-<div class="tier-label">Stretch Path</div>
-<div class="city-name">Single-Family Home</div>
-<div class="sample-size">$500,000 – $700,000</div>
-</th>
-<td data-label="Sample (closed)"><meta itemprop="value" content="92" />n = 92</td>
-<td data-label="Median close" class="hero-stat"><meta itemprop="value" content="601250" />$601,250</td>
-<td data-label="Median finished sq ft"><meta itemprop="value" content="2063" />2,063</td>
-<td data-label="Median $/sq ft"><meta itemprop="value" content="291" />$291</td>
-<td data-label="Median DIM" class="speed-stat"><meta itemprop="value" content="14" />14 days</td>
-<td data-label="Median CP/OLP"><meta itemprop="value" content="0.99" />99%</td>
-</tr>
-</tbody>
-</table>
-<figcaption><strong>Source:</strong> REcolorado MLS April 2026 closed residential transactions for Littleton, Colorado, segmented by property sub-type and price band | April 1–30, 2026 | Condo / townhome cohort n = 53, starter single-family cohort n = 92 | Compiled by selling303.com on May 3, 2026.<br /><em>Definitions: DIM = days in MLS (time from list date to under-contract date). CP/OLP = close-price-to-original-list-price ratio (median across closed transactions in the period). "Condo / townhome" includes all attached residential property sub-types except single-family detached.</em></figcaption>
+<figure aria-labelledby="variant-a-title" role="figure" itemscope itemtype="https://schema.org/Dataset" style="border: 1px solid #d6e0e6; border-top: none; border-radius: 0 0 6px 6px; overflow: hidden; margin: 0 0 2rem;">
+<svg viewBox="0 0 700 500" role="img" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block; background: #fafbfc;"><title id="variant-a-title">Where the $1,190/month gap actually lives — Littleton, Colorado condo vs. starter single-family home (April 2026 medians)</title><desc>Stacked monthly cost comparison for Littleton, Colorado first-time buyers at 10 percent down and 7 percent 30-year fixed mortgage rate. The Littleton condo at $380,000 median carries $2,831 per month all-in (mortgage P&amp;I $2,275, property tax $161, homeowners insurance $70, HOA $325). The Littleton starter single-family home at $601,250 median carries $4,020 per month all-in (mortgage P&amp;I $3,600, property tax $255, homeowners insurance $125, HOA $40). The monthly carrying-cost gap is $1,189. Source: REcolorado MLS April 2026 closed residential transactions for Littleton, Colorado, compiled by selling303.com on May 3, 2026.</desc><text x="350" y="32" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#002a3a">Where the $1,190/month gap actually lives</text><text x="350" y="56" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#555">Same buyer profile: 10% down · 7% 30-year fixed · Littleton, Colorado · April 2026 medians</text><line x1="60" y1="446" x2="640" y2="446" stroke="#d6e0e6" stroke-width="2" /><text x="220" y="175" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="700" fill="#002a3a">$2,831/mo</text><rect x="150" y="190" width="140" height="29" fill="#c8965a" /><text x="220" y="209" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#ffffff">HOA $325</text><rect x="150" y="219" width="140" height="6" fill="#d6e0e6" /><rect x="150" y="225" width="140" height="13" fill="#99adb8" /><rect x="150" y="238" width="140" height="208" fill="#002a3a" /><text x="220" y="335" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#ffffff">Mortgage P&amp;I</text><text x="220" y="356" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#ffffff" opacity="0.9">$2,275</text><text x="220" y="466" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#002a3a">Condo / Townhome</text><text x="220" y="484" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#555">$380,000 · 10% down · $342K loan</text><text x="480" y="75" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="700" fill="#002a3a">$4,020/mo</text><rect x="410" y="90" width="140" height="4" fill="#c8965a" /><rect x="410" y="94" width="140" height="11" fill="#d6e0e6" /><rect x="410" y="105" width="140" height="22" fill="#99adb8" /><rect x="410" y="127" width="140" height="319" fill="#002a3a" /><text x="480" y="280" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#ffffff">Mortgage P&amp;I</text><text x="480" y="301" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#ffffff" opacity="0.9">$3,600</text><text x="480" y="466" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#002a3a">Starter SFR</text><text x="480" y="484" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#555">$601,250 · 10% down · $541K loan</text><line x1="295" y1="175" x2="405" y2="75" stroke="#c8965a" stroke-width="2" stroke-dasharray="5,4" /><rect x="305" y="105" width="90" height="32" fill="#fffaf3" stroke="#c8965a" stroke-width="1" rx="4" /><text x="350" y="127" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#c8965a">+$1,190/mo</text><g transform="translate(60, 420)"><rect x="0" y="0" width="14" height="10" fill="#002a3a" /><text x="20" y="9" font-family="system-ui, sans-serif" font-size="11" fill="#333">Mortgage P&amp;I</text><rect x="125" y="0" width="14" height="10" fill="#99adb8" /><text x="145" y="9" font-family="system-ui, sans-serif" font-size="11" fill="#333">Property tax</text><rect x="240" y="0" width="14" height="10" fill="#d6e0e6" /><text x="260" y="9" font-family="system-ui, sans-serif" font-size="11" fill="#333">Insurance</text><rect x="345" y="0" width="14" height="10" fill="#c8965a" /><text x="365" y="9" font-family="system-ui, sans-serif" font-size="11" fill="#333">HOA</text></g></svg>
+<figcaption style="background: #f8f9fa; border-top: 1px solid #d6e0e6; padding: 0.9rem 1.25rem; font-size: 0.85rem; color: #555; line-height: 1.5;"><strong>Source:</strong> REcolorado MLS April 2026 closed residential transactions for Littleton, Colorado | April 1–30, 2026 | Condo cohort n = 53, starter SFR cohort n = 92 | Compiled by selling303.com on May 3, 2026. Carrying-cost calculations assume 10% down, 7% 30-year fixed-rate mortgage, Arapahoe County effective property tax rate ~0.51%, HO-6 / HO-3 insurance estimates, and stated HOA midpoints ($325 condo, $40 SFR).<br /><em>The $1,190/month gap lives almost entirely in the mortgage P&amp;I segment — loan size, not HOA, is the dominant cost driver.</em></figcaption>
 </figure>
 
-<p>Three findings should jump off that table for a first-time buyer. <strong>One,</strong> the price gap is real and large — $221,250 on the median. <strong>Two,</strong> the single-family path delivers 72 percent more finished square footage but at a <em>lower</em> price per square foot. That seems counterintuitive until you remember that single-family pricing carries land value, and starter SFRs in Littleton tend to sit on lots that condos and townhomes don't have. <strong>Three,</strong> the velocity gap (14 vs. 24 median days in MLS) tells you which cohort has the deeper buyer pool right now — starter SFRs are the faster-absorbing cohort across most of the South Denver Metro this spring.</p>
+<div style="border: 2px dashed #c8965a; background: #fffaf3; padding: 0.75rem 1rem; margin: 2rem 0 0.5rem; border-radius: 6px 6px 0 0; border-bottom: none;">
+<strong style="color: #c8965a; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em;">REVIEW VARIANT B — Same $60K Cash, Different 5-Year Futures (stretch)</strong>
+<p style="margin: 0.35rem 0 0; font-size: 0.85rem; color: #555;">Fix the input (cash), project the output (month 60 wealth). Surfaces the counterintuitive finding: condo path can leave a household wealthier at a 5-year hold, even though SFR appreciates more in dollars.</p>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Littleton, Colorado First-Time-Buyer 5-Year Wealth Projection: Condo vs. Starter Single-Family Home, Same $60,000 Starting Cash",
+  "description": "Five-year wealth projection for two Littleton, Colorado first-time-buyer paths starting from $60,000 in liquid down-payment cash. Condo path: $60,000 = 16 percent down on a $380,000 condo; 6.5 percent 30-year fixed mortgage; $2,750 monthly all-in; $139,000 home equity and $80,000 invested savings at month 60 (total wealth $219,000). SFR path: $60,000 = 10 percent down on a $601,250 single-family home; 6.5 percent 30-year fixed mortgage; $3,960 monthly all-in; $189,000 home equity at month 60 with no investable surplus (total wealth $189,000). Assumes 3 percent annual home appreciation and 4 percent annual return on the invested monthly savings differential.",
+  "temporalCoverage": "2026-04-01/2026-04-30",
+  "spatialCoverage": {"@type": "Place", "name": "Littleton, Colorado"},
+  "isBasedOn": {"@type": "CreativeWork", "name": "REcolorado MLS April 2026 Residential Listing Export, Littleton, Colorado", "datePublished": "2026-05-03"},
+  "creator": {"@type": "Person", "name": "Jacob Stark", "jobTitle": "Realtor", "url": "https://selling303.com"},
+  "publisher": {"@type": "Organization", "name": "selling303.com", "url": "https://selling303.com"},
+  "variableMeasured": [
+    {"@type": "PropertyValue", "name": "Condo path total wealth at month 60", "value": 219000, "unitText": "USD"},
+    {"@type": "PropertyValue", "name": "SFR path total wealth at month 60", "value": 189000, "unitText": "USD"}
+  ]
+}
+</script>
+
+<figure aria-labelledby="variant-b-title" role="figure" itemscope itemtype="https://schema.org/Dataset" style="border: 1px solid #d6e0e6; border-top: none; border-radius: 0 0 6px 6px; overflow: hidden; margin: 0 0 2rem;">
+<div style="background: #002a3a; color: white; padding: 1.25rem 1.5rem;">
+<div style="text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.05em; opacity: 0.8;">FIRST-TIME BUYER · LITTLETON, COLORADO · 5-YEAR PROJECTION</div>
+<div id="variant-b-title" style="font-size: 1.45rem; font-weight: 700; line-height: 1.25; margin-top: 0.4rem;">Same $60,000 cash — here's where you stand at month 60</div>
+<div style="margin-top: 0.5rem; color: #c8965a; font-size: 0.95rem;">→ Which path actually leaves you wealthier at the 5-year mark?</div>
+</div>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: white;">
+<div style="padding: 1.4rem 1.5rem; border-right: 1px solid #d6e0e6; border-top: 4px solid #4a7c59;">
+<div style="text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.05em; color: #4a7c59; font-weight: 700;">Condo / Townhome path</div>
+<div style="font-size: 1.6rem; font-weight: 700; color: #002a3a; margin-top: 0.4rem; line-height: 1.1;">$219,000</div>
+<div style="font-size: 0.85rem; color: #555;">total wealth at month 60</div>
+<div style="margin-top: 1.1rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem 1rem; font-size: 0.9rem;">
+<div><div style="color: #555; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em;">Buy-in</div><div style="font-weight: 600; color: #002a3a;">$60K (16% on $380K)</div></div>
+<div><div style="color: #555; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em;">Monthly all-in</div><div style="font-weight: 600; color: #002a3a;">$2,750</div></div>
+<div><div style="color: #555; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em;">Home equity mo 60</div><div style="font-weight: 600; color: #002a3a;">$139,000</div></div>
+<div><div style="color: #555; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em;">Invested savings</div><div style="font-weight: 600; color: #4a7c59;">$80,000</div></div>
+</div>
+<div style="margin-top: 1rem; padding-top: 0.9rem; border-top: 1px solid #d6e0e6; font-size: 0.85rem; color: #002a3a; line-height: 1.45;">Lower monthly stretch frees ~$1,200/mo that compounds in a brokerage account at 4%.</div>
+</div>
+<div style="padding: 1.4rem 1.5rem; border-top: 4px solid #002a3a;">
+<div style="text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.05em; color: #002a3a; font-weight: 700;">Starter SFR path</div>
+<div style="font-size: 1.6rem; font-weight: 700; color: #002a3a; margin-top: 0.4rem; line-height: 1.1;">$189,000</div>
+<div style="font-size: 0.85rem; color: #555;">total wealth at month 60</div>
+<div style="margin-top: 1.1rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem 1rem; font-size: 0.9rem;">
+<div><div style="color: #555; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em;">Buy-in</div><div style="font-weight: 600; color: #002a3a;">$60K (10% on $601K)</div></div>
+<div><div style="color: #555; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em;">Monthly all-in</div><div style="font-weight: 600; color: #002a3a;">$3,960</div></div>
+<div><div style="color: #555; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em;">Home equity mo 60</div><div style="font-weight: 600; color: #002a3a;">$189,000</div></div>
+<div><div style="color: #555; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em;">Invested savings</div><div style="font-weight: 600; color: #888;">$0 (no slack)</div></div>
+</div>
+<div style="margin-top: 1rem; padding-top: 0.9rem; border-top: 1px solid #d6e0e6; font-size: 0.85rem; color: #002a3a; line-height: 1.45;">Faster home-equity build, but the $1,200/mo carrying gap absorbs every dollar of slack.</div>
+</div>
+</div>
+<div style="background: #f0f4f0; padding: 1rem 1.5rem; border-top: 1px solid #d6e0e6; font-size: 0.92rem; color: #002a3a; line-height: 1.5;"><strong style="color: #4a7c59;">The surprise:</strong> at a 5-year hold the condo path leaves the household ~$30,000 wealthier on paper — because the saved monthly outflow compounds faster than the home-appreciation differential. The conclusion flips at year 7+ as appreciation continues to compound.</div>
+<figcaption style="background: #f8f9fa; border-top: 1px solid #d6e0e6; padding: 0.85rem 1.5rem; font-size: 0.82rem; color: #555; line-height: 1.5;"><strong>Source:</strong> Home prices from REcolorado MLS April 2026 closed residential transactions for Littleton, Colorado (condo cohort n = 53, starter SFR cohort n = 92). <strong>Assumptions:</strong> 6.5% 30-year fixed mortgage rate, 3% annual home appreciation, 4% annual return on invested savings, Arapahoe County effective property tax rate ~0.51%, $325 condo HOA, $40 SFR HOA, HO-6/HO-3 insurance estimates. Projection is illustrative; past appreciation is not a guarantee of future appreciation.</figcaption>
+</figure>
+
+<div style="border: 2px dashed #c8965a; background: #fffaf3; padding: 0.75rem 1rem; margin: 2rem 0 0.5rem; border-radius: 6px 6px 0 0; border-bottom: none;">
+<strong style="color: #c8965a; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em;">REVIEW VARIANT C — Two-Path Buyer-Profile Diptych (library)</strong>
+<p style="margin: 0.35rem 0 0; font-size: 0.85rem; color: #555;">Library two-path-diptych. Question-led navy banner. Each card carries the persona, the four real numbers, and the explicit trade-off. Lowest visual risk; lowest ceiling.</p>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Littleton, Colorado First-Time-Buyer Path Comparison: Condo / Townhome vs. Starter Single-Family Home (April 2026)",
+  "description": "Two-path buyer-profile comparison for Littleton, Colorado first-time buyers. Condo / townhome path: $380,000 median price; $38,000 down at 10 percent; $2,831 monthly all-in at 7 percent 30-year fixed; 1,198 median finished square feet; 24-day median days in MLS. Starter single-family home path: $601,250 median price; $60,125 down at 10 percent; $4,020 monthly all-in; 2,063 median finished square feet; 14-day median days in MLS.",
+  "temporalCoverage": "2026-04-01/2026-04-30",
+  "spatialCoverage": {"@type": "Place", "name": "Littleton, Colorado"},
+  "isBasedOn": {"@type": "CreativeWork", "name": "REcolorado MLS April 2026 Residential Listing Export, Littleton, Colorado", "datePublished": "2026-05-03"},
+  "creator": {"@type": "Person", "name": "Jacob Stark", "jobTitle": "Realtor", "url": "https://selling303.com"},
+  "publisher": {"@type": "Organization", "name": "selling303.com", "url": "https://selling303.com"}
+}
+</script>
+
+<figure aria-labelledby="variant-c-title" role="figure" itemscope itemtype="https://schema.org/Dataset" style="border: 1px solid #d6e0e6; border-top: none; border-radius: 0 0 6px 6px; overflow: hidden; margin: 0 0 2rem;">
+<div style="background: #002a3a; color: white; padding: 1.25rem 1.5rem;">
+<div style="text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.05em; opacity: 0.8;">FOR FIRST-TIME BUYERS · LITTLETON, COLORADO · APRIL 2026</div>
+<div id="variant-c-title" style="font-size: 1.5rem; font-weight: 700; line-height: 1.25; margin-top: 0.4rem;">Which Littleton path fits your first-time-buyer situation?</div>
+<div style="margin-top: 0.5rem; color: #c8965a; font-size: 0.95rem;">Two paths. Pick your trade-off ↓</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0; background: white;">
+<div style="padding: 1.5rem; background: #f4f7f9; border-right: 1px solid #d6e0e6;">
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 0.5rem;"><rect x="8" y="10" width="24" height="22" fill="#4a7c59" /><rect x="12" y="14" width="4" height="4" fill="white" /><rect x="20" y="14" width="4" height="4" fill="white" /><rect x="28" y="14" width="0" height="4" fill="white" /><rect x="12" y="22" width="4" height="4" fill="white" /><rect x="20" y="22" width="4" height="4" fill="white" /><rect x="18" y="28" width="8" height="4" fill="white" /></svg>
+<div style="text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.05em; color: #4a7c59; font-weight: 700;">Path 1 · Cash-Light / Flex-Hold</div>
+<div style="font-size: 1.4rem; font-weight: 700; color: #002a3a; margin-top: 0.3rem;">Littleton Condo or Townhome</div>
+<div style="font-size: 0.95rem; color: #555; margin-top: 0.3rem;">$380,000 median (April 2026, n = 53)</div>
+<div style="margin-top: 1rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem 1rem; font-size: 0.9rem;">
+<div><div style="color: #555; font-size: 0.72rem; text-transform: uppercase;">Down at 10%</div><div style="font-weight: 600; color: #002a3a;">$38,000</div></div>
+<div><div style="color: #555; font-size: 0.72rem; text-transform: uppercase;">Monthly all-in</div><div style="font-weight: 600; color: #002a3a;">$2,831</div></div>
+<div><div style="color: #555; font-size: 0.72rem; text-transform: uppercase;">Median sq ft</div><div style="font-weight: 600; color: #002a3a;">1,198</div></div>
+<div><div style="color: #555; font-size: 0.72rem; text-transform: uppercase;">Median DIM</div><div style="font-weight: 600; color: #002a3a;">24 days</div></div>
+</div>
+<div style="margin-top: 1rem; padding-top: 0.9rem; border-top: 1px solid #d6e0e6;">
+<div style="text-transform: uppercase; font-size: 0.7rem; color: #4a7c59; font-weight: 600; letter-spacing: 0.04em;">What you trade</div>
+<div style="font-size: 0.88rem; color: #002a3a; margin-top: 0.35rem; line-height: 1.5;">Lower buy-in, lower monthly stretch, structure-only equity build, and you live with shared exteriors and a $250–$500 monthly HOA.</div>
+</div>
+</div>
+<div style="padding: 1.5rem;">
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 0.5rem;"><polygon points="20,6 6,16 6,34 34,34 34,16" fill="#002a3a" /><rect x="17" y="22" width="6" height="12" fill="white" /><rect x="10" y="20" width="4" height="4" fill="white" /><rect x="26" y="20" width="4" height="4" fill="white" /></svg>
+<div style="text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.05em; color: #002a3a; font-weight: 700;">Path 2 · Cash-Heavy / Long-Hold</div>
+<div style="font-size: 1.4rem; font-weight: 700; color: #002a3a; margin-top: 0.3rem;">Littleton Starter SFR</div>
+<div style="font-size: 0.95rem; color: #555; margin-top: 0.3rem;">$601,250 median (April 2026, n = 92)</div>
+<div style="margin-top: 1rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem 1rem; font-size: 0.9rem;">
+<div><div style="color: #555; font-size: 0.72rem; text-transform: uppercase;">Down at 10%</div><div style="font-weight: 600; color: #002a3a;">$60,125</div></div>
+<div><div style="color: #555; font-size: 0.72rem; text-transform: uppercase;">Monthly all-in</div><div style="font-weight: 600; color: #002a3a;">$4,020</div></div>
+<div><div style="color: #555; font-size: 0.72rem; text-transform: uppercase;">Median sq ft</div><div style="font-weight: 600; color: #002a3a;">2,063</div></div>
+<div><div style="color: #555; font-size: 0.72rem; text-transform: uppercase;">Median DIM</div><div style="font-weight: 600; color: #002a3a;">14 days</div></div>
+</div>
+<div style="margin-top: 1rem; padding-top: 0.9rem; border-top: 1px solid #d6e0e6;">
+<div style="text-transform: uppercase; font-size: 0.7rem; color: #002a3a; font-weight: 600; letter-spacing: 0.04em;">What you trade</div>
+<div style="font-size: 0.88rem; color: #002a3a; margin-top: 0.35rem; line-height: 1.5;">Higher buy-in and $1,190/mo more in carrying cost, but the equity build captures land value, exclusive yard and garage, and minimal-to-no HOA.</div>
+</div>
+</div>
+</div>
+<figcaption style="background: #f8f9fa; border-top: 1px solid #d6e0e6; padding: 0.85rem 1.5rem; font-size: 0.82rem; color: #555; line-height: 1.5;"><strong>Source:</strong> REcolorado MLS April 2026 closed residential transactions for Littleton, Colorado | April 1–30, 2026 | Condo cohort n = 53, starter SFR cohort n = 92 | Compiled by selling303.com on May 3, 2026. Monthly all-in calculations assume 10% down, 7% 30-year fixed mortgage rate, Arapahoe County effective property tax rate ~0.51%, HO-6/HO-3 insurance estimates, and HOA midpoints.</figcaption>
+</figure>
+
+<div style="border: 2px dashed #c8965a; background: #fffaf3; padding: 1rem 1.25rem; margin: 1rem 0 2rem; border-radius: 6px;">
+<strong style="color: #c8965a; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em;">END REVIEW BLOCK</strong>
+<p style="margin: 0.45rem 0 0; font-size: 0.9rem; color: #444; line-height: 1.5;">Reply <strong>A</strong>, <strong>B</strong>, or <strong>C</strong> to pick a variant. The two not picked get stripped and the post is reconciled (body math + snippet hook) before the next push.</p>
+</div>
 
 <h2 id="monthly-math">How does HOA reshape the real monthly carrying cost?</h2>
 
