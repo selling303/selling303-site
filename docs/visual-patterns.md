@@ -246,7 +246,7 @@ Two failure modes this rule prevents:
 - `<svg role="img">` with `<title>` (1-sentence summary) and `<desc>` (3–4 citable sentences with all key stats — this is what AI engines quote as alt text)
 - Source baked into SVG as `<text>` element so it travels if scraped as image
 
-**Lift from:** Reference SVG retained in commit `1dd3d0a` (now stripped from the live Lakewood post but preserved in git history). When ready to ship, lift the SVG block and adapt the data points.
+**Lift from:** `src/content/blog/lone-tree-relocation-guide-dtc-tech-professionals-2026.md` — **first live shipment of `price-ladder-svg`** (2026-05-15). 4-tier ladder for Lone Tree, Colorado relocating tech professionals — Tier 1 $325K–$500K Park Meadows condos / Tier 2 $500K–$750K South Lone Tree townhomes / Tier 3 $750K–$1.2M RidgeGate move-up SFR / Tier 4 $1.2M+ RidgeGate / Heritage Hills luxury. Bar widths scale to median finished square footage at each tier (115→180→290→420px). Tier chips on the left carry a gold accent (`#c8965a`) on the price-band line per the brand color spec. Source `<text>` baked into the SVG at y=450 plus a bound `<figcaption>` outside the SVG (both inside the `<figure>` wrapper). Won Compelling Question Flow over `profile-card-grid` (tied at 24, tiebreaker on canonical fit + pattern freshness — 2 profile-card-grids shipped in the prior 8 days, 0 price-ladder-svg ships ever) and `comparison-table` (21). Reference SVG retained in commit `1dd3d0a` is now superseded — lift from this post instead.
 
 **When NOT to use:** if there are only 2 tiers (use `two-path-diptych`), if the scaling dimension isn't visually meaningful (use `comparison-table`), or if the tiers don't progress monotonically (use `profile-card-grid`).
 
@@ -370,7 +370,7 @@ These are visual concepts that have been brainstormed but have not yet won a rea
 
 # Maintenance
 
-- This file lives at `~/selling303-site/docs/visual-patterns.md`.
+- This file lives at `~/Documents/Claude/projects/selling303-site/docs/visual-patterns.md`.
 - The blog-post-writer skill reads it during Stage 1 visual brainstorming.
 - The aeo-visual-builder skill references the lift-from posts to assemble new visuals.
 - New pattern promotions are added at the top of the relevant section with the new lift-from post and a delivery-message note.

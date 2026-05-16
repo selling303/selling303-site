@@ -384,12 +384,12 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: comparison-table (3 counties × 8 cost line items + total row; the original `cost-breakdown` Phase 3 builder dependency was overridden by the Compelling Question Flow — comparison-table was the canonical narrative job for the 3-way comparison)
 
 #### Day 12 — Saturday, May 16
-- [ ] **"Lone Tree Relocation Guide: DTC Commute, RidgeGate, and What Tech Professionals Should Know"**
+- [x] **"Lone Tree Relocation Guide: DTC Commute, RidgeGate, and What Tech Professionals Should Know"** *(drafted 2026-05-15, slug: `lone-tree-relocation-guide-dtc-tech-professionals-2026`, title shortened to "Lone Tree Relocation for DTC Tech Professionals (2026)" for SERP CTR; original preserved in `headline` frontmatter; shipped as **price-ladder-svg Tier 0** — first live shipment of the pattern, Compelling Question Flow override from calendar's `Visual: none` advisory)*
   - Specialization: `/relocation` | Geographic: `/lone-tree`
   - Type: Local area topic | Funnel: TOFU
   - Angle: Lone Tree relocation guide tuned for tech professionals relocating to the Denver Tech Center corridor. Light-rail and I-25 commute realities, RidgeGate's mixed-use development, Lone Tree-vs-DTC condo trade-offs, school district lines, and price-tier scenarios from $700K starter to $2M+ luxury.
   - Target keywords: moving to Lone Tree Colorado, Lone Tree relocation guide, DTC Denver tech center relocation, RidgeGate Lone Tree
-  - Visual: none
+  - Visual: price-ladder-svg (4 tiers × median sqft scaling — overrode calendar `Visual: none` advisory; Compelling Question Flow scored price-ladder-svg 24, profile-card-grid 24 tied, comparison-table 21; tiebreaker on narrative fit, pattern freshness, and library-first-live promotion)
 
 #### Day 13 — Sunday, May 17
 - [ ] **"Highlands Ranch New Construction for Empty-Nesters: How to Right-Size Without Leaving the Suburb"**
