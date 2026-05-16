@@ -313,7 +313,38 @@ Two failure modes this rule prevents:
 
 ---
 
-## 7. `settlement-statement`
+## 7. `stacked-cost-bar-comparison`
+
+**Use when the compelling question is:** *"Where does the cost / financial gap between [Path A] and [Path B] actually live?"* — when the post compares two scenarios on a totaled financial metric AND the component breakdown is the punch line (which segment dominates, which segment shrinks the reader's intuition).
+
+**Narrative type:** Vertical stacked-bar comparison. Two bars side by side. Total bar height carries the headline metric (monthly all-in, total deal cost, net-sheet bottom line). Stacked segments break the total into components. The altitude difference between bars makes the gap physically felt; the segment proportions bust intuition mistakes about which component drives the gap.
+
+**Raw data shape:** Two scenarios. Each scenario has 3–5 component values (e.g., P&I, tax, insurance, HOA for a monthly carrying-cost compare; OR commission, concessions, title, prep, prorated tax for a net-sheet compare). Each scenario also carries a total and a 1–2-line identifier (price, down payment, scenario label).
+
+**Brand styling:**
+- Single inline SVG (viewBox 700×500 default; keep as one continuous block, no blank lines per Astro markdown rules)
+- Visible title (17–20px navy bold) at top leads with the comparison name AND the gap number AND the qualified entity (Visual Hero Rule). Subtitle (12–13px gray) carries the assumption block plus entity qualifier so the bitmap travels self-contained when scraped by AI or image-search engines.
+- Bar geometry: two bars, 140px wide, side by side with ~120px gap between. Scale chosen so the larger bar's total height is ~300–350px. Both bars baseline-aligned at the bottom.
+- Segment colors (bottom-up, by financial weight): navy `#002a3a` for the dominant segment (P&I, mortgage, commission), mid-gray `#99adb8` for the secondary segment (taxes, concessions), light gray `#d6e0e6` for the tertiary segment (insurance, title), gold accent `#c8965a` for the differentiator segment (HOA, prep budget). The gold segment is the one whose size relative to expectation drives the visual surprise.
+- Per-bar headline stat (`$X/mo` or `$Xk total`) in 22px navy bold floats above each bar's top, NOT inside the bar.
+- Sub-label below each bar (city + scenario identifier in two 12–14px lines).
+- Diagonal gold dashed line connects the two bar tops to a delta callout in the middle (`+$X/mo` in 14px gold bold inside a small white pill with gold border).
+- Legend across the bottom (4 small rectangles + 11px labels) keyed to segment colors.
+- Source baked into figcaption (NOT in SVG `<text>`, per Source Placement Rule) inside the same `<figure>` wrapper.
+
+**Schema.org payload:**
+- `<figure itemscope itemtype="https://schema.org/Dataset">` wrapper
+- Parallel JSON-LD `Dataset` block BEFORE the figure with full metadata (temporalCoverage, spatialCoverage, isBasedOn, creator, publisher, variableMeasured for each scenario's total + the delta)
+- SVG `<title>` and `<desc>` carry citable summary sentences with every key number (P&I, tax, insurance, HOA, totals, delta) so AI engines can quote them verbatim
+- NO `<meta>` void elements inside the SVG (per rule 13b in aeo-visual-builder) — all per-segment Microdata lives in the parallel JSON-LD only
+
+**Lift from:** `src/content/blog/condo-vs-single-family-littleton-first-time-buyer-2026.md` — first stacked-cost-bar-comparison on the site. Two Littleton, Colorado scenarios (condo $2,831/mo all-in vs. starter SFR $4,020/mo all-in) segmented by P&I, tax, insurance, HOA. The bars showed P&I as the dominant segment on both sides; the HOA segment on the condo bar is small relative to the mortgage stack — busting the "HOA fees are the deciding factor" myth most first-time buyers walk in with. Promoted to the library on 2026-05-10 after winning a stretch-vs-library A/B/C review against Variant B (5-year wealth projection) and Variant C (two-path-diptych).
+
+**When NOT to use:** if the compelling question is "which path fits me?" (use `two-path-diptych` for the persona fork or `decision-path` for routing); if there's only one total to compare (use `single-metric-bar-chart`); if there are 3+ scenarios (use `comparison-table`); if the post hangs on a tiered progression rather than a binary financial compare (use `price-ladder-svg`).
+
+---
+
+## 8. `settlement-statement`
 
 **Use when the compelling question is:** *"What does [a transaction] actually cost, line by line?"* — when the post is a financial breakdown and the reader needs to see categories and a total.
 
@@ -353,6 +384,7 @@ A quick lookup for the writer's brainstorming step:
 | "What does $X buy at each tier?" (tiered progression with scale) | `price-ladder-svg` |
 | "How does X compare on this one metric?" (single number across 3–5 entities) | `single-metric-bar-chart` |
 | "How do I decide between Path A and Path B?" (3–5 priority-routing questions) | `decision-path` |
+| "Where does the financial gap between two scenarios actually live?" (two scenarios × component breakdown) | `stacked-cost-bar-comparison` |
 | "What does a transaction actually cost?" (financial line-by-line breakdown) | `settlement-statement` |
 | None of the above is a strong fit | **Library Gap trigger — prototype 2–3 stretch candidates** |
 
