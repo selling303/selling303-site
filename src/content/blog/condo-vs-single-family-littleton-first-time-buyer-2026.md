@@ -8,7 +8,7 @@ category: "Comparisons"
 tag: "Buying"
 readTime: "9 min read"
 heroLabel: "Buyer Advice"
-heroSubtext: "First-time buyer math on the $400K Littleton condo vs. the $600K Littleton starter house — what April 2026 closings actually show."
+heroSubtext: "First-time buyer math on the $400K Littleton condo vs. the $600K Littleton starter house: what April 2026 closings actually show."
 cardStat: "$220K"
 cardStatLabel: "Littleton SFR–condo gap (Apr 2026)"
 ogImage: "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=1200&h=630&fit=crop&q=80"
@@ -45,7 +45,7 @@ relatedPosts:
 ---
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
-<strong>Condo or starter house in Littleton for a first-time buyer in 2026?</strong> April 2026: condos closed at $380,000 (24-day median); SFRs at $601,250 (14-day median). The $220K gap reshapes downpayment, carrying cost, and equity build more than HOA fees.
+<strong>Should I buy a Littleton condo or a starter house as a first-time buyer in 2026?</strong> The $220K sticker gap is the headline, but the $1,300/month carrying-cost delta is the real one. Which path wins depends on hold-time and monthly stretch — not HOA fees.
 </div>
 
 <div style="background: #f0f4f0; border-left: 4px solid #4a7c59; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
