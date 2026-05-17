@@ -62,7 +62,7 @@ relatedPosts:
 <strong>In this guide:</strong>
 <ol style="margin: 0.5rem 0 0 1.25rem; padding: 0;">
 <li><a href="#april-snapshot">What did Parker new-construction pricing actually look like in April 2026?</a></li>
-<li><a href="#spec-vs-custom-data">How does Parker spec inventory compare to custom build on cost per square foot?</a></li>
+<li><a href="#spec-vs-custom-data">Can you have fast move-in AND custom design in a Parker new build?</a></li>
 <li><a href="#upgrade-markups">What do builder upgrade markups actually add to the headline price?</a></li>
 <li><a href="#lot-premium">How does the lot premium reshape the math on each path?</a></li>
 <li><a href="#timeline-trade-off">What does the 12-to-18-month timeline trade-off actually cost?</a></li>
@@ -86,14 +86,14 @@ relatedPosts:
 
 <p>That data asymmetry shapes the comparison. The spec column uses Parker's actual April 2026 MLS numbers. The custom column uses industry-benchmark hard-construction-cost ranges from the <a href="https://www.nahb.org/blog/2024/11/cost-of-constructing-a-home-2024/" target="_blank" rel="noopener">NAHB Cost of Constructing a Home survey</a>, adjusted upward for Front Range labor and material costs, which run meaningfully above the national average.</p>
 
-<h3 id="spec-vs-custom-data">How does Parker spec inventory compare to custom build on cost per square foot?</h3>
+<h3 id="spec-vs-custom-data">Can you have fast move-in AND custom design in a Parker new build?</h3>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Dataset",
-  "name": "Parker, Colorado New Construction Comparison: Builder Spec Inventory vs. Custom Build (2026)",
-  "description": "REcolorado MLS April 2026 closed residential transaction data for Parker, Colorado (n=181) anchors the spec inventory column. Custom build benchmarks pull from NAHB Cost of Constructing a Home and Front Range custom-build cost guidance. Compares seven cost and timing dimensions: sample anchor, median price per finished square foot, lot premium handling, design and upgrade scope, timeline from contract to close, change order risk, and total delivered cost on an $850,000 budget scenario.",
+  "name": "Parker, Colorado New Construction Trade-Off: Spec Home vs. Custom Build positioned on time-to-move-in and design-decisions-you-control axes (2026)",
+  "description": "Two-dimensional positioning of the two real Parker new-construction paths. Spec home zone: 30 to 90 days from contract to keys, few design decisions, 850,000 to 925,000 dollars all-in delivered cost, anchored in REcolorado MLS April 2026 Parker single-family closings (n=181, 681,000 dollar median close, 11-day median days in MLS, 99 percent close-price-to-original-list-price ratio, 275 dollars per finished square foot median). Custom build zone: 12 to 18 months from contract to certificate of occupancy, hundreds of design decisions controlled by the buyer, 1.1 million to 1.4 million-plus dollars all-in delivered cost, anchored in NAHB Cost of Constructing a Home plus Front Range custom-build cost guidance, with a separate lot purchase of 150,000 to 400,000 dollars on top of hard construction at 290 to 400 dollars per finished square foot. The fast-plus-customizable upper-left quadrant of the time-and-design-control space does not exist as a real Parker new-construction option in 2026.",
   "url": "https://selling303.com/blog/spec-home-vs-custom-build-parker-2026",
   "temporalCoverage": "2026-04-01/2026-04-30",
   "spatialCoverage": {"@type": "Place", "name": "Parker, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Douglas County, Colorado"}},
@@ -104,108 +104,88 @@ relatedPosts:
   "creator": {"@type": "Person", "name": "Jacob Stark", "jobTitle": "Realtor", "url": "https://selling303.com"},
   "publisher": {"@type": "Organization", "name": "selling303.com", "url": "https://selling303.com"},
   "variableMeasured": [
-    {"@type": "PropertyValue", "name": "Sample anchor", "unitText": "count"},
-    {"@type": "PropertyValue", "name": "Median price per finished square foot", "unitText": "USD"},
-    {"@type": "PropertyValue", "name": "Lot premium handling", "unitText": "USD"},
-    {"@type": "PropertyValue", "name": "Design and upgrade scope", "unitText": "USD"},
-    {"@type": "PropertyValue", "name": "Timeline contract to close", "unitText": "MON"},
-    {"@type": "PropertyValue", "name": "Change order risk", "unitText": "P1"},
-    {"@type": "PropertyValue", "name": "Total delivered cost at $850K base", "unitText": "USD"}
+    {"@type": "PropertyValue", "name": "Time to move in (months from contract)", "unitText": "MON", "minValue": 1, "maxValue": 18},
+    {"@type": "PropertyValue", "name": "Design decisions controlled by buyer", "unitText": "count", "minValue": 0, "maxValue": 250},
+    {"@type": "PropertyValue", "name": "Total delivered cost all-in", "unitText": "USD", "minValue": 850000, "maxValue": 1400000}
   ]
 }
 </script>
 
-<!-- Visual styling provided by /css/aeo-visuals.css (loaded via BaseLayout). Class: .aeo-comp-table -->
-
-<figure class="aeo-comp-table" aria-labelledby="spec-vs-custom-data" role="figure" itemscope itemtype="https://schema.org/Dataset">
-<meta itemprop="name" content="Parker, Colorado New Construction Comparison: Builder Spec Inventory vs. Custom Build (2026)" />
+<figure aria-labelledby="spec-vs-custom-data" role="figure" itemscope itemtype="https://schema.org/Dataset" style="margin: 2rem 0; background: white; border: 1px solid #d6e0e6; border-radius: 8px; overflow: hidden;">
+<meta itemprop="name" content="Parker, Colorado New Construction Trade-Off Frontier: Spec Home vs. Custom Build positioned on time and design control (2026)" />
 <meta itemprop="temporalCoverage" content="2026-04-01/2026-04-30" />
 <meta itemprop="spatialCoverage" content="Parker, Colorado" />
-<table>
-<caption>How does Parker spec inventory compare to custom build on cost per square foot? — April 1–30, 2026 closed residential, REcolorado MLS, plus NAHB and Front Range custom-build benchmarks</caption>
-<thead>
-<tr>
-<th scope="col">Cost / timing category</th>
-<th scope="col">Builder spec inventory</th>
-<th scope="col">Custom build</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th scope="row" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="name" content="Sample anchor" />
-<div class="tier-label">Anchor</div>
-<div class="city-name">Sample / source</div>
-</th>
-<td data-label="Builder spec inventory"><meta itemprop="value" content="181" />n = 181 Parker SFR closings (April 2026 REcolorado MLS)</td>
-<td data-label="Custom build">NAHB Cost of Constructing a Home + Front Range builder guidance (no MLS sample — custom rarely closes on the MLS)</td>
-</tr>
-<tr>
-<th scope="row" itemscope itemtype="https://schema.org/PropertyValue" style="border-left: 4px solid #4a7c59;">
-<meta itemprop="name" content="Median price per finished square foot" />
-<div class="tier-label">Headline PSF</div>
-<div class="city-name">$ per finished sq ft</div>
-</th>
-<td data-label="Builder spec inventory" class="hero-stat"><meta itemprop="value" content="275" />$275 (median, Parker April 2026)</td>
-<td data-label="Custom build" class="hero-stat"><meta itemprop="value" content="345" />$290–$400 hard construction, before lot</td>
-</tr>
-<tr>
-<th scope="row" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="name" content="Lot premium handling" />
-<div class="tier-label">Lot</div>
-<div class="city-name">Lot cost</div>
-</th>
-<td data-label="Builder spec inventory"><meta itemprop="value" content="0" />Bundled into purchase price (lot premium $10K–$75K typical on a builder lot map)</td>
-<td data-label="Custom build"><meta itemprop="value" content="275000" />$150,000–$400,000 separate land purchase (Parker infill or finished subdivision lot)</td>
-</tr>
-<tr>
-<th scope="row" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="name" content="Design and upgrade scope" />
-<div class="tier-label">Upgrades</div>
-<div class="city-name">Design scope</div>
-</th>
-<td data-label="Builder spec inventory"><meta itemprop="value" content="0" />Limited to already-installed package; minor cosmetic changes only if home is pre-drywall</td>
-<td data-label="Custom build"><meta itemprop="value" content="100000" />Open-ended — typical $75,000–$150,000+ over base depending on finish level and discipline</td>
-</tr>
-<tr>
-<th scope="row" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="name" content="Timeline contract to close" />
-<div class="tier-label">Timeline</div>
-<div class="city-name">Contract to close</div>
-</th>
-<td data-label="Builder spec inventory" class="speed-stat"><meta itemprop="value" content="2" />30–90 days (similar to resale)</td>
-<td data-label="Custom build"><meta itemprop="value" content="15" />12–18 months from lot close to certificate of occupancy</td>
-</tr>
-<tr>
-<th scope="row" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="name" content="Change order risk" />
-<div class="tier-label">Risk</div>
-<div class="city-name">Change orders</div>
-</th>
-<td data-label="Builder spec inventory"><meta itemprop="value" content="0.02" />Minimal — home is built, structural changes off the table</td>
-<td data-label="Custom build"><meta itemprop="value" content="0.10" />5–15% budget creep typical without strong discipline (NAHB)</td>
-</tr>
-<tr>
-<th scope="row" itemscope itemtype="https://schema.org/PropertyValue">
-<meta itemprop="name" content="Total delivered cost at $850K base" />
-<div class="tier-label">Total</div>
-<div class="city-name">Delivered cost</div>
-</th>
-<td data-label="Builder spec inventory"><meta itemprop="value" content="900000" />$850K–$925K (base + minor cosmetic + post-close items)</td>
-<td data-label="Custom build"><meta itemprop="value" content="1250000" />$1.1M–$1.4M+ (lot + hard construction + design + financing carry + post-close)</td>
-</tr>
-</tbody>
-</table>
-<figcaption><strong>Source:</strong> REcolorado MLS April 2026 closed residential transactions for Parker, Colorado, n=181 single-family closings | April 1–30, 2026 | Median close $681,000 | Median DIM 11 days | Median CP/OLP 99% | Median $275 PSF Finished, $323 PSF Above-grade | Compiled by selling303.com on May 3, 2026. Custom-build benchmarks from <a href="https://www.nahb.org/" target="_blank" rel="noopener">NAHB Cost of Constructing a Home</a> and Front Range custom-builder cost guidance. Delivered-cost scenarios assume a comparable 2,500-square-foot finished footprint.<br /><em>Definitions: PSF Fin = price per finished square foot. DIM = days in MLS (time from list date to under-contract date). "Spec inventory" = builder-listed quick-move-in or build-to-order inventory closed on the MLS. "Custom build" = lot-purchase plus general-contractor build, typically not closed via the MLS.</em></figcaption>
+<div itemprop="hasPart" itemscope itemtype="https://schema.org/PropertyValue" style="display:none">
+<meta itemprop="name" content="Spec Home — Parker April 2026 all-in delivered cost" />
+<meta itemprop="value" content="900000" />
+<meta itemprop="minValue" content="850000" />
+<meta itemprop="maxValue" content="925000" />
+<meta itemprop="unitText" content="USD" />
+<meta itemprop="description" content="30 to 90 days contract to keys. Few design decisions — limited to builder's already-installed package." />
+</div>
+<div itemprop="hasPart" itemscope itemtype="https://schema.org/PropertyValue" style="display:none">
+<meta itemprop="name" content="Custom Build — Parker 2026 all-in delivered cost" />
+<meta itemprop="value" content="1250000" />
+<meta itemprop="minValue" content="1100000" />
+<meta itemprop="maxValue" content="1400000" />
+<meta itemprop="unitText" content="USD" />
+<meta itemprop="description" content="12 to 18 months contract to certificate of occupancy. Hundreds of design decisions — every floor plan, finish, fixture, and lot detail." />
+</div>
+<svg viewBox="0 0 700 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="frontier-title frontier-desc" style="width: 100%; height: auto; display: block;">
+<title id="frontier-title">Parker new construction in 2026: pick your corner. You can move in fast, or you can pick every detail. You cannot do both.</title>
+<desc id="frontier-desc">A two-axis position plot showing the two real Parker new-construction paths in 2026. The Spec Home zone sits in the lower-left of the plot: 30 to 90 days from contract to keys, few design decisions controlled by the buyer, 850 thousand to 925 thousand dollars all-in delivered cost. The Custom Build zone sits in the upper-right: 12 to 18 months from contract to certificate of occupancy, hundreds of design decisions controlled by the buyer, 1.1 million to 1.4 million-plus dollars all-in delivered cost. The upper-left quadrant — fast move-in plus full design control — does not exist as a real Parker new-construction option. A dashed frontier line connects the two real zones, labeled as the trade-off the buyer actually has. Source: REcolorado MLS April 2026 Parker single-family closings, n=181, 681 thousand dollar median close, 11-day median days in MLS, 275 dollars per finished square foot median.</desc>
+<rect x="0" y="0" width="700" height="68" fill="#002a3a"/>
+<text x="20" y="24" fill="#c8965a" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing="1.2">PARKER NEW CONSTRUCTION • 2026</text>
+<text x="20" y="46" fill="white" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="700">Pick your corner — you can't have both.</text>
+<text x="20" y="62" fill="white" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-style="italic" opacity="0.9">Move in fast with the builder's choices, or wait a year and pick every detail.</text>
+<rect x="90" y="88" width="590" height="332" fill="#f4f7f9"/>
+<line x1="90" y1="171" x2="680" y2="171" stroke="#d6e0e6" stroke-width="1" stroke-dasharray="2,3"/>
+<line x1="90" y1="254" x2="680" y2="254" stroke="#d6e0e6" stroke-width="1" stroke-dasharray="2,3"/>
+<line x1="90" y1="337" x2="680" y2="337" stroke="#d6e0e6" stroke-width="1" stroke-dasharray="2,3"/>
+<line x1="287" y1="88" x2="287" y2="420" stroke="#d6e0e6" stroke-width="1" stroke-dasharray="2,3"/>
+<line x1="484" y1="88" x2="484" y2="420" stroke="#d6e0e6" stroke-width="1" stroke-dasharray="2,3"/>
+<line x1="90" y1="420" x2="680" y2="420" stroke="#002a3a" stroke-width="2"/>
+<line x1="90" y1="88" x2="90" y2="420" stroke="#002a3a" stroke-width="2"/>
+<text x="84" y="94" fill="#555" font-family="system-ui, -apple-system, sans-serif" font-size="11" text-anchor="end" font-weight="700">Hundreds</text>
+<text x="84" y="175" fill="#555" font-family="system-ui, -apple-system, sans-serif" font-size="11" text-anchor="end">Many</text>
+<text x="84" y="258" fill="#555" font-family="system-ui, -apple-system, sans-serif" font-size="11" text-anchor="end">Some</text>
+<text x="84" y="341" fill="#555" font-family="system-ui, -apple-system, sans-serif" font-size="11" text-anchor="end">Few</text>
+<text x="84" y="416" fill="#555" font-family="system-ui, -apple-system, sans-serif" font-size="11" text-anchor="end">0</text>
+<text x="90" y="438" fill="#555" font-family="system-ui, -apple-system, sans-serif" font-size="11" text-anchor="middle">0 mo</text>
+<text x="287" y="438" fill="#555" font-family="system-ui, -apple-system, sans-serif" font-size="11" text-anchor="middle">6 mo</text>
+<text x="484" y="438" fill="#555" font-family="system-ui, -apple-system, sans-serif" font-size="11" text-anchor="middle">12 mo</text>
+<text x="680" y="438" fill="#555" font-family="system-ui, -apple-system, sans-serif" font-size="11" text-anchor="middle">18 mo</text>
+<text x="385" y="458" fill="#002a3a" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.8">TIME TO MOVE IN →</text>
+<text x="32" y="254" fill="#002a3a" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.8" transform="rotate(-90 32 254)">DESIGN DECISIONS YOU CONTROL</text>
+<rect x="108" y="105" width="220" height="80" fill="white" stroke="#999" stroke-width="1.5" stroke-dasharray="6,4" rx="8" opacity="0.92"/>
+<text x="218" y="132" fill="#888" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="800" text-anchor="middle" letter-spacing="0.5">DOESN'T EXIST</text>
+<text x="218" y="152" fill="#666" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-style="italic" text-anchor="middle">There is no fast</text>
+<text x="218" y="168" fill="#666" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-style="italic" text-anchor="middle">custom build.</text>
+<path d="M 240 358 Q 380 280 525 165" stroke="#c8965a" stroke-width="2.5" stroke-dasharray="6,5" fill="none"/>
+<text x="385" y="275" fill="#c8965a" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-style="italic" font-weight="600" text-anchor="middle">↑ the trade-off you actually have ↑</text>
+<rect x="108" y="310" width="220" height="100" fill="#002a3a" fill-opacity="0.08" stroke="#002a3a" stroke-width="2.5" rx="10"/>
+<text x="218" y="332" fill="#002a3a" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="800" text-anchor="middle" letter-spacing="0.8">SPEC HOME</text>
+<text x="218" y="362" fill="#002a3a" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800" text-anchor="middle">$850K–$925K</text>
+<text x="218" y="378" fill="#002a3a" font-family="system-ui, -apple-system, sans-serif" font-size="11" text-anchor="middle">all-in delivered cost</text>
+<text x="218" y="400" fill="#002a3a" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-style="italic" text-anchor="middle" font-weight="600">30–90 days. Builder's choices.</text>
+<rect x="465" y="105" width="215" height="100" fill="#4a7c59" fill-opacity="0.10" stroke="#4a7c59" stroke-width="2.5" rx="10"/>
+<text x="572" y="127" fill="#4a7c59" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="800" text-anchor="middle" letter-spacing="0.8">CUSTOM BUILD</text>
+<text x="572" y="157" fill="#4a7c59" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800" text-anchor="middle">$1.1M–$1.4M+</text>
+<text x="572" y="173" fill="#4a7c59" font-family="system-ui, -apple-system, sans-serif" font-size="11" text-anchor="middle">all-in delivered cost</text>
+<text x="572" y="195" fill="#4a7c59" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-style="italic" text-anchor="middle" font-weight="600">12–18 months. Every choice yours.</text>
+<text x="675" y="412" fill="#999" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-style="italic" text-anchor="end" opacity="0.8">stalled spec inventory sits here</text>
+<text x="20" y="488" fill="#666" font-family="system-ui, -apple-system, sans-serif" font-size="10">Source: REcolorado MLS April 2026 Parker SFR closings (n=181) + NAHB Cost of Constructing a Home + Front Range custom-build cost guidance | selling303.com</text>
+</svg>
+<figcaption style="background: #f8f9fa; border-top: 1px solid #d6e0e6; padding: 0.85rem 1.25rem; font-size: 0.85rem; color: #555; line-height: 1.55;"><strong>Source:</strong> Spec zone anchored in REcolorado MLS April 2026 closed residential transactions for Parker, Colorado | n=181 single-family closings | Median close $681,000 | Median DIM 11 days | Median CP/OLP 99% | Median $275 per finished square foot | Compiled by selling303.com on May 3, 2026. Custom zone anchored in <a href="https://www.nahb.org/" target="_blank" rel="noopener">NAHB Cost of Constructing a Home</a> survey plus Front Range custom-build cost guidance, with lot purchase ($150,000–$400,000) and hard construction ($290–$400 per finished square foot) as separate cost components.<br /><em>How to read this plot: the two zones are the two real Parker new-construction options, positioned by how long you wait to move in (x-axis) and how many design decisions you control (y-axis). The empty upper-left quadrant — fast move-in plus full design control — does not exist as a real option in 2026. The dashed gold curve is the trade-off frontier the buyer actually faces.</em></figcaption>
 </figure>
 
-<p>Three findings should jump off that table for a Parker new-construction buyer.</p>
+<p>Three things to notice on the plot.</p>
 
-<p><strong>One, spec inventory is the path with a real MLS anchor.</strong> $275 per finished square foot is a defensible number with 181 transactions behind it. Custom build does not have an MLS anchor, which is why the cost story relies on industry benchmarks and not on local comparable sales.</p>
+<p><strong>One, spec inventory anchors in real MLS data. Custom build does not.</strong> $275 per finished square foot is defensible with 181 closed Parker transactions behind it. Custom build benchmarks come from industry surveys because most custom builds close on construction loans outside the MLS.</p>
 
-<p><strong>Two, the lot is the silent multiplier.</strong> It is bundled into the spec price, but separated and visible on the custom side. A finished Parker lot in a desirable subdivision can run $250,000 to $400,000 on its own. An infill teardown in a mature Parker neighborhood can run $300,000 to $500,000 before a single shovel hits the ground.</p>
+<p><strong>Two, the empty upper-left quadrant is the punchline.</strong> If you want both fast move-in and full design control, that combination does not exist as a real Parker option in 2026. You pick one corner or the other.</p>
 
-<p><strong>Three, the timeline gap is the silent decider.</strong> Thirty to 90 days versus 12 to 18 months reshapes the entire decision for buyers who have an existing home to sell.</p>
+<p><strong>Three, the lot is the silent multiplier on the custom side.</strong> A finished Parker lot in a desirable subdivision runs $250,000 to $400,000 on its own. An infill teardown in a mature Parker neighborhood runs $300,000 to $500,000. Spec inventory bundles the lot into the purchase price. Custom separates it, and the line item is large.</p>
 
 <h2 id="upgrade-markups">What do builder upgrade markups actually add to the headline price?</h2>
 

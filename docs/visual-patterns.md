@@ -140,9 +140,43 @@ Two failure modes this rule prevents:
 
 ---
 
-# The Seven Patterns
+# The Nine Patterns
 
-## 1. `comparison-table`
+## 1. `trade-off-frontier`
+
+**Use when the compelling question is:** *"Can I have both [X] and [Y], or do I have to pick one?"* — when the post's answer is a fundamental trade-off between two variables that the reader instinctively wants to maximize together but cannot.
+
+**Narrative type:** Two-dimensional positioning. Two real options exist as zones in a 2D space defined by the two axes. A third "ideal corner" (max-X and max-Y) does NOT exist as a real option, and the visual makes that explicit by labeling the empty quadrant. The frontier between the two real zones is the constraint the reader is actually facing.
+
+**Raw data shape:** Two named options (e.g., Path A and Path B), each with: a value on Axis X (time, cost, size, etc.), a value on Axis Y (control, customization, certainty, etc.), a headline stat (typically total cost or total time), and a 1-line trade-off summary. Plus annotation for the empty "impossible" quadrant.
+
+**Brand styling:**
+- Navy header strip across the top with the post's compelling question as the hero headline (1.2rem+ bold) and a gold-accent answer-pointer underneath stating the impossibility ("You cannot do both" / "Pick a corner" / etc.)
+- Plot area below the hero, light blue-gray background (`#f4f7f9`)
+- 2-axis scaffold: navy axis lines, gray dashed gridlines, qualitative or quantitative tick labels on both axes
+- Axis titles in navy uppercase with arrows showing direction of increase
+- **The empty quadrant — this is where the visual earns its keep.** A dashed gray rounded rectangle sized to occupy the visual location where the "ideal but impossible" combination would sit, labeled with "DOESN'T EXIST" (bold gray) plus a 1-line explanation
+- **Zone A (Path A)**: rounded rectangle, navy 2.5px stroke, navy fill at 8% opacity, positioned at the data location. Contains a small uppercase label, large dollar tag (1.4rem+ bold), a one-line cost-anchor descriptor, and a one-line trade-off summary
+- **Zone B (Path B)**: same shape, green 2.5px stroke, green fill at 10% opacity, positioned in the opposite quadrant
+- **Frontier line**: dashed gold curve connecting the two zones, with a small italic label ("the trade-off you actually have") above the curve mid-arc
+- Optional subtle annotation in the unused empty quadrant (e.g., "stalled inventory sits here") in small gray italic
+- Source row baked into the SVG at the bottom + bound figcaption source row outside the SVG inside the figure wrapper
+
+**Schema.org payload:**
+- `<figure itemscope itemtype="https://schema.org/Dataset">` wrapper
+- `<meta>` props: name, temporalCoverage, spatialCoverage
+- Each zone: hidden `<div itemprop="hasPart" itemscope itemtype="https://schema.org/PropertyValue">` with name, value, minValue, maxValue, unitText, and description (carrying the trade-off attributes)
+- Parallel JSON-LD Dataset block in `<script type="application/ld+json">` with full variableMeasured array — the two axes plus the total cost dimension
+- `<title>` and `<desc>` inside SVG with the full insight in citable sentence form (this is what AI engines quote as alt text — write it as a complete narrative paragraph)
+- Source attribution baked into SVG as `<text>` element so it travels if scraped as an image
+
+**Lift from:** `src/content/blog/spec-home-vs-custom-build-parker-2026.md` — first trade-off-frontier on the site. Spec Home zone (lower-left: 30–90 days, few decisions, $850K–$925K) vs. Custom Build zone (upper-right: 12–18 months, hundreds of decisions, $1.1M–$1.4M+). Empty upper-left labeled "DOESN'T EXIST — There is no fast custom build." Dashed gold frontier curve connecting the two zones. Won a stretch-vs-library head-to-head on 2026-05-16 after Jacob explicitly rejected `comparison-table` (the initial pick that failed the Visual Dignity Gate on review) and `two-path-diptych` (proposed alternative) as "forcing a square peg into a round hole" — then named the axes idea (time vs. design choices) himself.
+
+**When NOT to use:** if the trade-off isn't a real constraint (i.e., the "ideal corner" actually IS achievable — use `two-path-diptych` instead); if the two options exist on a single continuum rather than in different quadrants (use `single-metric-bar-chart`); if the comparison has 3+ dimensions that all matter (use `comparison-table`); if there are 3+ legitimate paths positioned across the space rather than a binary fork (use `profile-card-grid`).
+
+---
+
+## 2. `comparison-table`
 
 **Use when the compelling question is:** *"How does [Entity A] compare to [Entity B / B / C] across multiple dimensions?"*
 
@@ -169,7 +203,7 @@ Two failure modes this rule prevents:
 
 ---
 
-## 2. `two-path-diptych`
+## 3. `two-path-diptych`
 
 **Use when the compelling question is:** *"Which path / option fits my situation?"* — and the post's answer is a fork between two distinct choices, not a ranking on a continuum.
 
@@ -195,7 +229,7 @@ Two failure modes this rule prevents:
 
 ---
 
-## 3. `profile-card-grid`
+## 4. `profile-card-grid`
 
 **Use when the compelling question is:** *"Which [entity / persona / place / option] is the best fit for me?"* — and the answer is "depends on you, here's how to self-select."
 
@@ -224,7 +258,7 @@ Two failure modes this rule prevents:
 
 ---
 
-## 4. `price-ladder-svg`
+## 5. `price-ladder-svg`
 
 **Use when the compelling question is:** *"What does $X actually buy at each tier?"* — and the post's narrative depends on visualizing scale (more dollars = more X).
 
@@ -252,7 +286,7 @@ Two failure modes this rule prevents:
 
 ---
 
-## 5. `single-metric-bar-chart`
+## 6. `single-metric-bar-chart`
 
 **Use when the compelling question is:** *"How does [city / option] compare on [one specific metric]?"* — when there is exactly one number that drives the post's argument.
 
@@ -281,7 +315,7 @@ Two failure modes this rule prevents:
 
 ---
 
-## 6. `decision-path`
+## 7. `decision-path`
 
 **Use when the compelling question is:** *"How do I decide between [Path A] and [Path B]?"* — when the post answers a binary fork by routing the reader through 3–5 prioritized questions, each with answer pills that point to one path or the other.
 
@@ -313,7 +347,7 @@ Two failure modes this rule prevents:
 
 ---
 
-## 7. `stacked-cost-bar-comparison`
+## 8. `stacked-cost-bar-comparison`
 
 **Use when the compelling question is:** *"Where does the cost / financial gap between [Path A] and [Path B] actually live?"* — when the post compares two scenarios on a totaled financial metric AND the component breakdown is the punch line (which segment dominates, which segment shrinks the reader's intuition).
 
@@ -344,7 +378,7 @@ Two failure modes this rule prevents:
 
 ---
 
-## 8. `settlement-statement`
+## 9. `settlement-statement`
 
 **Use when the compelling question is:** *"What does [a transaction] actually cost, line by line?"* — when the post is a financial breakdown and the reader needs to see categories and a total.
 
@@ -378,6 +412,7 @@ A quick lookup for the writer's brainstorming step:
 
 | Compelling question shape | Recommended pattern |
 |---|---|
+| "Can I have both X and Y, or do I have to pick one?" (binary trade-off with an "impossible" corner) | `trade-off-frontier` |
 | "How do A and B compare on multiple dimensions?" (3+ entities × 4+ metrics) | `comparison-table` |
 | "Which of two paths fits me?" (binary fork) | `two-path-diptych` |
 | "Which entity / persona / place is right for me?" (3–8 self-select options) | `profile-card-grid` |
