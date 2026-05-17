@@ -37,6 +37,8 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - Where South Denver Families Are Moving Up in 2026 (`/blog/spring-2026-move-up-market-report-south-denver`)
 - How to Time Your Move-Up Sale in Castle Pines Without Ending Up Homeless (`/blog/move-up-timing-castle-pines-2026`)
 - Move-Up Seller Myth: Why "Waiting for the Market" Is Costing You Money in Lakewood (`/blog/move-up-seller-myth-waiting-market-better-lakewood-2026`)
+- Why Lakewood Owners Choose Highlands Ranch Next (2026) (`/blog/lakewood-to-highlands-ranch-move-up-equity-carrying-cost-2026`)
+- Englewood to Centennial Move-Up: 2026 Trade Math (`/blog/englewood-to-centennial-move-up-trade-off-2026`)
 - South Denver April 2026 Closings: What Move-Up Sellers Need to Know Heading Into May (`/blog/south-denver-april-2026-closings-move-up-sellers`)
 - South Denver Homeowner's 2026 Notice of Valuation Protest Playbook (`/blog/2026-notice-of-valuation-protest-playbook-south-denver`)
 - The Greenwood Village Empty-Nester Move: When the Right-Sizing Math Actually Pencils (`/blog/greenwood-village-empty-nester-right-sizing-math-2026`)
@@ -51,6 +53,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - Closing Costs Breakdown for First-Time Buyers in Littleton (2026 Update) (`/blog/closing-costs-littleton-first-time-buyers-2026`)
 - What $500K Gets You in Centennial vs. Highlands Ranch vs. Parker (Spring 2026) (`/blog/500k-home-centennial-highlands-ranch-parker-2026`)
 - First-Time Home Buyer's Guide to Lakewood, Colorado (2026) (`/blog/first-time-home-buyer-guide-lakewood-colorado-2026`)
+- Condo vs. Starter House in Littleton for First-Time Buyers (`/blog/condo-vs-single-family-littleton-first-time-buyer-2026`)
 
 ### 4. First-Time Home Sellers (`/first-time-homesellers`)
 **Primary geographic ties:** Centennial, Littleton, Highlands Ranch (first-time seller volume in South Denver)
@@ -59,6 +62,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - Why Homes Sit on the Market in South Denver (`/blog/why-homes-sit-on-market-south-denver`)
 - Selling Your First Home in South Denver: What No One Tells You About the Process (`/blog/selling-first-home-south-denver-process`)
 - The Hidden Costs of Selling Your Home in Arapahoe County: A First-Time Seller's Net Sheet (`/blog/hidden-costs-selling-home-arapahoe-county-net-sheet-2026`)
+- Littleton Seller Net Sheet: The 3-County Cost Quirk (2026) (`/blog/littleton-first-time-seller-net-sheet-3-county-2026`)
 
 ### 5. Relocation (`/relocation`)
 **Primary geographic ties:** All 9 neighborhoods (relocation buyers need the full map)
@@ -71,6 +75,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - What Out-of-State Buyers Get Wrong About the Denver Suburbs (`/blog/out-of-state-buyer-mistakes-denver-suburbs-centennial`)
 - Is Greenwood Village Worth the Price Tag? A Relocation Buyer's Honest Assessment (`/blog/greenwood-village-worth-the-price-tag-relocation-2026`)
 - Moving to Littleton, Colorado: A Relocation Guide for 2026 (`/blog/moving-to-littleton-colorado-relocation-guide-2026`)
+- Lone Tree Relocation for DTC Tech Professionals (2026) (`/blog/lone-tree-relocation-guide-dtc-tech-professionals-2026`)
 
 ### 6. New Construction (`/new-construction`)
 **Primary geographic ties:** Parker, Castle Pines, Highlands Ranch, Lone Tree (active builder communities)
@@ -84,6 +89,8 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - Should You Build New in Parker or Buy Resale? A Cost-Per-Square-Foot Analysis (`/blog/build-new-or-buy-resale-parker-cost-per-square-foot`)
 - New Construction Buyer Representation in Colorado: What Changed in 2026 and Why It Matters (`/blog/new-construction-buyer-representation-colorado-2026`)
 - RidgeGate vs. Heritage Hills: A Lone Tree New Construction Update for 2026 (`/blog/ridgegate-vs-heritage-hills-lone-tree-new-construction-2026`)
+- Parker New Construction: Buy Off the Shelf or Build It? (`/blog/spec-home-vs-custom-build-parker-2026`)
+- Right-Size Inside Highlands Ranch: 3 New-Build Paths (2026) (`/blog/highlands-ranch-new-construction-empty-nester-right-size-2026`)
 
 ---
 

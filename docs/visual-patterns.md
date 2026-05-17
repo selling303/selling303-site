@@ -140,9 +140,43 @@ Two failure modes this rule prevents:
 
 ---
 
-# The Seven Patterns
+# The Nine Patterns
 
-## 1. `comparison-table`
+## 1. `trade-off-frontier`
+
+**Use when the compelling question is:** *"Can I have both [X] and [Y], or do I have to pick one?"* — when the post's answer is a fundamental trade-off between two variables that the reader instinctively wants to maximize together but cannot.
+
+**Narrative type:** Two-dimensional positioning. Two real options exist as zones in a 2D space defined by the two axes. A third "ideal corner" (max-X and max-Y) does NOT exist as a real option, and the visual makes that explicit by labeling the empty quadrant. The frontier between the two real zones is the constraint the reader is actually facing.
+
+**Raw data shape:** Two named options (e.g., Path A and Path B), each with: a value on Axis X (time, cost, size, etc.), a value on Axis Y (control, customization, certainty, etc.), a headline stat (typically total cost or total time), and a 1-line trade-off summary. Plus annotation for the empty "impossible" quadrant.
+
+**Brand styling:**
+- Navy header strip across the top with the post's compelling question as the hero headline (1.2rem+ bold) and a gold-accent answer-pointer underneath stating the impossibility ("You cannot do both" / "Pick a corner" / etc.)
+- Plot area below the hero, light blue-gray background (`#f4f7f9`)
+- 2-axis scaffold: navy axis lines, gray dashed gridlines, qualitative or quantitative tick labels on both axes
+- Axis titles in navy uppercase with arrows showing direction of increase
+- **The empty quadrant — this is where the visual earns its keep.** A dashed gray rounded rectangle sized to occupy the visual location where the "ideal but impossible" combination would sit, labeled with "DOESN'T EXIST" (bold gray) plus a 1-line explanation
+- **Zone A (Path A)**: rounded rectangle, navy 2.5px stroke, navy fill at 8% opacity, positioned at the data location. Contains a small uppercase label, large dollar tag (1.4rem+ bold), a one-line cost-anchor descriptor, and a one-line trade-off summary
+- **Zone B (Path B)**: same shape, green 2.5px stroke, green fill at 10% opacity, positioned in the opposite quadrant
+- **Frontier line**: dashed gold curve connecting the two zones, with a small italic label ("the trade-off you actually have") above the curve mid-arc
+- Optional subtle annotation in the unused empty quadrant (e.g., "stalled inventory sits here") in small gray italic
+- Source row baked into the SVG at the bottom + bound figcaption source row outside the SVG inside the figure wrapper
+
+**Schema.org payload:**
+- `<figure itemscope itemtype="https://schema.org/Dataset">` wrapper
+- `<meta>` props: name, temporalCoverage, spatialCoverage
+- Each zone: hidden `<div itemprop="hasPart" itemscope itemtype="https://schema.org/PropertyValue">` with name, value, minValue, maxValue, unitText, and description (carrying the trade-off attributes)
+- Parallel JSON-LD Dataset block in `<script type="application/ld+json">` with full variableMeasured array — the two axes plus the total cost dimension
+- `<title>` and `<desc>` inside SVG with the full insight in citable sentence form (this is what AI engines quote as alt text — write it as a complete narrative paragraph)
+- Source attribution baked into SVG as `<text>` element so it travels if scraped as an image
+
+**Lift from:** `src/content/blog/spec-home-vs-custom-build-parker-2026.md` — first trade-off-frontier on the site. Spec Home zone (lower-left: 30–90 days, few decisions, $850K–$925K) vs. Custom Build zone (upper-right: 12–18 months, hundreds of decisions, $1.1M–$1.4M+). Empty upper-left labeled "DOESN'T EXIST — There is no fast custom build." Dashed gold frontier curve connecting the two zones. Won a stretch-vs-library head-to-head on 2026-05-16 after Jacob explicitly rejected `comparison-table` (the initial pick that failed the Visual Dignity Gate on review) and `two-path-diptych` (proposed alternative) as "forcing a square peg into a round hole" — then named the axes idea (time vs. design choices) himself.
+
+**When NOT to use:** if the trade-off isn't a real constraint (i.e., the "ideal corner" actually IS achievable — use `two-path-diptych` instead); if the two options exist on a single continuum rather than in different quadrants (use `single-metric-bar-chart`); if the comparison has 3+ dimensions that all matter (use `comparison-table`); if there are 3+ legitimate paths positioned across the space rather than a binary fork (use `profile-card-grid`).
+
+---
+
+## 2. `comparison-table`
 
 **Use when the compelling question is:** *"How does [Entity A] compare to [Entity B / B / C] across multiple dimensions?"*
 
@@ -169,7 +203,7 @@ Two failure modes this rule prevents:
 
 ---
 
-## 2. `two-path-diptych`
+## 3. `two-path-diptych`
 
 **Use when the compelling question is:** *"Which path / option fits my situation?"* — and the post's answer is a fork between two distinct choices, not a ranking on a continuum.
 
@@ -195,7 +229,7 @@ Two failure modes this rule prevents:
 
 ---
 
-## 3. `profile-card-grid`
+## 4. `profile-card-grid`
 
 **Use when the compelling question is:** *"Which [entity / persona / place / option] is the best fit for me?"* — and the answer is "depends on you, here's how to self-select."
 
@@ -224,7 +258,7 @@ Two failure modes this rule prevents:
 
 ---
 
-## 4. `price-ladder-svg`
+## 5. `price-ladder-svg`
 
 **Use when the compelling question is:** *"What does $X actually buy at each tier?"* — and the post's narrative depends on visualizing scale (more dollars = more X).
 
@@ -246,13 +280,13 @@ Two failure modes this rule prevents:
 - `<svg role="img">` with `<title>` (1-sentence summary) and `<desc>` (3–4 citable sentences with all key stats — this is what AI engines quote as alt text)
 - Source baked into SVG as `<text>` element so it travels if scraped as image
 
-**Lift from:** Reference SVG retained in commit `1dd3d0a` (now stripped from the live Lakewood post but preserved in git history). When ready to ship, lift the SVG block and adapt the data points.
+**Lift from:** `src/content/blog/lone-tree-relocation-guide-dtc-tech-professionals-2026.md` — **first live shipment of `price-ladder-svg`** (2026-05-15). 4-tier ladder for Lone Tree, Colorado relocating tech professionals — Tier 1 $325K–$500K Park Meadows condos / Tier 2 $500K–$750K South Lone Tree townhomes / Tier 3 $750K–$1.2M RidgeGate move-up SFR / Tier 4 $1.2M+ RidgeGate / Heritage Hills luxury. Bar widths scale to median finished square footage at each tier (115→180→290→420px). Tier chips on the left carry a gold accent (`#c8965a`) on the price-band line per the brand color spec. Source `<text>` baked into the SVG at y=450 plus a bound `<figcaption>` outside the SVG (both inside the `<figure>` wrapper). Won Compelling Question Flow over `profile-card-grid` (tied at 24, tiebreaker on canonical fit + pattern freshness — 2 profile-card-grids shipped in the prior 8 days, 0 price-ladder-svg ships ever) and `comparison-table` (21). Reference SVG retained in commit `1dd3d0a` is now superseded — lift from this post instead.
 
 **When NOT to use:** if there are only 2 tiers (use `two-path-diptych`), if the scaling dimension isn't visually meaningful (use `comparison-table`), or if the tiers don't progress monotonically (use `profile-card-grid`).
 
 ---
 
-## 5. `single-metric-bar-chart`
+## 6. `single-metric-bar-chart`
 
 **Use when the compelling question is:** *"How does [city / option] compare on [one specific metric]?"* — when there is exactly one number that drives the post's argument.
 
@@ -281,7 +315,7 @@ Two failure modes this rule prevents:
 
 ---
 
-## 6. `decision-path`
+## 7. `decision-path`
 
 **Use when the compelling question is:** *"How do I decide between [Path A] and [Path B]?"* — when the post answers a binary fork by routing the reader through 3–5 prioritized questions, each with answer pills that point to one path or the other.
 
@@ -313,7 +347,38 @@ Two failure modes this rule prevents:
 
 ---
 
-## 7. `settlement-statement`
+## 8. `stacked-cost-bar-comparison`
+
+**Use when the compelling question is:** *"Where does the cost / financial gap between [Path A] and [Path B] actually live?"* — when the post compares two scenarios on a totaled financial metric AND the component breakdown is the punch line (which segment dominates, which segment shrinks the reader's intuition).
+
+**Narrative type:** Vertical stacked-bar comparison. Two bars side by side. Total bar height carries the headline metric (monthly all-in, total deal cost, net-sheet bottom line). Stacked segments break the total into components. The altitude difference between bars makes the gap physically felt; the segment proportions bust intuition mistakes about which component drives the gap.
+
+**Raw data shape:** Two scenarios. Each scenario has 3–5 component values (e.g., P&I, tax, insurance, HOA for a monthly carrying-cost compare; OR commission, concessions, title, prep, prorated tax for a net-sheet compare). Each scenario also carries a total and a 1–2-line identifier (price, down payment, scenario label).
+
+**Brand styling:**
+- Single inline SVG (viewBox 700×500 default; keep as one continuous block, no blank lines per Astro markdown rules)
+- Visible title (17–20px navy bold) at top leads with the comparison name AND the gap number AND the qualified entity (Visual Hero Rule). Subtitle (12–13px gray) carries the assumption block plus entity qualifier so the bitmap travels self-contained when scraped by AI or image-search engines.
+- Bar geometry: two bars, 140px wide, side by side with ~120px gap between. Scale chosen so the larger bar's total height is ~300–350px. Both bars baseline-aligned at the bottom.
+- Segment colors (bottom-up, by financial weight): navy `#002a3a` for the dominant segment (P&I, mortgage, commission), mid-gray `#99adb8` for the secondary segment (taxes, concessions), light gray `#d6e0e6` for the tertiary segment (insurance, title), gold accent `#c8965a` for the differentiator segment (HOA, prep budget). The gold segment is the one whose size relative to expectation drives the visual surprise.
+- Per-bar headline stat (`$X/mo` or `$Xk total`) in 22px navy bold floats above each bar's top, NOT inside the bar.
+- Sub-label below each bar (city + scenario identifier in two 12–14px lines).
+- Diagonal gold dashed line connects the two bar tops to a delta callout in the middle (`+$X/mo` in 14px gold bold inside a small white pill with gold border).
+- Legend across the bottom (4 small rectangles + 11px labels) keyed to segment colors.
+- Source baked into figcaption (NOT in SVG `<text>`, per Source Placement Rule) inside the same `<figure>` wrapper.
+
+**Schema.org payload:**
+- `<figure itemscope itemtype="https://schema.org/Dataset">` wrapper
+- Parallel JSON-LD `Dataset` block BEFORE the figure with full metadata (temporalCoverage, spatialCoverage, isBasedOn, creator, publisher, variableMeasured for each scenario's total + the delta)
+- SVG `<title>` and `<desc>` carry citable summary sentences with every key number (P&I, tax, insurance, HOA, totals, delta) so AI engines can quote them verbatim
+- NO `<meta>` void elements inside the SVG (per rule 13b in aeo-visual-builder) — all per-segment Microdata lives in the parallel JSON-LD only
+
+**Lift from:** `src/content/blog/condo-vs-single-family-littleton-first-time-buyer-2026.md` — first stacked-cost-bar-comparison on the site. Two Littleton, Colorado scenarios (condo $2,831/mo all-in vs. starter SFR $4,020/mo all-in) segmented by P&I, tax, insurance, HOA. The bars showed P&I as the dominant segment on both sides; the HOA segment on the condo bar is small relative to the mortgage stack — busting the "HOA fees are the deciding factor" myth most first-time buyers walk in with. Promoted to the library on 2026-05-10 after winning a stretch-vs-library A/B/C review against Variant B (5-year wealth projection) and Variant C (two-path-diptych).
+
+**When NOT to use:** if the compelling question is "which path fits me?" (use `two-path-diptych` for the persona fork or `decision-path` for routing); if there's only one total to compare (use `single-metric-bar-chart`); if there are 3+ scenarios (use `comparison-table`); if the post hangs on a tiered progression rather than a binary financial compare (use `price-ladder-svg`).
+
+---
+
+## 9. `settlement-statement`
 
 **Use when the compelling question is:** *"What does [a transaction] actually cost, line by line?"* — when the post is a financial breakdown and the reader needs to see categories and a total.
 
@@ -347,12 +412,14 @@ A quick lookup for the writer's brainstorming step:
 
 | Compelling question shape | Recommended pattern |
 |---|---|
+| "Can I have both X and Y, or do I have to pick one?" (binary trade-off with an "impossible" corner) | `trade-off-frontier` |
 | "How do A and B compare on multiple dimensions?" (3+ entities × 4+ metrics) | `comparison-table` |
 | "Which of two paths fits me?" (binary fork) | `two-path-diptych` |
 | "Which entity / persona / place is right for me?" (3–8 self-select options) | `profile-card-grid` |
 | "What does $X buy at each tier?" (tiered progression with scale) | `price-ladder-svg` |
 | "How does X compare on this one metric?" (single number across 3–5 entities) | `single-metric-bar-chart` |
 | "How do I decide between Path A and Path B?" (3–5 priority-routing questions) | `decision-path` |
+| "Where does the financial gap between two scenarios actually live?" (two scenarios × component breakdown) | `stacked-cost-bar-comparison` |
 | "What does a transaction actually cost?" (financial line-by-line breakdown) | `settlement-statement` |
 | None of the above is a strong fit | **Library Gap trigger — prototype 2–3 stretch candidates** |
 
@@ -370,7 +437,7 @@ These are visual concepts that have been brainstormed but have not yet won a rea
 
 # Maintenance
 
-- This file lives at `~/selling303-site/docs/visual-patterns.md`.
+- This file lives at `~/Documents/Claude/projects/selling303-site/docs/visual-patterns.md`.
 - The blog-post-writer skill reads it during Stage 1 visual brainstorming.
 - The aeo-visual-builder skill references the lift-from posts to assemble new visuals.
 - New pattern promotions are added at the top of the relevant section with the new lift-from post and a delivery-message note.

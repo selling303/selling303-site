@@ -46,14 +46,22 @@ json_escape() {
 COMMIT_MSG_ESCAPED=$(json_escape "$COMMIT_MSG")
 
 # --- Helper: API call ---
+# Writes the request body to a temp file and passes it via --data-binary @file
+# to avoid argv length limits when pushing large blobs (e.g. package-lock.json).
 gh_api() {
   local method="$1" endpoint="$2" data="${3:-}"
   local url="${API}/repos/${REPO}${endpoint}"
 
   if [[ -n "$data" ]]; then
+    local tmp
+    tmp=$(mktemp)
+    printf '%s' "$data" > "$tmp"
     curl -sf -X "$method" -H "$AUTH" -H "$ACCEPT" \
       -H "Content-Type: application/json" \
-      -d "$data" "$url"
+      --data-binary "@${tmp}" "$url"
+    local rc=$?
+    rm -f "$tmp"
+    return $rc
   else
     curl -sf -X "$method" -H "$AUTH" -H "$ACCEPT" "$url"
   fi
@@ -61,16 +69,16 @@ gh_api() {
 
 # --- Detect mount prefix ---
 # In Cowork sandbox, the repo is mounted at a path like:
-#   /sessions/<name>/mnt/selling303-site/
+#   /sessions/<name>/mnt/.*selling303-site/
 # We need to strip this prefix to get repo-relative paths.
-# Also handles direct repo paths like /Users/.../selling303-site/
+# Also handles direct repo paths like /Users/.../Documents/Claude/projects/selling303-site/
 detect_mount_prefix() {
   local file="$1"
   # Match sandbox mount path
-  if [[ "$file" =~ ^/sessions/[^/]+/mnt/selling303-site/ ]]; then
+  if [[ "$file" =~ ^/sessions/[^/]+/mnt/.*selling303-site/ ]]; then
     echo "${file%%selling303-site/*}selling303-site/"
   # Match macOS local path
-  elif [[ "$file" =~ ^/Users/[^/]+/selling303-site/ ]]; then
+  elif [[ "$file" =~ ^/Users/[^/]+/.*selling303-site/ ]]; then
     echo "${file%%selling303-site/*}selling303-site/"
   else
     echo ""

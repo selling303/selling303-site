@@ -33,6 +33,7 @@ const neighborhoods = defineCollection({
       alt: z.string(),
     })).optional(),
     relatedPosts: z.array(z.object({
+      slug: z.string(),
       title: z.string(),
       tag: z.string(),
       description: z.string(),

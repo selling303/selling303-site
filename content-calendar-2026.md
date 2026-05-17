@@ -340,35 +340,35 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: decision-path (4-question photo audit routing each answer to "Reshoot" or "Photos likely fine" with Decision Rule tally footer — chosen via Compelling Question Flow over original tier-list spec because tier-list is still flag-only Phase 3 AND because BOFU advice posts pay off harder when the visual gives the reader an actionable output, not just a rubric. Library pattern post-RidgeGate, not stretch.)
 
 #### Day 7 — Monday, May 11
-- [ ] **"Condo vs. Single-Family Residence in Littleton's Spring Market: Which Makes Sense for First-Time Buyers?"**
+- [x] **"Condo vs. Starter House in Littleton for First-Time Buyers"** *(drafted 2026-05-10)* *(title shortened from "Condo vs. Single-Family Residence in Littleton's Spring Market: Which Makes Sense for First-Time Buyers?" for SERP CTR; original preserved in `headline` frontmatter field)*
   - Specialization: `/first-time-homebuyers` | Geographic: `/littleton`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Direct comparison for first-time buyers weighing a $400K Littleton condo vs. a $550K Littleton SFR. HOA fee differential, equity build trajectory, maintenance reality, appreciation patterns by property type, and the Q1 2026 sale velocity comparison.
   - Target keywords: condo vs single family Littleton, first-time buyer Littleton condo, Littleton townhome first-time buyer, buying first home Littleton
-  - Visual: comparison-table (condo vs SFR × 8 metrics)
+  - Visual: stacked-cost-bar-comparison (Tier 0, **library — promoted 2026-05-10**) — two vertical bars side by side showing monthly all-in carrying cost segmented by mortgage P&I / property tax / homeowners insurance / HOA, Littleton condo ($2,831/mo, n=53) vs. starter SFR ($4,020/mo, n=92), 10% down + 7% 30-year fixed. Initial draft was a comparison-table; scrapped at Visual Dignity Gate (data wall, agent metrics, didn't pay off FTB decision). Three review variants surfaced for Jacob (A: stacked-cost-bar stretch / B: 5-year wealth projection stretch / C: two-path-diptych library) → Jacob picked A → promoted as new library pattern #7 in `docs/visual-patterns.md`. Body math reconciled from $2,275/$3,580 (P&I-only, mislabeled "all-in") to $2,830/$4,020 (true all-in). Snippet hook updated from $1,300/mo to $1,190/mo to match. SVG visible title carries full entity qualifier for AEO image-scrape coherence.
 
 ---
 
 ### Week 2: May 12–18
 
 #### Day 8 — Tuesday, May 12
-- [ ] **"Spec Home vs. Custom Build in Parker: A 2026 Cost-Per-Square-Foot Comparison"**
+- [x] **"Parker New Construction: Buy Off the Shelf or Build It?"** *(drafted 2026-05-11, copy refreshed 2026-05-16)* *(title shortened from "Spec Home vs. Custom Build in Parker: A 2026 Cost-Per-Square-Foot Comparison" — original preserved in `headline` frontmatter; published title rewritten 2026-05-16 from interim "Spec Home vs. Custom Build in Parker (2026)" to drop the insider "spec build" vocab from the SERP and lead with reader-language "buy off the shelf or build it")*
   - Specialization: `/new-construction` | Geographic: `/parker`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Real cost-per-square-foot data on Parker spec inventory vs. custom-build contracts. Builder upgrade markups, the timing trade-off, lot-premium dynamics, what's negotiable in spec vs. custom, and how 2026 builder incentive packages distort the headline price comparison.
   - Target keywords: spec home vs custom build Parker, Parker new construction cost, Parker builder upgrades, build or buy Parker Colorado
-  - Visual: comparison-table (spec vs. custom × 7 cost categories)
+  - Visual: comparison-table (Tier 0, library) — 7 cost categories × 2 paths (spec inventory vs. custom build). Won Compelling Question Flow over two-path-diptych (21) and stretch settlement-statement (19) — comparison-table 22. Spec column anchored in REcolorado MLS April 2026 Parker closings (n=181, $274 PSF Fin median, $681K median close, 16-day median DIM); custom column anchored in NAHB Cost of Constructing a Home + Front Range custom-build guidance. Data asymmetry acknowledged inline — spec captured by MLS, custom rarely on MLS.
 
 #### Day 9 — Wednesday, May 13
-- [ ] **"How to Move Up From Lakewood to Highlands Ranch: 2026 Equity and Carrying-Cost Math"**
+- [x] **"Why Lakewood Owners Choose Highlands Ranch Next (2026)"** *(drafted 2026-05-12, full why-first rewrite 2026-05-16 after Jacob feedback)* *(title rewritten from the calendar-spec "How to Move Up From Lakewood to Highlands Ranch: 2026 Equity and Carrying-Cost Math" to lead with reader intent; original preserved in `headline` frontmatter)*
   - Specialization: `/move-up-sellers` | Geographic: `/lakewood`
   - Type: Seller advice | Funnel: MOFU
-  - Angle: Trade-up financial path for Lakewood owners who have rebuilt equity post-2022. Median Lakewood SFR equity vs. Highlands Ranch entry price, mortgage payment differential at current rates, sell-first vs. buy-first mechanics across two counties, and the timing windows that work in spring 2026.
-  - Target keywords: Lakewood to Highlands Ranch move, Jefferson County to Douglas County move, sell Lakewood buy HR, move-up from Lakewood
-  - Visual: cost-breakdown (flag-only — Phase 3 builder dependency)
+  - Angle: **Why-first, math-second.** Lead with the five real reasons Lakewood owners choose Highlands Ranch (DTC/South Metro commute, family already in Douglas County, different weather and insurance profile, master-planned lifestyle, newer housing-stock profile) and which of those are "right-now" triggers vs. wait-until-ready. The cross-county money math (equity, cash to close, monthly carrying-cost differential, sell-first sequencing) follows as the test once the reason is real. The original calendar spec was math-heavy; the rewrite acknowledges that Lakewood owners don't decide via spreadsheet — they decide via specific pull factors, and then the math either supports the move or it doesn't.
+  - Target keywords: why move to Highlands Ranch, Lakewood to Highlands Ranch move, Jefferson County to Douglas County move, sell Lakewood buy HR, move-up from Lakewood, Lakewood Highlands Ranch lifestyle
+  - Visual: settlement-statement (Tier 0, library) — full Lakewood-to-HR move-up net sheet anchored in REcolorado MLS April 2026 medians (Lakewood n=199 @ $580K, HR n=131 @ $737K). Won Compelling Question Flow over two-path-diptych (22) and comparison-table (20), and over a stretch dual-column-net-sheet (21, lost on mobile). In the rewrite the visual now sits inside the "what does the move actually cost?" H2 — the fourth body section, not the lead — in service of the why-first frame.
 
 #### Day 10 — Thursday, May 14
-- [ ] **"The Englewood-to-Centennial Move-Up Path: Trading Walkability for Square Footage"**
+- [x] **"The Englewood-to-Centennial Move-Up Path: Trading Walkability for Square Footage"** *(drafted 2026-05-14)* *(title shortened to "Englewood to Centennial Move-Up: 2026 Trade Math" for SERP CTR; original preserved in `headline` frontmatter field)*
   - Specialization: `/move-up-sellers` | Geographic: `/englewood`
   - Type: Seller advice | Funnel: MOFU
   - Angle: Common second-home move from Englewood ($500K–$700K starter) to Centennial ($700K–$900K family home). What you trade going east — walkability, transit, urban edge — for what you gain — square footage, lot size, schools-adjacent amenities. Equity math on the typical 5–7 year hold.
@@ -376,28 +376,28 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: none
 
 #### Day 11 — Friday, May 15
-- [ ] **"A First-Time Seller's Net Sheet for Littleton — How the 3-County Quirk Affects Your Costs"**
+- [x] **"What a $650K Littleton Sale Actually Nets You (2026)"** *(drafted 2026-05-15, rewritten 2026-05-17 after Jacob review — 3-county angle was the wrong spine; rewritten as a real first-time-seller net sheet at the $650K median, settlement-statement visual, 3-county thing relegated to a single section; slug retained: `littleton-first-time-seller-net-sheet-3-county-2026`, shipped as **settlement-statement Tier 0**)*
   - Specialization: `/first-time-homesellers` | Geographic: `/littleton`
   - Type: Seller advice | Funnel: MOFU
-  - Angle: Littleton spans Arapahoe, Jefferson, and Douglas counties via mailing address — and each county has different transfer fees, recording costs, and title structures. Real Littleton net sheet at the $675K median, broken out by county, with side-by-side comparison of the same hypothetical home in each.
-  - Target keywords: cost to sell home Littleton CO, Littleton net sheet, first-time seller Littleton, Littleton 3-county home sale costs
-  - Visual: cost-breakdown (flag-only — Phase 3 builder dependency)
+  - Angle: First-time-seller net sheet at the $650K April 2026 Littleton median (REcolorado MLS n=292). Full settlement-statement line-by-line, with the 3-county question handled in a single section (it barely moves the typical bottom line; only meaningful swing is a Douglas County metro-district transfer fee in some newer subdivisions). Concession math and net-cash-before-mortgage-payoff get explicit body sections because they actually move the seller's bottom line more than any single cost quirk.
+  - Target keywords: cost to sell home Littleton CO, Littleton net sheet, first-time seller Littleton, what does it cost to sell a Littleton home
+  - Visual: settlement-statement (vertical net-sheet layout with categorical sections, navy total row + gold-accent cash-on-the-table punchline; comparison-table was the original ship, rewritten because the 3-county comparison wasn't structurally the post's job — the post's job is the seller's net sheet, and the settlement-statement is the canonical pattern for line-by-line transaction breakdowns)
 
 #### Day 12 — Saturday, May 16
-- [ ] **"Lone Tree Relocation Guide: DTC Commute, RidgeGate, and What Tech Professionals Should Know"**
+- [x] **"Lone Tree Relocation Guide: DTC Commute, RidgeGate, and What Tech Professionals Should Know"** *(drafted 2026-05-15, slug: `lone-tree-relocation-guide-dtc-tech-professionals-2026`, title shortened to "Lone Tree Relocation for DTC Tech Professionals (2026)" for SERP CTR; original preserved in `headline` frontmatter; shipped as **price-ladder-svg Tier 0** — first live shipment of the pattern, Compelling Question Flow override from calendar's `Visual: none` advisory)*
   - Specialization: `/relocation` | Geographic: `/lone-tree`
   - Type: Local area topic | Funnel: TOFU
   - Angle: Lone Tree relocation guide tuned for tech professionals relocating to the Denver Tech Center corridor. Light-rail and I-25 commute realities, RidgeGate's mixed-use development, Lone Tree-vs-DTC condo trade-offs, school district lines, and price-tier scenarios from $700K starter to $2M+ luxury.
   - Target keywords: moving to Lone Tree Colorado, Lone Tree relocation guide, DTC Denver tech center relocation, RidgeGate Lone Tree
-  - Visual: none
+  - Visual: price-ladder-svg (4 tiers × median sqft scaling — overrode calendar `Visual: none` advisory; Compelling Question Flow scored price-ladder-svg 24, profile-card-grid 24 tied, comparison-table 21; tiebreaker on narrative fit, pattern freshness, and library-first-live promotion)
 
 #### Day 13 — Sunday, May 17
-- [ ] **"Highlands Ranch New Construction for Empty-Nesters: How to Right-Size Without Leaving the Suburb"**
+- [x] **"Right-Size Inside Highlands Ranch: 3 New-Build Paths (2026)"** *(drafted 2026-05-16, slug: `highlands-ranch-new-construction-empty-nester-right-size-2026`, title shortened from "Highlands Ranch New Construction for Empty-Nesters: How to Right-Size Without Leaving the Suburb" for SERP CTR; original preserved in `headline` frontmatter; shipped as **profile-card-grid Tier 0** — Compelling Question Flow override from calendar's `howto (flag-only)` advisory)*
   - Specialization: `/new-construction` | Geographic: `/highlands-ranch`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Step-by-step framework for HR empty-nesters evaluating right-sized new construction options inside the same neighborhood. Single-level patio homes, low-maintenance townhomes, age-targeted communities. Walks through the lifestyle audit, financial readiness check, builder selection, and contract negotiation timeline.
   - Target keywords: Highlands Ranch empty nester new construction, downsize Highlands Ranch, patio homes Highlands Ranch, low maintenance HR
-  - Visual: howto (flag-only — Phase 4 builder dependency)
+  - Visual: profile-card-grid (3 right-sized paths × format/price/sqft/community concentration — patio home / paired villa / low-maintenance townhome — overrode calendar `howto (flag-only)` advisory; Compelling Question Flow scored profile-card-grid 24 over two-path-diptych 22 and stretch sqft-shrink-comparison 20; the post's compelling question is canonical profile-card-grid territory — "which format fits me?")
 
 #### Day 14 — Monday, May 18
 - [ ] **"Why Parker Move-Up Listings Stall — and the Pricing Strategy That Recovers Them"**
