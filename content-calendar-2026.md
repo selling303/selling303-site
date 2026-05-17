@@ -376,12 +376,12 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: none
 
 #### Day 11 — Friday, May 15
-- [x] **"A First-Time Seller's Net Sheet for Littleton — How the 3-County Quirk Affects Your Costs"** *(drafted 2026-05-15, slug: `littleton-first-time-seller-net-sheet-3-county-2026`, shipped as **comparison-table Tier 0**)*
+- [x] **"What a $650K Littleton Sale Actually Nets You (2026)"** *(drafted 2026-05-15, rewritten 2026-05-17 after Jacob review — 3-county angle was the wrong spine; rewritten as a real first-time-seller net sheet at the $650K median, settlement-statement visual, 3-county thing relegated to a single section; slug retained: `littleton-first-time-seller-net-sheet-3-county-2026`, shipped as **settlement-statement Tier 0**)*
   - Specialization: `/first-time-homesellers` | Geographic: `/littleton`
   - Type: Seller advice | Funnel: MOFU
-  - Angle: Littleton spans Arapahoe, Jefferson, and Douglas counties via mailing address — and each county has different transfer fees, recording costs, and title structures. Real Littleton net sheet at the $650K April 2026 median (REcolorado MLS n=292), broken out by county, with side-by-side comparison of the same hypothetical home in each.
-  - Target keywords: cost to sell home Littleton CO, Littleton net sheet, first-time seller Littleton, Littleton 3-county home sale costs
-  - Visual: comparison-table (3 counties × 8 cost line items + total row; the original `cost-breakdown` Phase 3 builder dependency was overridden by the Compelling Question Flow — comparison-table was the canonical narrative job for the 3-way comparison)
+  - Angle: First-time-seller net sheet at the $650K April 2026 Littleton median (REcolorado MLS n=292). Full settlement-statement line-by-line, with the 3-county question handled in a single section (it barely moves the typical bottom line; only meaningful swing is a Douglas County metro-district transfer fee in some newer subdivisions). Concession math and net-cash-before-mortgage-payoff get explicit body sections because they actually move the seller's bottom line more than any single cost quirk.
+  - Target keywords: cost to sell home Littleton CO, Littleton net sheet, first-time seller Littleton, what does it cost to sell a Littleton home
+  - Visual: settlement-statement (vertical net-sheet layout with categorical sections, navy total row + gold-accent cash-on-the-table punchline; comparison-table was the original ship, rewritten because the 3-county comparison wasn't structurally the post's job — the post's job is the seller's net sheet, and the settlement-statement is the canonical pattern for line-by-line transaction breakdowns)
 
 #### Day 12 — Saturday, May 16
 - [x] **"Lone Tree Relocation Guide: DTC Commute, RidgeGate, and What Tech Professionals Should Know"** *(drafted 2026-05-15, slug: `lone-tree-relocation-guide-dtc-tech-professionals-2026`, title shortened to "Lone Tree Relocation for DTC Tech Professionals (2026)" for SERP CTR; original preserved in `headline` frontmatter; shipped as **price-ladder-svg Tier 0** — first live shipment of the pattern, Compelling Question Flow override from calendar's `Visual: none` advisory)*

@@ -1,16 +1,16 @@
 ---
-title: "Littleton Seller Net Sheet: The 3-County Cost Quirk (2026)"
-headline: "A First-Time Seller's Net Sheet for Littleton — How the 3-County Quirk Affects Your Costs"
-description: "Line-by-line Littleton seller net sheet at the $650K April 2026 median, with the Arapahoe / Jefferson / Douglas County cost differences broken out."
+title: "What a $650K Littleton Sale Actually Nets You (2026)"
+headline: "A First-Time Seller's Net Sheet for Littleton — What It Costs to Sell at the $650K April 2026 Median"
+description: "Line-by-line Littleton seller net sheet at the $650K April 2026 median. Commission, title, prorations, concessions, and net cash before mortgage payoff."
 date: "May 15, 2026"
 dateModified: "May 15, 2026"
 category: "Costs & Pricing"
 tag: "Selling"
-readTime: "10 min read"
+readTime: "8 min read"
 heroLabel: "First-Time Home Sellers"
-heroSubtext: "Littleton's mailing address spans three counties — Arapahoe, Jefferson, and Douglas — and each one prices the same $650K sale a little differently once you get into property-tax proration and metro-district transfer fees."
-cardStat: "$650K"
-cardStatLabel: "Littleton median close (Apr 2026)"
+heroSubtext: "Most first-time Littleton sellers run the numbers for the first time after the listing paperwork hits the table. By then, the surprises hurt. Here is what comes off the $650,000 April 2026 median before you see a check."
+cardStat: "~$41K"
+cardStatLabel: "Littleton seller cost at median"
 ogImage: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
@@ -18,14 +18,14 @@ aboutPlaces:
   - "Arapahoe County, Colorado"
   - "Jefferson County, Colorado"
   - "Douglas County, Colorado"
-keywords: "cost to sell home Littleton CO, Littleton net sheet, first-time seller Littleton, Littleton 3-county home sale costs, Littleton closing costs seller, Jacob Stark, selling303"
+keywords: "cost to sell home Littleton CO, Littleton net sheet, first-time seller Littleton, what does it cost to sell a Littleton home, Littleton closing costs seller, Jacob Stark, selling303"
 faqSchema:
-  - question: "How much does it actually cost to sell a home in Littleton, Colorado in 2026?"
-    answer: "On a $650,000 sale — the REcolorado MLS April 2026 median for Littleton residential closings (n=292) — plan on roughly $44,000 to $50,000 in total seller costs, or about 6.8 to 7.7 percent of the sale price. The line items break down to roughly $35,750 in real estate commission at a 5.5 percent total, $2,400 to $2,900 in owner's title insurance, a $65 documentary fee, $1,700 to $2,000 in property tax proration for a mid-year close, $300 to $500 in settlement and recording fees, $200 to $700 in HOA transfer and status-letter fees if the property is in an HOA, and $0 to $3,500 in metro-district transfer fees on the small slice of Littleton inventory that sits inside a Douglas County metro district. Buyer concession credits, when negotiated in, add another 1 to 3 percent on top."
-  - question: "Does it really matter which of the three counties my Littleton home sits in for seller costs?"
-    answer: "Yes, but the differences are smaller than most first-time sellers expect. Commission, title insurance, the state documentary fee, and recording fees are essentially identical across Arapahoe, Jefferson, and Douglas counties on a $650,000 sale. The two line items that actually move are property-tax proration (a $200 to $400 swing driven by each county's effective mill rate) and metro-district transfer fees (a $0 to $3,500 swing that applies almost exclusively to newer Douglas County subdivisions inside an active metro-district service plan). The net result on a typical $650,000 Littleton close is a $300 to $400 spread between the three counties for the average property, or up to about $3,500 to $4,000 when a Douglas County metro-district transfer fee is in play."
-  - question: "Why does Littleton span three counties in the first place?"
-    answer: "Littleton's mailing address — the postal definition the U.S. Postal Service uses for ZIP codes 80120 through 80130 — is broader than the incorporated City of Littleton. The incorporated city sits primarily in Arapahoe County with small overlaps into Jefferson and Douglas counties, but the Littleton mailing address sweeps in unincorporated parts of Jefferson County to the west (toward Ken Caryl and the foothills), unincorporated Douglas County to the south (toward Roxborough and Highlands Ranch's edge), and unincorporated Arapahoe County in between. So a home with a 'Littleton, CO' address may or may not be in the City of Littleton, and the county it sits in determines the property tax bill, the school district, and a handful of closing-line items at sale."
+  - question: "How much does it cost to sell a home in Littleton, Colorado in 2026?"
+    answer: "Plan on about $41,000 in total seller costs on a $650,000 sale, or roughly 6.3 percent of the sale price, before any buyer concession or mortgage payoff. That figure covers a 5.5 percent real estate commission ($35,750), owner's title insurance ($2,400 to $2,900), a $300 to $500 settlement and closing fee, modest recording fees, the $65 Colorado state documentary fee, and about $1,650 to $2,100 in property tax proration for a mid-year close. Add $200 to $700 if the home is in an HOA. A buyer concession credit of 1 to 3 percent, if negotiated in, adds another $6,500 to $19,500 on top."
+  - question: "What does a typical Littleton seller actually walk away with at closing?"
+    answer: "After about $41,000 in seller costs, a $650,000 Littleton sale leaves roughly $609,000 on the table before the mortgage payoff. From there, the net cash depends on the remaining loan balance. A typical 2018 Littleton buyer at $400,000 with 20 percent down carries roughly a $260,000 to $275,000 balance in 2026, which puts the seller's net cash near $335,000 to $350,000. A 2021 buyer at $560,000 with 5 percent down typically still owes around $480,000, which puts the net cash closer to $130,000. The mortgage balance is the variable that swings the bottom line, not the cost lines."
+  - question: "Does it matter which of the three counties my Littleton home sits in?"
+    answer: "Very little, with one narrow exception. Commission, title insurance, recording fees, and the state documentary fee are identical whether the parcel is in Arapahoe, Jefferson, or Douglas County. Property tax proration varies by a few hundred dollars based on local mill levies. The one line that can move the total meaningfully is a metro-district transfer fee in some newer Douglas County subdivisions, which can add $3,250 to $6,500 on a $650,000 sale. The fix is to check the parcel's county and the recorded special-district documents before list day, not at the closing table."
 relatedPosts:
   - slug: "hidden-costs-selling-home-arapahoe-county-net-sheet-2026"
     title: "The Hidden Costs of Selling Your Home in Arapahoe County: A First-Time Seller's Net Sheet"
@@ -45,17 +45,17 @@ relatedPosts:
 ---
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
-<strong>What does it actually cost to sell a Littleton home in 2026?</strong> Plan on $44K–$50K on the $650K April 2026 median. The 3-county split (Arapahoe, Jefferson, Douglas) creates a $300–$3,500 swing — mostly tax proration and Douglas metro-district fees.
+<strong>What does a first-time Littleton seller walk away with on a $650K sale?</strong> Plan on about $41,000 in seller costs, leaving $609,000 before paying off the mortgage. The mortgage balance is the bigger swing factor than any single cost line.
 </div>
 
 <div style="background: #f0f4f0; border-left: 4px solid #4a7c59; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>Key Takeaways</strong>
 <ul style="margin: 0.75rem 0 0 1.25rem; padding: 0;">
-<li><strong>Littleton median close — $650,000</strong> in April 2026 across 292 closed residential transactions in REcolorado MLS, at a 16-day median days in MLS and a 98 percent close-to-original-list ratio.</li>
-<li><strong>Total seller cost runs ~6.8–7.7% of sale price</strong> — roughly $44,000 to $50,000 on the $650,000 median before any buyer concession credit is layered in.</li>
-<li><strong>The 3-county quirk is real but narrow</strong> — commission, title insurance, recording, and the state documentary fee are identical across Arapahoe, Jefferson, and Douglas County. Only property-tax proration and Douglas County metro-district transfer fees actually move the bottom line.</li>
-<li><strong>Property-tax proration swings $200–$400</strong> between the three counties on a $650,000 home, driven by each county's effective residential mill rate (Arapahoe slightly higher than Jefferson and base Douglas).</li>
-<li><strong>Douglas County metro-district transfer fees are the outlier</strong> — newer subdivisions inside an active service plan can carry a 0.5–1.0% transfer fee at sale, adding $3,250 to $6,500 on the Douglas slice of Littleton inventory.</li>
+<li><strong>Median Littleton sale was $650,000</strong> in April 2026, with homes going under contract at a 16-day median and closing at 98 percent of original list.</li>
+<li><strong>Total seller cost runs about $41,000 on the median sale</strong>, or roughly 6.3 percent. Commission is the biggest line at $35,750. Everything else combined is under $5,500.</li>
+<li><strong>The 3-county question barely moves the bottom line.</strong> The only meaningful swing is a metro-district transfer fee in some newer Douglas County subdivisions, which can add $3,250 to $6,500.</li>
+<li><strong>Buyer concession credits matter more than any individual fee.</strong> A 2 percent concession on $650,000 is $13,000. That single line can outweigh the entire HOA, title, and tax-proration stack combined.</li>
+<li><strong>The mortgage payoff is the real variable</strong> in what the seller actually walks away with. Two sellers with the same $650,000 sale can net wildly different cash depending on when they bought and how much they put down.</li>
 </ul>
 </div>
 
@@ -63,218 +63,255 @@ relatedPosts:
 <strong>In this guide:</strong>
 <ol style="margin: 0.5rem 0 0 1.25rem; padding: 0;">
 <li><a href="#april-snapshot">Where did Littleton seller pricing land in April 2026?</a></li>
-<li><a href="#why-three-counties">Why does Littleton span three counties at all?</a></li>
-<li><a href="#net-sheet-by-county">What does a $650K Littleton net sheet look like by county?</a></li>
-<li><a href="#what-actually-moves">Which line items actually change between counties?</a></li>
-<li><a href="#what-doesnt-change">Which line items are the same in all three counties?</a></li>
-<li><a href="#how-to-find-your-county">How do I find out which county my Littleton home is in?</a></li>
-<li><a href="#planning-the-sale">How should a first-time Littleton seller plan around this?</a></li>
+<li><a href="#net-sheet-visual">What does the $650K Littleton net sheet actually look like?</a></li>
+<li><a href="#big-lines">Which lines actually move the needle?</a></li>
+<li><a href="#hoa-and-counties">When do HOAs or the 3-county question change the math?</a></li>
+<li><a href="#concessions">How do buyer concessions change the net?</a></li>
+<li><a href="#walk-away">What does a Littleton seller actually walk away with?</a></li>
+<li><a href="#plan">How should a first-time Littleton seller plan around this?</a></li>
 <li><a href="#faq">Frequently Asked Questions</a></li>
 </ol>
 </nav>
 
-<p>The single most common surprise on a first-time seller's closing statement in <a href="/neighborhoods/littleton">Littleton, Colorado</a> isn't the commission line. It's the fact that two homes one block apart can carry materially different closing costs because the county line cuts between them. Littleton's "Littleton" mailing address spans three counties — Arapahoe, Jefferson, and Douglas — and the property tax bill, the metro-district stack, and a handful of closing line items all change with the county. For a <a href="/first-time-homesellers">first-time home seller</a> running their net-sheet math for the first time, that geography matters more than most realize.</p>
+<p>The first time most Littleton homeowners run a net sheet, the listing paperwork is already in front of them. The numbers look right, the commission line looks fair, and then the closing statement arrives a month later with three lines they did not plan for. This post is the math the <a href="/first-time-homesellers">first-time home seller</a> in <a href="/neighborhoods/littleton">Littleton, Colorado</a> should be running before list day, not on the way to the table.</p>
 
-<p>This post anchors the math to April 2026 <a href="https://www.recolorado.com" target="_blank" rel="noopener">REcolorado MLS</a> data — 292 closed Littleton residential transactions at a $650,000 median, a 16-day median days in MLS, and a 98 percent close-to-original-list ratio. The Denver Metro context is laid out in the <a href="https://www.dmarealtors.com/market-trends" target="_blank" rel="noopener">DMAR April 2026 Market Trends Report</a>, where the metro-wide median sat at $605,000 and close-to-list ratios held near 99 percent. Jacob Stark walks every first-time Littleton seller through the line items below before list day — not after the under-contract email.</p>
+<p>The anchor is the April 2026 REcolorado MLS data for Littleton residential closings: $650,000 median sale price, 16-day median days in MLS, 98 percent close-to-original-list ratio. The Denver Metro context sits in the <a href="https://www.dmarealtors.com/market-trends" target="_blank" rel="noopener">DMAR April 2026 Market Trends Report</a>, where the metro median held at $605,000 and the close-to-list ratio settled near 99 percent. Littleton is closing slightly above the metro median, slightly faster than the metro pace, and well within the band where a well-prepared listing gets offers in the first two weeks.</p>
 
 <h2 id="april-snapshot">Where did Littleton seller pricing land in April 2026?</h2>
 
-<p>Littleton closed 292 residential transactions in April 2026, from a $104,950 entry-level condo to a $3,400,000 luxury single-family. The median close came in at $650,000, the median finished square footage at 2,178, and the median price per finished square foot at $302. The market moved at a 16-day median days in MLS — slightly slower than the metro's 14-day median, but well inside the "well-priced homes get offers in two weeks" band that has defined the South Denver Metro spring market this year.</p>
+<p>Littleton closed 292 residential transactions in April 2026, from a $104,950 entry-level condo to a $3,400,000 luxury single-family. The median close was $650,000. The median finished square footage was 2,178. The median price per finished square foot was $302.</p>
 
-<p>The $650,000 number is the right anchor for a first-time-seller net sheet because it strips out both the entry-level condo tail and the luxury single-family tail. Most first-time sellers in Littleton are listing a starter or move-up single-family in the $550,000 to $850,000 band, which is exactly where the median sits. The numbers below run a hypothetical close at $650,000 — adjust proportionally if your specific home is meaningfully above or below that.</p>
+<p>The median is the right anchor for a first-time seller net sheet. It strips out the entry-level condo tail and the luxury single-family tail, both of which carry different cost structures. Most first-time Littleton sellers are listing a starter or move-up single-family in the $550,000 to $850,000 band, which is where the median lives. The numbers below run on a hypothetical $650,000 close. Adjust proportionally if your specific home sits meaningfully above or below.</p>
 
-<h2 id="why-three-counties">Why does Littleton span three counties at all?</h2>
+<h2 id="net-sheet-visual">What does the $650K Littleton net sheet actually look like?</h2>
 
-<p>The U.S. Postal Service's "Littleton, CO" mailing definition — ZIP codes 80120 through 80130 — is broader than the incorporated City of Littleton. The incorporated city sits primarily in Arapahoe County with small slivers in Jefferson and Douglas counties. The Littleton mailing address sweeps in unincorporated Jefferson County neighborhoods to the west (toward Ken Caryl and the foothills), unincorporated Douglas County to the south (toward Roxborough and Highlands Ranch's western edge), and the central Arapahoe County core in between.</p>
-
-<p>The practical consequence: a home with a "Littleton, CO 80127" address might be in Jefferson County, while a "Littleton, CO 80125" address is almost certainly in Douglas County, and a "Littleton, CO 80120" address is in Arapahoe County. The county determines the property tax bill, the school district, the recording office, and — at sale — the property tax proration math and any metro-district transfer fee. None of those tied to the mailing address. All of them tied to the county the parcel actually sits in. The same dynamic surfaces for buyers too — the <a href="/blog/condo-vs-single-family-littleton-first-time-buyer-2026">Littleton condo-vs-starter-SFR comparison</a> walks through how the county overlap shapes property taxes on the buy side.</p>
-
-<p>That is the "quirk" first-time Littleton sellers run into. The remedy is simple: pull your county before you list, and run the net sheet against the right column.</p>
-
-<h3 id="net-sheet-by-county">What does a $650K Littleton net sheet look like by county?</h3>
+<p>Here is the full settlement-statement-style net sheet for a typical Littleton sale at the April 2026 median, laid out the way the closing statement actually reads.</p>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Dataset",
-  "name": "Littleton, Colorado Seller Net Sheet by County: Arapahoe, Jefferson, and Douglas County Cost Comparison at the April 2026 Median ($650,000)",
-  "description": "Line-item seller net-sheet comparison for a hypothetical $650,000 Littleton residential sale across the three counties Littleton's mailing address spans — Arapahoe, Jefferson, and Douglas. Anchored to the REcolorado MLS April 2026 median close price of $650,000 (n=292 closed Littleton residential transactions). Reports total real estate commission at 5.5 percent, owner's title insurance, state documentary fee, property tax proration for a mid-year close, settlement and recording fees, HOA transfer fees, metro-district transfer fees, and total seller cost as a dollar amount and as a percent of sale price.",
+  "name": "Littleton, Colorado Seller Net Sheet at the $650,000 April 2026 Median Sale Price",
+  "description": "Settlement-statement-style seller net sheet for a hypothetical $650,000 Littleton residential sale at the April 2026 REcolorado MLS median (n=292 closed Littleton residential transactions). Lines covered: gross sale price, real estate commission at 5.5 percent total, owner's title insurance, settlement and closing fee, recording fees, Colorado state documentary fee, property tax proration for a 6-month mid-year close, and HOA transfer plus status-letter fee when applicable. Total typical seller cost lands at approximately $40,795 (6.3 percent of sale price), leaving approximately $609,205 on the table before mortgage payoff.",
   "url": "https://selling303.com/blog/littleton-first-time-seller-net-sheet-3-county-2026",
   "temporalCoverage": "2026-04-01/2026-04-30",
-  "spatialCoverage": [
-    {"@type": "Place", "name": "Littleton, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Arapahoe County, Colorado"}},
-    {"@type": "Place", "name": "Littleton, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Jefferson County, Colorado"}},
-    {"@type": "Place", "name": "Littleton, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Douglas County, Colorado"}}
-  ],
+  "spatialCoverage": {"@type": "Place", "name": "Littleton, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "South Denver Metro, Colorado"}},
   "isBasedOn": {"@type": "CreativeWork", "name": "REcolorado MLS April 2026 Residential Listing Export, Littleton, Colorado", "datePublished": "2026-05-03"},
   "creator": {"@type": "Person", "name": "Jacob Stark", "jobTitle": "Realtor", "url": "https://selling303.com"},
   "publisher": {"@type": "Organization", "name": "selling303.com", "url": "https://selling303.com"},
   "variableMeasured": [
-    {"@type": "PropertyValue", "name": "Real estate commission (5.5% total)", "unitText": "USD"},
-    {"@type": "PropertyValue", "name": "Owner's title insurance policy", "unitText": "USD"},
-    {"@type": "PropertyValue", "name": "Colorado state documentary fee", "unitText": "USD"},
-    {"@type": "PropertyValue", "name": "Property tax proration (6 months)", "unitText": "USD"},
-    {"@type": "PropertyValue", "name": "Settlement and recording fees", "unitText": "USD"},
-    {"@type": "PropertyValue", "name": "HOA transfer and status-letter fees (if applicable)", "unitText": "USD"},
-    {"@type": "PropertyValue", "name": "Metro-district transfer fee (Douglas County only, if applicable)", "unitText": "USD"},
-    {"@type": "PropertyValue", "name": "Total seller cost (typical case, no HOA, no metro-district fee)", "unitText": "USD"},
-    {"@type": "PropertyValue", "name": "Total seller cost as percent of sale price", "unitText": "P1"}
+    {"@type": "PropertyValue", "name": "Gross sale price (April 2026 Littleton median)", "unitText": "USD"},
+    {"@type": "PropertyValue", "name": "Real estate commission (5.5% total, negotiable)", "unitText": "USD"},
+    {"@type": "PropertyValue", "name": "Owner's title insurance policy (seller-paid in Colorado)", "unitText": "USD"},
+    {"@type": "PropertyValue", "name": "Settlement and closing fee", "unitText": "USD"},
+    {"@type": "PropertyValue", "name": "Recording fees (standardized statewide)", "unitText": "USD"},
+    {"@type": "PropertyValue", "name": "Colorado state documentary fee ($0.01 per $100)", "unitText": "USD"},
+    {"@type": "PropertyValue", "name": "Property tax proration (6 months, mid-year close)", "unitText": "USD"},
+    {"@type": "PropertyValue", "name": "HOA transfer and status-letter fees (when applicable)", "unitText": "USD"},
+    {"@type": "PropertyValue", "name": "Total typical seller cost (no HOA, no metro-district)", "unitText": "USD"},
+    {"@type": "PropertyValue", "name": "Cash on the table before mortgage payoff", "unitText": "USD"}
   ]
 }
 </script>
 
-<!-- Visual styling provided by /css/aeo-visuals.css (loaded via BaseLayout). Class: .aeo-comp-table -->
-
-<figure class="aeo-comp-table" aria-labelledby="net-sheet-by-county" role="figure" itemscope itemtype="https://schema.org/Dataset">
-<meta itemprop="name" content="Littleton, Colorado Seller Net Sheet by County: $650,000 Sale Across Arapahoe, Jefferson, and Douglas Counties (April 2026 Median)" />
+<figure style="margin: 2rem 0;" aria-labelledby="net-sheet-visual" itemscope itemtype="https://schema.org/Dataset">
+<meta itemprop="name" content="Littleton, Colorado Seller Net Sheet at the $650K April 2026 Median" />
+<meta itemprop="description" content="Settlement-statement net sheet for a hypothetical $650,000 Littleton residential sale at the April 2026 REcolorado MLS median. Total typical seller cost approximately $40,795 (6.3 percent), leaving approximately $609,205 before mortgage payoff." />
 <meta itemprop="temporalCoverage" content="2026-04-01/2026-04-30" />
-<meta itemprop="spatialCoverage" content="Littleton, Colorado (mailing address spans Arapahoe, Jefferson, and Douglas counties)" />
-<table>
-<caption>What changes on a $650K Littleton net sheet depending on which of the 3 counties your home sits in? — April 2026 median sale, REcolorado MLS</caption>
-<thead>
-<tr>
-<th scope="col">Cost Line Item</th>
-<th scope="col">Arapahoe County (Littleton)</th>
-<th scope="col">Jefferson County (Littleton)</th>
-<th scope="col">Douglas County (Littleton)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th scope="row" itemscope itemtype="https://schema.org/PropertyValue" style="border-left: 4px solid #002a3a;">
-<meta itemprop="name" content="Real estate commission (5.5% total)" />
-<div class="city-name">Real estate commission</div>
-<div class="sample-size">5.5% total (negotiable)</div>
-</th>
-<td data-label="Arapahoe County (Littleton)"><meta itemprop="value" content="35750" />$35,750</td>
-<td data-label="Jefferson County (Littleton)"><meta itemprop="value" content="35750" />$35,750</td>
-<td data-label="Douglas County (Littleton)"><meta itemprop="value" content="35750" />$35,750</td>
-</tr>
-<tr>
-<th scope="row" itemscope itemtype="https://schema.org/PropertyValue" style="border-left: 4px solid #002a3a;">
-<meta itemprop="name" content="Owner's title insurance policy" />
-<div class="city-name">Owner's title insurance</div>
-<div class="sample-size">seller-paid in CO</div>
-</th>
-<td data-label="Arapahoe County (Littleton)"><meta itemprop="value" content="2600" />$2,400–$2,900</td>
-<td data-label="Jefferson County (Littleton)"><meta itemprop="value" content="2600" />$2,400–$2,900</td>
-<td data-label="Douglas County (Littleton)"><meta itemprop="value" content="2600" />$2,400–$2,900</td>
-</tr>
-<tr>
-<th scope="row" itemscope itemtype="https://schema.org/PropertyValue" style="border-left: 4px solid #002a3a;">
+<meta itemprop="spatialCoverage" content="Littleton, Colorado" />
+<meta itemprop="creator" content="Jacob Stark, selling303.com" />
+<meta itemprop="publisher" content="selling303.com" />
+<meta itemprop="isBasedOn" content="REcolorado MLS Market Analysis Summary, Littleton residential closed transactions April 1 to April 30, 2026, pulled May 3, 2026" />
+<div style="background: #ffffff; border: 1px solid #e6e8ea; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,42,58,0.10);">
+<div style="background: #002a3a; color: #ffffff; padding: 1.25rem 1.5rem;">
+<div style="font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.75; margin-bottom: 0.3rem;">Littleton Seller Net Sheet</div>
+<div style="font-weight: 700; font-size: 1.05rem; line-height: 1.3;">Where does the money go on a $650K Littleton sale?</div>
+<div style="font-size: 0.85rem; opacity: 0.85; margin-top: 0.35rem;">REcolorado MLS &middot; April 2026 median &middot; Typical case, no HOA, no metro-district</div>
+</div>
+<div style="padding: 0.5rem 1.5rem 1.25rem 1.5rem;">
+
+<div style="padding: 1rem 0 0.5rem 0;">
+<div style="color: #4a7c59; text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.1em; font-weight: 700;">Sale Side</div>
+</div>
+<div itemscope itemtype="https://schema.org/PropertyValue" style="padding: 0.7rem 0 0.7rem 0; border-bottom: 1px solid #e6e8ea;">
+<meta itemprop="name" content="Gross sale price, Littleton April 2026 median" />
+<meta itemprop="value" content="650000" />
+<meta itemprop="unitText" content="USD" />
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;">
+<div>
+<div style="color: #002a3a; font-weight: 600;">Gross sale price</div>
+<div style="font-size: 0.82rem; color: #81848a; margin-top: 0.2rem;">Median Littleton residential close, April 2026 REcolorado MLS</div>
+</div>
+<span style="font-weight: 700; color: #002a3a; font-size: 1.02rem; font-variant-numeric: tabular-nums; white-space: nowrap;">+$650,000</span>
+</div>
+</div>
+
+<div style="padding: 1rem 0 0.5rem 0; margin-top: 0.5rem; border-top: 2px solid #e6e8ea;">
+<div style="color: #4a7c59; text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.1em; font-weight: 700;">Brokerage</div>
+</div>
+<div itemscope itemtype="https://schema.org/PropertyValue" style="padding: 0.7rem 0 0.7rem 0; border-bottom: 1px solid #e6e8ea;">
+<meta itemprop="name" content="Real estate commission, 5.5 percent total" />
+<meta itemprop="value" content="-35750" />
+<meta itemprop="unitText" content="USD" />
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;">
+<div>
+<div style="color: #002a3a; font-weight: 600;">Real estate commission (5.5% total)</div>
+<div style="font-size: 0.82rem; color: #81848a; margin-top: 0.2rem;">Negotiated between seller and listing broker; split with the buyer-side</div>
+</div>
+<span style="font-weight: 700; color: #8b3a3a; font-size: 1.02rem; font-variant-numeric: tabular-nums; white-space: nowrap;">&minus;$35,750</span>
+</div>
+</div>
+
+<div style="padding: 1rem 0 0.5rem 0; margin-top: 0.5rem; border-top: 2px solid #e6e8ea;">
+<div style="color: #4a7c59; text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.1em; font-weight: 700;">Title and Closing</div>
+</div>
+<div itemscope itemtype="https://schema.org/PropertyValue" style="padding: 0.7rem 0 0.7rem 0; border-bottom: 1px solid #e6e8ea;">
+<meta itemprop="name" content="Owner's title insurance policy, seller-paid in Colorado" />
+<meta itemprop="value" content="-2650" />
+<meta itemprop="unitText" content="USD" />
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;">
+<div>
+<div style="color: #002a3a; font-weight: 600;">Owner's title insurance</div>
+<div style="font-size: 0.82rem; color: #81848a; margin-top: 0.2rem;">Filed-rate insurance; seller-paid in Colorado; range $2,400 to $2,900</div>
+</div>
+<span style="font-weight: 700; color: #8b3a3a; font-size: 1.02rem; font-variant-numeric: tabular-nums; white-space: nowrap;">&minus;$2,650</span>
+</div>
+</div>
+<div itemscope itemtype="https://schema.org/PropertyValue" style="padding: 0.7rem 0 0.7rem 0; border-bottom: 1px solid #e6e8ea;">
+<meta itemprop="name" content="Settlement and closing fee" />
+<meta itemprop="value" content="-400" />
+<meta itemprop="unitText" content="USD" />
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;">
+<div>
+<div style="color: #002a3a; font-weight: 600;">Settlement and closing fee</div>
+<div style="font-size: 0.82rem; color: #81848a; margin-top: 0.2rem;">Closer's fee; range $300 to $500</div>
+</div>
+<span style="font-weight: 700; color: #8b3a3a; font-size: 1.02rem; font-variant-numeric: tabular-nums; white-space: nowrap;">&minus;$400</span>
+</div>
+</div>
+<div itemscope itemtype="https://schema.org/PropertyValue" style="padding: 0.7rem 0 0.7rem 0; border-bottom: 1px solid #e6e8ea;">
+<meta itemprop="name" content="Recording fees, standardized statewide" />
+<meta itemprop="value" content="-30" />
+<meta itemprop="unitText" content="USD" />
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;">
+<div>
+<div style="color: #002a3a; font-weight: 600;">Recording fees</div>
+<div style="font-size: 0.82rem; color: #81848a; margin-top: 0.2rem;">Standardized in 2017: $13 first page + $5 each additional</div>
+</div>
+<span style="font-weight: 700; color: #8b3a3a; font-size: 1.02rem; font-variant-numeric: tabular-nums; white-space: nowrap;">&minus;$30</span>
+</div>
+</div>
+
+<div style="padding: 1rem 0 0.5rem 0; margin-top: 0.5rem; border-top: 2px solid #e6e8ea;">
+<div style="color: #4a7c59; text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.1em; font-weight: 700;">Government and Tax</div>
+</div>
+<div itemscope itemtype="https://schema.org/PropertyValue" style="padding: 0.7rem 0 0.7rem 0; border-bottom: 1px solid #e6e8ea;">
 <meta itemprop="name" content="Colorado state documentary fee" />
-<div class="city-name">State documentary fee</div>
-<div class="sample-size">$0.01 per $100</div>
-</th>
-<td data-label="Arapahoe County (Littleton)"><meta itemprop="value" content="65" />$65</td>
-<td data-label="Jefferson County (Littleton)"><meta itemprop="value" content="65" />$65</td>
-<td data-label="Douglas County (Littleton)"><meta itemprop="value" content="65" />$65</td>
-</tr>
-<tr>
-<th scope="row" itemscope itemtype="https://schema.org/PropertyValue" style="border-left: 4px solid #4a7c59;">
-<meta itemprop="name" content="Property tax proration (6 months, mid-year close)" />
-<div class="tier-label">Variable by county</div>
-<div class="city-name">Property tax proration</div>
-<div class="sample-size">~6 months</div>
-</th>
-<td data-label="Arapahoe County (Littleton)" class="hero-stat"><meta itemprop="value" content="1950" />$1,800–$2,100</td>
-<td data-label="Jefferson County (Littleton)" class="hero-stat"><meta itemprop="value" content="1750" />$1,650–$1,900</td>
-<td data-label="Douglas County (Littleton)" class="hero-stat"><meta itemprop="value" content="1750" />$1,650–$1,950 (base)</td>
-</tr>
-<tr>
-<th scope="row" itemscope itemtype="https://schema.org/PropertyValue" style="border-left: 4px solid #002a3a;">
-<meta itemprop="name" content="Settlement and recording fees" />
-<div class="city-name">Settlement + recording</div>
-<div class="sample-size">closer + county recorder</div>
-</th>
-<td data-label="Arapahoe County (Littleton)"><meta itemprop="value" content="400" />$300–$500</td>
-<td data-label="Jefferson County (Littleton)"><meta itemprop="value" content="400" />$300–$500</td>
-<td data-label="Douglas County (Littleton)"><meta itemprop="value" content="400" />$300–$500</td>
-</tr>
-<tr>
-<th scope="row" itemscope itemtype="https://schema.org/PropertyValue" style="border-left: 4px solid #002a3a;">
-<meta itemprop="name" content="HOA transfer and status-letter fees (if applicable)" />
-<div class="city-name">HOA transfer / status letter</div>
-<div class="sample-size">if in an HOA</div>
-</th>
-<td data-label="Arapahoe County (Littleton)"><meta itemprop="value" content="450" />$200–$700</td>
-<td data-label="Jefferson County (Littleton)"><meta itemprop="value" content="450" />$200–$700</td>
-<td data-label="Douglas County (Littleton)"><meta itemprop="value" content="450" />$200–$700</td>
-</tr>
-<tr>
-<th scope="row" itemscope itemtype="https://schema.org/PropertyValue" style="border-left: 4px solid #c8965a;">
-<meta itemprop="name" content="Metro-district transfer fee (Douglas County only, if applicable)" />
-<div class="tier-label">The outlier line</div>
-<div class="city-name">Metro-district transfer fee</div>
-<div class="sample-size">Douglas County only, when applicable</div>
-</th>
-<td data-label="Arapahoe County (Littleton)"><meta itemprop="value" content="0" />$0</td>
-<td data-label="Jefferson County (Littleton)"><meta itemprop="value" content="0" />$0</td>
-<td data-label="Douglas County (Littleton)" class="hero-stat"><meta itemprop="value" content="3250" />$0–$3,500</td>
-</tr>
-<tr>
-<th scope="row" itemscope itemtype="https://schema.org/PropertyValue" style="border-left: 4px solid #002a3a;">
-<meta itemprop="name" content="Total seller cost (typical case, no HOA, no metro-district fee)" />
-<div class="tier-label">Bottom line</div>
-<div class="city-name">Total seller cost (typical)</div>
-<div class="sample-size">% of $650K sale price</div>
-</th>
-<td data-label="Arapahoe County (Littleton)" class="hero-stat"><meta itemprop="value" content="40915" />~$40,900 (6.3%)</td>
-<td data-label="Jefferson County (Littleton)" class="hero-stat"><meta itemprop="value" content="40615" />~$40,600 (6.2%)</td>
-<td data-label="Douglas County (Littleton)" class="hero-stat"><meta itemprop="value" content="40665" />~$40,700 (6.3%)</td>
-</tr>
-</tbody>
-</table>
-<figcaption><strong>Source:</strong> REcolorado MLS April 2026 closed residential transactions for Littleton, Colorado, anchoring the median sale price at $650,000 (n=292 closed). Title insurance ranges per Colorado Department of Insurance filed rates; documentary fee per <a href="https://leg.colorado.gov/sites/default/files/images/olls/crs2024-title-39.pdf" target="_blank" rel="noopener">C.R.S. § 39-13-102</a>. County-specific property tax proration ranges from Arapahoe, Jefferson, and Douglas County Assessor mill levy schedules for tax year 2025 (paid 2026). Metro-district transfer fee range reflects active service plans on file with the Douglas County Special District Authority for newer Littleton-addressed Douglas County subdivisions. Compiled by selling303.com on May 14, 2026.<br /><em>Definitions: "Total seller cost (typical)" excludes HOA transfer fees and Douglas County metro-district transfer fees, which apply only when the property sits inside the relevant district. Commission shown at 5.5 percent total is illustrative; actual commission is negotiated between seller and listing broker.</em></figcaption>
+<meta itemprop="value" content="-65" />
+<meta itemprop="unitText" content="USD" />
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;">
+<div>
+<div style="color: #002a3a; font-weight: 600;">CO state documentary fee</div>
+<div style="font-size: 0.82rem; color: #81848a; margin-top: 0.2rem;">$0.01 per $100 of consideration, statewide</div>
+</div>
+<span style="font-weight: 700; color: #8b3a3a; font-size: 1.02rem; font-variant-numeric: tabular-nums; white-space: nowrap;">&minus;$65</span>
+</div>
+</div>
+<div itemscope itemtype="https://schema.org/PropertyValue" style="padding: 0.7rem 0 0.7rem 0; border-bottom: 1px solid #e6e8ea;">
+<meta itemprop="name" content="Property tax proration, 6 months for mid-year close" />
+<meta itemprop="value" content="-1900" />
+<meta itemprop="unitText" content="USD" />
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;">
+<div>
+<div style="color: #002a3a; font-weight: 600;">Property tax proration (~6 months)</div>
+<div style="font-size: 0.82rem; color: #81848a; margin-top: 0.2rem;">Varies by county mill levy; range $1,650 to $2,100 across the 3 counties</div>
+</div>
+<span style="font-weight: 700; color: #8b3a3a; font-size: 1.02rem; font-variant-numeric: tabular-nums; white-space: nowrap;">&minus;$1,900</span>
+</div>
+</div>
+
+<div itemscope itemtype="https://schema.org/PropertyValue" style="margin: 1.25rem 0 0.5rem 0; padding: 0.95rem 1rem; background: #f0f4f0; border-left: 4px solid #4a7c59; border-radius: 0 8px 8px 0; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem;">
+<meta itemprop="name" content="Total typical seller cost (no HOA, no metro-district)" />
+<meta itemprop="value" content="-40795" />
+<meta itemprop="unitText" content="USD" />
+<div>
+<div style="color: #002a3a; font-weight: 700; font-size: 0.95rem;">Total typical seller cost</div>
+<div style="font-size: 0.78rem; color: #4a4f55; margin-top: 0.15rem;">~6.3% of sale price; no HOA, no metro-district, no concessions</div>
+</div>
+<span style="font-weight: 700; color: #002a3a; font-size: 1.15rem; font-variant-numeric: tabular-nums; white-space: nowrap;">&minus;$40,795</span>
+</div>
+
+<div itemscope itemtype="https://schema.org/PropertyValue" style="margin: 0.5rem 0 0.85rem 0; padding: 1rem 1.15rem; background: #002a3a; border-radius: 8px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; color: #ffffff;">
+<meta itemprop="name" content="Cash on the table before mortgage payoff" />
+<meta itemprop="value" content="609205" />
+<meta itemprop="unitText" content="USD" />
+<div>
+<div style="font-weight: 700; font-size: 1rem;">Cash on the table before mortgage payoff</div>
+<div style="font-size: 0.8rem; opacity: 0.85; margin-top: 0.2rem;">Net cash to seller depends on remaining loan balance</div>
+</div>
+<span style="font-weight: 700; color: #c8965a; font-size: 1.3rem; font-variant-numeric: tabular-nums; white-space: nowrap;">$609,205</span>
+</div>
+
+</div>
+</div>
+<figcaption style="font-size: 0.82rem; color: #555; margin-top: 0.6rem; padding: 0.6rem 0.8rem; background: #f8f9fa; border-radius: 0 0 8px 8px; border-top: 1px solid #e6e8ea;"><strong>Source:</strong> REcolorado MLS April 2026 closed residential transactions for Littleton, Colorado (n=292, $650,000 median close, 2,178 median finished square footage, 16-day median DIM, 98% median CP/OLP). Owner's title insurance per <a href="https://doi.colorado.gov" target="_blank" rel="noopener">Colorado Division of Insurance</a> filed rates. Documentary fee per <a href="https://leg.colorado.gov/sites/default/files/images/olls/crs2024-title-39.pdf" target="_blank" rel="noopener">C.R.S. § 39-13-102</a>. Recording fees per Colorado statewide standardization (2017). Property tax proration anchored to Arapahoe / Jefferson / Douglas county mill levies for tax year 2025 (paid 2026). Total typical case excludes HOA transfer fees, Douglas County metro-district transfer fees, and any buyer concession credits. Compiled by selling303.com.</figcaption>
 </figure>
 
-<p>Read across the bottom row: on a typical $650,000 Littleton sale without an HOA and without a Douglas County metro-district overlay, the three counties land within about $300 of each other — Arapahoe at roughly $40,900, Jefferson at $40,600, and Douglas at $40,700. The differences are small enough that they almost never change the listing decision. But the moment an HOA stack or a Douglas County metro-district transfer fee enters the picture, the total can jump $700 to $4,200 — which is the part first-time sellers actually need to plan around.</p>
+<h2 id="big-lines">Which lines actually move the needle?</h2>
 
-<h2 id="what-actually-moves">Which line items actually change between counties?</h2>
+<p>Commission is the only large line. At 5.5 percent on $650,000, that is $35,750, which represents 87 percent of the typical seller cost. Everything else combined is under $5,500. If a first-time seller wants to reduce closing-day costs, commission is the only line where the dollars are large enough to matter.</p>
 
-<p>Two lines on the net sheet are genuinely different between the three counties. The first is <strong>property tax proration</strong>. Colorado's residential property tax is calculated as actual value × assessment rate × mill levy, then prorated by closing date. Arapahoe County's typical effective mill levy lands slightly higher than Jefferson County's base rate, while Douglas County's base rate is comparable to Jefferson's — but newer Douglas County subdivisions stack a metro-district mill levy on top that can push the effective rate meaningfully higher. On a $650,000 home, a six-month tax proration ranges roughly from $1,650 in a low-mill Jefferson neighborhood to $1,950 in a higher-mill Arapahoe ZIP, before any Douglas County metro-district adjustment.</p>
+<p>The other lines are mostly mechanical. Title insurance is filed-rate insurance regulated by the Colorado Division of Insurance, priced on the sale amount, identical at every title company on the same sale. The Colorado state documentary fee is $0.01 per $100, mathematically fixed at $65 on a $650,000 close. Recording fees were standardized statewide in 2017 at $13 for the first page plus $5 for each additional page. Settlement and closing fees vary modestly between closers, in the $300 to $500 range, and are not worth shopping aggressively.</p>
 
-<p>The second is the <strong>metro-district transfer fee</strong>. This is the line that surprises Douglas County sellers most often. Many newer Douglas County subdivisions — including a handful of Littleton-addressed Douglas County developments south and southwest of C-470 — operate inside a special district service plan that charges a transfer fee of 0.5 to 1.0 percent of sale price at closing. On a $650,000 home, that is $3,250 to $6,500 of additional cost the seller pays at the closing table. Not every Douglas County address carries this fee — older neighborhoods predating the metro-district era do not — but the line shows up often enough that any first-time seller with a Douglas County address should check before listing.</p>
+<p>The one line that varies meaningfully is property tax proration. Mill levies are set by each county and tax authority, and a 6-month proration on a $650,000 home can range from about $1,650 in a low-mill Jefferson County neighborhood to about $2,100 in a higher-mill Arapahoe County ZIP. The dollar swing is small. The proration math is mechanical and the closer calculates it the same way regardless of county.</p>
 
-<p>Beyond those two, the differences are small enough to round to zero on a typical first-time-seller decision.</p>
+<h2 id="hoa-and-counties">When do HOAs or the 3-county question change the math?</h2>
 
-<h2 id="what-doesnt-change">Which line items are the same in all three counties?</h2>
+<p>Two situations push the total above the typical case. An HOA adds a transfer fee and status-letter cost. Both vary by association, but a typical Littleton HOA bills the seller $200 to $700 at closing for the package. The HOA's fee schedule is set by the management company, not by the county or the city. Most first-time sellers in a townhome or attached home should plan for this; most first-time sellers in a detached single-family home outside an HOA can ignore it.</p>
 
-<p>Most of the net sheet does not change. <strong>Real estate commission</strong> is negotiated between seller and listing broker — same regardless of county. <strong>Owner's title insurance</strong> is filed-rate insurance regulated by the <a href="https://doi.colorado.gov" target="_blank" rel="noopener">Colorado Division of Insurance</a>; the same premium applies in all three counties for the same sale price. The <strong>Colorado state documentary fee</strong> is a flat $0.01 per $100 of consideration statewide. <strong>Settlement and recording fees</strong> were standardized at the state level in 2017 — Colorado recording fees are $13 for the first page and $5 per additional page, the same in every county recorder's office.</p>
+<p>The other situation is the Littleton 3-county quirk, and it matters less than most sellers expect. Littleton's mailing address spans Arapahoe, Jefferson, and Douglas counties. The same nominal $650,000 sale carries essentially identical commission, title insurance, settlement, recording, and documentary fees in all three. Property tax proration varies by a few hundred dollars based on local mill levies. The only line that can move the total meaningfully is a metro-district transfer fee in some newer Douglas County subdivisions, which can charge 0.5 to 1.0 percent of sale price at closing, adding $3,250 to $6,500 on a $650,000 home.</p>
 
-<p><strong>HOA transfer and status-letter fees</strong> are set by the HOA, not the county. A first-time seller with an HOA in a Littleton-Arapahoe condo pays the same $200 to $700 stack as a first-time seller with an HOA in a Littleton-Jefferson townhome — what matters is the HOA's fee schedule, not the address county. For an Arapahoe-County-only deep-dive on these line items, the <a href="/blog/hidden-costs-selling-home-arapahoe-county-net-sheet-2026">Arapahoe County first-time seller net sheet</a> walks them through one by one.</p>
+<p>Not every Douglas County Littleton address carries this fee. Older Douglas County neighborhoods predating the metro-district era do not. The check is mechanical: pull the title commitment early and read the recorded special-district documents. If the fee is in the service plan, it is non-negotiable at the closing table; if it is not, the address sits in the typical-case column on the net sheet above.</p>
 
-<p>That's the right frame for a first-time Littleton seller: the net sheet looks identical on six of the eight major lines. Only property-tax proration and (in some Douglas County addresses) metro-district transfer fees actually move.</p>
+<h2 id="concessions">How do buyer concessions change the net?</h2>
 
-<h2 id="how-to-find-your-county">How do I find out which county my Littleton home is in?</h2>
+<p>Buyer concession credits are the line first-time sellers often miss when running early math. At a 16-day median days in MLS and a 98 percent close-to-original-list ratio, the Littleton spring market is moving, but it is not so tight that concessions have disappeared. A typical Littleton sale in this market gives back 1 to 3 percent in some form, whether that is a closing-cost credit, a rate-buydown contribution, or a repair credit negotiated after inspection.</p>
 
-<p>Three quick options. <strong>One:</strong> pull your county property tax bill — the assessor's name and county sit at the top. Arapahoe County bills come from the Arapahoe County Assessor's office in Centennial. Jefferson County bills come from the Jeffco Assessor in Golden. Douglas County bills come from the Douglas County Assessor in Castle Rock. <strong>Two:</strong> search your address on the relevant county assessor's online property lookup. All three counties offer free parcel search by address. <strong>Three:</strong> ask Jacob Stark — pulling your county is the first thing he does on a Littleton listing intake, before the home walk and well before the net sheet.</p>
+<p>The dollar weight matters. A 2 percent concession on $650,000 is $13,000. That single line outweighs the entire HOA, title, and tax-proration stack combined. A 3 percent concession is $19,500, which is more than half the commission line. Not every sale carries one. But a meaningful slice do, and a first-time seller who plans the net sheet at the typical-case total ($40,795) without leaving room for a concession is setting themselves up for a surprise at the closing table.</p>
 
-<p>Jacob Stark works listings across all three Littleton counties — Arapahoe core, Jefferson west of Wadsworth, and Douglas south of C-470. The intake checklist always starts with the parcel's actual county, the property tax bill from the last cycle, and any active HOA or metro-district documents. That sequence is what produces an accurate net sheet on day one of the listing conversation, not on closing day.</p>
+<p>The honest plan: run the net sheet at the typical case, then run a second pass that adds a 1 to 2 percent concession to see what the floor of the seller's net cash looks like. The two numbers bracket what the actual sale will deliver. Jacob Stark walks every Littleton seller through both passes before list day.</p>
 
-<h2 id="planning-the-sale">How should a first-time Littleton seller plan around this?</h2>
+<h2 id="walk-away">What does a Littleton seller actually walk away with?</h2>
 
-<p>Three practical steps. <strong>First, anchor the math at 7 percent.</strong> A first-time seller running back-of-the-envelope math should plan on roughly 7 percent of sale price in total seller cost — $45,500 on a $650,000 sale — before any buyer concession credit is layered in. That is conservative enough to absorb the 3-county variation and a typical HOA stack without surprise.</p>
+<p>Subtract the $40,795 typical-case seller cost from the $650,000 sale price, and the seller has $609,205 on the table before the mortgage payoff. The mortgage balance is the variable that swings the bottom line, not the cost lines.</p>
 
-<p><strong>Second, get the county-specific tax proration before list day.</strong> Once Jacob Stark pulls the parcel's county, he runs the prior-year tax bill through the assessor's posted mill levy to estimate the proration line within $100. That number goes on the listing-intake net sheet and gets updated when the closing date is set.</p>
+<p>A few illustrative scenarios. A first-time seller who bought in 2018 at $400,000 with 20 percent down financed roughly $320,000 at a 4.5 percent rate, which leaves a balance of about $268,000 in 2026 after seven years of amortization. Their net cash at closing on the median Littleton sale is roughly $341,000 before moving costs and any concession.</p>
 
-<p><strong>Third, if the address is Douglas County, check the metro-district status first.</strong> The single largest hidden line item across the three counties is the Douglas County metro-district transfer fee — and it shows up only after a title search if no one looks for it. The fix is simple: pull the title commitment early and read the recorded special-district documents. Jacob Stark does this routinely on every Douglas-County-Littleton listing, before list day, not after the under-contract email. The broader <a href="/blog/cost-to-sell-house-colorado-2026">Colorado seller cost guide</a> covers the rest of the statewide foundation that sits underneath this Littleton-specific math.</p>
+<p>A first-time seller who bought in 2021 at $560,000 with 5 percent down financed about $532,000 at a 3.0 percent rate, with a 2026 balance closer to $480,000. Their net cash on the same median sale is closer to $129,000. Same sale price, same cost lines, very different cash to the seller, driven entirely by when they bought and how much they put down.</p>
 
-<p>Across Jacob Stark's $46M+ in closed South Denver Metro transactions, the highest-leverage move on a first-time Littleton seller's net sheet is not negotiating commission down a quarter point. It is catching the 3-county variation before list day — so the seller never opens the closing statement and asks "what is this $4,000 line." That is what running the numbers honestly produces.</p>
+<p>That is why a Littleton seller running early math should not start with the sale price. They should start with their current mortgage payoff, add the typical-case seller cost, and then back into the listing price required to deliver their target net cash. The <a href="/blog/cost-to-sell-house-colorado-2026">Colorado seller cost guide</a> walks through the broader version of this math for sellers outside Littleton.</p>
+
+<h2 id="plan">How should a first-time Littleton seller plan around this?</h2>
+
+<p>Three steps before list day. First, pull the most recent mortgage statement and call the loan servicer for an exact payoff quote good through the expected closing date. The statement balance is usually slightly low because it does not include accrued interest through closing. Second, ask the listing broker for a net sheet at the planned list price and at a 2 percent concession scenario. The two numbers bracket the realistic cash range. Third, if the address is in Douglas County, ask the title company to pull the title commitment early and confirm whether a metro-district transfer fee applies.</p>
+
+<p>The single most useful conversation a first-time Littleton seller can have is not about commission. It is about the gap between the gross sale price and the net cash. Across $46M+ in closed South Denver transactions, Jacob Stark sees the same pattern: sellers who run the net cash math before list day make calmer decisions on offers, on concessions, and on price reductions when they happen. Sellers who run the math at the closing table do not.</p>
+
+<p>For a deeper, single-county view of the same line items, the <a href="/blog/hidden-costs-selling-home-arapahoe-county-net-sheet-2026">Arapahoe County first-time seller net sheet</a> walks through the same structure focused on Centennial, Littleton-Arapahoe, and Englewood addresses. For the buy-side equivalent, the <a href="/blog/closing-costs-littleton-first-time-buyers-2026">Littleton first-time buyer closing costs guide</a> covers the lender fees, prepaids, and HOA surprises on the other side of the table.</p>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 
-<h3>What is the typical seller cost for a $650K Littleton home in 2026?</h3>
-<p>Roughly $44,000 to $50,000, or about 6.8 to 7.7 percent of sale price, before any buyer concession credit. On a typical Littleton home without an HOA and without a Douglas County metro-district overlay, total seller cost lands around $40,600 to $40,900 across the three counties — within $300 of each other. The cost climbs to $44,000 to $46,000 with a typical HOA stack and can climb to $50,000 or higher when a Douglas County metro-district transfer fee is in play. Real estate commission at 5.5 percent ($35,750) is the largest single line, followed by owner's title insurance ($2,400 to $2,900), property tax proration ($1,650 to $2,100), and the smaller settlement, recording, and documentary fees.</p>
+<h3>How much does it cost to sell a Littleton home in 2026?</h3>
+<p>Roughly $41,000 on a $650,000 sale, before any buyer concession or mortgage payoff. Real estate commission at 5.5 percent ($35,750) is the largest line. Owner's title insurance runs $2,400 to $2,900. Property tax proration on a 6-month close runs $1,650 to $2,100 depending on the county. Settlement, recording, and the state documentary fee combined add about $500. An HOA adds $200 to $700 when applicable. A 1 to 3 percent buyer concession credit, if negotiated, adds another $6,500 to $19,500.</p>
 
-<h3>Does Colorado charge a real estate transfer tax on Littleton home sales?</h3>
-<p>Not at the state level beyond a small documentary fee. Colorado assesses a documentary fee of one cent per $100 of consideration — roughly $65 on a $650,000 Littleton sale — that appears on the seller's closing statement. The City of Littleton, unincorporated Arapahoe County, unincorporated Jefferson County, and unincorporated Douglas County do not charge their own real estate transfer tax. The line item that resembles a transfer tax in some Douglas County subdivisions is actually a metro-district transfer fee — a fee charged by the local special district under its service plan, not a tax imposed by the county.</p>
+<h3>Does Colorado charge a real estate transfer tax?</h3>
+<p>Not at the state level beyond a small documentary fee. Colorado assesses one cent per $100 of consideration, or about $65 on a $650,000 sale, which appears on the seller's closing statement. The City of Littleton, unincorporated Arapahoe County, unincorporated Jefferson County, and unincorporated Douglas County do not charge their own real estate transfer tax. The line that looks like a transfer tax in some Douglas County subdivisions is actually a metro-district transfer fee charged by the local special district, not a county tax.</p>
 
-<h3>Is the Douglas County metro-district transfer fee negotiable?</h3>
-<p>Almost never. Metro-district transfer fees are set by the district's service plan and recorded against the property. They run with the land and are non-negotiable at the closing table. The only way to avoid the fee is to sell a Douglas County property that sits outside an active metro-district service plan — typically older subdivisions predating the metro-district era. For first-time sellers in newer Douglas County subdivisions, the fee should be planned into the net sheet from list day, not absorbed as a surprise at closing.</p>
+<h3>How much will I actually walk away with at closing?</h3>
+<p>The $650,000 sale leaves roughly $609,000 on the table after $41,000 in seller costs. From there, the net cash depends on the remaining mortgage balance. A 2018 buyer at $400,000 with 20 percent down typically carries a $260,000 to $275,000 balance in 2026, netting about $335,000 to $350,000 cash. A 2021 buyer at $560,000 with 5 percent down typically still owes around $480,000, netting closer to $130,000. Run your own math against your specific payoff quote before list day.</p>
 
 <blockquote style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.5rem; margin: 2rem 0; border-radius: 0 8px 8px 0;">
-<p><strong>Running your first Littleton net sheet?</strong> Jacob Stark pulls your county, your mill levy, and any metro-district or HOA overlays before list day — so the closing statement holds no surprises. Call <a href="tel:+13039970634">303-997-0634</a> or visit <a href="https://selling303.com">selling303.com</a> to start the conversation.</p>
+<p><strong>Running your first Littleton net sheet?</strong> Jacob Stark runs the typical case, the concession-floor case, and the actual mortgage-payoff math before list day, so the closing statement holds no surprises. Call <a href="tel:+13039970634">303-997-0634</a> or visit <a href="https://selling303.com">selling303.com</a> to start the conversation.</p>
 </blockquote>
 
-<p style="font-size: 0.85rem; color: #555; margin-top: 2rem;"><em>Data sources: REcolorado MLS April 2026 closed residential transactions for Littleton, Colorado (compiled May 14, 2026 by selling303.com, n=292 total closed, $650,000 median close, 2,178 median finished square footage, $302 median price per finished square foot, 16-day median days in MLS, 98 percent median close-to-original-list ratio); <a href="https://www.dmarealtors.com/market-trends" target="_blank" rel="noopener">DMAR April 2026 Market Trends Report</a> for Denver Metro context. County-specific mill levy and assessor data from Arapahoe County, Jefferson County, and Douglas County Assessor's offices, tax year 2025 (paid 2026). Title insurance rates per <a href="https://doi.colorado.gov" target="_blank" rel="noopener">Colorado Division of Insurance</a> filed rate schedule. Net sheet line items are illustrative; actual closing costs vary by transaction structure, HOA status, metro-district status, and closing date. Mortgage rate context per <a href="https://www.freddiemac.com/pmms" target="_blank" rel="noopener">Freddie Mac PMMS</a>. Not legal, tax, or financial advice — consult a licensed Colorado closing professional for transaction-specific guidance.</em></p>
+<p style="font-size: 0.85rem; color: #555; margin-top: 2rem;"><em>Data sources: REcolorado MLS April 2026 closed residential transactions for Littleton, Colorado (compiled May 14, 2026 by selling303.com, n=292 total closed, $650,000 median close, 2,178 median finished square footage, $302 median price per finished square foot, 16-day median days in MLS, 98 percent median close-to-original-list ratio). Denver Metro context per the <a href="https://www.dmarealtors.com/market-trends" target="_blank" rel="noopener">DMAR April 2026 Market Trends Report</a>. Title insurance rates per the <a href="https://doi.colorado.gov" target="_blank" rel="noopener">Colorado Division of Insurance</a> filed rate schedule. Documentary fee per <a href="https://leg.colorado.gov/sites/default/files/images/olls/crs2024-title-39.pdf" target="_blank" rel="noopener">C.R.S. § 39-13-102</a>. Mortgage rate context per <a href="https://www.freddiemac.com/pmms" target="_blank" rel="noopener">Freddie Mac PMMS</a>. Net-cash scenarios use illustrative purchase prices, down payments, and rate assumptions; actual closing math varies by transaction. Not legal, tax, or financial advice; consult a licensed Colorado closing professional for transaction-specific guidance.</em></p>
