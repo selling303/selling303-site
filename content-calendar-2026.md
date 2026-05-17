@@ -352,7 +352,7 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
 ### Week 2: May 12–18
 
 #### Day 8 — Tuesday, May 12
-- [x] **"Spec Home vs. Custom Build in Parker (2026)"** *(drafted 2026-05-11)* *(title shortened from "Spec Home vs. Custom Build in Parker: A 2026 Cost-Per-Square-Foot Comparison" for SERP CTR; original preserved in `headline` frontmatter field)*
+- [x] **"Parker New Construction: Buy Off the Shelf or Build It?"** *(drafted 2026-05-11, copy refreshed 2026-05-16)* *(title shortened from "Spec Home vs. Custom Build in Parker: A 2026 Cost-Per-Square-Foot Comparison" — original preserved in `headline` frontmatter; published title rewritten 2026-05-16 from interim "Spec Home vs. Custom Build in Parker (2026)" to drop the insider "spec build" vocab from the SERP and lead with reader-language "buy off the shelf or build it")*
   - Specialization: `/new-construction` | Geographic: `/parker`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Real cost-per-square-foot data on Parker spec inventory vs. custom-build contracts. Builder upgrade markups, the timing trade-off, lot-premium dynamics, what's negotiable in spec vs. custom, and how 2026 builder incentive packages distort the headline price comparison.

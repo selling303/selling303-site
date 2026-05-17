@@ -89,7 +89,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - Should You Build New in Parker or Buy Resale? A Cost-Per-Square-Foot Analysis (`/blog/build-new-or-buy-resale-parker-cost-per-square-foot`)
 - New Construction Buyer Representation in Colorado: What Changed in 2026 and Why It Matters (`/blog/new-construction-buyer-representation-colorado-2026`)
 - RidgeGate vs. Heritage Hills: A Lone Tree New Construction Update for 2026 (`/blog/ridgegate-vs-heritage-hills-lone-tree-new-construction-2026`)
-- Spec Home vs. Custom Build in Parker (2026) (`/blog/spec-home-vs-custom-build-parker-2026`)
+- Parker New Construction: Buy Off the Shelf or Build It? (`/blog/spec-home-vs-custom-build-parker-2026`)
 
 ---
 
