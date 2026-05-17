@@ -161,7 +161,7 @@ const schemaJson = JSON.stringify({
       <h2 class="section-heading">{data.title} Insights</h2>
       <div class="card-grid">
         {data.relatedPosts.map((post) => (
-          <a href="/blog" class="card card--dark">
+          <a href={`/blog/${post.slug}`} class="card card--dark">
             <div class="card__body">
               <span class="card__tag">{post.tag}</span>
               <h3 class="card__title">{post.title}</h3>
