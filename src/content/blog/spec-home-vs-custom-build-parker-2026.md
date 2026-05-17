@@ -133,7 +133,7 @@ relatedPosts:
 </div>
 <svg viewBox="0 0 700 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="frontier-title frontier-desc" style="width: 100%; height: auto; display: block;">
 <title id="frontier-title">Parker new construction in 2026: pick your corner. You can move in fast, or you can pick every detail. You cannot do both.</title>
-<desc id="frontier-desc">A two-axis position plot showing the two real Parker new-construction paths in 2026. The Spec Home zone sits in the lower-left of the plot: 30 to 90 days from contract to keys, few design decisions controlled by the buyer, 850 thousand to 925 thousand dollars all-in delivered cost. The Custom Build zone sits in the upper-right: 12 to 18 months from contract to certificate of occupancy, hundreds of design decisions controlled by the buyer, 1.1 million to 1.4 million-plus dollars all-in delivered cost. The upper-left quadrant — fast move-in plus full design control — does not exist as a real Parker new-construction option. A dashed frontier line connects the two real zones, labeled as the trade-off the buyer actually has. Source: REcolorado MLS April 2026 Parker single-family closings, n=181, 681 thousand dollar median close, 11-day median days in MLS, 275 dollars per finished square foot median.</desc>
+<desc id="frontier-desc">A two-axis position plot showing the two real Parker new-construction paths in 2026. The lower-left quadrant — fast move-in plus a small number of design decisions — is the Spec Home zone: 30 to 90 days from contract to keys, 850 thousand to 925 thousand dollars all-in delivered cost. The upper-right quadrant — long timeline plus hundreds of design decisions — is the Custom Build zone: 12 to 18 months from contract to certificate of occupancy, 1.1 million to 1.4 million-plus dollars all-in delivered cost. The upper-left quadrant — fast move-in plus full design control — does not exist as a real Parker new-construction option. Source: REcolorado MLS April 2026 Parker single-family closings, n=181, 681 thousand dollar median close, 11-day median days in MLS, 275 dollars per finished square foot median.</desc>
 <rect x="0" y="0" width="700" height="68" fill="#002a3a"/>
 <text x="20" y="24" fill="#c8965a" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing="1.2">PARKER NEW CONSTRUCTION • 2026</text>
 <text x="20" y="46" fill="white" font-family="system-ui, -apple-system, sans-serif" font-size="19" font-weight="700">Pick your corner — you can't have both.</text>
@@ -157,12 +157,12 @@ relatedPosts:
 <text x="680" y="438" fill="#555" font-family="system-ui, -apple-system, sans-serif" font-size="11" text-anchor="middle">18 mo</text>
 <text x="385" y="458" fill="#002a3a" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.8">TIME TO MOVE IN →</text>
 <text x="32" y="254" fill="#002a3a" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0.8" transform="rotate(-90 32 254)">DESIGN DECISIONS YOU CONTROL</text>
-<rect x="108" y="105" width="220" height="80" fill="white" stroke="#999" stroke-width="1.5" stroke-dasharray="6,4" rx="8" opacity="0.92"/>
-<text x="218" y="132" fill="#888" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="800" text-anchor="middle" letter-spacing="0.5">DOESN'T EXIST</text>
-<text x="218" y="152" fill="#666" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-style="italic" text-anchor="middle">There is no fast</text>
-<text x="218" y="168" fill="#666" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-style="italic" text-anchor="middle">custom build.</text>
-<path d="M 240 358 Q 380 280 525 165" stroke="#c8965a" stroke-width="2.5" stroke-dasharray="6,5" fill="none"/>
-<text x="385" y="275" fill="#c8965a" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-style="italic" font-weight="600" text-anchor="middle">↑ the trade-off you actually have ↑</text>
+<rect x="108" y="105" width="220" height="80" fill="white" stroke="#c5c5c5" stroke-width="1.2" stroke-dasharray="5,4" rx="8" opacity="0.65"/>
+<text x="218" y="132" fill="#aaa" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" font-style="italic" text-anchor="middle" letter-spacing="0.5">DOESN'T EXIST</text>
+<text x="218" y="152" fill="#999" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-style="italic" text-anchor="middle">There is no fast</text>
+<text x="218" y="167" fill="#999" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-style="italic" text-anchor="middle">custom build.</text>
+<text x="572" y="98" fill="#888" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-style="italic" font-weight="600" text-anchor="middle" letter-spacing="1">SLOW + CUSTOM</text>
+<text x="218" y="300" fill="#888" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-style="italic" font-weight="600" text-anchor="middle" letter-spacing="1">FAST + SIMPLE</text>
 <rect x="108" y="310" width="220" height="100" fill="#002a3a" fill-opacity="0.08" stroke="#002a3a" stroke-width="2.5" rx="10"/>
 <text x="218" y="332" fill="#002a3a" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="800" text-anchor="middle" letter-spacing="0.8">SPEC HOME</text>
 <text x="218" y="362" fill="#002a3a" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800" text-anchor="middle">$850K–$925K</text>
@@ -173,8 +173,15 @@ relatedPosts:
 <text x="572" y="157" fill="#4a7c59" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800" text-anchor="middle">$1.1M–$1.4M+</text>
 <text x="572" y="173" fill="#4a7c59" font-family="system-ui, -apple-system, sans-serif" font-size="11" text-anchor="middle">all-in delivered cost</text>
 <text x="572" y="195" fill="#4a7c59" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-style="italic" text-anchor="middle" font-weight="600">12–18 months. Every choice yours.</text>
-<text x="675" y="412" fill="#999" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-style="italic" text-anchor="end" opacity="0.8">stalled spec inventory sits here</text>
-<text x="20" y="488" fill="#666" font-family="system-ui, -apple-system, sans-serif" font-size="10">Source: REcolorado MLS April 2026 Parker SFR closings (n=181) + NAHB Cost of Constructing a Home + Front Range custom-build cost guidance | selling303.com</text>
+<line x1="123" y1="418" x2="188" y2="418" stroke="#c8965a" stroke-width="2"/>
+<line x1="123" y1="414" x2="123" y2="422" stroke="#c8965a" stroke-width="2"/>
+<line x1="188" y1="414" x2="188" y2="422" stroke="#c8965a" stroke-width="2"/>
+<text x="155" y="412" fill="#c8965a" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-style="italic" font-weight="600" text-anchor="middle">1–3 mo</text>
+<line x1="484" y1="418" x2="680" y2="418" stroke="#c8965a" stroke-width="2"/>
+<line x1="484" y1="414" x2="484" y2="422" stroke="#c8965a" stroke-width="2"/>
+<line x1="680" y1="414" x2="680" y2="422" stroke="#c8965a" stroke-width="2"/>
+<text x="582" y="412" fill="#c8965a" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-style="italic" font-weight="600" text-anchor="middle">12–18 mo</text>
+<text x="20" y="488" fill="#666" font-family="system-ui, -apple-system, sans-serif" font-size="10">Source: REcolorado MLS Apr 2026 Parker SFR closings (n=181) + NAHB Cost of Constructing a Home | selling303.com</text>
 </svg>
 <figcaption style="background: #f8f9fa; border-top: 1px solid #d6e0e6; padding: 0.85rem 1.25rem; font-size: 0.85rem; color: #555; line-height: 1.55;"><strong>Source:</strong> Spec zone anchored in REcolorado MLS April 2026 closed residential transactions for Parker, Colorado | n=181 single-family closings | Median close $681,000 | Median DIM 11 days | Median CP/OLP 99% | Median $275 per finished square foot | Compiled by selling303.com on May 3, 2026. Custom zone anchored in <a href="https://www.nahb.org/" target="_blank" rel="noopener">NAHB Cost of Constructing a Home</a> survey plus Front Range custom-build cost guidance, with lot purchase ($150,000–$400,000) and hard construction ($290–$400 per finished square foot) as separate cost components.<br /><em>How to read this plot: the two zones are the two real Parker new-construction options, positioned by how long you wait to move in (x-axis) and how many design decisions you control (y-axis). The empty upper-left quadrant — fast move-in plus full design control — does not exist as a real option in 2026. The dashed gold curve is the trade-off frontier the buyer actually faces.</em></figcaption>
 </figure>
