@@ -145,7 +145,7 @@ relatedPosts:
 
 <p><strong>Five:</strong> how strong is the buyer's <a href="/blog/first-time-buyer-bidding-littleton-spring-2026">offer strategy</a>? Starter single-family homes at 14-day median days in MLS are getting offers in the first week. A condo at 24-day median DIM gives more negotiating room. The offer-strategy chapter of this decision matters more than most first-time buyers realize.</p>
 
-<p>Across Jacob Stark's $46M+ in closed South Denver transactions, the right answer to "condo or starter SFR" has split roughly evenly — about 55 percent of first-time-buyer clients land on a single-family home, 45 percent on a condo or townhome. The split tracks each household's actual financial picture more than any generalizable rule. That is what running the numbers honestly produces.</p>
+<p>Across Jacob Stark's work with first-time buyers in Littleton, the right answer to "condo or starter SFR" tracks each household's actual financial picture — down-payment liquidity, hold horizon, monthly carrying capacity, and how much value the buyer places on outdoor space and household-mode flexibility — far more than any generalizable rule about property type. That is what running the numbers honestly produces.</p>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 
