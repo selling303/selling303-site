@@ -37,7 +37,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - Where South Denver Families Are Moving Up in 2026 (`/blog/spring-2026-move-up-market-report-south-denver`)
 - How to Time Your Move-Up Sale in Castle Pines Without Ending Up Homeless (`/blog/move-up-timing-castle-pines-2026`)
 - Move-Up Seller Myth: Why "Waiting for the Market" Is Costing You Money in Lakewood (`/blog/move-up-seller-myth-waiting-market-better-lakewood-2026`)
-- Move Up From Lakewood to Highlands Ranch: 2026 Cost Math (`/blog/lakewood-to-highlands-ranch-move-up-equity-carrying-cost-2026`)
+- Why Lakewood Owners Choose Highlands Ranch Next (2026) (`/blog/lakewood-to-highlands-ranch-move-up-equity-carrying-cost-2026`)
 - Englewood to Centennial Move-Up: 2026 Trade Math (`/blog/englewood-to-centennial-move-up-trade-off-2026`)
 - South Denver April 2026 Closings: What Move-Up Sellers Need to Know Heading Into May (`/blog/south-denver-april-2026-closings-move-up-sellers`)
 - South Denver Homeowner's 2026 Notice of Valuation Protest Playbook (`/blog/2026-notice-of-valuation-protest-playbook-south-denver`)
@@ -90,6 +90,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - New Construction Buyer Representation in Colorado: What Changed in 2026 and Why It Matters (`/blog/new-construction-buyer-representation-colorado-2026`)
 - RidgeGate vs. Heritage Hills: A Lone Tree New Construction Update for 2026 (`/blog/ridgegate-vs-heritage-hills-lone-tree-new-construction-2026`)
 - Parker New Construction: Buy Off the Shelf or Build It? (`/blog/spec-home-vs-custom-build-parker-2026`)
+- Right-Size Inside Highlands Ranch: 3 New-Build Paths (2026) (`/blog/highlands-ranch-new-construction-empty-nester-right-size-2026`)
 
 ---
 

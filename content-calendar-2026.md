@@ -360,12 +360,12 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: comparison-table (Tier 0, library) — 7 cost categories × 2 paths (spec inventory vs. custom build). Won Compelling Question Flow over two-path-diptych (21) and stretch settlement-statement (19) — comparison-table 22. Spec column anchored in REcolorado MLS April 2026 Parker closings (n=181, $274 PSF Fin median, $681K median close, 16-day median DIM); custom column anchored in NAHB Cost of Constructing a Home + Front Range custom-build guidance. Data asymmetry acknowledged inline — spec captured by MLS, custom rarely on MLS.
 
 #### Day 9 — Wednesday, May 13
-- [x] **"Move Up From Lakewood to Highlands Ranch: 2026 Cost Math"** *(drafted 2026-05-12)* *(title shortened from "How to Move Up From Lakewood to Highlands Ranch: 2026 Equity and Carrying-Cost Math" for SERP CTR; original preserved in `headline` frontmatter field)*
+- [x] **"Why Lakewood Owners Choose Highlands Ranch Next (2026)"** *(drafted 2026-05-12, full why-first rewrite 2026-05-16 after Jacob feedback)* *(title rewritten from the calendar-spec "How to Move Up From Lakewood to Highlands Ranch: 2026 Equity and Carrying-Cost Math" to lead with reader intent; original preserved in `headline` frontmatter)*
   - Specialization: `/move-up-sellers` | Geographic: `/lakewood`
   - Type: Seller advice | Funnel: MOFU
-  - Angle: Trade-up financial path for Lakewood owners who have rebuilt equity post-2022. Median Lakewood SFR equity vs. Highlands Ranch entry price, mortgage payment differential at current rates, sell-first vs. buy-first mechanics across two counties, and the timing windows that work in spring 2026.
-  - Target keywords: Lakewood to Highlands Ranch move, Jefferson County to Douglas County move, sell Lakewood buy HR, move-up from Lakewood
-  - Visual: settlement-statement (Tier 0, library) — full Lakewood-to-HR move-up net sheet anchored in REcolorado MLS April 2026 medians (Lakewood n=199 @ $580K, HR n=131 @ $737K). Won Compelling Question Flow over two-path-diptych (22) and comparison-table (20), and over a stretch dual-column-net-sheet (21, lost on mobile). The reader's question is "do I have enough cash?" — settlement statement is the canonical pattern.
+  - Angle: **Why-first, math-second.** Lead with the five real reasons Lakewood owners choose Highlands Ranch (DTC/South Metro commute, family already in Douglas County, different weather and insurance profile, master-planned lifestyle, newer housing-stock profile) and which of those are "right-now" triggers vs. wait-until-ready. The cross-county money math (equity, cash to close, monthly carrying-cost differential, sell-first sequencing) follows as the test once the reason is real. The original calendar spec was math-heavy; the rewrite acknowledges that Lakewood owners don't decide via spreadsheet — they decide via specific pull factors, and then the math either supports the move or it doesn't.
+  - Target keywords: why move to Highlands Ranch, Lakewood to Highlands Ranch move, Jefferson County to Douglas County move, sell Lakewood buy HR, move-up from Lakewood, Lakewood Highlands Ranch lifestyle
+  - Visual: settlement-statement (Tier 0, library) — full Lakewood-to-HR move-up net sheet anchored in REcolorado MLS April 2026 medians (Lakewood n=199 @ $580K, HR n=131 @ $737K). Won Compelling Question Flow over two-path-diptych (22) and comparison-table (20), and over a stretch dual-column-net-sheet (21, lost on mobile). In the rewrite the visual now sits inside the "what does the move actually cost?" H2 — the fourth body section, not the lead — in service of the why-first frame.
 
 #### Day 10 — Thursday, May 14
 - [x] **"The Englewood-to-Centennial Move-Up Path: Trading Walkability for Square Footage"** *(drafted 2026-05-14)* *(title shortened to "Englewood to Centennial Move-Up: 2026 Trade Math" for SERP CTR; original preserved in `headline` frontmatter field)*
@@ -392,12 +392,12 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: price-ladder-svg (4 tiers × median sqft scaling — overrode calendar `Visual: none` advisory; Compelling Question Flow scored price-ladder-svg 24, profile-card-grid 24 tied, comparison-table 21; tiebreaker on narrative fit, pattern freshness, and library-first-live promotion)
 
 #### Day 13 — Sunday, May 17
-- [ ] **"Highlands Ranch New Construction for Empty-Nesters: How to Right-Size Without Leaving the Suburb"**
+- [x] **"Right-Size Inside Highlands Ranch: 3 New-Build Paths (2026)"** *(drafted 2026-05-16, slug: `highlands-ranch-new-construction-empty-nester-right-size-2026`, title shortened from "Highlands Ranch New Construction for Empty-Nesters: How to Right-Size Without Leaving the Suburb" for SERP CTR; original preserved in `headline` frontmatter; shipped as **profile-card-grid Tier 0** — Compelling Question Flow override from calendar's `howto (flag-only)` advisory)*
   - Specialization: `/new-construction` | Geographic: `/highlands-ranch`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Step-by-step framework for HR empty-nesters evaluating right-sized new construction options inside the same neighborhood. Single-level patio homes, low-maintenance townhomes, age-targeted communities. Walks through the lifestyle audit, financial readiness check, builder selection, and contract negotiation timeline.
   - Target keywords: Highlands Ranch empty nester new construction, downsize Highlands Ranch, patio homes Highlands Ranch, low maintenance HR
-  - Visual: howto (flag-only — Phase 4 builder dependency)
+  - Visual: profile-card-grid (3 right-sized paths × format/price/sqft/community concentration — patio home / paired villa / low-maintenance townhome — overrode calendar `howto (flag-only)` advisory; Compelling Question Flow scored profile-card-grid 24 over two-path-diptych 22 and stretch sqft-shrink-comparison 20; the post's compelling question is canonical profile-card-grid territory — "which format fits me?")
 
 #### Day 14 — Monday, May 18
 - [ ] **"Why Parker Move-Up Listings Stall — and the Pricing Strategy That Recovers Them"**
