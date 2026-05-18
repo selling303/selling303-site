@@ -59,7 +59,12 @@ const articleSchema: Record<string, any> = {
   "@type": "Article",
   "headline": data.headline || data.title,
   "description": data.description,
-  "image": data.ogImage || data.cardImage?.url || `https://selling303.com/og/blog/${entry.id}.png`,
+  // Always the dynamic Selling 303 OG card — brand consistency wins over per-post
+  // overrides. Most existing frontmatter ogImage values are generic Unsplash filler
+  // from blog-post-writer defaults; cardImage is for the blog-index thumbnail, not
+  // social cards. The dynamic card encodes the post's actual title + category, which
+  // is more informative on social than any stock photo.
+  "image": `https://selling303.com/og/blog/${entry.id}.png`,
   // Author + publisher reference the canonical entities defined on / (home) and /about.
   // Replacing inline blocks with @id references unifies entity identity across all 80+
   // pages, helping Google's knowledge graph distinguish Jacob Stark from other public
@@ -101,7 +106,8 @@ if (data.faqSchema && data.faqSchema.length > 0) {
   });
 }
 
-const ogImage = data.ogImage || data.cardImage?.url || `https://selling303.com/og/blog/${entry.id}.png`;
+// Always the dynamic Selling 303 OG card — see comment on Article schema image above.
+const ogImage = `https://selling303.com/og/blog/${entry.id}.png`;
 ---
 
 <BaseLayout
