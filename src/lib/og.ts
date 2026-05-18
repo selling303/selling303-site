@@ -155,17 +155,23 @@ function buildTemplate(input: OGInput, assets: NonNullable<typeof cached>): unkn
       height: 560,
       style: { position: 'absolute', right: -40, bottom: -50 },
     }),
-    // Text block — left side, vertically centered, max width 620 so it doesn't
-    // overlap the headshot which begins around x≈720.
+    // Text block — left side, vertically centered against the full card height so it
+    // adapts to its own size. Previously this was top-anchored at 240px, which made
+    // variants with a badge (blog, neighborhood) sit visibly lower than the no-badge
+    // default. Stretching top:0/bottom:0 and using justifyContent:center keeps the
+    // badge + title block visually centered regardless of length. Width 620 keeps the
+    // text on the left half so it never overlaps the headshot (begins at x≈720).
     h(
       'div',
       {
         style: {
           display: 'flex',
           flexDirection: 'column',
+          justifyContent: 'center',
           position: 'absolute',
           left: 80,
-          top: 240,
+          top: 0,
+          bottom: 0,
           width: 620,
         },
       },
