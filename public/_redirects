@@ -4,7 +4,8 @@
 # so Astro-generated pages (e.g. /neighborhoods/highlands-ranch) are unaffected.
 
 # --- Clean URLs ---
-/index       /           301
+# /index → / rule removed 2026-05-18: Netlify serves dist/index.html for the /index
+# request before the redirect runs, so the rule never fired. Canonical handles dedup.
 /home        /           301
 
 # --- Sitemap canonicalization ---
