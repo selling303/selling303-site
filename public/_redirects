@@ -22,6 +22,15 @@
 /blog-post-template  /blog          301
 /preferred-lenders   /              301
 /preferred-lenders/  /              301
+# Migrated 2026-05-17 from dead root /_redirects — these had been silently 404'ing
+/zillow-step-2       /              301
+/james-hendry        /              301
+/jacci-mason         /              301
+/steven-brooks       /              301
+/page                /              301
+/404-page            /              301
+/party-in-medema-park /             301
+/Denver-Metro        /neighborhoods 301
 
 # --- Old Framer neighborhood pages (no /neighborhoods/ prefix) ---
 /neighborhood-highlands-ranch  /neighborhoods/highlands-ranch  301
@@ -54,6 +63,7 @@
 /6566-s-flower-st-littleton-co-80123                     /sell/success-stories/6566-s-flower-st-littleton    301
 /6718-s-holland-way-littleton-co-80128                   /sell/success-stories/6718-s-holland-way-littleton  301
 /6720-s-holland-way-littleton-co-80128                   /sell/success-stories/6720-s-holland-way-littleton  301
+/7327-s-carr-ct-littleton-co-80128                       /sell/success-stories/7327-s-carr-ct-littleton      301
 /8965-e-phillips-dr-centennial-co-80122                  /sell/success-stories/8965-e-phillips-dr-centennial 301
 /21069-woodside-lane-parker-co-80138                     /sell/success-stories/21069-woodside-ln-parker      301
 
