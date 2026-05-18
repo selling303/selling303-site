@@ -11,7 +11,6 @@ heroLabel: "Selling"
 heroSubtext: "In Englewood's mid-tier, the listings that sold in April 2026 spent 12 days on market. The ones that expired sat 76. Photography is doing more of that work than most sellers realize."
 cardStat: "6.3×"
 cardStatLabel: "expired vs sold DIM gap, Apr 2026"
-ogImage: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Englewood, Colorado"

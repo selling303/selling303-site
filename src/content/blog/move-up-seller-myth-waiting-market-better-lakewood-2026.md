@@ -11,7 +11,6 @@ heroLabel: "Selling"
 heroSubtext: "The 'wait until the market gets better' instinct sounds responsible. In Lakewood, the data shows the opposite — every quarter of waiting widens the move-up spread, erodes equity, and adds DOM to the next sale."
 cardStat: "$13K"
 cardStatLabel: "Lakewood YoY median price drop (Feb)"
-ogImage: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Lakewood, Colorado"

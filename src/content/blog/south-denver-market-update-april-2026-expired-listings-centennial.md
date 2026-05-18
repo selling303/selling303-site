@@ -10,7 +10,6 @@ heroLabel: "Market Update"
 heroSubtext: "Spring demand is absorbing inventory fast. For Centennial sellers sitting on an expired listing, the reset window just opened — here's how to use it."
 cardStat: "16 days"
 cardStatLabel: "median days in MLS, March 2026"
-ogImage: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Centennial, Colorado"

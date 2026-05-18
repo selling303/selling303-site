@@ -10,7 +10,6 @@ heroLabel: "Selling"
 heroSubtext: "Switching the sign in the yard doesn't fix what kept buyers from writing an offer. Here's what actually has to change for an expired Englewood listing to close on the relist."
 cardStat: "5x longer"
 cardStatLabel: "expired vs. closed Englewood DIM"
-ogImage: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Englewood, Colorado"

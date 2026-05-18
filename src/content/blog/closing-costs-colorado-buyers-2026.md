@@ -14,7 +14,6 @@ cardImage:
   alt: Closing costs in Colorado for buyers
 cardStat: "2–5%"
 cardStatLabel: "of purchase price"
-ogImage: https://selling303.com/images/og-default.jpg
 keywords: closing costs Colorado buyers, what are closing costs, buyer closing cost breakdown, Colorado real estate fees, South Denver Metro, Jacob Stark
 aboutPlaces:
   - "South Denver Metro, Colorado"

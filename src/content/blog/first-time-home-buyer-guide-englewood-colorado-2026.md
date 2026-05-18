@@ -13,7 +13,6 @@ cardImage:
   alt: "Charming single-family home in Englewood Colorado neighborhood"
 cardStat: "$655K"
 cardStatLabel: "Englewood median SFH"
-ogImage: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Englewood, Colorado"

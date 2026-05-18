@@ -11,7 +11,6 @@ heroLabel: "First-Time Home Sellers"
 heroSubtext: "Most first-time Littleton sellers run the numbers for the first time after the listing paperwork hits the table. By then, the surprises hurt. Here is what comes off the $650,000 April 2026 median before you see a check."
 cardStat: "~$44K"
 cardStatLabel: "Littleton seller cost at median"
-ogImage: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Littleton, Colorado"

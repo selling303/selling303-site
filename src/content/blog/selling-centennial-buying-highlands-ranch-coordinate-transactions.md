@@ -10,7 +10,6 @@ heroLabel: "Selling & Buying"
 heroSubtext: "Two closings, one timeline, zero margin for error. Here's how move-up sellers in Centennial navigate a dual transaction into Highlands Ranch."
 cardStat: "$19.5K"
 cardStatLabel: "median price gap to HR"
-ogImage: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Centennial, Colorado"

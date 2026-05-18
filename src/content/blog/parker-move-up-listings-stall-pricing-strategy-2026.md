@@ -11,7 +11,6 @@ heroLabel: "Selling"
 heroSubtext: "Same month, same city, same bracket — two outcomes. Closed Parker move-up homes ($800K–$1.2M) cleared in 13 median days in April 2026. Mispriced listings in the same bracket sat 95 days before expiring. The bracket isn't slow. The price was."
 cardStat: "95 days"
 cardStatLabel: "Stalled Parker move-up median DIM"
-ogImage: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Parker, Colorado"

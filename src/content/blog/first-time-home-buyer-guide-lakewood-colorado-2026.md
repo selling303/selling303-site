@@ -10,7 +10,6 @@ heroLabel: "Buying"
 heroSubtext: "Lakewood is Jefferson County's largest city and one of the most accessible entry points in the Denver Metro — here's what first-time buyers need to know before they start shopping."
 cardStat: "$600K"
 cardStatLabel: "Lakewood April 2026 median sale"
-ogImage: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Lakewood, Colorado"

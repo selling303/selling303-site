@@ -11,7 +11,6 @@ heroLabel: "Buying"
 heroSubtext: "Lone Tree's two flagship communities sit a mile apart and target completely different buyers. Here's how RidgeGate new construction stacks up against Heritage Hills resale luxury in spring 2026."
 cardStat: "$1.18M"
 cardStatLabel: "RidgeGate Q1 median close"
-ogImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Lone Tree, Colorado"

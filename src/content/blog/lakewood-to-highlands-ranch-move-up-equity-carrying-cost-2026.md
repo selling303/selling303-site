@@ -11,7 +11,6 @@ heroLabel: "Move-Up Sellers"
 heroSubtext: "Lakewood owners don't leave because Lakewood is broken. They leave because something specific is pulling them south — a commute, a family member, a different lifestyle profile. The 2026 math only matters once that pull is real."
 cardStat: "$157K"
 cardStatLabel: "Lakewood-to-HR move-up spread"
-ogImage: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Lakewood, Colorado"

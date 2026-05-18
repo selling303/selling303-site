@@ -14,7 +14,6 @@ cardImage:
   alt: Home exterior for market article
 cardStat: "45 days"
 cardStatLabel: "DOM threshold for concern"
-ogImage: https://images.unsplash.com/photo-1582407947092-40bf940bb514?w=1200&h=630&fit=crop&q=80
 aboutPlaces:
   - South Denver Metro, Colorado
   - Arapahoe County, Colorado

@@ -10,7 +10,6 @@ heroLabel: "Selling & Buying"
 heroSubtext: "You bought in Parker for a reason. But if that reason no longer fits, the equity you've built might be your ticket to the next chapter."
 cardStat: "5 signs"
 cardStatLabel: "you've outgrown your Parker home"
-ogImage: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Parker, Colorado"

@@ -9,7 +9,6 @@ heroLabel: "Selling"
 heroSubtext: "Your listing expired. That's frustrating — but it's not the end. Here's the data-driven playbook Littleton sellers use to relist and actually close."
 cardStat: "93 expired"
 cardStatLabel: "Littleton homes Q1 2026"
-ogImage: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Littleton, Colorado"

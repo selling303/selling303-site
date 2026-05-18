@@ -11,7 +11,6 @@ heroLabel: "Buyer Advice"
 heroSubtext: "First-time buyer math on the $400K Littleton condo vs. the $600K Littleton starter house: what April 2026 closings actually show."
 cardStat: "$220K"
 cardStatLabel: "Littleton SFR–condo gap (Apr 2026)"
-ogImage: "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "Littleton, Colorado"
   - "Arapahoe County, Colorado"

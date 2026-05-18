@@ -11,7 +11,6 @@ heroLabel: "What to Expect"
 heroSubtext: "Your 2026 Notice of Valuation hit the mailbox May 1. Here's how to protest it before June 1 across Arapahoe, Douglas, and Jefferson — and what to do if you miss the window."
 cardStat: "June 1"
 cardStatLabel: "2026 NOV protest deadline"
-ogImage: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Highlands Ranch, Colorado"

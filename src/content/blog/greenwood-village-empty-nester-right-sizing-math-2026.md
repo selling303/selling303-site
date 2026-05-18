@@ -11,7 +11,6 @@ heroLabel: "Selling"
 heroSubtext: "Most Greenwood Village empty-nesters are sitting on $1.5M to $3M of equity locked into a 5,000+ sqft home they barely use. The right-sizing math depends on whether you stay inside the Cherry Creek schools area or move down-market — and the gap is bigger than most sellers expect."
 cardStat: "$1.85M"
 cardStatLabel: "Typical net after costs"
-ogImage: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Greenwood Village, Colorado"

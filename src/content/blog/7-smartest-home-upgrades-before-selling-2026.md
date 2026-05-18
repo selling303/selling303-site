@@ -14,7 +14,6 @@ cardImage:
   alt: Home renovations and upgrades
 cardStat: "7 upgrades"
 cardStatLabel: "highest ROI before listing"
-ogImage: https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&h=630&fit=crop&q=80
 aboutPlaces:
   - South Denver Metro, Colorado
   - Arapahoe County, Colorado

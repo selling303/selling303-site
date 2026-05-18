@@ -10,7 +10,6 @@ heroLabel: "Buying"
 heroSubtext: "The builder's sales agent works for the builder. That's not a criticism — it's the business model. Here's what it means for your contract, your inspection, and your wallet."
 cardStat: "60–80 pg"
 cardStatLabel: "typical builder contract length"
-ogImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Highlands Ranch, Colorado"

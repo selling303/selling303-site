@@ -10,7 +10,6 @@ heroLabel: "Buying"
 heroSubtext: "If you are relocating to South Denver from out of state, the assumptions you arrive with rarely survive contact with the actual market — here is what to recalibrate before you write an offer."
 cardStat: "$700K"
 cardStatLabel: "Centennial median sale price Q1 2026"
-ogImage: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Centennial, Colorado"

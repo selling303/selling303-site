@@ -11,7 +11,6 @@ heroSubtext: "There's no single \"best\" — there's the one that fits your life
 cardImage: {url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=500&fit=crop&q=80", alt: "South Denver neighborhood aerial view for move-up buyers"}
 cardStat: "$230/sqft"
 cardStatLabel: "lowest price per sqft (Parker)"
-ogImage: "https://selling303.com/images/og-default.jpg"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Littleton, Colorado"

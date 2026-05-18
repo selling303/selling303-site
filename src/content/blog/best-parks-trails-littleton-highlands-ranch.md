@@ -9,7 +9,6 @@ heroLabel: "Neighborhoods"
 heroSubtext: "Over 100 miles of trails, 8,200 acres of wilderness, and a state park — all within minutes of your front door."
 cardStat: "100+ mi"
 cardStatLabel: "of trails between both communities"
-ogImage: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Littleton, Colorado"

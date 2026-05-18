@@ -10,7 +10,6 @@ heroLabel: "Buying"
 heroSubtext: "Entry-level Littleton homes are closing above asking with single-digit days on market this spring. Here is how a first-time buyer writes an offer that actually wins."
 cardStat: "23 days"
 cardStatLabel: "Littleton Q1 median DIM"
-ogImage: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Littleton, Colorado"

@@ -11,7 +11,6 @@ heroSubtext: "A step-by-step look at every stage of the closing process — from
 cardImage: {url: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop&q=80", alt: "Closing paperwork and house keys on table"}
 cardStat: "30 days"
 cardStatLabel: "avg closing timeline"
-ogImage: "https://selling303.com/images/og-default.jpg"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Arapahoe County, Colorado"

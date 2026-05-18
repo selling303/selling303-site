@@ -11,7 +11,6 @@ heroLabel: "New Construction"
 heroSubtext: "You want new. The question is whether you want it next month with the builder's choices, or in a year exactly as you choose. The Parker math on both paths in 2026."
 cardStat: "$275"
 cardStatLabel: "Parker median $/sqft (Apr 2026)"
-ogImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "Parker, Colorado"
   - "Douglas County, Colorado"

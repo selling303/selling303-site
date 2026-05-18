@@ -11,7 +11,6 @@ heroLabel: "Selling & Buying"
 heroSubtext: "Castle Pines doesn't have the inventory to forgive a sloppy timeline. Here's how move-up sellers coordinate two closings without renting a hotel for the in-between."
 cardStat: "77 days"
 cardStatLabel: "Castle Pines median DOM, Feb 2026"
-ogImage: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Castle Pines, Colorado"

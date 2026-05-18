@@ -10,7 +10,6 @@ heroLabel: "Neighborhoods"
 heroSubtext: "Two of South Denver's most popular suburbs for relocating families — but they offer very different lifestyles. Here's the real comparison."
 cardStat: "$700K"
 cardStatLabel: "median close price (Q1 2026)"
-ogImage: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Littleton, Colorado"

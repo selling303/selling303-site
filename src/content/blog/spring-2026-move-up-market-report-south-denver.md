@@ -11,7 +11,6 @@ heroLabel: "Market Update"
 heroSubtext: "Spring 2026 move-up activity, decoded. Where South Denver families are landing, what each suburb actually costs, and how to read the move-up market this season."
 cardStat: "$785K"
 cardStatLabel: "HR median sale price Q1 2026"
-ogImage: "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Highlands Ranch, Colorado"

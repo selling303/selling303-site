@@ -11,7 +11,6 @@ heroLabel: "Selling"
 heroSubtext: "Fresh April closings across nine South Denver suburbs and what they signal for move-up timing in May."
 cardStat: "1,085"
 cardStatLabel: "South Denver April closings"
-ogImage: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Highlands Ranch, Colorado"

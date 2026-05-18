@@ -11,7 +11,6 @@ heroLabel: "Buying"
 heroSubtext: "You raised the kids here. You know the neighbors, the trails, the rec centers, the grocery checker by name. The instinct is to move to Arizona. The right answer for most Highlands Ranch empty-nesters is to right-size three streets over — and three real new-build paths make that possible in 2026."
 cardStat: "3 paths"
 cardStatLabel: "Right-sized HR new-build options"
-ogImage: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Highlands Ranch, Colorado"

@@ -11,7 +11,6 @@ heroLabel: "Selling"
 heroSubtext: "16 of 22 Highlands Ranch listings that expired in April 2026 had already cut their price — 7 of them by 5% or more. The lever that saves a stalled listing usually isn't price. Here's what actually is."
 cardStat: "7 of 22"
 cardStatLabel: "HR expired after 5%+ cut, Apr 2026"
-ogImage: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "Highlands Ranch, Colorado"
   - "Douglas County, Colorado"

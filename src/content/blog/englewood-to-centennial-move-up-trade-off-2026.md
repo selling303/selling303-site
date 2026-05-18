@@ -11,7 +11,6 @@ heroLabel: "Move-Up Sellers"
 heroSubtext: "Englewood owners trading up to Centennial give up walkability and the urban edge. They pick up 707 more finished square feet for about $50,000 more, at 25% less per finished square foot. The April 2026 numbers make the trade-off plain."
 cardStat: "+707 sqft"
 cardStatLabel: "Englewood-to-Centennial sqft jump"
-ogImage: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Englewood, Colorado"

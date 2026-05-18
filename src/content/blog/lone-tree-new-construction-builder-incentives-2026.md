@@ -10,7 +10,6 @@ heroLabel: "Buying"
 heroSubtext: "Builders in Lone Tree advertise five-figure incentives to move inventory. Some are worth every dollar. Others are marketing dressed up as a discount. Here's how to tell the difference."
 cardStat: "$40K+"
 cardStatLabel: "typical incentive value on the table"
-ogImage: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Lone Tree, Colorado"

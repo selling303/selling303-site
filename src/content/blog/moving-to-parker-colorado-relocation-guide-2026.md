@@ -10,7 +10,6 @@ heroLabel: "Buying"
 heroSubtext: "Parker is the top migration magnet in South Denver — here's the unvarnished relocation guide for out-of-state families, with real Q1 2026 price data."
 cardStat: "$717K"
 cardStatLabel: "Parker median sale price Q1 2026"
-ogImage: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Parker, Colorado"

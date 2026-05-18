@@ -11,7 +11,6 @@ heroLabel: "Buying"
 heroSubtext: "A real comparison of what $500,000 buys across three South Denver suburbs in spring 2026 — backed by Q1 REcolorado closings and DMAR data, not Zillow estimates."
 cardStat: "36"
 cardStatLabel: "$500K Centennial closings Q1"
-ogImage: "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Centennial, Colorado"

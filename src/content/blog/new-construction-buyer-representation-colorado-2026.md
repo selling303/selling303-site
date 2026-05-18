@@ -11,7 +11,6 @@ heroLabel: "Buying"
 heroSubtext: "Buyer agency agreements at the model home, builder cooperation rules, written compensation terms — the rules of new construction representation changed on August 17, 2024. Most Parker buyers still don't know what that means at the sales office."
 cardStat: "Aug 17"
 cardStatLabel: "2024 settlement effective date"
-ogImage: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Parker, Colorado"

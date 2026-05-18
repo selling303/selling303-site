@@ -13,7 +13,6 @@ cardStatLabel: "avg upgrade gap vs. base price"
 cardImage:
   url: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=500&fit=crop&q=80"
   alt: "New construction home in Castle Pines Colorado with mountain views"
-ogImage: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Castle Pines, Colorado"

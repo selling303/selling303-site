@@ -10,7 +10,6 @@ heroLabel: "Selling"
 heroSubtext: "You bought your first home. Now you're selling it. Here's what the process actually looks like — and what catches most first-time sellers off guard."
 cardStat: "63%"
 cardStatLabel: "sellers offering concessions"
-ogImage: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Centennial, Colorado"

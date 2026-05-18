@@ -10,7 +10,6 @@ heroLabel: "Selling"
 heroSubtext: "What actually comes off your Arapahoe County proceeds — the fees, credits, and surprise line items no one warns first-time sellers about."
 cardStat: "~8–10%"
 cardStatLabel: "total cost on a Centennial sale"
-ogImage: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Arapahoe County, Colorado"

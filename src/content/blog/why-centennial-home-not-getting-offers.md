@@ -10,7 +10,6 @@ heroLabel: "Selling"
 heroSubtext: "Listings that sell in Centennial move in 13 days. If yours is past that mark with no offers, something specific is broken — here's how to find and fix it."
 cardStat: "13 days"
 cardStatLabel: "median DIM on closed Centennial homes"
-ogImage: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Centennial, Colorado"

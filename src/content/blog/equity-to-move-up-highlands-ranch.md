@@ -10,7 +10,6 @@ heroLabel: "Move-Up Sellers"
 heroSubtext: "Highlands Ranch equity is the quiet leverage every move-up seller is sitting on. Here's how to translate it into a bigger home without breaking the monthly math."
 cardStat: "$250K"
 cardStatLabel: "typical HR move-up equity"
-ogImage: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Highlands Ranch, Colorado"

@@ -10,7 +10,6 @@ heroLabel: "New Construction"
 heroSubtext: "Highlands Ranch is almost fully built out, so new-build shoppers end up comparing two very different products. Here's how the math actually pencils in 2026."
 cardStat: "$742,500"
 cardStatLabel: "HR resale median (Q1 2026)"
-ogImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Highlands Ranch, Colorado"

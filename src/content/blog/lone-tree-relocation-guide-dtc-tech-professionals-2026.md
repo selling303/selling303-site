@@ -11,7 +11,6 @@ heroLabel: "Buying"
 heroSubtext: "Lone Tree is South Denver's tech-corridor suburb — a five-minute reverse-commute to the DTC, light-rail access at Lincoln Station and RidgeGate, and a $400K–$4M+ home market that rewards relocation buyers who understand the four distinct price tiers before they tour."
 cardStat: "$760K"
 cardStatLabel: "Lone Tree median close (Apr 2026)"
-ogImage: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Lone Tree, Colorado"

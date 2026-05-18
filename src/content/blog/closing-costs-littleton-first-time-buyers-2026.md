@@ -10,7 +10,6 @@ heroLabel: "Buying"
 heroSubtext: "A line-by-line read on what a first-time buyer in Littleton, Colorado actually brings to the closing table in 2026 — using real Q1 REcolorado MLS data and current Arapahoe and Jefferson County figures."
 cardStat: "$13K"
 cardStatLabel: "typical first-time buyer closing costs"
-ogImage: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Littleton, Colorado"

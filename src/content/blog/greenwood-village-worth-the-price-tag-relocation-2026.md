@@ -11,7 +11,6 @@ heroLabel: "Buying"
 heroSubtext: "Greenwood Village commands a luxury price tag — but a luxury price tag is only worth paying when the lifestyle behind it actually fits. Here's the honest read."
 cardStat: "$1.875M"
 cardStatLabel: "Q1 2026 median sale price"
-ogImage: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Greenwood Village, Colorado"

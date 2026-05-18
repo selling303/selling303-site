@@ -10,7 +10,6 @@ heroLabel: "Buying"
 heroSubtext: "Highlands Ranch consistently ranks among Colorado's most desirable suburbs. Here's what out-of-state families actually need to know before the move."
 cardStat: "$718K"
 cardStatLabel: "median home price (Feb 2026)"
-ogImage: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Highlands Ranch, Colorado"

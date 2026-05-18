@@ -10,7 +10,6 @@ heroLabel: "Move-Up Sellers"
 heroSubtext: "Trading a starter in Englewood for more room in Parker is the most common move-up path in South Denver. Here's the checklist to pull it off without overlapping mortgages or a panicked closing."
 cardStat: "~$85K"
 cardStatLabel: "Englewood-to-Parker median price gap"
-ogImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Englewood, Colorado"
