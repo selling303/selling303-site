@@ -1,5 +1,32 @@
 # Deploy Log
 
+## 2026-05-18 (PM) — commit 8c059fc / merge a8946ce | Credits used: 15 | Build: triggered via hook 69de8373
+
+### Blog OG dynamic-card override fix + Chunks B & C of dead-infra audit
+
+Second deploy of the day clearing the rest of the dead-infrastructure audit queue. Cosmetic/internal cleanup deploy — only one user-visible change (blog OG cards now use the dynamic Selling 303 card instead of generic Unsplash filler).
+
+- **Blog OG image precedence fix.** Post-deploy verification on the Parker move-up post via Facebook's Sharing Debugger surfaced that 57 of 58 blog posts had `ogImage:` in frontmatter (51 generic Unsplash filler from blog-post-writer defaults + 6 broken `/images/og-*.jpg` refs) which bypassed the dynamic Selling 303 OG card via `data.ogImage || data.cardImage?.url || dynamic` precedence chain. Two-line fix in `src/pages/blog/[slug].astro` strips overrides for both the Schema.org Article `image` field and the BaseLayout `ogImage` prop. Frontmatter untouched (no 57-file edit). `cardImage` continues driving the blog-index thumbnail. Verified: Parker post `og:image` meta tag now points at `https://selling303.com/og/blog/parker-move-up-listings-stall-pricing-strategy-2026.png`.
+
+- **Chunk B (repo portion).** `CLAUDE.md:138` case-fixed `~/Documents/Claude/projects/` → `Projects/`. `public/css/aeo-visuals.css:4` updated stale "Source of truth" comment pointing at the dead `~/.claude/skills/aeo-visual-builder/SKILL.md` (deleted 2026-04-30) to reference the current `claude.ai/customize/skills` + `brain/skills-source/` model.
+
+- **Chunk B (off-repo portion).** Local edits not pushed (outside selling303-site repo): scheduled task wrapper for `seo-aeo-weekly-audit` had the dead `~/.claude/skills` mount removed and case-fixed — this directly fixes Monday's 7:32 AM run, which previously started with a guaranteed-failing mount attempt. Also 11 files under `~/Documents/Claude/brain/skills-source/` got 40 case-drift occurrences fixed (working copies; live skills updated as Jacob pastes them into claude.ai). Jacob pasted the 6 affected skills (`gbp-post`, `marketing-image-design`, `ship-blog-post`, `deploy-to-netlify`, `blog-post-writer`, `blog-review`) into claude.ai/customize/skills during this session — cloud versions now aligned with corrected working copies.
+
+- **Chunk C — 24 dead files removed from repo.** Per 2026-05-17 dead-infra audit, all functional duplicates already living in `public/`: root `_headers`, `favicon.ico`, `favicon.svg`, `robots.txt`, `sitemap.xml`, `css/styles.css`, `js/main.js`, 8 files under `images/` (one of which was the Schema.org headshot/logo — copies moved to `public/images/` in Chunk A). Plus the legacy `success-stories/time-for-more-space.html` Framer-era page (not in nav, not in sitemap, 404 in production), `watering-guide-research.md` (April research note, no references), and orphan components `src/components/AuthorBio.astro` + `TrustSignals.astro` (zero references repo-wide). Production behavior unchanged — none of these were ever in Astro's build path. Just removed the landmine surface area so the dead-twins bug class can't recur. Root `_redirects` was already deleted in the 2026-05-17 PM deploy.
+
+### Verified post-deploy
+
+- `https://selling303.com/blog/parker-move-up-listings-stall-pricing-strategy-2026` → `og:image` now `/og/blog/.../png` (no longer Unsplash)
+- `https://selling303.com/sitemap.xml` → HTTP/2 301 → `/sitemap-index.xml` (sitemap redirect intact after Chunk C deletions)
+- Homepage CSP header intact (public/_headers serving correctly post-Chunk-C)
+- All OG cards + Schema.org `Person.image` + `Organization.logo` serving 200
+
+### Follow-ups for Jacob
+
+1. **Re-scrape affected blog URLs in Facebook Sharing Debugger.** The Parker post (just deployed with new OG ref) and any other recently-shared blog URLs need a fresh scrape so existing Facebook posts pick up the dynamic Selling 303 cards instead of the previously-cached Unsplash photos. https://developers.facebook.com/tools/debug/
+2. **Update `blog-post-writer` skill at claude.ai/customize/skills** to stop auto-adding `ogImage: "https://images.unsplash.com/..."` to new blog post frontmatter. The dynamic card now wins regardless, but cleaner not to generate unused fields. Single-line removal in the skill's frontmatter template.
+3. **The audit's HARMLESS findings remain unaddressed** (acceptable per the original triage): 7 unused images under `src/assets/images/`, trailing-slash duplicate URLs that Google dedupes via canonical, the `.fuse_hidden*` detritus, `src/.buildtest` empty file. Can be addressed in a future hygiene pass or left alone.
+
 ## 2026-05-18 — commit aa6cb23 / merge dab84e1 | Credits used: 15 | Build: triggered via hook 69de8373
 
 ### Dead-infra Chunk A + 3 pending queue items (mixed batch)
