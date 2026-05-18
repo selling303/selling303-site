@@ -130,23 +130,23 @@ relatedPosts:
 <text x="20" y="34" font-size="17" font-weight="700" fill="#002a3a">Parker Move-Up Bracket DIM — When It Sells vs. When It Stalls</text>
 <text x="20" y="56" font-size="12" fill="#81848a">Parker, Colorado residential listings | April 1–30, 2026</text>
 <line x1="20" y1="72" x2="780" y2="72" stroke="#e5e5e5" stroke-width="1"/>
-<g transform="translate(300, 92)">
+<g transform="translate(280, 92)">
 <text x="-12" y="22" text-anchor="end" font-size="14" font-weight="600" fill="#002a3a">Closed, all brackets</text>
 <text x="-12" y="40" text-anchor="end" font-size="11" fill="#81848a">n = 181 closed</text>
-<rect x="0" y="6" width="51" height="42" fill="#99adb8" rx="3"/>
-<text x="65" y="34" font-size="18" font-weight="700" fill="#002a3a">11 days</text>
+<rect x="0" y="6" width="44" height="42" fill="#99adb8" rx="3"/>
+<text x="58" y="34" font-size="18" font-weight="700" fill="#002a3a">11 days</text>
 </g>
-<g transform="translate(300, 167)">
+<g transform="translate(280, 167)">
 <text x="-12" y="22" text-anchor="end" font-size="14" font-weight="600" fill="#002a3a">Closed, $800K–$1.2M</text>
 <text x="-12" y="40" text-anchor="end" font-size="11" fill="#81848a">n = 43 closed in bracket</text>
-<rect x="0" y="6" width="60" height="42" fill="#99adb8" rx="3"/>
-<text x="74" y="34" font-size="18" font-weight="700" fill="#002a3a">13 days</text>
+<rect x="0" y="6" width="52" height="42" fill="#99adb8" rx="3"/>
+<text x="66" y="34" font-size="18" font-weight="700" fill="#002a3a">13 days</text>
 </g>
-<g transform="translate(300, 242)">
+<g transform="translate(280, 242)">
 <text x="-12" y="22" text-anchor="end" font-size="14" font-weight="600" fill="#002a3a">Expired, $800K–$1.2M</text>
 <text x="-12" y="40" text-anchor="end" font-size="11" fill="#81848a">n = 9 expired in bracket</text>
-<rect x="0" y="6" width="438" height="42" fill="#002a3a" rx="3"/>
-<text x="452" y="34" font-size="18" font-weight="700" fill="#002a3a">95 days</text>
+<rect x="0" y="6" width="380" height="42" fill="#002a3a" rx="3"/>
+<text x="394" y="34" font-size="18" font-weight="700" fill="#002a3a">95 days</text>
 </g>
 <line x1="20" y1="300" x2="780" y2="300" stroke="#e5e5e5" stroke-width="1"/>
 <text x="20" y="322" font-size="11" fill="#555">DIM = median days a listing sat in the MLS before going under contract (closed) or expiring (expired). Closed and expired subsets are calculated separately within the same April 2026 window.</text>
