@@ -106,8 +106,22 @@ function h(type: string, props: Record<string, unknown> = {}, ...children: unkno
   };
 }
 
+// Responsive title sizing — longer titles render smaller so they fit in the title
+// block budget (≈390 vertical px in the text column, minus the badge band). Without
+// this, titles > ~50 chars (most of the blog catalog) overflow the bottom of the card.
+// Standard practice for OG generation; cf. Stripe / Linear / Vercel templates.
+function pickTitleFontSize(title: string): number {
+  const len = title.length;
+  if (len <= 40) return 72;
+  if (len <= 55) return 60;
+  if (len <= 75) return 50;
+  if (len <= 95) return 42;
+  return 38;
+}
+
 function buildTemplate(input: OGInput, assets: NonNullable<typeof cached>): unknown {
   const { title, badge } = input;
+  const titleFontSize = pickTitleFontSize(title);
 
   // Letter-space the badge by inserting hair-spaces between characters. Satori's
   // letterSpacing CSS prop is supported but render quality on uppercase tracking is
@@ -176,7 +190,7 @@ function buildTemplate(input: OGInput, assets: NonNullable<typeof cached>): unkn
           style: {
             color: WHITE,
             fontFamily: 'DM Serif Display',
-            fontSize: 72,
+            fontSize: titleFontSize,
             lineHeight: 1.15,
             // No font-weight here — DM Serif Display has only one weight, and setting
             // weight: 700 makes Satori synthesize fake bold which prints lumpy serifs.
