@@ -1,5 +1,30 @@
 # Deploy Log
 
+## 2026-05-17 (PM) — commit a0b9968 / merge 7a08c0a | Credits used: 15 | Build: triggered via hook 69de8373
+
+### SEO infrastructure batch — _redirects cleanup (no new blog posts)
+
+Second deploy of the day. All commits since the AM deploy bundled into one production push to lock in the GSC fixes before tomorrow's crawl cycle.
+
+- **GSC "Page with redirect" bucket (49 URLs) — 16 actionable redirects rewritten to specific destinations instead of generic hubs.** Pulled the GSC Coverage Drilldown export — most of the 49 are working as intended (16 `www.` → apex, 2 HTTP → HTTPS, several legacy Framer URLs already routing to current canonicals, 3 already-smart old blog 301s pointing at specific successor posts). The actionable subset: 13 old Framer listing-address URLs were 301'ing to the generic `/properties` hub, 2 old `.html` blog URLs were 301'ing to the generic `/blog` hub, and 1 deleted blog post was 301'ing to `/blog`. Rewrote each to a specific destination — (a) 7 published success-story addresses → `/sell/success-stories/<slug>` (destinations verified 200), (b) 6 draft addresses → `/sell/success-stories` hub (drafts have noindex meta + are filtered from sitemap per `DRAFT_SUCCESS_STORY_SLUGS`), (c) 2 `.html` blog URLs → extension-less slugs, (d) deleted community-happenings post → `/neighborhoods` instead of `/blog`. Net: 16 URLs now pass SEO equity to the matching content instead of dumping to a generic hub.
+
+- **CORRECTION: dead root `/_redirects` discovered and removed.** First two redirect-fix commits this afternoon (`2865e36`, `6d6d54b`) modified `/_redirects` at the repo root — turns out that file is DEAD CODE. Astro only copies `public/*` to `dist/`, and Netlify reads `dist/_redirects`, so the LIVE file is `public/_redirects`. Commits to the root file were no-ops in production. Re-applied all fixes to `public/_redirects` in commit `285e83a` and deleted the dead root file in commit `f8dcea3`. Also reordered the file so `.html` blog rules sit ABOVE the `/blog/:qGAS1Evcm` placeholder catch-all (Netlify processes top-to-bottom, first match wins; the placeholder matches any single segment under `/blog/` and would have swallowed the `.html` rules otherwise). Memory note saved at `reference_redirects_file_location.md` so future sessions don't make the same mistake.
+
+- **GSC "Crawled, not indexed" bucket (9 URLs) — 6 silent 404s fixed.** Investigating this bucket revealed that 5 old Framer redirects (`/zillow-step-2`, `/james-hendry`, `/jacci-mason`, `/steven-brooks`, `/page`) existed ONLY in the now-deleted root file and had been silently 404'ing in production since the Framer-to-Astro migration. Also found 1 missing listing-address redirect: `/7327-s-carr-ct-littleton-co-80128` → 404, despite the success story existing at `/sell/success-stories/7327-s-carr-ct-littleton`. Migrated all 6 to `public/_redirects`. Added 3 belt-and-suspenders redirects from the dead root file (`/404-page`, `/party-in-medema-park` → `/`, `/Denver-Metro` → `/neighborhoods`) in case Google finds them via stale backlinks later. Remaining 3 URLs in the bucket need no action — `/contact/` and `/?amp=1` are correctly canonicalized (Google dedupes the duplicates, which is expected behavior); `www.selling303.com/blog/best-time-to-sell-home-littleton-co` already redirects through 2 hops to a specific destination and will clear on re-crawl.
+
+### Verified post-deploy
+
+Curled 8 representative URLs immediately after build hit `ready` state. All confirmed: 3 listing addresses → specific success stories (no longer `/properties`), 2 `.html` blog URLs → extension-less slugs (no longer `/blog`), 3 previously-silent 404s now 301 to `/`. Sitemap-0.xml emitting 94 URLs with real `<lastmod>` ISO timestamps.
+
+### Follow-ups for Jacob
+
+1. Click "Validate Fix" on each of the three GSC buckets ("Discovered – not indexed", "Page with redirect", "Not found 404") — the AM deploy fixed the first, this PM deploy fixed the other two.
+2. Click "Start New Validation" on the "Crawled – not indexed" bucket.
+3. Continue Request Indexing on the pillar URLs from the AM deploy (subject to GSC's 10/day quota).
+4. When the 6 draft success stories are completed and published (removed from `DRAFT_SUCCESS_STORY_SLUGS` in `astro.config.mjs`), swap their 6 hub redirects in `public/_redirects` to point at the specific story pages — would recover the SEO equity those redirects currently lose to the generic hub.
+
+---
+
 ## 2026-05-17 — commit 41c237a / merge 5d3c8cb | Credits used: 15 | Build: triggered via hook 69de8373
 
 ### New blog posts (7 — May 10 → May 17 backlog bundled with tonight's nightly draft)

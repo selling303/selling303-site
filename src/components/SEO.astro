@@ -15,11 +15,22 @@ const {
   description,
   ogTitle = title,
   ogDescription = description,
-  ogImage = 'https://selling303.com/images/og-default.jpg',
+  ogImage: ogImageProp,
   ogUrl = Astro.url.href,
   ogType = 'website',
   canonicalUrl = Astro.url.href,
 } = Astro.props;
+
+// Auto-derive the OG image URL from the page path when no explicit override is passed.
+// Per-page PNGs are generated at build time by src/pages/og/[...slug].png.ts; the slug
+// here mirrors that endpoint's path scheme. Homepage maps to /og/index.png.
+function deriveOgImageUrl(): string {
+  const stripped = Astro.url.pathname.replace(/^\/+|\/+$/g, '');
+  const slug = stripped === '' ? 'index' : stripped;
+  return `https://selling303.com/og/${slug}.png`;
+}
+
+const ogImage = ogImageProp ?? deriveOgImageUrl();
 ---
 
 <meta charset="UTF-8">

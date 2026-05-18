@@ -4,6 +4,7 @@ import MarketStatTile from '../components/MarketStatTile.astro';
 import NeighborhoodCard from '../components/NeighborhoodCard.astro';
 import RealScoutLoader from '../components/RealScoutLoader.astro';
 import { getImage } from 'astro:assets';
+import { getCollection } from 'astro:content';
 
 // Hero background — optimized at build time
 import heroBgSrc from '../assets/images/hero-bg.jpg';
@@ -17,6 +18,32 @@ import nbCentennialSrc from '../assets/images/neighborhood-centennial.jpg';
 const nbLittleton = await getImage({ src: nbLittletonSrc, format: 'webp', quality: 80, width: 800 });
 const nbHighlandsRanch = await getImage({ src: nbHighlandsRanchSrc, format: 'webp', quality: 80, width: 800 });
 const nbCentennial = await getImage({ src: nbCentennialSrc, format: 'webp', quality: 80, width: 800 });
+
+// Pull testimonials from all published success stories so the homepage
+// AggregateRating in BaseLayout's RealEstateAgent block is backed by real
+// Review schema entries. Reviews attach to the same @id, so Google merges
+// them with the existing agent profile.
+const successStories = await getCollection('successStories', (entry) => !entry.data.draft);
+const homepageReviewSchema = {
+  "@context": "https://schema.org",
+  "@type": ["Person", "RealEstateAgent"],
+  "@id": "https://selling303.com/#agent",
+  "review": successStories.flatMap((s) =>
+    s.data.testimonials.map((t) => ({
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": t.rating,
+        "bestRating": 5,
+      },
+      "author": { "@type": "Person", "name": t.name },
+      "reviewBody": t.text,
+      "datePublished": s.data.closeDate,
+      "itemReviewed": { "@id": "https://selling303.com/#agent" },
+      "publisher": { "@id": "https://selling303.com/#organization" },
+    }))
+  ),
+};
 ---
 
 <BaseLayout
@@ -25,7 +52,6 @@ const nbCentennial = await getImage({ src: nbCentennialSrc, format: 'webp', qual
   ogTitle="Selling 303 | Jacob Stark — South Denver Metro Real Estate"
   ogDescription="Buying or selling in South Denver Metro? Jacob Stark guides you through every step so you feel clarity, confidence, and in control — from the first conversation to closing day."
   ogUrl="https://selling303.com"
-  ogImage="https://selling303.com/images/og-home.jpg"
   currentPage="home"
   headerVariant="transparent"
 >
@@ -178,6 +204,12 @@ const nbCentennial = await getImage({ src: nbCentennialSrc, format: 'webp', qual
       ]
     }
     </script>
+
+    <!-- Schema: Reviews backing the RealEstateAgent AggregateRating above.
+         Pulled dynamically from published success stories' testimonials so the
+         5.0 / 47-review claim on this homepage has actual Review entries to
+         support it. Same @id as the agent block → Google merges them. -->
+    <script type="application/ld+json" set:html={JSON.stringify(homepageReviewSchema)}></script>
   </Fragment>
 
   <!-- ========== HERO ========== -->

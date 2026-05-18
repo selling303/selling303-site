@@ -121,13 +121,12 @@ relatedPosts:
   ],
   "isBasedOn": {"@type": "CreativeWork", "name": "Colorado Department of Local Affairs property tax cycle reference, CRS 39-5-122, CRS 39-10-114, and Arapahoe / Douglas / Jefferson County assessor 2026 published procedures"},
   "creator": {"@type": "Person", "name": "Jacob Stark", "jobTitle": "Realtor", "url": "https://selling303.com"},
-  "publisher": {"@type": "Organization", "name": "selling303.com", "url": "https://selling303.com"}
+  "publisher": {"@type": "Organization", "name": "selling303.com", "url": "https://selling303.com"},
+  "license": "https://creativecommons.org/licenses/by-nd/4.0/"
 }
 </script>
 
-<div id="gc-widget" itemscope itemtype="https://schema.org/Dataset" style="margin: 0 0 1rem; border: 1px solid #d6e0e6; border-radius: 12px; overflow: hidden; background: #fff; box-shadow: 0 4px 20px rgba(0,42,58,0.06);">
-<meta itemprop="name" content="South Denver 2026 NOV Protest Path Calculator">
-<meta itemprop="temporalCoverage" content="2026-05-01/2026-08-15">
+<div id="gc-widget" style="margin: 0 0 1rem; border: 1px solid #d6e0e6; border-radius: 12px; overflow: hidden; background: #fff; box-shadow: 0 4px 20px rgba(0,42,58,0.06);">
 
 <div style="background: linear-gradient(135deg, #002a3a 0%, #003c52 100%); color: #fff; padding: 1.5rem 1.5rem 1.75rem; position: relative;">
 <div style="font-size: 0.7rem; opacity: 0.75; text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 0.5rem;">Arapahoe / Douglas / Jefferson · 2026 NOV</div>

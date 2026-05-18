@@ -59,7 +59,7 @@ const articleSchema: Record<string, any> = {
   "@type": "Article",
   "headline": data.headline || data.title,
   "description": data.description,
-  "image": data.ogImage || data.cardImage?.url || "https://selling303.com/images/og-default.jpg",
+  "image": data.ogImage || data.cardImage?.url || `https://selling303.com/og/blog/${entry.id}.png`,
   // Author + publisher reference the canonical entities defined on / (home) and /about.
   // Replacing inline blocks with @id references unifies entity identity across all 80+
   // pages, helping Google's knowledge graph distinguish Jacob Stark from other public
@@ -101,7 +101,7 @@ if (data.faqSchema && data.faqSchema.length > 0) {
   });
 }
 
-const ogImage = data.ogImage || data.cardImage?.url || "https://selling303.com/images/og-default.jpg";
+const ogImage = data.ogImage || data.cardImage?.url || `https://selling303.com/og/blog/${entry.id}.png`;
 ---
 
 <BaseLayout
