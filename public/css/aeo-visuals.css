@@ -1,7 +1,9 @@
 /*
  * aeo-visuals.css — Global stylesheet for AEO-optimized data visuals.
  *
- * Source of truth: ~/.claude/skills/aeo-visual-builder/SKILL.md
+ * Source of truth: aeo-visual-builder skill at claude.ai/customize/skills (working copy
+ *   under ~/Documents/Claude/brain/skills-source/). The legacy ~/.claude/skills/ path
+ *   was deleted 2026-04-30; never reference it.
  * Reference template: src/content/blog/spring-2026-move-up-market-report-south-denver.md
  *
  * Every visual class here is paired with required HTML/schema markup defined

@@ -135,7 +135,7 @@ Always present terminal commands and preview URLs in fenced code blocks so Jacob
 
 **Example:**
 ```
-cd ~/selling303-site
+cd ~/Documents/Claude/Projects/selling303-site
 npx astro dev
 ```
 Preview: `http://localhost:4321/blog/post-slug`
