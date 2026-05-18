@@ -1,7 +1,0 @@
-# ⚠️  THIS FILE IS NOT SERVED. ⚠️
-#
-# The live _redirects is at public/_redirects.
-# Astro copies public/* verbatim to dist/, and Netlify reads dist/_redirects.
-# Anything you put here will be ignored.
-#
-# Edit public/_redirects instead.
