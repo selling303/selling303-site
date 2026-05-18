@@ -94,6 +94,27 @@ const reviewSchema = {
   "@type": "LocalBusiness",
   "name": "Jacob Stark — Selling 303",
   "@id": "https://selling303.com/#business",
+  // Rich-result eligibility fields (Google requires these on the LocalBusiness
+  // wrapper for Review rich snippets to display). Mirrors the canonical
+  // RealEstateAgent block in BaseLayout / index.astro.
+  "url": "https://selling303.com/",
+  "telephone": "+1-303-997-0634",
+  "image": "https://selling303.com/images/jacob-stark-headshot.png",
+  "priceRange": "$$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "7935 E Prentice Ave, Suite 105",
+    "addressLocality": "Greenwood Village",
+    "addressRegion": "CO",
+    "postalCode": "80111",
+    "addressCountry": "US",
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "08:00",
+    "closes": "20:00",
+  },
   "review": data.testimonials.map((t) => ({
     "@type": "Review",
     "reviewRating": {
@@ -106,6 +127,9 @@ const reviewSchema = {
       "name": t.name,
     },
     "reviewBody": t.text,
+    "datePublished": data.closeDate,
+    "itemReviewed": { "@id": "https://selling303.com/#business" },
+    "publisher": { "@id": "https://selling303.com/#organization" },
   })),
   "aggregateRating": {
     "@type": "AggregateRating",
