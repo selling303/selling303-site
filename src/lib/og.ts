@@ -14,12 +14,15 @@
 
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 import satori from 'satori';
 import { Resvg } from '@resvg/resvg-js';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const ASSETS = path.resolve(__dirname, '../assets');
+// Resolve assets against the project root, NOT import.meta.url. At build time this
+// module gets bundled into dist/.prerender/chunks/ and import.meta.url points there;
+// '../assets' from that location resolves to dist/.prerender/assets/ which doesn't
+// exist (Astro doesn't copy src/assets/ into the prerender output). process.cwd() is
+// the project root during `astro build` both locally and on Netlify.
+const ASSETS = path.resolve(process.cwd(), 'src/assets');
 
 // Brand tokens — keep in sync with brand-style-guide skill. The gold accent (#c8965a)
 // is sampled from the wordmark; document there once we update the brand skill.
