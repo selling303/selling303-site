@@ -1,5 +1,36 @@
 # Deploy Log
 
+## 2026-05-18 — commit aa6cb23 / merge dab84e1 | Credits used: 15 | Build: triggered via hook 69de8373
+
+### Dead-infra Chunk A + 3 pending queue items (mixed batch)
+
+Bundled deploy clearing the full queue. Chunk A of the 2026-05-17 dead-infra audit (the OG generation system + Schema.org canonical assets + sitemap redirect) shipped alongside three prior 2026-05-17 items that were committed to main earlier today.
+
+- **Dynamic OG image system — Satori + Resvg, build-time generation at `/og/<slug>.png`.** Per the 2026-05-17 dead-infra audit, every page's `og:image` was 404'ing in production (refs at the dead repo-root `/images/` path that never reached `dist/`). Added `src/lib/og.ts` and `src/pages/og/[...slug].png.ts` endpoint producing per-page 1200×630 PNGs for every blog post (~58), neighborhood (9), and static page (20+). Three template variants: blog (title + category badge + headshot), neighborhood (title + county badge + headshot), default (title + headshot). Diagonal navy gradient (`#001825 → #002a3a`), Selling 303 wordmark top-left, headshot bleeding bottom-right, gold (`#c8965a`) Inter SemiBold badge, DM Serif Display title with responsive sizing tier (72→60→50→42→38px based on character count), flex-centered title block adapts to badge presence + title length. New deps: `satori@^0.12.2`, `@resvg/resvg-js@^2.6.2`. Required iteration: caught path-resolution bug (anchored to `process.cwd()` instead of `import.meta.url` which pointed at bundled output), responsive font sizing for long titles, vertical centering to fix badge-pushes-title-down on blog variants. Verified locally before live deploy.
+
+- **Schema.org canonical asset URLs restored.** `public/images/selling303-logo.png` (Organization.logo target) + `public/images/jacob-stark-headshot.png` (Person.image target on homepage RealEstateAgent schema) now exist as real files — both had been 404'ing along with the OG images.
+
+- **Sitemap canonicalization redirect.** `/sitemap.xml → /sitemap-index.xml 301` in `public/_redirects`. Astro emits the latter; the former was 404, breaking GSC and external services that hit the legacy path.
+
+- **SEO refs site-wide.** Stripped every legacy `ogImage="https://selling303.com/images/og-*.jpg"` line across 18 static pages. `src/components/SEO.astro` now auto-derives `og:image` from the page path (`/og/<path>.png`); dynamic routes (`blog/[slug]`, `neighborhoods/[slug]`) pass explicit per-page URLs via the BaseLayout `ogImage` prop.
+
+- **GSC fix — duplicate Dataset on NOV protest playbook.** `/blog/2026-notice-of-valuation-protest-playbook-south-denver` was emitting two Dataset entities (clean JSON-LD + broken inline microdata on `#gc-widget`); Google flagged "2 items detected: Some are invalid" with a "Missing field description" critical error. Stripped `itemscope itemtype` + microdata `<meta itemprop>` lines from the widget wrapper so only the JSON-LD survives; added `license: CC BY-ND 4.0` to clear the optional-license warning on the surviving entity.
+
+- **New Day 14 blog post: "Why Parker Move-Up Listings Stall — April 2026 Data"** (`src/content/blog/parker-move-up-listings-stall-pricing-strategy-2026.md`). Expired Listings pillar + Parker geographic pillar. BOFU seller diagnostic for stalled Parker move-up listings in the $800K–$1.2M bracket. Built on April 2026 REcolorado MLS data (181 closed at 11d median DIM / 32 expired at 68d / 9 expired in $800K–$1.2M at 95d). Single-metric-bar-chart Tier 0 visual with Dataset JSON-LD. Pre-deploy revisions incorporated in commit `aa6cb23`.
+
+- **SEO/AEO — Review schema completeness on success stories + homepage.** Audit of GSC's "Item Name N/A" column on Review reports surfaced real gaps. (1) `src/pages/sell/success-stories/[slug].astro` LocalBusiness wrapper added `url`, `telephone`, `image`, `priceRange`, `address`, `openingHoursSpecification`; per-Review added `datePublished` (from `closeDate`), `itemReviewed` (@id ref), `publisher` (@id ref). 15 success stories × ~2 testimonials = ~30 Review entries now Google-eligible for star-rating rich results. (2) `src/pages/index.astro` homepage RealEstateAgent block: added a second JSON-LD block with same `@id` carrying a `review` array dynamically built from all published success-story testimonials.
+
+### Verified post-deploy
+
+(To be added after Netlify build hits `ready` state — pending curl spot-checks on `/og/blog/parker-move-up-listings-stall-pricing-strategy-2026.png`, homepage Schema.org `Person.image`, `/sitemap.xml` redirect, and at least one OG card on a long-title blog post to confirm responsive sizing fired.)
+
+### Follow-ups for Jacob
+
+1. **Spot-check OG cards in production.** Open `https://selling303.com/og/index.png` and 2-3 blog OGs in a browser to confirm they look correct after CDN warming.
+2. **Run Facebook's OG debugger** on 2-3 key pages to force re-scrape of the new OG images (Facebook caches OG refs for 30+ days; without this, social shares from existing links may still show the old broken refs for a while). https://developers.facebook.com/tools/debug/
+3. **Chunk B (deferred):** off-site SKILL.md fixes — remove `~/.claude/skills` mount from `seo-aeo-weekly-audit` scheduled task, standardize `~/Documents/Claude/Projects/` capitalization across `brain/skills-source/` files and CLAUDE.md:138.
+4. **Chunk C (deferred):** delete dead root-level twins — `_redirects`, `_headers`, `favicon.ico`, `favicon.svg`, `robots.txt`, `sitemap.xml`, `css/`, `js/`, `images/`, `blog/` (empty), `success-stories/`, plus `deploy-to-netlify.skill`, `dual-transaction-timeline-preview.html`, the three `test-*.txt` scratch files, and the orphan components `AuthorBio.astro` + `TrustSignals.astro`.
+
 ## 2026-05-17 (PM) — commit a0b9968 / merge 7a08c0a | Credits used: 15 | Build: triggered via hook 69de8373
 
 ### SEO infrastructure batch — _redirects cleanup (no new blog posts)
