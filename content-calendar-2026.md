@@ -400,7 +400,7 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: profile-card-grid (3 right-sized paths × format/price/sqft/community concentration — patio home / paired villa / low-maintenance townhome — overrode calendar `howto (flag-only)` advisory; Compelling Question Flow scored profile-card-grid 24 over two-path-diptych 22 and stretch sqft-shrink-comparison 20; the post's compelling question is canonical profile-card-grid territory — "which format fits me?")
 
 #### Day 14 — Monday, May 18
-- [ ] **"Why Parker Move-Up Listings Stall — and the Pricing Strategy That Recovers Them"**
+- [x] **"Why Parker Move-Up Listings Stall — and the Pricing Strategy That Recovers Them"** *(drafted 2026-05-17, slug: `parker-move-up-listings-stall-pricing-strategy-2026`, title shortened to "Why Parker Move-Up Listings Stall — April 2026 Data" for SERP CTR; original preserved in `headline` frontmatter; shipped as **single-metric-bar-chart Tier 0** — matched the calendar's `svg-chart` advisory after Compelling Question Flow scored single-metric-bar-chart 24 over comparison-table 20 and stretch stalled-vs-closed-diptych 24, with canonical fit + post-hangs-on-one-number tiebreaker favoring the bar chart)*
   - Specialization: `/expired-listings` | Geographic: `/parker`
   - Type: Seller advice | Funnel: BOFU
   - Angle: Diagnostic for stalled Parker listings in the move-up bracket ($800K–$1.2M). Why pricing patterns that work for Parker entry-level homes break down at the upper bracket, the relist pricing formula tuned to Parker DOM benchmarks, and what April 2026 expired-listing data shows about the recovery timeline.
