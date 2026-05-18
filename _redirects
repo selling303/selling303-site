@@ -67,3 +67,6 @@
 # Old .html blog URLs (Framer artifacts) → extension-less Astro slugs
 /blog/closing-costs-colorado-buyers-2026.html    /blog/closing-costs-colorado-buyers-2026     301
 /blog/why-homes-sit-on-market-south-denver.html  /blog/why-homes-sit-on-market-south-denver   301
+
+# Deleted blog posts → topically-aligned destination (not generic /blog hub)
+/blog/south-denver-suburbs-community-happenings-mid-october-2025  /neighborhoods  301
