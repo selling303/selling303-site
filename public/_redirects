@@ -7,6 +7,12 @@
 /index       /           301
 /home        /           301
 
+# --- Sitemap canonicalization ---
+# Astro's @astrojs/sitemap emits /sitemap-index.xml + /sitemap-0.xml; the legacy
+# /sitemap.xml does not ship. Without this, GSC and external services hitting
+# /sitemap.xml directly hit a 404. Added 2026-05-18 (dead-infra audit).
+/sitemap.xml /sitemap-index.xml 301
+
 # --- Common patterns ---
 /search      /neighborhoods  301
 /search/     /neighborhoods  301
