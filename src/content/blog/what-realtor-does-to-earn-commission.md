@@ -87,7 +87,7 @@ A listing agent handles pricing strategy, professional photography, marketing, s
 
 <p>The real estate industry hasn't always been great at answering this question transparently. Some agents quietly collect a commission check after doing the bare minimum. Others put in months of skilled work — pricing strategy, professional marketing, tough negotiations, and transaction management through dozens of potential deal-killing moments — and never bother to explain what they did or why it mattered.</p>
 
-<p>This post is the explanation. Whether you're a seller trying to understand what your listing agent should be doing, or a buyer wondering what your agent brings to the table beyond opening doors, here's a clear-eyed look at where commission dollars go — and how to tell if you're getting real value for them.</p>
+<p>This post is the explanation. Whether you're a <a href="/first-time-homesellers" style="color: var(--color-accent); font-weight: 600;">first-time home seller</a> trying to understand what your listing agent should be doing, or a buyer wondering what your agent brings to the table beyond opening doors, here's a clear-eyed look at where commission dollars go — and how to tell if you're getting real value for them.</p>
 
 <h2 id="how-commission-works">How Does Real Estate Commission Actually Work in Colorado?</h2>
 
