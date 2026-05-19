@@ -92,6 +92,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - RidgeGate vs. Heritage Hills: A Lone Tree New Construction Update for 2026 (`/blog/ridgegate-vs-heritage-hills-lone-tree-new-construction-2026`)
 - Parker New Construction: Buy Off the Shelf or Build It? (`/blog/spec-home-vs-custom-build-parker-2026`)
 - Right-Size Inside Highlands Ranch: 3 New-Build Paths (2026) (`/blog/highlands-ranch-new-construction-empty-nester-right-size-2026`)
+- Castle Pines New Construction 2026: Community Deep Dive (`/blog/castle-pines-new-construction-builder-community-deep-dive-2026`)
 
 ---
 

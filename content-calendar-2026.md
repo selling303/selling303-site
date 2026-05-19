@@ -412,7 +412,7 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
 ### Week 3: May 19–25
 
 #### Day 15 — Tuesday, May 19
-- [ ] **"Castle Pines New Construction in 2026: A Builder Community Deep Dive"**
+- [x] **"Castle Pines New Construction 2026: Community Deep Dive"** *(drafted 2026-05-18 — slug: `castle-pines-new-construction-builder-community-deep-dive-2026`)*
   - Specialization: `/new-construction` | Geographic: `/castle-pines`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Updated builder community rundown for Castle Pines and Castle Pines North — current base pricing, lot premium ranges by community, builder incentive packages, what's selling fast vs. sitting, and the buyer representation nuances that matter at this price point.
