@@ -42,6 +42,8 @@ relatedPosts:
     date: "March 28, 2026"
 ---
 
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/move-up-sellers">move up sellers</a> in <a href="/neighborhoods/centennial">Centennial</a> and the broader South Denver Metro.</p>
+
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>How do you coordinate selling in Centennial and buying in Highlands Ranch at the same time?</strong> A dual transaction requires aligning two timelines — your Centennial sale and your Highlands Ranch purchase — using contingency strategies, bridge financing, or a sell-first approach to protect your equity and avoid carrying two mortgages.
 </div>

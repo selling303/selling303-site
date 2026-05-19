@@ -43,6 +43,8 @@ relatedPosts:
     date: "March 8, 2026"
 ---
 
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/first-time-homesellers">first time homesellers</a> in <a href="/neighborhoods/littleton">Littleton</a> and the broader South Denver Metro.</p>
+
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>What does a first-time Littleton seller walk away with on a $650K sale?</strong> Plan on about $44,000 in seller costs, leaving $606,000 before paying off the mortgage. The mortgage balance is the bigger swing factor than any single cost line.
 </div>

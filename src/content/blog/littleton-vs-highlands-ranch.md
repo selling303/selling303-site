@@ -45,6 +45,8 @@ relatedPosts:
     date: "April 2, 2026"
 ---
 
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/relocation">buyers considering a relocation</a> in <a href="/neighborhoods/littleton">Littleton</a> and the broader South Denver Metro.</p>
+
 <p><strong>Q: Should I move to Littleton or Highlands Ranch?</strong><br>
 <strong>A:</strong> Both are strong South Denver choices at similar price points ($703K vs $718.5K SFH median, Feb 2026, DMAR). Littleton: established walkability and character. Highlands Ranch: newer construction and planned community amenities. Your lifestyle priorities decide which fits.</p>
 

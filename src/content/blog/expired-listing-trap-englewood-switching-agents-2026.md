@@ -40,6 +40,8 @@ relatedPosts:
     date: "April 21, 2026"
 ---
 
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/expired-listings">owners with expired listings</a> in <a href="/neighborhoods/englewood">Englewood</a> and the broader South Denver Metro.</p>
+
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>Will switching Realtors fix an expired listing in Englewood, Colorado?</strong> No. Switching agents alone almost never sells the home. The price, the presentation, or the marketing strategy — usually all three — has to change before the relist will perform differently.
 </div>

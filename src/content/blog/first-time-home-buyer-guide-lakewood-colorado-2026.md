@@ -42,6 +42,8 @@ relatedPosts:
     date: "April 27, 2026"
 ---
 
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/first-time-homebuyers">first time homebuyers</a> in <a href="/neighborhoods/lakewood">Lakewood</a> and the broader South Denver Metro.</p>
+
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <p style="margin: 0; font-size: 1.05rem;"><strong>Is Lakewood, Colorado a good place for first-time home buyers in 2026?</strong></p>
 <p style="margin: 0.5rem 0 0;">Yes. Lakewood closed 199 residential transactions in April 2026 at a $600,670 median sale price, with active inventory from $169,900 and FHA-eligible single-family options between $400K and $550K across the city's six ZIP codes.</p>

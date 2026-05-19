@@ -41,6 +41,8 @@ relatedPosts:
     date: "March 22, 2026"
 ---
 
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/move-up-sellers">move up sellers</a> in <a href="/neighborhoods/castle-pines">Castle Pines</a> and the broader South Denver Metro.</p>
+
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>How do you time a Castle Pines move-up without ending up between houses?</strong> Sell your home first and negotiate a 30 to 60-day rent-back. With 58 active listings and a 77-day median DOM in Feb 2026, Castle Pines doesn't forgive sloppy timing.
 </div>

@@ -54,6 +54,8 @@ relatedPosts:
     date: March 28, 2026
 ---
 
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/first-time-homebuyers">first time homebuyers</a> in <a href="/neighborhoods/centennial">Centennial</a> and the broader South Denver Metro.</p>
+
 <p><strong>How much are closing costs for buyers in Colorado?</strong><br>
 Colorado buyers typically pay <strong>2–5% of the purchase price</strong> in closing costs at the time of closing. On a $605,000 home — the South Denver Metro median as of February 2026, per <a href="https://www.dmar.org/market-statistics/" target="_blank" rel="noopener noreferrer">DMAR</a> — that works out to roughly $12,100–$30,250. That total covers lender fees, title insurance, prepaid expenses like homeowners insurance and property taxes, and county recording fees. Seller concessions and lender credits can reduce what you actually bring to the table.</p>
 

@@ -42,6 +42,8 @@ relatedPosts:
     date: "April 11, 2026"
 ---
 
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/move-up-sellers">move up sellers</a> in <a href="/neighborhoods/englewood">Englewood</a> and the broader South Denver Metro.</p>
+
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>What does an Englewood owner actually trade moving up to Centennial in 2026?</strong> About $50,050 more at the median ($599,950 → $650,000) for 707 more finished square feet, which works out to 44% more space at 25% less per finished square foot per April 2026 REcolorado MLS.
 </div>

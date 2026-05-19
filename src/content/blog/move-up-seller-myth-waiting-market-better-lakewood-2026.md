@@ -41,6 +41,8 @@ relatedPosts:
     date: "March 12, 2026"
 ---
 
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/move-up-sellers">move up sellers</a> in <a href="/neighborhoods/lakewood">Lakewood</a> and the broader South Denver Metro.</p>
+
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>Is waiting for a better market the right call for a Lakewood move-up seller?</strong> The Lakewood single-family median fell 2.0% YoY to $636,900 in February 2026, DOM climbed to 39 days, and new listings surged 41.2%. Waiting costs equity and leverage.
 </div>

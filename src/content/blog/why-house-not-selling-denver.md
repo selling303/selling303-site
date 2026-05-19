@@ -48,6 +48,8 @@ relatedPosts:
     date: "March 28, 2026"
 ---
 
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/first-time-homesellers">first time homesellers</a> in <a href="/neighborhoods/highlands-ranch">Highlands Ranch</a> and the broader South Denver Metro.</p>
+
 <p><strong>Q: Why is my house sitting on the market and not selling?</strong><br>
 <strong>A:</strong> Usually one of seven reasons: overpricing, poor online photos, showing restrictions, unaddressed condition issues, weak marketing, wrong agent match, or bad timing. Some are on you, some are on the agent.</p>
 

@@ -42,6 +42,8 @@ relatedPosts:
     date: "April 6, 2026"
 ---
 
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/move-up-sellers">move up sellers</a> in <a href="/neighborhoods/englewood">Englewood</a> and the broader South Denver Metro.</p>
+
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>What's the checklist for moving up from an Englewood starter to more space in Parker?</strong> Line up the equity math, get pre-approved on the Parker target price, sell the Englewood home first with a rent-back or contingent purchase, then close on Parker 30–45 days later. The median price gap in Q1 2026 was roughly $85,000 between the two cities.
 </div>

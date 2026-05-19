@@ -51,6 +51,8 @@ relatedPosts:
     date: "March 28, 2026"
 ---
 
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/move-up-sellers">move up sellers</a> in <a href="/neighborhoods/parker">Parker</a> and the broader South Denver Metro.</p>
+
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>When should you sell your Parker home and move up?</strong> The right time to sell a Parker, Colorado home and upgrade is when your equity position, lifestyle needs, and local market conditions all point in the same direction — and for many Parker homeowners in spring 2026, that convergence is happening now.
 </div>

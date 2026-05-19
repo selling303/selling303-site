@@ -44,6 +44,8 @@ relatedPosts:
     date: "April 5, 2026"
 ---
 
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/first-time-homebuyers">first time homebuyers</a> in <a href="/neighborhoods/littleton">Littleton</a> and the broader South Denver Metro.</p>
+
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>How should a first-time buyer bid in Littleton's spring 2026 market?</strong> Entry-level Littleton homes under $600,000 are closing at 100 to 107 percent of list price in single-digit days, so a winning first-time buyer offer pairs a clean escalation clause, a calibrated appraisal gap, and inspection flexibility — not the highest price on the page.
 </div>

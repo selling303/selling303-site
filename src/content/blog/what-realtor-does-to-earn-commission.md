@@ -55,6 +55,8 @@ relatedPosts:
     date: March 2026
 ---
 
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/first-time-homesellers">first time homesellers</a> in <a href="/neighborhoods/highlands-ranch">Highlands Ranch</a> and the broader South Denver Metro.</p>
+
 <div class="snippet-answer" style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-radius: 0 6px 6px 0;">
 <p style="margin: 0;"><strong>What does a REALTOR actually do to earn their commission?</strong><br>
 A listing agent handles pricing strategy, professional photography, marketing, showing coordination, offer negotiation, and transaction management from contract to closing. A buyer's agent identifies properties, schedules showings, advises on offer strategy, and manages inspections and appraisals. In Colorado, total commission is always negotiable but typically runs 5–6% of the sale price — split between the seller's agent (2.8–3.2%) and the buyer's agent (2.5–2.8%).</p>

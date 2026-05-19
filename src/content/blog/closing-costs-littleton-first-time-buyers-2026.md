@@ -44,6 +44,8 @@ relatedPosts:
     date: "April 5, 2026"
 ---
 
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/first-time-homebuyers">first time homebuyers</a> in <a href="/neighborhoods/littleton">Littleton</a> and the broader South Denver Metro.</p>
+
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>How much do closing costs actually run for a first-time buyer in Littleton, Colorado?</strong> Budget 2 to 5 percent of the purchase price — roughly $9,500 to $23,750 on a $475,000 entry-level Littleton home, on top of the down payment. The biggest movers are lender fees, prepaid interest, and the property tax escrow setup.
 </div>

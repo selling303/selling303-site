@@ -46,6 +46,8 @@ relatedPosts:
     date: "April 3, 2026"
 ---
 
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/move-up-sellers">move up sellers</a> in <a href="/neighborhoods/highlands-ranch">Highlands Ranch</a> and the broader South Denver Metro.</p>
+
 <p><strong>Q: What's the total cost to sell a house in Colorado in 2026?</strong><br>
 <strong>A:</strong> Between 7–12% of your home's sale price, covering agent commission (5–6%), closing costs (1–3%), and pre-sale prep (staging, repairs, photography). A $605K Denver Metro home costs roughly $42–73K to sell.</p>
 

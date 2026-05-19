@@ -40,6 +40,8 @@ relatedPosts:
     date: "April 2, 2026"
 ---
 
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/expired-listings">owners with expired listings</a> in <a href="/neighborhoods/centennial">Centennial</a> and the broader South Denver Metro.</p>
+
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>What does the April 2026 South Denver market mean for expired listing sellers?</strong> Spring absorption is fast — pending sales rose 30.69% month-over-month and median days in MLS dropped to 16 days in March 2026. Centennial sellers sitting on an expired listing have a real pricing reset window open right now.
 </div>

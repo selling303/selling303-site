@@ -40,6 +40,8 @@ relatedPosts:
     date: "April 4, 2026"
 ---
 
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/expired-listings">owners with expired listings</a> in <a href="/neighborhoods/centennial">Centennial</a> and the broader South Denver Metro.</p>
+
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>Why isn't your Centennial home getting offers?</strong> Closed Centennial homes sold in a median of 13 days on the MLS in Q1 2026. If your listing has sat longer without a serious offer, the issue is almost always price, presentation, or positioning — and all three can be corrected before summer inventory peaks.
 </div>

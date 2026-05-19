@@ -43,6 +43,8 @@ relatedPosts:
     date: "April 11, 2026"
 ---
 
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/move-up-sellers">move up sellers</a> in <a href="/neighborhoods/greenwood-village">Greenwood Village</a> and the broader South Denver Metro.</p>
+
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <p style="margin: 0; font-size: 1.05rem;"><strong>When does the Greenwood Village empty-nester right-sizing math actually pencil?</strong></p>
 <p style="margin: 0.5rem 0 0;">Most Greenwood Village empty-nesters net roughly $1.85M on a $2.5M sale. Four right-sizing profiles fit most situations — redeployable equity ranges from $0 (stay in GV) to $850K (move down-market to Highlands Ranch or Centennial).</p>

@@ -55,6 +55,8 @@ relatedPosts:
     date: March 2026
 ---
 
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/first-time-homesellers">first time homesellers</a> in <a href="/neighborhoods/centennial">Centennial</a> and the broader South Denver Metro.</p>
+
 <div class="snippet-answer" style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-radius: 0 6px 6px 0;">
 <p style="margin: 0;"><strong>Why do some homes sit on the market in South Denver while others sell quickly?</strong><br>
 The most common reasons are overpricing relative to condition, poor presentation, and listing at the wrong time. In February 2026, well-priced homes in the Denver Metro sold in a median of 30 days for detached properties — but overpriced listings sat significantly longer, per <a href="https://www.dmarealtors.com" target="_blank" rel="noopener noreferrer">DMAR</a> data sourced from REcolorado.</p>

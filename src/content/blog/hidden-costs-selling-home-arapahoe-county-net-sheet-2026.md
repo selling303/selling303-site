@@ -44,6 +44,8 @@ relatedPosts:
     date: "April 4, 2026"
 ---
 
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/first-time-homesellers">first time homesellers</a> in <a href="/neighborhoods/centennial">Centennial</a> and the broader South Denver Metro.</p>
+
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>How much does it really cost to sell a home in Arapahoe County, Colorado?</strong> Plan for roughly 8–10% of your sale price once you stack commission, title, closing fees, HOA charges, tax proration, and buyer concessions. On a $700,000 Centennial median, that's about $55,000–$70,000 before you see net proceeds.
 </div>

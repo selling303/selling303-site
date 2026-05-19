@@ -39,6 +39,8 @@ relatedPosts:
     date: "April 7, 2026"
 ---
 
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/relocation">buyers considering a relocation</a> in <a href="/neighborhoods/littleton">Littleton</a> and the broader South Denver Metro.</p>
+
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>What are the best parks and trails near Littleton and Highlands Ranch?</strong> The top outdoor spaces include Chatfield State Park (26 miles of trails), the Highlands Ranch Backcountry Wilderness Area (8,200 acres), South Platte Park, and the 71-mile High Line Canal Trail — all within minutes of homes in both South Denver suburbs.
 </div>

@@ -40,6 +40,8 @@ relatedPosts:
     date: "March 18, 2026"
 ---
 
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/move-up-sellers">move up sellers</a> in <a href="/neighborhoods/highlands-ranch">Highlands Ranch</a> and the broader South Denver Metro.</p>
+
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>How much equity do you need to move up in Highlands Ranch?</strong> For a move from a typical $650K–$750K Highlands Ranch home into a $1M–$1.2M upgrade, most sellers need roughly $250,000–$325,000 in usable equity after mortgage payoff, selling costs, and a 20% down payment on the new home.
 </div>

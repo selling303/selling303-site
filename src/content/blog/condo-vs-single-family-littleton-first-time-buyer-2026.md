@@ -43,6 +43,8 @@ relatedPosts:
     date: "May 8, 2026"
 ---
 
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/first-time-homebuyers">first time homebuyers</a> in <a href="/neighborhoods/littleton">Littleton</a> and the broader South Denver Metro.</p>
+
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>Should I buy a Littleton condo or a starter house as a first-time buyer in 2026?</strong> The $220K sticker gap is the headline, but the $1,190/month carrying-cost delta is the real one. Which path wins depends on hold-time and monthly stretch — not HOA fees.
 </div>

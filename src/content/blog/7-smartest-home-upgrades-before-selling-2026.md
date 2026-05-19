@@ -56,6 +56,8 @@ relatedPosts:
     date: March 2026
 ---
 
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/move-up-sellers">move up sellers</a> in <a href="/neighborhoods/highlands-ranch">Highlands Ranch</a> and the broader South Denver Metro.</p>
+
 <div class="snippet-answer" style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-radius: 0 6px 6px 0;">
 <p style="margin: 0;"><strong>What are the smartest home upgrades to make before selling in 2026?</strong><br>
 The highest-ROI pre-listing upgrades are neutral paint, deep cleaning and declutter, curb appeal refresh, updated light fixtures, kitchen hardware and faucets, bathroom caulk and grout, and a professional staging consultation. According to <a href="https://www.dmarealtors.com" target="_blank" rel="noopener noreferrer">DMAR's February 2026 Market Trends Report</a>, well-staged, well-maintained homes in the Denver Metro are receiving two to three offers and selling at or above asking price.</p>
