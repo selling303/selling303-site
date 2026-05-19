@@ -420,12 +420,12 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: comparison-table (Castle Pines builders × pricing/incentive/timeline)
 
 #### Day 16 — Wednesday, May 20
-- [ ] **"The Englewood First-Time Buyer ZIP Code Guide: Comparing 80110, 80113, and 80111"**
+- [x] **"Englewood First-Time Buyer ZIP Code Guide: 80110, 80113, 80111 (2026)"** *(drafted 2026-05-19, slug: `englewood-first-time-buyer-zip-code-guide-80110-80113-80111-2026`, title shortened from "The Englewood First-Time Buyer ZIP Code Guide: Comparing 80110, 80113, and 80111" for SERP CTR; original preserved in `headline` frontmatter; shipped as **profile-card-grid Tier 0** — Compelling Question Flow override from calendar's `defined-term (flag-only)` advisory)*
   - Specialization: `/first-time-homebuyers` | Geographic: `/englewood`
   - Type: Buyer advice / Local area topic | Funnel: TOFU
   - Angle: Englewood is technically three different markets depending on ZIP. 80110 (downtown/transit corridor), 80113 (residential mid-Englewood), and 80111 (border with Greenwood Village/Cherry Hills). Comparison of price points, walkability scores, typical home age, lot characteristics, and which ZIP fits which first-time buyer profile.
   - Target keywords: Englewood ZIP codes, 80110 80113 80111, first-time buyer Englewood neighborhoods, Englewood Colorado neighborhoods
-  - Visual: defined-term (flag-only — Phase 4 builder dependency)
+  - Visual: profile-card-grid (3 ZIP cards × name/pocket-label/price-band/best-for — overrode calendar `defined-term (flag-only)` advisory; Compelling Question Flow scored profile-card-grid 28 over comparison-table 25 and stretch ZIP-grid 18, canonical "which entity is right for me?" fit + mobile-dignity led; freshness penalty accepted, 2 days since last profile-card-grid ship)
 
 #### Day 17 — Thursday, May 21
 - [ ] **"The Greenwood Village Downsize Path: A Step-by-Step Playbook for Selling the Family Home and Buying the Right-Sized Replacement"**

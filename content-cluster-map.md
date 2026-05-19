@@ -55,6 +55,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - What $500K Gets You in Centennial vs. Highlands Ranch vs. Parker (Spring 2026) (`/blog/500k-home-centennial-highlands-ranch-parker-2026`)
 - First-Time Home Buyer's Guide to Lakewood, Colorado (2026) (`/blog/first-time-home-buyer-guide-lakewood-colorado-2026`)
 - Condo vs. Starter House in Littleton for First-Time Buyers (`/blog/condo-vs-single-family-littleton-first-time-buyer-2026`)
+- Englewood First-Time Buyer ZIP Code Guide: 80110, 80113, 80111 (2026) (`/blog/englewood-first-time-buyer-zip-code-guide-80110-80113-80111-2026`)
 
 ### 4. First-Time Home Sellers (`/first-time-homesellers`)
 **Primary geographic ties:** Centennial, Littleton, Highlands Ranch (first-time seller volume in South Denver)
