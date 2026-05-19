@@ -1,5 +1,5 @@
 ---
-title: "New Build vs. Resale in Highlands Ranch: Which Makes More Financial Sense in 2026?"
+title: "New Build vs. Resale in Highlands Ranch 2026"
 description: "A data-driven head-to-head — appreciation, customization premium, timeline, warranty, and total cost of ownership for Highlands Ranch, Colorado buyers."
 date: "April 23, 2026"
 dateModified: "April 23, 2026"

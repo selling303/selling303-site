@@ -1,5 +1,5 @@
 ---
-title: "Littleton vs. Highlands Ranch: Which South Denver Suburb Fits Your Family?"
+title: "Littleton vs. Highlands Ranch: Which Suburb Fits You?"
 description: "Comparing South Denver suburbs: price, commute, lifestyle, schools. Which neighborhood fits your family?"
 date: "March 28, 2026"
 dateModified: "March 30, 2026"

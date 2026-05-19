@@ -1,5 +1,5 @@
 ---
-title: "Closing Costs Breakdown for First-Time Buyers in Littleton (2026 Update)"
+title: "Closing Costs for Littleton First-Time Buyers 2026"
 description: "What first-time buyers actually pay at closing on a Littleton, Colorado home in 2026 — lender fees, title, prepaids, HOA transfer, and county recording costs."
 date: "April 27, 2026"
 dateModified: "April 26, 2026"

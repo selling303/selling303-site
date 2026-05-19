@@ -1,5 +1,5 @@
 ---
-title: "Lone Tree New Construction: Builder Incentives and What They Actually Mean for Your Bottom Line"
+title: "Lone Tree New Construction Builder Incentives 2026"
 description: "Decode builder incentives in Lone Tree CO new construction — rate buydowns, closing cost credits, and upgrade packages. What's real value vs. marketing."
 date: "April 18, 2026"
 dateModified: "April 18, 2026"
