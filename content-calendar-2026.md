@@ -428,12 +428,12 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: profile-card-grid (3 ZIP cards × name/pocket-label/price-band/best-for — overrode calendar `defined-term (flag-only)` advisory; Compelling Question Flow scored profile-card-grid 28 over comparison-table 25 and stretch ZIP-grid 18, canonical "which entity is right for me?" fit + mobile-dignity led; freshness penalty accepted, 2 days since last profile-card-grid ship)
 
 #### Day 17 — Thursday, May 21
-- [ ] **"The Greenwood Village Downsize Path: A Step-by-Step Playbook for Selling the Family Home and Buying the Right-Sized Replacement"**
+- [x] **"Greenwood Village Downsize: 7-Step First-Time Seller Playbook"** — published `/blog/greenwood-village-downsize-playbook-first-time-seller-2026` (2026-05-20 nightly).
   - Specialization: `/first-time-homesellers` | Geographic: `/greenwood-village`
   - Type: Seller advice | Funnel: MOFU
   - Angle: Linear playbook for Greenwood Village homeowners selling the long-held family home for the first time. Step 1 pre-list audit and condition prep. Step 2 pricing strategy at the luxury tier. Step 3 capital gains exposure assessment. Step 4 replacement-housing search. Step 5 dual-transaction coordination. Step 6 closing logistics. Step 7 post-move financial reset.
   - Target keywords: downsize Greenwood Village, sell Greenwood Village home, GV first-time seller, Greenwood Village empty nester
-  - Visual: howto (flag-only — Phase 4 builder dependency)
+  - Visual: comparison-table (7 rows × 4 cols — Step / What it covers / Typical timeline / Cost of skipping). HowTo + 7× HowToStep schema (outer figure itemscope, parallel JSON-LD). Compelling Question Flow chose comparison-table (26) over decision-path (18, binary-fork mismatch) and stretch howto-step-flow (12, Phase 4 dependency). Calendar `howto (flag-only)` advisory overridden — Phase 4 builder dependency forced library fallback; comparison-table carries HowTo schema via parallel JSON-LD + itemscope wrapper, paying off the procedural sequence in scannable matrix form.
 
 #### Day 18 — Friday, May 22 (Memorial Day weekend slot)
 - [ ] **"South Denver Summer Market Kickoff: 5 Suburbs Active Buyers Are Targeting Memorial Day Weekend"**
