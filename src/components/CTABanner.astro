@@ -12,7 +12,7 @@ interface Props {
 const {
   heading,
   subtext,
-  primaryHref = "https://calendly.com/jacob-realtor",
+  primaryHref = "https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy",
   primaryText = "Schedule a Call",
   secondaryHref = "tel:3039970634",
   secondaryText = "Call 303-997-0634",
@@ -20,7 +20,7 @@ const {
 } = Astro.props;
 
 const isDark = variant === "dark";
-const isCalendly = primaryHref.includes("calendly");
+const isExternal = primaryHref.startsWith("http");
 const bannerStyle = isDark
   ? ""
   : "background-color: var(--color-white);";
@@ -36,8 +36,8 @@ const secondaryBtnClass = isDark ? "btn--outline" : "btn--outline-dark";
     <a
       href={primaryHref}
       class="btn btn--primary btn--lg"
-      target={isCalendly ? "_blank" : undefined}
-      rel={isCalendly ? "noopener" : undefined}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noopener" : undefined}
     >
       {primaryText}
     </a>

@@ -166,7 +166,7 @@ The most common reasons are overpricing relative to condition, poor presentation
 If your home's been on the market longer than expected and you're not sure what's going wrong, I'm happy to take a look — no obligation. Sometimes a second set of eyes on the pricing and presentation is all it takes to change the trajectory.
 </blockquote>
 
-<p>Call me at <a href="tel:3039970634" style="color: var(--color-accent); font-weight: 600;">303-997-0634</a> or <a href="https://calendly.com/jacob-realtor" style="color: var(--color-accent); font-weight: 600;" target="_blank" rel="noopener noreferrer">schedule a call</a>.</p>
+<p>Call me at <a href="tel:3039970634" style="color: var(--color-accent); font-weight: 600;">303-997-0634</a> or <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy" style="color: var(--color-accent); font-weight: 600;" target="_blank" rel="noopener noreferrer">schedule a call</a>.</p>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 

@@ -178,7 +178,7 @@ The highest-ROI pre-listing upgrades are neutral paint, deep cleaning and declut
 Before you spend a dollar on pre-listing prep, have a conversation with your listing agent. A good walkthrough takes 45 minutes and saves you from spending money in the wrong places — or from under-investing in the right ones.
 </blockquote>
 
-<p>If you'd like that conversation, call Jacob Stark at <a href="tel:3039970634" style="color: var(--color-accent); font-weight: 600;">303-997-0634</a> or <a href="https://calendly.com/jacob-realtor" target="_blank" rel="noopener" style="color: var(--color-accent); font-weight: 600;">schedule a call</a>. It's free, there's no obligation, and you'll leave with a clear picture of what your home actually needs before it hits the market.</p>
+<p>If you'd like that conversation, call Jacob Stark at <a href="tel:3039970634" style="color: var(--color-accent); font-weight: 600;">303-997-0634</a> or <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy" target="_blank" rel="noopener" style="color: var(--color-accent); font-weight: 600;">schedule a call</a>. It's free, there's no obligation, and you'll leave with a clear picture of what your home actually needs before it hits the market.</p>
 
 <p>And if you need recommendations for contractors, cleaners, stagers, or any other vendors in the South Denver area — reach out. I've worked with a lot of great people over the years and I'm happy to connect you with someone I trust.</p>
 

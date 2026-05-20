@@ -178,7 +178,7 @@ relatedPosts:
 <p>A move from a $600,000 Englewood starter into a $750,000 Parker home typically requires $125,000–$175,000 in usable equity after mortgage payoff, selling costs, and a 20 percent down payment on the new home. Exact numbers depend on current loan balance, any buyer concessions, and how much cash is reserved for reserves or pre-listing prep.</p>
 
 <blockquote style="border-left: 4px solid #002a3a; background: #f4f7f9; padding: 1.5rem; margin: 2rem 0; font-style: italic;">
-Thinking about trading your Englewood starter for more space in Parker? Call Jacob Stark at <a href="tel:3039970634">303-997-0634</a>, <a href="https://calendly.com/jacob-realtor">schedule a move-up strategy call</a>, or visit <a href="/">selling303.com</a> to start the equity conversation. Jacob has closed this exact move more times than any other crosstown transition in South Denver.
+Thinking about trading your Englewood starter for more space in Parker? Call Jacob Stark at <a href="tel:3039970634">303-997-0634</a>, <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">schedule a move-up strategy call</a>, or visit <a href="/">selling303.com</a> to start the equity conversation. Jacob has closed this exact move more times than any other crosstown transition in South Denver.
 </blockquote>
 
 <p style="font-size: 0.85rem; color: #81848a; margin-top: 2rem;"><em>Data sources: REcolorado MLS (Englewood and Parker Q1 2026 single-family residential exports, pulled April 2, 2026). DMAR Market Trends Report, March 2026. All market data deemed reliable but not guaranteed.</em></p>

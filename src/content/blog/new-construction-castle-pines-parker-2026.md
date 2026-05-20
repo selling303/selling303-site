@@ -202,7 +202,7 @@ relatedPosts:
 <p>Lot premiums are additional charges builders add for desirable lot positions — corner lots, cul-de-sac locations, lots backing to open space, or homesites with mountain views. In Castle Pines and Parker communities, lot premiums can range from $10,000 to $75,000 or more depending on the community and the specific homesite. These premiums are negotiable in some market conditions, and a buyer's agent can help you understand which premiums reflect real resale value and which are inflated.</p>
 
 <blockquote style="border-left: 4px solid #4a7c59; padding: 1rem 1.5rem; margin: 2rem 0; background: #f0f4f0; border-radius: 0 8px 8px 0;">
-<p style="margin: 0; font-size: 1.05rem;">Considering new construction in Castle Pines or Parker? Jacob Stark represents buyers in builder transactions across Douglas County — from contract review to closing. <a href="https://calendly.com/jacob-realtor">Schedule a consultation</a> or call 303-997-0634.</p>
+<p style="margin: 0; font-size: 1.05rem;">Considering new construction in Castle Pines or Parker? Jacob Stark represents buyers in builder transactions across Douglas County — from contract review to closing. <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">Schedule a consultation</a> or call 303-997-0634.</p>
 </blockquote>
 
 <p style="font-size: 0.85rem; color: #666; margin-top: 2rem;"><em>Market data sourced from REcolorado MLS (Q1 2026 listings, as of 4/2/2026) and the DMAR Market Trends Report (March 2026 data). All data deemed reliable but not guaranteed.</em></p>

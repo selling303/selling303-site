@@ -232,5 +232,5 @@ relatedPosts:
 <p>Both Littleton and Highlands Ranch rank among the top South Denver suburbs for trail access. Highlands Ranch offers 70-plus miles of paved and natural-surface community trails with four dog parks, while Littleton provides direct access to the Mary Carter Greenway, Chatfield State Park, and South Platte Park. The High Line Canal Trail connects both communities, making the "best" choice a matter of which park system fits your family's routine.</p>
 
 <blockquote>
-<p>Thinking about your next move near Littleton or Highlands Ranch? Call Jacob Stark at 303-997-0634 or <a href="https://calendly.com/jacob-realtor">schedule a conversation</a> to talk about which neighborhoods put your family closest to the trails and open space you're looking for.</p>
+<p>Thinking about your next move near Littleton or Highlands Ranch? Call Jacob Stark at 303-997-0634 or <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">schedule a conversation</a> to talk about which neighborhoods put your family closest to the trails and open space you're looking for.</p>
 </blockquote>

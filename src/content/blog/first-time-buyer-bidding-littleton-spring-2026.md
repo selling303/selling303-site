@@ -333,7 +333,7 @@ relatedPosts:
 
 <blockquote style="border-left: 4px solid #002a3a; padding: 1rem 1.5rem; background: #f4f7f9; margin: 2rem 0; border-radius: 0 6px 6px 0;">
 <p style="margin: 0 0 0.75rem;">Thinking about buying your first home in Littleton this spring? The right offer strategy for your bracket and your budget is specific — not generic. Jacob Stark walks first-time buyers through the exact offer structure that fits their situation before they ever write one.</p>
-<p style="margin: 0;"><a href="https://calendly.com/jacob-realtor" style="color: #002a3a; font-weight: 600;">Schedule a free first-time buyer consultation →</a> or call Jacob Stark at 303-997-0634.</p>
+<p style="margin: 0;"><a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy" style="color: #002a3a; font-weight: 600;">Schedule a free first-time buyer consultation →</a> or call Jacob Stark at 303-997-0634.</p>
 </blockquote>
 
 <p style="font-size: 0.85rem; color: #81848a; margin-top: 2rem;">Data sources: REcolorado MLS Q1 2026 Littleton single-family residential exports (pulled April 2026 by Jacob Stark). DMAR Market Trends Report, March 2026. Colorado Real Estate Commission Contract to Buy and Sell forms, 2026 edition. Concession data from DMAR Market Trends Report, March 2026.</p>

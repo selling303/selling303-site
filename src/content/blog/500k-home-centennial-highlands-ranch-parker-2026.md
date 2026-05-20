@@ -269,7 +269,7 @@ relatedPosts:
 <p>It depends what you value. Parker delivers the most finished square footage and lot size for $500K — typical Q1 closings in that band were 1,700-2,000 finished square feet with quarter-acre lots common. Centennial gives you the shortest commute to DTC and Cherry Creek and the broadest mix of single-family floor plans. Highlands Ranch gives you newer construction and full HOA amenities, but mostly in townhome form at this price point.</p>
 
 <blockquote>
-<p>Trying to figure out where $500,000 actually lands you in South Denver? <a href="https://calendly.com/jacob-realtor">Book a 30-minute strategy call with Jacob Stark</a>, call 303-997-0634, or visit <a href="https://selling303.com">selling303.com</a> to start the conversation.</p>
+<p>Trying to figure out where $500,000 actually lands you in South Denver? <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">Book a 30-minute strategy call with Jacob Stark</a>, call 303-997-0634, or visit <a href="https://selling303.com">selling303.com</a> to start the conversation.</p>
 </blockquote>
 
 <p style="font-size: 0.85rem; color: #81848a; margin-top: 2rem;"><em>Data sources: <a href="https://www.dmarealtors.com/market-trends" target="_blank" rel="noopener">DMAR Market Trends Report</a> and <a href="https://www.coloradorealtors.com/market-trends/local-market-updates/" target="_blank" rel="noopener">Colorado Association of REALTORS® Local Market Update</a>, February 2026; REcolorado MLS Q1 2026 single-family residential listing exports for Centennial, Highlands Ranch, and Parker, pulled April 2, 2026. All data deemed reliable but not guaranteed.</em></p>

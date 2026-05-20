@@ -155,7 +155,7 @@ relatedPosts:
 <p>Yes. An experienced new construction agent negotiates upgrades, lot premium reductions, closing cost credits, and rate buydown terms. They also evaluate whether the builder's preferred lender incentive is genuinely competitive or whether you would get better overall terms through an independent mortgage broker. Builders expect this negotiation from represented buyers.</p>
 
 <blockquote style="border-left: 4px solid #4a7c59; padding: 1rem 1.5rem; margin: 2rem 0; background: #f0f4f0; border-radius: 0 8px 8px 0;">
-<p style="margin: 0; font-size: 1.05rem;">Considering new construction in Highlands Ranch or Douglas County? Jacob Stark represents buyers in builder transactions — from contract review to closing. <a href="https://calendly.com/jacob-realtor">Schedule a consultation</a> or call 303-997-0634.</p>
+<p style="margin: 0; font-size: 1.05rem;">Considering new construction in Highlands Ranch or Douglas County? Jacob Stark represents buyers in builder transactions — from contract review to closing. <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">Schedule a consultation</a> or call 303-997-0634.</p>
 </blockquote>
 
 <p style="font-size: 0.85rem; color: #666; margin-top: 2rem;"><em>Market data sourced from REcolorado MLS (Q1 2026 listings, as of 4/2/2026) and the DMAR Market Trends Report (March 2026 data). All data deemed reliable but not guaranteed.</em></p>

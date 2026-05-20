@@ -167,7 +167,7 @@ A listing agent handles pricing strategy, professional photography, marketing, s
 If you're thinking about selling and want to understand exactly what my process looks like — pricing, marketing, communication, and everything in between — I'm happy to walk you through it. No pressure, no pitch. Just a clear picture of what to expect.
 </blockquote>
 
-<p>Call me at <a href="tel:3039970634" style="color: var(--color-accent); font-weight: 600;">303-997-0634</a> or <a href="https://calendly.com/jacob-realtor" style="color: var(--color-accent); font-weight: 600;" target="_blank" rel="noopener">schedule a call</a>.</p>
+<p>Call me at <a href="tel:3039970634" style="color: var(--color-accent); font-weight: 600;">303-997-0634</a> or <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy" style="color: var(--color-accent); font-weight: 600;" target="_blank" rel="noopener">schedule a call</a>.</p>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 

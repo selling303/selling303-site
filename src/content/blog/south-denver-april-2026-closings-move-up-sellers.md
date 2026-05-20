@@ -256,7 +256,7 @@ relatedPosts:
 <p>Of the 1,367 South Denver residential listings that exited the market in April 2026 (closed, withdrawn, or expired combined), 79.4% closed and 20.6% came off without selling. Littleton and Lakewood saw the highest absolute Withdrawn-plus-Expired counts. The takeaway: most listings sell, but pricing and presentation still separate the 4-in-5 that close from the 1-in-5 that don't.</p>
 
 <blockquote>
-<p>Thinking about a move-up sale in Highlands Ranch, Centennial, Parker, or anywhere across South Denver this spring? Call Jacob Stark at 303-997-0634 or <a href="https://calendly.com/jacob-realtor">book a free strategy session</a> at selling303.com.</p>
+<p>Thinking about a move-up sale in Highlands Ranch, Centennial, Parker, or anywhere across South Denver this spring? Call Jacob Stark at 303-997-0634 or <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">book a free strategy session</a> at selling303.com.</p>
 </blockquote>
 
 <p style="font-size: 0.85rem; color: #555; margin-top: 2rem;"><em>Data sources: REcolorado MLS (pulled May 3, 2026, deduplicated for IRES cross-listings); DMAR March 2026 Market Trends Report; NAR Existing-Home Sales statistical framework. Highlands Ranch median close price ($729,500), median DIM (8 days), and median close-to-list ratio (99%) calculated from the April 2026 REcolorado closed-listings export for Highlands Ranch (n=131).</em></p>

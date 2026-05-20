@@ -18,8 +18,8 @@
 /search      /neighborhoods  301
 /search/     /neighborhoods  301
 /listings    /properties     301
-/schedule    https://calendly.com/jacob-realtor  302
-/call        https://calendly.com/jacob-realtor  302
+/schedule    https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy  302
+/call        https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy  302
 
 # --- Old Framer static pages ---
 /about-jacob-stark   /about        301

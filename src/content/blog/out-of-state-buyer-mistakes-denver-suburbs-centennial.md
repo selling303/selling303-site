@@ -178,7 +178,7 @@ relatedPosts:
 <p>Yes. Denver Water declared Stage 1 drought conditions on March 25, 2026, which imposes mandatory outdoor watering restrictions on much of the South Denver Metro including Centennial. Out-of-state buyers planning lush lawns or new landscaping should factor restriction days, fines, and HOA overlays into the relocation budget.</p>
 
 <blockquote>
-<p>Relocating to Centennial or another South Denver suburb? Skip the avoidable mistakes. Call Jacob Stark at 303-997-0634, visit selling303.com, or <a href="https://calendly.com/jacob-realtor">book a relocation call</a> to map your move with someone who has coordinated out-of-state closings every quarter for years.</p>
+<p>Relocating to Centennial or another South Denver suburb? Skip the avoidable mistakes. Call Jacob Stark at 303-997-0634, visit selling303.com, or <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">book a relocation call</a> to map your move with someone who has coordinated out-of-state closings every quarter for years.</p>
 </blockquote>
 
 <p style="text-align: center; font-size: 0.8rem; color: #81848a; margin-top: 2rem;">Data sources: REcolorado MLS, Q1 2026 Centennial single-family residential closed sales (n=269) presented by Jacob Stark; DMAR Market Trends Report, March 2026; Denver Water Stage 1 drought declaration, March 25, 2026.</p>

@@ -221,7 +221,7 @@ relatedPosts:
 <p>There is no MLS waiting period in Colorado. You can relist as soon as you sign a new listing agreement. The bigger question is whether enough has actually changed — pricing, photos, staging, marketing — to give the relist a real shot. Relisting the same home, same price, with the same photos almost always produces the same result.</p>
 
 <blockquote>
-<p>Expired in Englewood and not sure whether the agent or the strategy was the real problem? Jacob Stark walks expired-listing sellers through a free pricing-and-presentation review before you sign anything new. <a href="https://calendly.com/jacob-realtor">Book a 20-minute consult</a> or call 303-997-0634.</p>
+<p>Expired in Englewood and not sure whether the agent or the strategy was the real problem? Jacob Stark walks expired-listing sellers through a free pricing-and-presentation review before you sign anything new. <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">Book a 20-minute consult</a> or call 303-997-0634.</p>
 </blockquote>
 
 <p style="font-size: 0.85rem; color: #81848a; margin-top: 2rem;"><em>Data sources: REcolorado MLS Q1 2026 Single-Family Residential Listing Export (Englewood, Colorado), pulled by selling303.com on April 2, 2026. Metro-wide statistics referenced from the <a href="https://www.dmarealtors.com/market-trends" rel="nofollow">DMAR Market Trends Report, March 2026 edition</a>. All data deemed reliable but not guaranteed.</em></p>

@@ -185,7 +185,7 @@ relatedPosts:
 <p>According to REcolorado MLS data, the median days on market for expired single-family listings in Littleton during Q1 2026 was 91 days. That's nearly double the 51-day median for all Littleton SFH transactions reported by <a href="https://www.dmarealtors.com/market-trends" target="_blank" rel="noopener">DMAR</a> in February 2026. The gap confirms that most expirations are pricing problems, not market problems — correctly priced Littleton homes are selling.</p>
 
 <blockquote>
-<p>Dealing with an expired listing in Littleton? Jacob Stark specializes in relisting homes that didn't sell the first time — with corrected pricing, a full marketing relaunch, and a track record of getting it done. <a href="https://calendly.com/jacob-realtor">Book a free relist strategy session</a> or call 303-997-0634.</p>
+<p>Dealing with an expired listing in Littleton? Jacob Stark specializes in relisting homes that didn't sell the first time — with corrected pricing, a full marketing relaunch, and a track record of getting it done. <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">Book a free relist strategy session</a> or call 303-997-0634.</p>
 </blockquote>
 
 <p><small><em>Market data sourced from DMAR Market Trends Reports (February 2026) and REcolorado MLS (Q1 2026 expired/withdrawn listing data for Littleton, CO). All data deemed reliable but not guaranteed.</em></small></p>

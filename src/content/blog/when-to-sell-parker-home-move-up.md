@@ -166,7 +166,7 @@ relatedPosts:
 <p>Parker homeowners most commonly upgrade within Douglas County — to larger homes in Parker's established neighborhoods like The Pinery or Stonegate, to Castle Pines for a more exclusive community feel, or to Highlands Ranch for proximity to the DTC employment corridor. Some move to Lone Tree or Greenwood Village for shorter commutes to central Denver. The destination depends on whether the priority is more square footage, better location, or a lifestyle shift.</p>
 
 <blockquote style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin: 2rem 0; border-radius: 0 8px 8px 0;">
-<p><strong>Thinking about your next move from Parker?</strong> Jacob Stark coordinates move-up transactions across Douglas County — from pricing your current home to negotiating the purchase of your next one. <a href="https://calendly.com/jacob-realtor">Schedule a move-up strategy call</a> or call directly at 303-997-0634.</p>
+<p><strong>Thinking about your next move from Parker?</strong> Jacob Stark coordinates move-up transactions across Douglas County — from pricing your current home to negotiating the purchase of your next one. <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">Schedule a move-up strategy call</a> or call directly at 303-997-0634.</p>
 </blockquote>
 
 <p style="font-size: 0.85rem; color: #6b7280; margin-top: 2rem;">Market data sourced from the <a href="https://www.dmarealtors.com/market-trends-reports" target="_blank" rel="noopener">DMAR Market Trends Report, March 2026</a> and REcolorado MLS Q1 2026 listing data. All data deemed reliable but not guaranteed.</p>

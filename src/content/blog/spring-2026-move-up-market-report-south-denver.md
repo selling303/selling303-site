@@ -249,7 +249,7 @@ relatedPosts:
 <p>The $500,000 to $749,999 segment is the most active, with 1,246 single-family closings across Denver Metro in March 2026 and 1.86 months of inventory. The $750,000 to $999,999 range is the next move-up tier, where most Highlands Ranch and Parker buyers land.</p>
 
 <blockquote>
-<p>Thinking about your next move in South Denver? <a href="https://calendly.com/jacob-realtor">Book a 30-minute strategy call with Jacob Stark</a>, call 303-997-0634, or visit <a href="https://selling303.com">selling303.com</a> to start the conversation.</p>
+<p>Thinking about your next move in South Denver? <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">Book a 30-minute strategy call with Jacob Stark</a>, call 303-997-0634, or visit <a href="https://selling303.com">selling303.com</a> to start the conversation.</p>
 </blockquote>
 
 <p style="font-size: 0.85rem; color: #81848a; margin-top: 2rem;"><em>Data sources: <a href="https://www.dmarealtors.com/market-trends" target="_blank" rel="noopener">DMAR Market Trends Report</a>, March 2026; REcolorado MLS Q1 2026 single-family residential listings (Highlands Ranch, Parker, Castle Pines), pulled April 2, 2026. All data deemed reliable but not guaranteed.</em></p>

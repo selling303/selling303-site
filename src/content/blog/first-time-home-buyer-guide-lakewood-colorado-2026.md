@@ -213,7 +213,7 @@ relatedPosts:
 <blockquote style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.5rem; margin: 2rem 0; border-radius: 0 8px 8px 0;">
 <p style="margin: 0 0 0.5rem; font-size: 1.1rem;"><strong>Thinking about your first home in Lakewood?</strong></p>
 <p style="margin: 0 0 1rem;">Jacob Stark has sold over $46 million in South Denver and west-side homes and works specifically with first-time buyers navigating their first MLS purchase. Get a clear shopping plan before you start touring — pricing, lender prep, ZIP fit, FHA strategy.</p>
-<p style="margin: 0;"><strong>Call Jacob at 303-997-0634</strong> or <a href="https://calendly.com/jacob-realtor">book a 30-minute first-time-buyer consultation</a>.</p>
+<p style="margin: 0;"><strong>Call Jacob at 303-997-0634</strong> or <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">book a 30-minute first-time-buyer consultation</a>.</p>
 </blockquote>
 
 <p style="font-size: 0.875rem; color: #555; margin-top: 2rem;"><em>Data sources: REcolorado MLS Market Analysis Summary, Lakewood, Colorado, April 1–30, 2026 (n=864), pulled May 3, 2026, deduplicated for IRES cross-listings; REcolorado MLS Q1 2026 Lakewood single-family residence pulls; <a href="https://www.dmarealtors.com/market-trends">DMAR March 2026 Market Trends Report</a>; <a href="https://www.freddiemac.com/pmms">Freddie Mac Primary Mortgage Market Survey</a>; <a href="https://www.hud.gov/program_offices/housing/sfh/lender/origination/mortgage_limits">HUD FHA Mortgage Limits, 2026, Jefferson County, Colorado</a>.</em></p>
