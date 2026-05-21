@@ -80,14 +80,7 @@ relatedPosts:
 
 <p>The headline trade is simpler than most move-up sellers expect. The median Centennial home costs $50,050 more than the median Englewood home but delivers 707 more finished square feet. The median Englewood seller is currently fetching 98% of original list price in 12 median days on market. That's the same velocity Centennial is running on the buy side. There's no friction in the timing math. The friction is in the lifestyle math.</p>
 
-<div style="margin: 2rem 0;" itemscope itemtype="https://schema.org/Dataset" aria-labelledby="math">
-<meta itemprop="name" content="Englewood-to-Centennial move-up two-path trade-off, April 2026">
-<meta itemprop="temporalCoverage" content="2026-04-01/2026-04-30">
-<meta itemprop="spatialCoverage" content="Englewood, Colorado and Centennial, Colorado, Arapahoe County">
-<meta itemprop="creator" content="Jacob Stark, selling303.com">
-<meta itemprop="publisher" content="REcolorado MLS">
-<meta itemprop="variableMeasured" content="median close price, median finished square footage, median price per finished square foot, median days in MLS, median close-to-original-list-price ratio">
-
+<div style="margin: 2rem 0;" aria-labelledby="math">
 <div style="background: #002a3a; color: #fff; padding: 1.75rem 1.5rem 1.5rem; border-radius: 8px 8px 0 0; text-align: center;">
 <div style="font-size: 0.75rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.65rem;">For Englewood Move-Up Sellers</div>
 <div style="font-size: 1.5rem; font-weight: 700; line-height: 1.35; max-width: 640px; margin: 0 auto;">If you sell your Englewood home, what does Centennial actually deliver?</div>

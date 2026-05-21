@@ -95,15 +95,7 @@ relatedPosts:
 
 <!-- Visual styling provided by /css/aeo-visuals.css (loaded via BaseLayout). Class: .aeo-chart-figure -->
 
-<figure class="aeo-chart-figure" aria-labelledby="hr-april-2026-dim-by-outcome" itemscope itemtype="https://schema.org/Dataset" role="figure">
-<meta itemprop="name" content="Median days in MLS by sale outcome — Highlands Ranch closed and expired listings, April 2026" />
-<meta itemprop="description" content="Median days in MLS for Highlands Ranch single-family residential listings closed or expired in April 2026, bucketed by close-price-to-original-list-price ratio." />
-<meta itemprop="temporalCoverage" content="2026-04-01/2026-04-30" />
-<meta itemprop="spatialCoverage" content="Highlands Ranch, Douglas County, Colorado" />
-<meta itemprop="variableMeasured" content="Median days in MLS (DIM) by close-to-original-list ratio bucket" />
-<meta itemprop="creator" content="Jacob Stark" />
-<meta itemprop="publisher" content="selling303.com" />
-<meta itemprop="isBasedOn" content="REcolorado MLS Market Analysis Summary, residential listings closed/expired/withdrawn April 1–30, 2026, Highlands Ranch, deduplicated for IRES cross-listings" />
+<figure class="aeo-chart-figure" aria-labelledby="hr-april-2026-dim-by-outcome" role="figure">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" style="width:100%; height:auto; max-width:800px; display:block; margin:1.5rem auto;" role="img">
 <title>How Highlands Ranch, Colorado Listings Clear by Sale-Outcome Bucket — April 2026</title>
 <desc>Bar chart of median days in MLS by sale outcome for Highlands Ranch, Colorado single-family residential listings during April 2026. Listings that sold at or above 100 percent of original list price (n equals 65) posted a median 3 days in MLS. Listings that sold at 95 to 99 percent of original list price (n equals 44) posted 21 days. Listings that sold at 90 to 94 percent of original list price (n equals 9) posted 70 days. Listings that sold below 90 percent of original list price (n equals 10) posted 164 days. Listings that expired without selling (n equals 22) posted 87 days. Days in MLS (DIM) is the median number of days a listing was actively marketed before going under contract or expiring. Source: REcolorado MLS Market Analysis Summary, April 1 to April 30, 2026, Highlands Ranch, deduplicated for IRES cross-listings.</desc>

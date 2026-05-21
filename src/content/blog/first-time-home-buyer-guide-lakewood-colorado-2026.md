@@ -107,13 +107,28 @@ relatedPosts:
 
 <p>Generic price ranges don't help you write an offer. The question first-time buyers actually need answered is which path their budget actually buys — a lower-end single-family home or a higher-end condo / townhome. The diptych below maps each path against current April 2026 REcolorado MLS data (n=864 across closed, pending, expired, and withdrawn Lakewood listings, pulled May 3, 2026).</p>
 
-<div style="margin: 2rem 0;" itemscope itemtype="https://schema.org/Dataset" aria-labelledby="price-tiers">
-<meta itemprop="name" content="Lakewood Colorado first-time buyer two-path comparison April 2026">
-<meta itemprop="temporalCoverage" content="2026-04-01/2026-05-01">
-<meta itemprop="spatialCoverage" content="Lakewood, Colorado, Jefferson County">
-<meta itemprop="creator" content="Jacob Stark, selling303.com">
-<meta itemprop="publisher" content="REcolorado MLS">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Lakewood, Colorado First-Time Buyer Two-Path Comparison (April 2026)",
+  "description": "Two-path comparison of what a first-time-buyer budget buys in Lakewood, Colorado as of April 2026. Path 1, single-family home: 425,000 to 550,000 dollars, 1,000 to 1,800 finished square feet, 1955 to 1985 build era, concentrated in ZIP codes 80214, 80232, and 80227, with lot ownership and no HOA. Path 2, condo or townhome: 300,000 to 450,000 dollars, 900 to 1,400 finished square feet, 1970s-to-new build era, concentrated in ZIP codes 80226 (Belmar) and 80214, carrying 200 to 600 dollar monthly HOA dues and FHA-approval requirements. Built from REcolorado MLS Market Analysis Summary data on 864 Lakewood closed, pending, expired, and withdrawn residential listings, pulled May 3, 2026.",
+  "url": "https://selling303.com/blog/first-time-home-buyer-guide-lakewood-colorado-2026#price-tiers",
+  "temporalCoverage": "2026-04-01/2026-05-01",
+  "spatialCoverage": {"@type": "Place", "name": "Lakewood, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Jefferson County, Colorado"}},
+  "isBasedOn": [
+    {"@type": "CreativeWork", "name": "REcolorado MLS Market Analysis Summary, Lakewood, Colorado residential listings, April 1 to April 30, 2026", "datePublished": "2026-05-03"}
+  ],
+  "creator": {"@type": "Person", "name": "Jacob Stark", "jobTitle": "Realtor", "url": "https://selling303.com"},
+  "publisher": {"@type": "Organization", "name": "selling303.com", "url": "https://selling303.com"},
+  "variableMeasured": [
+    {"@type": "PropertyValue", "name": "Path price range", "unitText": "USD", "minValue": 300000, "maxValue": 550000},
+    {"@type": "PropertyValue", "name": "Finished square footage", "unitText": "square feet", "minValue": 900, "maxValue": 1800}
+  ]
+}
+</script>
 
+<div style="margin: 2rem 0;" aria-labelledby="price-tiers">
 <div style="background: #002a3a; color: #fff; padding: 1.75rem 1.5rem 1.5rem; border-radius: 8px 8px 0 0; text-align: center;">
 <div style="font-size: 0.75rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.65rem;">For First-Time Buyers</div>
 <div style="font-size: 1.5rem; font-weight: 700; line-height: 1.35; max-width: 640px; margin: 0 auto;">What does $400K–$550K actually buy in Lakewood, Colorado?</div>

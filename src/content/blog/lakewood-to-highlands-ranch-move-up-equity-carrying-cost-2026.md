@@ -142,15 +142,7 @@ relatedPosts:
 
 <h3 id="net-sheet-visual">What does the full Lakewood-to-Highlands Ranch cash-flow sheet look like at the April 2026 medians?</h3>
 
-<figure style="margin: 2rem 0;" aria-labelledby="net-sheet-visual" itemscope itemtype="https://schema.org/Dataset">
-<meta itemprop="name" content="Lakewood to Highlands Ranch Move-Up Net Sheet, April 2026" />
-<meta itemprop="description" content="Sample settlement-statement-style net sheet for a typical Lakewood to Highlands Ranch move-up transaction at April 2026 REcolorado MLS medians. Lakewood sale at $580,000 median close yields approximately $205,200 in net seller proceeds after a $340,000 mortgage payoff and 6 percent selling costs. Highlands Ranch purchase at $737,000 median close requires approximately $165,825 in cash to close (20 percent down payment plus 2.5 percent closing costs). Net cash surplus of approximately $39,375 covers reserves, moving expenses, and any cushion." />
-<meta itemprop="temporalCoverage" content="2026-04-01/2026-04-30" />
-<meta itemprop="spatialCoverage" content="Lakewood, Colorado; Highlands Ranch, Colorado" />
-<meta itemprop="variableMeasured" content="gross sale price, mortgage payoff, selling costs, net seller proceeds, purchase price, down payment, closing costs, cash to close, net cash surplus" />
-<meta itemprop="creator" content="Jacob Stark, selling303.com" />
-<meta itemprop="publisher" content="selling303.com" />
-<meta itemprop="isBasedOn" content="REcolorado MLS Market Analysis Summary, Lakewood and Highlands Ranch single-family residential closed transactions April 1 to April 30, 2026, pulled May 3, 2026" />
+<figure style="margin: 2rem 0;" aria-labelledby="net-sheet-visual">
 <div style="background: #ffffff; border: 1px solid #e6e8ea; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,42,58,0.10);">
 <div style="background: #002a3a; color: #ffffff; padding: 1.25rem 1.5rem;">
 <div style="font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.75; margin-bottom: 0.3rem;">Lakewood to Highlands Ranch Move-Up</div>

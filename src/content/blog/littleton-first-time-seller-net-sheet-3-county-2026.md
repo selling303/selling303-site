@@ -115,14 +115,7 @@ relatedPosts:
 }
 </script>
 
-<figure style="margin: 2rem 0;" aria-labelledby="net-sheet-visual" itemscope itemtype="https://schema.org/Dataset">
-<meta itemprop="name" content="Littleton, Colorado Seller Net Sheet at the $650K April 2026 Median" />
-<meta itemprop="description" content="Settlement-statement net sheet for a hypothetical $650,000 Littleton residential sale at the April 2026 REcolorado MLS median. Total typical seller cost approximately $44,045 (6.8 percent), leaving approximately $605,955 before mortgage payoff." />
-<meta itemprop="temporalCoverage" content="2026-04-01/2026-04-30" />
-<meta itemprop="spatialCoverage" content="Littleton, Colorado" />
-<meta itemprop="creator" content="Jacob Stark, selling303.com" />
-<meta itemprop="publisher" content="selling303.com" />
-<meta itemprop="isBasedOn" content="REcolorado MLS Market Analysis Summary, Littleton residential closed transactions April 1 to April 30, 2026, pulled May 3, 2026" />
+<figure style="margin: 2rem 0;" aria-labelledby="net-sheet-visual">
 <div style="background: #ffffff; border: 1px solid #e6e8ea; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,42,58,0.10);">
 <div style="background: #002a3a; color: #ffffff; padding: 1.25rem 1.5rem;">
 <div style="font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.75; margin-bottom: 0.3rem;">Littleton Seller Net Sheet</div>

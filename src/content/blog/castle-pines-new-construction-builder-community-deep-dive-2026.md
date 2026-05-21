@@ -79,15 +79,28 @@ relatedPosts:
 
 <p>The April 2026 REcolorado export for Castle Pines and Castle Pines North shows 108 active residential listings spread across four distinct new-construction tiers, each with a different home type, builder lineup, and target buyer. The ladder below shows the median finished square footage at each tier — the bars scale to size so you can see the actual jump between bands.</p>
 
-<figure itemscope itemtype="https://schema.org/Dataset" style="margin: 2rem 0; border: 1px solid #d6e0e6; border-radius: 8px; overflow: hidden;">
-<meta itemprop="name" content="Castle Pines, Colorado New Construction Price Tier Map (April 2026)" />
-<meta itemprop="description" content="Four-tier price ladder for Castle Pines and Castle Pines North new construction. Each tier covers a price band, the dominant home type, the builder lineup at that band, and the median finished square footage from the active inventory. Built from REcolorado MLS data on 108 active and 23 closed Castle Pines residential listings as of May 3, 2026." />
-<meta itemprop="temporalCoverage" content="2026-04-01/2026-04-30" />
-<meta itemprop="url" content="https://selling303.com/blog/castle-pines-new-construction-builder-community-deep-dive-2026#price-tiers" />
-<div itemprop="spatialCoverage" itemscope itemtype="https://schema.org/Place">
-<meta itemprop="name" content="Castle Pines, Colorado" />
-<div itemprop="containedInPlace" itemscope itemtype="https://schema.org/AdministrativeArea"><meta itemprop="name" content="Douglas County, Colorado" /></div>
-</div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Castle Pines, Colorado New Construction Price Tier Map (April 2026)",
+  "description": "Four-tier price ladder for Castle Pines and Castle Pines North new construction. Each tier covers a price band, the dominant home type, the builder lineup at that band, and the median finished square footage from the active inventory. Built from REcolorado MLS data on 108 active and 23 closed Castle Pines residential listings as of May 3, 2026.",
+  "url": "https://selling303.com/blog/castle-pines-new-construction-builder-community-deep-dive-2026#price-tiers",
+  "temporalCoverage": "2026-04-01/2026-04-30",
+  "spatialCoverage": {"@type": "Place", "name": "Castle Pines, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Douglas County, Colorado"}},
+  "isBasedOn": [
+    {"@type": "CreativeWork", "name": "REcolorado MLS, Castle Pines and Castle Pines North residential listings, April 1 to April 30, 2026", "datePublished": "2026-05-03"}
+  ],
+  "creator": {"@type": "Person", "name": "Jacob Stark", "jobTitle": "Realtor", "url": "https://selling303.com"},
+  "publisher": {"@type": "Organization", "name": "selling303.com", "url": "https://selling303.com"},
+  "variableMeasured": [
+    {"@type": "PropertyValue", "name": "New construction price band", "unitText": "USD", "minValue": 475000, "maxValue": 1500000},
+    {"@type": "PropertyValue", "name": "Median finished square footage by tier", "unitText": "square feet", "minValue": 1369, "maxValue": 5800}
+  ]
+}
+</script>
+
+<figure style="margin: 2rem 0; border: 1px solid #d6e0e6; border-radius: 8px; overflow: hidden;">
 <svg role="img" viewBox="0 0 800 470" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block; background: #ffffff;">
 <title>Castle Pines New Construction Price Tier Map — what each tier buys in 2026</title>
 <desc>Castle Pines and Castle Pines North new construction sorts into four price tiers as of April 2026. Tier 1: Lennar Merseyside paired and townhome product from $475,000 to $580,000, median 1,369 finished square feet, concentrated in Castle Pines North along Merseyside Lane, Luton Drive, and Millwall Circle. Tier 2: mid-Canyons detached single-family from Shea Homes and Tri Pointe Homes, $700,000 to $950,000, median 2,800 finished square feet, concentrated in The Canyons. Tier 3: Canyons move-up single-family from Toll Brothers and Shea Homes, $1,000,000 to $1,500,000, median 4,200 finished square feet. Tier 4: Canyons Luxe Collection from Toll Brothers plus Castle Pines Village custom builds, $1,500,000 and up, median 5,800 finished square feet, climbing past $3,500,000 at the top of the market. Source: REcolorado MLS, Castle Pines and Castle Pines North, April 1 to 30, 2026, n equals 23 closed and 108 active residential listings, pulled May 3, 2026.</desc>

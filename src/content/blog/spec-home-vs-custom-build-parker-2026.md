@@ -110,26 +110,7 @@ relatedPosts:
 }
 </script>
 
-<figure aria-labelledby="spec-vs-custom-data" role="figure" itemscope itemtype="https://schema.org/Dataset" style="margin: 2rem 0; background: white; border: 1px solid #d6e0e6; border-radius: 8px; overflow: hidden;">
-<meta itemprop="name" content="Parker, Colorado New Construction Trade-Off Frontier: Spec Home vs. Custom Build positioned on time and design control (2026)" />
-<meta itemprop="temporalCoverage" content="2026-04-01/2026-04-30" />
-<meta itemprop="spatialCoverage" content="Parker, Colorado" />
-<div itemprop="hasPart" itemscope itemtype="https://schema.org/PropertyValue" style="display:none">
-<meta itemprop="name" content="Spec Home — Parker April 2026 all-in delivered cost" />
-<meta itemprop="value" content="900000" />
-<meta itemprop="minValue" content="850000" />
-<meta itemprop="maxValue" content="925000" />
-<meta itemprop="unitText" content="USD" />
-<meta itemprop="description" content="30 to 90 days contract to keys. Few design decisions — limited to builder's already-installed package." />
-</div>
-<div itemprop="hasPart" itemscope itemtype="https://schema.org/PropertyValue" style="display:none">
-<meta itemprop="name" content="Custom Build — Parker 2026 all-in delivered cost" />
-<meta itemprop="value" content="1250000" />
-<meta itemprop="minValue" content="1100000" />
-<meta itemprop="maxValue" content="1400000" />
-<meta itemprop="unitText" content="USD" />
-<meta itemprop="description" content="12 to 18 months contract to certificate of occupancy. Hundreds of design decisions — every floor plan, finish, fixture, and lot detail." />
-</div>
+<figure aria-labelledby="spec-vs-custom-data" role="figure" style="margin: 2rem 0; background: white; border: 1px solid #d6e0e6; border-radius: 8px; overflow: hidden;">
 <svg viewBox="0 0 700 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="frontier-title frontier-desc" style="width: 100%; height: auto; display: block;">
 <title id="frontier-title">Parker new construction in 2026: pick your corner. You can move in fast, or you can pick every detail. You cannot do both.</title>
 <desc id="frontier-desc">A two-axis position plot showing the two real Parker new-construction paths in 2026. The lower-left quadrant — fast move-in plus a small number of design decisions — is the Spec Home zone: 30 to 90 days from contract to keys, 850 thousand to 925 thousand dollars all-in delivered cost. The upper-right quadrant — long timeline plus hundreds of design decisions — is the Custom Build zone: 12 to 18 months from contract to certificate of occupancy, 1.1 million to 1.4 million-plus dollars all-in delivered cost. The upper-left quadrant — fast move-in plus full design control — does not exist as a real Parker new-construction option. Source: REcolorado MLS April 2026 Parker single-family closings, n=181, 681 thousand dollar median close, 11-day median days in MLS, 275 dollars per finished square foot median.</desc>
