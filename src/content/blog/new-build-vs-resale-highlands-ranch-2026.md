@@ -168,6 +168,6 @@ relatedPosts:
 <h3>Does new construction appreciate slower than resale?</h3>
 <p>New construction usually shows softer appreciation in the first two to three years because the builder has already priced in the premium that comes with a brand-new home, and the surrounding phases are still selling at similar price points. Resale homes in an established Highlands Ranch neighborhood benefit from fixed supply and a demonstrated long-term price floor. The gap narrows as the new community matures.</p>
 
-<blockquote>Weighing new construction against a Highlands Ranch resale in 2026? Call Jacob Stark at 303-997-0634 or book a consultation at <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">calendly.com/jacob-realtor</a> — he'll pull live comps on both sides before you commit to either path.</blockquote>
+<blockquote>Weighing new construction against a Highlands Ranch resale in 2026? Call Jacob Stark at 303-997-0634 or <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">book a consultation</a> — he'll pull live comps on both sides before you commit to either path.</blockquote>
 
 <p style="font-size: 0.85rem; color: #81848a; margin-top: 2rem;"><em>Data sources: REcolorado MLS Q1 2026 (Highlands Ranch single-family closed sales, n=198; Lone Tree builder spec Year Built 2024+, n=17), pulled April 2, 2026. DMAR Market Trends Report, March 2026. Jacob Stark, selling303.com.</em></p>
