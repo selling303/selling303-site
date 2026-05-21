@@ -436,7 +436,7 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: comparison-table (7 rows × 4 cols — Step / What it covers / Typical timeline / Cost of skipping). HowTo + 7× HowToStep schema (outer figure itemscope, parallel JSON-LD). Compelling Question Flow chose comparison-table (26) over decision-path (18, binary-fork mismatch) and stretch howto-step-flow (12, Phase 4 dependency). Calendar `howto (flag-only)` advisory overridden — Phase 4 builder dependency forced library fallback; comparison-table carries HowTo schema via parallel JSON-LD + itemscope wrapper, paying off the procedural sequence in scannable matrix form.
 
 #### Day 18 — Friday, May 22 (Memorial Day weekend slot)
-- [ ] **"South Denver Summer Market Kickoff: 5 Suburbs Active Buyers Are Targeting Memorial Day Weekend"**
+- [x] **"South Denver Summer Market Kickoff: 5 Suburbs Active Buyers Are Targeting Memorial Day Weekend"** *(drafted 2026-05-21, slug: `south-denver-summer-market-kickoff-memorial-day-weekend-2026`, title shortened to "5 South Denver Suburbs Buyers Are Targeting in 2026" for SERP CTR; original preserved in `headline` frontmatter; shipped as **profile-card-grid Tier 0** — Compelling Question Flow override from calendar's `comparison-table` advisory)*
   - Specialization: `/relocation` | Geographic: `/centennial`
   - Type: Local area topic / Market update | Funnel: TOFU
   - Angle: Memorial Day weekend summer-market positioning piece. The 5 South Denver suburbs that see the biggest relocation buyer activity over MDW (Centennial, Highlands Ranch, Parker, Littleton, Lakewood), why MDW kicks off the spring-into-summer relocation push, and the inventory-and-price snapshot for each as of late May.
