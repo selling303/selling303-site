@@ -444,7 +444,7 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: comparison-table (5 suburbs × 5 metrics — inventory/median/DOM/CP-to-LP/buyer profile)
 
 #### Day 19 — Saturday, May 23
-- [ ] **"How Lone Tree Move-Up Sellers Time the Luxury Hand-Off"**
+- [x] **"How Lone Tree Move-Up Sellers Time the Luxury Hand-Off"** *(drafted 2026-05-22, slug: `lone-tree-luxury-move-up-timing-2026`, title shortened to "Timing a Lone Tree Luxury Move-Up Sale in 2026" for SERP CTR; original preserved in `headline` frontmatter; shipped as **single-metric-bar-chart Tier 0** — Compelling Question Flow matched the calendar's `svg-chart` advisory, charting months of supply by price band rather than DOM distribution because the April luxury closed sample (n=2) is too thin to chart DOM honestly)*
   - Specialization: `/move-up-sellers` | Geographic: `/lone-tree`
   - Type: Seller advice | Funnel: BOFU
   - Angle: Lone Tree luxury move-up sellers ($1.5M–$3M) face a different timing problem than entry-level move-up sellers — buyer pools are shallower, days-on-market are longer, and dual-transaction coordination requires bridge financing or seller rent-back arrangements. The 2026 playbook for timing the sale and the replacement at the luxury tier.

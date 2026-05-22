@@ -44,6 +44,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - South Denver Homeowner's 2026 Notice of Valuation Protest Playbook (`/blog/2026-notice-of-valuation-protest-playbook-south-denver`)
 - The Greenwood Village Empty-Nester Move: When the Right-Sizing Math Actually Pencils (`/blog/greenwood-village-empty-nester-right-sizing-math-2026`)
 - Greenwood Village Downsize: 7-Step First-Time Seller Playbook (`/blog/greenwood-village-downsize-playbook-first-time-seller-2026`) — First-Time Home Sellers × Greenwood Village, MOFU, procedural seller advice (HowTo schema, 7-step comparison-table)
+- Timing a Lone Tree Luxury Move-Up Sale in 2026 (`/blog/lone-tree-luxury-move-up-timing-2026`) — Move-Up Sellers × Lone Tree, BOFU, luxury-tier ($1.5M–$3M) move-up timing playbook (single-metric-bar-chart: months of supply by Lone Tree price band, April 2026)
 
 ### 3. First-Time Homebuyers (`/first-time-homebuyers`)
 **Primary geographic ties:** Littleton, Englewood, Centennial (most affordable entry points in the metro)
