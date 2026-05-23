@@ -4,7 +4,7 @@ headline: "The Englewood First-Time Buyer ZIP Code Guide: Comparing 80110, 80113
 description: "Englewood splits into three first-time-buyer ZIPs — 80110 transit-and-Broadway entry tier, 80113 mid-residential, 80111 Tech Center border (April 2026 MLS)."
 date: "May 19, 2026"
 dateModified: "May 19, 2026"
-category: "Buying"
+category: "Neighborhoods"
 tag: "Buying"
 readTime: "10 min read"
 heroLabel: "Buying"

@@ -4,7 +4,7 @@ headline: "The Greenwood Village Downsize Playbook: A Step-by-Step Sequence for 
 description: "Greenwood Village downsize playbook for first-time sellers — the seven-step sequence from pre-list audit through post-move financial reset (April 2026 data)."
 date: "May 20, 2026"
 dateModified: "May 20, 2026"
-category: "Selling"
+category: "What to Expect"
 tag: "Selling"
 readTime: "12 min read"
 heroLabel: "Selling"
