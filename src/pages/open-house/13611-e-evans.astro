@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PhotoGallery from '../../components/PhotoGallery.astro';
+import { getImage } from 'astro:assets';
 
 // ── Open house follow-up page for 13611 E Evans Ave, Aurora ──
 // Unlisted page (noindex + excluded from sitemap). Texted to open house
@@ -14,6 +16,30 @@ const driveFolderUrl =
 const phoneTel = 'tel:3039970634';
 const phoneDisplay = '303-997-0634';
 
+// Listing photos — auto-discovered from the property image folder, floor plans
+// excluded. Each is run through Astro's image pipeline to a sized WebP.
+const photoModules = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/images/success-stories/13611-e-evans-ave-aurora/*.{jpg,jpeg,png,webp}',
+  { eager: true }
+);
+const galleryImages = await Promise.all(
+  Object.entries(photoModules)
+    .filter(([path]) => !/floorplan/i.test(path))
+    .sort(([a], [b]) => a.localeCompare(b, undefined, { numeric: true }))
+    .map(async ([, mod], i) => {
+      const optimized = await getImage({
+        src: mod.default,
+        format: 'webp',
+        quality: 78,
+        width: 1600,
+      });
+      return {
+        src: optimized.src,
+        alt: `13611 E Evans Avenue, Aurora, CO — listing photo ${i + 1}`,
+      };
+    })
+);
+
 const facts = [
   { number: '3', label: 'Bedrooms' },
   { number: '3', label: 'Bathrooms' },
@@ -23,44 +49,56 @@ const facts = [
   { number: 'End Unit', label: 'Extra Natural Light' },
 ];
 
+// Inline line-art icons — brand palette, consistent 24px stroke set. No emoji.
+const ICON = {
+  golf: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 19.5V4"/><path d="M7 4l8 2.5L7 9"/><ellipse cx="7" cy="20" rx="5" ry="1.7"/></svg>',
+  kitchen: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="2.5"/><circle cx="9" cy="9" r="1.9"/><circle cx="15" cy="9" r="1.9"/><circle cx="9" cy="15" r="1.9"/><circle cx="15" cy="15" r="1.9"/></svg>',
+  sauna: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 20.5c-1.3-1.6-1.3-3.2 0-4.8s1.3-3.2 0-4.8"/><path d="M12 20.5c-1.3-1.6-1.3-3.2 0-4.8s1.3-3.2 0-4.8"/><path d="M16 20.5c-1.3-1.6-1.3-3.2 0-4.8s1.3-3.2 0-4.8"/></svg>',
+  basement: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 5h-3.6v3.7h-3.6v3.7h-3.6v3.7H5.6V20H3"/></svg>',
+  window: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="3" width="15" height="18" rx="1.5"/><path d="M4.5 12h15"/><path d="M12 3v18"/></svg>',
+  check: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.4l2.4 2.4 4.6-5.2"/></svg>',
+  book: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.6S9.4 5 4.5 5.2v12.6C9.4 17.6 12 19.2 12 19.2s2.6-1.6 7.5-1.4V5.2C14.6 5 12 6.6 12 6.6z"/><path d="M12 6.6v12.6"/></svg>',
+  pin: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.3c4.4-4.2 6.8-7.5 6.8-10.8a6.8 6.8 0 1 0-13.6 0c0 3.3 2.4 6.6 6.8 10.8z"/><circle cx="12" cy="10.5" r="2.5"/></svg>',
+};
+
 const highlights = [
   {
-    icon: '⛳',
+    icon: ICON.golf,
     title: 'Golf Course Views',
     text: 'Backs directly to Heather Ridge Golf Course, with open fairway views from nearly every window and mature landscaping for added privacy.',
   },
   {
-    icon: '🍳',
+    icon: ICON.kitchen,
     title: 'Renovated Kitchen',
     text: 'Quartz countertops, new stainless steel appliances, refreshed cabinetry, breakfast bar seating, brass fixtures, and recessed lighting.',
   },
   {
-    icon: '🧖',
+    icon: ICON.sauna,
     title: 'Private Sauna',
     text: 'The upper-level primary suite includes an adjoining private sauna for a spa-style retreat — a rare feature at this price.',
   },
   {
-    icon: '🛋️',
+    icon: ICON.basement,
     title: 'Finished Basement',
     text: 'Extra living space plus a non-conforming bedroom, a half bath, and a dedicated laundry and utility area.',
   },
   {
-    icon: '☀️',
+    icon: ICON.window,
     title: 'End-Unit Light',
     text: 'End-unit positioning adds extra windows and natural light throughout, along with a quieter, more private feel.',
   },
   {
-    icon: '✨',
+    icon: ICON.check,
     title: 'Move-In Ready',
     text: 'New interior paint, new carpet, a new 2026 central A/C system, and updated lighting and fixtures throughout.',
   },
   {
-    icon: '🎓',
+    icon: ICON.book,
     title: 'Cherry Creek 5 Schools',
     text: 'Served by the Cherry Creek 5 district — Eastridge Elementary, Prairie Middle, and Overland High.',
   },
   {
-    icon: '📍',
+    icon: ICON.pin,
     title: 'Easy Commute',
     text: 'Quick access to I-225, light rail, Cherry Creek State Park, the Denver Tech Center, dining, and shopping.',
   },
@@ -126,6 +164,17 @@ const programs = [
         </a>
         <a href={phoneTel} class="btn btn--outline btn--lg">Call {phoneDisplay}</a>
       </div>
+    </div>
+  </section>
+
+  <!-- ========== PHOTO GALLERY ========== -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Photo Tour</span>
+        <h2 class="section-heading">Take Another Look Through the Home</h2>
+      </div>
+      <PhotoGallery images={galleryImages} id="evans" />
     </div>
   </section>
 
@@ -196,7 +245,7 @@ const programs = [
       <div class="oh-highlights">
         {highlights.map((h) => (
           <div class="oh-highlight">
-            <span class="oh-highlight__icon" aria-hidden="true">{h.icon}</span>
+            <span class="oh-highlight__icon" aria-hidden="true" set:html={h.icon}></span>
             <h3 class="oh-highlight__title">{h.title}</h3>
             <p class="oh-highlight__text">{h.text}</p>
           </div>
@@ -247,7 +296,7 @@ const programs = [
       </div>
       <div class="oh-explore">
         <div class="oh-explore-card">
-          <span class="oh-explore-card__icon" aria-hidden="true">&#x1F4C4;</span>
+          <span class="oh-explore-card__icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6"/><path d="M9 16.5h6"/></svg></span>
           <h3>Full Property Documents</h3>
           <p>
             The complete MLS detail sheet and the Collective Mortgage financing
@@ -258,7 +307,7 @@ const programs = [
           </a>
         </div>
         <div class="oh-explore-card">
-          <span class="oh-explore-card__icon" aria-hidden="true">&#x1F50D;</span>
+          <span class="oh-explore-card__icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.35-4.35"/></svg></span>
           <h3>Browse Similar Townhomes</h3>
           <p>
             See townhomes and condos for sale near this one — the 80014 area,
@@ -448,9 +497,19 @@ const programs = [
     padding: var(--space-lg);
   }
   .oh-highlight__icon {
-    display: block;
-    font-size: 1.8rem;
-    margin-bottom: var(--space-xs);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgba(0, 42, 58, 0.06);
+    color: var(--color-primary);
+    margin-bottom: var(--space-sm);
+  }
+  .oh-highlight__icon :global(svg) {
+    width: 26px;
+    height: 26px;
   }
   .oh-highlight__title {
     font-size: 1.15rem;
@@ -511,9 +570,19 @@ const programs = [
     text-align: center;
   }
   .oh-explore-card__icon {
-    display: block;
-    font-size: 2rem;
-    margin-bottom: var(--space-xs);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: rgba(0, 42, 58, 0.06);
+    color: var(--color-primary);
+    margin-bottom: var(--space-sm);
+  }
+  .oh-explore-card__icon :global(svg) {
+    width: 28px;
+    height: 28px;
   }
   .oh-explore-card h3 {
     font-size: 1.2rem;
