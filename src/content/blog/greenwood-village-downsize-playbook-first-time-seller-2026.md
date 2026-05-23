@@ -30,10 +30,19 @@ faqSchema:
 relatedPosts:
   - slug: "greenwood-village-empty-nester-right-sizing-math-2026"
     title: "The Greenwood Village Empty-Nester Right-Sizing Math (2026)"
+    tag: "Selling"
+    description: "Greenwood Village empty-nesters often sit on $2M+ of equity. The 2026 right-sizing math — capital gains, replacement housing, and redeployable equity."
+    date: "May 8, 2026"
   - slug: "greenwood-village-worth-the-price-tag-relocation-2026"
     title: "Is Greenwood Village Worth the Price Tag? A Relocation Buyer's Honest Assessment"
+    tag: "Buying"
+    description: "Greenwood Village, Colorado — DTC proximity, estate lots, and a Q1 2026 median sale of $1.875M. Honest take on who it fits, who should look elsewhere."
+    date: "April 29, 2026"
   - slug: "selling-first-home-south-denver-process"
     title: "Selling Your First Home in South Denver: The Process Explained"
+    tag: "Selling"
+    description: "First-time seller guide for Centennial and South Denver. Net sheet surprises, staging ROI, inspection negotiations, and pricing mistakes to avoid."
+    date: "April 14, 2026"
 ---
 
 <div class="article-snippet" itemscope itemtype="https://schema.org/CreativeWork">
