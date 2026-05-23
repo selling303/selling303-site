@@ -77,9 +77,12 @@ export default defineConfig({
   trailingSlash: 'never',
   integrations: [
     sitemap({
-      filter: (page) => !DRAFT_SUCCESS_STORY_SLUGS.some((slug) =>
-        page.includes(`/sell/success-stories/${slug}`)
-      ),
+      // Exclude unlisted open house pages (noindex, texted to attendees only).
+      filter: (page) =>
+        !page.includes('/open-house/') &&
+        !DRAFT_SUCCESS_STORY_SLUGS.some((slug) =>
+          page.includes(`/sell/success-stories/${slug}`)
+        ),
       serialize(item) {
         try {
           const u = new URL(item.url);

@@ -1,0 +1,589 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// ── Open house follow-up page for 13611 E Evans Ave, Aurora ──
+// Unlisted page (noindex + excluded from sitemap). Texted to open house
+// attendees. Not linked in site nav.
+
+const calendarUrl =
+  'https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy';
+const realscoutSearchUrl =
+  'https://jacobstark.realscout.com/homesearch/map?pmin=350000&pmax=415000&bmin=2&bamin=2&ptype=TC&geo_type=zipcode&geo_id=80014&for_sale=1&for_rent=0';
+const driveFolderUrl =
+  'https://drive.google.com/drive/folders/14trNe9wDKbeHyCjBX9hjvOAMfGe5URle?usp=sharing';
+const phoneTel = 'tel:3039970634';
+const phoneDisplay = '303-997-0634';
+
+const facts = [
+  { number: '3', label: 'Bedrooms' },
+  { number: '3', label: 'Bathrooms' },
+  { number: '2,216', label: 'Finished Sq Ft' },
+  { number: '1980', label: 'Year Built' },
+  { number: '1-Car', label: 'Attached Garage' },
+  { number: 'End Unit', label: 'Extra Natural Light' },
+];
+
+const highlights = [
+  {
+    icon: '⛳',
+    title: 'Golf Course Views',
+    text: 'Backs directly to Heather Ridge Golf Course, with open fairway views from nearly every window and mature landscaping for added privacy.',
+  },
+  {
+    icon: '🍳',
+    title: 'Renovated Kitchen',
+    text: 'Quartz countertops, new stainless steel appliances, refreshed cabinetry, breakfast bar seating, brass fixtures, and recessed lighting.',
+  },
+  {
+    icon: '🧖',
+    title: 'Private Sauna',
+    text: 'The upper-level primary suite includes an adjoining private sauna for a spa-style retreat — a rare feature at this price.',
+  },
+  {
+    icon: '🛋️',
+    title: 'Finished Basement',
+    text: 'Extra living space plus a non-conforming bedroom, a half bath, and a dedicated laundry and utility area.',
+  },
+  {
+    icon: '☀️',
+    title: 'End-Unit Light',
+    text: 'End-unit positioning adds extra windows and natural light throughout, along with a quieter, more private feel.',
+  },
+  {
+    icon: '✨',
+    title: 'Move-In Ready',
+    text: 'New interior paint, new carpet, a new 2026 central A/C system, and updated lighting and fixtures throughout.',
+  },
+  {
+    icon: '🎓',
+    title: 'Cherry Creek 5 Schools',
+    text: 'Served by the Cherry Creek 5 district — Eastridge Elementary, Prairie Middle, and Overland High.',
+  },
+  {
+    icon: '📍',
+    title: 'Easy Commute',
+    text: 'Quick access to I-225, light rail, Cherry Creek State Park, the Denver Tech Center, dining, and shopping.',
+  },
+];
+
+const details = [
+  { label: 'Address', value: '13611 E Evans Avenue, Aurora, CO 80014' },
+  { label: 'List Price', value: '$379,900' },
+  { label: 'Subdivision', value: 'Heather Ridge South' },
+  { label: 'Property Type', value: 'Townhouse — end unit' },
+  { label: 'Layout', value: 'Two levels plus a finished basement' },
+  { label: 'Finished Sq Ft', value: '2,216 (1,344 above grade + 872 basement)' },
+  { label: 'Year Built', value: '1980' },
+  { label: 'Garage', value: '1-car attached' },
+  { label: 'HOA Dues', value: '$507 / month' },
+  { label: 'HOA Includes', value: 'Grounds, snow removal, trash, pool, and spa' },
+  { label: 'Property Taxes', value: '$1,817 / year (2025)' },
+  { label: 'County', value: 'Arapahoe' },
+  { label: 'MLS #', value: '7514946' },
+];
+
+const programs = [
+  {
+    name: "Buyer's Choice Incentive",
+    text: 'Pick the option that fits you: a free one-year temporary buydown that lowers your payment for the first 12 months, or up to 1% of the loan amount as a credit toward a permanent rate buydown. It also includes a Refinance Rewards Program — if rates drop 0.5% or more within three years, the refinance lender fees are waived.',
+  },
+  {
+    name: 'Rate Shield Program',
+    text: 'Lock your rate with a safety net. If rates fall by 0.125% or more — anytime up to two weeks before closing — Collective Mortgage re-locks you at the lower rate, with no added fees. If rates rise, you stay locked at your lower rate.',
+  },
+  {
+    name: 'First-Time Buyer Down Payment Assistance',
+    text: 'A rundown of programs that can shrink or eliminate your down payment — 3% conventional, FHA at 3.5%, CHFA grants and loans up to $25,000, Metro DPA up to 5%, and Keys4Life, which offers up to $5,000 toward closing costs.',
+  },
+];
+---
+
+<BaseLayout
+  title="Open House — 13611 E Evans Ave, Aurora | Jacob Stark"
+  description="Thanks for visiting 13611 E Evans Ave in Aurora — a renovated end-unit townhome on Heather Ridge Golf Course. Listing details, buyer financing programs, and similar homes."
+  ogUrl="https://selling303.com/open-house/13611-e-evans"
+  headerVariant="solid"
+>
+  <Fragment slot="head">
+    <meta name="robots" content="noindex" />
+  </Fragment>
+
+  <!-- ========== HERO ========== -->
+  <section class="oh-hero">
+    <div class="container">
+      <span class="oh-hero__pill">Open House &middot; Active Listing</span>
+      <h1 class="oh-hero__address">13611 E Evans Avenue</h1>
+      <p class="oh-hero__loc">Aurora, CO 80014 &nbsp;&bull;&nbsp; Heather Ridge South</p>
+      <p class="oh-hero__price">$379,900</p>
+      <p class="oh-hero__tagline">
+        Thanks for stopping by. Here's everything on this renovated end-unit
+        townhome backing to Heather Ridge Golf Course — plus financing options
+        and a few next steps.
+      </p>
+      <div class="oh-hero__actions">
+        <a href={calendarUrl} class="btn btn--primary btn--lg" target="_blank" rel="noopener">
+          Schedule Time With Jacob
+        </a>
+        <a href={phoneTel} class="btn btn--outline btn--lg">Call {phoneDisplay}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== QUICK FACTS ========== -->
+  <section class="oh-facts-section">
+    <div class="container">
+      <div class="oh-facts">
+        {facts.map((f) => (
+          <div class="oh-fact">
+            <span class="oh-fact__num">{f.number}</span>
+            <span class="oh-fact__label">{f.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT + DETAILS ========== -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="oh-about">
+        <div class="oh-about__copy">
+          <span class="section-label">About This Home</span>
+          <h2 class="section-heading">A Renovated Townhome on the Fairway</h2>
+          <p>
+            This renovated end-unit townhome backs directly to Heather Ridge
+            Golf Course, with open fairway views and mature landscaping that add
+            real privacy. Inside, 2,216 finished square feet span three levels —
+            vaulted ceilings, an open main-level floor plan, and a stone
+            fireplace anchoring the living room.
+          </p>
+          <p>
+            The renovated kitchen features quartz countertops, new stainless
+            steel appliances, refreshed cabinetry, and breakfast bar seating.
+            The upper-level primary suite has an updated en-suite bath, a
+            walk-in closet, and an adjoining private sauna. A finished basement
+            adds flexible living space, a non-conforming bedroom, a half bath,
+            and dedicated laundry. New paint, new carpet, and a new 2026 central
+            A/C system make it move-in ready.
+          </p>
+        </div>
+        <div class="oh-spec">
+          <h3 class="oh-spec__title">Property Details</h3>
+          <dl class="oh-spec__list">
+            {details.map((d) => (
+              <div class="oh-spec__row">
+                <dt>{d.label}</dt>
+                <dd>{d.value}</dd>
+              </div>
+            ))}
+          </dl>
+          <p class="oh-spec__note">
+            This community sits within the Heather Ridge Metropolitan District.
+            Ask Jacob for the full tax and HOA breakdown.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HIGHLIGHTS ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Why It Stands Out</span>
+        <h2 class="section-heading">Features Worth a Second Look</h2>
+      </div>
+      <div class="oh-highlights">
+        {highlights.map((h) => (
+          <div class="oh-highlight">
+            <span class="oh-highlight__icon" aria-hidden="true">{h.icon}</span>
+            <h3 class="oh-highlight__title">{h.title}</h3>
+            <p class="oh-highlight__text">{h.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FINANCING ========== -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Buyer Financing</span>
+        <h2 class="section-heading">Programs That Can Make This Home Work</h2>
+        <p class="section-subtext" style="margin-left:auto;margin-right:auto;">
+          Jacob works with Collective Mortgage, who offer several programs built
+          to lower your payment and protect your rate. Here's the short version.
+        </p>
+      </div>
+      <div class="oh-programs">
+        {programs.map((p) => (
+          <div class="oh-program">
+            <h3 class="oh-program__name">{p.name}</h3>
+            <p class="oh-program__text">{p.text}</p>
+          </div>
+        ))}
+      </div>
+      <div class="oh-programs__cta">
+        <a href={driveFolderUrl} class="btn btn--primary btn--lg" target="_blank" rel="noopener">
+          View the Financing Flyers
+        </a>
+      </div>
+      <p class="oh-disclaimer">
+        Financing programs are offered through Collective Mortgage, a lender
+        Jacob works with. They are not a commitment to lend, and all terms are
+        subject to qualification and underwriting. Ask the loan officer for full
+        details and current rates.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== KEEP EXPLORING ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Next Steps</span>
+        <h2 class="section-heading">Keep Exploring</h2>
+      </div>
+      <div class="oh-explore">
+        <div class="oh-explore-card">
+          <span class="oh-explore-card__icon" aria-hidden="true">&#x1F4C4;</span>
+          <h3>Full Property Documents</h3>
+          <p>
+            The complete MLS detail sheet and the Collective Mortgage financing
+            flyers — all in one folder you can open or save.
+          </p>
+          <a href={driveFolderUrl} class="btn btn--outline-dark" target="_blank" rel="noopener">
+            Open the Document Folder
+          </a>
+        </div>
+        <div class="oh-explore-card">
+          <span class="oh-explore-card__icon" aria-hidden="true">&#x1F50D;</span>
+          <h3>Browse Similar Townhomes</h3>
+          <p>
+            See townhomes and condos for sale near this one — the 80014 area,
+            priced $350K&ndash;$415K, with 2+ beds and 2+ baths.
+          </p>
+          <a href={realscoutSearchUrl} class="btn btn--outline-dark" target="_blank" rel="noopener">
+            Search Similar Homes
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA ========== -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Questions About This Home?</h2>
+      <p>
+        Whether you want a second showing, help running the numbers, or advice
+        on writing an offer — Jacob is happy to talk it through. No pressure,
+        just answers.
+      </p>
+      <a href={calendarUrl} class="btn btn--primary btn--lg" target="_blank" rel="noopener">
+        Schedule a Call
+      </a>
+      <a href={phoneTel} class="btn btn--outline btn--lg">Call {phoneDisplay}</a>
+    </div>
+  </section>
+
+  <!-- ========== AGENT ========== -->
+  <section class="oh-agent-section">
+    <div class="container">
+      <div class="oh-agent">
+        <div>
+          <p class="oh-agent__name">Jacob Stark</p>
+          <p class="oh-agent__role">REALTOR&reg; &middot; 8z Real Estate</p>
+        </div>
+        <div class="oh-agent__contact">
+          <a href={phoneTel}>{phoneDisplay}</a>
+          <a href="mailto:jacob@selling303.com">jacob@selling303.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* ── Hero ── */
+  .oh-hero {
+    background:
+      linear-gradient(135deg, #002a3a 0%, #003d52 100%);
+    color: var(--color-white);
+    padding: calc(var(--header-height) + var(--space-2xl)) 0 var(--space-2xl);
+  }
+  .oh-hero__pill {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    border: 1px solid rgba(200, 150, 90, 0.45);
+    border-radius: 999px;
+    padding: 0.4rem 0.95rem;
+    margin-bottom: var(--space-md);
+  }
+  .oh-hero__address {
+    color: var(--color-white);
+    margin-bottom: 0.35rem;
+    line-height: 1.1;
+  }
+  .oh-hero__loc {
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.72);
+    margin-bottom: var(--space-sm);
+  }
+  .oh-hero__price {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    color: var(--color-accent);
+    margin-bottom: var(--space-md);
+  }
+  .oh-hero__tagline {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.86);
+    max-width: 560px;
+    margin-bottom: var(--space-lg);
+  }
+  .oh-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
+  /* ── Quick facts ── */
+  .oh-facts-section {
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--space-lg) 0;
+  }
+  .oh-facts {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--space-md);
+  }
+  .oh-fact {
+    text-align: center;
+    padding: var(--space-xs) 0;
+  }
+  .oh-fact__num {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: clamp(1.35rem, 2.5vw, 1.85rem);
+    color: var(--color-primary);
+    line-height: 1.15;
+  }
+  .oh-fact__label {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--color-light-text);
+    margin-top: 0.2rem;
+  }
+
+  /* ── About + details ── */
+  .oh-about {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: var(--space-2xl);
+    align-items: start;
+  }
+  .oh-spec {
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+  }
+  .oh-spec__title {
+    font-size: 1.2rem;
+    margin-bottom: var(--space-sm);
+  }
+  .oh-spec__list {
+    margin: 0;
+  }
+  .oh-spec__row {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-md);
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .oh-spec__row:last-of-type {
+    border-bottom: none;
+  }
+  .oh-spec__row dt {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-body-text);
+    flex-shrink: 0;
+  }
+  .oh-spec__row dd {
+    font-size: 0.85rem;
+    color: var(--color-dark-text);
+    text-align: right;
+    margin: 0;
+  }
+  .oh-spec__note {
+    font-size: 0.78rem;
+    color: var(--color-light-text);
+    margin-top: var(--space-sm);
+    line-height: 1.6;
+  }
+
+  /* ── Highlights ── */
+  .oh-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+  }
+  .oh-highlight {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+  }
+  .oh-highlight__icon {
+    display: block;
+    font-size: 1.8rem;
+    margin-bottom: var(--space-xs);
+  }
+  .oh-highlight__title {
+    font-size: 1.15rem;
+    margin-bottom: 0.4rem;
+  }
+  .oh-highlight__text {
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  /* ── Financing ── */
+  .oh-programs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+  }
+  .oh-program {
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-top: 3px solid var(--color-accent);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+  }
+  .oh-program__name {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+  }
+  .oh-program__text {
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+  .oh-programs__cta {
+    text-align: center;
+    margin-top: var(--space-lg);
+  }
+  .oh-disclaimer {
+    max-width: 720px;
+    margin: var(--space-md) auto 0;
+    text-align: center;
+    font-size: 0.78rem;
+    line-height: 1.6;
+    color: var(--color-light-text);
+  }
+
+  /* ── Keep exploring ── */
+  .oh-explore {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+  }
+  .oh-explore-card {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    text-align: center;
+  }
+  .oh-explore-card__icon {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: var(--space-xs);
+  }
+  .oh-explore-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .oh-explore-card p {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    margin-bottom: var(--space-md);
+  }
+
+  /* ── Agent strip ── */
+  .oh-agent-section {
+    background-color: var(--color-primary);
+    padding: var(--space-lg) 0;
+  }
+  .oh-agent {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+  }
+  .oh-agent__name {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    color: var(--color-white);
+    margin-bottom: 0.1rem;
+  }
+  .oh-agent__role {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.66);
+    margin: 0;
+  }
+  .oh-agent__contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+  .oh-agent__contact a {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-accent);
+  }
+  .oh-agent__contact a:hover {
+    color: var(--color-white);
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 860px) {
+    .oh-about {
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+    .oh-facts {
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-sm);
+    }
+  }
+  @media (max-width: 600px) {
+    .oh-facts {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .oh-hero__actions .btn,
+    .cta-banner .btn {
+      width: 100%;
+    }
+    .oh-agent {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
