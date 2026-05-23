@@ -452,7 +452,7 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: svg-chart (Lone Tree luxury DOM distribution by price band)
 
 #### Day 20 — Sunday, May 24
-- [ ] **"Lakewood Relocation Guide for West Metro Families in 2026"**
+- [x] **"Lakewood Relocation Guide for West Metro Families in 2026"** *(drafted 2026-05-23, slug: `lakewood-relocation-guide-west-metro-families-2026`, shipped as **price-ladder-svg Tier 0** — Compelling Question Flow override from calendar's `Visual: none` advisory)*
   - Specialization: `/relocation` | Geographic: `/lakewood`
   - Type: Local area topic | Funnel: TOFU
   - Angle: Family-focused Lakewood relocation guide. Belmar district vs. Green Mountain vs. southwest Lakewood, commute realities to downtown and DTC, school district lines (Jeffco), park and trail access (Bear Creek, Green Mountain Park), and price-tier breakdowns from $450K starter to $1M-plus executive.

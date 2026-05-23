@@ -81,6 +81,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - Moving to Littleton, Colorado: A Relocation Guide for 2026 (`/blog/moving-to-littleton-colorado-relocation-guide-2026`)
 - Lone Tree Relocation for DTC Tech Professionals (2026) (`/blog/lone-tree-relocation-guide-dtc-tech-professionals-2026`)
 - 5 South Denver Suburbs Buyers Are Targeting in 2026 (`/blog/south-denver-summer-market-kickoff-memorial-day-weekend-2026`) — Relocation × Centennial, TOFU, Memorial Day summer-market kickoff (profile-card-grid: 5-suburb summer snapshot — Littleton, Lakewood, Centennial, Parker, Highlands Ranch)
+- Lakewood Relocation Guide for West Metro Families in 2026 (`/blog/lakewood-relocation-guide-west-metro-families-2026`) — Relocation × Lakewood, TOFU, family relocation guide (price-ladder-svg: 4 Lakewood price tiers by median finished sqft, April 2026, n=199 closed)
 
 ### 6. New Construction (`/new-construction`)
 **Primary geographic ties:** Parker, Castle Pines, Highlands Ranch, Lone Tree (active builder communities)
