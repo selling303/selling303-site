@@ -45,6 +45,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - The Greenwood Village Empty-Nester Move: When the Right-Sizing Math Actually Pencils (`/blog/greenwood-village-empty-nester-right-sizing-math-2026`)
 - Greenwood Village Downsize: 7-Step First-Time Seller Playbook (`/blog/greenwood-village-downsize-playbook-first-time-seller-2026`) — First-Time Home Sellers × Greenwood Village, MOFU, procedural seller advice (HowTo schema, 7-step comparison-table)
 - Timing a Lone Tree Luxury Move-Up Sale in 2026 (`/blog/lone-tree-luxury-move-up-timing-2026`) — Move-Up Sellers × Lone Tree, BOFU, luxury-tier ($1.5M–$3M) move-up timing playbook (single-metric-bar-chart: months of supply by Lone Tree price band, April 2026)
+- Castle Pines Move-Up Timing: When the Right Moment Is Two Years Away (`/blog/castle-pines-move-up-timing-when-to-wait-2026`) — Move-Up Sellers × Castle Pines, BOFU, counterintuitive "when to wait" framework (single-metric-bar-chart: net dollar delta from a two-year wait across three market scenarios — softening, flat, appreciating; April 2026 REcolorado MLS Castle Pines + Castle Pines North n=164, DMAR April 2026 metro context)
 
 ### 3. First-Time Homebuyers (`/first-time-homebuyers`)
 **Primary geographic ties:** Littleton, Englewood, Centennial (most affordable entry points in the metro)

@@ -460,12 +460,12 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: none
 
 #### Day 21 — Monday, May 25 (Memorial Day)
-- [ ] **"Castle Pines Move-Up Timing: When the Right Moment Is Actually Two Years Away"**
+- [x] **"Castle Pines Move-Up Timing: When the Right Moment Is Two Years Away"** *(drafted 2026-05-26, slug: `castle-pines-move-up-timing-when-to-wait-2026`, title shortened from "Castle Pines Move-Up Timing: When the Right Moment Is Actually Two Years Away" for SERP CTR; original preserved in `headline` frontmatter; shipped as **single-metric-bar-chart Tier 0** — Compelling Question Flow matched the calendar's `svg-chart` advisory)*
   - Specialization: `/move-up-sellers` | Geographic: `/castle-pines`
   - Type: Seller advice | Funnel: BOFU
   - Angle: Counterintuitive timing argument for Castle Pines luxury move-up sellers. Why some 2026 sellers should wait until 2027–28 — equity acceleration scenarios, replacement-housing inventory cycles, capital gains threshold proximity, and the financial cost of holding vs. selling now. Includes a decision framework.
   - Target keywords: when to sell Castle Pines, Castle Pines move-up timing, hold or sell Castle Pines, luxury home timing 2026
-  - Visual: svg-chart (timing windows — sell-now vs. hold scenarios)
+  - Visual: single-metric-bar-chart (3 market scenarios × net delta from a 2-year wait — softening, flat, appreciating; April 2026 REcolorado MLS Castle Pines + Castle Pines North n=164, DMAR April 2026 metro context)
 
 ---
 
