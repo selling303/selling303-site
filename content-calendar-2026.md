@@ -472,12 +472,12 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
 ### Week 4: May 26 – June 1
 
 #### Day 22 — Tuesday, May 26
-- [ ] **"Why Lakewood Listings Sit on the Market in 2026 — and the Pricing Strategy That Moves Them"**
+- [x] **"Why Lakewood Listings Sit in 2026 — and What Actually Moves Them"** *(drafted 2026-05-26, slug: `lakewood-listings-sit-on-market-pricing-strategy-2026`, title shortened from "Why Lakewood Listings Sit on the Market in 2026 — and the Pricing Strategy That Moves Them" for SERP CTR; original preserved in `headline` frontmatter; shipped as **comparison-table Tier 0** — Compelling Question Flow matched the calendar advisory after scoring comparison-table 24 over single-metric-bar-chart 21 (freshness-penalized — shipped twice in the prior 5 days) and a stretch sold-vs-expired-diptych 20 (forced fit; reader observes an outcome contrast, not a choice))*
   - Specialization: `/expired-listings` | Geographic: `/lakewood`
   - Type: Seller advice | Funnel: BOFU
-  - Angle: Lakewood saw 61 withdrawn-or-expired listings in April 2026 (4.2% of total Jeffco residential exits). Diagnostic on what failed listings have in common — pricing relative to comparable closed listings, photo quality, timing within the listing window — and the pricing-and-marketing reset that recovers them.
+  - Angle: Lakewood saw 61 withdrawn-or-expired listings in April 2026 (23.5% of the 260-listing flow). Diagnostic on what failed listings have in common — pricing relative to comparable closed listings, late and small reductions, presentation and exposure gaps — and the 21-day pricing-and-marketing reset that recovers them. Counterintuitive data point: median expired list ($542,500) was LOWER than median closed original list ($580,000) — the killer isn't dollar amount, it's positioning relative to today's active comp set.
   - Target keywords: Lakewood home not selling, expired listing Lakewood, why Lakewood listings sit, relist Lakewood Colorado
-  - Visual: comparison-table (sold vs. expired Lakewood × pricing-strategy variables)
+  - Visual: comparison-table (sold vs. expired Lakewood × pricing-strategy variables — single-number cells only, Phrase-Cell Density Trip-Wire cleared; the qualitative "pattern that drives the outcome" row moved to body prose)
 
 #### Day 23 — Wednesday, May 27
 - [ ] **"Castle Pines Luxury Expired Listings: How to Reposition a $1.5M-plus Home That Didn't Sell"**

@@ -25,6 +25,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - Why Pricing Reductions in Highlands Ranch Don't Always Work — and What Does (`/blog/price-reductions-highlands-ranch-what-works-2026`)
 - Englewood Listing Photos: When to Reshoot Before Relisting (`/blog/englewood-listing-photo-audit-photography-2026`)
 - Why Parker Move-Up Listings Stall — and the Pricing Strategy That Recovers Them (`/blog/parker-move-up-listings-stall-pricing-strategy-2026`)
+- Why Lakewood Listings Sit in 2026 — and What Actually Moves Them (`/blog/lakewood-listings-sit-on-market-pricing-strategy-2026`) — Expired Listings × Lakewood, BOFU, diagnostic + 21-day pricing-reset playbook (comparison-table: Sold n=199 vs Expired n=48 × 4 numeric metrics — share of flow, median DIM, median original list, median close-to-original-list; April 2026 REcolorado MLS Lakewood residential)
 
 ### 2. Move-Up Sellers (`/move-up-sellers`)
 **Primary geographic ties:** Highlands Ranch, Centennial, Parker (highest move-up activity — families upgrading within the metro)
