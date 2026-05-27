@@ -480,7 +480,7 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: comparison-table (sold vs. expired Lakewood × pricing-strategy variables — single-number cells only, Phrase-Cell Density Trip-Wire cleared; the qualitative "pattern that drives the outcome" row moved to body prose)
 
 #### Day 23 — Wednesday, May 27
-- [ ] **"Castle Pines Luxury Expired Listings: How to Reposition a $1.5M-plus Home That Didn't Sell"**
+- [x] **"Castle Pines Luxury Expired Listings: How to Reposition a $1.5M-plus Home That Didn't Sell"** *(drafted 2026-05-27, slug: `castle-pines-luxury-expired-listings-repositioning-2026`, title shortened to "Castle Pines Luxury Expireds: A 2026 Repositioning Playbook" (59 chars) for SERP CTR; original preserved in `headline` frontmatter; shipped as **single-metric-bar-chart Tier 0** — Compelling Question Flow chose single-metric-bar-chart 24 over comparison-table 20 (freshness-penalized; shipped 2026-05-26 Lakewood) and stretch DIM-vs-cut scatter 18; matched the calendar's `svg-chart` advisory)*
   - Specialization: `/expired-listings` | Geographic: `/castle-pines`
   - Type: Seller advice | Funnel: BOFU
   - Angle: Luxury expired listings at the Castle Pines $1.5M-plus tier require a different recovery playbook than mid-market homes. Smaller buyer pool means longer DOM is normal, but stale luxury listings get aggressively discounted — sometimes 8–12% — once they cross the 90-day threshold. The pricing audit, presentation overhaul, and re-launch strategy that prevents the discount cascade.

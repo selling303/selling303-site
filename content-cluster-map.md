@@ -26,6 +26,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - Englewood Listing Photos: When to Reshoot Before Relisting (`/blog/englewood-listing-photo-audit-photography-2026`)
 - Why Parker Move-Up Listings Stall — and the Pricing Strategy That Recovers Them (`/blog/parker-move-up-listings-stall-pricing-strategy-2026`)
 - Why Lakewood Listings Sit in 2026 — and What Actually Moves Them (`/blog/lakewood-listings-sit-on-market-pricing-strategy-2026`) — Expired Listings × Lakewood, BOFU, diagnostic + 21-day pricing-reset playbook (comparison-table: Sold n=199 vs Expired n=48 × 4 numeric metrics — share of flow, median DIM, median original list, median close-to-original-list; April 2026 REcolorado MLS Lakewood residential)
+- Castle Pines Luxury Expireds: A 2026 Repositioning Playbook (`/blog/castle-pines-luxury-expired-listings-repositioning-2026`) — Expired Listings × Castle Pines, BOFU, $1.5M-plus luxury repositioning playbook (single-metric-bar-chart: median days in MLS by sale outcome for $1.5M+ Castle Pines listings — sold 0–30d n=6 / 31–90d n=3 / 91–180d n=3 / expired n=4; Jan–Apr 2026 REcolorado MLS Castle Pines + Castle Pines North)
 
 ### 2. Move-Up Sellers (`/move-up-sellers`)
 **Primary geographic ties:** Highlands Ranch, Centennial, Parker (highest move-up activity — families upgrading within the metro)
