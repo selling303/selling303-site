@@ -61,6 +61,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - First-Time Home Buyer's Guide to Lakewood, Colorado (2026) (`/blog/first-time-home-buyer-guide-lakewood-colorado-2026`)
 - Condo vs. Starter House in Littleton for First-Time Buyers (`/blog/condo-vs-single-family-littleton-first-time-buyer-2026`)
 - Englewood First-Time Buyer ZIP Code Guide: 80110, 80113, 80111 (2026) (`/blog/englewood-first-time-buyer-zip-code-guide-80110-80113-80111-2026`)
+- What $750K Buys in Lakewood, Englewood, and Centennial (`/blog/750k-home-comparison-lakewood-englewood-centennial-2026`) — First-Time Homebuyers × Centennial, TOFU, three-city buying-power comparison at the $700K–$800K band (comparison-table: 3 cities × 8 numeric metrics — closings, median close, finished sqft, PSF, DIM, CP/OLP, active inventory, citywide April median; April 2026 REcolorado MLS Lakewood n=22, Englewood n=5, Centennial n=24)
 
 ### 4. First-Time Home Sellers (`/first-time-homesellers`)
 **Primary geographic ties:** Centennial, Littleton, Highlands Ranch (first-time seller volume in South Denver)

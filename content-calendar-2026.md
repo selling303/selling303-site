@@ -488,12 +488,12 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: svg-chart (luxury price-cut cascade by DOM tier)
 
 #### Day 24 — Thursday, May 28
-- [ ] **"What $750K Gets You in Lakewood, Englewood, and Centennial Right Now"**
+- [x] **"What $750K Buys in Lakewood, Englewood, and Centennial"** *(drafted 2026-05-28, slug: `750k-home-comparison-lakewood-englewood-centennial-2026`, title shortened from "What $750K Gets You in Lakewood, Englewood, and Centennial Right Now" (67 chars) to 54 chars for SERP CTR; original preserved in `headline` frontmatter; shipped as **comparison-table Tier 0** — matched calendar advisory exactly)*
   - Specialization: `/first-time-homebuyers` | Geographic: `/centennial`
   - Type: Buyer advice / Local area topic | Funnel: TOFU
   - Angle: Side-by-side $750K buying power across three South Denver markets that compete for mid-tier buyers. Square footage, age, lot size, single-family vs. townhome, neighborhood character, and commute differential. Lakewood west-metro, Englewood urban-edge, Centennial mid-suburb.
   - Target keywords: 750K home Denver suburbs, Lakewood vs Englewood vs Centennial, what 750K buys Denver, mid-tier home Denver
-  - Visual: comparison-table (3 cities × 8 metrics at $750K price point)
+  - Visual: comparison-table (3 cities × 8 metrics at $700K–$800K band — closings, median close, fin sqft, PSF, DIM, CP/OLP, active inventory, citywide April median; all single-number cells, Phrase-Cell Density Trip-Wire clear)
 
 #### Day 25 — Friday, May 29
 - [ ] **"Why Parker Move-Up Buyers Are Choosing Castle Pines New Construction"**
