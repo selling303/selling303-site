@@ -532,12 +532,12 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
 ### Week 5: June 2–3
 
 #### Day 29 — Tuesday, June 2
-- [ ] **"Centennial Dual-Transaction Coordination: Selling and Buying in the Same May–June Window"**
+- [x] **"Centennial Dual-Transaction Playbook: May–June 2026"** *(drafted 2026-06-02, slug: `centennial-dual-transaction-playbook-may-june-2026`, title shortened from "Centennial Dual-Transaction Coordination: Selling and Buying in the Same May–June Window" for SERP CTR; original preserved in `headline` frontmatter; shipped as **comparison-table Tier 0** with parallel HowTo JSON-LD — Compelling Question Flow override from calendar's `howto (flag-only)` advisory, same Phase 4 builder-dependency fallback pattern used on the Greenwood Village downsize playbook 2026-05-20)*
   - Specialization: `/move-up-sellers` | Geographic: `/centennial`
   - Type: Seller advice | Funnel: BOFU
   - Angle: Step-by-step dual-transaction playbook for Centennial move-up sellers compressing both transactions into a single 30–45 day window during peak season. Equity-bridge mechanics, contingency-offer strategy, rent-back negotiation, escrow choreography, and the timing milestones that have to land in order.
   - Target keywords: dual transaction Centennial, sell and buy Centennial, move-up coordination Denver, simultaneous close Colorado
-  - Visual: howto (flag-only — Phase 4 builder dependency)
+  - Visual: comparison-table (7 milestones × 3 cols — What it covers / When it lands / Cost of skipping; parallel HowTo JSON-LD with 7× HowToStep entries, totalTime P45D; comparison-table won Compelling Question Flow over decision-path 21 and stretch settlement-statement variant 19, scoring 24)
 
 #### Day 30 — Wednesday, June 3
 - [ ] **"South Denver May 2026 Closings: What Move-Up Sellers Need to Know Heading Into June"**
