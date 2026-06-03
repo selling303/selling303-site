@@ -103,6 +103,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - Parker New Construction: Buy Off the Shelf or Build It? (`/blog/spec-home-vs-custom-build-parker-2026`)
 - Right-Size Inside Highlands Ranch: 3 New-Build Paths (2026) (`/blog/highlands-ranch-new-construction-empty-nester-right-size-2026`)
 - Castle Pines New Construction 2026: Community Deep Dive (`/blog/castle-pines-new-construction-builder-community-deep-dive-2026`)
+- Why Parker Move-Up Buyers Pick Castle Pines New Builds (`/blog/parker-move-up-to-castle-pines-new-construction-2026`) — New Construction × Parker, MOFU, Parker-to-Castle Pines $1M–$1.5M migration decision (two-path-diptych: Parker resale $1,199,724 median on 5,076 fin sqft / $244 PSF, n=18 vs. Castle Pines new construction $1,249,000 median on 5,258 fin sqft / $229 PSF, n=9; April 2026 REcolorado MLS)
 
 ---
 

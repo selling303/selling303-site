@@ -496,12 +496,12 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: comparison-table (3 cities × 8 metrics at $700K–$800K band — closings, median close, fin sqft, PSF, DIM, CP/OLP, active inventory, citywide April median; all single-number cells, Phrase-Cell Density Trip-Wire clear)
 
 #### Day 25 — Friday, May 29
-- [ ] **"Why Parker Move-Up Buyers Are Choosing Castle Pines New Construction"**
+- [x] **"Why Parker Move-Up Buyers Pick Castle Pines New Builds"** *(drafted 2026-06-03, slug: `parker-move-up-to-castle-pines-new-construction-2026`, title shortened from "Why Parker Move-Up Buyers Are Choosing Castle Pines New Construction" (68 chars) to 54 chars for SERP CTR; original preserved in `headline` frontmatter; shipped as **two-path-diptych Tier 0** — Compelling Question Flow chose two-path-diptych (24) over comparison-table (21, freshness-penalized — 3 ships in prior 7 days) and stretch profile-card-grid (21); matched the binary fork "Stay vs Move up" narrative perfectly)*
   - Specialization: `/new-construction` | Geographic: `/parker`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Migration pattern story — Parker move-up buyers stepping up to Castle Pines new construction at the $1M–$1.5M tier. The decision math: Parker resale appreciation captured, Castle Pines new-build customization, school district trade-offs, lot size differential, and HOA stack comparison. Why this migration accelerated in spring 2026.
   - Target keywords: Parker to Castle Pines move, move up from Parker new construction, Castle Pines new build buyer Parker, Douglas County move-up
-  - Visual: none
+  - Visual: two-path-diptych (Parker $1M-$1.5M resale path vs. Castle Pines $1M-$1.5M Canyons new construction path — 6 paired stats per card + per-path Microdata + parallel JSON-LD Dataset)
 
 #### Day 26 — Saturday, May 30
 - [ ] **"Castle Pines, Lone Tree, and Parker Builder Incentive Comparison: Spring 2026"**
