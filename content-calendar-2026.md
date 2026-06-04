@@ -504,7 +504,7 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: two-path-diptych (Parker $1M-$1.5M resale path vs. Castle Pines $1M-$1.5M Canyons new construction path — 6 paired stats per card + per-path Microdata + parallel JSON-LD Dataset)
 
 #### Day 26 — Saturday, May 30
-- [ ] **"Castle Pines, Lone Tree, and Parker Builder Incentive Comparison: Spring 2026"**
+- [x] **"Castle Pines, Lone Tree, and Parker Builder Incentive Comparison: Spring 2026"** *(drafted 2026-06-04, slug: `castle-pines-lone-tree-parker-builder-incentive-comparison-2026`, title shortened to "2026 Builder Incentives: Castle Pines, Lone Tree, Parker" (56 chars) for SERP CTR; original preserved in `headline` frontmatter; shipped as **comparison-table Tier 0** — 3 cities × 6 leverage metrics (all single-number cells); incentive-category specifics kept qualitative per claim-integrity rules, anchored to visible MLS discounting on Castle Pines Merseyside specs)*
   - Specialization: `/new-construction` | Geographic: `/castle-pines`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Cross-builder incentive comparison across three active Douglas County new-construction markets. Rate buydowns, closing-cost credits, upgrade packages, lot-premium reductions. What's actually a real value vs. marketing veneer, and how 2026 incentives compare to the more aggressive 2024–25 packages.
