@@ -512,7 +512,7 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: comparison-table (3 cities × 6 incentive categories)
 
 #### Day 27 — Sunday, May 31
-- [ ] **"Greenwood Village Relocation Guide: Why Empty-Nesters Make This Their Last Move"**
+- [x] **"Greenwood Village Relocation Guide: Why Empty-Nesters Make This Their Last Move"** *(drafted 2026-06-05, slug: `greenwood-village-relocation-guide-empty-nester-last-move-2026`, title shortened to "Greenwood Village Relocation Guide for Empty-Nesters (2026)" (59 chars) for SERP CTR; original preserved in `headline` frontmatter; shipped as **price-ladder-svg Tier 0** — Compelling Question Flow chose price-ladder-svg (24) over profile-card-grid (22) and stretch maintenance-gradient ladder (20); calendar's `Visual: none` advisory overridden per the Lakewood Day-20 precedent — tier breakdowns are canonical price-ladder territory; school-district angle from the calendar advisory dropped for Fair Housing caution)*
   - Specialization: `/relocation` | Geographic: `/greenwood-village`
   - Type: Local area topic | Funnel: TOFU
   - Angle: Greenwood Village as the "last move" destination for affluent empty-nesters relocating from out of state — sub-$3M luxury, low-maintenance options, DTC professional access, Cherry Creek school district appeal for visiting grandchildren, and the maintenance-and-amenity profile that draws this buyer demographic.
