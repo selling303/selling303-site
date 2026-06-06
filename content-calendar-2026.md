@@ -520,7 +520,7 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: none
 
 #### Day 28 — Monday, June 1
-- [ ] **"Why Littleton Spring Listings Sit on the Market — and How to Recover Them"**
+- [x] **"Why Littleton Spring Listings Sit on the Market — and How to Recover Them"** *(drafted 2026-06-06, slug: `littleton-spring-listings-sit-pricing-recovery-2026`, title shortened to "Why Littleton Listings Sit in 2026 — and How to Recover" (55 chars) for SERP CTR; original preserved in `headline` frontmatter; shipped as **single-metric-bar-chart Tier 0** — Compelling Question Flow chose single-metric-bar-chart (25) over comparison-table (22, freshness-penalized — 4 ships in ~2 weeks, 2 in prior 7 days, and the Lakewood sibling already used it) and stretch sold-vs-expired two-path-diptych (18, forced fit — observed outcome, not a reader choice). Calendar's `Visual: none` advisory overridden: the post's counterintuitive insight — Littleton's FAILED listings asked the MOST (median expired list $771,995 vs. $650,000 median close) — is a single-number-by-outcome story that a bar chart lands in 5 seconds. Visual differentiates from the Lakewood sibling's comparison-table)*
   - Specialization: `/expired-listings` | Geographic: `/littleton`
   - Type: Seller advice | Funnel: BOFU
   - Angle: Littleton had 67 withdrawn-or-expired listings in April 2026 — the highest absolute count of the nine South Denver suburbs. Diagnostic on the 3-county pricing confusion (Arapahoe vs. Jefferson vs. Douglas comparable sets), inventory absorption mismatch in the $675K median band, and the relist strategy that recovers a stalled spring Littleton listing.
