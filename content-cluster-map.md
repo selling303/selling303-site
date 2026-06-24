@@ -87,7 +87,6 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - Do You Need a Real Estate Agent for New Construction in Colorado? (`/blog/real-estate-agent-new-construction-colorado`)
 - Lone Tree New Construction: Builder Incentives and What They Actually Mean for Your Bottom Line (`/blog/lone-tree-new-construction-builder-incentives-2026`)
 - New Build vs. Resale in Highlands Ranch: Which Makes More Financial Sense in 2026? (`/blog/new-build-vs-resale-highlands-ranch-2026`)
-- Should You Build New in Parker or Buy Resale? A Cost-Per-Square-Foot Analysis (`/blog/build-new-or-buy-resale-parker-cost-per-square-foot`)
 - New Construction Buyer Representation in Colorado: What Changed in 2026 and Why It Matters (`/blog/new-construction-buyer-representation-colorado-2026`)
 - RidgeGate vs. Heritage Hills: A Lone Tree New Construction Update for 2026 (`/blog/ridgegate-vs-heritage-hills-lone-tree-new-construction-2026`)
 - Parker New Construction: Buy Off the Shelf or Build It? (`/blog/spec-home-vs-custom-build-parker-2026`)

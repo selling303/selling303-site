@@ -34,11 +34,6 @@ relatedPosts:
     tag: "Buying"
     description: "Builder communities, base vs. total pricing, lot premiums, and why representation matters in Castle Pines and Parker."
     date: "April 8, 2026"
-  - slug: "build-new-or-buy-resale-parker-cost-per-square-foot"
-    title: "Should You Build New in Parker or Buy Resale? A Cost-Per-Square-Foot Analysis"
-    tag: "Buying"
-    description: "Builder base price per sqft vs. resale comps in Parker — the real cost of new construction with upgrades and lot premiums included."
-    date: "April 28, 2026"
 ---
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">

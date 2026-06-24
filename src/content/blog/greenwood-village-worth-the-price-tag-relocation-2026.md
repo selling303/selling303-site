@@ -240,7 +240,7 @@ relatedPosts:
 <p><strong>What you could get cheaper elsewhere:</strong></p>
 
 <ul>
-<li>4,000–5,000 square feet of new construction (cheaper in Castle Pines, Lone Tree, or Parker — see the <a href="/blog/build-new-or-buy-resale-parker-cost-per-square-foot">Parker new build vs. resale analysis</a>)</li>
+<li>4,000–5,000 square feet of new construction (cheaper in Castle Pines, Lone Tree, or Parker)</li>
 <li>HOA-managed rec centers, trails, and pools (Highlands Ranch delivers four rec centers and 70+ miles of trails for under $800K)</li>
 <li>Walkable downtown character (Littleton's downtown and Parker's Mainstreet both deliver this; Greenwood Village does not have a traditional downtown)</li>
 <li>School-quality reputation alone (the metro has multiple high-performing districts; you don't need a Greenwood Village address to access them)</li>

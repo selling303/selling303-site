@@ -202,7 +202,7 @@
   - Target keywords: closing costs Littleton CO, first-time buyer closing costs Denver, Littleton home buying costs 2026
 
 #### Day 25 — Monday, April 28
-- [x] **"Should You Build New in Parker or Buy Resale? A Cost-Per-Square-Foot Analysis"** *(drafted 2026-04-28)*
+- [x] **"Should You Build New in Parker or Buy Resale? A Cost-Per-Square-Foot Analysis"** *(drafted 2026-04-28 then deleted 2026-06-24 — Jacob removed; not used)*
   - Specialization: `/new-construction` | Geographic: `/parker`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Data comparison. Builder base price per sqft vs. resale comps, upgrade cost reality, lot premium analysis for Parker communities.
@@ -409,6 +409,8 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
 
 ---
 
+> **PLAN RETIRED — 2026-06-24.** The May 19 → June 3 extension below (Days 15–30) is the old ad-hoc blog plan. Every unshipped draft from this stretch was deleted and will not be used; the entries are kept only as a record of what was planned and why, for reference when building the next plan. A fresh blog plan and schedule will be created in a separate session. Note: the geographic/coverage summary tables further down still tally these now-deleted drafts — recompute coverage against live content, not this retired section.
+
 ### Week 3: May 19–25
 
 #### Day 15 — Tuesday, May 19
@@ -540,7 +542,7 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: comparison-table (7 milestones × 3 cols — What it covers / When it lands / Cost of skipping; parallel HowTo JSON-LD with 7× HowToStep entries, totalTime P45D; comparison-table won Compelling Question Flow over decision-path 21 and stretch settlement-statement variant 19, scoring 24)
 
 #### Day 30 — Wednesday, June 3
-- [ ] **"South Denver May 2026 Closings: What Move-Up Sellers Need to Know Heading Into June"**
+- [x] **"South Denver May 2026 Closings: What Move-Up Sellers Need to Know Heading Into June"** *(NOT drafted — old plan retired 2026-06-24; marked [x] only to keep the nightly task from picking it up. Re-slot under the fresh plan if still wanted.)*
   - Specialization: `/move-up-sellers` | Geographic: `/highlands-ranch`
   - Type: Market update | Funnel: TOFU
   - Angle: Monthly market update — May 2026 closings, pending pipeline heading into June, active inventory snapshot, and YoY comparison to May 2025. Anchored on Highlands Ranch with cross-suburb comparison table. Uses fresh DMAR May LMU plus Jacob's Stock/Flow MLS pulls dated June 1.

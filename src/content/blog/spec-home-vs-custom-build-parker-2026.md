@@ -24,11 +24,6 @@ faqSchema:
   - question: "How long does it take to build a custom home in Parker?"
     answer: "A typical Parker custom build runs 12 to 18 months from contract to certificate of occupancy, depending on lot readiness, plan complexity, supply chain, and permit cadence in Douglas County. Builder spec inventory closes much faster — Parker April 2026 closed single-family residential ran at an 11-day median days in MLS, similar to resale velocity. Buyers who need to move within six months almost always shop spec inventory; buyers who can wait a year and want full control over design pursue custom."
 relatedPosts:
-  - slug: "build-new-or-buy-resale-parker-cost-per-square-foot"
-    title: "Build New or Buy Resale in Parker? Cost-Per-Sqft Math (2026)"
-    tag: "Buying"
-    description: "Parker cost-per-square-foot breakdown — Q1 2026 resale PSF vs. builder base PSF, lot premiums, and design center math."
-    date: "April 28, 2026"
   - slug: "new-construction-castle-pines-parker-2026"
     title: "New Construction Communities in Castle Pines and Parker: What Buyers Need to Know in 2026"
     tag: "Buying"
@@ -71,7 +66,7 @@ relatedPosts:
 </ol>
 </nav>
 
-<p>The "spec home or custom build" question is the second most common one Jacob Stark hears from <a href="/neighborhoods/parker">Parker, Colorado</a> buyers who have already decided they want <a href="/new-construction">new construction</a> over resale. The first question — new or resale — gets answered with a cost-per-square-foot comparison anchored in MLS data; the <a href="/blog/build-new-or-buy-resale-parker-cost-per-square-foot">Parker new-or-resale cost-per-sqft breakdown</a> covers that decision in depth. The second question — spec or custom — is harder, because the data lives in two different places: spec inventory shows up in the MLS, while custom builds mostly do not.</p>
+<p>The "spec home or custom build" question is the second most common one Jacob Stark hears from <a href="/neighborhoods/parker">Parker, Colorado</a> buyers who have already decided they want <a href="/new-construction">new construction</a> over resale. The first question — new or resale — gets answered with a cost-per-square-foot comparison anchored in MLS data. The second question — spec or custom — is harder, because the data lives in two different places: spec inventory shows up in the MLS, while custom builds mostly do not.</p>
 
 <p>This post pulls Parker's April 2026 closed-residential numbers from REcolorado MLS to anchor the spec column. The custom column uses national builder-cost benchmarks from sources like <a href="https://www.nahb.org/" target="_blank" rel="noopener">NAHB</a> and Front Range custom-build cost guidance from the <a href="https://www.coloradorealtors.com/" target="_blank" rel="noopener">Colorado Association of Realtors</a>. The result is an honest side-by-side on seven cost categories. It also covers the timing, control, and risk dimensions that the cost number alone never captures. If you are shopping Parker new construction in the $700,000 to $1.2 million band, this is the read.</p>
 
