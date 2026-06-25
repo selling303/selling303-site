@@ -1,5 +1,30 @@
 # Deploy Log
 
+## 2026-06-24 — merge e8c60f4 (main → live) | Credits used: 15 | Build: triggered via hook 69de8373
+
+### Five-week backlog catch-up + three same-day fixes
+
+First production deploy since 2026-05-18 — `main` had run ~37 commits ahead of `live`. This single deploy shipped the entire accumulated backlog plus three fixes made in this session. Branch divergence was verified safe beforehand (the 16 commits `live` was "ahead" were all routine merge commits, zero unique files).
+
+**Session fixes (the reason for the deploy):**
+
+- **`/properties` RealScout listings restored.** The "Your Listings" widget showed "No listings available" because the site CSP allowlisted the widget *script* host (`em.realscout.com`) but not the *data* host (`www.realscout.com`) or the photo CDN (`*.cloudfront.net`). Added both to `connect-src` / `img-src` in `public/_headers`. Diagnosed via a captured `securitypolicyviolation` (connect-src) on the live page; RealScout's own admin preview rendered fine and a direct call to the data URL returned 200 with 74 listings, proving the embed + data were correct and only the header was at fault. Commit 44484c9.
+- **`/neighborhoods` "Search Homes" buttons fixed.** All 9 cards were hardcoded to `selling303.realscout.com/search?city=X` — not a real public search (dead-ends visitors on RealScout's app). Swapped to the correct per-neighborhood RealScout shared-search links (`jacobstark.realscout.com/homesearch/shared-searches/…`), matching the neighborhood detail pages. Commit f2ca38d.
+- **Deleted-post cleanup.** Removed the unshipped `build-new-or-buy-resale-parker-cost-per-square-foot` post (commit 0c20759) and its cascade (commit 43cceb5): stripped dead `relatedPosts`/inline links from `parker.md`, `spec-home-vs-custom-build-parker-2026.md`, `new-construction-buyer-representation-colorado-2026.md`, and `greenwood-village-worth-the-price-tag-relocation-2026.md` (these were live 404 links), removed the cluster-map line, and retired the old ad-hoc blog calendar (record preserved, banner added, zero unchecked entries). Audit confirmed the June-22 deletion of 15 other unshipped drafts was already fully cascaded.
+
+**Backlog shipped (May 19 – June 22, summarized):** sitewide Calendly → Google Calendar scheduling-link migration + intent-based CTA routing; SEO/AEO fixes across ~60 posts (title rewrites, pillar/audience-marker links, CLS fix, Dataset schema dedupe, homepage review-snippet fix, category/relatedPosts fixes, stale ogImage frontmatter strip); new `/open-house/13611-e-evans` page (noindex); config (`astro.config.mjs` sitemap filter, `_redirects` cleanup); image hygiene. Net blog count unchanged at 56 (drafts created then deleted netted out).
+
+### Verified post-deploy (live)
+
+- `/properties` — CSP no longer blocks `www.realscout.com`; in-page data fetch returns 200, no `connect-src` violation. Widget will load listings for visitors.
+- `/neighborhoods` — all 9 "Search Homes" buttons resolve to `jacobstark.realscout.com/homesearch/shared-searches/…`; zero old `selling303.realscout.com/search` URLs remain.
+
+### Notes / follow-ups
+
+- No `gbp-post` fired — this deploy contained no new blog posts (deletion + fixes only).
+- Greenwood Village search link applied from its content file and later confirmed by Jacob.
+- Optional future refactor: `neighborhoods.astro` still hardcodes the search URLs (and prices/DOM); pulling from the neighborhoods content collection would single-source them and prevent re-drift.
+
 ## 2026-05-18 (PM) — commit 8c059fc / merge a8946ce | Credits used: 15 | Build: triggered via hook 69de8373
 
 ### Blog OG dynamic-card override fix + Chunks B & C of dead-infra audit
