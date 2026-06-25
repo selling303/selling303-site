@@ -10,7 +10,6 @@ heroLabel: "Buying"
 heroSubtext: "Parker is the top migration magnet in South Denver — here's the unvarnished relocation guide for out-of-state families, with real Q1 2026 price data."
 cardStat: "$717K"
 cardStatLabel: "Parker median sale price Q1 2026"
-ogImage: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Parker, Colorado"
@@ -188,7 +187,7 @@ relatedPosts:
 <p>Parker Water and Sanitation District sets its own restrictions separate from Denver Water. After Denver Water declared Stage 1 drought on March 25, 2026, most South Denver providers tightened outdoor watering rules. Parker homeowners should confirm current watering days, fine structures, and HOA overlays before they land — rules change seasonally and by provider.</p>
 
 <blockquote>
-<p>Thinking about a Parker relocation? Jacob Stark runs remote-buyer tours and long-distance closings for out-of-state families every quarter. Call 303-997-0634, visit <a href="https://selling303.com">selling303.com</a>, or <a href="https://calendly.com/jacob-realtor">book a 20-minute relocation intake call</a> to get a narrowed Parker home list matched to your family's brief.</p>
+<p>Thinking about a Parker relocation? Jacob Stark runs remote-buyer tours and long-distance closings for out-of-state families every quarter. Call 303-997-0634, visit <a href="https://selling303.com">selling303.com</a>, or <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">book a 20-minute relocation intake call</a> to get a narrowed Parker home list matched to your family's brief.</p>
 </blockquote>
 
 <p style="font-size: 0.85rem; color: #81848a; margin-top: 2rem;"><em>Market data sourced from DMAR March 2026 Market Trends Report and REcolorado MLS Parker single-family residential closed sales for Q1 2026 (330 closed). Migration data referenced from U.S. Census Bureau estimates cited in the DMAR report. Commute times reflect typical morning rush on clear-weather days; Colorado weather can meaningfully extend these.</em></p>

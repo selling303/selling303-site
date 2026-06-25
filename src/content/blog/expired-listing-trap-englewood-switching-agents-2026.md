@@ -10,7 +10,6 @@ heroLabel: "Selling"
 heroSubtext: "Switching the sign in the yard doesn't fix what kept buyers from writing an offer. Here's what actually has to change for an expired Englewood listing to close on the relist."
 cardStat: "5x longer"
 cardStatLabel: "expired vs. closed Englewood DIM"
-ogImage: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Englewood, Colorado"
@@ -40,6 +39,8 @@ relatedPosts:
     description: "A diagnostic for stale Centennial listings: photo quality, pricing relative to DOM benchmarks, and the showing-feedback patterns that predict an expiration."
     date: "April 21, 2026"
 ---
+
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/expired-listings">owners with expired listings</a> in <a href="/neighborhoods/englewood">Englewood</a> and the broader South Denver Metro.</p>
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>Will switching Realtors fix an expired listing in Englewood, Colorado?</strong> No. Switching agents alone almost never sells the home. The price, the presentation, or the marketing strategy — usually all three — has to change before the relist will perform differently.
@@ -220,7 +221,7 @@ relatedPosts:
 <p>There is no MLS waiting period in Colorado. You can relist as soon as you sign a new listing agreement. The bigger question is whether enough has actually changed — pricing, photos, staging, marketing — to give the relist a real shot. Relisting the same home, same price, with the same photos almost always produces the same result.</p>
 
 <blockquote>
-<p>Expired in Englewood and not sure whether the agent or the strategy was the real problem? Jacob Stark walks expired-listing sellers through a free pricing-and-presentation review before you sign anything new. <a href="https://calendly.com/jacob-realtor">Book a 20-minute consult</a> or call 303-997-0634.</p>
+<p>Expired in Englewood and not sure whether the agent or the strategy was the real problem? Jacob Stark walks expired-listing sellers through a free pricing-and-presentation review before you sign anything new. <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">Book a 20-minute consult</a> or call 303-997-0634.</p>
 </blockquote>
 
 <p style="font-size: 0.85rem; color: #81848a; margin-top: 2rem;"><em>Data sources: REcolorado MLS Q1 2026 Single-Family Residential Listing Export (Englewood, Colorado), pulled by selling303.com on April 2, 2026. Metro-wide statistics referenced from the <a href="https://www.dmarealtors.com/market-trends" rel="nofollow">DMAR Market Trends Report, March 2026 edition</a>. All data deemed reliable but not guaranteed.</em></p>

@@ -1,5 +1,5 @@
 ---
-title: "Best South Denver Neighborhoods for Move-Up Buyers (Q1 2026)"
+title: "Top Move-Up Neighborhoods in South Denver 2026"
 description: "Q1 2026 MLS data on South Denver move-up neighborhoods ($750K–$1.2M). Median prices, days on market, and $/sqft for Littleton, Parker, Highlands Ranch, Centennial, and more."
 date: "March 30, 2026"
 dateModified: "March 30, 2026"
@@ -11,7 +11,6 @@ heroSubtext: "There's no single \"best\" — there's the one that fits your life
 cardImage: {url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=500&fit=crop&q=80", alt: "South Denver neighborhood aerial view for move-up buyers"}
 cardStat: "$230/sqft"
 cardStatLabel: "lowest price per sqft (Parker)"
-ogImage: "https://selling303.com/images/og-default.jpg"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Littleton, Colorado"

@@ -202,7 +202,7 @@
   - Target keywords: closing costs Littleton CO, first-time buyer closing costs Denver, Littleton home buying costs 2026
 
 #### Day 25 — Monday, April 28
-- [x] **"Should You Build New in Parker or Buy Resale? A Cost-Per-Square-Foot Analysis"** *(drafted 2026-04-28)*
+- [x] **"Should You Build New in Parker or Buy Resale? A Cost-Per-Square-Foot Analysis"** *(drafted 2026-04-28 then deleted 2026-06-24 — Jacob removed; not used)*
   - Specialization: `/new-construction` | Geographic: `/parker`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Data comparison. Builder base price per sqft vs. resale comps, upgrade cost reality, lot premium analysis for Parker communities.
@@ -409,10 +409,12 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
 
 ---
 
+> **PLAN RETIRED — 2026-06-24.** The May 19 → June 3 extension below (Days 15–30) is the old ad-hoc blog plan. Every unshipped draft from this stretch was deleted and will not be used; the entries are kept only as a record of what was planned and why, for reference when building the next plan. A fresh blog plan and schedule will be created in a separate session. Note: the geographic/coverage summary tables further down still tally these now-deleted drafts — recompute coverage against live content, not this retired section.
+
 ### Week 3: May 19–25
 
 #### Day 15 — Tuesday, May 19
-- [ ] **"Castle Pines New Construction in 2026: A Builder Community Deep Dive"**
+- [x] **"Castle Pines New Construction 2026: Community Deep Dive"** *(drafted then deleted 2026-06-22 — Jacob removed; not used)*
   - Specialization: `/new-construction` | Geographic: `/castle-pines`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Updated builder community rundown for Castle Pines and Castle Pines North — current base pricing, lot premium ranges by community, builder incentive packages, what's selling fast vs. sitting, and the buyer representation nuances that matter at this price point.
@@ -420,23 +422,23 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: comparison-table (Castle Pines builders × pricing/incentive/timeline)
 
 #### Day 16 — Wednesday, May 20
-- [ ] **"The Englewood First-Time Buyer ZIP Code Guide: Comparing 80110, 80113, and 80111"**
+- [x] **"Englewood First-Time Buyer ZIP Code Guide: 80110, 80113, 80111 (2026)"** *(drafted then deleted 2026-06-22 — Jacob removed; not used)*
   - Specialization: `/first-time-homebuyers` | Geographic: `/englewood`
   - Type: Buyer advice / Local area topic | Funnel: TOFU
   - Angle: Englewood is technically three different markets depending on ZIP. 80110 (downtown/transit corridor), 80113 (residential mid-Englewood), and 80111 (border with Greenwood Village/Cherry Hills). Comparison of price points, walkability scores, typical home age, lot characteristics, and which ZIP fits which first-time buyer profile.
   - Target keywords: Englewood ZIP codes, 80110 80113 80111, first-time buyer Englewood neighborhoods, Englewood Colorado neighborhoods
-  - Visual: defined-term (flag-only — Phase 4 builder dependency)
+  - Visual: profile-card-grid (3 ZIP cards × name/pocket-label/price-band/best-for — overrode calendar `defined-term (flag-only)` advisory; Compelling Question Flow scored profile-card-grid 28 over comparison-table 25 and stretch ZIP-grid 18, canonical "which entity is right for me?" fit + mobile-dignity led; freshness penalty accepted, 2 days since last profile-card-grid ship)
 
 #### Day 17 — Thursday, May 21
-- [ ] **"The Greenwood Village Downsize Path: A Step-by-Step Playbook for Selling the Family Home and Buying the Right-Sized Replacement"**
+- [x] **"Greenwood Village Downsize: 7-Step First-Time Seller Playbook"** *(drafted then deleted 2026-06-22 — Jacob removed; not used)*
   - Specialization: `/first-time-homesellers` | Geographic: `/greenwood-village`
   - Type: Seller advice | Funnel: MOFU
   - Angle: Linear playbook for Greenwood Village homeowners selling the long-held family home for the first time. Step 1 pre-list audit and condition prep. Step 2 pricing strategy at the luxury tier. Step 3 capital gains exposure assessment. Step 4 replacement-housing search. Step 5 dual-transaction coordination. Step 6 closing logistics. Step 7 post-move financial reset.
   - Target keywords: downsize Greenwood Village, sell Greenwood Village home, GV first-time seller, Greenwood Village empty nester
-  - Visual: howto (flag-only — Phase 4 builder dependency)
+  - Visual: comparison-table (7 rows × 4 cols — Step / What it covers / Typical timeline / Cost of skipping). HowTo + 7× HowToStep schema (outer figure itemscope, parallel JSON-LD). Compelling Question Flow chose comparison-table (26) over decision-path (18, binary-fork mismatch) and stretch howto-step-flow (12, Phase 4 dependency). Calendar `howto (flag-only)` advisory overridden — Phase 4 builder dependency forced library fallback; comparison-table carries HowTo schema via parallel JSON-LD + itemscope wrapper, paying off the procedural sequence in scannable matrix form.
 
 #### Day 18 — Friday, May 22 (Memorial Day weekend slot)
-- [ ] **"South Denver Summer Market Kickoff: 5 Suburbs Active Buyers Are Targeting Memorial Day Weekend"**
+- [x] **"South Denver Summer Market Kickoff: 5 Suburbs Active Buyers Are Targeting Memorial Day Weekend"** *(drafted then deleted 2026-06-22 — Jacob removed; not used)*
   - Specialization: `/relocation` | Geographic: `/centennial`
   - Type: Local area topic / Market update | Funnel: TOFU
   - Angle: Memorial Day weekend summer-market positioning piece. The 5 South Denver suburbs that see the biggest relocation buyer activity over MDW (Centennial, Highlands Ranch, Parker, Littleton, Lakewood), why MDW kicks off the spring-into-summer relocation push, and the inventory-and-price snapshot for each as of late May.
@@ -444,7 +446,7 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: comparison-table (5 suburbs × 5 metrics — inventory/median/DOM/CP-to-LP/buyer profile)
 
 #### Day 19 — Saturday, May 23
-- [ ] **"How Lone Tree Move-Up Sellers Time the Luxury Hand-Off"**
+- [x] **"How Lone Tree Move-Up Sellers Time the Luxury Hand-Off"** *(drafted then deleted 2026-06-22 — Jacob removed; not used)*
   - Specialization: `/move-up-sellers` | Geographic: `/lone-tree`
   - Type: Seller advice | Funnel: BOFU
   - Angle: Lone Tree luxury move-up sellers ($1.5M–$3M) face a different timing problem than entry-level move-up sellers — buyer pools are shallower, days-on-market are longer, and dual-transaction coordination requires bridge financing or seller rent-back arrangements. The 2026 playbook for timing the sale and the replacement at the luxury tier.
@@ -452,7 +454,7 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: svg-chart (Lone Tree luxury DOM distribution by price band)
 
 #### Day 20 — Sunday, May 24
-- [ ] **"Lakewood Relocation Guide for West Metro Families in 2026"**
+- [x] **"Lakewood Relocation Guide for West Metro Families in 2026"** *(drafted then deleted 2026-06-22 — Jacob removed; not used)*
   - Specialization: `/relocation` | Geographic: `/lakewood`
   - Type: Local area topic | Funnel: TOFU
   - Angle: Family-focused Lakewood relocation guide. Belmar district vs. Green Mountain vs. southwest Lakewood, commute realities to downtown and DTC, school district lines (Jeffco), park and trail access (Bear Creek, Green Mountain Park), and price-tier breakdowns from $450K starter to $1M-plus executive.
@@ -460,27 +462,27 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: none
 
 #### Day 21 — Monday, May 25 (Memorial Day)
-- [ ] **"Castle Pines Move-Up Timing: When the Right Moment Is Actually Two Years Away"**
+- [x] **"Castle Pines Move-Up Timing: When the Right Moment Is Two Years Away"** *(drafted then deleted 2026-06-22 — Jacob removed; not used)*
   - Specialization: `/move-up-sellers` | Geographic: `/castle-pines`
   - Type: Seller advice | Funnel: BOFU
   - Angle: Counterintuitive timing argument for Castle Pines luxury move-up sellers. Why some 2026 sellers should wait until 2027–28 — equity acceleration scenarios, replacement-housing inventory cycles, capital gains threshold proximity, and the financial cost of holding vs. selling now. Includes a decision framework.
   - Target keywords: when to sell Castle Pines, Castle Pines move-up timing, hold or sell Castle Pines, luxury home timing 2026
-  - Visual: svg-chart (timing windows — sell-now vs. hold scenarios)
+  - Visual: single-metric-bar-chart (3 market scenarios × net delta from a 2-year wait — softening, flat, appreciating; April 2026 REcolorado MLS Castle Pines + Castle Pines North n=164, DMAR April 2026 metro context)
 
 ---
 
 ### Week 4: May 26 – June 1
 
 #### Day 22 — Tuesday, May 26
-- [ ] **"Why Lakewood Listings Sit on the Market in 2026 — and the Pricing Strategy That Moves Them"**
+- [x] **"Why Lakewood Listings Sit in 2026 — and What Actually Moves Them"** *(drafted then deleted 2026-06-22 — Jacob removed; not used)*
   - Specialization: `/expired-listings` | Geographic: `/lakewood`
   - Type: Seller advice | Funnel: BOFU
-  - Angle: Lakewood saw 61 withdrawn-or-expired listings in April 2026 (4.2% of total Jeffco residential exits). Diagnostic on what failed listings have in common — pricing relative to comparable closed listings, photo quality, timing within the listing window — and the pricing-and-marketing reset that recovers them.
+  - Angle: Lakewood saw 61 withdrawn-or-expired listings in April 2026 (23.5% of the 260-listing flow). Diagnostic on what failed listings have in common — pricing relative to comparable closed listings, late and small reductions, presentation and exposure gaps — and the 21-day pricing-and-marketing reset that recovers them. Counterintuitive data point: median expired list ($542,500) was LOWER than median closed original list ($580,000) — the killer isn't dollar amount, it's positioning relative to today's active comp set.
   - Target keywords: Lakewood home not selling, expired listing Lakewood, why Lakewood listings sit, relist Lakewood Colorado
-  - Visual: comparison-table (sold vs. expired Lakewood × pricing-strategy variables)
+  - Visual: comparison-table (sold vs. expired Lakewood × pricing-strategy variables — single-number cells only, Phrase-Cell Density Trip-Wire cleared; the qualitative "pattern that drives the outcome" row moved to body prose)
 
 #### Day 23 — Wednesday, May 27
-- [ ] **"Castle Pines Luxury Expired Listings: How to Reposition a $1.5M-plus Home That Didn't Sell"**
+- [x] **"Castle Pines Luxury Expired Listings: How to Reposition a $1.5M-plus Home That Didn't Sell"** *(drafted then deleted 2026-06-22 — Jacob removed; not used)*
   - Specialization: `/expired-listings` | Geographic: `/castle-pines`
   - Type: Seller advice | Funnel: BOFU
   - Angle: Luxury expired listings at the Castle Pines $1.5M-plus tier require a different recovery playbook than mid-market homes. Smaller buyer pool means longer DOM is normal, but stale luxury listings get aggressively discounted — sometimes 8–12% — once they cross the 90-day threshold. The pricing audit, presentation overhaul, and re-launch strategy that prevents the discount cascade.
@@ -488,23 +490,23 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: svg-chart (luxury price-cut cascade by DOM tier)
 
 #### Day 24 — Thursday, May 28
-- [ ] **"What $750K Gets You in Lakewood, Englewood, and Centennial Right Now"**
+- [x] **"What $750K Buys in Lakewood, Englewood, and Centennial"** *(drafted then deleted 2026-06-22 — Jacob removed; not used)*
   - Specialization: `/first-time-homebuyers` | Geographic: `/centennial`
   - Type: Buyer advice / Local area topic | Funnel: TOFU
   - Angle: Side-by-side $750K buying power across three South Denver markets that compete for mid-tier buyers. Square footage, age, lot size, single-family vs. townhome, neighborhood character, and commute differential. Lakewood west-metro, Englewood urban-edge, Centennial mid-suburb.
   - Target keywords: 750K home Denver suburbs, Lakewood vs Englewood vs Centennial, what 750K buys Denver, mid-tier home Denver
-  - Visual: comparison-table (3 cities × 8 metrics at $750K price point)
+  - Visual: comparison-table (3 cities × 8 metrics at $700K–$800K band — closings, median close, fin sqft, PSF, DIM, CP/OLP, active inventory, citywide April median; all single-number cells, Phrase-Cell Density Trip-Wire clear)
 
 #### Day 25 — Friday, May 29
-- [ ] **"Why Parker Move-Up Buyers Are Choosing Castle Pines New Construction"**
+- [x] **"Why Parker Move-Up Buyers Pick Castle Pines New Builds"** *(drafted then deleted 2026-06-22 — Jacob removed; not used)*
   - Specialization: `/new-construction` | Geographic: `/parker`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Migration pattern story — Parker move-up buyers stepping up to Castle Pines new construction at the $1M–$1.5M tier. The decision math: Parker resale appreciation captured, Castle Pines new-build customization, school district trade-offs, lot size differential, and HOA stack comparison. Why this migration accelerated in spring 2026.
   - Target keywords: Parker to Castle Pines move, move up from Parker new construction, Castle Pines new build buyer Parker, Douglas County move-up
-  - Visual: none
+  - Visual: two-path-diptych (Parker $1M-$1.5M resale path vs. Castle Pines $1M-$1.5M Canyons new construction path — 6 paired stats per card + per-path Microdata + parallel JSON-LD Dataset)
 
 #### Day 26 — Saturday, May 30
-- [ ] **"Castle Pines, Lone Tree, and Parker Builder Incentive Comparison: Spring 2026"**
+- [x] **"Castle Pines, Lone Tree, and Parker Builder Incentive Comparison: Spring 2026"** *(drafted then deleted 2026-06-22 — Jacob removed; not used)*
   - Specialization: `/new-construction` | Geographic: `/castle-pines`
   - Type: Buyer advice | Funnel: MOFU
   - Angle: Cross-builder incentive comparison across three active Douglas County new-construction markets. Rate buydowns, closing-cost credits, upgrade packages, lot-premium reductions. What's actually a real value vs. marketing veneer, and how 2026 incentives compare to the more aggressive 2024–25 packages.
@@ -512,7 +514,7 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: comparison-table (3 cities × 6 incentive categories)
 
 #### Day 27 — Sunday, May 31
-- [ ] **"Greenwood Village Relocation Guide: Why Empty-Nesters Make This Their Last Move"**
+- [x] **"Greenwood Village Relocation Guide: Why Empty-Nesters Make This Their Last Move"** *(drafted then deleted 2026-06-22 — Jacob removed; not used)*
   - Specialization: `/relocation` | Geographic: `/greenwood-village`
   - Type: Local area topic | Funnel: TOFU
   - Angle: Greenwood Village as the "last move" destination for affluent empty-nesters relocating from out of state — sub-$3M luxury, low-maintenance options, DTC professional access, Cherry Creek school district appeal for visiting grandchildren, and the maintenance-and-amenity profile that draws this buyer demographic.
@@ -520,7 +522,7 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Visual: none
 
 #### Day 28 — Monday, June 1
-- [ ] **"Why Littleton Spring Listings Sit on the Market — and How to Recover Them"**
+- [x] **"Why Littleton Spring Listings Sit on the Market — and How to Recover Them"** *(drafted then deleted 2026-06-22 — Jacob removed; not used)*
   - Specialization: `/expired-listings` | Geographic: `/littleton`
   - Type: Seller advice | Funnel: BOFU
   - Angle: Littleton had 67 withdrawn-or-expired listings in April 2026 — the highest absolute count of the nine South Denver suburbs. Diagnostic on the 3-county pricing confusion (Arapahoe vs. Jefferson vs. Douglas comparable sets), inventory absorption mismatch in the $675K median band, and the relist strategy that recovers a stalled spring Littleton listing.
@@ -532,15 +534,15 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
 ### Week 5: June 2–3
 
 #### Day 29 — Tuesday, June 2
-- [ ] **"Centennial Dual-Transaction Coordination: Selling and Buying in the Same May–June Window"**
+- [x] **"Centennial Dual-Transaction Playbook: May–June 2026"** *(drafted then deleted 2026-06-22 — Jacob removed; not used)*
   - Specialization: `/move-up-sellers` | Geographic: `/centennial`
   - Type: Seller advice | Funnel: BOFU
   - Angle: Step-by-step dual-transaction playbook for Centennial move-up sellers compressing both transactions into a single 30–45 day window during peak season. Equity-bridge mechanics, contingency-offer strategy, rent-back negotiation, escrow choreography, and the timing milestones that have to land in order.
   - Target keywords: dual transaction Centennial, sell and buy Centennial, move-up coordination Denver, simultaneous close Colorado
-  - Visual: howto (flag-only — Phase 4 builder dependency)
+  - Visual: comparison-table (7 milestones × 3 cols — What it covers / When it lands / Cost of skipping; parallel HowTo JSON-LD with 7× HowToStep entries, totalTime P45D; comparison-table won Compelling Question Flow over decision-path 21 and stretch settlement-statement variant 19, scoring 24)
 
 #### Day 30 — Wednesday, June 3
-- [ ] **"South Denver May 2026 Closings: What Move-Up Sellers Need to Know Heading Into June"**
+- [x] **"South Denver May 2026 Closings: What Move-Up Sellers Need to Know Heading Into June"** *(NOT drafted — old plan retired 2026-06-24; marked [x] only to keep the nightly task from picking it up. Re-slot under the fresh plan if still wanted.)*
   - Specialization: `/move-up-sellers` | Geographic: `/highlands-ranch`
   - Type: Market update | Funnel: TOFU
   - Angle: Monthly market update — May 2026 closings, pending pipeline heading into June, active inventory snapshot, and YoY comparison to May 2025. Anchored on Highlands Ranch with cross-suburb comparison table. Uses fresh DMAR May LMU plus Jacob's Stock/Flow MLS pulls dated June 1.

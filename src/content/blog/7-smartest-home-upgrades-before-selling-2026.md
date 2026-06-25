@@ -14,7 +14,6 @@ cardImage:
   alt: Home renovations and upgrades
 cardStat: "7 upgrades"
 cardStatLabel: "highest ROI before listing"
-ogImage: https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&h=630&fit=crop&q=80
 aboutPlaces:
   - South Denver Metro, Colorado
   - Arapahoe County, Colorado
@@ -57,6 +56,8 @@ relatedPosts:
     date: March 2026
 ---
 
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/move-up-sellers">move up sellers</a> in <a href="/neighborhoods/highlands-ranch">Highlands Ranch</a> and the broader South Denver Metro.</p>
+
 <div class="snippet-answer" style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-radius: 0 6px 6px 0;">
 <p style="margin: 0;"><strong>What are the smartest home upgrades to make before selling in 2026?</strong><br>
 The highest-ROI pre-listing upgrades are neutral paint, deep cleaning and declutter, curb appeal refresh, updated light fixtures, kitchen hardware and faucets, bathroom caulk and grout, and a professional staging consultation. According to <a href="https://www.dmarealtors.com" target="_blank" rel="noopener noreferrer">DMAR's February 2026 Market Trends Report</a>, well-staged, well-maintained homes in the Denver Metro are receiving two to three offers and selling at or above asking price.</p>
@@ -93,7 +94,7 @@ The highest-ROI pre-listing upgrades are neutral paint, deep cleaning and declut
 
 <p>Here's the thing: most sellers in <a href="/neighborhoods/highlands-ranch" style="color: var(--color-accent); font-weight: 600;">Highlands Ranch</a>, Littleton, Centennial, and across the South Denver Metro don't need to do a lot before listing. They need to do the <em>right</em> things. The upgrades that eliminate buyer hesitation, not the ones that add features buyers weren't looking for to begin with.</p>
 
-<p>This post is a practical guide to the seven upgrades that consistently move the needle — based on what buyers are responding to in the current market, what the data says about condition and presentation, and what a good listing agent will tell you before a single showing is scheduled.</p>
+<p>This post is a practical guide to the seven upgrades that consistently move the needle — based on what buyers are responding to in the current market, what the data says about condition and presentation, and what a good listing agent will tell you before a single showing is scheduled. If you're a <a href="/move-up-sellers" style="color: var(--color-accent); font-weight: 600;">move-up seller with strong equity</a>, the ROI math matters even more — every dollar you don't spend on the wrong upgrade is a dollar that stays in your down payment for the next house.</p>
 
 <h2 id="context">What Does the Current Market Actually Reward?</h2>
 
@@ -177,7 +178,7 @@ The highest-ROI pre-listing upgrades are neutral paint, deep cleaning and declut
 Before you spend a dollar on pre-listing prep, have a conversation with your listing agent. A good walkthrough takes 45 minutes and saves you from spending money in the wrong places — or from under-investing in the right ones.
 </blockquote>
 
-<p>If you'd like that conversation, call Jacob Stark at <a href="tel:3039970634" style="color: var(--color-accent); font-weight: 600;">303-997-0634</a> or <a href="https://calendly.com/jacob-realtor" target="_blank" rel="noopener" style="color: var(--color-accent); font-weight: 600;">schedule a call</a>. It's free, there's no obligation, and you'll leave with a clear picture of what your home actually needs before it hits the market.</p>
+<p>If you'd like that conversation, call Jacob Stark at <a href="tel:3039970634" style="color: var(--color-accent); font-weight: 600;">303-997-0634</a> or <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy" target="_blank" rel="noopener" style="color: var(--color-accent); font-weight: 600;">schedule a call</a>. It's free, there's no obligation, and you'll leave with a clear picture of what your home actually needs before it hits the market.</p>
 
 <p>And if you need recommendations for contractors, cleaners, stagers, or any other vendors in the South Denver area — reach out. I've worked with a lot of great people over the years and I'm happy to connect you with someone I trust.</p>
 

@@ -14,7 +14,6 @@ cardImage:
   alt: Suburban street for Parker vs Castle Pines comparison
 cardStat: "$1.1M"
 cardStatLabel: "Castle Pines median list price"
-ogImage: https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&h=630&fit=crop&q=80
 aboutPlaces:
   - Parker, Colorado
   - Castle Pines, Colorado
@@ -140,7 +139,7 @@ Parker offers deeper inventory and more price flexibility with a median sold pri
 If you're weighing these two markets and want to see what's actually available at your budget, I'm happy to pull a custom breakdown — no obligation, just real numbers for the specific price range and home type you're looking for.
 </blockquote>
 
-<p>Call me at <a href="tel:3039970634" style="color: var(--color-accent); font-weight: 600;">303-997-0634</a> or <a href="https://calendly.com/jacob-realtor" style="color: var(--color-accent); font-weight: 600;" target="_blank" rel="noopener">schedule a call</a>.</p>
+<p>Call me at <a href="tel:3039970634" style="color: var(--color-accent); font-weight: 600;">303-997-0634</a> or <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy" style="color: var(--color-accent); font-weight: 600;" target="_blank" rel="noopener">schedule a call</a>.</p>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 

@@ -1,5 +1,5 @@
 ---
-title: "Lone Tree New Construction: Builder Incentives and What They Actually Mean for Your Bottom Line"
+title: "Lone Tree New Construction Builder Incentives 2026"
 description: "Decode builder incentives in Lone Tree CO new construction — rate buydowns, closing cost credits, and upgrade packages. What's real value vs. marketing."
 date: "April 18, 2026"
 dateModified: "April 18, 2026"
@@ -10,7 +10,6 @@ heroLabel: "Buying"
 heroSubtext: "Builders in Lone Tree advertise five-figure incentives to move inventory. Some are worth every dollar. Others are marketing dressed up as a discount. Here's how to tell the difference."
 cardStat: "$40K+"
 cardStatLabel: "typical incentive value on the table"
-ogImage: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Lone Tree, Colorado"
@@ -268,7 +267,7 @@ relatedPosts:
 <p>It depends on the math. Many builders require preferred-lender use to access the full incentive — but that lender's rate and fees need to be benchmarked against at least one independent quote. If the builder-lender rate is 0.25 points higher, a meaningful portion of the advertised incentive erodes. Always run both scenarios side by side before committing.</p>
 
 <blockquote style="border-left: 4px solid #002a3a; padding: 1rem 1.5rem; background: #f4f7f9; margin: 2rem 0; font-style: normal;">
-<p style="margin: 0 0 0.75rem;"><strong>Thinking about a new construction home in Lone Tree?</strong> Jacob Stark represents buyers — not builders — and models the full incentive package against independent quotes so you know what the real dollar value is before you sign. Call 303-997-0634 or <a href="https://calendly.com/jacob-realtor" style="color: #002a3a; text-decoration: underline;">book a free new construction consultation</a>.</p>
+<p style="margin: 0 0 0.75rem;"><strong>Thinking about a new construction home in Lone Tree?</strong> Jacob Stark represents buyers — not builders — and models the full incentive package against independent quotes so you know what the real dollar value is before you sign. Call 303-997-0634 or <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy" style="color: #002a3a; text-decoration: underline;">book a free new construction consultation</a>.</p>
 </blockquote>
 
 <p style="font-size: 0.85rem; color: #81848a; margin-top: 2rem;"><em>Data sources: REcolorado MLS Q1 2026 listing exports for Lone Tree, filtered to single-family homes built in 2024 or later as a proxy for builder spec inventory; DMAR Market Trends Report, March 2026. Build-to-order custom homes and off-MLS direct builder sales are not included in the MLS-derived numbers. Builder incentive ranges reflect typical Q1 2026 offerings across South Denver new construction communities and are not guaranteed for any specific home or builder.</em></p>

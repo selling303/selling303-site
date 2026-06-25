@@ -10,7 +10,6 @@ heroLabel: "Market Update"
 heroSubtext: "Spring demand is absorbing inventory fast. For Centennial sellers sitting on an expired listing, the reset window just opened — here's how to use it."
 cardStat: "16 days"
 cardStatLabel: "median days in MLS, March 2026"
-ogImage: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Centennial, Colorado"
@@ -40,6 +39,8 @@ relatedPosts:
     description: "The most common reasons homes sit unsold in Arapahoe County and Douglas County — and what to do about it."
     date: "April 2, 2026"
 ---
+
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/expired-listings">owners with expired listings</a> in <a href="/neighborhoods/centennial">Centennial</a> and the broader South Denver Metro.</p>
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>What does the April 2026 South Denver market mean for expired listing sellers?</strong> Spring absorption is fast — pending sales rose 30.69% month-over-month and median days in MLS dropped to 16 days in March 2026. Centennial sellers sitting on an expired listing have a real pricing reset window open right now.
@@ -200,7 +201,7 @@ relatedPosts:
 <p>Centennial homes that closed in Q1 2026 averaged a 94% close-price-to-original-list-price ratio, with a median of 98%. Metro-wide, DMAR reported a 99.13% close-to-list ratio in March. The gap between 98% and 94% matters — it reflects the hit that overpriced listings take when they require reductions to clear. Pricing at list in week one protects that ratio.</p>
 
 <blockquote style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.5rem 1.75rem; margin: 2.5rem 0; border-radius: 0 8px 8px 0; font-size: 1.05rem; line-height: 1.6;">
-Sitting on an expired Centennial listing? The April 2026 reset window is open — but it won't stay open through summer. Call Jacob Stark at <strong>303-997-0634</strong>, visit <a href="https://selling303.com">selling303.com</a>, or <a href="https://calendly.com/jacob-realtor">book a free relist consultation</a> to walk through your specific numbers.
+Sitting on an expired Centennial listing? The April 2026 reset window is open — but it won't stay open through summer. Call Jacob Stark at <strong>303-997-0634</strong>, visit <a href="https://selling303.com">selling303.com</a>, or <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">book a free relist consultation</a> to walk through your specific numbers.
 </blockquote>
 
 <p style="font-size: 0.8rem; color: #81848a; font-style: italic; margin-top: 2rem;">Market data in this post sourced from the Denver Metro Association of REALTORS® (DMAR) March 2026 Market Trends Report and REcolorado MLS listing data for Centennial, Colorado (Q1 2026, pulled April 2, 2026). City-specific statistics reflect REcolorado data only; general market context references DMAR's published reports.</p>

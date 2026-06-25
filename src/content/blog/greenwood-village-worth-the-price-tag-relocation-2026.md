@@ -11,7 +11,6 @@ heroLabel: "Buying"
 heroSubtext: "Greenwood Village commands a luxury price tag — but a luxury price tag is only worth paying when the lifestyle behind it actually fits. Here's the honest read."
 cardStat: "$1.875M"
 cardStatLabel: "Q1 2026 median sale price"
-ogImage: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Greenwood Village, Colorado"
@@ -241,7 +240,7 @@ relatedPosts:
 <p><strong>What you could get cheaper elsewhere:</strong></p>
 
 <ul>
-<li>4,000–5,000 square feet of new construction (cheaper in Castle Pines, Lone Tree, or Parker — see the <a href="/blog/build-new-or-buy-resale-parker-cost-per-square-foot">Parker new build vs. resale analysis</a>)</li>
+<li>4,000–5,000 square feet of new construction (cheaper in Castle Pines, Lone Tree, or Parker)</li>
 <li>HOA-managed rec centers, trails, and pools (Highlands Ranch delivers four rec centers and 70+ miles of trails for under $800K)</li>
 <li>Walkable downtown character (Littleton's downtown and Parker's Mainstreet both deliver this; Greenwood Village does not have a traditional downtown)</li>
 <li>School-quality reputation alone (the metro has multiple high-performing districts; you don't need a Greenwood Village address to access them)</li>
@@ -269,7 +268,7 @@ relatedPosts:
 
 <p><strong>Off-market inventory matters more here than in most South Denver suburbs.</strong> Three Q1 closed sales on Preserve Parkway recorded as $0 list prices indicate pocket listings or pre-MLS deals. At the $2M+ tier, sellers often work with their listing agent to test the market quietly before going public. If you're searching only what's publicly listed, you're missing inventory. Working with a local agent who has access to off-market flow expands the choice set meaningfully — Jacob Stark coordinates with the listing agents active in this market regularly and can surface pocket listings that match a relocation buyer's criteria.</p>
 
-<p><strong>Remote buying works fine here.</strong> Greenwood Village transactions handle the same way as any other South Denver remote purchase — video walkthroughs, virtual inspections, electronic close, and a <a href="https://calendly.com/jacob-realtor">scheduled in-person visit</a> for one trip when the right home appears. The market is large enough and the agent network deep enough that out-of-state buyers don't get penalized on access. They do get penalized on bad fit, which is the larger reason to talk through the criteria carefully before flying in.</p>
+<p><strong>Remote buying works fine here.</strong> Greenwood Village transactions handle the same way as any other South Denver remote purchase — video walkthroughs, virtual inspections, electronic close, and a <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">scheduled in-person visit</a> for one trip when the right home appears. The market is large enough and the agent network deep enough that out-of-state buyers don't get penalized on access. They do get penalized on bad fit, which is the larger reason to talk through the criteria carefully before flying in.</p>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 
@@ -286,7 +285,7 @@ relatedPosts:
 <p>Both are luxury Arapahoe County municipalities, but Cherry Hills Village skews older estate, larger lots (one-acre minimums in much of the city), and even higher price points. Greenwood Village offers a wider price range — meaningful inventory between $1M and $3M — while Cherry Hills typically starts higher. Greenwood Village also includes the Denver Tech Center commercial core, while Cherry Hills is purely residential.</p>
 
 <blockquote>
-<p>Considering a relocation to Greenwood Village or weighing it against other South Denver suburbs? Jacob Stark coordinates relocation purchases across the South Denver Metro and can map your specific requirements against the live MLS to identify the right fit. Schedule a no-pressure conversation at <a href="https://calendly.com/jacob-realtor">calendly.com/jacob-realtor</a> or call 303-997-0634.</p>
+<p>Considering a relocation to Greenwood Village or weighing it against other South Denver suburbs? Jacob Stark coordinates relocation purchases across the South Denver Metro and can map your specific requirements against the live MLS to identify the right fit. <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">Schedule a no-pressure conversation</a> or call 303-997-0634.</p>
 </blockquote>
 
 <p style="font-size: 0.85rem; color: #666; margin-top: 2rem;"><em>Data attribution: Greenwood Village, Castle Pines, and Highlands Ranch single-family residential market statistics sourced from REcolorado MLS, Q1 2026 (January 1 – March 31, 2026). South Denver Metro median pulled from the Denver Metro Association of Realtors (DMAR) Market Trends Report, March 2026 release. Compiled by selling303.com on April 29, 2026.</em></p>

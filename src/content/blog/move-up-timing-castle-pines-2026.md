@@ -11,7 +11,6 @@ heroLabel: "Selling & Buying"
 heroSubtext: "Castle Pines doesn't have the inventory to forgive a sloppy timeline. Here's how move-up sellers coordinate two closings without renting a hotel for the in-between."
 cardStat: "77 days"
 cardStatLabel: "Castle Pines median DOM, Feb 2026"
-ogImage: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Castle Pines, Colorado"
@@ -41,6 +40,8 @@ relatedPosts:
     description: "Parker vs. Castle Pines on median price, inventory, lifestyle — and how to choose between them as a move-up buyer."
     date: "March 22, 2026"
 ---
+
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/move-up-sellers">move up sellers</a> in <a href="/neighborhoods/castle-pines">Castle Pines</a> and the broader South Denver Metro.</p>
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>How do you time a Castle Pines move-up without ending up between houses?</strong> Sell your home first and negotiate a 30 to 60-day rent-back. With 58 active listings and a 77-day median DOM in Feb 2026, Castle Pines doesn't forgive sloppy timing.
@@ -218,7 +219,7 @@ relatedPosts:
 <p>A bridge loan or HELOC can be worth the cost when the next home is irreplaceable, when school-year timing is non-negotiable, or when the family cannot live through showings on the existing home. Bridge loans currently price in the 8 to 10 percent range, so the carrying cost is real — but for a Castle Pines seller with strong equity who is buying into tighter inventory elsewhere, locking in the right home often outweighs the cost. The wrong scenario for a bridge loan is using it to stretch into a home the seller is not actually qualified to carry.</p>
 
 <blockquote style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin: 2rem 0; border-radius: 0 8px 8px 0;">
-<p><strong>Planning a move-up sale in Castle Pines?</strong> Jacob Stark builds the timeline before the listing goes live — sell-first, buy-first, or simultaneous, with the right bridge structure for your equity position. <a href="https://calendly.com/jacob-realtor">Schedule a Castle Pines move-up consultation</a> or call 303-997-0634 to map your two-transaction calendar.</p>
+<p><strong>Planning a move-up sale in Castle Pines?</strong> Jacob Stark builds the timeline before the listing goes live — sell-first, buy-first, or simultaneous, with the right bridge structure for your equity position. <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">Schedule a Castle Pines move-up consultation</a> or call 303-997-0634 to map your two-transaction calendar.</p>
 </blockquote>
 
 <p style="font-size: 0.85rem; color: #666; margin-top: 2rem;"><em>Market data sourced from the <a href="https://www.coloradorealtors.com" target="_blank" rel="noopener">Colorado Association of REALTORS®</a> (CAR) and <a href="https://www.dmarealtors.com" target="_blank" rel="noopener">Denver Metro Association of REALTORS®</a> (DMAR) Local Market Update for Castle Pines / Castle Pines North, February 2026, and the REcolorado® MLS Q1 2026 listing export for Castle Pines (current as of April 2, 2026). Bridge loan pricing referenced from current lender quotes and the <a href="https://www.freddiemac.com" target="_blank" rel="noopener">Freddie Mac</a> Primary Mortgage Market Survey, April 2026. All data deemed reliable but not guaranteed.</em></p>

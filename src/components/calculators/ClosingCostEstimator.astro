@@ -17,9 +17,14 @@
 interface Props {
   showHeader?: boolean;
   defaultSide?: "buyer" | "seller";
+  ctaHref?: string;
 }
 
-const { showHeader = true, defaultSide = "buyer" } = Astro.props;
+const {
+  showHeader = true,
+  defaultSide = "buyer",
+  ctaHref = "https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy",
+} = Astro.props;
 
 // --- Defaults ---
 const d_price = 600000;
@@ -350,7 +355,7 @@ const fmt = (v: number) =>
       <!-- CTA -->
       <div class="cce__cta">
         <a
-          href="https://calendly.com/jacob-realtor"
+          href={ctaHref}
           class="btn btn--primary btn--lg"
           target="_blank"
           rel="noopener"

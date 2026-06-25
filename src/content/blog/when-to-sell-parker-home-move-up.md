@@ -10,7 +10,6 @@ heroLabel: "Selling & Buying"
 heroSubtext: "You bought in Parker for a reason. But if that reason no longer fits, the equity you've built might be your ticket to the next chapter."
 cardStat: "5 signs"
 cardStatLabel: "you've outgrown your Parker home"
-ogImage: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Parker, Colorado"
@@ -51,6 +50,8 @@ relatedPosts:
       alt: "Real estate paperwork and cost breakdown for selling in Colorado"
     date: "March 28, 2026"
 ---
+
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/move-up-sellers">move up sellers</a> in <a href="/neighborhoods/parker">Parker</a> and the broader South Denver Metro.</p>
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>When should you sell your Parker home and move up?</strong> The right time to sell a Parker, Colorado home and upgrade is when your equity position, lifestyle needs, and local market conditions all point in the same direction — and for many Parker homeowners in spring 2026, that convergence is happening now.
@@ -165,7 +166,7 @@ relatedPosts:
 <p>Parker homeowners most commonly upgrade within Douglas County — to larger homes in Parker's established neighborhoods like The Pinery or Stonegate, to Castle Pines for a more exclusive community feel, or to Highlands Ranch for proximity to the DTC employment corridor. Some move to Lone Tree or Greenwood Village for shorter commutes to central Denver. The destination depends on whether the priority is more square footage, better location, or a lifestyle shift.</p>
 
 <blockquote style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin: 2rem 0; border-radius: 0 8px 8px 0;">
-<p><strong>Thinking about your next move from Parker?</strong> Jacob Stark coordinates move-up transactions across Douglas County — from pricing your current home to negotiating the purchase of your next one. <a href="https://calendly.com/jacob-realtor">Schedule a move-up strategy call</a> or call directly at 303-997-0634.</p>
+<p><strong>Thinking about your next move from Parker?</strong> Jacob Stark coordinates move-up transactions across Douglas County — from pricing your current home to negotiating the purchase of your next one. <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">Schedule a move-up strategy call</a> or call directly at 303-997-0634.</p>
 </blockquote>
 
 <p style="font-size: 0.85rem; color: #6b7280; margin-top: 2rem;">Market data sourced from the <a href="https://www.dmarealtors.com/market-trends-reports" target="_blank" rel="noopener">DMAR Market Trends Report, March 2026</a> and REcolorado MLS Q1 2026 listing data. All data deemed reliable but not guaranteed.</p>

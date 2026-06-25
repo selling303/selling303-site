@@ -11,7 +11,6 @@ heroLabel: "Selling"
 heroSubtext: "Fresh April closings across nine South Denver suburbs and what they signal for move-up timing in May."
 cardStat: "1,085"
 cardStatLabel: "South Denver April closings"
-ogImage: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Highlands Ranch, Colorado"
@@ -48,6 +47,8 @@ relatedPosts:
     description: "Opportunity-cost analysis for move-up sellers tempted to wait for a better market."
     date: "May 3, 2026"
 ---
+
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/move-up-sellers">move up sellers</a> in <a href="/neighborhoods/highlands-ranch">Highlands Ranch</a> and the broader South Denver Metro.</p>
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>How did April 2026 close in South Denver?</strong> 1,085 residential listings closed across nine South Denver suburbs, with 1,208 already under contract heading into May — meaning May volume should outpace April.
@@ -255,7 +256,7 @@ relatedPosts:
 <p>Of the 1,367 South Denver residential listings that exited the market in April 2026 (closed, withdrawn, or expired combined), 79.4% closed and 20.6% came off without selling. Littleton and Lakewood saw the highest absolute Withdrawn-plus-Expired counts. The takeaway: most listings sell, but pricing and presentation still separate the 4-in-5 that close from the 1-in-5 that don't.</p>
 
 <blockquote>
-<p>Thinking about a move-up sale in Highlands Ranch, Centennial, Parker, or anywhere across South Denver this spring? Call Jacob Stark at 303-997-0634 or <a href="https://calendly.com/jacob-realtor">book a free strategy session</a> at selling303.com.</p>
+<p>Thinking about a move-up sale in Highlands Ranch, Centennial, Parker, or anywhere across South Denver this spring? Call Jacob Stark at 303-997-0634 or <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">book a free strategy session</a> at selling303.com.</p>
 </blockquote>
 
 <p style="font-size: 0.85rem; color: #555; margin-top: 2rem;"><em>Data sources: REcolorado MLS (pulled May 3, 2026, deduplicated for IRES cross-listings); DMAR March 2026 Market Trends Report; NAR Existing-Home Sales statistical framework. Highlands Ranch median close price ($729,500), median DIM (8 days), and median close-to-list ratio (99%) calculated from the April 2026 REcolorado closed-listings export for Highlands Ranch (n=131).</em></p>

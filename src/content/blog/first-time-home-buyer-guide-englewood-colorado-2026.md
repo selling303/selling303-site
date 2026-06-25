@@ -13,7 +13,6 @@ cardImage:
   alt: "Charming single-family home in Englewood Colorado neighborhood"
 cardStat: "$655K"
 cardStatLabel: "Englewood median SFH"
-ogImage: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Englewood, Colorado"
@@ -188,5 +187,5 @@ relatedPosts:
 
 <blockquote style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin: 2rem 0; border-radius: 4px;">
 <p style="margin: 0 0 0.5rem; font-weight: 600;">Thinking about buying your first home in Englewood?</p>
-<p style="margin: 0;">Jacob Stark helps first-time buyers navigate the South Denver Metro — from pre-approval through closing. <a href="https://calendly.com/jacob-realtor">Book a free consultation</a> to talk through your options and see what's realistic for your budget.</p>
+<p style="margin: 0;">Jacob Stark helps first-time buyers navigate the South Denver Metro — from pre-approval through closing. <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">Book a free consultation</a> to talk through your options and see what's realistic for your budget.</p>
 </blockquote>

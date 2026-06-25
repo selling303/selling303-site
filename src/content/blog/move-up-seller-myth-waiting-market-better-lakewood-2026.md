@@ -11,7 +11,6 @@ heroLabel: "Selling"
 heroSubtext: "The 'wait until the market gets better' instinct sounds responsible. In Lakewood, the data shows the opposite — every quarter of waiting widens the move-up spread, erodes equity, and adds DOM to the next sale."
 cardStat: "$13K"
 cardStatLabel: "Lakewood YoY median price drop (Feb)"
-ogImage: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Lakewood, Colorado"
@@ -41,6 +40,8 @@ relatedPosts:
     description: "Full closing-cost and net-sheet breakdown for Colorado sellers — commission, title, transfer, and concessions."
     date: "March 12, 2026"
 ---
+
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/move-up-sellers">move up sellers</a> in <a href="/neighborhoods/lakewood">Lakewood</a> and the broader South Denver Metro.</p>
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>Is waiting for a better market the right call for a Lakewood move-up seller?</strong> The Lakewood single-family median fell 2.0% YoY to $636,900 in February 2026, DOM climbed to 39 days, and new listings surged 41.2%. Waiting costs equity and leverage.
@@ -226,7 +227,7 @@ relatedPosts:
 <p>Most Lakewood move-up sellers stay west of I-25 — common landing spots include foothills-west Lakewood, southwest Littleton, the Bear Creek/Green Mountain corridor, and western Highlands Ranch. The Q1 2026 spring market data shows Highlands Ranch leading South Denver move-up absorption with an 18-day median days in MLS, making it the fastest-moving replacement market for Lakewood sellers ready to upgrade. Coordination strategies are walked through in detail at <a href="/blog/selling-centennial-buying-highlands-ranch-coordinate-transactions">selling and buying across two South Denver suburbs</a>.</p>
 
 <blockquote>
-Thinking about a move-up sale in Lakewood and not sure whether to list now or keep waiting? Call Jacob Stark at 303-997-0634 or book a 20-minute consult at <a href="https://calendly.com/jacob-realtor">calendly.com/jacob-realtor</a> to walk through the equity math, the move-up spread, and a real Lakewood listing timeline.
+Thinking about a move-up sale in Lakewood and not sure whether to list now or keep waiting? Call Jacob Stark at 303-997-0634 or <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">book a 20-minute consult</a> to walk through the equity math, the move-up spread, and a real Lakewood listing timeline.
 </blockquote>
 
 <p style="font-size: 0.875rem; color: #81848a; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e5e5e5;"><em>Data sources: Colorado Association of REALTORS / Denver Metro Association of REALTORS Local Market Update for February 2026 (current as of March 4, 2026); DMAR Market Trends Report, March 2026 (released April 2026); REcolorado MLS Q1 2026 single-family residential listing exports for Lakewood, Colorado. All data deemed reliable but not guaranteed.</em></p>

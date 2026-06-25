@@ -12,7 +12,6 @@ cardImage:
   alt: "Suburban home in Highlands Ranch Colorado with a for sale sign on a sunny day"
 cardStat: "64 days"
 cardStatLabel: "median DOM before expiration"
-ogImage: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Highlands Ranch, Colorado"
@@ -176,7 +175,7 @@ It depends on what went wrong. If your agent was strong on marketing and communi
 As of early 2026, median days on market across the Denver Metro is approximately 64 days according to DMAR. Highlands Ranch typically tracks near that median, but homes in the $650K–$800K range can sit considerably longer when priced ahead of where active buyers are shopping — especially when competing against builder incentives in nearby new construction communities.</p>
 
 <blockquote>
-Your Highlands Ranch listing expired for a specific reason — and that reason is fixable. Jacob Stark specializes in diagnosing expired listings and building a relist strategy that actually closes. <a href="https://calendly.com/jacob-realtor" target="_blank" rel="noopener noreferrer" style="color: #002a3a; font-weight: 600;">Schedule a free expired listing review</a> — no pressure, no commitment, just an honest diagnosis and a clear path forward.
+Your Highlands Ranch listing expired for a specific reason — and that reason is fixable. Jacob Stark specializes in diagnosing expired listings and building a relist strategy that actually closes. <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy" target="_blank" rel="noopener noreferrer" style="color: #002a3a; font-weight: 600;">Schedule a free expired listing review</a> — no pressure, no commitment, just an honest diagnosis and a clear path forward.
 </blockquote>
 
 <p class="legal-disclaimer" style="margin-top: 2rem; padding: 1rem; background: #f8f8f8; border-left: 3px solid #ccc; font-size: 0.85rem; color: #666;"><em>This content is for informational purposes only and does not constitute legal, financial, or tax advice. Consult a qualified professional for advice specific to your situation. Market data referenced is sourced from DMAR and other publicly available real estate datasets.</em></p>

@@ -44,11 +44,6 @@ relatedPosts:
     tag: "Buying"
     description: "Family-focused 2026 relocation guide — price points, commute times, HOA landscape, school district, and the remote buying process."
     date: "April 19, 2026"
-  - slug: "build-new-or-buy-resale-parker-cost-per-square-foot"
-    title: "Build New or Buy Resale in Parker? Cost-Per-Sqft Math (2026)"
-    tag: "Buying"
-    description: "Q1 2026 resale PSF vs. builder base PSF, lot premiums, design center math, and which path actually pencils for Parker buyers."
-    date: "April 28, 2026"
 cta:
   heading: "Thinking About Parker?"
   text: "Whether you're moving to Parker or selling your home here, I can give you a clear read on the market and help you make a confident decision."

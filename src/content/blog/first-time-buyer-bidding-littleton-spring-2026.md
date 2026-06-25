@@ -10,7 +10,6 @@ heroLabel: "Buying"
 heroSubtext: "Entry-level Littleton homes are closing above asking with single-digit days on market this spring. Here is how a first-time buyer writes an offer that actually wins."
 cardStat: "23 days"
 cardStatLabel: "Littleton Q1 median DIM"
-ogImage: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Littleton, Colorado"
@@ -44,6 +43,8 @@ relatedPosts:
     description: "Entry-level pricing, FHA thresholds, and walkable neighborhoods for first-time buyers in Englewood."
     date: "April 5, 2026"
 ---
+
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/first-time-homebuyers">first time homebuyers</a> in <a href="/neighborhoods/littleton">Littleton</a> and the broader South Denver Metro.</p>
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>How should a first-time buyer bid in Littleton's spring 2026 market?</strong> Entry-level Littleton homes under $600,000 are closing at 100 to 107 percent of list price in single-digit days, so a winning first-time buyer offer pairs a clean escalation clause, a calibrated appraisal gap, and inspection flexibility — not the highest price on the page.
@@ -332,7 +333,7 @@ relatedPosts:
 
 <blockquote style="border-left: 4px solid #002a3a; padding: 1rem 1.5rem; background: #f4f7f9; margin: 2rem 0; border-radius: 0 6px 6px 0;">
 <p style="margin: 0 0 0.75rem;">Thinking about buying your first home in Littleton this spring? The right offer strategy for your bracket and your budget is specific — not generic. Jacob Stark walks first-time buyers through the exact offer structure that fits their situation before they ever write one.</p>
-<p style="margin: 0;"><a href="https://calendly.com/jacob-realtor" style="color: #002a3a; font-weight: 600;">Schedule a free first-time buyer consultation →</a> or call Jacob Stark at 303-997-0634.</p>
+<p style="margin: 0;"><a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy" style="color: #002a3a; font-weight: 600;">Schedule a free first-time buyer consultation →</a> or call Jacob Stark at 303-997-0634.</p>
 </blockquote>
 
 <p style="font-size: 0.85rem; color: #81848a; margin-top: 2rem;">Data sources: REcolorado MLS Q1 2026 Littleton single-family residential exports (pulled April 2026 by Jacob Stark). DMAR Market Trends Report, March 2026. Colorado Real Estate Commission Contract to Buy and Sell forms, 2026 edition. Concession data from DMAR Market Trends Report, March 2026.</p>

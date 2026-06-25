@@ -10,7 +10,6 @@ heroLabel: "Selling"
 heroSubtext: "What actually comes off your Arapahoe County proceeds — the fees, credits, and surprise line items no one warns first-time sellers about."
 cardStat: "~8–10%"
 cardStatLabel: "total cost on a Centennial sale"
-ogImage: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Arapahoe County, Colorado"
@@ -44,6 +43,8 @@ relatedPosts:
     description: "A transparent breakdown of what listing and buyer's agents actually do."
     date: "April 4, 2026"
 ---
+
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/first-time-homesellers">first time homesellers</a> in <a href="/neighborhoods/centennial">Centennial</a> and the broader South Denver Metro.</p>
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>How much does it really cost to sell a home in Arapahoe County, Colorado?</strong> Plan for roughly 8–10% of your sale price once you stack commission, title, closing fees, HOA charges, tax proration, and buyer concessions. On a $700,000 Centennial median, that's about $55,000–$70,000 before you see net proceeds.
@@ -230,7 +231,7 @@ relatedPosts:
 <p>Yes. The Centennial Q1 2026 market closed at a 98% median close-to-list ratio across 269 single-family sales (REcolorado MLS data), with a median 13 days in the MLS — but averages stretched to 39 days, meaning a meaningful slice of homes sat longer and negotiated harder. Concessions of 1–3% of sale price toward rate buydowns, closing costs, or repair credits are a common line on Arapahoe County settlement statements in 2026.</p>
 
 <blockquote style="border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin: 2rem 0; background: #f4f7f9; border-radius: 0 8px 8px 0;">
-Thinking about selling in Centennial, Littleton, or anywhere else in Arapahoe County? Jacob Stark builds every first-time seller a line-by-line net sheet <em>before</em> you list — not at the settlement table. Call Jacob at 303-997-0634 or <a href="https://calendly.com/jacob-realtor">book a no-pressure net sheet review</a> and see exactly what your sale will net.
+Thinking about selling in Centennial, Littleton, or anywhere else in Arapahoe County? Jacob Stark builds every first-time seller a line-by-line net sheet <em>before</em> you list — not at the settlement table. Call Jacob at 303-997-0634 or <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">book a no-pressure net sheet review</a> and see exactly what your sale will net.
 </blockquote>
 
 <p style="font-size: 0.85rem; color: #81848a; margin-top: 2rem;"><em>Data sources: REcolorado MLS closed single-family residential sales, Centennial CO, January 1 – March 31, 2026 (n=269). DMAR Market Trends Report, March 2026. Net sheet estimates reflect typical Arapahoe County title company fee ranges and current market concession norms; individual transactions vary. Not tax or legal advice — consult your CPA and closing attorney for your specific situation.</em></p>

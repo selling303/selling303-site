@@ -1,5 +1,5 @@
 ---
-title: "Littleton vs. Highlands Ranch: Which South Denver Suburb Fits Your Family?"
+title: "Littleton vs. Highlands Ranch: Which Suburb Fits You?"
 description: "Comparing South Denver suburbs: price, commute, lifestyle, schools. Which neighborhood fits your family?"
 date: "March 28, 2026"
 dateModified: "March 30, 2026"
@@ -11,7 +11,6 @@ heroSubtext: "Two popular choices, very different personalities. A side-by-side 
 cardImage: {url: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&h=500&fit=crop&q=80", alt: "Suburban homes in Littleton and Highlands Ranch comparison"}
 cardStat: "$19K"
 cardStatLabel: "median price gap"
-ogImage: "https://selling303.com/images/og-default.jpg"
 aboutPlaces:
   - "Littleton, Colorado"
   - "Highlands Ranch, Colorado"
@@ -45,6 +44,8 @@ relatedPosts:
     image: {url: "https://images.unsplash.com/photo-1582407947092-40bf940bb514?w=800&h=500&fit=crop&q=80", alt: "Home sitting on the market"}
     date: "April 2, 2026"
 ---
+
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/relocation">buyers considering a relocation</a> in <a href="/neighborhoods/littleton">Littleton</a> and the broader South Denver Metro.</p>
 
 <p><strong>Q: Should I move to Littleton or Highlands Ranch?</strong><br>
 <strong>A:</strong> Both are strong South Denver choices at similar price points ($703K vs $718.5K SFH median, Feb 2026, DMAR). Littleton: established walkability and character. Highlands Ranch: newer construction and planned community amenities. Your lifestyle priorities decide which fits.</p>

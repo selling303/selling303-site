@@ -10,7 +10,6 @@ heroLabel: "Buying"
 heroSubtext: "Littleton is one of the most-searched South Denver suburbs by relocation buyers — and one of the most-confusing once you start touring. The 3-county mailing-address quirk, the schools-by-attendance-zone reality, and the April 2026 price tiers, all in one guide."
 cardStat: "$650K"
 cardStatLabel: "Littleton median close (Apr 2026)"
-ogImage: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Littleton, Colorado"

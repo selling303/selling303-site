@@ -11,7 +11,6 @@ heroLabel: "Selling"
 heroSubtext: "16 of 22 Highlands Ranch listings that expired in April 2026 had already cut their price — 7 of them by 5% or more. The lever that saves a stalled listing usually isn't price. Here's what actually is."
 cardStat: "7 of 22"
 cardStatLabel: "HR expired after 5%+ cut, Apr 2026"
-ogImage: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "Highlands Ranch, Colorado"
   - "Douglas County, Colorado"
@@ -41,6 +40,8 @@ relatedPosts:
     description: "Q1 2026 move-up data for South Denver — Highlands Ranch, Parker, and Castle Pines compared on price, speed, and inventory."
     date: "April 26, 2026"
 ---
+
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/expired-listings">owners with expired listings</a> in <a href="/neighborhoods/highlands-ranch">Highlands Ranch</a> and the broader South Denver Metro.</p>
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>Why don't Highlands Ranch price reductions always work?</strong> Cut size isn't the dominant variable. Of 22 HR listings that expired in April 2026, 16 had already cut price — 7 of them by 5%+. Timing and the underlying reason matter more.
@@ -94,15 +95,7 @@ relatedPosts:
 
 <!-- Visual styling provided by /css/aeo-visuals.css (loaded via BaseLayout). Class: .aeo-chart-figure -->
 
-<figure class="aeo-chart-figure" aria-labelledby="hr-april-2026-dim-by-outcome" itemscope itemtype="https://schema.org/Dataset" role="figure">
-<meta itemprop="name" content="Median days in MLS by sale outcome — Highlands Ranch closed and expired listings, April 2026" />
-<meta itemprop="description" content="Median days in MLS for Highlands Ranch single-family residential listings closed or expired in April 2026, bucketed by close-price-to-original-list-price ratio." />
-<meta itemprop="temporalCoverage" content="2026-04-01/2026-04-30" />
-<meta itemprop="spatialCoverage" content="Highlands Ranch, Douglas County, Colorado" />
-<meta itemprop="variableMeasured" content="Median days in MLS (DIM) by close-to-original-list ratio bucket" />
-<meta itemprop="creator" content="Jacob Stark" />
-<meta itemprop="publisher" content="selling303.com" />
-<meta itemprop="isBasedOn" content="REcolorado MLS Market Analysis Summary, residential listings closed/expired/withdrawn April 1–30, 2026, Highlands Ranch, deduplicated for IRES cross-listings" />
+<figure class="aeo-chart-figure" aria-labelledby="hr-april-2026-dim-by-outcome" role="figure">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" style="width:100%; height:auto; max-width:800px; display:block; margin:1.5rem auto;" role="img">
 <title>How Highlands Ranch, Colorado Listings Clear by Sale-Outcome Bucket — April 2026</title>
 <desc>Bar chart of median days in MLS by sale outcome for Highlands Ranch, Colorado single-family residential listings during April 2026. Listings that sold at or above 100 percent of original list price (n equals 65) posted a median 3 days in MLS. Listings that sold at 95 to 99 percent of original list price (n equals 44) posted 21 days. Listings that sold at 90 to 94 percent of original list price (n equals 9) posted 70 days. Listings that sold below 90 percent of original list price (n equals 10) posted 164 days. Listings that expired without selling (n equals 22) posted 87 days. Days in MLS (DIM) is the median number of days a listing was actively marketed before going under contract or expiring. Source: REcolorado MLS Market Analysis Summary, April 1 to April 30, 2026, Highlands Ranch, deduplicated for IRES cross-listings.</desc>

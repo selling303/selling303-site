@@ -10,7 +10,6 @@ heroLabel: "Buying"
 heroSubtext: "Lakewood is Jefferson County's largest city and one of the most accessible entry points in the Denver Metro — here's what first-time buyers need to know before they start shopping."
 cardStat: "$600K"
 cardStatLabel: "Lakewood April 2026 median sale"
-ogImage: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Lakewood, Colorado"
@@ -42,6 +41,8 @@ relatedPosts:
     description: "What first-time buyers in Littleton actually pay at closing — line-item by line-item."
     date: "April 27, 2026"
 ---
+
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/first-time-homebuyers">first time homebuyers</a> in <a href="/neighborhoods/lakewood">Lakewood</a> and the broader South Denver Metro.</p>
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <p style="margin: 0; font-size: 1.05rem;"><strong>Is Lakewood, Colorado a good place for first-time home buyers in 2026?</strong></p>
@@ -106,13 +107,28 @@ relatedPosts:
 
 <p>Generic price ranges don't help you write an offer. The question first-time buyers actually need answered is which path their budget actually buys — a lower-end single-family home or a higher-end condo / townhome. The diptych below maps each path against current April 2026 REcolorado MLS data (n=864 across closed, pending, expired, and withdrawn Lakewood listings, pulled May 3, 2026).</p>
 
-<div style="margin: 2rem 0;" itemscope itemtype="https://schema.org/Dataset" aria-labelledby="price-tiers">
-<meta itemprop="name" content="Lakewood Colorado first-time buyer two-path comparison April 2026">
-<meta itemprop="temporalCoverage" content="2026-04-01/2026-05-01">
-<meta itemprop="spatialCoverage" content="Lakewood, Colorado, Jefferson County">
-<meta itemprop="creator" content="Jacob Stark, selling303.com">
-<meta itemprop="publisher" content="REcolorado MLS">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Lakewood, Colorado First-Time Buyer Two-Path Comparison (April 2026)",
+  "description": "Two-path comparison of what a first-time-buyer budget buys in Lakewood, Colorado as of April 2026. Path 1, single-family home: 425,000 to 550,000 dollars, 1,000 to 1,800 finished square feet, 1955 to 1985 build era, concentrated in ZIP codes 80214, 80232, and 80227, with lot ownership and no HOA. Path 2, condo or townhome: 300,000 to 450,000 dollars, 900 to 1,400 finished square feet, 1970s-to-new build era, concentrated in ZIP codes 80226 (Belmar) and 80214, carrying 200 to 600 dollar monthly HOA dues and FHA-approval requirements. Built from REcolorado MLS Market Analysis Summary data on 864 Lakewood closed, pending, expired, and withdrawn residential listings, pulled May 3, 2026.",
+  "url": "https://selling303.com/blog/first-time-home-buyer-guide-lakewood-colorado-2026#price-tiers",
+  "temporalCoverage": "2026-04-01/2026-05-01",
+  "spatialCoverage": {"@type": "Place", "name": "Lakewood, Colorado", "containedInPlace": {"@type": "AdministrativeArea", "name": "Jefferson County, Colorado"}},
+  "isBasedOn": [
+    {"@type": "CreativeWork", "name": "REcolorado MLS Market Analysis Summary, Lakewood, Colorado residential listings, April 1 to April 30, 2026", "datePublished": "2026-05-03"}
+  ],
+  "creator": {"@type": "Person", "name": "Jacob Stark", "jobTitle": "Realtor", "url": "https://selling303.com"},
+  "publisher": {"@type": "Organization", "name": "selling303.com", "url": "https://selling303.com"},
+  "variableMeasured": [
+    {"@type": "PropertyValue", "name": "Path price range", "unitText": "USD", "minValue": 300000, "maxValue": 550000},
+    {"@type": "PropertyValue", "name": "Finished square footage", "unitText": "square feet", "minValue": 900, "maxValue": 1800}
+  ]
+}
+</script>
 
+<div style="margin: 2rem 0;" aria-labelledby="price-tiers">
 <div style="background: #002a3a; color: #fff; padding: 1.75rem 1.5rem 1.5rem; border-radius: 8px 8px 0 0; text-align: center;">
 <div style="font-size: 0.75rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.65rem;">For First-Time Buyers</div>
 <div style="font-size: 1.5rem; font-weight: 700; line-height: 1.35; max-width: 640px; margin: 0 auto;">What does $400K–$550K actually buy in Lakewood, Colorado?</div>
@@ -212,7 +228,7 @@ relatedPosts:
 <blockquote style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.5rem; margin: 2rem 0; border-radius: 0 8px 8px 0;">
 <p style="margin: 0 0 0.5rem; font-size: 1.1rem;"><strong>Thinking about your first home in Lakewood?</strong></p>
 <p style="margin: 0 0 1rem;">Jacob Stark has sold over $46 million in South Denver and west-side homes and works specifically with first-time buyers navigating their first MLS purchase. Get a clear shopping plan before you start touring — pricing, lender prep, ZIP fit, FHA strategy.</p>
-<p style="margin: 0;"><strong>Call Jacob at 303-997-0634</strong> or <a href="https://calendly.com/jacob-realtor">book a 30-minute first-time-buyer consultation</a>.</p>
+<p style="margin: 0;"><strong>Call Jacob at 303-997-0634</strong> or <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">book a 30-minute first-time-buyer consultation</a>.</p>
 </blockquote>
 
 <p style="font-size: 0.875rem; color: #555; margin-top: 2rem;"><em>Data sources: REcolorado MLS Market Analysis Summary, Lakewood, Colorado, April 1–30, 2026 (n=864), pulled May 3, 2026, deduplicated for IRES cross-listings; REcolorado MLS Q1 2026 Lakewood single-family residence pulls; <a href="https://www.dmarealtors.com/market-trends">DMAR March 2026 Market Trends Report</a>; <a href="https://www.freddiemac.com/pmms">Freddie Mac Primary Mortgage Market Survey</a>; <a href="https://www.hud.gov/program_offices/housing/sfh/lender/origination/mortgage_limits">HUD FHA Mortgage Limits, 2026, Jefferson County, Colorado</a>.</em></p>

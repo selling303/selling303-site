@@ -11,7 +11,6 @@ heroSubtext: "A step-by-step look at every stage of the closing process — from
 cardImage: {url: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=500&fit=crop&q=80", alt: "Closing paperwork and house keys on table"}
 cardStat: "30 days"
 cardStatLabel: "avg closing timeline"
-ogImage: "https://selling303.com/images/og-default.jpg"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Arapahoe County, Colorado"
@@ -50,6 +49,8 @@ relatedPosts:
     image: {url: "https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=800&h=500&fit=crop&q=80", alt: "Real estate agent explaining commission"}
     date: "April 4, 2026"
 ---
+
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/first-time-homebuyers">first time homebuyers</a> in <a href="/neighborhoods/centennial">Centennial</a> and the broader South Denver Metro.</p>
 
 <p><strong>What happens after you accept an offer on your home?</strong><br>
 <strong>A:</strong> After accepting an offer on your South Denver Metro home, the typical closing timeline runs about 30 days. That stretch covers disclosures, the inspection period, appraisal, title work, mortgage approval, and a final walkthrough — before you sign papers and hand over the keys. Most of it happens behind the scenes. Here's exactly what to expect at each step, and who's handling what.</p>

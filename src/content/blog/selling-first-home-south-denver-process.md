@@ -10,7 +10,6 @@ heroLabel: "Selling"
 heroSubtext: "You bought your first home. Now you're selling it. Here's what the process actually looks like — and what catches most first-time sellers off guard."
 cardStat: "63%"
 cardStatLabel: "sellers offering concessions"
-ogImage: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Centennial, Colorado"
@@ -40,6 +39,8 @@ relatedPosts:
     description: "Equity math, timeline, contingency options, and bridge strategies for dual transactions."
     date: "April 11, 2026"
 ---
+
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/first-time-homesellers">first time homesellers</a> in <a href="/neighborhoods/centennial">Centennial</a> and the broader South Denver Metro.</p>
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>What should first-time sellers in South Denver expect from the selling process?</strong> Expect to net less than your sale price suggests, budget 7–10% for total selling costs, and prepare for inspection negotiations — 63% of Denver Metro sellers offered concessions in March 2026.
@@ -214,7 +215,7 @@ relatedPosts:
 
 <p>From prep to proceeds, a well-executed first-time sale in Centennial takes roughly 10 to 14 weeks. Knowing that timeline upfront — and planning your next housing move around it — prevents the scramble that catches so many first-time sellers off guard.</p>
 
-<p>That said, this is the ideal arc, not the only one. If your situation calls for a faster sale — a job change, relocation, family timing, or a personal deadline — a compressed timeline is often workable with the right strategy. <a href="https://calendly.com/jacob-realtor">Reach out and we can walk through what's realistic</a> for your specific window before you commit to a plan.</p>
+<p>That said, this is the ideal arc, not the only one. If your situation calls for a faster sale — a job change, relocation, family timing, or a personal deadline — a compressed timeline is often workable with the right strategy. <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">Reach out and we can walk through what's realistic</a> for your specific window before you commit to a plan.</p>
 
 <p>If you're selling and buying simultaneously, the coordination gets more complex. Jacob Stark's guide to <a href="/blog/selling-centennial-buying-highlands-ranch-coordinate-transactions">coordinating a dual transaction in Centennial</a> covers the bridge strategies and contingency mechanics.</p>
 
@@ -233,7 +234,7 @@ relatedPosts:
 <p>Seller concessions are credits you offer the buyer to cover closing costs, rate buydowns, or repairs. In March 2026, 63.14% of Denver Metro sellers offered some form of concession according to DMAR. Whether you should depends on your pricing strategy, the buyer pool at your price point, and how quickly you need to close.</p>
 
 <blockquote>
-<strong>Selling your first home in Centennial or South Denver?</strong> Jacob Stark lists homes using a data-driven pricing strategy backed by a 100.6% sale-to-list ratio and $46M+ in closed transactions. <a href="https://calendly.com/jacob-realtor">Schedule a free consultation</a> or call 303-997-0634 to start planning your sale.
+<strong>Selling your first home in Centennial or South Denver?</strong> Jacob Stark lists homes using a data-driven pricing strategy backed by a 100.6% sale-to-list ratio and $46M+ in closed transactions. <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">Schedule a free consultation</a> or call 303-997-0634 to start planning your sale.
 </blockquote>
 
 <p><small><em>Market data sourced from the <a href="https://www.dmarealtors.com" target="_blank" rel="noopener">Denver Metro Association of REALTORS® (DMAR) March 2026 Market Trends Report</a> and Jacob Stark's REcolorado MLS analysis of Centennial closed sales, Q1 2026. Statistics reflect single-family residential transactions in the Denver Metro market area.</em></small></p>

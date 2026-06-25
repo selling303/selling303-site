@@ -10,7 +10,6 @@ heroLabel: "Move-Up Sellers"
 heroSubtext: "Trading a starter in Englewood for more room in Parker is the most common move-up path in South Denver. Here's the checklist to pull it off without overlapping mortgages or a panicked closing."
 cardStat: "~$85K"
 cardStatLabel: "Englewood-to-Parker median price gap"
-ogImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Englewood, Colorado"
@@ -42,6 +41,8 @@ relatedPosts:
     description: "Decision framework for move-up timing — equity position, lifestyle triggers, and market conditions."
     date: "April 6, 2026"
 ---
+
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/move-up-sellers">move up sellers</a> in <a href="/neighborhoods/englewood">Englewood</a> and the broader South Denver Metro.</p>
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>What's the checklist for moving up from an Englewood starter to more space in Parker?</strong> Line up the equity math, get pre-approved on the Parker target price, sell the Englewood home first with a rent-back or contingent purchase, then close on Parker 30–45 days later. The median price gap in Q1 2026 was roughly $85,000 between the two cities.
@@ -177,7 +178,7 @@ relatedPosts:
 <p>A move from a $600,000 Englewood starter into a $750,000 Parker home typically requires $125,000–$175,000 in usable equity after mortgage payoff, selling costs, and a 20 percent down payment on the new home. Exact numbers depend on current loan balance, any buyer concessions, and how much cash is reserved for reserves or pre-listing prep.</p>
 
 <blockquote style="border-left: 4px solid #002a3a; background: #f4f7f9; padding: 1.5rem; margin: 2rem 0; font-style: italic;">
-Thinking about trading your Englewood starter for more space in Parker? Call Jacob Stark at <a href="tel:3039970634">303-997-0634</a>, <a href="https://calendly.com/jacob-realtor">schedule a move-up strategy call</a>, or visit <a href="/">selling303.com</a> to start the equity conversation. Jacob has closed this exact move more times than any other crosstown transition in South Denver.
+Thinking about trading your Englewood starter for more space in Parker? Call Jacob Stark at <a href="tel:3039970634">303-997-0634</a>, <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">schedule a move-up strategy call</a>, or visit <a href="/">selling303.com</a> to start the equity conversation. Jacob has closed this exact move more times than any other crosstown transition in South Denver.
 </blockquote>
 
 <p style="font-size: 0.85rem; color: #81848a; margin-top: 2rem;"><em>Data sources: REcolorado MLS (Englewood and Parker Q1 2026 single-family residential exports, pulled April 2, 2026). DMAR Market Trends Report, March 2026. All market data deemed reliable but not guaranteed.</em></p>

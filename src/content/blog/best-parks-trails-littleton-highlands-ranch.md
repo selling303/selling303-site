@@ -9,7 +9,6 @@ heroLabel: "Neighborhoods"
 heroSubtext: "Over 100 miles of trails, 8,200 acres of wilderness, and a state park — all within minutes of your front door."
 cardStat: "100+ mi"
 cardStatLabel: "of trails between both communities"
-ogImage: "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Littleton, Colorado"
@@ -39,6 +38,8 @@ relatedPosts:
     description: "District-by-district 2026 watering schedules for Littleton, Highlands Ranch, Parker, and more."
     date: "April 7, 2026"
 ---
+
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/relocation">buyers considering a relocation</a> in <a href="/neighborhoods/littleton">Littleton</a> and the broader South Denver Metro.</p>
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>What are the best parks and trails near Littleton and Highlands Ranch?</strong> The top outdoor spaces include Chatfield State Park (26 miles of trails), the Highlands Ranch Backcountry Wilderness Area (8,200 acres), South Platte Park, and the 71-mile High Line Canal Trail — all within minutes of homes in both South Denver suburbs.
@@ -70,7 +71,7 @@ relatedPosts:
 
 <p>One of the first things buyers notice when touring <a href="/neighborhoods/littleton">Littleton</a> and <a href="/neighborhoods/highlands-ranch">Highlands Ranch</a> isn't the kitchen counters or the garage size — it's the trailhead a quarter mile from the front door. These two South Denver suburbs sit on a combined network of well over 100 miles of maintained trails, and the outdoor infrastructure is a genuine differentiator for families comparing neighborhoods across the metro.</p>
 
-<p>Jacob Stark regularly walks buyers through both communities, and the parks question comes up in nearly every showing. Not because it's a nice-to-have, but because access to outdoor space shapes daily life — morning runs, weekend family hikes, after-work mountain bike loops. This guide covers the specific parks and trails that make <a href="/neighborhoods/littleton">Littleton</a> and <a href="/neighborhoods/highlands-ranch">Highlands Ranch</a> two of the most outdoor-friendly suburbs in the Denver metro.</p>
+<p>Jacob Stark regularly walks buyers through both communities, and the parks question comes up in nearly every showing — especially with families <a href="/relocation">relocating to Denver from out of state</a>, where trail access is often the deciding factor between two otherwise similar suburbs. Not because it's a nice-to-have, but because access to outdoor space shapes daily life: morning runs, weekend family hikes, after-work mountain bike loops. This guide covers the specific parks and trails that make <a href="/neighborhoods/littleton">Littleton</a> and <a href="/neighborhoods/highlands-ranch">Highlands Ranch</a> two of the most outdoor-friendly suburbs in the Denver metro.</p>
 
 <figure style="margin: 2rem 0;" role="img" aria-label="Map of parks and trails near Littleton and Highlands Ranch, Colorado, showing Chatfield State Park and Reservoir, South Platte Park, the Backcountry Wilderness Area, the High Line Canal Trail, and the Mary Carter Greenway relative to C-470, I-25, Santa Fe Drive, Broadway, and University Boulevard.">
 <svg viewBox="-70 0 1080 780" xmlns="http://www.w3.org/2000/svg">
@@ -231,5 +232,5 @@ relatedPosts:
 <p>Both Littleton and Highlands Ranch rank among the top South Denver suburbs for trail access. Highlands Ranch offers 70-plus miles of paved and natural-surface community trails with four dog parks, while Littleton provides direct access to the Mary Carter Greenway, Chatfield State Park, and South Platte Park. The High Line Canal Trail connects both communities, making the "best" choice a matter of which park system fits your family's routine.</p>
 
 <blockquote>
-<p>Thinking about your next move near Littleton or Highlands Ranch? Call Jacob Stark at 303-997-0634 or <a href="https://calendly.com/jacob-realtor">schedule a conversation</a> to talk about which neighborhoods put your family closest to the trails and open space you're looking for.</p>
+<p>Thinking about your next move near Littleton or Highlands Ranch? Call Jacob Stark at 303-997-0634 or <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">schedule a conversation</a> to talk about which neighborhoods put your family closest to the trails and open space you're looking for.</p>
 </blockquote>

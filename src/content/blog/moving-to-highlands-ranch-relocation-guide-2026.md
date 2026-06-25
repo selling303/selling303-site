@@ -10,7 +10,6 @@ heroLabel: "Buying"
 heroSubtext: "Highlands Ranch consistently ranks among Colorado's most desirable suburbs. Here's what out-of-state families actually need to know before the move."
 cardStat: "$718K"
 cardStatLabel: "median home price (Feb 2026)"
-ogImage: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Highlands Ranch, Colorado"
@@ -186,7 +185,7 @@ relatedPosts:
 <p>Highlands Ranch sits about 20 miles south of downtown Denver along I-25 and C-470. Commute times range from 25 to 50 minutes depending on traffic and which part of the community you live in. The RTD light rail stations at Lincoln and Dry Creek provide a public transit option into the city, with a roughly 35–45 minute ride to Union Station.</p>
 
 <blockquote>
-<p>Considering a move to Highlands Ranch from out of state? Jacob Stark coordinates relocation purchases across the South Denver Metro — from virtual neighborhood tours to remote closings. <a href="https://calendly.com/jacob-realtor">Schedule a relocation consultation</a> or call 303-997-0634 to start the conversation.</p>
+<p>Considering a move to Highlands Ranch from out of state? Jacob Stark coordinates relocation purchases across the South Denver Metro — from virtual neighborhood tours to remote closings. <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">Schedule a relocation consultation</a> or call 303-997-0634 to start the conversation.</p>
 </blockquote>
 
 <p><small><em>Market data sourced from the Denver Metro Association of REALTORS (DMAR) Local Market Update, February 2026 data, and REcolorado MLS Q1 2026 listing exports for Highlands Ranch. All data deemed reliable but not guaranteed.</em></small></p>

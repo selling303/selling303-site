@@ -11,7 +11,6 @@ heroLabel: "Move-Up Sellers"
 heroSubtext: "Lakewood owners don't leave because Lakewood is broken. They leave because something specific is pulling them south — a commute, a family member, a different lifestyle profile. The 2026 math only matters once that pull is real."
 cardStat: "$157K"
 cardStatLabel: "Lakewood-to-HR move-up spread"
-ogImage: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Lakewood, Colorado"
@@ -43,6 +42,8 @@ relatedPosts:
     description: "Real timeline walkthrough of a dual transaction — equity math, contingency mechanics, and three bridge strategies."
     date: "April 11, 2026"
 ---
+
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/move-up-sellers">move up sellers</a> in <a href="/neighborhoods/lakewood">Lakewood</a> and the broader South Denver Metro.</p>
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>Why do Lakewood owners move to Highlands Ranch in 2026?</strong> Commute, family proximity, the master-planned lifestyle, and a different weather profile. At April 2026 medians the cross-county move runs about $165,825 cash to close.
@@ -141,15 +142,7 @@ relatedPosts:
 
 <h3 id="net-sheet-visual">What does the full Lakewood-to-Highlands Ranch cash-flow sheet look like at the April 2026 medians?</h3>
 
-<figure style="margin: 2rem 0;" aria-labelledby="net-sheet-visual" itemscope itemtype="https://schema.org/Dataset">
-<meta itemprop="name" content="Lakewood to Highlands Ranch Move-Up Net Sheet, April 2026" />
-<meta itemprop="description" content="Sample settlement-statement-style net sheet for a typical Lakewood to Highlands Ranch move-up transaction at April 2026 REcolorado MLS medians. Lakewood sale at $580,000 median close yields approximately $205,200 in net seller proceeds after a $340,000 mortgage payoff and 6 percent selling costs. Highlands Ranch purchase at $737,000 median close requires approximately $165,825 in cash to close (20 percent down payment plus 2.5 percent closing costs). Net cash surplus of approximately $39,375 covers reserves, moving expenses, and any cushion." />
-<meta itemprop="temporalCoverage" content="2026-04-01/2026-04-30" />
-<meta itemprop="spatialCoverage" content="Lakewood, Colorado; Highlands Ranch, Colorado" />
-<meta itemprop="variableMeasured" content="gross sale price, mortgage payoff, selling costs, net seller proceeds, purchase price, down payment, closing costs, cash to close, net cash surplus" />
-<meta itemprop="creator" content="Jacob Stark, selling303.com" />
-<meta itemprop="publisher" content="selling303.com" />
-<meta itemprop="isBasedOn" content="REcolorado MLS Market Analysis Summary, Lakewood and Highlands Ranch single-family residential closed transactions April 1 to April 30, 2026, pulled May 3, 2026" />
+<figure style="margin: 2rem 0;" aria-labelledby="net-sheet-visual">
 <div style="background: #ffffff; border: 1px solid #e6e8ea; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,42,58,0.10);">
 <div style="background: #002a3a; color: #ffffff; padding: 1.25rem 1.5rem;">
 <div style="font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.75; margin-bottom: 0.3rem;">Lakewood to Highlands Ranch Move-Up</div>
@@ -325,7 +318,7 @@ relatedPosts:
 <p>Sell-first is the lower-risk default for most Lakewood-to-Highlands Ranch move-ups. It locks in the Lakewood equity at the price the market actually pays, eliminates dual-mortgage exposure, and keeps the move-up seller out of the bridge-loan or HELOC bucket. Buy-first makes sense in narrow situations — strong cash reserves, a non-contingent offer accepted on the Highlands Ranch home, or a specific timing window. Jacob Stark walks Lakewood clients through both paths before recommending one.</p>
 
 <blockquote>
-<p>Thinking about leaving Lakewood for Highlands Ranch? The decision is rarely about Lakewood — it's about something specific pulling your household south. Jacob Stark has helped Lakewood owners walk through the trigger, the timing, and the cross-county money math, and is happy to do the same for you. Schedule a no-pressure conversation at <a href="https://calendly.com/jacob-realtor">calendly.com/jacob-realtor</a> or call <strong>303-997-0634</strong>.</p>
+<p>Thinking about leaving Lakewood for Highlands Ranch? The decision is rarely about Lakewood — it's about something specific pulling your household south. Jacob Stark has helped Lakewood owners walk through the trigger, the timing, and the cross-county money math, and is happy to do the same for you. <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">Schedule a no-pressure conversation</a> or call <strong>303-997-0634</strong>.</p>
 </blockquote>
 
 <p style="font-size: 0.85rem; color: #81848a; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e6e8ea;"><em>Data sources: REcolorado MLS Market Analysis Summary for Lakewood (n=199) and Highlands Ranch (n=131) single-family residential closed transactions, April 1 through April 30, 2026, pulled May 3, 2026, deduplicated for IRES cross-listings; DMAR April 2026 Market Trends Report (Denver Metro Association of Realtors). Mortgage payment estimates use a 30-year fixed amortization at the stated rate. Property tax, insurance, and HOA figures are typical ranges and depend on the specific home, county, and metro-district structure. Highlands Ranch trail and rec center counts per the Highlands Ranch Community Association. This article is informational and does not constitute legal, tax, or financial advice.</em></p>

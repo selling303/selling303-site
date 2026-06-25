@@ -111,17 +111,17 @@ This applies regardless of pattern:
 
 ## Source Placement Rule (applies to every pattern)
 
-**Source attribution must live both structurally inside the Schema.org wrapper AND visually bound to the visual block — never as a floating paragraph below.** The visual is the unit; the source is part of the unit, not a footnote that follows it.
+**Source attribution must be visually bound to the visual block — part of the same `<figure>` / `<div>`, never a floating paragraph below — and recorded in the JSON-LD Dataset's `isBasedOn` field.** The visual is the unit; the source is part of the unit, not a footnote that follows it.
 
 Two failure modes this rule prevents:
 
-1. **Structural drift.** Source `<p>` lives OUTSIDE the `<div itemscope itemtype="https://schema.org/Dataset">` wrapper. Schema.org parsers bind props by DOM ancestry — a citation outside the wrapper is unbound, and Rich Results Test reports the citation as floating context rather than as part of the dataset. AEO concern: the source doesn't propagate to the dataset's `isBasedOn` / `citation` / `sourceOrganization` semantics.
+1. **Citation missing from schema.** The source is shown visually but never recorded in the JSON-LD Dataset's `isBasedOn` field. AEO concern: the dataset has no machine-readable provenance, so answer engines cannot attribute the data to a source. Every visual's data source must appear in `isBasedOn` as a `CreativeWork`.
 
 2. **Visual detachment.** Source `<p>` sits below the visual block with margin-gap separating them. Reads as a footnote. Worse — when the visual gets scraped as an image (Google Images, AI engine, social share), the source line doesn't travel with the bitmap. The image circulates without provenance. AEO concern: source authority signal lost on image-scraped surfaces.
 
 **Best-practice combination — applies to every pattern:**
 
-1. **Source row lives INSIDE the Schema.org itemscope wrapper.** No exception. The wrapper opens at the top of the visual block and closes after the source row, not before it.
+1. **Source row lives INSIDE the visual's `<figure>` / `<div>`.** No exception. The wrapper opens at the top of the visual block and closes after the source row, not before it — so the source travels with the visual as one unit.
 2. **Visually bound to the visual block.** No `margin-top` gap. Light gray (`#f8f9fa`) or white background, flat top border (`border-top: 1px solid #d6e0e6`), bottom border-radius matching the visual's outer radius. Reads as the footer-of-the-visual, not a paragraph that happens to be below.
 3. **For SVG-based patterns** (`price-ladder-svg`, `single-metric-bar-chart`), source ALSO baked into the SVG itself as a `<text>` element near the bottom — so when the SVG is rasterized and shared as an image, the source travels with the pixels.
 4. **Source string format:** `Source: [data source] | [scope] | [date range] | [sample size] | selling303.com`. Inline `<strong>` on "Source:" for visual emphasis. Date range is always spelled out ("April 1–30, 2026" not "April 2026").
@@ -136,7 +136,24 @@ Two failure modes this rule prevents:
 - **`decision-path`** — source row at the bottom of the path block, INSIDE the wrapper, bound styling.
 - **`settlement-statement`** — source goes in the navy/sub-strip footer of the statement block, INSIDE the wrapper.
 
-**Verification check:** before shipping any visual, confirm by inspecting the rendered DOM that the source `<p>` (or `<text>` for SVG) is a child of the `itemscope` wrapper. If it's a sibling that follows the wrapper, the binding is broken.
+**Verification check:** before shipping any visual, confirm the source line (`<p>`, `<figcaption>`, or `<text>` for SVG) is a child of the visual's `<figure>` / `<div>`, not a sibling that follows it — and confirm the same source is recorded in the JSON-LD Dataset's `isBasedOn` field.
+
+---
+
+## Dataset Schema Rule (applies to every data visual)
+
+**Every data visual carries its Schema.org `Dataset` as exactly ONE JSON-LD `<script type="application/ld+json">` block — never as Microdata on the visual wrapper.** The `<figure>` or `<div>` holding the visual is plain HTML: keep `aria-labelledby`, `role`, `class`, and `style`, but never add `itemscope itemtype="https://schema.org/Dataset"`.
+
+A wrapper that carries `itemscope itemtype="Dataset"` AND a parallel JSON-LD Dataset block emits two Dataset entities for one visual — Google Search Console double-counts them, and the Microdata copy is almost always the malformed one (missing `description`, `creator`). One canonical JSON-LD block never double-counts and is far easier to keep complete. (Fixed sitewide 2026-05-21 after GSC flagged the duplication across 9 posts.)
+
+**JSON-LD Dataset fields:**
+- **Required:** `@context`, `"@type": "Dataset"`, `name`, `description`. A Dataset with no `description` is INVALID in GSC and ineligible for rich results — never omit it.
+- **Recommended:** `url` (with the visual's `#anchor`), `temporalCoverage`, `spatialCoverage` (`Place` + `containedInPlace`), `isBasedOn` (data source as a `CreativeWork`), `creator` (`Person`, Jacob Stark), `publisher` (`Organization`, selling303.com — the MLS is the source, not the publisher; it goes in `isBasedOn`), `variableMeasured`.
+- **`license`:** omit it. selling303.com visuals are proprietary analysis with no open license; accept the non-critical GSC "improve appearance" nudge rather than invent a license URL.
+
+**Per-row, per-path, per-zone, per-tier values go in the `variableMeasured` array as `PropertyValue` objects.** `PropertyValue` is valid there. **Never place `PropertyValue` in `Dataset.hasPart`** — `hasPart` expects a `Dataset` or `CreativeWork`; a `PropertyValue` there is the GSC "invalid object type for field hasPart" error.
+
+Reference implementation: the JSON-LD `<script>` block in `src/content/blog/spec-home-vs-custom-build-parker-2026.md`.
 
 ---
 
@@ -163,10 +180,8 @@ Two failure modes this rule prevents:
 - Source row baked into the SVG at the bottom + bound figcaption source row outside the SVG inside the figure wrapper
 
 **Schema.org payload:**
-- `<figure itemscope itemtype="https://schema.org/Dataset">` wrapper
-- `<meta>` props: name, temporalCoverage, spatialCoverage
-- Each zone: hidden `<div itemprop="hasPart" itemscope itemtype="https://schema.org/PropertyValue">` with name, value, minValue, maxValue, unitText, and description (carrying the trade-off attributes)
-- Parallel JSON-LD Dataset block in `<script type="application/ld+json">` with full variableMeasured array — the two axes plus the total cost dimension
+- Plain `<figure>` wrapper (no `itemscope` — see the Dataset Schema Rule above)
+- One JSON-LD `<script type="application/ld+json">` Dataset block before the figure: `name`, `description`, `url`, `temporalCoverage`, `spatialCoverage`, `isBasedOn`, `creator`, `publisher`, and a `variableMeasured` array carrying the two axes plus the total-cost dimension — each zone's `value` / `minValue` / `maxValue` lives here as a `PropertyValue`, never as `hasPart`
 - `<title>` and `<desc>` inside SVG with the full insight in citable sentence form (this is what AI engines quote as alt text — write it as a complete narrative paragraph)
 - Source attribution baked into SVG as `<text>` element so it travels if scraped as an image
 
@@ -192,10 +207,9 @@ Two failure modes this rule prevents:
 - Mobile responsive — table flips to stacked card layout below 700px
 
 **Schema.org payload:**
-- `<figure itemscope itemtype="https://schema.org/Dataset">` wrapper
-- `<meta>` props: name, temporalCoverage, spatialCoverage, variableMeasured, creator, publisher
-- Each row: `<tr itemscope itemtype="https://schema.org/PropertyValue">` with row-level `name`
-- Each cell: machine-readable value via `<meta itemprop="value">` or scoped span
+- Plain `<figure class="aeo-comp-table">` wrapper (no `itemscope` — see the Dataset Schema Rule above)
+- One JSON-LD `<script type="application/ld+json">` Dataset block before the figure: `name`, `description`, `url`, `temporalCoverage`, `spatialCoverage`, `isBasedOn`, `creator`, `publisher`, and a `variableMeasured` array — one `PropertyValue` per column metric
+- Real semantic `<table>` with `<caption>`, `<thead>`, scoped `<th>`, `<tbody>` — the visible table text is already machine-readable, so no Microdata on rows or cells
 
 **Lift from:** `src/content/blog/spring-2026-move-up-market-report-south-denver.md` — the canonical reference. Q1 2026 data across Highlands Ranch, Parker, Castle Pines × 4 metrics with full Dataset Schema.
 
@@ -219,8 +233,8 @@ Two failure modes this rule prevents:
 - **Source row bound to the card grid** (no margin gap) per the Source Placement Rule — light gray (`#f8f9fa`) background, flat top border, bottom border-radius (`0 0 8px 8px`) matching the original card-grid radius, INSIDE the outer Schema.org wrapper. Format: `<strong>Source:</strong> ...` per the standard source string format.
 
 **Schema.org payload:**
-- Outer `<div itemscope itemtype="https://schema.org/Dataset">` for the whole comparison
-- Each path: `<div itemscope itemtype="https://schema.org/PropertyValue">` with name + machine-readable value range
+- Plain outer `<div>` wrapper (no `itemscope` — see the Dataset Schema Rule above)
+- One JSON-LD `<script type="application/ld+json">` Dataset block before the wrapper: `name`, `description`, `url`, `temporalCoverage`, `spatialCoverage`, `isBasedOn`, `creator`, `publisher`, and a `variableMeasured` array — one `PropertyValue` per path (price range, square footage)
 - All key labels are real text (not images) for AI engine parseability
 
 **Lift from:** `src/content/blog/first-time-home-buyer-guide-lakewood-colorado-2026.md` — `<h2 id="price-tiers">` section. Question-led navy banner ("What does $400K–$550K actually buy in Lakewood, Colorado?"), single-family path vs. condo/townhome path below.
@@ -276,7 +290,8 @@ Two failure modes this rule prevents:
 - Bottom: divider line, headline summary stat, term definitions, source attribution baked into the SVG
 
 **Schema.org payload:**
-- `<figure itemscope itemtype="https://schema.org/Dataset">` wrapper around the SVG
+- Plain `<figure>` wrapper around the SVG (no `itemscope` — see the Dataset Schema Rule above)
+- One JSON-LD `<script type="application/ld+json">` Dataset block before the figure: `name`, `description`, `url`, `temporalCoverage`, `spatialCoverage`, `isBasedOn`, `creator`, `publisher`, and a `variableMeasured` array — one `PropertyValue` per tier
 - `<svg role="img">` with `<title>` (1-sentence summary) and `<desc>` (3–4 citable sentences with all key stats — this is what AI engines quote as alt text)
 - Source baked into SVG as `<text>` element so it travels if scraped as image
 
@@ -304,9 +319,9 @@ Two failure modes this rule prevents:
 - `<desc>` block in the SVG states all values as a citable sentence
 
 **Schema.org payload:**
-- `<figure itemscope itemtype="https://schema.org/Dataset">` wrapper
+- Plain `<figure>` wrapper (no `itemscope` — see the Dataset Schema Rule above)
+- One JSON-LD `<script type="application/ld+json">` Dataset block before the figure: `name`, `description`, `url`, `temporalCoverage`, `spatialCoverage`, `isBasedOn`, `creator`, `publisher`, and a `variableMeasured` array carrying the metric across the 3–5 entities
 - `<title>` and `<desc>` inside SVG with full state qualifier ("Castle Pines, Colorado not Castle Pines")
-- Optional parallel JSON-LD `<script type="application/ld+json">` Dataset block with the same numbers in machine-readable form
 - Source attribution baked into the SVG bottom
 
 **Lift from:** `src/content/blog/move-up-timing-castle-pines-2026.md` — first svg-chart on the site. Castle Pines 77 days vs. Parker 62 days vs. Highlands Ranch 52 days median DOM until sale, Feb 2026. SVG title + desc + in-SVG term definition + source text + parallel JSON-LD Dataset.
@@ -367,10 +382,10 @@ Two failure modes this rule prevents:
 - Source baked into figcaption (NOT in SVG `<text>`, per Source Placement Rule) inside the same `<figure>` wrapper.
 
 **Schema.org payload:**
-- `<figure itemscope itemtype="https://schema.org/Dataset">` wrapper
-- Parallel JSON-LD `Dataset` block BEFORE the figure with full metadata (temporalCoverage, spatialCoverage, isBasedOn, creator, publisher, variableMeasured for each scenario's total + the delta)
+- Plain `<figure>` wrapper (no `itemscope` — see the Dataset Schema Rule above)
+- One JSON-LD `<script type="application/ld+json">` Dataset block BEFORE the figure: `name`, `description`, `url`, `temporalCoverage`, `spatialCoverage`, `isBasedOn`, `creator`, `publisher`, and a `variableMeasured` array for each scenario's total plus the delta
 - SVG `<title>` and `<desc>` carry citable summary sentences with every key number (P&I, tax, insurance, HOA, totals, delta) so AI engines can quote them verbatim
-- NO `<meta>` void elements inside the SVG (per rule 13b in aeo-visual-builder) — all per-segment Microdata lives in the parallel JSON-LD only
+- NO `<meta>` or other void elements inside the SVG (per rule 13b in aeo-visual-builder)
 
 **Lift from:** `src/content/blog/condo-vs-single-family-littleton-first-time-buyer-2026.md` — first stacked-cost-bar-comparison on the site. Two Littleton, Colorado scenarios (condo $2,831/mo all-in vs. starter SFR $4,020/mo all-in) segmented by P&I, tax, insurance, HOA. The bars showed P&I as the dominant segment on both sides; the HOA segment on the condo bar is small relative to the mortgage stack — busting the "HOA fees are the deciding factor" myth most first-time buyers walk in with. Promoted to the library on 2026-05-10 after winning a stretch-vs-library A/B/C review against Variant B (5-year wealth projection) and Variant C (two-path-diptych).
 
@@ -395,9 +410,9 @@ Two failure modes this rule prevents:
 - Total row: navy background with white text, larger font, bold
 
 **Schema.org payload:**
-- `<table itemscope itemtype="https://schema.org/Table">` (or wrapped in `<figure itemscope itemtype="https://schema.org/Dataset">` if it's a generalized example with named source)
+- Real semantic `<table>` with `<caption>`, `<thead>`, scoped `<th>`, `<tbody>`, and a navy total row — the visible table text is already machine-readable, so no Microdata on the table, rows, or cells
 - Each category section: `<tr>` with `role="rowheader"`
-- Each line item: `<tr itemscope itemtype="https://schema.org/PropertyValue">` with name and value/amount
+- When the statement is a generalized, named example worth exposing as structured data, add one JSON-LD `<script type="application/ld+json">` Dataset block before the figure (`name`, `description`, `url`, `temporalCoverage`, `spatialCoverage`, `isBasedOn`, `creator`, `publisher`, `variableMeasured` for the line-item categories), inside a plain `<figure>` wrapper — no `itemscope`
 - Source attribution in `<figcaption>`
 
 **Lift from:** `src/content/blog/closing-costs-littleton-first-time-buyers-2026.md` — Down Payment, Lender Fees, Title Fees, Prepaid Items (with sub-items), Other Costs (with sub-items), navy total row $32,000–$43,900.

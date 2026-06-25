@@ -14,7 +14,6 @@ cardImage:
   alt: Real estate agent explaining commission
 cardStat: "5–6%"
 cardStatLabel: "typical total commission"
-ogImage: https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=1200&h=630&fit=crop&q=80
 aboutPlaces:
   - South Denver Metro, Colorado
   - Arapahoe County, Colorado
@@ -56,6 +55,8 @@ relatedPosts:
     date: March 2026
 ---
 
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/first-time-homesellers">first time homesellers</a> in <a href="/neighborhoods/highlands-ranch">Highlands Ranch</a> and the broader South Denver Metro.</p>
+
 <div class="snippet-answer" style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-radius: 0 6px 6px 0;">
 <p style="margin: 0;"><strong>What does a REALTOR actually do to earn their commission?</strong><br>
 A listing agent handles pricing strategy, professional photography, marketing, showing coordination, offer negotiation, and transaction management from contract to closing. A buyer's agent identifies properties, schedules showings, advises on offer strategy, and manages inspections and appraisals. In Colorado, total commission is always negotiable but typically runs 5–6% of the sale price — split between the seller's agent (2.8–3.2%) and the buyer's agent (2.5–2.8%).</p>
@@ -88,7 +89,7 @@ A listing agent handles pricing strategy, professional photography, marketing, s
 
 <p>The real estate industry hasn't always been great at answering this question transparently. Some agents quietly collect a commission check after doing the bare minimum. Others put in months of skilled work — pricing strategy, professional marketing, tough negotiations, and transaction management through dozens of potential deal-killing moments — and never bother to explain what they did or why it mattered.</p>
 
-<p>This post is the explanation. Whether you're a seller trying to understand what your listing agent should be doing, or a buyer wondering what your agent brings to the table beyond opening doors, here's a clear-eyed look at where commission dollars go — and how to tell if you're getting real value for them.</p>
+<p>This post is the explanation. Whether you're a <a href="/first-time-homesellers" style="color: var(--color-accent); font-weight: 600;">first-time home seller</a> trying to understand what your listing agent should be doing, or a buyer wondering what your agent brings to the table beyond opening doors, here's a clear-eyed look at where commission dollars go — and how to tell if you're getting real value for them.</p>
 
 <h2 id="how-commission-works">How Does Real Estate Commission Actually Work in Colorado?</h2>
 
@@ -166,7 +167,7 @@ A listing agent handles pricing strategy, professional photography, marketing, s
 If you're thinking about selling and want to understand exactly what my process looks like — pricing, marketing, communication, and everything in between — I'm happy to walk you through it. No pressure, no pitch. Just a clear picture of what to expect.
 </blockquote>
 
-<p>Call me at <a href="tel:3039970634" style="color: var(--color-accent); font-weight: 600;">303-997-0634</a> or <a href="https://calendly.com/jacob-realtor" style="color: var(--color-accent); font-weight: 600;" target="_blank" rel="noopener">schedule a call</a>.</p>
+<p>Call me at <a href="tel:3039970634" style="color: var(--color-accent); font-weight: 600;">303-997-0634</a> or <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy" style="color: var(--color-accent); font-weight: 600;" target="_blank" rel="noopener">schedule a call</a>.</p>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 

@@ -11,7 +11,6 @@ heroLabel: "Selling"
 heroSubtext: "Most Greenwood Village empty-nesters are sitting on $1.5M to $3M of equity locked into a 5,000+ sqft home they barely use. The right-sizing math depends on whether you stay inside the Cherry Creek schools area or move down-market — and the gap is bigger than most sellers expect."
 cardStat: "$1.85M"
 cardStatLabel: "Typical net after costs"
-ogImage: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Greenwood Village, Colorado"
@@ -43,6 +42,8 @@ relatedPosts:
     description: "Dual-transaction mechanics — directly applicable when right-sizing across two markets in the same window."
     date: "April 11, 2026"
 ---
+
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/move-up-sellers">move up sellers</a> in <a href="/neighborhoods/greenwood-village">Greenwood Village</a> and the broader South Denver Metro.</p>
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <p style="margin: 0; font-size: 1.05rem;"><strong>When does the Greenwood Village empty-nester right-sizing math actually pencil?</strong></p>
@@ -261,7 +262,7 @@ relatedPosts:
 <blockquote style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.5rem; margin: 2rem 0; border-radius: 0 8px 8px 0;">
 <p style="margin: 0 0 0.5rem; font-size: 1.1rem;"><strong>Considering right-sizing your Greenwood Village home?</strong></p>
 <p style="margin: 0 0 1rem;">Jacob Stark has sold over $46 million in South Denver real estate and works regularly with Greenwood Village empty-nesters running this exact math. Get a no-commitment pricing-and-timing analysis with your actual basis numbers, three target net-proceeds scenarios, and a current replacement-housing inventory snapshot for both paths.</p>
-<p style="margin: 0;"><strong>Call Jacob at 303-997-0634</strong> or <a href="https://calendly.com/jacob-realtor">book a 60-minute right-sizing consultation</a>.</p>
+<p style="margin: 0;"><strong>Call Jacob at 303-997-0634</strong> or <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">book a 60-minute right-sizing consultation</a>.</p>
 </blockquote>
 
 <p style="font-size: 0.875rem; color: #555; margin-top: 2rem;"><em>Data sources: REcolorado MLS Market Analysis Summary, Greenwood Village, Colorado, April 1–30, 2026 (n=103); REcolorado MLS Market Analysis Summary, Highlands Ranch, Colorado, April 1–30, 2026 (n=157); REcolorado MLS Market Analysis Summary, Centennial, Colorado, April 1–30, 2026 (n=184); Q1 2026 Greenwood Village single-family residence pulls; <a href="https://www.dmarealtors.com/market-trends" rel="noopener">DMAR April 2026 Market Trends Report</a>; <a href="https://www.irs.gov/taxtopics/tc701" rel="noopener">IRS Topic No. 701, Sale of Your Home</a>. Capital gains scenarios are illustrative — consult a CPA for actual basis and gain calculations. Carrying-cost ranges are typical estimates and vary by household.</em></p>

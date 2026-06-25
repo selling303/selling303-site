@@ -11,7 +11,6 @@ heroSubtext: "Usually one of seven reasons — and most are fixable within 1–3
 cardImage: {url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=500&fit=crop&q=80", alt: "Home sitting on the market not selling in Denver"}
 cardStat: "7 reasons"
 cardStatLabel: "your listing isn't moving"
-ogImage: "https://selling303.com/images/og-default.jpg"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Denver Metro, Colorado"
@@ -48,6 +47,8 @@ relatedPosts:
     image: {url: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=500&fit=crop&q=80", alt: "Real estate paperwork and cost breakdown"}
     date: "March 28, 2026"
 ---
+
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/first-time-homesellers">first time homesellers</a> in <a href="/neighborhoods/highlands-ranch">Highlands Ranch</a> and the broader South Denver Metro.</p>
 
 <p><strong>Q: Why is my house sitting on the market and not selling?</strong><br>
 <strong>A:</strong> Usually one of seven reasons: overpricing, poor online photos, showing restrictions, unaddressed condition issues, weak marketing, wrong agent match, or bad timing. Some are on you, some are on the agent.</p>

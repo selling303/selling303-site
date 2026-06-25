@@ -11,7 +11,6 @@ heroLabel: "Buying"
 heroSubtext: "Buyer agency agreements at the model home, builder cooperation rules, written compensation terms — the rules of new construction representation changed on August 17, 2024. Most Parker buyers still don't know what that means at the sales office."
 cardStat: "Aug 17"
 cardStatLabel: "2024 settlement effective date"
-ogImage: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Parker, Colorado"
@@ -35,11 +34,6 @@ relatedPosts:
     tag: "Buying"
     description: "Builder communities, base vs. total pricing, lot premiums, and why representation matters in Castle Pines and Parker."
     date: "April 8, 2026"
-  - slug: "build-new-or-buy-resale-parker-cost-per-square-foot"
-    title: "Should You Build New in Parker or Buy Resale? A Cost-Per-Square-Foot Analysis"
-    tag: "Buying"
-    description: "Builder base price per sqft vs. resale comps in Parker — the real cost of new construction with upgrades and lot premiums included."
-    date: "April 28, 2026"
 ---
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
@@ -238,7 +232,7 @@ relatedPosts:
 <p>Most Colorado builders enforce a strict registration rule: the buyer agent must be present at the first visit or registered through the builder's portal before the first visit. If you tour alone and then try to add an agent later, the builder can refuse to cooperate on compensation — meaning your agent either doesn't get paid or you have to fund the compensation directly out of your closing funds. Always register the agent first.</p>
 
 <blockquote>
-<p>Considering a new construction purchase in Parker, Castle Pines, or anywhere in the South Denver Metro? <a href="https://calendly.com/jacob-realtor">Book a 30-minute strategy call with Jacob Stark</a>, call 303-997-0634, or visit <a href="https://selling303.com">selling303.com</a> to start the conversation. The buyer agency agreement gets signed before the model home tour — let's get yours right.</p>
+<p>Considering a new construction purchase in Parker, Castle Pines, or anywhere in the South Denver Metro? <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">Book a 30-minute strategy call with Jacob Stark</a>, call 303-997-0634, or visit <a href="https://selling303.com">selling303.com</a> to start the conversation. The buyer agency agreement gets signed before the model home tour — let's get yours right.</p>
 </blockquote>
 
 <p style="font-size: 0.875rem; color: #6b7280; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e5e7eb;"><em>Data sources: NAR Settlement Practice Changes effective August 17, 2024 (nar.realtor); REcolorado MLS settlement implementation guidance; Colorado Real Estate Commission brokerage license guidance updates; DMAR Local Market Update for Parker, February 2026 (published March 4, 2026); REcolorado MLS active and coming-soon Parker single-family residential listings export (pulled April 2, 2026). Practical examples reflect Jacob Stark's direct work with national builders active in Parker, Colorado from Q3 2024 through Q1 2026.</em></p>

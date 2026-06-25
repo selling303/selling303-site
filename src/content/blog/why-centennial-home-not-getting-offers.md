@@ -10,7 +10,6 @@ heroLabel: "Selling"
 heroSubtext: "Listings that sell in Centennial move in 13 days. If yours is past that mark with no offers, something specific is broken — here's how to find and fix it."
 cardStat: "13 days"
 cardStatLabel: "median DIM on closed Centennial homes"
-ogImage: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Centennial, Colorado"
@@ -40,6 +39,8 @@ relatedPosts:
     description: "Data-driven autopsy of why Highlands Ranch listings expire — pricing gaps, DOM patterns, and the relist fix."
     date: "April 4, 2026"
 ---
+
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/expired-listings">owners with expired listings</a> in <a href="/neighborhoods/centennial">Centennial</a> and the broader South Denver Metro.</p>
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>Why isn't your Centennial home getting offers?</strong> Closed Centennial homes sold in a median of 13 days on the MLS in Q1 2026. If your listing has sat longer without a serious offer, the issue is almost always price, presentation, or positioning — and all three can be corrected before summer inventory peaks.
@@ -198,7 +199,7 @@ relatedPosts:
 <p>The right reduction is the one that moves the listing into a lower search-filter tier on the major portals. A $10,000 cut on a $700,000 home does not change who sees the listing. A $30,000 cut that drops the home from the $700K–$800K tier into the $600K–$700K tier exposes the listing to an entirely new buyer pool. That repositioning effect is usually where renewed showings come from — not the dollar amount itself.</p>
 
 <blockquote>
-<p>Think your Centennial home should be getting offers? Call Jacob Stark at 303-997-0634 or <a href="https://calendly.com/jacob-realtor">book a listing review at calendly.com/jacob-realtor</a>. The diagnostic takes 30 minutes and the correction plan fits inside the April reset window.</p>
+<p>Think your Centennial home should be getting offers? Call Jacob Stark at 303-997-0634 or <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">book a listing review</a>. The diagnostic takes 30 minutes and the correction plan fits inside the April reset window.</p>
 </blockquote>
 
 <p style="font-size: 0.85rem; color: #81848a; margin-top: 2rem;"><em>Centennial market data sourced from REcolorado MLS listing exports for single-family residential properties, Q1 2026 (pulled April 2, 2026). Denver Metro market trends sourced from the DMAR Market Trends Report, March 2026 release.</em></p>

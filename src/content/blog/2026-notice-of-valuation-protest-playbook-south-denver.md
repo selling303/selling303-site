@@ -11,7 +11,6 @@ heroLabel: "What to Expect"
 heroSubtext: "Your 2026 Notice of Valuation hit the mailbox May 1. Here's how to protest it before June 1 across Arapahoe, Douglas, and Jefferson — and what to do if you miss the window."
 cardStat: "June 1"
 cardStatLabel: "2026 NOV protest deadline"
-ogImage: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Highlands Ranch, Colorado"
@@ -43,6 +42,8 @@ relatedPosts:
     description: "Q1 2026 move-up market report for Highlands Ranch, Parker, and Castle Pines on price, speed, and inventory."
     date: "April 27, 2026"
 ---
+
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/move-up-sellers">move up sellers</a> in <a href="/neighborhoods/highlands-ranch">Highlands Ranch</a> and the broader South Denver Metro.</p>
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>Should you protest your 2026 Notice of Valuation in Arapahoe, Douglas, or Jefferson?</strong> If your home's true market value is 5 percent or more below the county's 2026 actual value, file with the assessor by June 1 using 3 to 5 MLS comps.

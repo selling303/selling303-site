@@ -9,7 +9,6 @@ heroLabel: "Selling"
 heroSubtext: "Your listing expired. That's frustrating — but it's not the end. Here's the data-driven playbook Littleton sellers use to relist and actually close."
 cardStat: "93 expired"
 cardStatLabel: "Littleton homes Q1 2026"
-ogImage: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Littleton, Colorado"
@@ -40,6 +39,8 @@ relatedPosts:
     description: "The most common reasons homes sit unsold in Arapahoe County and Douglas County — and what to do about it."
     date: "April 2, 2026"
 ---
+
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/expired-listings">owners with expired listings</a> in <a href="/neighborhoods/littleton">Littleton</a> and the broader South Denver Metro.</p>
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>How do you relist and sell a home in Littleton after an expired listing?</strong> Start with an honest pricing reset based on current Littleton comps — not what you wanted six months ago — then relaunch with professional photos, a refreshed MLS presentation, and a 30-day strategic marketing plan that treats the relist as a brand-new launch, not a retry.
@@ -184,7 +185,7 @@ relatedPosts:
 <p>According to REcolorado MLS data, the median days on market for expired single-family listings in Littleton during Q1 2026 was 91 days. That's nearly double the 51-day median for all Littleton SFH transactions reported by <a href="https://www.dmarealtors.com/market-trends" target="_blank" rel="noopener">DMAR</a> in February 2026. The gap confirms that most expirations are pricing problems, not market problems — correctly priced Littleton homes are selling.</p>
 
 <blockquote>
-<p>Dealing with an expired listing in Littleton? Jacob Stark specializes in relisting homes that didn't sell the first time — with corrected pricing, a full marketing relaunch, and a track record of getting it done. <a href="https://calendly.com/jacob-realtor">Book a free relist strategy session</a> or call 303-997-0634.</p>
+<p>Dealing with an expired listing in Littleton? Jacob Stark specializes in relisting homes that didn't sell the first time — with corrected pricing, a full marketing relaunch, and a track record of getting it done. <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">Book a free relist strategy session</a> or call 303-997-0634.</p>
 </blockquote>
 
 <p><small><em>Market data sourced from DMAR Market Trends Reports (February 2026) and REcolorado MLS (Q1 2026 expired/withdrawn listing data for Littleton, CO). All data deemed reliable but not guaranteed.</em></small></p>

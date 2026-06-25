@@ -14,7 +14,6 @@ cardImage:
   alt: Home exterior for market article
 cardStat: "45 days"
 cardStatLabel: "DOM threshold for concern"
-ogImage: https://images.unsplash.com/photo-1582407947092-40bf940bb514?w=1200&h=630&fit=crop&q=80
 aboutPlaces:
   - South Denver Metro, Colorado
   - Arapahoe County, Colorado
@@ -55,6 +54,8 @@ relatedPosts:
       alt: Handshake representing accepted offer
     date: March 2026
 ---
+
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/first-time-homesellers">first time homesellers</a> in <a href="/neighborhoods/centennial">Centennial</a> and the broader South Denver Metro.</p>
 
 <div class="snippet-answer" style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-radius: 0 6px 6px 0;">
 <p style="margin: 0;"><strong>Why do some homes sit on the market in South Denver while others sell quickly?</strong><br>
@@ -165,7 +166,7 @@ The most common reasons are overpricing relative to condition, poor presentation
 If your home's been on the market longer than expected and you're not sure what's going wrong, I'm happy to take a look — no obligation. Sometimes a second set of eyes on the pricing and presentation is all it takes to change the trajectory.
 </blockquote>
 
-<p>Call me at <a href="tel:3039970634" style="color: var(--color-accent); font-weight: 600;">303-997-0634</a> or <a href="https://calendly.com/jacob-realtor" style="color: var(--color-accent); font-weight: 600;" target="_blank" rel="noopener noreferrer">schedule a call</a>.</p>
+<p>Call me at <a href="tel:3039970634" style="color: var(--color-accent); font-weight: 600;">303-997-0634</a> or <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy" style="color: var(--color-accent); font-weight: 600;" target="_blank" rel="noopener noreferrer">schedule a call</a>.</p>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 

@@ -10,7 +10,6 @@ heroLabel: "Move-Up Sellers"
 heroSubtext: "Highlands Ranch equity is the quiet leverage every move-up seller is sitting on. Here's how to translate it into a bigger home without breaking the monthly math."
 cardStat: "$250K"
 cardStatLabel: "typical HR move-up equity"
-ogImage: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Highlands Ranch, Colorado"
@@ -40,6 +39,8 @@ relatedPosts:
     description: "Full seller net sheet walkthrough — commissions, title fees, concessions, and the line items that surprise first-time sellers."
     date: "March 18, 2026"
 ---
+
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/move-up-sellers">move up sellers</a> in <a href="/neighborhoods/highlands-ranch">Highlands Ranch</a> and the broader South Denver Metro.</p>
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>How much equity do you need to move up in Highlands Ranch?</strong> For a move from a typical $650K–$750K Highlands Ranch home into a $1M–$1.2M upgrade, most sellers need roughly $250,000–$325,000 in usable equity after mortgage payoff, selling costs, and a 20% down payment on the new home.
@@ -223,7 +224,7 @@ relatedPosts:
 <p>Both strategies work in the current Highlands Ranch market, but sell-first is the lower-risk choice for most move-up sellers because it locks in equity before committing to a new mortgage. Buy-first only makes sense when a seller has strong cash reserves, a contingency plan for carrying two mortgages, or access to a bridge loan. Jacob Stark walks move-up clients through both paths before recommending either.</p>
 
 <blockquote style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.5rem 1.75rem; margin: 2.5rem 0; border-radius: 0 8px 8px 0; font-size: 1.05rem; line-height: 1.6;">
-Thinking about a move-up in Highlands Ranch? The equity math depends on your specific loan balance, target price, and payment capacity — no two situations are identical. Call Jacob Stark at <strong>303-997-0634</strong>, visit <a href="https://selling303.com">selling303.com</a>, or <a href="https://calendly.com/jacob-realtor">book a free move-up equity review</a> to walk through your numbers.
+Thinking about a move-up in Highlands Ranch? The equity math depends on your specific loan balance, target price, and payment capacity — no two situations are identical. Call Jacob Stark at <strong>303-997-0634</strong>, visit <a href="https://selling303.com">selling303.com</a>, or <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">book a free move-up equity review</a> to walk through your numbers.
 </blockquote>
 
 <p style="font-size: 0.8rem; color: #81848a; font-style: italic; margin-top: 2rem;">Market data in this post sourced from the Denver Metro Association of REALTORS® (DMAR) March 2026 Market Trends Report and REcolorado MLS listing data for Highlands Ranch, Colorado (Q1 2026, pulled April 2, 2026). Payment calculations are illustrative examples using published market rates; actual rates, fees, and terms vary by lender, credit profile, and loan structure. City-specific statistics reflect REcolorado data only; general market context references DMAR's published reports and Freddie Mac's Primary Mortgage Market Survey.</p>

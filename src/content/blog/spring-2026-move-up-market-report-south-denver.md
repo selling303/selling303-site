@@ -11,7 +11,6 @@ heroLabel: "Market Update"
 heroSubtext: "Spring 2026 move-up activity, decoded. Where South Denver families are landing, what each suburb actually costs, and how to read the move-up market this season."
 cardStat: "$785K"
 cardStatLabel: "HR median sale price Q1 2026"
-ogImage: "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Highlands Ranch, Colorado"
@@ -46,6 +45,8 @@ relatedPosts:
     description: "Where South Denver move-up families actually land — and what each suburb does best."
     date: "March 14, 2026"
 ---
+
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/move-up-sellers">move up sellers</a> in <a href="/neighborhoods/littleton">Littleton</a> and the broader South Denver Metro.</p>
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>Where are South Denver families upgrading to in spring 2026?</strong> Highlands Ranch, Parker, and Castle Pines are absorbing the bulk of move-up activity, with Highlands Ranch leading on speed (18 median days in MLS) and Castle Pines anchoring the premium tier at a $1.07M median sale price.
@@ -248,7 +249,7 @@ relatedPosts:
 <p>The $500,000 to $749,999 segment is the most active, with 1,246 single-family closings across Denver Metro in March 2026 and 1.86 months of inventory. The $750,000 to $999,999 range is the next move-up tier, where most Highlands Ranch and Parker buyers land.</p>
 
 <blockquote>
-<p>Thinking about your next move in South Denver? <a href="https://calendly.com/jacob-realtor">Book a 30-minute strategy call with Jacob Stark</a>, call 303-997-0634, or visit <a href="https://selling303.com">selling303.com</a> to start the conversation.</p>
+<p>Thinking about your next move in South Denver? <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">Book a 30-minute strategy call with Jacob Stark</a>, call 303-997-0634, or visit <a href="https://selling303.com">selling303.com</a> to start the conversation.</p>
 </blockquote>
 
 <p style="font-size: 0.85rem; color: #81848a; margin-top: 2rem;"><em>Data sources: <a href="https://www.dmarealtors.com/market-trends" target="_blank" rel="noopener">DMAR Market Trends Report</a>, March 2026; REcolorado MLS Q1 2026 single-family residential listings (Highlands Ranch, Parker, Castle Pines), pulled April 2, 2026. All data deemed reliable but not guaranteed.</em></p>

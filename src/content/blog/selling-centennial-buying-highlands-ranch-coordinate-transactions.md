@@ -10,7 +10,6 @@ heroLabel: "Selling & Buying"
 heroSubtext: "Two closings, one timeline, zero margin for error. Here's how move-up sellers in Centennial navigate a dual transaction into Highlands Ranch."
 cardStat: "$19.5K"
 cardStatLabel: "median price gap to HR"
-ogImage: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Centennial, Colorado"
@@ -42,6 +41,8 @@ relatedPosts:
     description: "Real breakdown of agent commissions, closing costs, repairs, and staging for Colorado sellers."
     date: "March 28, 2026"
 ---
+
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/move-up-sellers">move up sellers</a> in <a href="/neighborhoods/centennial">Centennial</a> and the broader South Denver Metro.</p>
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>How do you coordinate selling in Centennial and buying in Highlands Ranch at the same time?</strong> A dual transaction requires aligning two timelines — your Centennial sale and your Highlands Ranch purchase — using contingency strategies, bridge financing, or a sell-first approach to protect your equity and avoid carrying two mortgages.
@@ -322,7 +323,7 @@ relatedPosts:
 <p>The median single-family sale price in Centennial is $699,000 compared to $718,500 in Highlands Ranch as of February 2026 — a gap of roughly $19,500. However, Highlands Ranch's average sale price ($912,119) runs significantly higher than Centennial's ($764,778), driven by luxury inventory in communities like BackCountry and Falcon Hills. The actual gap depends on the specific neighborhoods and price tiers you're comparing.</p>
 
 <blockquote style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin: 2rem 0; border-radius: 0 8px 8px 0;">
-<p><strong>Thinking about selling in Centennial and buying in Highlands Ranch?</strong> Jacob Stark coordinates dual transactions across the South Denver Metro — from pricing your Centennial home for speed to negotiating rent-back terms and aligning closing dates. <a href="https://calendly.com/jacob-realtor">Schedule a move-up consultation</a> or call 303-997-0634 to start mapping your timeline.</p>
+<p><strong>Thinking about selling in Centennial and buying in Highlands Ranch?</strong> Jacob Stark coordinates dual transactions across the South Denver Metro — from pricing your Centennial home for speed to negotiating rent-back terms and aligning closing dates. <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">Schedule a move-up consultation</a> or call 303-997-0634 to start mapping your timeline.</p>
 </blockquote>
 
 <p style="font-size: 0.85rem; color: #666; margin-top: 2rem;"><em>Market data sourced from the <a href="https://www.dmarealtors.com" target="_blank" rel="noopener">Denver Metro Association of REALTORS®</a> (DMAR) February 2026 Market Trends Report and <a href="https://www.car.org" target="_blank" rel="noopener">Colorado Association of REALTORS®</a> (CAR) Local Market Updates. Listing data from REcolorado® MLS. All data deemed reliable but not guaranteed.</em></p>

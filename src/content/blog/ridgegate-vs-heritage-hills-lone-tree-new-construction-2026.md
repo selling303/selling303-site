@@ -11,7 +11,6 @@ heroLabel: "Buying"
 heroSubtext: "Lone Tree's two flagship communities sit a mile apart and target completely different buyers. Here's how RidgeGate new construction stacks up against Heritage Hills resale luxury in spring 2026."
 cardStat: "$1.18M"
 cardStatLabel: "RidgeGate Q1 median close"
-ogImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Lone Tree, Colorado"
@@ -263,7 +262,7 @@ relatedPosts:
 <p>Effectively no, inside the Lone Tree city limits. Lone Tree buyers who want new construction outside of RidgeGate typically expand the search to adjacent submarkets — Castle Pines new construction (covered in <a href="/blog/new-construction-castle-pines-parker-2026">the Castle Pines and Parker new construction guide</a>), Sterling Ranch in Douglas County, or southeastern Parker. Custom-build lots inside Heritage Estates exist but transact rarely.</p>
 
 <blockquote>
-<p>Considering RidgeGate or Heritage Hills as your next move in Lone Tree? Jacob Stark sells across both segments and will walk you through the current builder incentive packages, the aged Heritage Hills inventory, and which two or three homes actually fit your priorities. <a href="https://calendly.com/jacob-realtor">Book a Lone Tree buyer consult</a> or call 303-997-0634.</p>
+<p>Considering RidgeGate or Heritage Hills as your next move in Lone Tree? Jacob Stark sells across both segments and will walk you through the current builder incentive packages, the aged Heritage Hills inventory, and which two or three homes actually fit your priorities. <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">Book a Lone Tree buyer consult</a> or call 303-997-0634.</p>
 </blockquote>
 
 <p style="font-size: 0.875rem; color: #6b7280; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e5e7eb;"><em>Data sources: REcolorado MLS Q1 2026 Lone Tree New Construction Single-Family Residential Export (Year Built 2024+), pulled April 19, 2026; REcolorado MLS Lone Tree April 2026 All-Status Residential Export, pulled May 3, 2026. Heritage Hills figures reflect addresses inside the Heritage Hills, Heritage Estates, and Carriage Club subdivisions. Builder incentive ranges and HOA structures cited are typical of the communities and individual figures vary by builder offering, sub-association, and unit type. All data deemed reliable but not guaranteed. Copyright REcolorado © 2026.</em></p>

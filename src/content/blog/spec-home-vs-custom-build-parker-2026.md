@@ -11,7 +11,6 @@ heroLabel: "New Construction"
 heroSubtext: "You want new. The question is whether you want it next month with the builder's choices, or in a year exactly as you choose. The Parker math on both paths in 2026."
 cardStat: "$275"
 cardStatLabel: "Parker median $/sqft (Apr 2026)"
-ogImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "Parker, Colorado"
   - "Douglas County, Colorado"
@@ -25,11 +24,6 @@ faqSchema:
   - question: "How long does it take to build a custom home in Parker?"
     answer: "A typical Parker custom build runs 12 to 18 months from contract to certificate of occupancy, depending on lot readiness, plan complexity, supply chain, and permit cadence in Douglas County. Builder spec inventory closes much faster — Parker April 2026 closed single-family residential ran at an 11-day median days in MLS, similar to resale velocity. Buyers who need to move within six months almost always shop spec inventory; buyers who can wait a year and want full control over design pursue custom."
 relatedPosts:
-  - slug: "build-new-or-buy-resale-parker-cost-per-square-foot"
-    title: "Build New or Buy Resale in Parker? Cost-Per-Sqft Math (2026)"
-    tag: "Buying"
-    description: "Parker cost-per-square-foot breakdown — Q1 2026 resale PSF vs. builder base PSF, lot premiums, and design center math."
-    date: "April 28, 2026"
   - slug: "new-construction-castle-pines-parker-2026"
     title: "New Construction Communities in Castle Pines and Parker: What Buyers Need to Know in 2026"
     tag: "Buying"
@@ -72,7 +66,7 @@ relatedPosts:
 </ol>
 </nav>
 
-<p>The "spec home or custom build" question is the second most common one Jacob Stark hears from <a href="/neighborhoods/parker">Parker, Colorado</a> buyers who have already decided they want <a href="/new-construction">new construction</a> over resale. The first question — new or resale — gets answered with a cost-per-square-foot comparison anchored in MLS data; the <a href="/blog/build-new-or-buy-resale-parker-cost-per-square-foot">Parker new-or-resale cost-per-sqft breakdown</a> covers that decision in depth. The second question — spec or custom — is harder, because the data lives in two different places: spec inventory shows up in the MLS, while custom builds mostly do not.</p>
+<p>The "spec home or custom build" question is the second most common one Jacob Stark hears from <a href="/neighborhoods/parker">Parker, Colorado</a> buyers who have already decided they want <a href="/new-construction">new construction</a> over resale. The first question — new or resale — gets answered with a cost-per-square-foot comparison anchored in MLS data. The second question — spec or custom — is harder, because the data lives in two different places: spec inventory shows up in the MLS, while custom builds mostly do not.</p>
 
 <p>This post pulls Parker's April 2026 closed-residential numbers from REcolorado MLS to anchor the spec column. The custom column uses national builder-cost benchmarks from sources like <a href="https://www.nahb.org/" target="_blank" rel="noopener">NAHB</a> and Front Range custom-build cost guidance from the <a href="https://www.coloradorealtors.com/" target="_blank" rel="noopener">Colorado Association of Realtors</a>. The result is an honest side-by-side on seven cost categories. It also covers the timing, control, and risk dimensions that the cost number alone never captures. If you are shopping Parker new construction in the $700,000 to $1.2 million band, this is the read.</p>
 
@@ -111,26 +105,7 @@ relatedPosts:
 }
 </script>
 
-<figure aria-labelledby="spec-vs-custom-data" role="figure" itemscope itemtype="https://schema.org/Dataset" style="margin: 2rem 0; background: white; border: 1px solid #d6e0e6; border-radius: 8px; overflow: hidden;">
-<meta itemprop="name" content="Parker, Colorado New Construction Trade-Off Frontier: Spec Home vs. Custom Build positioned on time and design control (2026)" />
-<meta itemprop="temporalCoverage" content="2026-04-01/2026-04-30" />
-<meta itemprop="spatialCoverage" content="Parker, Colorado" />
-<div itemprop="hasPart" itemscope itemtype="https://schema.org/PropertyValue" style="display:none">
-<meta itemprop="name" content="Spec Home — Parker April 2026 all-in delivered cost" />
-<meta itemprop="value" content="900000" />
-<meta itemprop="minValue" content="850000" />
-<meta itemprop="maxValue" content="925000" />
-<meta itemprop="unitText" content="USD" />
-<meta itemprop="description" content="30 to 90 days contract to keys. Few design decisions — limited to builder's already-installed package." />
-</div>
-<div itemprop="hasPart" itemscope itemtype="https://schema.org/PropertyValue" style="display:none">
-<meta itemprop="name" content="Custom Build — Parker 2026 all-in delivered cost" />
-<meta itemprop="value" content="1250000" />
-<meta itemprop="minValue" content="1100000" />
-<meta itemprop="maxValue" content="1400000" />
-<meta itemprop="unitText" content="USD" />
-<meta itemprop="description" content="12 to 18 months contract to certificate of occupancy. Hundreds of design decisions — every floor plan, finish, fixture, and lot detail." />
-</div>
+<figure aria-labelledby="spec-vs-custom-data" role="figure" style="margin: 2rem 0; background: white; border: 1px solid #d6e0e6; border-radius: 8px; overflow: hidden;">
 <svg viewBox="0 0 700 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="frontier-title frontier-desc" style="width: 100%; height: auto; display: block;">
 <title id="frontier-title">Parker new construction in 2026: pick your corner. You can move in fast, or you can pick every detail. You cannot do both.</title>
 <desc id="frontier-desc">A two-axis position plot showing the two real Parker new-construction paths in 2026. The lower-left quadrant — fast move-in plus a small number of design decisions — is the Spec Home zone: 30 to 90 days from contract to keys, 850 thousand to 925 thousand dollars all-in delivered cost. The upper-right quadrant — long timeline plus hundreds of design decisions — is the Custom Build zone: 12 to 18 months from contract to certificate of occupancy, 1.1 million to 1.4 million-plus dollars all-in delivered cost. The upper-left quadrant — fast move-in plus full design control — does not exist as a real Parker new-construction option. Source: REcolorado MLS April 2026 Parker single-family closings, n=181, 681 thousand dollar median close, 11-day median days in MLS, 275 dollars per finished square foot median.</desc>

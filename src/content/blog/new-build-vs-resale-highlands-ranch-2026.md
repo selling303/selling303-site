@@ -1,5 +1,5 @@
 ---
-title: "New Build vs. Resale in Highlands Ranch: Which Makes More Financial Sense in 2026?"
+title: "New Build vs. Resale in Highlands Ranch 2026"
 description: "A data-driven head-to-head — appreciation, customization premium, timeline, warranty, and total cost of ownership for Highlands Ranch, Colorado buyers."
 date: "April 23, 2026"
 dateModified: "April 23, 2026"
@@ -10,7 +10,6 @@ heroLabel: "New Construction"
 heroSubtext: "Highlands Ranch is almost fully built out, so new-build shoppers end up comparing two very different products. Here's how the math actually pencils in 2026."
 cardStat: "$742,500"
 cardStatLabel: "HR resale median (Q1 2026)"
-ogImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Highlands Ranch, Colorado"
@@ -169,6 +168,6 @@ relatedPosts:
 <h3>Does new construction appreciate slower than resale?</h3>
 <p>New construction usually shows softer appreciation in the first two to three years because the builder has already priced in the premium that comes with a brand-new home, and the surrounding phases are still selling at similar price points. Resale homes in an established Highlands Ranch neighborhood benefit from fixed supply and a demonstrated long-term price floor. The gap narrows as the new community matures.</p>
 
-<blockquote>Weighing new construction against a Highlands Ranch resale in 2026? Call Jacob Stark at 303-997-0634 or book a consultation at <a href="https://calendly.com/jacob-realtor">calendly.com/jacob-realtor</a> — he'll pull live comps on both sides before you commit to either path.</blockquote>
+<blockquote>Weighing new construction against a Highlands Ranch resale in 2026? Call Jacob Stark at 303-997-0634 or <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">book a consultation</a> — he'll pull live comps on both sides before you commit to either path.</blockquote>
 
 <p style="font-size: 0.85rem; color: #81848a; margin-top: 2rem;"><em>Data sources: REcolorado MLS Q1 2026 (Highlands Ranch single-family closed sales, n=198; Lone Tree builder spec Year Built 2024+, n=17), pulled April 2, 2026. DMAR Market Trends Report, March 2026. Jacob Stark, selling303.com.</em></p>

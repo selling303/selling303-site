@@ -1,0 +1,903 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getImage } from 'astro:assets';
+
+// ── Open house follow-up page for 13611 E Evans Ave, Aurora ──
+// Unlisted page (noindex + excluded from sitemap). Texted to open house
+// attendees. Not linked in site nav.
+
+const calendarUrl =
+  'https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy';
+const realscoutSearchUrl =
+  'https://jacobstark.realscout.com/homesearch/map?pmin=350000&pmax=415000&bmin=2&bamin=2&ptype=TC&geo_type=zipcode&geo_id=80014&for_sale=1&for_rent=0';
+const driveFolderUrl =
+  'https://drive.google.com/drive/folders/14trNe9wDKbeHyCjBX9hjvOAMfGe5URle?usp=sharing';
+const phoneTel = 'tel:3039970634';
+const phoneDisplay = '303-997-0634';
+
+// Listing photos — auto-discovered from the property image folder, floor plans
+// excluded. Each is run through Astro's image pipeline to a sized WebP.
+const photoModules = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/images/success-stories/13611-e-evans-ave-aurora/*.{jpg,jpeg,png,webp}',
+  { eager: true }
+);
+const galleryImages = await Promise.all(
+  Object.entries(photoModules)
+    .filter(([path]) => !/floorplan/i.test(path))
+    .sort(([a], [b]) => a.localeCompare(b, undefined, { numeric: true }))
+    .map(async ([, mod], i) => {
+      const optimized = await getImage({
+        src: mod.default,
+        format: 'webp',
+        quality: 78,
+        width: 1600,
+      });
+      return {
+        src: optimized.src,
+        alt: `13611 E Evans Avenue, Aurora, CO — listing photo ${i + 1}`,
+      };
+    })
+);
+
+const facts = [
+  { number: '3', label: 'Bedrooms' },
+  { number: '3', label: 'Bathrooms' },
+  { number: '2,216', label: 'Finished Sq Ft' },
+  { number: '1980', label: 'Year Built' },
+  { number: '1-Car', label: 'Attached Garage' },
+  { number: 'End Unit', label: 'Extra Natural Light' },
+];
+
+// Inline line-art icons — brand palette, consistent 24px stroke set. No emoji.
+const ICON = {
+  golf: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 19.5V4"/><path d="M7 4l8 2.5L7 9"/><ellipse cx="7" cy="20" rx="5" ry="1.7"/></svg>',
+  kitchen: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="2.5"/><circle cx="9" cy="9" r="1.9"/><circle cx="15" cy="9" r="1.9"/><circle cx="9" cy="15" r="1.9"/><circle cx="15" cy="15" r="1.9"/></svg>',
+  sauna: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 20.5c-1.3-1.6-1.3-3.2 0-4.8s1.3-3.2 0-4.8"/><path d="M12 20.5c-1.3-1.6-1.3-3.2 0-4.8s1.3-3.2 0-4.8"/><path d="M16 20.5c-1.3-1.6-1.3-3.2 0-4.8s1.3-3.2 0-4.8"/></svg>',
+  basement: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 5h-3.6v3.7h-3.6v3.7h-3.6v3.7H5.6V20H3"/></svg>',
+  window: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="3" width="15" height="18" rx="1.5"/><path d="M4.5 12h15"/><path d="M12 3v18"/></svg>',
+  check: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.4l2.4 2.4 4.6-5.2"/></svg>',
+  book: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.6S9.4 5 4.5 5.2v12.6C9.4 17.6 12 19.2 12 19.2s2.6-1.6 7.5-1.4V5.2C14.6 5 12 6.6 12 6.6z"/><path d="M12 6.6v12.6"/></svg>',
+  pin: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.3c4.4-4.2 6.8-7.5 6.8-10.8a6.8 6.8 0 1 0-13.6 0c0 3.3 2.4 6.6 6.8 10.8z"/><circle cx="12" cy="10.5" r="2.5"/></svg>',
+};
+
+const highlights = [
+  {
+    icon: ICON.golf,
+    title: 'Golf Course Views',
+    text: 'Backs directly to Heather Ridge Golf Course, with open fairway views from nearly every window and mature landscaping for added privacy.',
+  },
+  {
+    icon: ICON.kitchen,
+    title: 'Renovated Kitchen',
+    text: 'Quartz countertops, new stainless steel appliances, refreshed cabinetry, breakfast bar seating, brass fixtures, and recessed lighting.',
+  },
+  {
+    icon: ICON.sauna,
+    title: 'Private Sauna',
+    text: 'The upper-level primary suite includes an adjoining private sauna for a spa-style retreat — a rare feature at this price.',
+  },
+  {
+    icon: ICON.basement,
+    title: 'Finished Basement',
+    text: 'Extra living space plus a non-conforming bedroom, a half bath, and a dedicated laundry and utility area.',
+  },
+  {
+    icon: ICON.window,
+    title: 'End-Unit Light',
+    text: 'End-unit positioning adds extra windows and natural light throughout, along with a quieter, more private feel.',
+  },
+  {
+    icon: ICON.check,
+    title: 'Move-In Ready',
+    text: 'New interior paint, new carpet, a new 2026 central A/C system, and updated lighting and fixtures throughout.',
+  },
+  {
+    icon: ICON.book,
+    title: 'Cherry Creek 5 Schools',
+    text: 'Served by the Cherry Creek 5 district — Eastridge Elementary, Prairie Middle, and Overland High.',
+  },
+  {
+    icon: ICON.pin,
+    title: 'Easy Commute',
+    text: 'Quick access to I-225, light rail, Cherry Creek State Park, the Denver Tech Center, dining, and shopping.',
+  },
+];
+
+const details = [
+  { label: 'Address', value: '13611 E Evans Avenue, Aurora, CO 80014' },
+  { label: 'List Price', value: '$379,900' },
+  { label: 'Subdivision', value: 'Heather Ridge South' },
+  { label: 'Property Type', value: 'Townhouse — end unit' },
+  { label: 'Layout', value: 'Two levels plus a finished basement' },
+  { label: 'Finished Sq Ft', value: '2,216 (1,344 above grade + 872 basement)' },
+  { label: 'Year Built', value: '1980' },
+  { label: 'Garage', value: '1-car attached' },
+  { label: 'HOA Dues', value: '$507 / month' },
+  { label: 'HOA Includes', value: 'Grounds, snow removal, trash, pool, and spa' },
+  { label: 'Property Taxes', value: '$1,817 / year (2025)' },
+  { label: 'County', value: 'Arapahoe' },
+  { label: 'MLS #', value: '7514946' },
+];
+
+const programs = [
+  {
+    name: "Buyer's Choice Incentive",
+    text: 'Pick the option that fits you: a free one-year temporary buydown that lowers your payment for the first 12 months, or up to 1% of the loan amount as a credit toward a permanent rate buydown. It also includes a Refinance Rewards Program — if rates drop 0.5% or more within three years, the refinance lender fees are waived.',
+  },
+  {
+    name: 'Rate Shield Program',
+    text: 'Lock your rate with a safety net. If rates fall by 0.125% or more — anytime up to two weeks before closing — Collective Mortgage re-locks you at the lower rate, with no added fees. If rates rise, you stay locked at your lower rate.',
+  },
+  {
+    name: 'First-Time Buyer Down Payment Assistance',
+    text: 'A rundown of programs that can shrink or eliminate your down payment — 3% conventional, FHA at 3.5%, CHFA grants and loans up to $25,000, Metro DPA up to 5%, and Keys4Life, which offers up to $5,000 toward closing costs.',
+  },
+];
+---
+
+<BaseLayout
+  title="Open House — 13611 E Evans Ave, Aurora | Jacob Stark"
+  description="Thanks for visiting 13611 E Evans Ave in Aurora — a renovated end-unit townhome on Heather Ridge Golf Course. Listing details, buyer financing programs, and similar homes."
+  ogUrl="https://selling303.com/open-house/13611-e-evans"
+  headerVariant="solid"
+>
+  <Fragment slot="head">
+    <meta name="robots" content="noindex" />
+  </Fragment>
+
+  <!-- ========== HERO ========== -->
+  <section class="oh-hero">
+    <div class="container">
+      <span class="oh-hero__pill">Open House &middot; Active Listing</span>
+      <h1 class="oh-hero__address">13611 E Evans Avenue</h1>
+      <p class="oh-hero__loc">Aurora, CO 80014 &nbsp;&bull;&nbsp; Heather Ridge South</p>
+      <p class="oh-hero__price">$379,900</p>
+      <p class="oh-hero__tagline">
+        Thanks for stopping by. Here's everything on this renovated end-unit
+        townhome backing to Heather Ridge Golf Course — plus financing options
+        and a few next steps.
+      </p>
+      <div class="oh-hero__actions">
+        <a href={calendarUrl} class="btn btn--primary btn--lg" target="_blank" rel="noopener">
+          Schedule Time With Jacob
+        </a>
+        <a href={phoneTel} class="btn btn--outline btn--lg">Call {phoneDisplay}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PHOTO GALLERY ========== -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Photo Tour</span>
+        <h2 class="section-heading">Take Another Look Through the Home</h2>
+      </div>
+      <button
+        class="oh-gallery__lead"
+        type="button"
+        aria-label={`View all ${galleryImages.length} photos of 13611 E Evans Avenue`}
+      >
+        <img
+          src={galleryImages[0]?.src}
+          alt={galleryImages[0]?.alt}
+          class="oh-gallery__lead-img"
+          loading="eager"
+          decoding="async"
+        />
+        {galleryImages.length > 1 && (
+          <span class="oh-gallery__badge">
+            <svg width="17" height="17" viewBox="0 0 16 16" fill="none"><rect x="1" y="3" width="10" height="10" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M5 3V2a1 1 0 011-1h8a1 1 0 011 1v8a1 1 0 01-1 1h-1" stroke="currentColor" stroke-width="1.3"/></svg>
+            View all {galleryImages.length} photos
+          </span>
+        )}
+      </button>
+    </div>
+
+    <!-- Inline lightbox — the lead photo opens this full-screen viewer -->
+    <div class="oh-lightbox" id="oh-lightbox" role="dialog" aria-modal="true" aria-label="13611 E Evans Avenue photo gallery" hidden>
+      <div class="oh-lightbox__backdrop"></div>
+      <button class="oh-lightbox__close" aria-label="Close gallery" type="button">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="oh-lightbox__counter"></div>
+      <button class="oh-lightbox__prev" aria-label="Previous photo" type="button">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="oh-lightbox__stage">
+        <img src="" alt="" class="oh-lightbox__img" />
+      </div>
+      <button class="oh-lightbox__next" aria-label="Next photo" type="button">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+      <div class="oh-lightbox__caption"></div>
+    </div>
+  </section>
+
+  <!-- ========== QUICK FACTS ========== -->
+  <section class="oh-facts-section">
+    <div class="container">
+      <div class="oh-facts">
+        {facts.map((f) => (
+          <div class="oh-fact">
+            <span class="oh-fact__num">{f.number}</span>
+            <span class="oh-fact__label">{f.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT + DETAILS ========== -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="oh-about">
+        <div class="oh-about__copy">
+          <span class="section-label">About This Home</span>
+          <h2 class="section-heading">A Renovated Townhome on the Fairway</h2>
+          <p>
+            This renovated end-unit townhome backs directly to Heather Ridge
+            Golf Course, with open fairway views and mature landscaping that add
+            real privacy. Inside, 2,216 finished square feet span three levels —
+            vaulted ceilings, an open main-level floor plan, and a stone
+            fireplace anchoring the living room.
+          </p>
+          <p>
+            The renovated kitchen features quartz countertops, new stainless
+            steel appliances, refreshed cabinetry, and breakfast bar seating.
+            The upper-level primary suite has an updated en-suite bath, a
+            walk-in closet, and an adjoining private sauna. A finished basement
+            adds flexible living space, a non-conforming bedroom, a half bath,
+            and dedicated laundry. New paint, new carpet, and a new 2026 central
+            A/C system make it move-in ready.
+          </p>
+        </div>
+        <div class="oh-spec">
+          <h3 class="oh-spec__title">Property Details</h3>
+          <dl class="oh-spec__list">
+            {details.map((d) => (
+              <div class="oh-spec__row">
+                <dt>{d.label}</dt>
+                <dd>{d.value}</dd>
+              </div>
+            ))}
+          </dl>
+          <p class="oh-spec__note">
+            This community sits within the Heather Ridge Metropolitan District.
+            Ask Jacob for the full tax and HOA breakdown.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HIGHLIGHTS ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Why It Stands Out</span>
+        <h2 class="section-heading">Features Worth a Second Look</h2>
+      </div>
+      <div class="oh-highlights">
+        {highlights.map((h) => (
+          <div class="oh-highlight">
+            <span class="oh-highlight__icon" aria-hidden="true" set:html={h.icon}></span>
+            <h3 class="oh-highlight__title">{h.title}</h3>
+            <p class="oh-highlight__text">{h.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FINANCING ========== -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Buyer Financing</span>
+        <h2 class="section-heading">Programs That Can Make This Home Work</h2>
+        <p class="section-subtext" style="margin-left:auto;margin-right:auto;">
+          Jacob works with Collective Mortgage, who offer several programs built
+          to lower your payment and protect your rate. Here's the short version.
+        </p>
+      </div>
+      <div class="oh-programs">
+        {programs.map((p) => (
+          <div class="oh-program">
+            <h3 class="oh-program__name">{p.name}</h3>
+            <p class="oh-program__text">{p.text}</p>
+          </div>
+        ))}
+      </div>
+      <div class="oh-programs__cta">
+        <a href={driveFolderUrl} class="btn btn--primary btn--lg" target="_blank" rel="noopener">
+          View the Financing Flyers
+        </a>
+      </div>
+      <p class="oh-disclaimer">
+        Financing programs are offered through Collective Mortgage, a lender
+        Jacob works with. They are not a commitment to lend, and all terms are
+        subject to qualification and underwriting. Ask the loan officer for full
+        details and current rates.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== KEEP EXPLORING ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Next Steps</span>
+        <h2 class="section-heading">Keep Exploring</h2>
+      </div>
+      <div class="oh-explore">
+        <div class="oh-explore-card">
+          <span class="oh-explore-card__icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6"/><path d="M9 16.5h6"/></svg></span>
+          <h3>Full Property Documents</h3>
+          <p>
+            The complete MLS detail sheet and the Collective Mortgage financing
+            flyers — all in one folder you can open or save.
+          </p>
+          <a href={driveFolderUrl} class="btn btn--outline-dark" target="_blank" rel="noopener">
+            Open the Document Folder
+          </a>
+        </div>
+        <div class="oh-explore-card">
+          <span class="oh-explore-card__icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.35-4.35"/></svg></span>
+          <h3>Browse Similar Townhomes</h3>
+          <p>
+            See townhomes and condos for sale near this one — the 80014 area,
+            priced $350K&ndash;$415K, with 2+ beds and 2+ baths.
+          </p>
+          <a href={realscoutSearchUrl} class="btn btn--outline-dark" target="_blank" rel="noopener">
+            Search Similar Homes
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA ========== -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Questions About This Home?</h2>
+      <p>
+        Whether you want a second showing, help running the numbers, or advice
+        on writing an offer — Jacob is happy to talk it through. No pressure,
+        just answers.
+      </p>
+      <a href={calendarUrl} class="btn btn--primary btn--lg" target="_blank" rel="noopener">
+        Schedule a Call
+      </a>
+      <a href={phoneTel} class="btn btn--outline btn--lg">Call {phoneDisplay}</a>
+    </div>
+  </section>
+
+  <!-- ========== AGENT ========== -->
+  <section class="oh-agent-section">
+    <div class="container">
+      <div class="oh-agent">
+        <div>
+          <p class="oh-agent__name">Jacob Stark</p>
+          <p class="oh-agent__role">REALTOR&reg; &middot; 8z Real Estate</p>
+        </div>
+        <div class="oh-agent__contact">
+          <a href={phoneTel}>{phoneDisplay}</a>
+          <a href="mailto:jacob@selling303.com">jacob@selling303.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* ── Hero ── */
+  .oh-hero {
+    background:
+      linear-gradient(135deg, #002a3a 0%, #003d52 100%);
+    color: var(--color-white);
+    padding: calc(var(--header-height) + var(--space-2xl)) 0 var(--space-2xl);
+  }
+  .oh-hero__pill {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    border: 1px solid rgba(200, 150, 90, 0.45);
+    border-radius: 999px;
+    padding: 0.4rem 0.95rem;
+    margin-bottom: var(--space-md);
+  }
+  .oh-hero__address {
+    color: var(--color-white);
+    margin-bottom: 0.35rem;
+    line-height: 1.1;
+  }
+  .oh-hero__loc {
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.72);
+    margin-bottom: var(--space-sm);
+  }
+  .oh-hero__price {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    color: var(--color-accent);
+    margin-bottom: var(--space-md);
+  }
+  .oh-hero__tagline {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.86);
+    max-width: 560px;
+    margin-bottom: var(--space-lg);
+  }
+  .oh-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
+  /* ── Photo gallery: lead image + lightbox ── */
+  .oh-gallery__lead {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-top: var(--space-lg);
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-radius: var(--radius-lg);
+  }
+  .oh-gallery__lead-img {
+    display: block;
+    width: 100%;
+    max-height: 520px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.3s ease;
+  }
+  .oh-gallery__lead:hover .oh-gallery__lead-img {
+    transform: scale(1.01);
+  }
+  .oh-gallery__badge {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background-color: rgba(0, 42, 58, 0.85);
+    color: var(--color-white);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 9px 15px;
+    border-radius: var(--radius-md);
+    pointer-events: none;
+  }
+  .oh-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .oh-lightbox[hidden] {
+    display: none;
+  }
+  .oh-lightbox__backdrop {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.93);
+  }
+  .oh-lightbox__close,
+  .oh-lightbox__prev,
+  .oh-lightbox__next {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.12);
+    color: var(--color-white);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  .oh-lightbox__close:hover,
+  .oh-lightbox__prev:hover,
+  .oh-lightbox__next:hover {
+    background-color: rgba(255, 255, 255, 0.24);
+  }
+  .oh-lightbox__close {
+    top: 16px;
+    right: 16px;
+    width: 44px;
+    height: 44px;
+  }
+  .oh-lightbox__prev,
+  .oh-lightbox__next {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+  }
+  .oh-lightbox__prev {
+    left: 16px;
+  }
+  .oh-lightbox__next {
+    right: 16px;
+  }
+  .oh-lightbox__counter {
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.72);
+  }
+  .oh-lightbox__stage {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 92vw;
+    max-height: 82vh;
+  }
+  .oh-lightbox__img {
+    max-width: 92vw;
+    max-height: 82vh;
+    object-fit: contain;
+    border-radius: var(--radius-sm);
+    user-select: none;
+  }
+  .oh-lightbox__caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    max-width: 600px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.72);
+  }
+  @media (max-width: 600px) {
+    .oh-lightbox__prev,
+    .oh-lightbox__next {
+      width: 40px;
+      height: 40px;
+    }
+    .oh-lightbox__prev {
+      left: 8px;
+    }
+    .oh-lightbox__next {
+      right: 8px;
+    }
+  }
+
+  /* ── Quick facts ── */
+  .oh-facts-section {
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--space-lg) 0;
+  }
+  .oh-facts {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--space-md);
+  }
+  .oh-fact {
+    text-align: center;
+    padding: var(--space-xs) 0;
+  }
+  .oh-fact__num {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: clamp(1.35rem, 2.5vw, 1.85rem);
+    color: var(--color-primary);
+    line-height: 1.15;
+  }
+  .oh-fact__label {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--color-light-text);
+    margin-top: 0.2rem;
+  }
+
+  /* ── About + details ── */
+  .oh-about {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: var(--space-2xl);
+    align-items: start;
+  }
+  .oh-spec {
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+  }
+  .oh-spec__title {
+    font-size: 1.2rem;
+    margin-bottom: var(--space-sm);
+  }
+  .oh-spec__list {
+    margin: 0;
+  }
+  .oh-spec__row {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-md);
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .oh-spec__row:last-of-type {
+    border-bottom: none;
+  }
+  .oh-spec__row dt {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-body-text);
+    flex-shrink: 0;
+  }
+  .oh-spec__row dd {
+    font-size: 0.85rem;
+    color: var(--color-dark-text);
+    text-align: right;
+    margin: 0;
+  }
+  .oh-spec__note {
+    font-size: 0.78rem;
+    color: var(--color-light-text);
+    margin-top: var(--space-sm);
+    line-height: 1.6;
+  }
+
+  /* ── Highlights ── */
+  .oh-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+  }
+  .oh-highlight {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+  }
+  .oh-highlight__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgba(0, 42, 58, 0.06);
+    color: var(--color-primary);
+    margin-bottom: var(--space-sm);
+  }
+  .oh-highlight__icon :global(svg) {
+    width: 26px;
+    height: 26px;
+  }
+  .oh-highlight__title {
+    font-size: 1.15rem;
+    margin-bottom: 0.4rem;
+  }
+  .oh-highlight__text {
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  /* ── Financing ── */
+  .oh-programs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+  }
+  .oh-program {
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-top: 3px solid var(--color-accent);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+  }
+  .oh-program__name {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+  }
+  .oh-program__text {
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+  .oh-programs__cta {
+    text-align: center;
+    margin-top: var(--space-lg);
+  }
+  .oh-disclaimer {
+    max-width: 720px;
+    margin: var(--space-md) auto 0;
+    text-align: center;
+    font-size: 0.78rem;
+    line-height: 1.6;
+    color: var(--color-light-text);
+  }
+
+  /* ── Keep exploring ── */
+  .oh-explore {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+  }
+  .oh-explore-card {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    text-align: center;
+  }
+  .oh-explore-card__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: rgba(0, 42, 58, 0.06);
+    color: var(--color-primary);
+    margin-bottom: var(--space-sm);
+  }
+  .oh-explore-card__icon :global(svg) {
+    width: 28px;
+    height: 28px;
+  }
+  .oh-explore-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .oh-explore-card p {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    margin-bottom: var(--space-md);
+  }
+
+  /* ── Agent strip ── */
+  .oh-agent-section {
+    background-color: var(--color-primary);
+    padding: var(--space-lg) 0;
+  }
+  .oh-agent {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+  }
+  .oh-agent__name {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    color: var(--color-white);
+    margin-bottom: 0.1rem;
+  }
+  .oh-agent__role {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.66);
+    margin: 0;
+  }
+  .oh-agent__contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+  .oh-agent__contact a {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-accent);
+  }
+  .oh-agent__contact a:hover {
+    color: var(--color-white);
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 860px) {
+    .oh-about {
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+    .oh-facts {
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-sm);
+    }
+  }
+  @media (max-width: 600px) {
+    .oh-facts {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .oh-hero__actions .btn,
+    .cta-banner .btn {
+      width: 100%;
+    }
+    .oh-agent {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
+
+<script define:vars={{ galleryData: JSON.stringify(galleryImages) }}>
+  (function () {
+    var images = JSON.parse(galleryData);
+    if (!images.length) return;
+
+    var trigger = document.querySelector('.oh-gallery__lead');
+    var lightbox = document.getElementById('oh-lightbox');
+    if (!trigger || !lightbox) return;
+
+    var img = lightbox.querySelector('.oh-lightbox__img');
+    var counter = lightbox.querySelector('.oh-lightbox__counter');
+    var caption = lightbox.querySelector('.oh-lightbox__caption');
+    var closeBtn = lightbox.querySelector('.oh-lightbox__close');
+    var prevBtn = lightbox.querySelector('.oh-lightbox__prev');
+    var nextBtn = lightbox.querySelector('.oh-lightbox__next');
+    var backdrop = lightbox.querySelector('.oh-lightbox__backdrop');
+
+    var current = 0;
+    var touchStartX = 0;
+
+    function show(index) {
+      current = (index + images.length) % images.length;
+      img.src = images[current].src;
+      img.alt = images[current].alt;
+      counter.textContent = (current + 1) + ' / ' + images.length;
+      caption.textContent = images[current].alt;
+      prevBtn.style.display = images.length <= 1 ? 'none' : '';
+      nextBtn.style.display = images.length <= 1 ? 'none' : '';
+    }
+    function openAt(index) {
+      show(index);
+      lightbox.hidden = false;
+      document.body.style.overflow = 'hidden';
+    }
+    function close() {
+      lightbox.hidden = true;
+      document.body.style.overflow = '';
+    }
+
+    trigger.addEventListener('click', function () { openAt(0); });
+    closeBtn.addEventListener('click', close);
+    backdrop.addEventListener('click', close);
+    prevBtn.addEventListener('click', function () { show(current - 1); });
+    nextBtn.addEventListener('click', function () { show(current + 1); });
+
+    document.addEventListener('keydown', function (e) {
+      if (lightbox.hidden) return;
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowLeft') show(current - 1);
+      if (e.key === 'ArrowRight') show(current + 1);
+    });
+
+    lightbox.addEventListener('touchstart', function (e) {
+      touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+    lightbox.addEventListener('touchend', function (e) {
+      var dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 50) {
+        if (dx > 0) { show(current - 1); } else { show(current + 1); }
+      }
+    }, { passive: true });
+  })();
+</script>

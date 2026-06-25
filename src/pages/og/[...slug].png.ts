@@ -38,6 +38,7 @@ const OG_STATIC_TITLES: Record<string, string> = {
   'sell/success-stories': 'Recent Success Stories',
   blog: 'Selling 303 Blog',
   'clientclarity-demo': 'ClientClarity Demo',
+  'open-house/13611-e-evans': 'Open House — 13611 E Evans Ave',
 };
 
 interface PathProps {

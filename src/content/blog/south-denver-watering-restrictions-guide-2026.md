@@ -10,7 +10,6 @@ heroLabel: "Neighborhoods"
 heroSubtext: "Denver Water declared Stage 1 drought on March 25, 2026. Every district in the South Denver Metro has different rules — here's the consolidated guide."
 cardStat: "7 districts"
 cardStatLabel: "each with different watering rules"
-ogImage: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Littleton, Colorado"
@@ -57,6 +56,8 @@ relatedPosts:
       alt: "Charming single-family home in Englewood Colorado neighborhood"
     date: "April 5, 2026"
 ---
+
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/relocation">buyers considering a relocation</a> in <a href="/neighborhoods/littleton">Littleton</a> and the broader South Denver Metro.</p>
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>What are the 2026 watering restrictions in the South Denver Metro?</strong> Every water district from <a href="/neighborhoods/littleton">Littleton</a> to <a href="/neighborhoods/parker">Parker</a> has different schedules, and Denver Water's Stage 1 drought declaration on March 25, 2026 means mandatory limits are in effect for much of the metro — with fines for violations.
@@ -242,7 +243,7 @@ relatedPosts:
 <p>Under Denver Water's Stage 1 drought rules, new sod is strongly discouraged and effectively impractical — new turf requires daily watering to establish, which isn't possible on a two-day-per-week schedule. If you're selling a home in the Littleton, Centennial, or Lone Tree areas served by Denver Water, this affects curb appeal strategies — consider drought-tolerant landscaping alternatives like xeriscaping or native grass seeding instead of traditional sod.</p>
 
 <blockquote style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin: 2rem 0; border-radius: 0 8px 8px 0;">
-<p><strong>Buying or selling in the South Denver Metro this spring?</strong> Jacob Stark helps homeowners across Littleton, Highlands Ranch, Parker, Centennial, Englewood, Castle Pines, and Lone Tree navigate every detail — including the ones that don't show up on the MLS. <a href="https://calendly.com/jacob-realtor">Schedule a conversation</a> or call directly at 303-997-0634.</p>
+<p><strong>Buying or selling in the South Denver Metro this spring?</strong> Jacob Stark helps homeowners across Littleton, Highlands Ranch, Parker, Centennial, Englewood, Castle Pines, and Lone Tree navigate every detail — including the ones that don't show up on the MLS. <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">Schedule a conversation</a> or call directly at 303-997-0634.</p>
 </blockquote>
 
 <p style="font-size: 0.85rem; color: #6b7280; margin-top: 2rem;">Sources: <a href="https://www.denverwater.org/residential/rebates-and-conservation-tips/summer-watering-rules" target="_blank" rel="noopener">Denver Water</a>, <a href="https://www.denverwater.org/your-water/water-supply-and-planning/drought-response" target="_blank" rel="noopener">Denver Water Drought Pricing (April 2026)</a>, <a href="https://www.highlandsranchwater.org/drought-resource-center" target="_blank" rel="noopener">Highlands Ranch Water</a>, <a href="https://pwsd.org/3366/Watering-Restrictions" target="_blank" rel="noopener">Parker Water & Sanitation District</a>, <a href="https://crconserve.com/158/Watering-Schedule" target="_blank" rel="noopener">Castle Rock Water</a>, <a href="https://www.cpnmd.org/water" target="_blank" rel="noopener">Castle Pines North Metropolitan District</a>, <a href="https://www.englewoodco.gov/government/city-departments/utilities/customers/watering-schedule" target="_blank" rel="noopener">City of Englewood Utilities</a>, <a href="https://extension.colostate.edu/resource/lawn-care-basics/" target="_blank" rel="noopener">Colorado State University Extension</a>, <a href="https://www.dmarealtors.com/news/what-colorados-water-restrictions-mean-you-and-your-clients" target="_blank" rel="noopener">DMAR</a>. All information current as of April 8, 2026 — check your district directly for the latest updates.</p>

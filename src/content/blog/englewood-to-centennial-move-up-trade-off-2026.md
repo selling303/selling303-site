@@ -11,7 +11,6 @@ heroLabel: "Move-Up Sellers"
 heroSubtext: "Englewood owners trading up to Centennial give up walkability and the urban edge. They pick up 707 more finished square feet for about $50,000 more, at 25% less per finished square foot. The April 2026 numbers make the trade-off plain."
 cardStat: "+707 sqft"
 cardStatLabel: "Englewood-to-Centennial sqft jump"
-ogImage: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&h=630&fit=crop&q=80"
 aboutPlaces:
   - "South Denver Metro, Colorado"
   - "Englewood, Colorado"
@@ -42,6 +41,8 @@ relatedPosts:
     description: "Real timeline walkthrough of a dual transaction — equity math, contingency mechanics, and three bridge strategies."
     date: "April 11, 2026"
 ---
+
+<p class="audience-marker" data-audience-marker style="font-size: 0.85rem; color: var(--color-body-text); margin: 0 0 1.5rem; font-style: italic; letter-spacing: 0.01em; opacity: 0.85;">Written for <a href="/move-up-sellers">move up sellers</a> in <a href="/neighborhoods/englewood">Englewood</a> and the broader South Denver Metro.</p>
 
 <div style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.25rem 1.5rem; margin-bottom: 2rem; border-radius: 0 8px 8px 0;">
 <strong>What does an Englewood owner actually trade moving up to Centennial in 2026?</strong> About $50,050 more at the median ($599,950 → $650,000) for 707 more finished square feet, which works out to 44% more space at 25% less per finished square foot per April 2026 REcolorado MLS.
@@ -79,14 +80,7 @@ relatedPosts:
 
 <p>The headline trade is simpler than most move-up sellers expect. The median Centennial home costs $50,050 more than the median Englewood home but delivers 707 more finished square feet. The median Englewood seller is currently fetching 98% of original list price in 12 median days on market. That's the same velocity Centennial is running on the buy side. There's no friction in the timing math. The friction is in the lifestyle math.</p>
 
-<div style="margin: 2rem 0;" itemscope itemtype="https://schema.org/Dataset" aria-labelledby="math">
-<meta itemprop="name" content="Englewood-to-Centennial move-up two-path trade-off, April 2026">
-<meta itemprop="temporalCoverage" content="2026-04-01/2026-04-30">
-<meta itemprop="spatialCoverage" content="Englewood, Colorado and Centennial, Colorado, Arapahoe County">
-<meta itemprop="creator" content="Jacob Stark, selling303.com">
-<meta itemprop="publisher" content="REcolorado MLS">
-<meta itemprop="variableMeasured" content="median close price, median finished square footage, median price per finished square foot, median days in MLS, median close-to-original-list-price ratio">
-
+<div style="margin: 2rem 0;" aria-labelledby="math">
 <div style="background: #002a3a; color: #fff; padding: 1.75rem 1.5rem 1.5rem; border-radius: 8px 8px 0 0; text-align: center;">
 <div style="font-size: 0.75rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.65rem;">For Englewood Move-Up Sellers</div>
 <div style="font-size: 1.5rem; font-weight: 700; line-height: 1.35; max-width: 640px; margin: 0 auto;">If you sell your Englewood home, what does Centennial actually deliver?</div>
@@ -210,7 +204,7 @@ relatedPosts:
 <blockquote style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.5rem; margin: 2rem 0; border-radius: 0 8px 8px 0;">
 <p style="margin: 0 0 0.5rem; font-size: 1.1rem;"><strong>Thinking about the Englewood-to-Centennial move?</strong></p>
 <p style="margin: 0 0 1rem;">Jacob Stark has guided more than $46 million in South Denver move-up transactions. He works with Englewood owners trading up into Centennial, Highlands Ranch, Parker, and the surrounding Arapahoe and Douglas County markets. Get the equity math, the timing plan, and the subdivision-by-subdivision school check done before the listing goes live.</p>
-<p style="margin: 0;"><strong>Call Jacob at 303-997-0634</strong> or <a href="https://calendly.com/jacob-realtor">book a 30-minute move-up consultation</a>.</p>
+<p style="margin: 0;"><strong>Call Jacob at 303-997-0634</strong> or <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">book a 30-minute move-up consultation</a>.</p>
 </blockquote>
 
 <p style="font-size: 0.875rem; color: #555; margin-top: 2rem;"><em>Data sources: REcolorado MLS Market Analysis Summary, Englewood and Centennial residential closed transactions, April 1–30, 2026 (n=68 Englewood, n=155 Centennial), pulled May 3, 2026, deduplicated for IRES cross-listings; <a href="https://www.dmarealtors.com/market-trends">DMAR April 2026 Market Trends Report</a>; <a href="https://www.freddiemac.com/pmms">Freddie Mac Primary Mortgage Market Survey</a> for 30-year fixed conventional rate context.</em></p>
