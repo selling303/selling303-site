@@ -15,7 +15,7 @@ Usage:
 
 Optional:
     --hero-color "#c8965a"     # default gold accent
-    --footer-line "JACOB STARK · 8z REAL ESTATE · 303-997-0634"
+    --footer-line "JACOB STARK · ORCHARD · 303-997-0634"
 
 Brand palette (selling303.com):
     Navy #002a3a / Dark navy #003c52 / Gold #c8965a / Green #4a7c59 / Light #f4f7f9
@@ -90,7 +90,7 @@ def generate_hero_card(
     output_path,
     subline="",
     hero_color=GOLD,
-    footer_line="JACOB STARK · 8z REAL ESTATE · 303-997-0634",
+    footer_line="JACOB STARK · ORCHARD · 303-997-0634",
     canvas_width=1200,
     canvas_height=900,
 ):
@@ -203,7 +203,7 @@ def main():
     p.add_argument("--subline", default="")
     p.add_argument("--hero-color", default="#c8965a")
     p.add_argument("--footer-line",
-                   default="JACOB STARK · 8z REAL ESTATE · 303-997-0634")
+                   default="JACOB STARK · ORCHARD · 303-997-0634")
     p.add_argument("--canvas-width", type=int, default=1200)
     p.add_argument("--canvas-height", type=int, default=900)
     args = p.parse_args()
