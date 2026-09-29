@@ -3,7 +3,7 @@
 // Neighborhood links and quick links are centralized here
 import { Image } from 'astro:assets';
 import footerAvatarSrc from '../assets/images/jacob-stark-footer-avatar.png';
-import logoSrc from '../assets/images/8z-logo-white.png';
+import logoSrc from '../assets/images/orchard-logo-white.png';
 
 const neighborhoods = [
   { name: 'Littleton', slug: 'littleton' },
@@ -24,7 +24,7 @@ const neighborhoods = [
       <div>
         <Image src={footerAvatarSrc} alt="Jacob Stark headshot" class="footer__avatar" width={48} height={48} format="webp" quality={80} />
         <div class="footer__brand-name">Selling 303</div>
-        <p class="footer__brand-text">Jacob Stark, REALTOR&reg; at 8z Real Estate. Your guide through South Denver Metro real estate &mdash; from the first conversation to closing day.</p>
+        <p class="footer__brand-text">Jacob Stark, REALTOR&reg; at Orchard. Your guide through South Denver Metro real estate &mdash; from the first conversation to closing day.</p>
         <div class="footer__contact-info">
           <p><a href="tel:3039970634">303-997-0634</a></p>
           <p><a href="mailto:jacob@selling303.com">jacob@selling303.com</a></p>
@@ -38,7 +38,7 @@ const neighborhoods = [
           <a href="https://zillow.com/profile/jacobstarkrealtor" aria-label="Zillow"><svg viewBox="0 0 24 24" width="24" height="24" fill="white"><path d="M12 2L2 12h3v8h14v-8h3L12 2zm0 2.83L18.17 11H16v8H8v-8H5.83L12 4.83z"/></svg></a>
         </div>
         <div class="footer__brokerage-logo">
-          <Image src={logoSrc} alt="8z Real Estate" width={100} format="webp" quality={80} loading="lazy" />
+          <Image src={logoSrc} alt="Orchard" width={120} format="webp" quality={80} loading="lazy" />
         </div>
       </div>
       <div>
@@ -75,7 +75,7 @@ const neighborhoods = [
       </div>
     </div>
     <div class="footer__bottom">
-      <span>&copy; {new Date().getFullYear()} Selling 303. Jacob Stark, REALTOR&reg; &middot; 8z Real Estate &middot; CO Lic #FA100087287</span>
+      <span>&copy; {new Date().getFullYear()} Selling 303. Jacob Stark, REALTOR&reg; &middot; Orchard Brokerage LLC &middot; CO Lic #FA100087287</span>
       <span class="footer__legal">
         <a href="#">Privacy Policy</a>
         <a href="#">Terms</a>
