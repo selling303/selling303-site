@@ -1,4 +1,5 @@
 ---
+import { agent } from '../../../data/agent';
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import PageHero from '../../../components/PageHero.astro';
@@ -81,12 +82,12 @@ const collectionSchema = {
     <div class="container">
       <div class="ss-trust-ribbon__inner">
         <div class="ss-trust-ribbon__stat">
-          <span class="ss-trust-ribbon__number">$46M+</span>
+          <span class="ss-trust-ribbon__number">{agent.stats.salesVolume}</span>
           <span class="ss-trust-ribbon__label">Sales Volume</span>
         </div>
         <span class="ss-trust-ribbon__divider" aria-hidden="true"></span>
         <div class="ss-trust-ribbon__stat">
-          <span class="ss-trust-ribbon__number">83</span>
+          <span class="ss-trust-ribbon__number">{agent.stats.familiesHelped}</span>
           <span class="ss-trust-ribbon__label">Families Helped</span>
         </div>
         <span class="ss-trust-ribbon__divider" aria-hidden="true"></span>
@@ -96,7 +97,7 @@ const collectionSchema = {
         </div>
         <span class="ss-trust-ribbon__divider" aria-hidden="true"></span>
         <div class="ss-trust-ribbon__stat">
-          <span class="ss-trust-ribbon__number">100.6%</span>
+          <span class="ss-trust-ribbon__number">{agent.stats.saleToList}</span>
           <span class="ss-trust-ribbon__label">Avg Sale-to-List</span>
         </div>
         <span class="ss-trust-ribbon__divider" aria-hidden="true"></span>

@@ -1,0 +1,67 @@
+---
+// Lightweight YouTube embed. Renders NOTHING when videoId is empty,
+// so pages can carry a video slot before the video exists.
+// Shows a thumbnail first; loads the iframe on click (keeps pages fast).
+// Emits VideoObject schema for search/AI engines when a video is present.
+interface Props {
+  videoId?: string;
+  title: string;
+  description?: string;
+  uploadDate?: string; // YYYY-MM-DD
+}
+const { videoId = '', title, description = '', uploadDate } = Astro.props;
+const thumb = videoId ? `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg` : '';
+const schema = videoId ? {
+  '@context': 'https://schema.org',
+  '@type': 'VideoObject',
+  name: title,
+  description: description || title,
+  thumbnailUrl: thumb,
+  ...(uploadDate ? { uploadDate } : {}),
+  embedUrl: `https://www.youtube-nocookie.com/embed/${videoId}`,
+  contentUrl: `https://www.youtube.com/watch?v=${videoId}`,
+} : null;
+---
+{videoId && (
+  <figure class="video-embed">
+    <button class="video-embed__poster" data-video-id={videoId} aria-label={`Play video: ${title}`}
+      style={`background-image: url('${thumb}');`}>
+      <span class="video-embed__play" aria-hidden="true"></span>
+    </button>
+    <figcaption class="video-embed__caption">{title}</figcaption>
+    <script type="application/ld+json" set:html={JSON.stringify(schema)}></script>
+  </figure>
+)}
+<script is:inline>
+  document.querySelectorAll('.video-embed__poster').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var id = btn.getAttribute('data-video-id');
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+      f.title = btn.getAttribute('aria-label');
+      f.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';
+      f.allowFullscreen = true;
+      f.className = 'video-embed__frame';
+      btn.replaceWith(f);
+    });
+  });
+</script>
+<style>
+  .video-embed { margin: var(--space-lg) 0; }
+  .video-embed__poster, :global(.video-embed__frame) {
+    display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: var(--radius-md);
+  }
+  .video-embed__poster {
+    background-size: cover; background-position: center; cursor: pointer; position: relative;
+    box-shadow: var(--shadow-md);
+  }
+  .video-embed__play {
+    position: absolute; inset: 0; margin: auto; width: 72px; height: 72px; border-radius: 50%;
+    background: var(--color-primary); opacity: 0.92;
+  }
+  .video-embed__play::after {
+    content: ''; position: absolute; left: 29px; top: 22px;
+    border-style: solid; border-width: 14px 0 14px 22px; border-color: transparent transparent transparent #fff;
+  }
+  .video-embed__caption { font-size: 0.85rem; color: var(--color-body-text); margin-top: 0.5rem; }
+</style>

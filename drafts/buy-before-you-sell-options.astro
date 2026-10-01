@@ -1,0 +1,209 @@
+---
+// Pillar 4 of the "Outgrown Your Home?" cluster — comparison page. Created 2026-09-30.
+// ⚠️ NAMED-PROGRAM TABLE NEEDS A FEE CHECK EVERY ~6 MONTHS. Update `programsAsOf` + rows.
+import { agent, brokerage } from '../data/agent';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import VideoEmbed from '../components/VideoEmbed.astro';
+import PillarScripts from '../components/PillarScripts.astro';
+
+const bookUrl = agent.bookingUrls.moveUp;
+const videoId = '';
+const programsAsOf = 'September 2026';
+
+// Option categories (brokerage-neutral, durable).
+const paths = [
+  { name: 'Equity advance program', how: 'A company advances part of your current home\'s equity before it sells. You use it for the down payment and repay it from your sale proceeds.', cost: 'Program fee, commonly about 2–5% of the sale price depending on the program', best: 'Solid equity, a competitive target market, and a strong preference to move once', watch: 'Approval required; fees, advance limits, and deadlines to list and sell vary by program' },
+  { name: 'Bridge loan', how: 'A short-term loan against your current home that covers the down payment on the next one. Repaid when the old home sells.', cost: 'Origination fees (often 1–2%) plus interest, typically higher than a standard mortgage', best: 'Strong credit and income to qualify while you own both homes', watch: 'Interest adds up if the old home sits; qualifying can be harder than a program built for this' },
+  { name: 'HELOC', how: 'A home equity line of credit on your current home funds the down payment. You pay it off when the old home sells.', cost: 'Variable interest on what you draw, plus any closing costs', best: 'Planning ahead, with enough income to carry both payments', watch: 'Usually has to be opened before you list; you\'re carrying two payments until the sale' },
+  { name: 'Offer with a home-sale contingency', how: 'Your purchase depends on selling your current home by a set date.', cost: 'No program fee', best: 'Slower markets where sellers will accept contingencies', watch: 'A weaker offer; you can lose the house to a non-contingent buyer' },
+  { name: 'Sell first, then buy', how: 'Sell, then buy with your proceeds in hand. Often paired with a rent-back or a short-term rental.', cost: 'Rent-back or rental, storage, and a possible second move', best: 'Thin equity, or when certainty about your proceeds matters most', watch: 'Pressure to find the next home fast; living through showings' },
+  { name: 'Guaranteed cash offer', how: 'An investor buys your current home quickly, so you can buy with cash in hand.', cost: 'Lower price; cash offers typically come in around 80–85% of market value', best: 'Speed and certainty matter more than top dollar', watch: 'Often the most expensive option in dollars, even with no fees' },
+];
+
+// Named national programs. Sources listed below the table.
+const programs = [
+  { name: 'Orchard Move First', model: 'Equity advance (Orchard sources multiple equity advance offers)', fee: 'Usually 2–5% (Orchard uses a 3% average in its estimates)', ifUnsold: 'Depends on the advance provider; ask before you commit', note: 'I am a REALTOR® with Orchard. See disclosure.' },
+  { name: 'HomeLight Buy Before You Sell', model: 'Equity unlock through partner agents and lenders', fee: '2.4% of the departing home\'s sale price (higher in some states)', ifUnsold: 'HomeLight buys it at the loan payoff value after 120 days', note: 'List within 21 days of moving; sell within 120 days' },
+  { name: 'Knock Bridge Loan', model: 'Bridge loan; you choose your own agent and lender', fee: '2.25% of estimated list price plus about $1,850 in loan costs', ifUnsold: 'Guaranteed backup offer after six months', note: 'Loans up to $1 million; a newer option pays off your existing mortgage upfront' },
+];
+const sources = [
+  { label: 'Orchard Move First estimate (program materials provided to agents)', url: '' },
+  { label: 'HomeLight: How Buy Before You Sell works', url: 'https://help.homelight.com/hc/en-us/articles/7279245128215-how-homelight-buy-before-you-sell-works' },
+  { label: 'Clever Real Estate: Knock bridge loan review (updated May 2026)', url: 'https://listwithclever.com/real-estate-blog/knock-reviews/' },
+  { label: 'JVM Lending: Buy-before-you-sell programs compared (bridge loan cost ranges)', url: 'https://www.jvmlending.com/blog/buy-before-you-sell-programs-compared/' },
+];
+
+const faqs = [
+  { q: 'What is the cheapest way to buy a house before selling yours?', a: `In program fees, a home-sale contingency costs nothing, but it makes your offer weaker. A HELOC opened before you list is often the lowest-cost financing if you can qualify to carry both payments. Equity advance programs cost more upfront, commonly about 2–5% of the sale price, but they can pay for themselves through a stronger offer, a single move, and a better-prepared listing. Jacob Stark, a South Denver Metro REALTOR®, compares them with your real numbers.` },
+  { q: 'Is a bridge loan the same as an equity advance?', a: `They solve the same problem in different ways. A bridge loan is a short-term loan against your current home, with origination fees and interest. An equity advance program releases part of your equity for a program fee, often with deadlines to list and sell and sometimes a backup offer if the home doesn't sell. Which costs less depends on how long your current home takes to sell.` },
+  { q: 'Which buy-before-you-sell program is best in the South Denver Metro?', a: `There isn't one best program for everyone. It depends on your equity, your credit and income, your home's price, and how fast homes like yours are selling. Jacob Stark walks Littleton, Highlands Ranch, Centennial, and Parker homeowners through the options side by side, including when a HELOC or selling first is the smarter call.` },
+  { q: 'Do I have to qualify for two mortgages?', a: `With a bridge loan or HELOC, generally yes: your lender looks at both payments. Some equity advance and bridge programs are structured to reduce that overlap, for example by covering several months of payments on the old home or paying off the existing mortgage upfront. Ask how each option affects your loan approval before you choose.` },
+  { q: 'How much does a buy-before-you-sell program cost on a $700,000 home?', a: `At a program fee of 2–5% of the sale price, that's roughly $14,000 to $35,000. Weigh that against what buying first can save or earn you: negotiating leverage from a non-contingent offer, avoiding a second move and storage, and selling a home that has been updated, cleaned, and staged after you moved out.` },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+---
+
+<BaseLayout
+  title="Buy Before You Sell Options Compared (2026) | South Denver Metro | Jacob Stark"
+  description="Equity advance, bridge loan, HELOC, contingent offer, or sell first? Jacob Stark compares every way to buy before you sell in the South Denver Metro, with real costs."
+  ogType="website"
+  ogUrl="https://selling303.com/buy-before-you-sell-options"
+  currentPage="move-up-sellers"
+  headerVariant="solid"
+>
+  <Fragment slot="head">
+    <Breadcrumbs schemaOnly items={[
+      { label: 'Home', url: '/' },
+      { label: 'Outgrown Your Home?', url: '/move-up-sellers' },
+      { label: 'Buy Before You Sell Options', url: null },
+    ]} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
+
+  <section class="pillar-hero">
+    <div class="container">
+      <div class="pillar-hero__content">
+        <span class="pillar-hero__label"><a href="/move-up-sellers" style="color: inherit;">Outgrown Your Home?</a> &middot; Buy &amp; Sell</span>
+        <h1>Every Way to Buy Before You Sell, Compared</h1>
+        <p class="pillar-hero__subtitle">Equity advances, bridge loans, HELOCs, contingent offers, and selling first: what each one costs, who it fits, and what to watch out for in the South Denver Metro.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white pillar-body">
+    <div class="pillar-layout">
+
+      <aside class="pillar-toc" aria-label="Page navigation">
+        <span class="pillar-toc__label">On This Page</span>
+        <ul class="pillar-toc__list">
+          <li><a href="#direct-answer" class="pillar-toc__link active">The Short Answer</a></li>
+          <li><a href="#all-options" class="pillar-toc__link">All the Options</a></li>
+          <li><a href="#named-programs" class="pillar-toc__link">Named Programs</a></li>
+          <li><a href="#example" class="pillar-toc__link">What It Costs</a></li>
+          <li><a href="#how-to-choose" class="pillar-toc__link">How to Choose</a></li>
+          <li><a href="#faq" class="pillar-toc__link">FAQ</a></li>
+        </ul>
+      </aside>
+
+      <div class="pillar-content">
+
+        <div class="snippet-block" id="direct-answer">
+          <span class="snippet-block__label">The Short Answer</span>
+          <p><strong>What are the ways to buy a house before selling yours?</strong> The main options are an equity advance program, a bridge loan, a HELOC, an offer with a home-sale contingency, selling first with a rent-back, or a guaranteed cash offer. Equity advance programs commonly cost about 2–5% of the sale price but let you make a non-contingent offer and move once. A HELOC can cost less if you open it before listing and can carry both payments. Jacob Stark, a South Denver Metro REALTOR®, compares them with your real numbers.</p>
+        </div>
+
+        <VideoEmbed videoId={videoId} title="Every way to buy before you sell, compared" description="Jacob Stark compares equity advances, bridge loans, HELOCs, and other ways to buy before you sell." />
+
+        <p class="oyh-disclosure-box"><strong>Full disclosure:</strong> I'm a REALTOR® with {brokerage.name}, and one of the programs below is theirs. I've laid out every option as evenly as I can, including the ones I don't offer, and I'll tell you when something else fits your situation better.</p>
+
+        <!-- ALL OPTIONS -->
+        <div id="all-options" style="padding-top: var(--space-xl);">
+          <span class="section-label">All the Options</span>
+          <h2 class="section-heading">Six Ways to Get From This House to the Next One</h2>
+          <div class="oyh-table-wrap">
+            <table class="oyh-table oyh-table--wide">
+              <thead><tr><th scope="col">Option</th><th scope="col">How it works</th><th scope="col">Typical cost</th><th scope="col">Best for</th><th scope="col">Watch out for</th></tr></thead>
+              <tbody>
+                {paths.map((p) => (
+                  <tr><th scope="row">{p.name}</th><td>{p.how}</td><td>{p.cost}</td><td>{p.best}</td><td>{p.watch}</td></tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p style="margin-top: var(--space-sm); font-size: 0.9rem;">New to buying first? Start with <a href="/buy-before-you-sell">how buying before you sell works &rarr;</a></p>
+        </div>
+
+        <!-- NAMED PROGRAMS -->
+        <div id="named-programs" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Named Programs</span>
+          <h2 class="section-heading">National Buy-Before-You-Sell Programs Available in Colorado</h2>
+          <p style="margin-bottom: var(--space-md);">Fees and terms as of {programsAsOf}. They change often, so confirm current terms with the provider before you rely on them.</p>
+          <div class="oyh-table-wrap">
+            <table class="oyh-table oyh-table--wide">
+              <thead><tr><th scope="col">Program</th><th scope="col">How it works</th><th scope="col">Fee</th><th scope="col">If your home doesn't sell</th><th scope="col">Good to know</th></tr></thead>
+              <tbody>
+                {programs.map((p) => (
+                  <tr><th scope="row">{p.name}</th><td>{p.model}</td><td>{p.fee}</td><td>{p.ifUnsold}</td><td>{p.note}</td></tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div class="oyh-sources">
+            <p><strong>Sources:</strong></p>
+            <ul>
+              {sources.map((s) => (<li>{s.url ? <a href={s.url} target="_blank" rel="noopener nofollow">{s.label}</a> : s.label}</li>))}
+            </ul>
+            <p class="oyh-disclosure">{brokerage.disclosures.equityAdvance} Program names are trademarks of their respective owners. Information is provided for comparison only and is not a commitment to lend.</p>
+          </div>
+        </div>
+
+        <!-- EXAMPLE -->
+        <div id="example" style="padding-top: var(--space-2xl);">
+          <span class="section-label">What It Costs</span>
+          <h2 class="section-heading">A Quick Example on a $700,000 Home</h2>
+          <p>Say your current South Denver Metro home is worth $700,000 and you want to buy first with an equity advance. At a program fee of 2–5% of the sale price, you'd pay roughly <strong>$14,000 to $35,000</strong> when the old home sells.</p>
+          <p>That's real money, and it's the number most people stop at. The other side of the ledger: a non-contingent offer that can win better terms, one move instead of two, and a house that gets updated, deep-cleaned, and staged before it hits the market. <a href="/buy-before-you-sell#pays-for-itself">How buying first can pay for itself &rarr;</a></p>
+          <p class="oyh-disclosure">Example for illustration only. Your costs depend on your home, the program, and current terms.</p>
+        </div>
+
+        <!-- HOW TO CHOOSE -->
+        <div id="how-to-choose" style="padding-top: var(--space-2xl);">
+          <span class="section-label">How to Choose</span>
+          <h2 class="section-heading">Four Questions That Narrow It Down Fast</h2>
+          <div class="oyh-blockers">
+            <div class="oyh-blocker"><p class="oyh-blocker__quote">How much equity do you have?</p><p>More equity opens up every buy-first option. Thin equity usually points to selling first.</p></div>
+            <div class="oyh-blocker"><p class="oyh-blocker__quote">Can you carry both payments?</p><p>If yes, a HELOC or bridge loan may cost less. If not, look at programs that cover or remove the overlap.</p></div>
+            <div class="oyh-blocker"><p class="oyh-blocker__quote">How competitive is the house you want?</p><p>Multiple offers? A contingent offer will probably lose. That's where buying first earns its cost.</p></div>
+            <div class="oyh-blocker"><p class="oyh-blocker__quote">How fast will your home sell?</p><p>Fast sales favor interest-based options. Slower sales favor flat-fee programs with a backup offer.</p></div>
+          </div>
+          <div class="section-cta">
+            <p>Want help running your numbers through all six? That's exactly what the 30-minute plan is for.</p>
+            <a href={bookUrl} class="btn btn--primary btn--sm" target="_blank" rel="noopener">Get Your Next-Move Plan</a>
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <div id="faq" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Common Questions</span>
+          <h2 class="section-heading">Buy Before You Sell Options: FAQ</h2>
+          <div class="faq-list">
+            {faqs.map((f) => (
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">{f.q}</button>
+                <div class="faq-answer"><p>{f.a}</p></div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div style="padding-top: var(--space-2xl);">
+          <span class="section-label">Keep Planning</span>
+          <h2 class="section-heading">The Rest of the Plan</h2>
+          <div class="oyh-blockers">
+            <a class="oyh-blocker oyh-blocker--link" href="/move-up-sellers"><p class="oyh-blocker__quote">The full plan</p><p>Prepare, Buy &amp; Sell, Move Once: the whole move on one page.</p></a>
+            <a class="oyh-blocker oyh-blocker--link" href="/buy-before-you-sell"><p class="oyh-blocker__quote">How buying first works</p><p>The six steps, what the funding covers, and common worries.</p></a>
+            <a class="oyh-blocker oyh-blocker--link" href="/what-to-fix-before-selling"><p class="oyh-blocker__quote">What to fix, what to skip</p><p>How to decide which projects are worth doing before you list.</p></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner" style="background-color: var(--color-white);">
+    <div class="container">
+      <h2 style="color: var(--color-dark-text);">Not Sure Which Option Fits?</h2>
+      <p style="color: var(--color-body-text);">In 30 minutes, we'll run your numbers through every option and pick the one that gets you to the next house with the least cost and stress.</p>
+      <a href={bookUrl} class="btn btn--primary btn--lg" target="_blank" rel="noopener">Get Your Next-Move Plan</a>
+      <a href={agent.phoneHref} class="btn btn--outline-dark btn--lg">Call {agent.phone}</a>
+    </div>
+  </section>
+
+  <PillarScripts />
+</BaseLayout>

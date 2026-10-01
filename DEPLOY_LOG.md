@@ -1,5 +1,16 @@
 # Deploy Log
 
+## 2026-09-29 — merge c7353b9 (main → live, main 70c818c) | Credits used: 15 | Build: triggered via hook 69de8373
+
+### Brokerage change: 8z Real Estate → Orchard
+
+- Site-wide copy updated to "REALTOR® at Orchard" (footer, about hero, contact, blog index/author, open house, specialization pages).
+- Legal lines (footer copyright, blog disclaimers) now read "Orchard Brokerage LLC".
+- JSON-LD: worksFor → Orchard (orchard.com); sameAs 8z profile → https://orchard.com/agent/jacob-stark; removed 8z office street address (city/state/ZIP kept).
+- Footer logo swapped to `src/assets/images/orchard-logo-white.png` (trimmed from Orchard brand file).
+- GBP image script footer line → "JACOB STARK · ORCHARD · 303-997-0634".
+- Fix: GITHUB_PAT in Netlify had expired (pushes had silently failed since ~July); Jacob regenerated it 2026-09-29.
+
 ## 2026-06-24 — merge e8c60f4 (main → live) | Credits used: 15 | Build: triggered via hook 69de8373
 
 ### Five-week backlog catch-up + three same-day fixes

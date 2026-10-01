@@ -8,6 +8,10 @@
 # request before the redirect runs, so the rule never fired. Canonical handles dedup.
 /home        /           301
 
+# --- Vanity links (spoken on video, ads, print) ---
+# Added 2026-09-30: "Outgrown Your Home?" hub short link.
+/outgrown    /move-up-sellers   301
+
 # --- Sitemap canonicalization ---
 # Astro's @astrojs/sitemap emits /sitemap-index.xml + /sitemap-0.xml; the legacy
 # /sitemap.xml does not ship. Without this, GSC and external services hitting

@@ -2392,3 +2392,88 @@ p:last-child {
 
 /* --- Widget Visibility (hide WidgetBe visible element, keep tracking) --- */
 [class*="widget-be"], [id*="widget-be"], .wb-widget { display: none !important; }
+
+
+/* --- Outgrown Your Home? cluster (hub + pillars) — added 2026-09-30 --- */
+.oyh-monologue {
+  border-left: 4px solid var(--color-accent);
+  background: var(--color-background);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: var(--space-md) var(--space-lg);
+  margin: var(--space-md) 0 var(--space-lg);
+}
+.oyh-monologue p {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  color: var(--color-dark-text);
+  margin: 0 0 0.4rem;
+  line-height: 1.5;
+}
+.oyh-monologue p:last-child { margin-bottom: 0; }
+.oyh-answer {
+  font-weight: 600;
+  color: var(--color-primary);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+.oyh-blockers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+.oyh-blocker {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+}
+.oyh-blocker p { font-size: 0.95rem; line-height: 1.6; }
+.oyh-blocker a { margin-top: auto; font-weight: 600; color: var(--color-accent); text-decoration: none; font-size: 0.9rem; }
+.oyh-blocker__quote {
+  font-family: var(--font-heading);
+  font-size: 1.15rem !important;
+  color: var(--color-dark-text);
+  margin-bottom: 0.5rem;
+}
+.oyh-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.oyh-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; min-width: 560px; }
+.oyh-table th, .oyh-table td { text-align: left; vertical-align: top; padding: 0.75rem; border-bottom: 1px solid var(--color-border); }
+.oyh-table thead th { background: var(--color-primary); color: var(--color-white); font-weight: 600; }
+.oyh-table tbody th { color: var(--color-dark-text); font-weight: 600; width: 26%; }
+.oyh-table td { color: var(--color-body-text); }
+.oyh-testimonial { margin: var(--space-xl) auto; }
+.oyh-delivery {
+  background: var(--color-background);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  margin-top: var(--space-lg);
+}
+.oyh-delivery h3 { font-size: 1.05rem; margin-bottom: 0.5rem; }
+.oyh-delivery p { font-size: 0.95rem; line-height: 1.6; }
+.oyh-disclosure { font-size: 0.72rem !important; color: var(--color-light-text); line-height: 1.5 !important; margin-bottom: 0; }
+.oyh-proof { list-style: none; padding: 0; margin: var(--space-md) 0 var(--space-lg); display: grid; gap: 0.75rem; }
+.oyh-proof li { position: relative; padding-left: 1.75rem; line-height: 1.6; color: var(--color-body-text); }
+.oyh-proof li::before { content: ''; position: absolute; left: 0; top: 0.45em; width: 0.9rem; height: 0.9rem; border-radius: 50%; background: var(--color-accent); }
+.oyh-proof strong { color: var(--color-dark-text); }
+.process-step p a { color: var(--color-accent); font-weight: 600; text-decoration: none; font-size: 0.875rem; }
+
+.oyh-steps-6 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 900px) { .oyh-steps-6 { grid-template-columns: 1fr; } }
+.oyh-blocker--link { text-decoration: none; color: inherit; transition: box-shadow .2s ease, transform .2s ease; }
+.oyh-blocker--link:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+
+.oyh-worries .oyh-blocker { border-top-color: var(--color-accent); }
+
+.oyh-bonus { margin-top: var(--space-md); padding: var(--space-sm) var(--space-md); border-left: 3px solid var(--color-accent); background: var(--color-background); border-radius: 0 var(--radius-md) var(--radius-md) 0; }
+
+.oyh-table--wide { min-width: 760px; }
+.oyh-table--wide td, .oyh-table--wide tbody th { font-size: 0.88rem; }
+.oyh-disclosure-box { font-size: 0.9rem; background: var(--color-background); border-radius: var(--radius-md); padding: var(--space-sm) var(--space-md); margin: var(--space-md) 0 0; }
+.oyh-sources { margin-top: var(--space-md); font-size: 0.82rem; color: var(--color-body-text); }
+.oyh-sources ul { margin: 0.25rem 0 0.75rem 1.1rem; }
+.oyh-sources a { color: var(--color-primary); }

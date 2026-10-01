@@ -1,4 +1,5 @@
 ---
+import { agent } from '../../data/agent';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
 import DirectAnswer from '../../components/DirectAnswer.astro';
@@ -88,7 +89,7 @@ const faqItems = [
         Home equity is the difference between what your home is worth on today's market and what you still owe on your mortgage — minus the costs of actually getting the equity out through a sale. In South Denver Metro, sellers typically net 91–93 cents on the dollar of their sale price after commissions, title fees, Colorado transfer tax, and basic prep.
       </p>
       <p>
-        For most move-up sellers in Littleton, Highlands Ranch, Centennial, Parker, and surrounding communities, the big lever isn't the commission percentage — it's the sale price itself. A home priced aggressively and marketed well sells in 14 days at full list; a mispriced home sits 60+ days and takes a price reduction. Jacob Stark's sellers average 100.6% sale-to-list ratio, which compounds directly into more equity available for the next purchase.
+        For most move-up sellers in Littleton, Highlands Ranch, Centennial, Parker, and surrounding communities, the big lever isn't the commission percentage — it's the sale price itself. A home priced aggressively and marketed well sells in 14 days at full list; a mispriced home sits 60+ days and takes a price reduction. Jacob Stark's sellers average {agent.stats.saleToList} sale-to-list ratio, which compounds directly into more equity available for the next purchase.
       </p>
 
       <h3 style="margin-top: 2.5rem;">What South Denver sellers typically net</h3>

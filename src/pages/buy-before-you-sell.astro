@@ -1,0 +1,312 @@
+---
+// Pillar 1 of the "Outgrown Your Home?" cluster — created 2026-09-30.
+// Hub: /move-up-sellers. Messaging: brain/marketing/outgrown-your-home-messaging.md
+import { getCollection } from 'astro:content';
+import { fixOrSkipUrl } from '../data/cluster';
+import { agent, brokerage } from '../data/agent';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import VideoEmbed from '../components/VideoEmbed.astro';
+import PillarScripts from '../components/PillarScripts.astro';
+
+const bookUrl = agent.bookingUrls.moveUp;
+const videoId = ''; // set when the "buy before you sell" video is published
+
+const faqs = [
+  {
+    q: 'What does it mean to buy a house before selling your current one?',
+    a: `It means you purchase and move into your next home first, then prepare, list, and sell the home you're leaving. Because your equity is still tied up in the old house, you need another way to fund the down payment, usually an equity advance, a bridge loan, or a HELOC. In the South Denver Metro, Jacob Stark, REALTOR®, helps homeowners decide whether buying first fits their equity, income, and timeline.`,
+  },
+  {
+    q: 'Do I need to qualify for two mortgages to buy before I sell?',
+    a: `You need to qualify for the new mortgage while you still own the old home, so your lender will look at both payments unless your current home is already under contract or another arrangement applies. This is the first thing to check, and it's why getting pre-approved before you shop matters. Some buy-before-you-sell programs also cover a few months of payments on the old home, which reduces the overlap you're carrying.`,
+  },
+  {
+    q: 'Is buying before you sell worth the cost?',
+    a: `Often, yes, because the program fees can be offset in three ways. A non-contingent offer is stronger and can give you more negotiating leverage. You move once, so you don't pay movers twice, rent storage, or cover a short-term rental. And once the old home is vacant, it can be updated, deep-cleaned, and staged to sell for more. On top of that, you skip living through showings. Jacob Stark, REALTOR®, puts the fees and the offsets side by side with your real numbers before you decide.`,
+  },
+  {
+    q: 'What happens if my old house takes longer to sell than expected?',
+    a: `You keep carrying the old home's costs until it sells, so pricing it right from day one matters more than ever. Jacob Stark's listings average ${agent.stats.avgDaysOnMarket} days on market and ${agent.stats.saleToList} of list price, and the plan includes a pricing review at the three-week mark if showings are light. Ask about backup options before you commit; some programs include a guaranteed offer as a safety net.`,
+  },
+  {
+    q: 'Can I buy before selling without a special program?',
+    a: `Yes. Common alternatives include a bridge loan, a HELOC opened before you list, cash reserves, or a home-sale contingency in your offer. Each has trade-offs in cost, approval, and offer strength, and Jacob Stark compares them with your real numbers before you choose.`,
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How to buy your next home before selling your current one',
+  description: 'The six steps South Denver Metro homeowners follow to buy their next home first, move once, and sell the old home at its best.',
+  step: [
+    { '@type': 'HowToStep', position: 1, name: 'Run the numbers and get approved', text: 'Confirm your equity, get pre-approved for the new mortgage, and get approved for the funding that will cover your down payment before your current home sells.' },
+    { '@type': 'HowToStep', position: 2, name: 'Shop and make a non-contingent offer', text: 'Search for the next home and write an offer that does not depend on selling your current home.' },
+    { '@type': 'HowToStep', position: 3, name: 'Close and move once', text: 'Close on the new home and move straight in.' },
+    { '@type': 'HowToStep', position: 4, name: 'Prepare the home you left', text: 'Decide what is worth fixing and what to skip, then complete the updates, cleaning, and staging after you have moved out.' },
+    { '@type': 'HowToStep', position: 5, name: 'List it at its best', text: 'Photograph, list, and show the refreshed, staged home with no family schedule to work around.' },
+    { '@type': 'HowToStep', position: 6, name: 'Repay at closing', text: 'When the old home sells, the funding used to buy first is repaid from the proceeds.' },
+  ],
+};
+
+const relatedSlugs = [
+  'move-up-timing-castle-pines-2026',
+  'selling-centennial-buying-highlands-ranch-coordinate-transactions',
+  'equity-to-move-up-highlands-ranch',
+];
+const allPosts = await getCollection('blog');
+const related = relatedSlugs.map((slug) => allPosts.find((p) => (p.id ?? p.slug) === slug)).filter(Boolean);
+---
+
+<BaseLayout
+  title="How to Buy a House Before Selling Yours | South Denver Metro | Jacob Stark"
+  description="Buy your next South Denver Metro home first, move once, and sell the old one at its best. Jacob Stark explains how buy-before-you-sell works, what it costs, and who it fits."
+  ogType="website"
+  ogUrl="https://selling303.com/buy-before-you-sell"
+  currentPage="move-up-sellers"
+  headerVariant="solid"
+>
+  <Fragment slot="head">
+    <Breadcrumbs schemaOnly items={[
+      { label: 'Home', url: '/' },
+      { label: 'Outgrown Your Home?', url: '/move-up-sellers' },
+      { label: 'Buy Before You Sell', url: null },
+    ]} />
+    <script type="application/ld+json" set:html={JSON.stringify(howToSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
+
+  <section class="pillar-hero">
+    <div class="container">
+      <div class="pillar-hero__content">
+        <span class="pillar-hero__label"><a href="/move-up-sellers" style="color: inherit;">Outgrown Your Home?</a> &middot; Buy &amp; Sell</span>
+        <h1>How to Buy Your Next Home Before You Sell This One</h1>
+        <p class="pillar-hero__subtitle">Move once, skip living in a house that's for sale, and make the kind of offer sellers prefer. Here's how it works in the South Denver Metro, what it costs, and who it fits.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white pillar-body">
+    <div class="pillar-layout">
+
+      <aside class="pillar-toc" aria-label="Page navigation">
+        <span class="pillar-toc__label">On This Page</span>
+        <ul class="pillar-toc__list">
+          <li><a href="#direct-answer" class="pillar-toc__link active">The Short Answer</a></li>
+          <li><a href="#why-buy-first" class="pillar-toc__link">Why Buy First</a></li>
+          <li><a href="#how-it-works" class="pillar-toc__link">How It Works</a></li>
+          <li><a href="#what-it-covers" class="pillar-toc__link">What the Funding Covers</a></li>
+          <li><a href="#pays-for-itself" class="pillar-toc__link">Can It Pay for Itself?</a></li>
+          <li><a href="#who-it-fits" class="pillar-toc__link">Is It Right for You?</a></li>
+          <li><a href="#trade-offs" class="pillar-toc__link">The Trade-Offs</a></li>
+          <li><a href="#common-worries" class="pillar-toc__link">Common Worries</a></li>
+          <li><a href="#faq" class="pillar-toc__link">FAQ</a></li>
+        </ul>
+      </aside>
+
+      <div class="pillar-content">
+
+        <div class="snippet-block" id="direct-answer">
+          <span class="snippet-block__label">The Short Answer</span>
+          <p><strong>How do you buy a house before selling your current one?</strong> You fund the down payment on the next home before your current home's equity is available, usually with an equity advance, a bridge loan, or a HELOC, and make an offer that doesn't depend on selling first. You close, move in, and then your old home is refreshed, staged, listed, and sold, with the funding repaid from the proceeds. Jacob Stark, a South Denver Metro REALTOR®, helps homeowners decide whether buying first fits their equity and timeline.</p>
+        </div>
+
+        <VideoEmbed videoId={videoId} title="How to buy your next home before selling this one" description="Jacob Stark explains how South Denver Metro homeowners buy their next home first and move once." />
+
+        <!-- WHY BUY FIRST -->
+        <div id="why-buy-first" style="padding-top: var(--space-xl);">
+          <span class="section-label">Why Buy First</span>
+          <h2 class="section-heading">Four Reasons Most Families Prefer Buying First</h2>
+          <ul class="oyh-proof">
+            <li><strong>You move once.</strong> No short-term rental, no storage unit, no second move with kids.</li>
+            <li><strong>You make a stronger offer.</strong> Sellers prefer offers that don't depend on you selling another house first, especially when there's competition.</li>
+            <li><strong>No showings while you live there.</strong> No cleaning up before work, no leaving with the dog on a moment's notice.</li>
+            <li><strong>Your old home gets to shine.</strong> Once you're settled in the new place, it can be refreshed, deep-cleaned, and staged into the most inviting version of itself, with no daily life to work around.</li>
+          </ul>
+        </div>
+
+        <!-- HOW IT WORKS -->
+        <div id="how-it-works" style="padding-top: var(--space-2xl);">
+          <span class="section-label">How It Works</span>
+          <h2 class="section-heading">Six Steps From This House to the Next One</h2>
+          <div class="process-steps oyh-steps-6">
+            <div class="process-step"><h3>Run the numbers and get approved</h3><p>We confirm your equity, get you pre-approved for the new mortgage, and get approved for the funding that covers your down payment before your current home sells.</p></div>
+            <div class="process-step"><h3>Shop and make a strong offer</h3><p>You search for the next home and write an offer that doesn't depend on selling your current one.</p></div>
+            <div class="process-step"><h3>Close and move once</h3><p>You close on the new home and move straight in. Your family is settled, and the old house is ready to be prepared for its best showing.</p></div>
+            <div class="process-step"><h3>Prepare the home you left</h3><p>We decide what's worth fixing and what to skip, then handle the updates, cleaning, and staging after you've moved out. <a href={fixOrSkipUrl}>What to fix before selling &rarr;</a></p></div>
+            <div class="process-step"><h3>List it at its best</h3><p>Refreshed, cleaned, and staged, then professional photos and a strong launch. Showings happen on buyers' schedules, not yours.</p></div>
+            <div class="process-step"><h3>Repay at closing</h3><p>When the old home sells, the funding you used to buy first is repaid from your proceeds. The rest is yours.</p></div>
+          </div>
+          <div class="section-cta">
+            <p>Want to know if you can buy first? In 30 minutes we can check your equity and map the timeline.</p>
+            <a href={bookUrl} class="btn btn--primary btn--sm" target="_blank" rel="noopener">Get Your Next-Move Plan</a>
+          </div>
+        </div>
+
+        <!-- WHAT IT COVERS -->
+        <div id="what-it-covers" style="padding-top: var(--space-2xl);">
+          <span class="section-label">What the Funding Covers</span>
+          <h2 class="section-heading">What an Equity Advance Can Pay For</h2>
+          <p>An equity advance unlocks part of your current home's equity before it sells. Terms vary by program, so the details matter. The program I use most often is interest-free and can cover:</p>
+          <div class="oyh-blockers">
+            <div class="oyh-blocker"><p class="oyh-blocker__quote">On the new home</p><p>Your down payment and closing costs.</p></div>
+            <div class="oyh-blocker"><p class="oyh-blocker__quote">On the old home</p><p>Up to four months of mortgage payments, so you aren't paying two mortgages out of pocket while it sells.</p></div>
+            <div class="oyh-blocker"><p class="oyh-blocker__quote">In between</p><p>Earnest money reimbursement, moving costs, and repairs to get the old home ready to list.</p></div>
+          </div>
+          <p style="margin-top: var(--space-md);">You repay the advance from your sale proceeds at closing. If a bridge loan or HELOC fits your situation better, we'll compare those too. <a href="/move-up-sellers#your-options">See the options side by side &rarr;</a></p>
+          <p class="oyh-disclosure">{brokerage.disclosures.equityAdvance}</p>
+        </div>
+
+
+        <!-- PAYS FOR ITSELF -->
+        <div id="pays-for-itself" style="padding-top: var(--space-2xl);">
+          <span class="section-label">The Real Math</span>
+          <h2 class="section-heading">Yes, There Are Fees. Here's How Buying First Can Pay for Itself.</h2>
+          <p style="margin-bottom: var(--space-md);">Equity advance programs charge fees, and you should know exactly what they are before you sign. But most people stop the math there. Here's what goes on the other side of the ledger:</p>
+          <div class="oyh-blockers">
+            <div class="oyh-blocker">
+              <p class="oyh-blocker__quote">A stronger offer</p>
+              <p>An offer that doesn't depend on selling your current home is the kind sellers prefer. That can mean better negotiating leverage on price and terms, and winning the house instead of losing it to someone else.</p>
+            </div>
+            <div class="oyh-blocker">
+              <p class="oyh-blocker__quote">One move, not two</p>
+              <p>No paying movers twice, no storage unit, no short-term rental while you hunt for the next house.</p>
+            </div>
+            <div class="oyh-blocker">
+              <p class="oyh-blocker__quote">A higher-value listing</p>
+              <p>Once the house is vacant, it can be updated, deep-cleaned, and staged into the most valuable version of itself. That's hard to pull off while a family is living in it.</p>
+            </div>
+          </div>
+          <p class="oyh-bonus"><strong>And the bonus that doesn't show up on a closing statement:</strong> you skip months of showings, last-minute cleanups, and juggling two moves around work and kids.</p>
+          <p>Every situation is different, so we put your numbers side by side before you decide. Sometimes the fees clearly pay for themselves. Sometimes selling first is the better call, and I'll tell you that too.</p>
+        </div>
+
+        <!-- WHO IT FITS -->
+        <div id="who-it-fits" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Is It Right for You?</span>
+          <h2 class="section-heading">When Buying First Fits, and When Selling First Is Smarter</h2>
+          <div class="oyh-table-wrap">
+            <table class="oyh-table">
+              <thead><tr><th scope="col">Buying first usually fits when…</th><th scope="col">Selling first may be smarter when…</th></tr></thead>
+              <tbody>
+                <tr><td>You have solid equity in your current home</td><td>Your equity is thin, or you need every dollar of it before committing</td></tr>
+                <tr><td>You can qualify for the new mortgage while still owning the old one</td><td>Your income can't support the new payment until the old one is gone</td></tr>
+                <tr><td>The homes you want get multiple offers</td><td>Sellers in your target area are accepting contingent offers</td></tr>
+                <tr><td>Your house would show better refreshed and staged than lived-in</td><td>Your house is already show-ready and would sell fast as is</td></tr>
+                <tr><td>Moving twice with kids is a dealbreaker</td><td>A short rental or rent-back is no big deal for your family</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="margin-top: var(--space-md);">Not sure where you land? <a href="/tools/home-equity-calculator">Estimate your equity</a> first, then we'll look at the full picture together.</p>
+        </div>
+
+        <!-- TRADE-OFFS -->
+        <div id="trade-offs" style="padding-top: var(--space-2xl);">
+          <span class="section-label">The Trade-Offs</span>
+          <h2 class="section-heading">What to Plan for Before You Buy First</h2>
+          <ul class="oyh-proof">
+            <li><strong>Approval comes first.</strong> You need approval for both the new mortgage and the funding before you shop. That takes some paperwork up front.</li>
+            <li><strong>Carrying time costs money.</strong> Until the old home sells, you're covering its taxes, insurance, and utilities, plus any payments the funding doesn't cover.</li>
+            <li><strong>The sale price still matters.</strong> The advance is repaid from your proceeds, so an overpriced listing that sits hurts twice. That's why I price to sell in the first few weeks: my listings average {agent.stats.avgDaysOnMarket} days on market and {agent.stats.saleToList} of list price.</li>
+            <li><strong>Program terms vary.</strong> Fees, advance limits, and backup options differ by program. Read them before you commit, and ask me anything that isn't clear.</li>
+          </ul>
+        </div>
+
+
+        <!-- COMMON WORRIES -->
+        <div id="common-worries" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Common Worries</span>
+          <h2 class="section-heading">What Families Worry About, and What's Actually True</h2>
+          <p style="margin-bottom: var(--space-md);">These are the questions I hear most from South Denver Metro homeowners thinking about buying first.</p>
+          <div class="oyh-blockers oyh-worries">
+            <div class="oyh-blocker">
+              <p class="oyh-blocker__quote">"We can't afford two mortgages at once."</p>
+              <p>You may not have to. An equity advance can cover the down payment on the new home and several months of payments on the old one, so the overlap is planned and funded instead of coming out of your monthly budget.</p>
+            </div>
+            <div class="oyh-blocker">
+              <p class="oyh-blocker__quote">"Sellers won't take us seriously until our house sells."</p>
+              <p>With funding lined up before you shop, your offer doesn't depend on selling first. That puts you on the same footing as buyers with no house to sell.</p>
+            </div>
+            <div class="oyh-blocker">
+              <p class="oyh-blocker__quote">"How do we know which projects are worth doing?"</p>
+              <p>We walk the house together and decide based on its condition, how the rest of the house compares, and what recent sales nearby show buyers pay for. Some projects earn their cost back; many don't. You'll know which is which before you spend a dollar.</p>
+            </div>
+            <div class="oyh-blocker">
+              <p class="oyh-blocker__quote">"Aren't we just guessing what buyers want?"</p>
+              <p>No. Recent sales in your neighborhood show what buyers actually paid more for. I also renovate and resell homes myself, so I see firsthand which updates move the price and which ones buyers walk right past.</p>
+            </div>
+            <div class="oyh-blocker">
+              <p class="oyh-blocker__quote">"We don't have the cash to renovate."</p>
+              <p>You may not need it. Pre-listing work can be covered by an equity advance, or financed and repaid at closing for homeowners who qualify. And often the right answer is a short list of smart updates, not a remodel.</p>
+            </div>
+            <div class="oyh-blocker">
+              <p class="oyh-blocker__quote">"We'll get stuck owning two houses."</p>
+              <p>That's the risk worth planning for, and pricing is how we manage it. My listings average {agent.stats.avgDaysOnMarket} days on market, and if showings are light at the three-week mark, we adjust instead of waiting.</p>
+            </div>
+            <div class="oyh-blocker">
+              <p class="oyh-blocker__quote">"Our house won't feel like home without our things in it."</p>
+              <p>That's what staging is for. After you move out, the house is refreshed, deep-cleaned, and staged so buyers can picture their own life there. It's often the best it has ever looked.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <div id="faq" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Common Questions</span>
+          <h2 class="section-heading">Buying Before You Sell: FAQ</h2>
+          <div class="faq-list">
+            {faqs.map((f) => (
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">{f.q}</button>
+                <div class="faq-answer"><p>{f.a}</p></div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- NEXT STEPS / CLUSTER NAV -->
+        <div style="padding-top: var(--space-2xl);">
+          <span class="section-label">Keep Planning</span>
+          <h2 class="section-heading">The Rest of the Plan</h2>
+          <div class="oyh-blockers">
+            <a class="oyh-blocker oyh-blocker--link" href="/move-up-sellers"><p class="oyh-blocker__quote">The full plan</p><p>Prepare, Buy &amp; Sell, Move Once: the whole move on one page.</p></a>
+            <a class="oyh-blocker oyh-blocker--link" href={fixOrSkipUrl}><p class="oyh-blocker__quote">What to fix, what to skip</p><p>How to decide which projects are worth doing before you list.</p></a>
+            <a class="oyh-blocker oyh-blocker--link" href="/renovate-before-selling"><p class="oyh-blocker__quote">Updates with no money upfront</p><p>Managed pre-listing work, paid for at closing.</p></a>
+          </div>
+          {related.length > 0 && (
+            <div class="card-grid" style="margin-top: var(--space-lg);">
+              {related.map((p) => (
+                <a href={`/blog/${p.id ?? p.slug}`} class="card">
+                  <div class="card__body">
+                    <span class="card__tag">{p.data.tag ?? 'Move-Up'}</span>
+                    <h3 class="card__title">{p.data.title}</h3>
+                    <p class="card__text">{p.data.description}</p>
+                  </div>
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner" style="background-color: var(--color-white);">
+    <div class="container">
+      <h2 style="color: var(--color-dark-text);">Find Out If You Can Buy First</h2>
+      <p style="color: var(--color-body-text);">In 30 minutes, we'll check your equity, your approval path, and a realistic timeline for moving once.</p>
+      <a href={bookUrl} class="btn btn--primary btn--lg" target="_blank" rel="noopener">Get Your Next-Move Plan</a>
+      <a href={agent.phoneHref} class="btn btn--outline-dark btn--lg">Call {agent.phone}</a>
+    </div>
+  </section>
+
+  <PillarScripts />
+</BaseLayout>

@@ -1,4 +1,5 @@
 ---
+import { brokerage } from '../data/agent';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 ---
@@ -128,7 +129,7 @@ import PageHero from '../components/PageHero.astro';
             <div class="contact-info-item__icon">&#x1F3E2;</div>
             <div>
               <div class="contact-info-item__label">Brokerage</div>
-              <div class="contact-info-item__value">Orchard<br />South Denver Metro</div>
+              <div class="contact-info-item__value">{brokerage.name}<br />South Denver Metro</div>
             </div>
           </div>
 

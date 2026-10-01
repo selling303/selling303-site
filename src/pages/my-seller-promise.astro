@@ -1,4 +1,5 @@
 ---
+import { agent, brokerage } from '../data/agent';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { Image, getImage } from 'astro:assets';
 
@@ -26,6 +27,53 @@ const twilightBg = await getImage({ src: twilightImg, format: 'webp', quality: 8
 const floraBg = await getImage({ src: floraAerialImg, format: 'webp', quality: 82, width: 1400 });
 const aerialBg = await getImage({ src: aerialImg, format: 'webp', quality: 82, width: 1400 });
 const livingBg = await getImage({ src: heroImg, format: 'webp', quality: 82, width: 1400 });
+
+const ldSchema1 = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the My Seller Promise listing strategy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": `My Seller Promise is a three-phase listing strategy used by Jacob Stark, REALTOR® at ${brokerage.name}. Phase 1 covers pre-market preparation. Phase 2 builds buyer demand through a 7-day pre-market sequence. Phase 3 is a structured market launch designed to concentrate buyer activity and generate competitive offers.`
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Jacob Stark price homes differently than other agents?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jacob uses a data-driven pricing approach that combines MLS comparable sales analysis with real-time buyer engagement data. During the pre-market phase, he monitors Zillow saves, views, and engagement ratios to validate or adjust pricing before the home goes active on the MLS."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Coming Soon phase and why does it matter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Coming Soon phase is a 7-day period before your home goes active on the MLS. It starts with 24 hours of Zillow Preview visibility, followed by 6 days on Coming Soon status across all major portals. This builds buyer anticipation and serves as a final pricing checkpoint before the active clock starts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How will I know what's happening with my listing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jacob provides every seller with access to ClientClarity, a private seller dashboard that shows showing activity, buyer feedback, marketing milestones, and market context in real time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if my home doesn't get an offer in the first week?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If the offer deadline passes without an accepted offer, Jacob moves immediately — calling every showing agent, collecting feedback, debriefing with you within 24 hours, and recommending a price adjustment if the market signals point to price."
+      }
+    }
+  ]
+};
 ---
 
 <BaseLayout
@@ -58,19 +106,7 @@ const livingBg = await getImage({ src: heroImg, format: 'webp', quality: 82, wid
       }
     }
     </script>
-    <script type="application/ld+json" is:inline>
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        { "@type": "Question", "name": "What is the My Seller Promise listing strategy?", "acceptedAnswer": { "@type": "Answer", "text": "My Seller Promise is a three-phase listing strategy used by Jacob Stark, REALTOR® at Orchard. Phase 1 covers pre-market preparation. Phase 2 builds buyer demand through a 7-day pre-market sequence. Phase 3 is a structured market launch designed to concentrate buyer activity and generate competitive offers." } },
-        { "@type": "Question", "name": "How does Jacob Stark price homes differently than other agents?", "acceptedAnswer": { "@type": "Answer", "text": "Jacob uses a data-driven pricing approach that combines MLS comparable sales analysis with real-time buyer engagement data. During the pre-market phase, he monitors Zillow saves, views, and engagement ratios to validate or adjust pricing before the home goes active on the MLS." } },
-        { "@type": "Question", "name": "What is the Coming Soon phase and why does it matter?", "acceptedAnswer": { "@type": "Answer", "text": "The Coming Soon phase is a 7-day period before your home goes active on the MLS. It starts with 24 hours of Zillow Preview visibility, followed by 6 days on Coming Soon status across all major portals. This builds buyer anticipation and serves as a final pricing checkpoint before the active clock starts." } },
-        { "@type": "Question", "name": "How will I know what's happening with my listing?", "acceptedAnswer": { "@type": "Answer", "text": "Jacob provides every seller with access to ClientClarity, a private seller dashboard that shows showing activity, buyer feedback, marketing milestones, and market context in real time." } },
-        { "@type": "Question", "name": "What happens if my home doesn't get an offer in the first week?", "acceptedAnswer": { "@type": "Answer", "text": "If the offer deadline passes without an accepted offer, Jacob moves immediately — calling every showing agent, collecting feedback, debriefing with you within 24 hours, and recommending a price adjustment if the market signals point to price." } }
-      ]
-    }
-    </script>
+    <script type="application/ld+json" set:html={JSON.stringify(ldSchema1)}></script>
   </Fragment>
 
   <style is:global>
@@ -890,19 +926,19 @@ const livingBg = await getImage({ src: heroImg, format: 'webp', quality: 82, wid
   <section class="sp-trust">
     <div class="sp-trust__inner">
       <div class="reveal">
-        <div class="sp-trust__value">$46M+</div>
+        <div class="sp-trust__value">{agent.stats.salesVolume}</div>
         <div class="sp-trust__label">in Sales</div>
       </div>
       <div class="reveal">
-        <div class="sp-trust__value">100.6%</div>
+        <div class="sp-trust__value">{agent.stats.saleToList}</div>
         <div class="sp-trust__label">Avg Sale-to-List</div>
       </div>
       <div class="reveal">
-        <div class="sp-trust__value">83</div>
+        <div class="sp-trust__value">{agent.stats.familiesHelped}</div>
         <div class="sp-trust__label">Families Helped</div>
       </div>
       <div class="reveal">
-        <div class="sp-trust__value">5.0</div>
+        <div class="sp-trust__value">{agent.stats.googleRating}</div>
         <div class="sp-trust__label">Google Rating</div>
       </div>
     </div>

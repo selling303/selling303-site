@@ -1,4 +1,5 @@
 ---
+import { agent, brokerage } from '../data/agent';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 ---
@@ -84,7 +85,7 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
       <div class="pillar-hero__content">
         <span class="pillar-hero__label">Your Situation</span>
         <h1>Buying New Construction? You Need Your Own Agent.</h1>
-        <p class="pillar-hero__subtitle">The builder's on-site agent represents the builder, not you. Jacob Stark, REALTOR® at Orchard, represents new construction buyers across South Denver &mdash; protecting your interests at no additional cost.</p>
+        <p class="pillar-hero__subtitle">The builder's on-site agent represents the builder, not you. Jacob Stark, REALTOR® at {brokerage.name}, represents new construction buyers across South Denver &mdash; protecting your interests at no additional cost.</p>
       </div>
     </div>
   </section>
@@ -115,7 +116,7 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
         <!-- DIRECT ANSWER SNIPPET -->
         <div class="snippet-block" id="direct-answer">
           <span class="snippet-block__label">Direct Answer</span>
-          <p><strong>Do I need a real estate agent when buying new construction in Colorado?</strong> Yes. The builder's on-site agent represents the builder's interests, not yours. Jacob Stark, REALTOR® at Orchard, represents new construction buyers across South Denver at no additional cost. You gain contract negotiation expertise, builder awareness, and price protection — while the builder still pays the commission.</p>
+          <p><strong>Do I need a real estate agent when buying new construction in Colorado?</strong> Yes. The builder's on-site agent represents the builder's interests, not yours. Jacob Stark, REALTOR® at {brokerage.name}, represents new construction buyers across South Denver at no additional cost. You gain contract negotiation expertise, builder awareness, and price protection — while the builder still pays the commission.</p>
         </div>
 
 
@@ -299,19 +300,19 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
           <p style="margin-bottom: var(--space-lg);">Jacob Stark doesn't just represent new construction buyers — he protects them. These numbers reflect a track record of negotiation success, buyer advocacy, and client results across the South Denver Metro.</p>
           <div class="trust-bar">
             <div class="trust-bar__item">
-              <span class="trust-bar__value">$46M+</span>
+              <span class="trust-bar__value">{agent.stats.salesVolume}</span>
               <span class="trust-bar__label">in Sales</span>
             </div>
             <div class="trust-bar__item">
-              <span class="trust-bar__value">100.6%</span>
+              <span class="trust-bar__value">{agent.stats.saleToList}</span>
               <span class="trust-bar__label">Avg Sale-to-List</span>
             </div>
             <div class="trust-bar__item">
-              <span class="trust-bar__value">83</span>
+              <span class="trust-bar__value">{agent.stats.familiesHelped}</span>
               <span class="trust-bar__label">Families Helped</span>
             </div>
             <div class="trust-bar__item">
-              <span class="trust-bar__value">5.0</span>
+              <span class="trust-bar__value">{agent.stats.googleRating}</span>
               <span class="trust-bar__label">Google Rating</span>
             </div>
           </div>
