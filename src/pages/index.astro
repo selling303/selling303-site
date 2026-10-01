@@ -1,4 +1,5 @@
 ---
+import { agent, brokerage } from '../data/agent';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import MarketStatTile from '../components/MarketStatTile.astro';
 import NeighborhoodCard from '../components/NeighborhoodCard.astro';
@@ -43,6 +44,187 @@ const homepageReviewSchema = {
     }))
   ),
 };
+
+const ldSchema1 = {
+  "@context": "https://schema.org",
+  "@type": [
+    "Person",
+    "RealEstateAgent"
+  ],
+  "@id": "https://selling303.com/#agent",
+  "name": "Jacob Stark",
+  "alternateName": "Selling 303",
+  "jobTitle": "REALTOR®",
+  "url": "https://selling303.com/",
+  "image": "https://selling303.com/images/jacob-stark-headshot.png",
+  "telephone": "+1-303-997-0634",
+  "email": "jacob@selling303.com",
+  "description": "South Denver Metro REALTOR specializing in Littleton, Highlands Ranch, Centennial, Parker, and surrounding communities. Guiding buyers and sellers with clarity, confidence, and control.",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Littleton",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Colorado"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Highlands Ranch",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Colorado"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Centennial",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Colorado"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Englewood",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Colorado"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Parker",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Colorado"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Lakewood",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Colorado"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Lone Tree",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Colorado"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Castle Pines",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Colorado"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Greenwood Village",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Colorado"
+      }
+    }
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": brokerage.name,
+    "url": brokerage.url
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Greenwood Village",
+    "addressRegion": "CO",
+    "postalCode": "80111",
+    "addressCountry": "US"
+  },
+  "knowsAbout": [
+    "home selling",
+    "home buying",
+    "real estate pricing strategy",
+    "South Denver Metro real estate",
+    "comparative market analysis",
+    "real estate negotiation",
+    "investment property analysis"
+  ],
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "Professional Certification",
+      "name": "Real Estate Negotiation Expert (RENE)"
+    }
+  ],
+  "award": [
+    "DMAR Excellence Award — Silver Level (2024)",
+    "DMAR Excellence Award — Gold Level (2025)",
+    "DMAR Excellence Award — Silver Level (2026)",
+    "5280 Magazine Top Real Estate Producer — Black Diamond",
+    "Real Trends Verified"
+  ],
+  "memberOf": [
+    {
+      "@type": "Organization",
+      "name": "Denver Metro Association of REALTORS (DMAR)"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": agent.stats.googleRating,
+    "reviewCount": agent.stats.googleReviewCount,
+    "bestRating": "5"
+  },
+  "sameAs": [
+    brokerage.agentProfileUrl,
+    "https://www.google.com/maps/place/?q=Jacob+Stark+Real+Estate",
+    "https://www.zillow.com/profile/jacobstarkrealtor",
+    "https://www.realtor.com/realestateagents/5ef4c015aa95460011ac4a5b",
+    "https://www.linkedin.com/in/jacobstark",
+    "https://www.instagram.com/jacobstark_realtor/",
+    "https://www.facebook.com/jacobstarkrealtor/",
+    "https://www.youtube.com/@selling303",
+    "https://www.youtube.com/channel/UCTr7LNftWL7F63Bw-rcdxLg",
+    "https://www.fastexpert.com/agents/jacob-stark-109720/",
+    "https://www.homes.com/real-estate-agents/jacob-stark/fr1k64r/",
+    "https://nextdoor.com/pages/jacob-stark-realtor-greenwood-village-co/",
+    "https://www.realtrends.com/agent-profile/jacob-stark-colorado/",
+    "https://directory.5280.com/real_estate_agent/jacob-stark/",
+    "https://www.wikidata.org/wiki/Q139385406"
+  ]
+};
+
+const ldSchema2 = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://selling303.com/#organization",
+  "name": "Selling 303",
+  "alternateName": "Selling303",
+  "url": "https://selling303.com",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://selling303.com/images/selling303-logo.png"
+  },
+  "description": `Selling 303 is the South Denver Metro real estate practice of REALTOR Jacob Stark at ${brokerage.name}, serving Littleton, Highlands Ranch, Centennial, Englewood, Parker, Lone Tree, Castle Pines, Lakewood, and Greenwood Village.`,
+  "founder": {
+    "@id": "https://selling303.com/#agent"
+  },
+  "employee": {
+    "@id": "https://selling303.com/#agent"
+  },
+  "sameAs": [
+    "https://www.instagram.com/jacobstark_realtor/",
+    "https://www.facebook.com/jacobstarkrealtor/",
+    "https://www.youtube.com/@selling303",
+    "https://www.linkedin.com/in/jacobstark"
+  ]
+};
 ---
 
 <BaseLayout
@@ -76,132 +258,12 @@ const homepageReviewSchema = {
     </style>
 
     <!-- Schema: Person + RealEstateAgent (unified entity) -->
-    <script type="application/ld+json" is:inline>
-    {
-      "@context": "https://schema.org",
-      "@type": ["Person", "RealEstateAgent"],
-      "@id": "https://selling303.com/#agent",
-      "name": "Jacob Stark",
-      "alternateName": "Selling 303",
-      "jobTitle": "REALTOR®",
-      "url": "https://selling303.com/",
-      "image": "https://selling303.com/images/jacob-stark-headshot.png",
-      "telephone": "+1-303-997-0634",
-      "email": "jacob@selling303.com",
-      "description": "South Denver Metro REALTOR specializing in Littleton, Highlands Ranch, Centennial, Parker, and surrounding communities. Guiding buyers and sellers with clarity, confidence, and control.",
-      "areaServed": [
-        { "@type": "City", "name": "Littleton", "containedInPlace": { "@type": "State", "name": "Colorado" } },
-        { "@type": "City", "name": "Highlands Ranch", "containedInPlace": { "@type": "State", "name": "Colorado" } },
-        { "@type": "City", "name": "Centennial", "containedInPlace": { "@type": "State", "name": "Colorado" } },
-        { "@type": "City", "name": "Englewood", "containedInPlace": { "@type": "State", "name": "Colorado" } },
-        { "@type": "City", "name": "Parker", "containedInPlace": { "@type": "State", "name": "Colorado" } },
-        { "@type": "City", "name": "Lakewood", "containedInPlace": { "@type": "State", "name": "Colorado" } },
-        { "@type": "City", "name": "Lone Tree", "containedInPlace": { "@type": "State", "name": "Colorado" } },
-        { "@type": "City", "name": "Castle Pines", "containedInPlace": { "@type": "State", "name": "Colorado" } },
-        { "@type": "City", "name": "Greenwood Village", "containedInPlace": { "@type": "State", "name": "Colorado" } }
-      ],
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Orchard",
-        "url": "https://orchard.com"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Greenwood Village",
-        "addressRegion": "CO",
-        "postalCode": "80111",
-        "addressCountry": "US"
-      },
-      "knowsAbout": [
-        "home selling",
-        "home buying",
-        "real estate pricing strategy",
-        "South Denver Metro real estate",
-        "comparative market analysis",
-        "real estate negotiation",
-        "investment property analysis"
-      ],
-      "hasCredential": [
-        {
-          "@type": "EducationalOccupationalCredential",
-          "credentialCategory": "Professional Certification",
-          "name": "Real Estate Negotiation Expert (RENE)"
-        },
-        {
-          "@type": "EducationalOccupationalCredential",
-          "credentialCategory": "Professional Membership",
-          "name": "Who's Who in Luxury Real Estate"
-        }
-      ],
-      "award": [
-        "DMAR Excellence Award — Silver Level (2024)",
-        "DMAR Excellence Award — Gold Level (2025)",
-        "DMAR Excellence Award — Silver Level (2026)",
-        "5280 Magazine Top Real Estate Producer — Black Diamond",
-        "Real Trends Verified"
-      ],
-      "memberOf": [
-        {
-          "@type": "Organization",
-          "name": "Denver Metro Association of REALTORS (DMAR)"
-        },
-        {
-          "@type": "Organization",
-          "name": "Who's Who in Luxury Real Estate"
-        }
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "47",
-        "bestRating": "5"
-      },
-      "sameAs": [
-        "https://orchard.com/agent/jacob-stark",
-        "https://www.google.com/maps/place/?q=Jacob+Stark+Real+Estate",
-        "https://www.zillow.com/profile/jacobstarkrealtor",
-        "https://www.realtor.com/realestateagents/5ef4c015aa95460011ac4a5b",
-        "https://www.linkedin.com/in/jacobstark",
-        "https://www.instagram.com/jacobstark_realtor/",
-        "https://www.facebook.com/jacobstarkrealtor/",
-        "https://www.youtube.com/@selling303",
-        "https://www.youtube.com/channel/UCTr7LNftWL7F63Bw-rcdxLg",
-        "https://www.fastexpert.com/agents/jacob-stark-109720/",
-        "https://www.homes.com/real-estate-agents/jacob-stark/fr1k64r/",
-        "https://nextdoor.com/pages/jacob-stark-realtor-greenwood-village-co/",
-        "https://www.realtrends.com/agent-profile/jacob-stark-colorado/",
-        "https://directory.5280.com/real_estate_agent/jacob-stark/",
-        "https://www.wikidata.org/wiki/Q139385406"
-      ]
-    }
-    </script>
+    <script type="application/ld+json" set:html={JSON.stringify(ldSchema1)}></script>
 
     <!-- Schema: Organization (Selling 303 brand entity). Canonical "@id" used as the
          publisher reference across all Article schema. Defined here AND on /about so
          the home page reinforces the same identity. Surname disambiguation, 2026-04-27. -->
-    <script type="application/ld+json" is:inline>
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "@id": "https://selling303.com/#organization",
-      "name": "Selling 303",
-      "alternateName": "Selling303",
-      "url": "https://selling303.com",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://selling303.com/images/selling303-logo.png"
-      },
-      "description": "Selling 303 is the South Denver Metro real estate practice of REALTOR Jacob Stark at Orchard, serving Littleton, Highlands Ranch, Centennial, Englewood, Parker, Lone Tree, Castle Pines, Lakewood, and Greenwood Village.",
-      "founder": { "@id": "https://selling303.com/#agent" },
-      "employee": { "@id": "https://selling303.com/#agent" },
-      "sameAs": [
-        "https://www.instagram.com/jacobstark_realtor/",
-        "https://www.facebook.com/jacobstarkrealtor/",
-        "https://www.youtube.com/@selling303",
-        "https://www.linkedin.com/in/jacobstark"
-      ]
-    }
-    </script>
+    <script type="application/ld+json" set:html={JSON.stringify(ldSchema2)}></script>
 
     <!-- Schema: Reviews backing the RealEstateAgent AggregateRating above.
          Pulled dynamically from published success stories' testimonials so the
@@ -223,19 +285,19 @@ const homepageReviewSchema = {
         </div>
         <div class="stats-bar">
           <div class="stat-item">
-            <span class="stat-item__number">$46M+</span>
+            <span class="stat-item__number">{agent.stats.salesVolume}</span>
             <span class="stat-item__label">in Sales</span>
           </div>
           <div class="stat-item">
-            <span class="stat-item__number">83</span>
+            <span class="stat-item__number">{agent.stats.familiesHelped}</span>
             <span class="stat-item__label">Families Helped</span>
           </div>
           <div class="stat-item">
-            <span class="stat-item__number">100.6%</span>
+            <span class="stat-item__number">{agent.stats.saleToList}</span>
             <span class="stat-item__label">Avg Sale-to-List</span>
           </div>
           <div class="stat-item">
-            <span class="stat-item__number">5.0</span>
+            <span class="stat-item__number">{agent.stats.googleRating}</span>
             <span class="stat-item__label">Google Rating</span>
           </div>
         </div>
@@ -425,10 +487,6 @@ const homepageReviewSchema = {
         <div class="credential">
           <span class="credential__number" style="font-size: 1.25rem; font-family: var(--font-body); font-weight: 700;">RENE</span>
           <span class="credential__label">Real Estate Negotiation Expert</span>
-        </div>
-        <div class="credential">
-          <span class="credential__number" style="font-size: 1.25rem; font-family: var(--font-body); font-weight: 700;">Who's Who in Luxury</span>
-          <span class="credential__label">Luxury Real Estate</span>
         </div>
       </div>
     </div>

@@ -1,0 +1,29 @@
+---
+import { agent } from '../data/agent';
+interface Stat {
+  number: string;
+  label: string;
+}
+
+interface Props {
+  stats?: Stat[];
+}
+
+const defaultStats: Stat[] = [
+  { number: agent.stats.salesVolume, label: "Career Sales Volume" },
+  { number: agent.stats.familiesHelped, label: "Families Helped" },
+  { number: agent.stats.saleToList, label: "Avg Sale-to-List" },
+  { number: agent.stats.googleRating, label: "Google Rating" },
+];
+
+const { stats = defaultStats } = Astro.props;
+---
+
+<div class="credentials">
+  {stats.map((stat) => (
+    <div class="credential">
+      <span class="credential__number">{stat.number}</span>
+      <span class="credential__label">{stat.label}</span>
+    </div>
+  ))}
+</div>

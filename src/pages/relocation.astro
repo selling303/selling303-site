@@ -1,4 +1,5 @@
 ---
+import { agent, brokerage } from '../data/agent';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CostOfLivingCalculator from '../components/calculators/CostOfLivingCalculator.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
@@ -117,7 +118,7 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
         <!-- DIRECT ANSWER SNIPPET -->
         <div class="snippet-block" id="direct-answer">
           <span class="snippet-block__label">Direct Answer</span>
-          <p><strong>What's the best area to relocate to in South Denver?</strong> It depends on your priorities. South Denver suburbs like Littleton, Highlands Ranch, Centennial, and Parker each serve different lifestyles—from walkable downtowns to master-planned communities to newer family neighborhoods. Jacob Stark, REALTOR® at Orchard, helps relocation buyers match their priorities to the right community, then guides them through a fully remote buying process.</p>
+          <p><strong>What's the best area to relocate to in South Denver?</strong> It depends on your priorities. South Denver suburbs like Littleton, Highlands Ranch, Centennial, and Parker each serve different lifestyles—from walkable downtowns to master-planned communities to newer family neighborhoods. Jacob Stark, REALTOR® at {brokerage.name}, helps relocation buyers match their priorities to the right community, then guides them through a fully remote buying process.</p>
         </div>
 
 
@@ -127,7 +128,7 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
           <h2 class="section-heading">Moving Somewhere You've Never Lived Is Stressful.</h2>
           <p>You're evaluating neighborhoods from 1,500 miles away using Zillow and Google Street View. Your new job starts in eight weeks. You're in a different time zone, juggling video calls with lenders and inspectors. You don't know where to eat, where to send your kids to school, or what "water rights" even means. And you're terrified of making a $600K decision sight unseen.</p>
           <p>Relocation is one of the highest-stress real estate scenarios. You need someone who knows the South Denver Market deeply—the neighborhoods, the schools, the commutes, the lifestyle fit—and who can be your eyes and ears in person while you coordinate remotely.</p>
-          <p>Jacob Stark brings both. He's worked with 83+ families relocating to <a href="/neighborhoods/littleton">Littleton</a>, <a href="/neighborhoods/highlands-ranch">Highlands Ranch</a>, <a href="/neighborhoods/centennial">Centennial</a>, and Parker. He meets homes in person, takes FaceTime tours with buyers, and manages the entire closing process without requiring you to fly in until closing day.</p>
+          <p>Jacob Stark brings both. He's helped {agent.stats.familiesHelped} families buy and sell across <a href="/neighborhoods/littleton">Littleton</a>, <a href="/neighborhoods/highlands-ranch">Highlands Ranch</a>, <a href="/neighborhoods/centennial">Centennial</a>, and Parker. He meets homes in person, takes FaceTime tours with buyers, and manages the entire closing process without requiring you to fly in until closing day.</p>
 
           <!-- Inline CTA -->
           <div class="section-cta">
@@ -311,19 +312,19 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
           <p style="margin-bottom: var(--space-lg);">Jacob Stark doesn't just help relocating buyers find homes—he transforms the relocation experience. These numbers reflect a track record of client success, market expertise, and real results across the South Denver Metro.</p>
           <div class="trust-bar">
             <div class="trust-bar__item">
-              <span class="trust-bar__value">$46M+</span>
+              <span class="trust-bar__value">{agent.stats.salesVolume}</span>
               <span class="trust-bar__label">in Sales</span>
             </div>
             <div class="trust-bar__item">
-              <span class="trust-bar__value">100.6%</span>
+              <span class="trust-bar__value">{agent.stats.saleToList}</span>
               <span class="trust-bar__label">Avg Sale-to-List</span>
             </div>
             <div class="trust-bar__item">
-              <span class="trust-bar__value">83</span>
+              <span class="trust-bar__value">{agent.stats.familiesHelped}</span>
               <span class="trust-bar__label">Families Helped</span>
             </div>
             <div class="trust-bar__item">
-              <span class="trust-bar__value">5.0</span>
+              <span class="trust-bar__value">{agent.stats.googleRating}</span>
               <span class="trust-bar__label">Google Rating</span>
             </div>
           </div>

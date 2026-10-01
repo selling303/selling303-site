@@ -1,4 +1,5 @@
 ---
+import { brokerage } from '../../data/agent';
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
@@ -51,7 +52,7 @@ function getCatMeta(category: string) {
 
 <BaseLayout
   title="Blog | Selling 303 — South Denver Real Estate Insights"
-  description="Market updates, neighborhood guides, buyer and seller advice for South Denver Metro. Honest, informed insights from Jacob Stark at Orchard."
+  description={`Market updates, neighborhood guides, buyer and seller advice for South Denver Metro. Honest, informed insights from Jacob Stark at ${brokerage.name}.`}
   ogUrl="https://selling303.com/blog"
   currentPage="blog"
   headerVariant="solid"

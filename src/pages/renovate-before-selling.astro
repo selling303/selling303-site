@@ -1,0 +1,206 @@
+---
+// Pillar of the "Outgrown Your Home?" cluster — pre-listing updates with no money upfront. Created 2026-09-30.
+// Program names intentionally NOT used in body copy (brand-portability rule). The renovation-financing
+// disclosure is required verbatim wherever pay-at-closing financing is described, so it is rendered from config.
+import { agent, brokerage } from '../data/agent';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import VideoEmbed from '../components/VideoEmbed.astro';
+import PillarScripts from '../components/PillarScripts.astro';
+import { fixOrSkipUrl } from '../data/cluster';
+
+const bookUrl = agent.bookingUrls.moveUp;
+const videoId = '';
+
+const faqs = [
+  { q: 'Can I renovate my house before selling without paying upfront?', a: `Often, yes. Some homeowners qualify for pre-listing renovation financing that's repaid when the home sells, and homeowners who buy their next home first can sometimes use equity advance funds for repairs. Financing is subject to credit approval, and interest may apply. Jacob Stark, a South Denver Metro REALTOR®, helps you decide which updates are worth doing before you look at how to pay for them.` },
+  { q: 'What updates are worth doing before selling?', a: `It depends on your home's condition, how the rest of the house compares, and what recent sales nearby show buyers pay for. Paint, flooring, lighting, and fixing anything broken often matter more than big remodels, but not always. Jacob Stark renovates and resells homes as an investor, so he weighs each project by what it costs and what it changes in the sale price.` },
+  { q: 'How long do pre-listing updates take?', a: `Many cosmetic refreshes take about one to three weeks. Larger projects take longer. The scope and timeline are set before work starts, so your listing date is planned around them.` },
+  { q: 'What happens to the renovation loan if my house doesn\'t sell?', a: `Pay-at-closing renovation financing is typically repaid when the home sells, but it has other repayment triggers too, such as the listing agreement ending or a set number of months passing. Read the loan terms before you sign so there are no surprises.` },
+  { q: 'Do we have to live through the construction?', a: `Not if you buy your next home first. Once you've moved, the updates, cleaning, and staging happen without working around your family's schedule. If you're staying put until the sale, the work is scheduled to keep disruption as short as possible.` },
+];
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How to update your home before selling with no money upfront',
+  step: [
+    { '@type': 'HowToStep', position: 1, name: 'Decide what is worth fixing', text: 'Walk the home and choose only the updates that are likely to pay off, based on condition and recent nearby sales.' },
+    { '@type': 'HowToStep', position: 2, name: 'Get a scoped estimate', text: 'Get a written scope, price, and timeline from vetted vendors before any work starts.' },
+    { '@type': 'HowToStep', position: 3, name: 'Choose how to pay', text: 'Pay at closing if you qualify for financing, use equity advance funds if you are buying first, or pay directly.' },
+    { '@type': 'HowToStep', position: 4, name: 'Let the work be managed', text: 'The project is coordinated for you while you focus on work, family, and the move.' },
+    { '@type': 'HowToStep', position: 5, name: 'List the home at its best', text: 'Clean, stage, photograph, and launch the updated home.' },
+    { '@type': 'HowToStep', position: 6, name: 'Repay from the sale', text: 'Financed costs are repaid from your proceeds at closing.' },
+  ],
+};
+---
+
+<BaseLayout
+  title="Renovate Before Selling With No Money Upfront | South Denver Metro | Jacob Stark"
+  description="Update your South Denver Metro home before listing and pay at closing. Jacob Stark, REALTOR® and renovator, explains how managed pre-listing updates work and which are worth it."
+  ogType="website"
+  ogUrl="https://selling303.com/renovate-before-selling"
+  currentPage="move-up-sellers"
+  headerVariant="solid"
+>
+  <Fragment slot="head">
+    <Breadcrumbs schemaOnly items={[
+      { label: 'Home', url: '/' },
+      { label: 'Outgrown Your Home?', url: '/move-up-sellers' },
+      { label: 'Renovate Before Selling', url: null },
+    ]} />
+    <script type="application/ld+json" set:html={JSON.stringify(howToSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
+
+  <section class="pillar-hero">
+    <div class="container">
+      <div class="pillar-hero__content">
+        <span class="pillar-hero__label"><a href="/move-up-sellers" style="color: inherit;">Outgrown Your Home?</a> &middot; Prepare</span>
+        <h1>Update Your Home Before Selling, With No Money Upfront</h1>
+        <p class="pillar-hero__subtitle">The right updates, managed for you and paid for at closing, so your home hits the market as the most inviting version of itself without draining your savings or your weekends.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white pillar-body">
+    <div class="pillar-layout">
+
+      <aside class="pillar-toc" aria-label="Page navigation">
+        <span class="pillar-toc__label">On This Page</span>
+        <ul class="pillar-toc__list">
+          <li><a href="#direct-answer" class="pillar-toc__link active">The Short Answer</a></li>
+          <li><a href="#start-with-what" class="pillar-toc__link">Updates That Pay You Back</a></li>
+          <li><a href="#how-it-works" class="pillar-toc__link">How It Works</a></li>
+          <li><a href="#what-gets-done" class="pillar-toc__link">What Gets Done</a></li>
+          <li><a href="#ways-to-pay" class="pillar-toc__link">Ways to Pay</a></li>
+          <li><a href="#common-worries" class="pillar-toc__link">Common Worries</a></li>
+          <li><a href="#faq" class="pillar-toc__link">FAQ</a></li>
+        </ul>
+      </aside>
+
+      <div class="pillar-content">
+
+        <div class="snippet-block" id="direct-answer">
+          <span class="snippet-block__label">The Short Answer</span>
+          <p><strong>Can you renovate your home before selling without paying upfront?</strong> Often, yes. Managed pre-listing renovation programs coordinate the work with vetted vendors, and homeowners who qualify can pay for it at closing instead of upfront. If you're buying your next home first, equity advance funds can sometimes cover repairs too. Jacob Stark, a South Denver Metro REALTOR® who also renovates and resells homes, helps you decide which updates are worth doing before you spend a dollar.</p>
+        </div>
+
+        <VideoEmbed videoId={videoId} title="How to update your home before selling with no money upfront" description="Jacob Stark explains how South Denver Metro homeowners update their homes before listing and pay at closing." />
+
+        <!-- START WITH WHAT -->
+        <div id="start-with-what" style="padding-top: var(--space-xl);">
+          <span class="section-label">Updates That Pay You Back</span>
+          <h2 class="section-heading">The Best Renovation Is the One That Pays You Back</h2>
+          <p>Paying at closing makes updates easy to say yes to. That's exactly why the first question isn't how to pay for them. It's which ones will pay you back.</p>
+          <ul class="oyh-proof">
+            <li><strong>Some updates pay you back.</strong> The right ones help your home stand out, show better in photos, and draw stronger offers.</li>
+            <li><strong>Many don't.</strong> Not every project returns what it costs, and some buyers would rather pick their own finishes.</li>
+            <li><strong>The answer is specific to your house.</strong> It depends on condition, how the rest of the house compares, and what recent sales nearby show buyers pay for.</li>
+          </ul>
+          <p>I make these calls on homes I renovate and resell with my own money, so I bring the same discipline to yours. <a href={fixOrSkipUrl}>How to decide what to fix and what to skip &rarr;</a></p>
+        </div>
+
+        <!-- HOW IT WORKS -->
+        <div id="how-it-works" style="padding-top: var(--space-2xl);">
+          <span class="section-label">How It Works</span>
+          <h2 class="section-heading">From Walkthrough to Closing in Six Steps</h2>
+          <div class="process-steps oyh-steps-6">
+            <div class="process-step"><h3>Decide what's worth fixing</h3><p>We walk the house together and build a short list of updates that make sense for your home and your neighborhood.</p></div>
+            <div class="process-step"><h3>Get a scoped estimate</h3><p>Vetted vendors provide a written scope, price, and timeline before any work starts. You approve it, or we adjust it.</p></div>
+            <div class="process-step"><h3>Choose how to pay</h3><p>Pay at closing if you qualify, use equity advance funds if you're buying first, or pay directly. More on each below.</p></div>
+            <div class="process-step"><h3>Let the work be managed</h3><p>The project is coordinated for you, so you aren't chasing contractors between work, school pickups, and packing.</p></div>
+            <div class="process-step"><h3>List it at its best</h3><p>Updated, deep-cleaned, staged, and professionally photographed, then launched to make a strong first impression.</p></div>
+            <div class="process-step"><h3>Repay from the sale</h3><p>Financed costs come out of your proceeds at closing. The rest is yours.</p></div>
+          </div>
+        </div>
+
+        <!-- WHAT GETS DONE -->
+        <div id="what-gets-done" style="padding-top: var(--space-2xl);">
+          <span class="section-label">What Gets Done</span>
+          <h2 class="section-heading">The Updates That Usually Make the List</h2>
+          <p style="margin-bottom: var(--space-md);">Pre-listing work is about making the home feel fresh, cared for, and move-in ready, not a full remodel. Common projects include:</p>
+          <div class="oyh-blockers">
+            <div class="oyh-blocker"><p class="oyh-blocker__quote">Fresh surfaces</p><p>Interior and exterior paint, new flooring, updated lighting and hardware.</p></div>
+            <div class="oyh-blocker"><p class="oyh-blocker__quote">Kitchens and baths</p><p>Cabinet updates, counters, appliances, bathroom cabinetry, and shower tile, when your neighborhood's sales support it.</p></div>
+            <div class="oyh-blocker"><p class="oyh-blocker__quote">Outside and repairs</p><p>Landscaping, curb appeal, and repairs to anything buyers or inspectors will flag.</p></div>
+          </div>
+        </div>
+
+        <!-- WAYS TO PAY -->
+        <div id="ways-to-pay" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Ways to Pay</span>
+          <h2 class="section-heading">Three Ways to Cover Pre-Listing Updates</h2>
+          <div class="oyh-table-wrap">
+            <table class="oyh-table">
+              <thead><tr><th scope="col">Option</th><th scope="col">How it works</th><th scope="col">Good to know</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Pay at closing</th><td>Renovation financing covers the work, and you repay it from your sale proceeds.</td><td>Subject to credit approval; interest may apply. Repayment can also be triggered if the listing ends or after a set period.</td></tr>
+                <tr><th scope="row">Equity advance funds</th><td>If you're <a href="/buy-before-you-sell">buying your next home first</a>, the advance can sometimes cover repairs to the home you're leaving.</td><td>Depends on the program and how much equity is available after your down payment.</td></tr>
+                <tr><th scope="row">Pay directly</th><td>Use savings or a HELOC and keep it simple.</td><td>No financing costs, but cash is tied up until closing.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="oyh-disclosure" style="margin-top: var(--space-sm);">{brokerage.disclosures.renovationFinancingShort}</p>
+        </div>
+
+        <!-- COMMON WORRIES -->
+        <div id="common-worries" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Common Worries</span>
+          <h2 class="section-heading">What Families Worry About, and What's Actually True</h2>
+          <div class="oyh-blockers oyh-worries">
+            <div class="oyh-blocker"><p class="oyh-blocker__quote">"We don't have the cash to fix it up."</p><p>You may not need it. If you qualify, the work can be paid for at closing. And the right list is often shorter and cheaper than you expect.</p></div>
+            <div class="oyh-blocker"><p class="oyh-blocker__quote">"We can't manage contractors with work and kids."</p><p>You don't have to. The project is scoped, scheduled, and coordinated for you.</p></div>
+            <div class="oyh-blocker"><p class="oyh-blocker__quote">"Will we even get our money back?"</p><p>Not on every project, and anyone who promises that isn't being straight with you. That's why we only do the updates that make sense for your house and your neighborhood.</p></div>
+            <div class="oyh-blocker"><p class="oyh-blocker__quote">"What if it drags on and delays our sale?"</p><p>The scope and timeline are set before work begins, and your listing date is planned around them. Most cosmetic refreshes take one to three weeks.</p></div>
+            <div class="oyh-blocker"><p class="oyh-blocker__quote">"Do we have to live in a construction zone?"</p><p>Not if you buy first. Once you've moved, the work happens without working around your family.</p></div>
+          </div>
+          <div class="section-cta">
+            <p>Want to know what's actually worth doing to your house? Let's walk it together.</p>
+            <a href={bookUrl} class="btn btn--primary btn--sm" target="_blank" rel="noopener">Get Your Next-Move Plan</a>
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <div id="faq" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Common Questions</span>
+          <h2 class="section-heading">Pre-Listing Updates: FAQ</h2>
+          <div class="faq-list">
+            {faqs.map((f) => (
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">{f.q}</button>
+                <div class="faq-answer"><p>{f.a}</p></div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div style="padding-top: var(--space-2xl);">
+          <span class="section-label">Keep Planning</span>
+          <h2 class="section-heading">The Rest of the Plan</h2>
+          <div class="oyh-blockers">
+            <a class="oyh-blocker oyh-blocker--link" href="/move-up-sellers"><p class="oyh-blocker__quote">The full plan</p><p>Prepare, Buy &amp; Sell, Move Once: the whole move on one page.</p></a>
+            <a class="oyh-blocker oyh-blocker--link" href="/buy-before-you-sell"><p class="oyh-blocker__quote">Buy before you sell</p><p>Move once and let the old home be prepared without you living in it.</p></a>
+            <a class="oyh-blocker oyh-blocker--link" href={fixOrSkipUrl}><p class="oyh-blocker__quote">What to fix, what to skip</p><p>How to decide which projects are worth doing before you list.</p></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner" style="background-color: var(--color-white);">
+    <div class="container">
+      <h2 style="color: var(--color-dark-text);">Find Out What's Worth Doing</h2>
+      <p style="color: var(--color-body-text);">In 30 minutes, we'll talk through your house, which updates make sense, what they should cost, and how to pay for them.</p>
+      <a href={bookUrl} class="btn btn--primary btn--lg" target="_blank" rel="noopener">Get Your Next-Move Plan</a>
+      <a href={agent.phoneHref} class="btn btn--outline-dark btn--lg">Call {agent.phone}</a>
+    </div>
+  </section>
+
+  <PillarScripts />
+</BaseLayout>

@@ -1,12 +1,95 @@
 ---
+// "Outgrown Your Home?" hub — rewritten 2026-09-30.
+// Messaging source of truth: brain/marketing/outgrown-your-home-messaging.md
+// URL intentionally stays /move-up-sellers (vanity /outgrown 301s here).
+import { getCollection } from 'astro:content';
+import { fixOrSkipUrl } from '../data/cluster';
+import { agent } from '../data/agent';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HomeEquityCalculator from '../components/calculators/HomeEquityCalculator.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
+import VideoEmbed from '../components/VideoEmbed.astro';
+import PillarScripts from '../components/PillarScripts.astro';
+
+const bookUrl = agent.bookingUrls.moveUp;
+
+// Set once the hub video is published on YouTube (leave '' to hide the slot).
+const hubVideoId = '';
+
+// Pillar pages in this cluster (Phase 2 — being built now).
+const pillars = {
+  buyFirst:   { url: '/buy-before-you-sell',          label: 'How to buy your next home before selling' },
+  fixOrSkip:  { url: fixOrSkipUrl,   label: 'What to fix before selling — and what to skip' },
+  renovate:   { url: '/renovate-before-selling',      label: 'Pre-listing updates with no money upfront' },
+};
+
+const faqs = [
+  {
+    q: 'Should I buy my next home first or sell first in the South Denver Metro?',
+    a: `Buying first is usually the easier path: you move once, shop without a deadline, and skip living in a house that's on the market. It does require a way to fund the down payment before your current home sells, such as an equity advance, bridge loan, or HELOC. Selling first still makes sense for some families, especially when they need every dollar of equity before committing to the next home, but it can mean a temporary rental or a second move. The right call depends on your equity, how fast homes like yours are selling, and how competitive your target neighborhood is. Jacob Stark, REALTOR® in the South Denver Metro, maps both paths with your real numbers before you commit to either.`,
+  },
+  {
+    q: 'Can I buy a new home before selling mine without carrying two mortgages?',
+    a: `Often, yes. A buy-before-you-sell equity advance can unlock part of your current home's equity to cover the down payment and closing costs on the next home, and some programs also cover a few months of payments on the old home. You repay it from your sale proceeds. Eligibility depends on your equity and approval. Bridge loans and HELOCs are other options, each with different costs. Jacob Stark walks South Denver Metro homeowners through which path fits their numbers.`,
+  },
+  {
+    q: 'What should I fix before selling my house?',
+    a: `It depends on the home's condition, how the rest of the house compares, and what recent comparable sales show buyers are paying for. A project that pays back in one Highlands Ranch house can be wasted money in the house next door. Jacob Stark has bought, renovated, and resold homes as an investor since 2015, so he evaluates fix-or-skip decisions the way an investor does: what it costs, what it changes in the sale price, and whether buyers will even notice.`,
+  },
+  {
+    q: 'Do I have to pay for pre-listing repairs upfront?',
+    a: `Not always. Some homeowners qualify for managed pre-listing renovation programs where the work is coordinated for you and the cost is financed and repaid at closing, or covered by an equity advance. Financing is subject to credit approval and terms, and interest may apply. Jacob Stark can tell you whether the projects are worth doing before you look at how to pay for them.`,
+  },
+  {
+    q: 'How long does it take to sell one home and buy the next?',
+    a: `For most South Denver Metro move-ups, plan on roughly two to four months from the first conversation to keys. Typical ranges: one to three weeks of prep, two to four weeks on the market, and 30 to 45 days from accepted offer to closing. Buying first can take pressure off the timeline because you move before your current home is listed.`,
+  },
+  {
+    q: 'How do I keep my house show-ready with kids, work, and pets?',
+    a: `The easiest way is not to live in it while it's on the market. If you buy first and move out, the home can be refreshed, cleaned, staged, and shown at its best without you living through it. If you sell first, Jacob Stark plans a short, concentrated showing window and a launch strategy designed to get strong offers in the first weeks so the show-ready stretch stays as short as possible.`,
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'RealEstateAgent',
+  '@id': 'https://selling303.com/#agent',
+  makesOffer: {
+    '@type': 'Offer',
+    itemOffered: {
+      '@type': 'Service',
+      name: 'Outgrown Your Home? Move-Up Planning',
+      description: 'Jacob Stark, REALTOR® and real estate investor, helps South Denver Metro homeowners who have outgrown their home plan the move to the next one: what to fix before selling, what to skip, whether to buy or sell first, and how to move once.',
+      serviceType: 'Real Estate Listing and Buyer Representation',
+      areaServed: 'South Denver Metro, Colorado',
+    },
+  },
+};
+
+// Related reading — pulled live from the blog collection so titles stay accurate.
+const relatedSlugs = [
+  'selling-centennial-buying-highlands-ranch-coordinate-transactions',
+  'equity-to-move-up-highlands-ranch',
+  '7-smartest-home-upgrades-before-selling-2026',
+  'move-up-timing-castle-pines-2026',
+  'when-to-sell-parker-home-move-up',
+  'best-neighborhoods-south-denver-move-up-buyers',
+];
+const allPosts = await getCollection('blog');
+const related = relatedSlugs
+  .map((slug) => allPosts.find((p) => (p.id ?? p.slug) === slug || p.slug === slug))
+  .filter(Boolean);
 ---
 
 <BaseLayout
-  title="Moving Up? Sell & Buy Your Next Colorado Home | South Denver | Jacob Stark"
-  description="Coordinating a sell-and-buy in Littleton, Highlands Ranch, or Centennial CO? Jacob Stark manages equity, timing, and contingencies for South Denver move-up sellers."
+  title="Outgrown Your Home? Buy & Sell in the South Denver Metro | Jacob Stark"
+  description="Outgrown your South Denver Metro home? Jacob Stark, REALTOR® and house flipper, builds the plan: what to fix, what to skip, and how to buy before you sell."
   ogType="website"
   ogUrl="https://selling303.com/move-up-sellers"
   currentPage="move-up-sellers"
@@ -15,223 +98,174 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
   <Fragment slot="head">
     <Breadcrumbs schemaOnly items={[
       { label: 'Home', url: '/' },
-      { label: 'Move-Up Sellers', url: null },
+      { label: 'Outgrown Your Home?', url: null },
     ]} />
-    <!-- Schema: RealEstateAgent + Service.
-         @id references the canonical agent entity (surname disambiguation, 2026-04-27). -->
-    <script type="application/ld+json" is:inline>
-    {
-      "@context": "https://schema.org",
-      "@type": "RealEstateAgent",
-      "@id": "https://selling303.com/#agent",
-      "makesOffer": {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Residential Move-Up Strategy",
-          "description": "Jacob Stark coordinates simultaneous buy-sell transactions for move-up sellers in South Denver. Includes equity analysis, contingency pricing, bridge timing, and dual-transaction management.",
-          "serviceType": "Real Estate Listing Services",
-          "areaServed": "South Denver Metro, Colorado"
-        }
-      }
-    }
-    </script>
-    <!-- Schema: FAQPage -->
-    <script type="application/ld+json" is:inline>
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Can I buy before I sell my current home in South Denver?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, but there are financial and timing trade-offs. You can get a contingent offer on a new home subject to the sale of your current property, which keeps your offer flexible but makes you a less attractive buyer. Alternatively, you can pursue a bridge loan to fund the new purchase immediately while your current home is still on the market, giving you a stronger negotiating position. Jacob Stark evaluates both strategies based on your equity position, current home market speed, your target neighborhood, and rate environment in South Denver communities like Littleton, Highlands Ranch, and Centennial."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does a sale contingency work in South Denver?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A sale contingency makes your offer to purchase a new home conditional on successfully selling your current home within a set timeline — typically 45 to 60 days. If your current home doesn't sell by that date, you can back out of the new purchase without penalty. Sellers typically prefer non-contingent offers, but sale contingencies remain common in the South Denver Metro. Jacob Stark prices your current listing aggressively to maximize the likelihood of a quick sale, which strengthens your position when submitting contingent offers on your next home."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is a bridge loan and should I use one?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A bridge loan is short-term financing that allows you to purchase a new home before your current home closes escrow. The bridge loan covers the down payment and closing costs on the new home; when your current home sells, those proceeds pay off the bridge loan. Bridge loans typically cost 0.5–1.5% in origination fees and carry interest rates 1–2% above conventional mortgages, but they're often worth the cost if they allow you to make a non-contingent offer on your next home in a competitive market. Jacob Stark helps you analyze whether a bridge loan makes financial sense based on your current home's equity, the new home's price, your lender's bridge-loan terms, and how quickly your home is likely to sell in your South Denver neighborhood."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does Jacob Stark help move-up sellers differently?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Jacob Stark treats move-up transactions as a coordinated two-sided strategy, not two separate sales. He starts with a comprehensive equity and strategy analysis: What's your current home worth? What's your equity position? What do you want to pay for your next home? What's your timeline? From there, Jacob builds a synchronized plan that coordinates pricing on your current home to facilitate a quick sale, positions your new home offer strategically (contingent, non-contingent, or bridge-financed), and ensures both transactions close on the same timeline. He negotiates dual-transaction closing credits with title companies and helps you coordinate mortgage applications so you qualify for both simultaneously."
-          }
-        }
-      ]
-    }
-    </script>
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
   </Fragment>
 
-  <!-- COMPACT PILLAR HERO -->
+  <!-- HERO -->
   <section class="pillar-hero">
     <div class="container">
       <div class="pillar-hero__content">
-        <span class="pillar-hero__label">Your Situation</span>
-        <h1>Ready to Move Up? Sell and Buy with Confidence.</h1>
-        <p class="pillar-hero__subtitle">Jacob Stark coordinates both transactions simultaneously — managing equity, timing, and contingencies so you can move to your next home without getting stuck between purchases.</p>
+        <span class="pillar-hero__label">Outgrown Your Home?</span>
+        <h1>Outgrown Your Home? Here's the Plan to Get to the Next One.</h1>
+        <p class="pillar-hero__subtitle">What to fix, what to skip, and how to buy your next South Denver Metro home without moving twice or living in a showing-ready house for months.</p>
       </div>
     </div>
   </section>
 
-
-  <!-- PILLAR PAGE BODY: TOC SIDEBAR + CONTENT -->
   <section class="section section--white pillar-body">
     <div class="pillar-layout">
 
-      <!-- STICKY TOC SIDEBAR -->
       <aside class="pillar-toc" aria-label="Page navigation">
         <span class="pillar-toc__label">On This Page</span>
         <ul class="pillar-toc__list">
-          <li><a href="#direct-answer" class="pillar-toc__link active">Direct Answer</a></li>
-          <li><a href="#the-problem" class="pillar-toc__link">The Problem</a></li>
-          <li><a href="#common-challenges" class="pillar-toc__link">Common Challenges</a></li>
-          <li><a href="#the-approach" class="pillar-toc__link">The Approach</a></li>
-          <li><a href="#equity-calculator" class="pillar-toc__link">Equity Calculator</a></li>
-          <li><a href="#areas-served" class="pillar-toc__link">Areas Served</a></li>
+          <li><a href="#direct-answer" class="pillar-toc__link active">The Short Answer</a></li>
+          <li><a href="#sound-familiar" class="pillar-toc__link">Sound Familiar?</a></li>
+          <li><a href="#the-plan" class="pillar-toc__link">The Plan</a></li>
+          <li><a href="#what-gets-in-the-way" class="pillar-toc__link">What Gets in the Way</a></li>
+          <li><a href="#your-options" class="pillar-toc__link">Buy First or Sell First?</a></li>
+          <li><a href="#investor-eye" class="pillar-toc__link">Realtor + Renovator</a></li>
+          <li><a href="#equity-calculator" class="pillar-toc__link">Run Your Numbers</a></li>
           <li><a href="#faq" class="pillar-toc__link">FAQ</a></li>
-          <li><a href="#related-reading" class="pillar-toc__link">Related Reading</a></li>
+          <li><a href="#go-deeper" class="pillar-toc__link">Go Deeper</a></li>
+          <li><a href="#related-reading" class="pillar-toc__link">Keep Reading</a></li>
           <li><a href="#why-jacob" class="pillar-toc__link">Why Jacob</a></li>
         </ul>
       </aside>
 
-      <!-- MAIN CONTENT -->
       <div class="pillar-content">
 
-        <!-- DIRECT ANSWER SNIPPET -->
+        <!-- DIRECT ANSWER (AEO) -->
         <div class="snippet-block" id="direct-answer">
-          <span class="snippet-block__label">Direct Answer</span>
-          <p><strong>How do you sell your home and buy a new one at the same time in South Denver?</strong> Jacob Stark coordinates both transactions by analyzing your current home's equity, pricing it competitively to sell quickly, and timing both the sale and purchase closings so you transition directly to your next home. He manages contingency offers on your new home, negotiates bridge financing if needed, and ensures you qualify for both mortgages simultaneously. The result: no temporary housing, no financial gaps, and a seamless move to the home your family has outgrown into.</p>
+          <span class="snippet-block__label">The Short Answer</span>
+          <p><strong>How do you move from a home you've outgrown to a bigger one in the South Denver Metro?</strong> Jacob Stark, a South Denver Metro REALTOR® and real estate investor, uses a three-step plan. <strong>Prepare:</strong> decide what's worth fixing before you sell and what to skip. <strong>Buy &amp; Sell:</strong> buy the next home first when you can, or sell first when that fits your numbers better, and line up the financing. <strong>Move Once:</strong> move straight into the next home while the old one is prepped, listed, and sold.</p>
         </div>
 
+        <VideoEmbed videoId={hubVideoId} title="Outgrown your home? Here's the plan" description="Jacob Stark explains the three-step plan for South Denver Metro homeowners who have outgrown their home." />
 
-        <!-- THE PROBLEM -->
-        <div id="the-problem" style="padding-top: var(--space-xl);">
-          <span class="section-label">The Problem</span>
-          <h2 class="section-heading">Your Current Home No Longer Fits. But How Do You Move Without Risk?</h2>
-          <p>Move-up sellers face a unique challenge. You've outgrown your current home — more space, better school district, different neighborhood, growing family. But selling first leaves you homeless mid-transaction, and buying first leaves you carrying two mortgages and risk losing your offer if your current home doesn't sell on time.</p>
-          <p>In South Denver neighborhoods like <a href="/neighborhoods/littleton">Littleton</a>, <a href="/neighborhoods/highlands-ranch">Highlands Ranch</a>, and <a href="/neighborhoods/centennial">Centennial</a>, move-up sellers often freeze, unsure whether to list aggressively, make a contingent offer, or explore bridge financing. Meanwhile, the right home sits on the market, or you miss the window in your target neighborhood.</p>
-          <p>Jacob Stark treats move-up transactions as a coordinated two-part strategy. What's your current home's equity? What does your next home cost? What's the market timeline? By answering these questions upfront, Jacob builds a synchronized selling and buying plan that protects your interests and gets you to closing without unnecessary complexity or delay.</p>
-
-          <!-- Inline CTA -->
-          <div class="section-cta">
-            <p>Want a free equity and strategy analysis? Jacob will review your current home's market position and build a move-up plan for your situation.</p>
-            <a href="https://calendar.google.com/appointments/schedules/AcZssZ2UpHf-eRXBp5EhsEaj3h4tdL6UFcyrAVj2Ml1tNyGDAGwLXKSq-61crE41j57Q41IFr7Xj9gyv" class="btn btn--primary btn--sm" target="_blank" rel="noopener">Schedule a Call</a>
+        <!-- SOUND FAMILIAR -->
+        <div id="sound-familiar" style="padding-top: var(--space-xl);">
+          <span class="section-label">Sound Familiar?</span>
+          <h2 class="section-heading">The Conversation Most Families Have Before They Call Me</h2>
+          <div class="oyh-monologue">
+            <p>"We need a bigger house."</p>
+            <p>"But before we can buy a bigger house, we have to sell this one."</p>
+            <p>"And before we sell this one, we probably need to fix some things."</p>
+            <p>"But I don't know what to fix. I don't know how much it'll cost. I don't know if it's worth it."</p>
+            <p>"And I don't know how we'd do all of that with work, kids, and life."</p>
           </div>
+          <p>If that's the loop you're stuck in, you're not behind and you're not doing anything wrong. Every decision depends on another one, so it's hard to know where to start. That's the part I take off your plate.</p>
+          <p class="oyh-answer">Here's the plan. Here's what matters. Here's what doesn't. Here's how long it'll take. Here's what it will cost. Here's how we get from this house to the next one.</p>
         </div>
 
-
-        <!-- COMMON CHALLENGES -->
-        <div id="common-challenges" style="padding-top: var(--space-2xl);">
-          <span class="section-label">Common Challenges</span>
-          <h2 class="section-heading">Obstacles Move-Up Sellers Face in South Denver</h2>
-          <p style="margin-bottom: var(--space-lg);">Move-up transactions are more complex than single sales. Jacob Stark helps you navigate the most common challenges.</p>
-          <div class="amenities-grid">
-            <div class="amenity-item">
-              <div class="amenity-item__icon">&#x1F3E1;</div>
-              <div>
-                <h3>Equity Timing Mismatch</h3>
-                <p>Your current home may not sell fast enough to fund the down payment on your next home. Or you sell quickly but close before your new home's purchase price is finalized. Jacob Stark analyzes your equity position upfront and structures a timeline that aligns both transactions.</p>
-              </div>
-            </div>
-            <div class="amenity-item">
-              <div class="amenity-item__icon">&#x1F4A8;</div>
-              <div>
-                <h3>Contingency Offers Are Weaker</h3>
-                <p>In a competitive market, sellers prefer all-cash or non-contingent offers. A contingent offer on your new home makes you less attractive to the seller, especially if multiple buyers are bidding. Jacob prices your current listing to sell fast so you can make a stronger, non-contingent offer on your next home.</p>
-              </div>
-            </div>
-            <div class="amenity-item">
-              <div class="amenity-item__icon">&#x23F1;</div>
-              <div>
-                <h3>Dual-Market Timing</h3>
-                <p>Your current home's market and your target neighborhood's market may move at different speeds. Littleton homes may move faster than Highlands Ranch listings, or vice versa. Jacob coordinates both listings so closings happen on the same day without gaps or overlaps.</p>
-              </div>
-            </div>
-            <div class="amenity-item">
-              <div class="amenity-item__icon">&#x1F50D;</div>
-              <div>
-                <h3>Finding Your Next Home While Selling</h3>
-                <p>You can't commit to a new home until you know your current home will sell. But by waiting too long, you miss opportunities in your target neighborhood. Jacob Stark manages this tension by pricing aggressively and building momentum on your sale so you can search actively without fear.</p>
-              </div>
-            </div>
-            <div class="amenity-item">
-              <div class="amenity-item__icon">&#x1F4B3;</div>
-              <div>
-                <h3>Qualifying for Two Mortgages</h3>
-                <p>Lenders evaluate your ability to carry both mortgages during the overlap period. Your current home's mortgage is still active, affecting your debt-to-income ratio for the new purchase. Jacob works with lenders to structure the sale close before new home close, or arranges bridge financing to satisfy underwriting requirements.</p>
-              </div>
-            </div>
-            <div class="amenity-item">
-              <div class="amenity-item__icon">&#x1F9E0;</div>
-              <div>
-                <h3>Emotional Decision-Making Under Pressure</h3>
-                <p>Moving is stressful. Selling and buying simultaneously amplifies that stress. You might underprice your current home to close it quickly, or overpay for your next home because you're afraid of losing it. Jacob keeps you focused on data and strategy, removing emotion from two of the biggest financial decisions you'll make.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <!-- THE APPROACH -->
-        <div id="the-approach" style="padding-top: var(--space-2xl);">
-          <span class="section-label">The Approach</span>
-          <h2 class="section-heading">How Jacob Stark Coordinates Your Move-Up</h2>
-          <p style="margin-bottom: var(--space-lg);">A data-driven, two-transaction process built for sellers who need to sell and buy simultaneously in South Denver.</p>
+        <!-- THE PLAN -->
+        <div id="the-plan" style="padding-top: var(--space-2xl);">
+          <span class="section-label">The Plan</span>
+          <h2 class="section-heading">Prepare. Buy &amp; Sell. Move Once.</h2>
+          <p style="margin-bottom: var(--space-lg);">Three steps, built backward from the day you want to be in the new house.</p>
           <div class="process-steps">
             <div class="process-step">
-              <h3>Equity &amp; Strategy Session</h3>
-              <p>Jacob pulls a CMA for your current home, analyzes your equity position, reviews your target price range for your next home, and assesses your timeline. Together, you determine whether to price aggressively to sell fast, explore bridge financing, or structure a contingent offer. This upfront clarity prevents surprises and positions both transactions for success.</p>
+              <h3>Prepare</h3>
+              <p>We walk your house together. You get a straight answer on what's worth fixing, what to skip, what it should cost, and how long it takes, based on your home's condition and what buyers in your neighborhood are actually paying for. Then we build the timeline backward from your move-in date.</p>
+              <p><a href={pillars.fixOrSkip.url}>{pillars.fixOrSkip.label} &rarr;</a></p>
             </div>
             <div class="process-step">
-              <h3>Synchronized Listing &amp; Search</h3>
-              <p>Your current home lists with professional photography, targeted digital marketing, and a price optimized for speed. Simultaneously, Jacob helps you search for your next home across South Denver neighborhoods like Littleton, Highlands Ranch, and Centennial. As offers come in on both properties, Jacob negotiates timelines so both close on or near the same date.</p>
+              <h3>Buy &amp; Sell</h3>
+              <p>For most families, the easiest path is buying the next home first. We line up the funding so you can make a strong offer without a home-sale contingency and without carrying two full mortgages. If selling first fits your numbers better, we plan for that instead.</p>
+              <p><a href={pillars.buyFirst.url}>{pillars.buyFirst.label} &rarr;</a></p>
             </div>
             <div class="process-step">
-              <h3>Coordinated Closing</h3>
-              <p>Jacob coordinates with both title companies to ensure your current home closes escrow just before or on the same day as your new home. Any bridge financing is paid off, closing costs are deducted, and your proceeds roll directly into your new home's down payment. You walk from your current home's closing to your new home's closing with no interim housing, no mortgage overlap, and no financial risk.</p>
+              <h3>Move Once</h3>
+              <p>You move straight into the next home. Your old house gets refreshed, cleaned, and staged into its most inviting version, then listed. No showings to clean up for, and no second move. When it sells, the proceeds settle up whatever we used to get you there.</p>
+              <p><a href={pillars.renovate.url}>{pillars.renovate.label} &rarr;</a></p>
             </div>
           </div>
-
-          <!-- Inline CTA -->
           <div class="section-cta">
-            <p>Ready to talk strategy? Schedule a no-pressure call to review your options.</p>
-            <a href="https://calendar.google.com/appointments/schedules/AcZssZ2UpHf-eRXBp5EhsEaj3h4tdL6UFcyrAVj2Ml1tNyGDAGwLXKSq-61crE41j57Q41IFr7Xj9gyv" class="btn btn--primary btn--sm" target="_blank" rel="noopener">Schedule a Call</a>
+            <p>Want your own version of this plan? Book 30 minutes and we'll map it out with your real numbers.</p>
+            <a href={bookUrl} class="btn btn--primary btn--sm" target="_blank" rel="noopener">Get Your Next-Move Plan</a>
           </div>
         </div>
 
+        <!-- WHAT GETS IN THE WAY -->
+        <div id="what-gets-in-the-way" style="padding-top: var(--space-2xl);">
+          <span class="section-label">What Gets in the Way</span>
+          <h2 class="section-heading">The Three Things That Keep Families Stuck</h2>
+          <div class="oyh-blockers">
+            <div class="oyh-blocker">
+              <p class="oyh-blocker__quote">"We have to sell before we can buy."</p>
+              <p>Not necessarily. Equity advances, bridge loans, and HELOCs can let you buy first. The right one depends on your equity and how much risk you're comfortable with. I'll show you the trade-offs side by side with your numbers.</p>
+              <a href={pillars.buyFirst.url}>{pillars.buyFirst.label} &rarr;</a>
+            </div>
+            <div class="oyh-blocker">
+              <p class="oyh-blocker__quote">"We need to fix things, but we don't know what."</p>
+              <p>Most of what's stressing you won't change your sale price. A few things will. Knowing the difference is where I can save you real money, because I make these same calls on houses I buy and renovate with my own money.</p>
+              <a href={pillars.fixOrSkip.url}>{pillars.fixOrSkip.label} &rarr;</a>
+            </div>
+            <div class="oyh-blocker">
+              <p class="oyh-blocker__quote">"We can't manage contractors and showings with work and kids."</p>
+              <p>You don't have to. Pre-listing updates can be managed for you, and some homeowners qualify to pay for them at closing instead of upfront. If you move out first, showings stop being your problem.</p>
+              <a href={pillars.renovate.url}>{pillars.renovate.label} &rarr;</a>
+            </div>
+          </div>
+        </div>
 
-        <!-- EQUITY CALCULATOR -->
+        <!-- OPTIONS TABLE -->
+        <div id="your-options" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Your Options</span>
+          <h2 class="section-heading">Buy First or Sell First? The Paths, Side by Side</h2>
+          <p style="margin-bottom: var(--space-md);">There's no single right answer. Here's how the common paths compare for South Denver Metro homeowners.</p>
+          <div class="oyh-table-wrap">
+            <table class="oyh-table">
+              <thead>
+                <tr><th scope="col">Path</th><th scope="col">Best when</th><th scope="col">The trade-off</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Buy first with an equity advance</th><td>You have solid equity and want to move once and skip showings</td><td>Requires approval; program terms and costs vary</td></tr>
+                <tr><th scope="row">Bridge loan or HELOC</th><td>You qualify to carry both payments for a while</td><td>Interest costs while both homes are owned; a HELOC usually has to be opened before you list</td></tr>
+                <tr><th scope="row">Buy first with a sale-contingent offer</th><td>Sellers in your target neighborhood are accepting contingencies</td><td>Weaker offer; you can lose the house to a buyer without a contingency</td></tr>
+                <tr><th scope="row">Sell first, then buy</th><td>You need every dollar of equity before you buy, or you'd rather not take on any extra financing</td><td>Possible rental or rent-back and a second move; pressure to find the next home quickly</td></tr>
+                <tr><th scope="row">Guaranteed cash offer</th><td>Speed and certainty matter more than top dollar</td><td>Cash offers typically come in around 80&ndash;85% of market value</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="margin-top: var(--space-sm); font-size: 0.9rem;"><a href={pillars.buyFirst.url}>How buying first works, what it covers, and how it can pay for itself &rarr;</a></p>
+        </div>
+
+        <!-- INVESTOR EYE / AUTHORITY -->
+        <div id="investor-eye" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Realtor + Renovator</span>
+          <h2 class="section-heading">Fix-or-Skip Advice From an Agent Who Renovates Homes With His Own Money</h2>
+          <ul class="oyh-proof">
+            <li><strong>Real renovation costs.</strong> I pay contractors on my own projects, so I know what the work should cost.</li>
+            <li><strong>What buyers actually pay more for.</strong> I resell those homes, so I see which updates move the price and which don't.</li>
+            <li><strong>Your house, not a checklist.</strong> Every call is based on your home's condition and what recent sales in your neighborhood show.</li>
+          </ul>
+          <p>Most agents can tell you what your house might sell for. Fewer can tell you which projects will change that number, because they've never had to pay for the work themselves. I've been buying, renovating, and reselling homes as an investor since 2015. Every one of those projects forces the same question you're facing: is this worth doing, or will buyers never notice?</p>
+          <p>That's the lens I bring to your house. Not a generic checklist, but a decision based on your home's condition, how the rest of the house compares, and what recent sales in your neighborhood say buyers will pay for.</p>
+
+          <blockquote class="testimonial oyh-testimonial">
+            <p class="testimonial__quote">Nothing but great things to say about our experience with Jacob! His communication, knowledge, expertise and dedication to our home sale and purchase were instrumental in helping us navigate the crazy Denver area market.</p>
+            <p class="testimonial__author">Jacque</p>
+            <p class="testimonial__detail">Centennial</p>
+          </blockquote>
+        </div>
+
+        <!-- CALCULATOR -->
         <div id="equity-calculator" style="padding-top: var(--space-2xl);">
           <span class="section-label">Run Your Numbers</span>
-          <h2 class="section-heading">Home Equity &amp; Affordability Calculator</h2>
-          <p style="margin-bottom: var(--space-lg);">Before the strategy call, it helps to have a directional read on your own numbers. Estimate your net equity, required down payment, and monthly cost for your next South Denver home. No email required — adjust the inputs to match your situation.</p>
+          <h2 class="section-heading">How Much Can You Put Toward the Next Home?</h2>
+          <p style="margin-bottom: var(--space-lg);">Get a directional read on your equity, your down payment, and your monthly cost on the next South Denver Metro home. No email required.</p>
           <HomeEquityCalculator showHeader={false} />
-          <p style="margin-top: var(--space-md); font-size: 0.875rem; color: var(--color-body-text);">Want the precise version? <a href="/tools/home-equity-calculator" style="color: var(--color-primary); text-decoration: underline;">Open the full calculator page</a> with explainers on how Colorado equity math works, or <a href="https://calendar.google.com/appointments/schedules/AcZssZ2UpHf-eRXBp5EhsEaj3h4tdL6UFcyrAVj2Ml1tNyGDAGwLXKSq-61crE41j57Q41IFr7Xj9gyv" target="_blank" rel="noopener" style="color: var(--color-primary); text-decoration: underline;">book a free equity analysis call</a>.</p>
+          <p style="margin-top: var(--space-md); font-size: 0.875rem; color: var(--color-body-text);">Want the detailed version? <a href="/tools/home-equity-calculator" style="color: var(--color-primary); text-decoration: underline;">Open the full calculator</a>, or <a href={bookUrl} target="_blank" rel="noopener" style="color: var(--color-primary); text-decoration: underline;">book 30 minutes</a> and we'll run your real numbers together.</p>
         </div>
 
-
-        <!-- AREAS SERVED -->
+        <!-- AREAS -->
         <div id="areas-served" style="padding-top: var(--space-2xl);">
-          <span class="section-label">Areas Served</span>
-          <h2 class="section-heading">Move-Up Seller Help Across South Denver</h2>
-          <p>Jacob Stark coordinates buy-sell transactions for move-up sellers throughout the South Denver Metro. Whether you're upgrading within Littleton, moving to a master-planned community in Highlands Ranch, or relocating to Centennial, the coordinated approach is the same — equity analysis, synchronized timing, seamless closing.</p>
+          <span class="section-label">Where I Help</span>
+          <h2 class="section-heading">Moving Up Across the South Denver Metro</h2>
+          <p>Jacob Stark helps homeowners who've outgrown their homes in every corner of the South Denver Metro, whether you're moving up within your neighborhood or trading a starter home in Englewood or Littleton for more space in Highlands Ranch, Centennial, or Parker.</p>
           <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: var(--space-md);">
             <a href="/neighborhoods/littleton" class="btn btn--outline-dark btn--sm">Littleton</a>
             <a href="/neighborhoods/highlands-ranch" class="btn btn--outline-dark btn--sm">Highlands Ranch</a>
@@ -245,146 +279,77 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
           </div>
         </div>
 
-
         <!-- FAQ -->
         <div id="faq" style="padding-top: var(--space-2xl);">
           <span class="section-label">Common Questions</span>
-          <h2 class="section-heading">Move-Up Seller FAQ</h2>
+          <h2 class="section-heading">Outgrown Your Home? FAQ</h2>
           <div class="faq-list">
-            <div class="faq-item">
-              <button class="faq-question" aria-expanded="false">Can I buy before I sell my current home in South Denver?</button>
-              <div class="faq-answer">
-                <p>Yes, but there are financial and timing trade-offs. You can get a contingent offer on a new home subject to the sale of your current property, which keeps your offer flexible but makes you a less attractive buyer. Alternatively, you can pursue a bridge loan to fund the new purchase immediately while your current home is still on the market, giving you a stronger negotiating position. Jacob Stark evaluates both strategies based on your equity position, current home market speed, your target neighborhood, and rate environment in South Denver communities like Littleton, Highlands Ranch, and Centennial.</p>
+            {faqs.map((f) => (
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">{f.q}</button>
+                <div class="faq-answer"><p>{f.a}</p></div>
               </div>
-            </div>
-            <div class="faq-item">
-              <button class="faq-question" aria-expanded="false">How does a sale contingency work in South Denver?</button>
-              <div class="faq-answer">
-                <p>A sale contingency makes your offer to purchase a new home conditional on successfully selling your current home within a set timeline — typically 45 to 60 days. If your current home doesn't sell by that date, you can back out of the new purchase without penalty. Sellers typically prefer non-contingent offers, but sale contingencies remain common in the South Denver Metro. Jacob Stark prices your current listing aggressively to maximize the likelihood of a quick sale, which strengthens your position when submitting contingent offers on your next home.</p>
-              </div>
-            </div>
-            <div class="faq-item">
-              <button class="faq-question" aria-expanded="false">What is a bridge loan and should I use one?</button>
-              <div class="faq-answer">
-                <p>A bridge loan is short-term financing that allows you to purchase a new home before your current home closes escrow. The bridge loan covers the down payment and closing costs on the new home; when your current home sells, those proceeds pay off the bridge loan. Bridge loans typically cost 0.5–1.5% in origination fees and carry interest rates 1–2% above conventional mortgages, but they're often worth the cost if they allow you to make a non-contingent offer on your next home in a competitive market. Jacob Stark helps you analyze whether a bridge loan makes financial sense based on your current home's equity, the new home's price, your lender's bridge-loan terms, and how quickly your home is likely to sell in your South Denver neighborhood.</p>
-              </div>
-            </div>
-            <div class="faq-item">
-              <button class="faq-question" aria-expanded="false">How does Jacob Stark help move-up sellers differently?</button>
-              <div class="faq-answer">
-                <p>Jacob Stark treats move-up transactions as a coordinated two-sided strategy, not two separate sales. He starts with a comprehensive equity and strategy analysis: What's your current home worth? What's your equity position? What do you want to pay for your next home? What's your timeline? From there, Jacob builds a synchronized plan that coordinates pricing on your current home to facilitate a quick sale, positions your new home offer strategically (contingent, non-contingent, or bridge-financed), and ensures both transactions close on the same timeline. He negotiates dual-transaction closing credits with title companies, helps you coordinate mortgage applications so you qualify for both simultaneously, and manages the full buy-sell timeline so you transition directly from your current home to your next home without intermediate housing or financial risk.</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 
 
-        <!-- RELATED READING -->
-        <div id="related-reading" style="padding-top: var(--space-2xl);">
-          <span class="section-label">Related Reading</span>
-          <h2 class="section-heading">Move-Up Seller Insights</h2>
-          <div class="card-grid">
-            <a href="/blog/best-neighborhoods-south-denver-move-up-buyers" class="card">
-              <div class="card__body">
-                <span class="card__tag">Neighborhoods</span>
-                <h3 class="card__title">Best Neighborhoods for Move-Up Buyers in South Denver</h3>
-                <p class="card__text">Where to find newer construction, larger lots, top-rated schools, and home values in Littleton, Highlands Ranch, and Centennial.</p>
-                <span class="card__meta">March 2026</span>
-              </div>
-            </a>
-            <a href="/blog/cost-to-sell-house-colorado-2026" class="card">
-              <div class="card__body">
-                <span class="card__tag">Seller Advice</span>
-                <h3 class="card__title">What It Costs to Sell a House in Colorado in 2026</h3>
-                <p class="card__text">Breakdown of realtor commissions, closing costs, staging, marketing, and other expenses when selling your South Denver home.</p>
-                <span class="card__meta">April 2026</span>
-              </div>
-            </a>
+        <!-- GO DEEPER (cluster nav) -->
+        <div id="go-deeper" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Go Deeper</span>
+          <h2 class="section-heading">Take the Next Step in the Plan</h2>
+          <div class="oyh-blockers">
+            <a class="oyh-blocker oyh-blocker--link" href={pillars.fixOrSkip.url}><p class="oyh-blocker__quote">Prepare: what to fix, what to skip</p><p>Which projects are worth doing before you list, and which ones buyers won't pay for.</p></a>
+            <a class="oyh-blocker oyh-blocker--link" href={pillars.buyFirst.url}><p class="oyh-blocker__quote">Buy &amp; Sell: buy before you sell</p><p>How to buy your next home first, what the funding covers, and how it can pay for itself.</p></a>
+            <a class="oyh-blocker oyh-blocker--link" href={pillars.renovate.url}><p class="oyh-blocker__quote">Move Once: updates with no money upfront</p><p>Get the old home refreshed, staged, and ready to sell, and pay for the work at closing.</p></a>
           </div>
         </div>
 
+        <!-- RELATED -->
+        {related.length > 0 && (
+          <div id="related-reading" style="padding-top: var(--space-2xl);">
+            <span class="section-label">Keep Reading</span>
+            <h2 class="section-heading">More for Families Who've Outgrown Their Home</h2>
+            <div class="card-grid">
+              {related.map((p) => (
+                <a href={`/blog/${p.id ?? p.slug}`} class="card">
+                  <div class="card__body">
+                    <span class="card__tag">{p.data.tag ?? 'Move-Up'}</span>
+                    <h3 class="card__title">{p.data.title}</h3>
+                    <p class="card__text">{p.data.description}</p>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
 
-        <!-- WHY JACOB / TRUST BAR -->
+        <!-- TRUST -->
         <div id="why-jacob" style="padding-top: var(--space-2xl);">
           <span class="section-label">Why Jacob</span>
-          <h2 class="section-heading">The Numbers Behind the Strategy</h2>
-          <p style="margin-bottom: var(--space-lg);">Jacob Stark doesn't just coordinate move-up transactions — he executes them. These numbers reflect a track record of pricing accuracy, marketing execution, and client results across the South Denver Metro.</p>
+          <h2 class="section-heading">The Track Record Behind the Plan</h2>
           <div class="trust-bar">
-            <div class="trust-bar__item">
-              <span class="trust-bar__value">$46M+</span>
-              <span class="trust-bar__label">in Sales</span>
-            </div>
-            <div class="trust-bar__item">
-              <span class="trust-bar__value">100.6%</span>
-              <span class="trust-bar__label">Avg Sale-to-List</span>
-            </div>
-            <div class="trust-bar__item">
-              <span class="trust-bar__value">83</span>
-              <span class="trust-bar__label">Families Helped</span>
-            </div>
-            <div class="trust-bar__item">
-              <span class="trust-bar__value">5.0</span>
-              <span class="trust-bar__label">Google Rating</span>
-            </div>
+            <div class="trust-bar__item"><span class="trust-bar__value">{agent.stats.salesVolume}</span><span class="trust-bar__label">in Sales</span></div>
+            <div class="trust-bar__item"><span class="trust-bar__value">{agent.stats.saleToList}</span><span class="trust-bar__label">Avg List-to-Close</span></div>
+            <div class="trust-bar__item"><span class="trust-bar__value">{agent.stats.avgDaysOnMarket}</span><span class="trust-bar__label">Avg Days on Market</span></div>
+            <div class="trust-bar__item"><span class="trust-bar__value">{agent.stats.familiesHelped}</span><span class="trust-bar__label">Families Helped</span></div>
           </div>
         </div>
 
-      </div><!-- /.pillar-content -->
-    </div><!-- /.pillar-layout -->
+      </div>
+    </div>
   </section>
-
 
   <!-- FINAL CTA -->
   <section class="cta-banner" style="background-color: var(--color-white);">
     <div class="container">
-      <h2 style="color: var(--color-dark-text);">Ready to Make Your Move?</h2>
-      <p style="color: var(--color-body-text);">Jacob Stark will analyze your current home's equity, help you search for your next home, and coordinate both transactions so you close without gaps or risk. No complex contingencies, no interim housing — just a clear, data-backed strategy.</p>
-      <a href="https://calendar.google.com/appointments/schedules/AcZssZ2UpHf-eRXBp5EhsEaj3h4tdL6UFcyrAVj2Ml1tNyGDAGwLXKSq-61crE41j57Q41IFr7Xj9gyv" class="btn btn--primary btn--lg" target="_blank" rel="noopener">Schedule a Call</a>
-      <a href="tel:3039970634" class="btn btn--outline-dark btn--lg">Call 303-997-0634</a>
+      <h2 style="color: var(--color-dark-text);">You Don't Have to Figure This Out Alone</h2>
+      <p style="color: var(--color-body-text);">In 30 minutes, we'll sort out what's worth fixing, whether to buy or sell first, and a realistic timeline to the next house. No pressure, no obligation.</p>
+      <a href={bookUrl} class="btn btn--primary btn--lg" target="_blank" rel="noopener">Get Your Next-Move Plan</a>
+      <a href={agent.phoneHref} class="btn btn--outline-dark btn--lg">Call {agent.phone}</a>
     </div>
   </section>
 
-  <script is:inline>
-    // FAQ Accordion
-    document.querySelectorAll('.faq-question').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        var item = this.closest('.faq-item');
-        var isActive = item.classList.contains('active');
-        document.querySelectorAll('.faq-item').forEach(function(el) {
-          el.classList.remove('active');
-          el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
-        });
-        if (!isActive) {
-          item.classList.add('active');
-          this.setAttribute('aria-expanded', 'true');
-        }
-      });
-    });
 
-    // Sticky TOC active state
-    (function() {
-      var tocLinks = document.querySelectorAll('.pillar-toc__link');
-      var sections = [];
-      tocLinks.forEach(function(link) {
-        var id = link.getAttribute('href').replace('#', '');
-        var el = document.getElementById(id);
-        if (el) sections.push({ id: id, el: el, link: link });
-      });
-
-      function updateActive() {
-        var scrollPos = window.scrollY + 120;
-        var current = sections[0];
-        for (var i = 0; i < sections.length; i++) {
-          if (sections[i].el.offsetTop <= scrollPos) {
-            current = sections[i];
-          }
-        }
-        tocLinks.forEach(function(l) { l.classList.remove('active'); });
-        if (current) current.link.classList.add('active');
-      }
-
-      window.addEventListener('scroll', updateActive);
-      updateActive();
-    })();
-  </script>
+  <PillarScripts />
 </BaseLayout>

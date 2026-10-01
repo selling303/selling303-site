@@ -1,4 +1,5 @@
 ---
+import { agent, brokerage } from '../data/agent';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 ---
@@ -116,7 +117,7 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
         <!-- DIRECT ANSWER SNIPPET -->
         <div class="snippet-block" id="direct-answer">
           <span class="snippet-block__label">Direct Answer</span>
-          <p><strong>Why do listings expire in South Denver?</strong> The most common reasons are overpricing relative to the local market, weak marketing exposure, and poor showing condition. Jacob Stark, REALTOR&reg; at Orchard, specializes in relisting and selling expired listings across Littleton, Highlands Ranch, Centennial, and the broader South Denver Metro.</p>
+          <p><strong>Why do listings expire in South Denver?</strong> The most common reasons are overpricing relative to the local market, weak marketing exposure, and poor showing condition. Jacob Stark, REALTOR&reg; at {brokerage.name}, specializes in relisting and selling expired listings across Littleton, Highlands Ranch, Centennial, and the broader South Denver Metro.</p>
         </div>
 
         <!-- THE PROBLEM -->
@@ -256,7 +257,7 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
             <div class="faq-item">
               <button class="faq-question" aria-expanded="false">Can I switch agents after my listing expires?</button>
               <div class="faq-answer">
-                <p>Yes. Once your listing agreement expires, you are free to hire a new real estate agent with no penalty. You are not obligated to relist with the same agent or brokerage. Jacob Stark, REALTOR&reg; at Orchard, works with expired listing sellers across Littleton, Highlands Ranch, Centennial, Englewood, Parker, and the broader South Denver Metro.</p>
+                <p>Yes. Once your listing agreement expires, you are free to hire a new real estate agent with no penalty. You are not obligated to relist with the same agent or brokerage. Jacob Stark, REALTOR&reg; at {brokerage.name}, works with expired listing sellers across Littleton, Highlands Ranch, Centennial, Englewood, Parker, and the broader South Denver Metro.</p>
               </div>
             </div>
           </div>
@@ -293,19 +294,19 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
           <p style="margin-bottom: var(--space-lg);">Jacob Stark doesn't just relist homes &mdash; he sells them. These numbers reflect a track record of pricing accuracy, marketing execution, and client results across the South Denver Metro.</p>
           <div class="trust-bar">
             <div class="trust-bar__item">
-              <span class="trust-bar__value">$46M+</span>
+              <span class="trust-bar__value">{agent.stats.salesVolume}</span>
               <span class="trust-bar__label">in Sales</span>
             </div>
             <div class="trust-bar__item">
-              <span class="trust-bar__value">100.6%</span>
+              <span class="trust-bar__value">{agent.stats.saleToList}</span>
               <span class="trust-bar__label">Avg Sale-to-List</span>
             </div>
             <div class="trust-bar__item">
-              <span class="trust-bar__value">83</span>
+              <span class="trust-bar__value">{agent.stats.familiesHelped}</span>
               <span class="trust-bar__label">Families Helped</span>
             </div>
             <div class="trust-bar__item">
-              <span class="trust-bar__value">5.0</span>
+              <span class="trust-bar__value">{agent.stats.googleRating}</span>
               <span class="trust-bar__label">Google Rating</span>
             </div>
           </div>

@@ -1,0 +1,32 @@
+---
+// Shared behavior for pillar pages: FAQ accordion + sticky TOC active state.
+---
+<script is:inline>
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = this.closest('.faq-item');
+        var isActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(function(el) {
+          el.classList.remove('active');
+          el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+        if (!isActive) { item.classList.add('active'); this.setAttribute('aria-expanded', 'true'); }
+      });
+    });
+    (function() {
+      var tocLinks = document.querySelectorAll('.pillar-toc__link');
+      var sections = [];
+      tocLinks.forEach(function(link) {
+        var el = document.getElementById(link.getAttribute('href').replace('#', ''));
+        if (el) sections.push({ el: el, link: link });
+      });
+      function updateActive() {
+        var scrollPos = window.scrollY + 120, current = sections[0];
+        for (var i = 0; i < sections.length; i++) { if (sections[i].el.offsetTop <= scrollPos) current = sections[i]; }
+        tocLinks.forEach(function(l) { l.classList.remove('active'); });
+        if (current) current.link.classList.add('active');
+      }
+      window.addEventListener('scroll', updateActive);
+      updateActive();
+    })();
+</script>
