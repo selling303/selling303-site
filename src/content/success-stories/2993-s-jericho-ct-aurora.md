@@ -29,11 +29,15 @@ story:
   strategy:
     - "Team mobilized quickly to handle all preparation and heavy lifting"
     - "Installed new carpet throughout the home for a fresh, move-in-ready feel"
+    - "Fresh interior paint to brighten and modernize the space"
     - "Deep cleaned the entire property to eliminate any signs of wear"
     - "Advised on and assisted with decluttering and strategic staging"
     - "Professional photography showcasing the prepared home at its best"
   strategyNarrative: "When life forces a move, having a team that handles the details makes all the difference. New carpet, deep cleaning, and staging transformed the home's presentation. The result: $31,000 over list price in just 4 days."
-testimonials: []
+testimonials:
+  - name: "Dee"
+    text: "I had a complicated real estate situation to resolve and Jacob Stark took the job on willingly and worked diligently and professionally to its completion, taking on more tasks than necessary to help me through the ups and downs of the transaction. Because he was so willing and capable in handling so many of the additional tasks and because I was not local, he assumed much of the pressure and responsibility for getting this home sold, and quickly, at a price higher than expected. Additionally, Jacob provided options for presenting the best of the home, not pressuring but leaving the decision to us, and had a great network of other professionals- ie: legal, title, appraisers, stagers, repair services, etc. to ensure that each step of the sale went smoothly to its end. I would highly recommend Jacob Stark for any real estate transaction."
+    rating: 5
 heroImage:
   src: "2993-s-jericho-ct-aurora/1-web-or-mls-5178 - Jacob Stark - 2993 S Jericho Ct, Aurora, CO 80013_99.jpg"
   alt: "Exterior of 2993 S Jericho Ct in Conservatory Park Aurora Colorado"

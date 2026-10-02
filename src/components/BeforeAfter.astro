@@ -1,0 +1,38 @@
+---
+// Side-by-side before/after pair. Both images go through Astro's pipeline (WebP, sized).
+// Shots are rarely aligned perfectly, so this is a side-by-side, not a slider.
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+interface Props {
+  before: ImageMetadata;
+  after: ImageMetadata;
+  beforeAlt: string;
+  afterAlt: string;
+  caption?: string;
+}
+const { before, after, beforeAlt, afterAlt, caption } = Astro.props;
+---
+<figure class="ba">
+  <div class="ba__pair">
+    <div class="ba__side">
+      <Image src={before} alt={beforeAlt} width={800} format="webp" quality={78} loading="lazy" class="ba__img" />
+      <span class="ba__tag ba__tag--before">Before</span>
+    </div>
+    <div class="ba__side">
+      <Image src={after} alt={afterAlt} width={800} format="webp" quality={78} loading="lazy" class="ba__img" />
+      <span class="ba__tag ba__tag--after">After</span>
+    </div>
+  </div>
+  {caption && <figcaption class="ba__caption">{caption}</figcaption>}
+</figure>
+<style>
+  .ba { margin: var(--space-md) 0 var(--space-lg); }
+  .ba__pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  @media (max-width: 600px) { .ba__pair { grid-template-columns: 1fr; } }
+  .ba__side { position: relative; border-radius: var(--radius-md); overflow: hidden; aspect-ratio: 4 / 3; background: var(--color-background); }
+  .ba__side :global(.ba__img) { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .ba__tag { position: absolute; top: 0.6rem; left: 0.6rem; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25rem 0.6rem; border-radius: 999px; color: #fff; }
+  .ba__tag--before { background: rgba(26, 26, 26, 0.75); }
+  .ba__tag--after { background: var(--color-accent); }
+  .ba__caption { font-size: 0.85rem; color: var(--color-body-text); margin-top: 0.5rem; }
+</style>
