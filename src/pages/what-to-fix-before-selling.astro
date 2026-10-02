@@ -1,0 +1,361 @@
+---
+// Pillar of the "Outgrown Your Home?" cluster — Prepare step. Created 2026-10-02.
+// Sources: brain/marketing/fix-or-skip-interview.md (Jacob's method + cost ranges)
+//          brain/marketing/fix-or-skip-research-2026-10.md (cited research)
+// Cost ranges are Jacob's typical South Denver Metro figures — update in `costs` below.
+import { agent } from '../data/agent';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import VideoEmbed from '../components/VideoEmbed.astro';
+import PillarScripts from '../components/PillarScripts.astro';
+import BeforeAfter from '../components/BeforeAfter.astro';
+import jerichoLivingBefore from '../assets/images/before-after/jericho-living-room-before.jpg';
+import jerichoLivingAfter from '../assets/images/success-stories/2993-s-jericho-ct-aurora/8-web-or-mls-5178 - Jacob Stark - 2993 S Jericho Ct, Aurora, CO 80013_106.jpg';
+import jerichoBedBefore from '../assets/images/before-after/jericho-primary-bedroom-before.jpg';
+import hampdenLivingBefore from '../assets/images/before-after/hampden-living-room-before.jpg';
+import hampdenLivingAfter from '../assets/images/success-stories/18302-e-hampden-pl-aurora/18-F9A6241.jpg';
+import hampdenBedBefore from '../assets/images/before-after/hampden-bedroom-before.jpg';
+import hampdenBedAfter from '../assets/images/success-stories/18302-e-hampden-pl-aurora/32-F9A6323.jpg';
+import jerichoBedAfter from '../assets/images/success-stories/2993-s-jericho-ct-aurora/17-web-or-mls-5178 - Jacob Stark - 2993 S Jericho Ct, Aurora, CO 80013_115.jpg';
+
+const bookUrl = agent.bookingUrls.moveUp;
+const videoId = ''; // "What to fix before selling, and what to skip" — set when published
+
+const costs = [
+  { item: 'Interior paint (whole house)', range: '$5,000–$8,000', note: 'Depends on prep and layout. The best-value update there is.' },
+  { item: 'Paint kitchen cabinets + new hardware', range: '$1,500–$4,000', note: 'Depends on kitchen size. Works when the counters are in decent shape.' },
+  { item: 'Flooring (LVP in living areas, carpet in bedrooms)', range: '$6,000–$8,000', note: 'More if you add tile or hardwood.' },
+  { item: 'Light and plumbing fixtures', range: '$1,500–$2,500', note: 'Good-looking fixtures can be had for less than most people think.' },
+  { item: 'Bath refresh (paint, light, reglaze tile)', range: 'Under ~$2,000', note: 'Versus $8,000–$15,000+ for a full bath remodel.' },
+  { item: 'Service the furnace, A/C, or water heater', range: 'A few hundred dollars', note: 'Often enough instead of replacing a system that still works.' },
+  { item: 'Staging (vacant home)', range: '$2,500–$3,500', note: 'Depends on how much of the home is staged.' },
+];
+
+const faqs = [
+  { q: 'What should I fix before selling my house?', a: `Start with anything buyers or inspectors will flag in the major systems: roof, structure, HVAC, electrical, and plumbing. Then focus on low-cost updates that make the home feel fresh, like paint, flooring, light fixtures, curb appeal, and staging. Skip heavy remodels unless recent sales nearby show buyers pay for them. Jacob Stark, a South Denver Metro REALTOR® who renovates and resells homes as an investor, decides each project by what it costs and what it changes in the sale price.` },
+  { q: 'Is it worth remodeling a kitchen before selling?', a: `Usually not a full remodel. In the Mountain region, a minor kitchen refresh recoups an estimated 110% of its cost, while a major midrange remodel recoups about 49% and an upscale one about 35% (2025 Cost vs. Value Report). If the counters are in decent shape, painting the cabinets and adding new hardware can refresh a kitchen for a fraction of the cost.` },
+  { q: 'What updates add the most value before selling in Denver?', a: `Paint and flooring are almost always worth it because they make a home look and feel fresh. Updated light fixtures, cabinet paint with new hardware, curb-appeal cleanup, and staging are other high-value moves. Nationally, REALTORS® most often recommend painting the entire home before selling (NAR 2025 Remodeling Impact Report).` },
+  { q: 'Should I replace an old furnace or water heater before selling?', a: `Usually not if it still works. In most cases, Jacob Stark recommends waiting to see what buyers ask for after the inspection. Offering to service the system, which costs a few hundred dollars, is often enough. Replacing a working system rarely returns its cost.` },
+  { q: 'How do I know what buyers in my neighborhood want?', a: `Look at what they've paid for. Recent sales from the last 6–12 months show the price difference between dated homes and updated ones in your area. That gap, compared with the cost of updates, tells you which projects are likely to pay you back. You don't have to guess.` },
+  { q: 'How long do pre-listing updates take?', a: `Most South Denver Metro homes need about two to three weeks of work. Larger projects can take up to 12 weeks, so the listing date is planned around the scope.` },
+];
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How to decide what to fix before selling your home',
+  step: [
+    { '@type': 'HowToStep', position: 1, name: 'Pull recent comparable sales', text: 'Gather sales of similar nearby homes from the last 6 to 12 months.' },
+    { '@type': 'HowToStep', position: 2, name: 'Place your home on the ladder', text: 'Decide whether your home, as it is, sits at the low, middle, or high end of those sales.' },
+    { '@type': 'HowToStep', position: 3, name: 'Price the next rung', text: 'Compare the price gap to the next level up with what it would cost to make your home look like it.' },
+    { '@type': 'HowToStep', position: 4, name: 'Run three tests', text: 'Can you get there easily? Will the money come back? Will it help the home sell faster? Do the projects that pass.' },
+  ],
+};
+
+const stories = [
+  { where: 'Conservatory Park, Aurora', did: 'New carpet, fresh paint, a deep clean, and staging. No remodel.', result: '$31,000 over list (106%) in 4 days', quote: '"Jacob provided options for presenting the best of the home, not pressuring but leaving the decision to us."', by: 'Dee, seller\'s representative', url: '/sell/success-stories/2993-s-jericho-ct-aurora' },
+  { where: 'Two-story home, Aurora', did: 'The seller bought her next home first and moved out. Then fresh paint, new carpet, and staging. Skipped: the popcorn ceilings and the hall bath.', result: 'List price in 3 days' },
+  { where: '1970s ranch, Woodmar Village, Littleton', did: 'Paint throughout, new carpet, shower retile, a new patio and window, then staging. Paid for at closing with short-term renovation financing.', result: 'Full asking price in 9 days', url: '/sell/success-stories/6566-s-flower-st-littleton' },
+  { where: 'Dated townhome, Dutch Ridge, Littleton', did: 'No remodel. Staging and photography carried the dated finishes, with pricing set for a high-rate market.', result: 'Multiple offers, 103% of list in 5 days', url: '/sell/success-stories/6720-s-holland-way-littleton' },
+  { where: 'Single-family home, Parker', did: 'Pre-listing touch-ups and freshening while nearby listings sat through the holidays.', result: '102% of list in 10 days', quote: '"Jacob was strategic, patient, and realistic. He didn\'t make any promises that were unrealistic."', by: 'Daniel K., seller', url: '/sell/success-stories/21069-woodside-ln-parker' },
+];
+---
+
+<BaseLayout
+  title="What to Fix Before Selling Your House (and What to Skip) | South Denver Metro | Jacob Stark"
+  description="Which updates pay you back before you list? Jacob Stark, REALTOR® and house flipper, shares his fix-or-skip method, real South Denver Metro costs, and what the data says."
+  ogType="website"
+  ogUrl="https://selling303.com/what-to-fix-before-selling"
+  currentPage="move-up-sellers"
+  headerVariant="solid"
+>
+  <Fragment slot="head">
+    <Breadcrumbs schemaOnly items={[
+      { label: 'Home', url: '/' },
+      { label: 'Outgrown Your Home?', url: '/move-up-sellers' },
+      { label: 'What to Fix Before Selling', url: null },
+    ]} />
+    <script type="application/ld+json" set:html={JSON.stringify(howToSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
+
+  <section class="pillar-hero">
+    <div class="container">
+      <div class="pillar-hero__content">
+        <span class="pillar-hero__label"><a href="/move-up-sellers" style="color: inherit;">Outgrown Your Home?</a> &middot; Prepare</span>
+        <h1>What to Fix Before Selling, and What to Skip</h1>
+        <p class="pillar-hero__subtitle">Most of what's stressing you won't change your sale price. A few things will. Here's how a REALTOR® who renovates homes with his own money tells the difference.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white pillar-body">
+    <div class="pillar-layout">
+
+      <aside class="pillar-toc" aria-label="Page navigation">
+        <span class="pillar-toc__label">On This Page</span>
+        <ul class="pillar-toc__list">
+          <li><a href="#direct-answer" class="pillar-toc__link active">The Short Answer</a></li>
+          <li><a href="#no-guessing" class="pillar-toc__link">You Don't Have to Guess</a></li>
+          <li><a href="#walkthrough" class="pillar-toc__link">How I Walk a House</a></li>
+          <li><a href="#next-rung" class="pillar-toc__link">The Next-Rung Method</a></li>
+          <li><a href="#usually-fix" class="pillar-toc__link">Usually Worth It</a></li>
+          <li><a href="#usually-skip" class="pillar-toc__link">Usually Skip</a></li>
+          <li><a href="#snowball" class="pillar-toc__link">The Snowball Trap</a></li>
+          <li><a href="#big-systems" class="pillar-toc__link">Roof, HVAC &amp; Inspections</a></li>
+          <li><a href="#staging" class="pillar-toc__link">Staging</a></li>
+          <li><a href="#results" class="pillar-toc__link">Real Results</a></li>
+          <li><a href="#faq" class="pillar-toc__link">FAQ</a></li>
+        </ul>
+      </aside>
+
+      <div class="pillar-content">
+
+        <div class="snippet-block" id="direct-answer">
+          <span class="snippet-block__label">The Short Answer</span>
+          <p><strong>What should you fix before selling your house?</strong> Fix what buyers and inspectors will flag in the major systems first. Then put your money into low-cost updates that make the home feel fresh: paint, flooring, light fixtures, curb appeal, and staging. Skip heavy remodels like full kitchens, baths, or new windows unless recent sales nearby show buyers pay for them. Jacob Stark, a South Denver Metro REALTOR® and real estate investor, decides by comparing what an update costs with how much more homes like yours sell for with it.</p>
+        </div>
+
+        <BeforeAfter before={hampdenLivingBefore} after={hampdenLivingAfter}
+          beforeAlt="Family room before prep: dark brick fireplace, cluttered furniture, and pet beds"
+          afterAlt="Same family room after fresh paint, including the brick fireplace, and staging"
+          caption="Same room, no remodel. The seller had already moved into her next home, so this one got fresh paint (brick fireplace included) and staging. It sold at list price in 3 days." />
+
+        <VideoEmbed videoId={videoId} title="What to fix before selling, and what to skip" description="Jacob Stark explains how to decide which updates pay you back before listing in the South Denver Metro." />
+
+        <!-- NO GUESSING -->
+        <div id="no-guessing" style="padding-top: var(--space-xl);">
+          <span class="section-label">You Don't Have to Guess</span>
+          <h2 class="section-heading">"I Don't Know What Buyers Want, So Why Would I Spend Money Guessing?"</h2>
+          <p>I hear this from sellers all the time, and it's a fair point. Spending money on your own taste and hoping buyers share it is a gamble. But you don't have to guess. Recent sales in your neighborhood show exactly what buyers have been paying more for, and what they haven't.</p>
+          <p>Right now, condition matters more than it has in years. Denver's REALTOR® association put it plainly this summer:</p>
+          <blockquote class="oyh-pullquote">
+            <p>"A widening gap has opened between truly move-in-ready properties and those carrying deferred maintenance… Condition has quietly become the currency that matters most."</p>
+            <cite>Denver Metro Association of REALTORS®, Market Trends Report, June 2026</cite>
+          </blockquote>
+          <div class="oyh-stats">
+            <div class="oyh-stat"><span class="oyh-stat__num">+2.9%</span><span class="oyh-stat__label">Homes described as "turnkey" sold for more than expected</span></div>
+            <div class="oyh-stat"><span class="oyh-stat__num">&minus;14%</span><span class="oyh-stat__label">Homes described as "fixer-uppers" sold for less than expected</span></div>
+            <div class="oyh-stat"><span class="oyh-stat__num">76%</span><span class="oyh-stat__label">of top agents say move-in-ready condition is the #1 selling point</span></div>
+          </div>
+          <p class="oyh-disclosure">Sources: Zillow, Home Features That Sell (2025 listings, published March 2026); HomeLight Top Agent Insights, Q3 2025. Full list at the bottom of this page.</p>
+        </div>
+
+        <!-- WALKTHROUGH -->
+        <div id="walkthrough" style="padding-top: var(--space-2xl);">
+          <span class="section-label">How I Walk a House</span>
+          <h2 class="section-heading">Three Layers, in This Order</h2>
+          <p style="margin-bottom: var(--space-md);">When I walk a seller's home, I look at it the way a buyer and their inspector will, from the bones out.</p>
+          <div class="oyh-blockers">
+            <div class="oyh-blocker"><p class="oyh-blocker__quote">1. The big systems</p><p>Foundation and structure, roof, heating and cooling, electrical, and plumbing. These are what inspectors flag and what make buyers nervous.</p></div>
+            <div class="oyh-blocker"><p class="oyh-blocker__quote">2. The supporting cast</p><p>Windows, appliances, and the concrete around the house. Are they in decent shape, or will they raise questions?</p></div>
+            <div class="oyh-blocker"><p class="oyh-blocker__quote">3. The finishes</p><p>Paint, flooring, trim, fixtures, cabinets, and hardware. Kitchens and baths set the tone, so I pay the most attention there.</p></div>
+          </div>
+          <p style="margin-top: var(--space-md);">The goal is a home that feels consistent from room to room. An out-of-date kitchen sticks out like a sore thumb in an otherwise fresh house, and dated bathrooms stand out too.</p>
+        </div>
+
+        <!-- NEXT RUNG -->
+        <div id="next-rung" style="padding-top: var(--space-2xl);">
+          <span class="section-label">The Next-Rung Method</span>
+          <h2 class="section-heading">How I Decide If an Update Will Pay You Back</h2>
+          <div class="oyh-ladder" aria-label="Diagram: recent sales grouped into low, middle, and high rungs">
+            <div class="oyh-rung oyh-rung--high"><span class="oyh-rung__label">High</span><span class="oyh-rung__desc">Fully updated homes</span></div>
+            <div class="oyh-rung oyh-rung--mid"><span class="oyh-rung__label">Middle</span><span class="oyh-rung__desc">Fresh, well-kept homes</span><span class="oyh-rung__arrow">&uarr; Can we get you here?</span></div>
+            <div class="oyh-rung oyh-rung--low"><span class="oyh-rung__label">Low</span><span class="oyh-rung__desc">Dated or needs work</span><span class="oyh-rung__you">Your home today</span></div>
+          </div>
+          <ol class="oyh-numbered">
+            <li><strong>Pull the comps.</strong> Every similar home that sold nearby in the last 6 to 12 months.</li>
+            <li><strong>Place your home on the ladder.</strong> As it sits today, is it at the low, middle, or high end of those sales?</li>
+            <li><strong>Price the next rung.</strong> What's the price difference between your rung and the one above it, and what would it cost to make your home look like it belongs there?</li>
+            <li><strong>Run three tests.</strong> Can we get there easily, or is it a stretch? Will you get your money back? Will it help the home sell faster?</li>
+          </ol>
+          <p>My goal is simple: every dollar you put in should come back out. The one exception is when a seller's top priority is a fast sale and a modest investment gets us there.</p>
+          <div class="oyh-example">
+            <p class="oyh-example__label">Hypothetical example</p>
+            <p>Say homes like yours sell for about $600,000 when they're dated and about $650,000 when they're fresh and well-kept. If paint, flooring, and fixtures would cost around $15,000 and put your home convincingly on that middle rung, the math works. If getting there takes a $60,000 kitchen and bath remodel, it doesn't, and we'd price your home for its current rung instead.</p>
+          </div>
+        </div>
+
+        <!-- USUALLY FIX -->
+        <div id="usually-fix" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Usually Worth It</span>
+          <h2 class="section-heading">The Updates That Almost Always Earn Their Keep</h2>
+          <p style="margin-bottom: var(--space-md);">Paint and flooring top the list because they make a house look and smell fresh. Here's what these updates typically cost in the South Denver Metro:</p>
+          <div class="oyh-table-wrap">
+            <table class="oyh-table">
+              <thead><tr><th scope="col">Update</th><th scope="col">Typical cost</th><th scope="col">Good to know</th></tr></thead>
+              <tbody>
+                {costs.map((c) => (<tr><th scope="row">{c.item}</th><td>{c.range}</td><td>{c.note}</td></tr>))}
+              </tbody>
+            </table>
+          </div>
+          <p class="oyh-disclosure" style="margin-top: var(--space-sm);">Typical ranges Jacob Stark sees on South Denver Metro homes. Your costs depend on size, condition, and materials.</p>
+          <div class="oyh-tip">
+            <p><strong>While the painter's there:</strong> swap the yellowed switch plates and outlet covers, and replace old smoke detectors. The painter is taking the covers off anyway, so new ones cost almost nothing extra, and it saves you a ladder or a handyman visit.</p>
+          </div>
+          <p style="margin-top: var(--space-md);">The national data agrees. Painting the entire home is the project REALTORS® recommend most often before selling (50%), followed by painting a single room (41%). Top agents rank a fresh coat of paint as the single highest-return pre-listing step.</p>
+          <p>One more tip on color: stick with warm neutrals and soft, grounded tones. In Zillow's 2025 paint study, a bright daisy-yellow kitchen lowered what buyers said they'd pay by nearly $4,000.</p>
+        </div>
+
+        <!-- USUALLY SKIP -->
+        <div id="usually-skip" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Usually Skip</span>
+          <h2 class="section-heading">Heavy Remodels Rarely Pay You Back Before a Sale</h2>
+          <p>Moving walls, full kitchen or bath remodels, new windows, replacing a furnace that still works: these usually don't return what they cost unless recent sales clearly show buyers pay extra for them. The cost-recovery estimates for our region back this up:</p>
+          <div class="oyh-table-wrap">
+            <table class="oyh-table">
+              <thead><tr><th scope="col">Project (Mountain region)</th><th scope="col">Avg. cost</th><th scope="col">Est. cost recouped</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Minor kitchen refresh (midrange)</th><td>$28,490</td><td><strong>110%</strong></td></tr>
+                <tr><th scope="row">Bath remodel (midrange)</th><td>$24,920</td><td>69%</td></tr>
+                <tr><th scope="row">Vinyl window replacement</th><td>$21,165</td><td>80%</td></tr>
+                <tr><th scope="row">Major kitchen remodel (midrange)</th><td>$81,538</td><td>49%</td></tr>
+                <tr><th scope="row">Bath remodel (upscale)</th><td>$79,492</td><td>36%</td></tr>
+                <tr><th scope="row">Major kitchen remodel (upscale)</th><td>$159,439</td><td>35%</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="oyh-disclosure" style="margin-top: var(--space-sm);">Source: Zonda/JLC 2025 Cost vs. Value Report, Mountain region. "Cost recouped" is based on agents' estimates of added resale value, not actual sale prices. Your neighborhood's comps are the real test.</p>
+          <p style="margin-top: var(--space-md);">Notice the pattern: the smaller, smarter version of a project often pays back, while the full remodel rarely does. Scope matters as much as the room.</p>
+        </div>
+
+        <!-- SNOWBALL -->
+        <div id="snowball" style="padding-top: var(--space-2xl);">
+          <span class="section-label">The Snowball Trap</span>
+          <h2 class="section-heading">When One Upgrade Leads to Another, and Another</h2>
+          <p>Kitchens and baths are where this happens most. It starts with "just the backsplash" or "just the vanity." The new piece looks great, so maybe new counters would too. Then the old flooring looks worse next to the new counters. Before long, you've spent far more than you planned, on a house you're about to leave.</p>
+          <blockquote class="oyh-pullquote">
+            <p>"It's important to find upgrades that work with everything that's already in place, or else you get forced into improving more than you intended."</p>
+            <cite>Jacob Stark</cite>
+          </blockquote>
+          <div class="oyh-blockers">
+            <div class="oyh-blocker"><p class="oyh-blocker__quote">Kitchen refresh</p><p>If the counters are in decent shape, painted cabinets and new pulls can change the whole room. Roughly $1,500–$4,000. Once you're replacing counters and cabinets, it's more like $15,000–$25,000 or more.</p></div>
+            <div class="oyh-blocker"><p class="oyh-blocker__quote">Bath refresh</p><p>Paint, a new light fixture, and reglazing the existing tub and shower tile, often under $2,000. A full remodel runs about $8,000–$10,000, or around $15,000 for a large primary bath.</p></div>
+          </div>
+        </div>
+
+        <!-- BIG SYSTEMS -->
+        <div id="big-systems" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Roof, HVAC &amp; Inspections</span>
+          <h2 class="section-heading">The Big Systems: Fix, Service, or Wait?</h2>
+          <p>Inspection problems are the most common reason deals fall apart. In a 2025 Redfin survey, 70% of agents named inspection or repair issues as a reason contracts were canceled. Denver buyers are paying close attention too: they're checking the water heater's age and asking about the roof before they've even looked at the kitchen.</p>
+          <ul class="oyh-proof">
+            <li><strong>Roof:</strong> if it's showing age or damage, have a roofer take a look. If there's legitimate storm damage, homeowners insurance may cover a replacement minus your deductible, which can be one of the best investments you make before selling. (Colorado law prohibits roofers from paying or waiving your deductible, so be wary of anyone who offers.)</li>
+            <li><strong>Furnace, A/C, and water heater:</strong> if they work, usually leave them. In most cases it's smarter to see what buyers ask for after the inspection. Offering to service a system often satisfies a buyer for a few hundred dollars.</li>
+            <li><strong>Safety and function:</strong> anything broken, leaking, or unsafe is worth fixing or at least disclosing up front. It's far easier to handle before a buyer's inspector finds it.</li>
+          </ul>
+        </div>
+
+        <!-- STAGING -->
+        <div id="staging" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Staging</span>
+          <h2 class="section-heading">There's a Reason Builders Stage Their Model Homes</h2>
+          <p>Builders don't stage model homes by accident. People buy on emotion, and staging primes the pump. It helps buyers picture their own life in the space, and it levels up a home in a way most sellers don't appreciate until they see it.</p>
+          <div class="oyh-stats">
+            <div class="oyh-stat"><span class="oyh-stat__num">83%</span><span class="oyh-stat__label">of buyers' agents say staging makes it easier for buyers to picture the home as theirs</span></div>
+            <div class="oyh-stat"><span class="oyh-stat__num">49%</span><span class="oyh-stat__label">of sellers' agents say staging reduced time on market</span></div>
+            <div class="oyh-stat"><span class="oyh-stat__num">1&ndash;10%</span><span class="oyh-stat__label">increase in offers reported by 29% of sellers' agents</span></div>
+          </div>
+          <p class="oyh-disclosure">Source: National Association of REALTORS®, 2025 Profile of Home Staging.</p>
+          <p style="margin-top: var(--space-md);">I recommend staging on almost every listing. Staging a vacant home typically runs $2,500–$3,500 here, depending on how much of the home is staged. Sometimes we can work with a seller's own furniture, but a fresh, edited look usually shows best. The rooms buyers care about most are the living room, the primary bedroom, and the kitchen.</p>
+          <p>It's one more reason <a href="/buy-before-you-sell">buying your next home first</a> works so well: once you've moved, the house can be refreshed and staged into its most inviting version.</p>
+        </div>
+
+        <!-- RESULTS -->
+        <div id="results" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Real Results</span>
+          <h2 class="section-heading">What Smart Prep Looks Like in Practice</h2>
+          <p>The family room at the top of this page belongs to a seller who bought her next home first. Once she moved out, the house got fresh paint, new carpet, and staging, with no remodel. Here's one of its bedrooms:</p>
+          <BeforeAfter before={hampdenBedBefore} after={hampdenBedAfter}
+            beforeAlt="Bedroom before prep: purple walls, dark closet doors, and moving boxes"
+            afterAlt="Same bedroom after neutral paint, white closet doors, and new carpet"
+            caption="Neutral paint, painted closet doors, and new carpet. Sold at list price in 3 days." />
+          <p class="oyh-skipped"><strong>What we skipped:</strong> the popcorn ceilings and the hall bath. Neither held the sale back, and skipping them kept the budget focused on what buyers actually notice.</p>
+          <p>And here's a Conservatory Park home in Aurora. No remodel, no new kitchen. Just new carpet, fresh paint, a deep clean, and staging. It sold for $31,000 over list in 4 days.</p>
+          <BeforeAfter before={jerichoLivingBefore} after={jerichoLivingAfter}
+            beforeAlt="Living room before pre-listing prep: stained, worn carpet and bare walls"
+            afterAlt="Same living room after new carpet, fresh paint, and staging"
+            caption="Living room: new carpet, paint, and staging." />
+          <BeforeAfter before={jerichoBedBefore} after={jerichoBedAfter}
+            beforeAlt="Primary bedroom before prep: dated carpet and heavy patterned curtains"
+            afterAlt="Same primary bedroom after new carpet, paint, and staging"
+            caption="Primary bedroom: same room, same windows. Carpet, paint, and staging did the rest." />
+          <div class="oyh-blockers">
+            {stories.map((st) => {
+              const Tag = st.url ? 'a' : 'div';
+              return (
+                <Tag class={st.url ? 'oyh-blocker oyh-blocker--link' : 'oyh-blocker'} href={st.url}>
+                  <p class="oyh-blocker__quote">{st.where}</p>
+                  <p>{st.did}</p>
+                  <p class="oyh-result">{st.result}</p>
+                  {st.quote && <p class="oyh-card-quote">{st.quote}<span>{st.by}</span></p>}
+                </Tag>
+              );
+            })}
+          </div>
+          <p style="margin-top: var(--space-md);">Most homes need about two to three weeks of work. Bigger projects can take up to 12 weeks, so we plan the listing date around the scope. Can't pay for updates up front? <a href="/renovate-before-selling">Here's how pay-at-closing works &rarr;</a></p>
+          <div class="section-cta">
+            <p>Want to know which rung your home is on, and what it would take to climb one? Let's walk it together.</p>
+            <a href={bookUrl} class="btn btn--primary btn--sm" target="_blank" rel="noopener">Get Your Next-Move Plan</a>
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <div id="faq" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Common Questions</span>
+          <h2 class="section-heading">What to Fix Before Selling: FAQ</h2>
+          <div class="faq-list">
+            {faqs.map((f) => (
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">{f.q}</button>
+                <div class="faq-answer"><p>{f.a}</p></div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div style="padding-top: var(--space-2xl);">
+          <span class="section-label">Keep Planning</span>
+          <h2 class="section-heading">The Rest of the Plan</h2>
+          <div class="oyh-blockers">
+            <a class="oyh-blocker oyh-blocker--link" href="/move-up-sellers"><p class="oyh-blocker__quote">The full plan</p><p>Prepare, Buy &amp; Sell, Move Once: the whole move on one page.</p></a>
+            <a class="oyh-blocker oyh-blocker--link" href="/buy-before-you-sell"><p class="oyh-blocker__quote">Buy before you sell</p><p>Move once, then get the old home ready without living through it.</p></a>
+            <a class="oyh-blocker oyh-blocker--link" href="/renovate-before-selling"><p class="oyh-blocker__quote">Updates with no money upfront</p><p>Get the work done and pay for it at closing.</p></a>
+          </div>
+        </div>
+
+        <!-- SOURCES -->
+        <div class="oyh-sources" style="padding-top: var(--space-xl);">
+          <p><strong>Sources</strong></p>
+          <ul>
+            <li><a href="https://www.dmarealtors.com/news/market-trends/dmar-real-estate-market-trends-report-june-2026" target="_blank" rel="noopener">Denver Metro Association of REALTORS®, Market Trends Report, June 2026</a></li>
+            <li><a href="https://www.zillow.com/research/home-features-that-sell-2026-36190/" target="_blank" rel="noopener">Zillow, Home Features That Sell (2026)</a></li>
+            <li><a href="https://zillow.mediaroom.com/2025-06-17-Ready-to-sell-These-paint-colors-can-boost-your-homes-sale-price" target="_blank" rel="noopener">Zillow, 2025 Paint Color Analysis</a></li>
+            <li><a href="https://homelightblog.wpengine.com/wp-content/uploads/2025/09/HomeLight-Top-Agents-Insights-Report-Q3-2025.pdf" target="_blank" rel="noopener">HomeLight, Top Agent Insights, Q3 2025</a></li>
+            <li><a href="https://www.jlconline.com/cost-vs-value/2025/mountain/" target="_blank" rel="noopener">Zonda/JLC, 2025 Cost vs. Value Report, Mountain Region</a></li>
+            <li><a href="https://www.nar.realtor/newsroom/top-remodeling-projects-for-homeowner-satisfaction-and-cost-recovery-revealed-in-nar-report" target="_blank" rel="noopener">National Association of REALTORS®, 2025 Remodeling Impact Report</a></li>
+            <li><a href="https://www.nar.realtor/press-releases/nar-report-reveals-home-staging-boosts-sale-prices-and-reduces-time-on-market" target="_blank" rel="noopener">National Association of REALTORS®, 2025 Profile of Home Staging</a></li>
+            <li><a href="https://www.businesswire.com/news/home/20251007973292/en/Redfin-Reports-Nearly-60000-Home-Purchases-Were-Called-Off-in-August" target="_blank" rel="noopener">Redfin, Home-Purchase Cancellations, October 2025</a></li>
+            <li><a href="https://law.justia.com/codes/colorado/title-6/residential-roofing-services/article-22/section-6-22-105/" target="_blank" rel="noopener">C.R.S. § 6-22-105, Waiver of insurance deductible prohibited</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner" style="background-color: var(--color-white);">
+    <div class="container">
+      <h2 style="color: var(--color-dark-text);">Find Out What's Worth Fixing in Your Home</h2>
+      <p style="color: var(--color-body-text);">In 30 minutes, we'll talk through your home, where it sits among recent sales, and which updates will actually pay you back.</p>
+      <a href={bookUrl} class="btn btn--primary btn--lg" target="_blank" rel="noopener">Get Your Next-Move Plan</a>
+      <a href={agent.phoneHref} class="btn btn--outline-dark btn--lg">Call {agent.phone}</a>
+    </div>
+  </section>
+
+  <PillarScripts />
+</BaseLayout>
