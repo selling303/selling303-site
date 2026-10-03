@@ -53,7 +53,7 @@ export const agent = {
     listingConsult: 'https://calendar.google.com/appointments/schedules/AcZssZ2UpHf-eRXBp5EhsEaj3h4tdL6UFcyrAVj2Ml1tNyGDAGwLXKSq-61crE41j57Q41IFr7Xj9gyv',
     // Buyer consultation (buyers, relocation, new construction).
     buyerConsult: 'https://calendar.google.com/appointments/schedules/AcZssZ03irZvg3selsSUPuyl2Uzr0LLjppQlnOnenYVDGCT93aX2VbTzRMsaPkj3qzT8YrN6TP9qRTb8',
-    // "Schedule a Showing" on neighborhood pages (type not yet confirmed).
+    // Showing request ("Schedule a Showing" on neighborhood pages).
     showing: 'https://calendar.google.com/appointments/schedules/AcZssZ35CgGIsH75xYeJ1Ggzok6fdpJT2KvHfLeE0sxdj89eLwVouLnoQ_9qbRWge_9ik-Ek07111iUJ',
   },
 
