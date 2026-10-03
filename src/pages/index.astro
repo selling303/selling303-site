@@ -35,10 +35,11 @@ const tiles = storyTiles.map((t) => {
 
 // "What's your situation?" router. Default panel renders server-side; the script swaps panels.
 const situations = [
-  { key: 'outgrown', label: "We've outgrown our home", eyebrow: 'Outgrown Your Home?', title: 'Prepare. Buy & Sell. Move Once.', body: 'What is worth fixing, how to buy your next home before selling this one, and how to move just once.', cta: 'See the plan', href: '/move-up-sellers' },
-  { key: 'fix', label: 'Selling, not sure what to fix', eyebrow: 'Prepare', title: 'What to fix before selling, and what to skip', body: 'Most of what is stressing you will not change your sale price. A few things will. Here is how to tell the difference.', cta: 'See what to fix', href: '/what-to-fix-before-selling' },
+  { key: 'fix', label: 'Selling, not sure what to fix', eyebrow: 'Prepare to Sell', title: 'What to fix before selling, and what to skip', body: 'Most of what is stressing you will not change your sale price. A few things will. Here is how to tell the difference.', cta: 'See what to fix', href: '/what-to-fix-before-selling' },
   { key: 'first', label: 'Buying our first home', eyebrow: 'First-Time Buyers', title: 'Your first home, without the guesswork', body: 'Budget, pre-approval, neighborhoods, and offers that win, explained step by step.', cta: 'Start here', href: '/first-time-homebuyers' },
+  { key: 'firstsell', label: 'Selling our first home', eyebrow: 'First-Time Sellers', title: 'Selling for the first time? Here is the whole process.', body: 'Pricing, prep, showings, offers, and closing costs, so nothing catches you off guard.', cta: 'Learn the process', href: '/first-time-homesellers' },
   { key: 'moving', label: 'Moving to the Denver area', eyebrow: 'Relocation', title: 'Find the right South Denver Metro neighborhood', body: 'Compare Littleton, Highlands Ranch, Centennial, Parker, and more before you ever fly in.', cta: 'Compare neighborhoods', href: '/relocation' },
+  { key: 'new', label: 'Building new', eyebrow: 'New Construction', title: 'Buying new construction with someone on your side', body: 'The builder has an agent. You should too. Incentives, lot selection, upgrades, and inspections.', cta: 'Explore new construction', href: '/new-construction' },
   { key: 'expired', label: 'Our listing expired', eyebrow: 'Expired Listings', title: 'What went wrong, and how to relist right', body: 'Pricing, prep, and marketing: a clear diagnosis before you try again.', cta: 'Diagnose my listing', href: '/expired-listings' },
 ];
 
@@ -327,6 +328,35 @@ const ldSchema2 = {
     </div>
   </section>
 
+  <!-- ========== 2 · WHAT'S YOUR SITUATION? (other visitors) ========== -->
+  <section class="hp-section hp-section--white hp-border-top hp-router-sec">
+    <div class="container hp-router">
+      <div>
+        <p class="hp-eyebrow">Not moving up?</p>
+        <h2 class="hp-h2">What's your situation?</h2>
+        <p class="hp-sub">Pick the one that sounds like you, and I'll point you to the right next step.</p>
+        <div class="hp-chips" role="group" aria-label="Choose your situation">
+          {situations.map((s, i) => (
+            <button type="button" class="hp-chip" data-situation={s.key} aria-pressed={i === 0 ? 'true' : 'false'}>{s.label}</button>
+          ))}
+        </div>
+      </div>
+      <div class="hp-panels" aria-live="polite">
+        {situations.map((s, i) => (
+          <div class="hp-panel" data-panel={s.key} hidden={i !== 0}>
+            <p class="hp-panel__eyebrow">{s.eyebrow}</p>
+            <h3>{s.title}</h3>
+            <p>{s.body}</p>
+            <div class="hp-btns">
+              <a href={s.href} class="btn btn--primary">{s.cta}</a>
+              <a href={bookUrl} class="btn hp-btn-outline-light" target="_blank" rel="noopener">Talk to Jacob</a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <!-- ========== 2 · GUIDE: EMPATHY + AUTHORITY ========== -->
   <section class="hp-guide">
     <div class="container">
@@ -427,35 +457,6 @@ const ldSchema2 = {
               <p>{t.detail}</p>
             </div>
           </a>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== 6 · WHAT'S YOUR SITUATION? ========== -->
-  <section class="hp-section">
-    <div class="container hp-router">
-      <div>
-        <p class="hp-eyebrow">Not moving up?</p>
-        <h2 class="hp-h2">What's your situation?</h2>
-        <p class="hp-sub">Pick the one that sounds like you, and I'll point you to the right next step.</p>
-        <div class="hp-chips" role="group" aria-label="Choose your situation">
-          {situations.map((s, i) => (
-            <button type="button" class="hp-chip" data-situation={s.key} aria-pressed={i === 0 ? 'true' : 'false'}>{s.label}</button>
-          ))}
-        </div>
-      </div>
-      <div class="hp-panels" aria-live="polite">
-        {situations.map((s, i) => (
-          <div class="hp-panel" data-panel={s.key} hidden={i !== 0}>
-            <p class="hp-panel__eyebrow">{s.eyebrow}</p>
-            <h3>{s.title}</h3>
-            <p>{s.body}</p>
-            <div class="hp-btns">
-              <a href={s.href} class="btn btn--primary">{s.cta}</a>
-              <a href={bookUrl} class="btn hp-btn-outline-light" target="_blank" rel="noopener">Talk to Jacob</a>
-            </div>
-          </div>
         ))}
       </div>
     </div>
@@ -646,6 +647,7 @@ const ldSchema2 = {
   .hp-tile p { margin: 0; font-size: 0.95rem; line-height: 1.5; color: #4a5458; }
 
   /* Router */
+  .hp-router-sec { padding: 4.5rem 0; }
   .hp-router { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 3rem; align-items: center; }
   .hp-chips { display: flex; flex-wrap: wrap; gap: 0.6rem; }
   .hp-chip { min-height: 44px; padding: 0.6rem 1.1rem; border-radius: 999px; border: 1.5px solid #c9d2d5; background: #fff; color: var(--color-primary); font: 500 0.95rem var(--font-body); cursor: pointer; }
