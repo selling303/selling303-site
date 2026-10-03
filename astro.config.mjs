@@ -80,6 +80,7 @@ export default defineConfig({
       // Exclude unlisted open house pages (noindex, texted to attendees only).
       filter: (page) =>
         !page.includes('/open-house/') &&
+        !page.includes('/assumable-loans/list') &&
         !DRAFT_SUCCESS_STORY_SLUGS.some((slug) =>
           page.includes(`/sell/success-stories/${slug}`)
         ),
