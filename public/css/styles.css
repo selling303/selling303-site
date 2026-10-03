@@ -1741,6 +1741,18 @@ p:last-child {
   background-color: rgba(0, 42, 58, 0.04);
 }
 
+/* Invisible hover bridge across the 12px gap so menus don't close on the way down */
+@media (min-width: 901px) {
+  .dropdown-menu::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -14px;
+    height: 14px;
+  }
+}
+
 /* Mobile dropdown styles */
 @media (max-width: 900px) {
   .has-dropdown {
