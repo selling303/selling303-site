@@ -21,3 +21,4 @@ _(queue cleared after 2026-10-02 production deploy — merge a62b785, see DEPLOY
 - 2026-10-02 — Removed the gold Clarity · Confidence · Control line (one-liner already says it).
 - 2026-10-02 — Homepage: moved "What's your situation?" directly under the hero (above the intro strip); options now fix / first-time buyer / first-time seller / relocation / new construction / expired (dropped "outgrown," which duplicated the hero).
 - 2026-10-02 — FIX: RealScout home value widget address lookup was blocked site-wide by CSP (api.mapbox.com not in connect-src; widget stuck on "Loading..."). `public/_headers`: added api.mapbox.com + events.mapbox.com to connect-src, fonts.googleapis.com to style-src, fonts.gstatic.com to font-src. Verify after deploy: type an address in the widget and check suggestions + View Home Value.
+- 2026-10-02 — Home value widget readability: white card with navy title, gray subtitle, gold button (was blue-on-blue).
