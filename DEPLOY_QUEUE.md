@@ -9,3 +9,8 @@ _(queue cleared after 2026-09-29 production deploy — merge c7353b9, see DEPLOY
 ## Pending
 
 _(queue cleared after 2026-10-02 production deploy — merge a62b785, see DEPLOY_LOG.md.)_
+
+- 2026-10-02 — **Homepage redesign (D3, "Outgrown Your Home?")** — `src/pages/index.astro` rewritten: question-only H1, "Did you know you can…" hero list with approval/financing footnote from `agent.ts` disclosures, Hampden family-room before/after, guide strip with stats, Prepare/Buy & Sell/Move Once cards, Hampden primary-bedroom before/after, 3 real testimonials, 6-tile success-story strip, "What's your situation?" router, tools, neighborhoods, home-value widget (#home-value kept), final CTA. All schema blocks kept. Removed: stale Feb 2026 market tiles, RealScout search widget, old blog cards, old testimonial list, "Recognized By" row. Old version backed up at `_to_delete/index.astro.bak-2026-10-02`.
+- 2026-10-02 — New image `src/assets/images/before-after/hampden-primary-bedroom-before.jpg` (cropped from Jacob's phone photo).
+- 2026-10-02 — `agent.ts`: googleReviewCount 47 → 49 (Jacob confirmed).
+- 2026-10-02 — `move-up-sellers.astro`: testimonial attribution fixed "Jacque" → "Matthew S." (quote is from the 7307 S Birch St story).

@@ -59,6 +59,6 @@ export const agent = {
     saleToList: '101.8%',
     avgDaysOnMarket: '19',
     googleRating: '5.0',
-    googleReviewCount: '47',
+    googleReviewCount: '49',
   },
 } as const;
