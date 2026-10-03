@@ -1,4 +1,5 @@
 ---
+import TextThread from '../components/TextThread.astro';
 // "Outgrown Your Home?" hub — rewritten 2026-09-30.
 // Messaging source of truth: brain/marketing/outgrown-your-home-messaging.md
 // URL intentionally stays /move-up-sellers (vanity /outgrown 301s here).
@@ -149,13 +150,15 @@ const related = relatedSlugs
         <div id="sound-familiar" style="padding-top: var(--space-xl);">
           <span class="section-label">Sound Familiar?</span>
           <h2 class="section-heading">The Conversation Most Families Have Before They Call Me</h2>
-          <div class="oyh-monologue">
-            <p>"We need a bigger house."</p>
-            <p>"But before we can buy a bigger house, we have to sell this one."</p>
-            <p>"And before we sell this one, we probably need to fix some things."</p>
-            <p>"But I don't know what to fix. I don't know how much it'll cost. I don't know if it's worth it."</p>
-            <p>"And I don't know how we'd do all of that with work, kids, and life."</p>
-          </div>
+          <TextThread label="A couple texting about whether to move" messages={[
+            { from: 'them', text: "We need a bigger house." },
+            { from: 'me', text: "But before we can buy a bigger house, we have to sell this one." },
+            { from: 'them', text: "And before we sell this one, we probably need to fix some things." },
+            { from: 'me', text: "But I don't know what to fix." },
+            { from: 'me', text: "I don't know how much it'll cost." },
+            { from: 'me', text: "I don't know if it's worth it." },
+            { from: 'them', text: "And I don't know how we'd do all of that with work, kids, and life." },
+          ]} />
           <p>If that's the loop you're stuck in, you're not behind and you're not doing anything wrong. Every decision depends on another one, so it's hard to know where to start. That's the part I take off your plate.</p>
           <p class="oyh-answer">Here's the plan. Here's what matters. Here's what doesn't. Here's how long it'll take. Here's what it will cost. Here's how we get from this house to the next one.</p>
         </div>
