@@ -298,11 +298,11 @@ const ldSchema2 = {
       <div class="hp-hero__grid">
         <div>
           <p class="hp-hero__lead">Did you know <span>you can…</span></p>
-          <ul class="hp-cans">
-            <li><span class="hp-check" aria-hidden="true">✓</span>Buy and move first, sell later</li>
-            <li><span class="hp-check" aria-hidden="true">✓</span>Move just once</li>
-            <li><span class="hp-check" aria-hidden="true">✓</span>Update your home to sell for more</li>
-            <li><span class="hp-check" aria-hidden="true">✓</span>Skip the constant cleaning for showings</li>
+          <ul class="hp-cans" id="hp-cans">
+            <li><span class="hp-check" aria-hidden="true">✓</span><span>Buy and move first, sell later</span></li>
+            <li><span class="hp-check" aria-hidden="true">✓</span><span>Move just once</span></li>
+            <li><span class="hp-check" aria-hidden="true">✓</span><span>Update your home to sell for more</span></li>
+            <li><span class="hp-check" aria-hidden="true">✓</span><span>Skip the constant cleaning for showings</span></li>
             <li><span class="hp-check" aria-hidden="true">✓</span><span>Pay for updates at closing<sup>*</sup></span></li>
           </ul>
           <div class="hp-btns">
@@ -529,6 +529,33 @@ const ldSchema2 = {
 </BaseLayout>
 
 <script>
+  // Hero "you can" drum (mobile only): one line in focus, neighbors faded.
+  // Full list stays in the DOM; reduced-motion users and desktop get the static list.
+  const cans = document.getElementById('hp-cans');
+  if (cans) {
+    const items = Array.from(cans.querySelectorAll('li'));
+    const mq = window.matchMedia('(max-width: 900px) and (prefers-reduced-motion: no-preference)');
+    let i = 0;
+    let timer: number | undefined;
+    const paint = () => {
+      const n = items.length;
+      items.forEach((li, k) => {
+        const d = (k - i + n) % n;
+        li.dataset.pos = d === 0 ? 'active' : d === 1 ? 'next' : d === n - 1 ? 'prev' : d < n / 2 ? 'below' : 'above';
+      });
+    };
+    const step = () => { i = (i + 1) % items.length; paint(); };
+    const start = () => { stop(); timer = window.setInterval(step, 2600); };
+    const stop = () => { if (timer) window.clearInterval(timer); timer = undefined; };
+    const apply = () => {
+      if (mq.matches) { cans.classList.add('hp-cans--drum'); paint(); start(); }
+      else { cans.classList.remove('hp-cans--drum'); items.forEach((li) => delete li.dataset.pos); stop(); }
+    };
+    cans.addEventListener('click', () => { if (cans.classList.contains('hp-cans--drum')) { step(); start(); } });
+    mq.addEventListener('change', apply);
+    apply();
+  }
+
   // "What's your situation?" router: swap the visible panel when a chip is chosen.
   document.querySelectorAll<HTMLButtonElement>('.hp-chip').forEach((chip) => {
     chip.addEventListener('click', () => {
@@ -643,12 +670,27 @@ const ldSchema2 = {
   .hp-final h2 { margin: 0 0 1rem; font-family: var(--font-heading); font-weight: 400; font-size: clamp(2rem, 4vw, 3.25rem); line-height: 1.1; color: var(--color-primary); }
   .hp-final p { margin: 0 auto 2rem; max-width: 40rem; font-size: 1.15rem; line-height: 1.6; color: #4a5458; }
 
+  .hp-cans--drum { position: relative; display: block; height: 9.5rem; margin-bottom: 1.75rem; cursor: pointer; -webkit-mask-image: linear-gradient(transparent 0, #000 28%, #000 72%, transparent 100%); mask-image: linear-gradient(transparent 0, #000 28%, #000 72%, transparent 100%); }
+  .hp-cans--drum li { position: absolute; left: 0; right: 0; top: 50%; --off: 0rem; transform: translateY(calc(-50% + var(--off))) scale(0.94); transform-origin: left center; opacity: 0; transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.6s ease; }
+  .hp-cans--drum li[data-pos='active'] { --off: 0rem; opacity: 1; transform: translateY(-50%) scale(1); }
+  .hp-cans--drum li[data-pos='prev'] { --off: -3.1rem; opacity: 0.28; }
+  .hp-cans--drum li[data-pos='next'] { --off: 3.1rem; opacity: 0.28; }
+  .hp-cans--drum li[data-pos='above'] { --off: -6rem; }
+  .hp-cans--drum li[data-pos='below'] { --off: 6rem; }
+
   @media (max-width: 900px) {
-    .hp-hero { padding-top: calc(var(--header-height) + 2.5rem); }
-    .hp-hero__title { margin-bottom: 2rem; }
+    .hp-hero { padding-top: calc(var(--header-height) + 1.75rem); padding-bottom: 3rem; }
+    .hp-eyebrow { font-size: 0.7rem; letter-spacing: 0.12em; }
+    .hp-hero__title { margin-bottom: 1.5rem; font-size: clamp(2.75rem, 12vw, 3.5rem); }
+    .hp-hero__lead { margin-bottom: 0.5rem; font-size: 1.6rem; }
+    .hp-cans { font-size: 1.2rem; }
+    .hp-hero .hp-btns { flex-direction: column; align-items: stretch; }
+    .hp-hero .hp-btns .btn { text-align: center; }
+    .hp-hero .hp-btn-ghost { border: 0; padding-top: 0.5rem; padding-bottom: 0.5rem; text-decoration: underline; text-underline-offset: 4px; }
+    .hp-trust { text-align: center; font-size: 0.85rem; }
+    .hp-footnote { margin-top: 1.75rem; font-size: 0.68rem; }
     .hp-hero__grid, .hp-three, .hp-router, .hp-pair { grid-template-columns: 1fr; }
     .hp-hero__grid { gap: 2.5rem; }
-    .hp-cans { font-size: 1.15rem; }
     .hp-hero__visual { padding: 0 0 3rem 1.5rem; }
     .hp-hero__caption { position: static; max-width: none; margin-top: 1rem; }
     .hp-hero__visual { padding-bottom: 0; }

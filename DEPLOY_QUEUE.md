@@ -14,3 +14,4 @@ _(queue cleared after 2026-10-02 production deploy — merge a62b785, see DEPLOY
 - 2026-10-02 — New image `src/assets/images/before-after/hampden-primary-bedroom-before.jpg` (cropped from Jacob's phone photo).
 - 2026-10-02 — `agent.ts`: googleReviewCount 47 → 49 (Jacob confirmed).
 - 2026-10-02 — `move-up-sellers.astro`: testimonial attribution fixed "Jacque" → "Matthew S." (quote is from the 7307 S Birch St story).
+- 2026-10-02 — Homepage mobile hero: "you can" list becomes a slow rotating drum on phones (active line full, neighbors faded; tap to advance; static list on desktop and for reduced-motion). Tighter mobile hero spacing, full-width CTA, text-link secondary.
