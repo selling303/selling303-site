@@ -2,7 +2,7 @@
 // Text-message style thread (two people, left = them, right = me).
 // Bubbles reveal one at a time when the thread scrolls into view.
 // Without JS, or with reduced motion, every bubble is simply visible.
-interface Msg { from: 'them' | 'me'; text: string }
+interface Msg { from: 'them' | 'me'; text: string; emoji?: boolean }
 interface Props { messages: Msg[]; timestamp?: string; label?: string }
 const { messages, timestamp = 'Tonight 9:42 PM', label = 'Text conversation' } = Astro.props;
 ---
@@ -13,7 +13,7 @@ const { messages, timestamp = 'Tonight 9:42 PM', label = 'Text conversation' } =
       const next = messages[i + 1];
       const last = !next || next.from !== m.from;
       return (
-        <li class:list={['tt__msg', `tt__msg--${m.from}`, { 'tt__msg--tail': last }]} style={`--i:${i}`}>
+        <li class:list={['tt__msg', `tt__msg--${m.from}`, { 'tt__msg--tail': last, 'tt__msg--emoji': m.emoji }]} style={`--i:${i}`}>
           <span class="tt__bubble">{m.text}</span>
         </li>
       );
@@ -50,6 +50,7 @@ const { messages, timestamp = 'Tonight 9:42 PM', label = 'Text conversation' } =
   .tt__msg--them.tt__msg--tail .tt__bubble { border-bottom-left-radius: 6px; }
   .tt__msg--me.tt__msg--tail .tt__bubble { border-bottom-right-radius: 6px; }
 
+  .tt__msg--emoji .tt__bubble { background: none !important; padding: 0.1rem 0.25rem; font-size: 2.6rem; line-height: 1.1; }
   .tt--animate .tt__msg { opacity: 0; transform: translateY(8px) scale(0.98); }
   .tt--animate.tt--in .tt__msg { animation: tt-in 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards; animation-delay: calc(var(--i) * 0.55s); }
   .tt--animate .tt__msg--me { transform-origin: right bottom; }
