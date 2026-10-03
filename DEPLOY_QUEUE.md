@@ -18,3 +18,4 @@ _(queue cleared after 2026-10-02 production deploy — merge a62b785, see DEPLOY
 - 2026-10-02 — New pages `/privacy-policy` and `/terms` (`src/pages/privacy-policy.astro`, `src/pages/terms.astro`); footer links now point to them. Content reflects what the site actually uses: Netlify Forms (contact + newsletter), Google Analytics (G-WLGW57VN8C), RealScout widgets, Google Calendar booking, YouTube nocookie embeds, client-side calculators. Disclosures pulled from `agent.ts`. Not attorney-reviewed; Jacob to run past Orchard compliance.
 - 2026-10-02 — Privacy policy: named data flows per Jacob (contact forms → his email via Netlify; RealScout widget → RealScout + Follow Up Boss; texting section kept since he texts leads).
 - 2026-10-02 — Homepage guide strip: brought back the "Most people feel overwhelmed…" one-liner (first person) and a Clarity · Confidence · Control line.
+- 2026-10-02 — Removed the gold Clarity · Confidence · Control line (one-liner already says it).
