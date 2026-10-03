@@ -1,0 +1,104 @@
+---
+import { agent, brokerage } from '../data/agent';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const effective = 'October 2026';
+---
+
+<BaseLayout
+  title="Privacy Policy | Selling 303 | Jacob Stark, REALTOR®"
+  description="How Selling 303 and Jacob Stark, South Denver Metro REALTOR®, collect, use, and protect the information you share on selling303.com."
+  ogUrl="https://selling303.com/privacy-policy"
+  currentPage="privacy-policy"
+  headerVariant="solid"
+>
+  <section class="legal-hero">
+    <div class="container legal__body">
+      <h1>Privacy Policy</h1>
+      <p>Effective {effective}</p>
+    </div>
+  </section>
+
+  <section class="legal">
+    <div class="container legal__body">
+      <p class="legal__lead">This policy explains what information Selling 303 collects when you use selling303.com, how it's used, and the choices you have. The short version: I use your information to help you buy or sell a home and to improve this website. I don't sell your personal information.</p>
+
+      <h2>Who we are</h2>
+      <p>Selling 303 is the real estate practice of {agent.name}, a licensed Colorado REALTOR® ({agent.licenseLine}) with {brokerage.legalName}. In this policy, "we," "us," and "Selling 303" mean Jacob Stark and the Selling 303 website.</p>
+
+      <h2>Information you give us</h2>
+      <ul>
+        <li><strong>Contact form:</strong> your name, email, phone number, what you're interested in, and your message.</li>
+        <li><strong>Newsletter sign-up:</strong> your email address.</li>
+        <li><strong>Scheduling a call:</strong> the details you enter when you book through Google Calendar appointment scheduling.</li>
+        <li><strong>Home value and home search tools:</strong> information you enter into the RealScout tools on this site, such as a property address, your contact details, and saved searches. This information is stored by RealScout and may be added to my customer relationship tool (Follow Up Boss) so I can follow up with you.</li>
+        <li><strong>Email, text, and phone conversations</strong> you start with us.</li>
+      </ul>
+      <p>The calculators on this site (home equity, closing costs, and cost of living) run in your browser. The numbers you type into them are not sent to us.</p>
+
+      <h2>Information collected automatically</h2>
+      <p>We use Google Analytics to understand how visitors use the site, such as which pages are viewed, how long visits last, and the general location and type of device. Google Analytics uses cookies and similar technologies. You can opt out with the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics opt-out browser add-on</a>, or by blocking cookies in your browser.</p>
+      <p>Our hosting provider, Netlify, keeps standard server logs (such as IP address and browser type) for security and performance.</p>
+
+      <h2>How we use your information</h2>
+      <ul>
+        <li>To respond to you and provide the real estate services you ask for</li>
+        <li>To send market updates and other content you've signed up for (you can unsubscribe at any time)</li>
+        <li>To schedule and prepare for consultations</li>
+        <li>To improve this website and understand which content is useful</li>
+        <li>To meet legal, licensing, and brokerage record-keeping requirements</li>
+      </ul>
+
+      <h2>How we share your information</h2>
+      <p>We don't sell your personal information or share it with third parties for their own marketing. We share it only:</p>
+      <ul>
+        <li><strong>With my brokerage,</strong> {brokerage.legalName}, as required to provide real estate services and keep transaction records.</li>
+        <li><strong>With service providers</strong> who help run this site and my business, such as website hosting and forms (Netlify, which delivers contact form messages to my email), analytics, email, and scheduling (Google), home search and valuation tools (RealScout), and my customer relationship tool (Follow Up Boss). They may use your information only to provide their services.</li>
+        <li><strong>With other professionals in your transaction,</strong> such as a lender, title company, inspector, or contractor, only when you ask or agree.</li>
+        <li><strong>When required by law,</strong> or to protect the rights and safety of you, us, or others.</li>
+      </ul>
+
+      <h2>Phone calls and text messages</h2>
+      <p>If you give us your phone number, we may call or text you about your inquiry. Message and data rates may apply. You can reply STOP to any text to opt out. Providing your phone number is never a condition of working with us, and we don't share mobile numbers or text-messaging consent with third parties for their marketing.</p>
+
+      <h2>Third-party tools and links</h2>
+      <p>Some features on this site are provided by other companies, including RealScout (home search and home value), Google Calendar (scheduling), and YouTube (videos, loaded only when you press play). When you use those features, the provider's own privacy policy also applies. Links to other websites, including my brokerage and REcolorado, are governed by those sites' policies.</p>
+
+      <h2>How long we keep information</h2>
+      <p>We keep your information for as long as needed to respond to you, provide services, and meet legal and brokerage record-keeping requirements. Real estate transaction records may be kept for several years after closing, as required.</p>
+
+      <h2>Security</h2>
+      <p>This site uses encrypted connections (HTTPS), and we limit access to your information to the people and providers who need it. No method of transmission or storage is completely secure, so we can't guarantee absolute security.</p>
+
+      <h2>Your choices and rights</h2>
+      <ul>
+        <li>Unsubscribe from emails using the link in any message.</li>
+        <li>Reply STOP to any text message.</li>
+        <li>Ask us what personal information we have about you, or ask us to correct or delete it, by emailing <a href={`mailto:${agent.email}`}>{agent.email}</a>. We'll respond within a reasonable time, subject to any records we're required to keep.</li>
+      </ul>
+
+      <h2>Children</h2>
+      <p>This site is intended for adults. We don't knowingly collect personal information from children under 13.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>We may update this policy from time to time. The effective date at the top shows when it last changed.</p>
+
+      <h2>Contact</h2>
+      <p>Questions about this policy? Contact {agent.name} at <a href={`mailto:${agent.email}`}>{agent.email}</a> or <a href={agent.phoneHref}>{agent.phone}</a>.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .legal-hero { background: var(--color-background); padding: calc(var(--header-height) + 4rem) 0 2.5rem; }
+  .legal-hero h1 { margin: 0 0 0.5rem; font-family: var(--font-heading); font-weight: 400; font-size: clamp(2.5rem, 5vw, 3.5rem); color: var(--color-primary); }
+  .legal-hero p { margin: 0; color: #4a5458; font-size: 0.95rem; }
+  .legal { background: var(--color-white); padding: 3.5rem 0 5rem; }
+  .legal__body { max-width: 760px; }
+  .legal__lead { font-size: 1.15rem; line-height: 1.7; color: var(--color-dark-text); }
+  .legal h2 { margin: 2.5rem 0 0.75rem; font-family: var(--font-heading); font-weight: 400; font-size: 1.6rem; color: var(--color-primary); }
+  .legal p, .legal li { font-size: 1rem; line-height: 1.7; color: #3d4549; }
+  .legal ul { list-style: disc; padding-left: 1.25rem; margin: 0 0 1rem; }
+  .legal li { margin-bottom: 0.4rem; }
+  .legal a { color: var(--color-primary); text-decoration: underline; }
+</style>

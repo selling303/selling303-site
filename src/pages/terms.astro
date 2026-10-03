@@ -1,0 +1,86 @@
+---
+import { agent, brokerage } from '../data/agent';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const effective = 'October 2026';
+---
+
+<BaseLayout
+  title="Terms of Use | Selling 303 | Jacob Stark, REALTOR®"
+  description="Terms of use for selling303.com, the website of Jacob Stark, South Denver Metro REALTOR® with Orchard Brokerage LLC."
+  ogUrl="https://selling303.com/terms"
+  currentPage="terms"
+  headerVariant="solid"
+>
+  <section class="legal-hero">
+    <div class="container legal__body">
+      <h1>Terms of Use</h1>
+      <p>Effective {effective}</p>
+    </div>
+  </section>
+
+  <section class="legal">
+    <div class="container legal__body">
+      <p class="legal__lead">By using selling303.com, you agree to these terms. If you don't agree, please don't use the site.</p>
+
+      <h2>Who operates this site</h2>
+      <p>selling303.com is operated by {agent.name}, a licensed Colorado REALTOR® ({agent.licenseLine}) with {brokerage.legalName}. Selling 303 is the name of Jacob Stark's real estate practice.</p>
+
+      <h2>Information only, not professional advice</h2>
+      <p>The content on this site, including articles, guides, videos, cost ranges, and market commentary, is general information to help you think through a move. It isn't legal, tax, lending, or financial advice, and it isn't a substitute for advice about your specific situation. Talk with a qualified attorney, tax professional, or lender before making decisions in those areas.</p>
+
+      <h2>Estimates, calculators, and market data</h2>
+      <p>Calculators, home value estimates, cost ranges, and market statistics are estimates. They're based on assumptions and data sources (such as DMAR and REcolorado) believed to be reliable, but they aren't guaranteed and may not reflect your home or current conditions. Listing information is deemed reliable but not guaranteed and should be independently verified.</p>
+
+      <h2>No agency relationship from using this site</h2>
+      <p>Using this site, contacting us, or booking a consultation doesn't create a brokerage relationship. A brokerage relationship exists only after you sign a written agreement as required by Colorado law.</p>
+
+      <h2>Third-party programs and financing</h2>
+      <p>This site describes programs that may be available through my brokerage and its partners, such as buying before you sell, equity advances, and renovation financing paid at closing. These programs are provided by third parties, are subject to approval, eligibility, and their own terms, and may change or end at any time. {brokerage.disclosures.equityAdvance} {brokerage.disclosures.renovationFinancingShort}</p>
+
+      <h2>Past results</h2>
+      <p>Client stories, testimonials, and statistics describe past results. Every home and market is different, and past results don't guarantee a particular outcome for your sale or purchase.</p>
+
+      <h2>Fair housing</h2>
+      <p>We are committed to the letter and spirit of fair housing laws. We don't discriminate based on race, color, religion, sex, disability, familial status, national origin, or any other class protected under federal, Colorado, or local law.</p>
+
+      <h2>Accessibility</h2>
+      <p>We want this site to be usable by everyone. If you have trouble accessing any content, contact us at <a href={`mailto:${agent.email}`}>{agent.email}</a> and we'll help.</p>
+
+      <h2>Content and intellectual property</h2>
+      <p>The text, photos, videos, graphics, and design of this site belong to Selling 303 or are used with permission. You may share links to pages and quote short passages with credit, but you may not copy or republish site content for commercial use without written permission. Listing photos may belong to their photographers or listing brokerages.</p>
+
+      <h2>Links to other sites</h2>
+      <p>This site links to and embeds tools from other companies, such as RealScout, Google, YouTube, REcolorado, and my brokerage. We aren't responsible for their content, terms, or privacy practices.</p>
+
+      <h2>Acceptable use</h2>
+      <p>Please don't misuse the site, including by submitting false information, attempting to interfere with its operation, scraping it in bulk, or using it for anything unlawful.</p>
+
+      <h2>Disclaimer and limitation of liability</h2>
+      <p>This site is provided "as is" without warranties of any kind. To the fullest extent permitted by law, Selling 303, Jacob Stark, and {brokerage.legalName} aren't liable for any damages arising from your use of the site or reliance on its content.</p>
+
+      <h2>Governing law</h2>
+      <p>These terms are governed by the laws of the State of Colorado.</p>
+
+      <h2>Changes to these terms</h2>
+      <p>We may update these terms from time to time. The effective date at the top shows when they last changed. Please also see our <a href="/privacy-policy">Privacy Policy</a>.</p>
+
+      <h2>Contact</h2>
+      <p>Questions? Contact {agent.name} at <a href={`mailto:${agent.email}`}>{agent.email}</a> or <a href={agent.phoneHref}>{agent.phone}</a>.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .legal-hero { background: var(--color-background); padding: calc(var(--header-height) + 4rem) 0 2.5rem; }
+  .legal-hero h1 { margin: 0 0 0.5rem; font-family: var(--font-heading); font-weight: 400; font-size: clamp(2.5rem, 5vw, 3.5rem); color: var(--color-primary); }
+  .legal-hero p { margin: 0; color: #4a5458; font-size: 0.95rem; }
+  .legal { background: var(--color-white); padding: 3.5rem 0 5rem; }
+  .legal__body { max-width: 760px; }
+  .legal__lead { font-size: 1.15rem; line-height: 1.7; color: var(--color-dark-text); }
+  .legal h2 { margin: 2.5rem 0 0.75rem; font-family: var(--font-heading); font-weight: 400; font-size: 1.6rem; color: var(--color-primary); }
+  .legal p, .legal li { font-size: 1rem; line-height: 1.7; color: #3d4549; }
+  .legal ul { list-style: disc; padding-left: 1.25rem; margin: 0 0 1rem; }
+  .legal li { margin-bottom: 0.4rem; }
+  .legal a { color: var(--color-primary); text-decoration: underline; }
+</style>
