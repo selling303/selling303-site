@@ -18,6 +18,7 @@ Tracking file for every page that uses a data visual. Source of truth for what v
 
 ## Reference template
 
+- 2026-10-05 — `price-cut-vs-2-1-buydown-south-denver-metro-2026` drafted **interactive-calculator Tier 2** (library, lifted from the NOV Gap Calculator). Inputs: list price, buyer down %, note rate, 3-way showings toggle. Outputs: 2-1 buydown cost, year-1/year-2 monthly savings vs. equal-dollar price-cut savings (dual bar), years-to-match, Fannie Mae IPC cap check, and 3 RecommendAction path cards (buydown / price cut / split) that highlight live. Static fallback SSR'd with the $650K / 20% / 7.5% example values, all 3 path cards visible without JS. Schema: JSON-LD Dataset + ItemList + 3× RecommendAction Microdata. Compelling Question Flow: interactive-calculator 23 over decision-path click-through (19) and stretch dual-slider "same dollars" bar race (19). Sources: Fannie Mae Selling Guide B2-1.4-04 and B3-4.1-02; DMAR Sept 2026. Status: pending Jacob's local review.
 `src/content/blog/spring-2026-move-up-market-report-south-denver.md` — first fully optimized comparison-table. Lift its `<figure class="aeo-comp-table">` block + preceding `<script type="application/ld+json">` Dataset block when building new comparison tables.
 
 ---
