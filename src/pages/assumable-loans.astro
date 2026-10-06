@@ -1,0 +1,332 @@
+---
+// Assumable loans guide + gated "assumable homes list" lead magnet — created 2026-10-03.
+// The guide is public (SEO/AEO, ad landing quality). The RealScout list link is only on
+// /assumable-loans/list (noindex, excluded from sitemap), reached by submitting the form.
+import { agent } from '../data/agent';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import PillarScripts from '../components/PillarScripts.astro';
+
+const bookUrl = agent.bookingUrls.buyerConsult;
+
+// Figures used on this page — update rateWeek/newRate when refreshing.
+const rate = { value: '7.28%', week: 'October 1, 2026', note: 'the highest since November 2023' };
+
+const faqs = [
+  {
+    q: 'What is an assumable mortgage?',
+    a: `An assumable mortgage is a home loan a buyer can take over from the seller, keeping the seller's interest rate, remaining balance, and remaining term. In the South Denver Metro, that usually means an FHA or VA loan. The buyer still has to be approved by the loan servicer and pay the seller for their equity.`,
+  },
+  {
+    q: 'How much cash do you need to assume a mortgage?',
+    a: `You need enough to cover the gap between the purchase price and the loan balance, plus closing costs. On a $650,000 home with about $373,000 left on the loan, that gap is roughly $277,000. Buyers cover it with cash, a second loan, or both. Jacob Stark, South Denver Metro REALTOR®, runs this math with buyers before they fall in love with a home.`,
+  },
+  {
+    q: 'Can a non-veteran assume a VA loan?',
+    a: `Yes. A non-veteran can assume a VA loan if the servicer approves them. The catch is on the seller's side: unless the buyer is a veteran who substitutes their own entitlement, the seller's VA entitlement stays tied to that loan until it's paid off, which can limit the seller's next VA purchase.`,
+  },
+  {
+    q: 'How long does a loan assumption take?',
+    a: `Plan for longer than a normal purchase. Agents commonly report 30 to 60 days or more for the servicer's approval, and VA expects servicers to finish assumptions within 45 days, a deadline that is often missed. Your contract should allow extra time.`,
+  },
+  {
+    q: 'Are conventional loans assumable?',
+    a: `Almost never. Most conventional loans have a due-on-sale clause that requires the loan to be paid off when the home sells. Assumable loans are mainly FHA, VA, and USDA loans.`,
+  },
+  {
+    q: 'Is assuming a loan always cheaper than getting a new mortgage?',
+    a: `Not always. If you need a large second loan at a higher rate to cover the seller's equity, the blended payment can land closer to a new loan than you'd expect. Compare total monthly payment and total cash to close side by side before deciding.`,
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+---
+
+<BaseLayout
+  title="Assumable Loans in the South Denver Metro: Pros, Cons & Cash to Close | Jacob Stark"
+  description={`Mortgage rates hit ${rate.value}. Jacob Stark, South Denver Metro REALTOR®, explains how assumable FHA and VA loans work, what you'll really need at closing, and how to get a list of homes with assumable loans.`}
+  ogType="website"
+  ogUrl="https://selling303.com/assumable-loans"
+  currentPage="assumable-loans"
+  headerVariant="solid"
+>
+  <Fragment slot="head">
+    <Breadcrumbs schemaOnly items={[
+      { label: 'Home', url: '/' },
+      { label: 'Assumable Loans', url: null },
+    ]} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
+
+  <section class="pillar-hero">
+    <div class="container">
+      <div class="pillar-hero__content">
+        <span class="pillar-hero__label">Buy &middot; Assumable Loans</span>
+        <h1>Assumable Loans: How to Get a Lower Rate, and What It Really Takes</h1>
+        <p class="pillar-hero__subtitle">With mortgage rates at {rate.value}, taking over a seller's 3% loan sounds like a dream. It can be. Here's how it works in the South Denver Metro, how much cash you'll actually need, and how to find homes that have one.</p>
+        <div class="al-hero-btns">
+          <a href="#get-the-list" class="btn btn--primary btn--lg">Get the Assumable Homes List</a>
+          <a href={bookUrl} class="btn btn--outline btn--lg" target="_blank" rel="noopener">Talk to Jacob</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white pillar-body">
+    <div class="pillar-layout">
+
+      <aside class="pillar-toc" aria-label="Page navigation">
+        <span class="pillar-toc__label">On This Page</span>
+        <ul class="pillar-toc__list">
+          <li><a href="#direct-answer" class="pillar-toc__link active">The Short Answer</a></li>
+          <li><a href="#get-the-list" class="pillar-toc__link">Get the List</a></li>
+          <li><a href="#cash-to-close" class="pillar-toc__link">Cash to Close</a></li>
+          <li><a href="#finding-one" class="pillar-toc__link">Finding One</a></li>
+          <li><a href="#loan-types" class="pillar-toc__link">Which Loans Qualify</a></li>
+          <li><a href="#timeline" class="pillar-toc__link">The Timeline</a></li>
+          <li><a href="#pros-cons" class="pillar-toc__link">Pros &amp; Cons</a></li>
+          <li><a href="#steps" class="pillar-toc__link">How It Works</a></li>
+          <li><a href="#sellers" class="pillar-toc__link">For Sellers</a></li>
+          <li><a href="#faq" class="pillar-toc__link">FAQ</a></li>
+        </ul>
+      </aside>
+
+      <div class="pillar-content">
+
+        <div class="snippet-block" id="direct-answer">
+          <span class="snippet-block__label">The Short Answer</span>
+          <p><strong>What is an assumable loan?</strong> An assumable loan lets a buyer take over the seller's existing mortgage, including its interest rate, instead of getting a new one. In the South Denver Metro, these are mostly FHA and VA loans, some from 2020 and 2021 with rates near 3%. The trade-off: you pay the seller for their equity, which can easily mean six figures at closing, and approval takes longer. Jacob Stark, South Denver Metro REALTOR®, helps buyers find homes with assumable loans and run the real numbers first.</p>
+        </div>
+
+        <!-- GATED LIST -->
+        <div id="get-the-list" class="al-gate">
+          <div class="al-gate__copy">
+            <span class="section-label">Free List</span>
+            <h2>See Denver Metro Homes With Assumable Loans Under $1M</h2>
+            <p>I keep a live search of homes for sale whose listings mention a potential loan assumption. Tell me what you're looking for and I'll send you the list, plus a quick read on how much cash each one would take.</p>
+            <ul class="al-gate__bullets">
+              <li>Updated automatically as homes hit the market</li>
+              <li>Homes under $1M across the Denver metro</li>
+              <li>A real person (me) to sanity-check the numbers</li>
+            </ul>
+          </div>
+          <form class="al-form" name="assumable-list" method="POST" action="/assumable-loans/list/" netlify-honeypot="bot-field" data-netlify="true">
+            <input type="hidden" name="form-name" value="assumable-list" />
+            <p class="al-hidden"><label>Don't fill this out: <input name="bot-field" /></label></p>
+            <label>Name<input type="text" name="name" autocomplete="name" required /></label>
+            <label>Email<input type="email" name="email" autocomplete="email" required /></label>
+            <label>Mobile phone<input type="tel" name="phone" autocomplete="tel" required /></label>
+            <div class="al-form__row">
+              <label>Max price
+                <select name="max-price" required>
+                  <option value="">Choose…</option>
+                  <option>Under $500K</option>
+                  <option>$500K–$650K</option>
+                  <option>$650K–$800K</option>
+                  <option>$800K–$1M</option>
+                </select>
+              </label>
+              <label>Timeline
+                <select name="timeline" required>
+                  <option value="">Choose…</option>
+                  <option>0–3 months</option>
+                  <option>3–6 months</option>
+                  <option>6–12 months</option>
+                  <option>Just exploring</option>
+                </select>
+              </label>
+            </div>
+            <label>Areas you're considering<input type="text" name="areas" placeholder="e.g. Littleton, Highlands Ranch" /></label>
+            <label>Cash available for down payment and closing
+              <select name="cash-available">
+                <option value="">Choose…</option>
+                <option>Under $50K</option>
+                <option>$50K–$150K</option>
+                <option>$150K–$300K</option>
+                <option>$300K+</option>
+                <option>Prefer not to say</option>
+              </select>
+            </label>
+            <button type="submit" class="btn btn--primary btn--lg">Send Me the List</button>
+            <p class="al-form__fine">By submitting, you agree Jacob Stark may contact you by phone, text, or email about homes and your search. Message and data rates may apply. Reply STOP to opt out. See our <a href="/privacy-policy">Privacy Policy</a>.</p>
+          </form>
+        </div>
+
+        <!-- WHY NOW -->
+        <div id="why-now" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Why Everyone's Asking</span>
+          <h2 class="section-heading">Today's Rates vs. a Seller's 3% Loan</h2>
+          <p>The average 30-year fixed rate hit {rate.value} the week of {rate.week}, {rate.note}, according to Freddie Mac. Many homeowners who bought or refinanced in 2020 and 2021 locked in rates around 3%. If their loan is FHA or VA, a buyer may be able to take it over. Nationally, about 23% of active mortgages are assumable, yet only about 6,400 assumptions were completed in 2023, because most buyers hit the challenges below.</p>
+        </div>
+
+        <!-- CASH TO CLOSE -->
+        <div id="cash-to-close" style="padding-top: var(--space-2xl);">
+          <span class="section-label">The Part Buyers Overlook</span>
+          <h2 class="section-heading">How Much Cash You'll Really Need at Closing</h2>
+          <p>When you assume a loan, you take over the seller's <em>remaining balance</em>, not the purchase price. Everything above that balance is the seller's equity, and you have to pay it at closing, either in cash or with a second loan at today's rates.</p>
+          <p><strong>Example (hypothetical):</strong> a $650,000 home. The seller took out a $420,000 FHA loan at 3% in 2021. Five years later, about $373,000 is left, so the gap is about $277,000.</p>
+          <div class="oyh-table-wrap">
+            <table class="oyh-table al-compare">
+              <thead>
+                <tr><th scope="col"></th><th scope="col">New loan, 20% down</th><th scope="col">Assume + second loan</th><th scope="col">Assume + all cash</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Rate</th><td>{rate.value}</td><td>3% on $373K + 9% on $147K</td><td>3% on $373K</td></tr>
+                <tr><th scope="row">Cash at closing*</th><td>$130,000</td><td>$130,000</td><td>$277,000</td></tr>
+                <tr><th scope="row">Monthly principal &amp; interest</th><td>$3,558</td><td>$2,951</td><td>$1,771</td></tr>
+                <tr><th scope="row">Savings vs. new loan</th><td>—</td><td>About $600/mo</td><td>About $1,790/mo</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="oyh-disclosure">*Before closing costs. Illustration only, not a loan quote. Principal and interest only; excludes taxes, insurance, and mortgage insurance (FHA mortgage insurance carries over with the assumed loan). New-loan rate is the Freddie Mac weekly average for {rate.week}. The 9% second-loan rate is an assumption for illustration; actual second-loan availability, rates, and limits vary by lender and may not be offered for every assumption. Talk with a lender about your situation.</p>
+          <p><strong>The takeaway:</strong> the bigger the seller's equity, the more cash or second-loan debt you need, and the smaller the savings. The sweet spot is usually a home where the loan balance is a large share of the price.</p>
+        </div>
+
+        <!-- FINDING ONE -->
+        <div id="finding-one" style="padding-top: var(--space-2xl);">
+          <span class="section-label">The Other Challenge</span>
+          <h2 class="section-heading">Finding a Home You Love That Also Has an Assumable Loan</h2>
+          <p>Only some homes have an FHA or VA loan, and only some of those have a balance, rate, and location that work for you. Asking one home to check every box is a lot. That's why I keep a live search of homes whose listings mention a potential assumption, so you can start with the homes where it's possible and judge them on the things that matter to your family.</p>
+          <p>Always confirm the details before you write an offer: loan type, current balance, rate, remaining term, and who the servicer is. "Assumable" in a listing is a starting point, not a guarantee.</p>
+          <a href="#get-the-list" class="btn btn--primary">Get the Assumable Homes List</a>
+        </div>
+
+        <!-- LOAN TYPES -->
+        <div id="loan-types" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Which Loans Qualify</span>
+          <h2 class="section-heading">FHA, VA, USDA, and Conventional Loans Compared</h2>
+          <div class="oyh-table-wrap">
+            <table class="oyh-table">
+              <thead><tr><th scope="col">Loan type</th><th scope="col">Assumable?</th><th scope="col">What to know</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">FHA</th><td>Yes, with servicer approval</td><td>You must qualify (credit and income). FHA mortgage insurance stays with the loan. Servicers can charge up to $1,800 to process the assumption.</td></tr>
+                <tr><th scope="row">VA</th><td>Yes, with servicer approval</td><td>You don't have to be a veteran. VA charges a 0.5% funding fee on the balance (some exemptions apply), and servicer processing fees are capped at a few hundred dollars. Sellers should understand the entitlement issue below.</td></tr>
+                <tr><th scope="row">USDA</th><td>Sometimes</td><td>You must meet USDA income limits, and the home must be in an eligible rural area, so they're uncommon in the South Denver Metro. Get the rate and terms in writing.</td></tr>
+                <tr><th scope="row">Conventional</th><td>Almost never</td><td>Most have a due-on-sale clause requiring payoff when the home sells.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- TIMELINE -->
+        <div id="timeline" style="padding-top: var(--space-2xl);">
+          <span class="section-label">The Timeline</span>
+          <h2 class="section-heading">Plan for a Longer Closing</h2>
+          <p>A normal financed purchase in Colorado often closes in about 30 days. Assumptions run through the seller's loan servicer, not your lender, and servicers don't earn much for processing them. Agents commonly report 30 to 60 days or more. VA expects servicers to finish within 45 days, but that deadline is often missed. Build extra time into the contract, and make sure the seller is on board with a longer timeline before you write the offer.</p>
+        </div>
+
+        <!-- PROS / CONS -->
+        <div id="pros-cons" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Pros &amp; Cons</span>
+          <h2 class="section-heading">Is Assuming a Loan Worth It?</h2>
+          <div class="oyh-table-wrap">
+            <table class="oyh-table">
+              <thead><tr><th scope="col">Pros</th><th scope="col">Cons</th></tr></thead>
+              <tbody>
+                <tr><td>A much lower rate on most of the loan</td><td>Large cash or second-loan need to cover the seller's equity</td></tr>
+                <tr><td>Lower monthly payment, often by hundreds or more</td><td>Few homes qualify, so your choices are narrower</td></tr>
+                <tr><td>Capped processing fees and no new-loan origination costs on the assumed loan</td><td>Longer, less predictable approval through the servicer</td></tr>
+                <tr><td>You keep the seller's shorter remaining term, so you build equity faster</td><td>Second loans come at higher rates and aren't always available</td></tr>
+                <tr><td>A predictable payment on the assumed portion when it's a fixed-rate loan</td><td>FHA mortgage insurance stays with the loan</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- STEPS -->
+        <div id="steps" style="padding-top: var(--space-2xl);">
+          <span class="section-label">How It Works</span>
+          <h2 class="section-heading">Six Steps to Assume a Loan</h2>
+          <div class="process-steps oyh-steps-6">
+            <div class="process-step"><h3>Know your cash number</h3><p>Figure out how much you can bring to closing and whether you'd qualify for a second loan. This decides which homes make sense.</p></div>
+            <div class="process-step"><h3>Search where it's possible</h3><p>Start with homes whose listings mention a potential assumption, then narrow by what your family needs.</p></div>
+            <div class="process-step"><h3>Verify the loan</h3><p>Confirm loan type, balance, rate, remaining term, and servicer with the listing agent before you offer.</p></div>
+            <div class="process-step"><h3>Write the offer</h3><p>Include the assumption terms, how you'll cover the equity gap, and a longer closing timeline.</p></div>
+            <div class="process-step"><h3>Get servicer approval</h3><p>You apply with the seller's servicer, who reviews your credit and income. Stay on top of document requests.</p></div>
+            <div class="process-step"><h3>Close and take over the loan</h3><p>You pay the seller's equity and closing costs, and the loan, at its original rate, becomes yours.</p></div>
+          </div>
+        </div>
+
+        <!-- SELLERS -->
+        <div id="sellers" style="padding-top: var(--space-2xl);">
+          <span class="section-label">For Sellers</span>
+          <h2 class="section-heading">Have a Low-Rate FHA or VA Loan? It Could Help Your Home Sell</h2>
+          <p>If you're moving up and your current home has an assumable loan, that low rate can be a real selling point when buyers are facing {rate.value}. A few things to know first:</p>
+          <ul class="oyh-proof">
+            <li><strong>Get a release of liability.</strong> Make sure the servicer formally releases you from the loan once the buyer takes it over, in writing.</li>
+            <li><strong>VA sellers: watch your entitlement.</strong> Unless a veteran buyer substitutes their own entitlement, yours stays tied to that loan until it's paid off, which can limit your next VA purchase.</li>
+            <li><strong>Plan for the timeline.</strong> A longer closing affects when your equity is available for your next home.</li>
+          </ul>
+          <p>Thinking about moving up? <a href="/move-up-sellers">See the full plan for families who've outgrown their home.</a></p>
+        </div>
+
+        <!-- FAQ -->
+        <div id="faq" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Common Questions</span>
+          <h2 class="section-heading">Assumable Loans: FAQ</h2>
+          <div class="faq-list">
+            {faqs.map((f) => (
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">{f.q}</button>
+                <div class="faq-answer"><p>{f.a}</p></div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- SOURCES -->
+        <div style="padding-top: var(--space-2xl);">
+          <span class="section-label">Sources</span>
+          <ul class="al-sources">
+            <li>Freddie Mac Primary Mortgage Market Survey, week of {rate.week}, via <a href="https://www.foxbusiness.com/economy/mortgage-rates-10-1-2026" target="_blank" rel="noopener">Fox Business</a></li>
+            <li><a href="https://www.nar.realtor/washington-report/fha-increases-allowable-fees-for-assumable-loans" target="_blank" rel="noopener">NAR: FHA increases allowable fees for assumable loans</a> ($900 to $1,800; 30–60+ day timelines)</li>
+            <li><a href="https://www.scotsmanguide.com/residential/red-tape-slows-mortgage-assumptions/" target="_blank" rel="noopener">Scotsman Guide: Red tape slows mortgage assumptions</a> (23% of mortgages assumable; 6,400 completed in 2023; VA 45-day standard)</li>
+            <li><a href="https://assumelist.com/blog/assumption-fee-update/" target="_blank" rel="noopener">AssumeList: FHA and VA assumption fee update</a> (FHA $1,800 effective May 20, 2024; VA processing caps)</li>
+            <li><a href="https://valoannetwork.com/va-assumptions-secondary-financing/" target="_blank" rel="noopener">VA Loan Network: VA assumptions and secondary financing</a> (0.5% funding fee, entitlement substitution)</li>
+          </ul>
+          <p class="oyh-disclosure">Jacob Stark is a REALTOR®, not a lender. Loan rules change; confirm current requirements with your lender and the loan servicer.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner" style="background-color: var(--color-white);">
+    <div class="container">
+      <h2 style="color: var(--color-dark-text);">Not Sure an Assumption Fits Your Budget?</h2>
+      <p style="color: var(--color-body-text);">In 30 minutes, we'll figure out your cash-to-close number and whether an assumable loan, a new loan, or both are worth chasing.</p>
+      <a href={bookUrl} class="btn btn--primary btn--lg" target="_blank" rel="noopener">Book a Buyer Consultation</a>
+      <a href="#get-the-list" class="btn btn--outline-dark btn--lg">Get the Assumable Homes List</a>
+    </div>
+  </section>
+
+  <PillarScripts />
+</BaseLayout>
+
+<style>
+  .al-hero-btns { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.75rem; }
+  .al-gate { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; align-items: start; margin-top: var(--space-xl); padding: 2rem; background: var(--color-primary); color: #fff; border-radius: 16px; scroll-margin-top: calc(var(--header-height) + 1rem); }
+  .al-gate h2 { margin: 0.25rem 0 0.75rem; font-family: var(--font-heading); font-weight: 400; font-size: clamp(1.6rem, 3vw, 2.1rem); line-height: 1.15; color: #fff; }
+  .al-gate p { color: #b9c7cc; line-height: 1.6; }
+  .al-gate .section-label { color: var(--color-accent); }
+  .al-gate__bullets { list-style: disc; padding-left: 1.25rem; color: #fff; line-height: 1.8; margin: 0; }
+  .al-form { background: #fff; color: var(--color-dark-text); border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; gap: 0.85rem; }
+  .al-form label { display: flex; flex-direction: column; gap: 0.3rem; font-size: 0.85rem; font-weight: 600; color: #3d4549; }
+  .al-form input, .al-form select { font: 400 1rem var(--font-body); padding: 0.65rem 0.75rem; border: 1px solid #c9d2d5; border-radius: 8px; background: #fff; color: var(--color-dark-text); }
+  .al-form input:focus, .al-form select:focus { outline: 2px solid var(--color-accent); outline-offset: 1px; }
+  .al-form__row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .al-form button { margin-top: 0.25rem; width: 100%; }
+  .al-form__fine { margin: 0; font-size: 0.72rem; line-height: 1.5; color: #6b7478 !important; }
+  .al-form__fine a { color: var(--color-primary); }
+  .al-hidden { display: none; }
+  .al-compare th[scope='row'] { text-align: left; font-weight: 600; }
+  .al-sources { list-style: disc; padding-left: 1.25rem; line-height: 1.7; }
+  @media (max-width: 900px) {
+    .al-gate { grid-template-columns: 1fr; padding: 1.5rem 1.25rem; }
+    .al-form__row { grid-template-columns: 1fr; }
+  }
+</style>

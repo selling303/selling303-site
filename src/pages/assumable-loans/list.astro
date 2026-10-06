@@ -1,0 +1,63 @@
+---
+// Gated destination for the /assumable-loans form. noindex + excluded from sitemap.
+import { agent } from '../../data/agent';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const listUrl = 'https://jacobstark.realscout.com/homesearch/shared-searches/U2hhcmVhYmxlU2VhcmNoTGluay0yODQ2Mg==';
+const bookUrl = agent.bookingUrls.buyerConsult;
+---
+
+<BaseLayout
+  title="Your Assumable Homes List | Selling 303"
+  description="Homes for sale under $1M in the Denver metro whose listings mention a potential loan assumption."
+  ogUrl="https://selling303.com/assumable-loans/list/"
+  currentPage="assumable-loans"
+  headerVariant="solid"
+>
+  <Fragment slot="head">
+    <meta name="robots" content="noindex, nofollow" />
+  </Fragment>
+
+  <section class="al-thanks">
+    <div class="container al-thanks__inner">
+      <span class="al-thanks__label">You're in</span>
+      <h1>Here's Your Assumable Homes List</h1>
+      <p class="al-thanks__lead">This live search shows homes for sale under $1M across the Denver metro whose listings mention a potential loan assumption. It updates as new homes hit the market.</p>
+      <a href={listUrl} class="btn btn--primary btn--lg" target="_blank" rel="noopener">Open the List</a>
+      <p class="al-thanks__tip">Tip: tap "Interested" on any home and I'll get the loan details for you.</p>
+
+      <div class="al-thanks__card">
+        <h2>Before you fall in love with one, check these five things</h2>
+        <ol>
+          <li><strong>Loan type:</strong> FHA or VA? (Conventional loans almost never qualify.)</li>
+          <li><strong>Current balance:</strong> the price minus the balance is the cash or second loan you'll need.</li>
+          <li><strong>Interest rate and remaining term</strong></li>
+          <li><strong>Servicer:</strong> who you'll apply with, and how long they typically take</li>
+          <li><strong>Seller's timeline:</strong> can they wait 45 to 60+ days to close?</li>
+        </ol>
+        <p>I'll reach out shortly to see what you're looking for. Want to talk sooner?</p>
+        <div class="al-thanks__btns">
+          <a href={bookUrl} class="btn btn--primary" target="_blank" rel="noopener">Book a Buyer Consultation</a>
+          <a href={agent.phoneHref} class="btn btn--outline-dark">Call or Text {agent.phone}</a>
+        </div>
+      </div>
+      <p class="al-thanks__back"><a href="/assumable-loans">← Back to the assumable loans guide</a></p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .al-thanks { background: var(--color-background); padding: calc(var(--header-height) + 4rem) 0 5rem; }
+  .al-thanks__inner { max-width: 720px; }
+  .al-thanks__label { display: block; margin-bottom: 0.75rem; font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; color: #8a5a2b; font-weight: 700; }
+  .al-thanks h1 { margin: 0 0 1rem; font-family: var(--font-heading); font-weight: 400; font-size: clamp(2.25rem, 5vw, 3.25rem); line-height: 1.1; color: var(--color-primary); }
+  .al-thanks__lead { font-size: 1.15rem; line-height: 1.6; color: #4a5458; margin: 0 0 1.75rem; }
+  .al-thanks__tip { margin: 1rem 0 0; font-size: 0.95rem; color: #4a5458; }
+  .al-thanks__card { margin-top: 3rem; background: #fff; border: 1px solid var(--color-border); border-radius: 16px; padding: 2rem; }
+  .al-thanks__card h2 { margin: 0 0 1rem; font-family: var(--font-heading); font-weight: 400; font-size: 1.6rem; color: var(--color-primary); }
+  .al-thanks__card ol { padding-left: 1.25rem; list-style: decimal; line-height: 1.8; color: #3d4549; }
+  .al-thanks__card p { color: #3d4549; }
+  .al-thanks__btns { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem; }
+  .al-thanks__back { margin-top: 2rem; }
+  .al-thanks__back a { color: var(--color-primary); }
+</style>

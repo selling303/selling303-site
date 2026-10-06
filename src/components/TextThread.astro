@@ -1,0 +1,64 @@
+---
+// Text-message style thread (two people, left = them, right = me).
+// Bubbles reveal one at a time when the thread scrolls into view.
+// Without JS, or with reduced motion, every bubble is simply visible.
+interface Msg { from: 'them' | 'me'; text: string; emoji?: boolean }
+interface Props { messages: Msg[]; timestamp?: string; label?: string }
+const { messages, timestamp = 'Tonight 9:42 PM', label = 'Text conversation' } = Astro.props;
+---
+<figure class="tt" aria-label={label} data-tt>
+  <p class="tt__time">{timestamp}</p>
+  <ol class="tt__list">
+    {messages.map((m, i) => {
+      const next = messages[i + 1];
+      const last = !next || next.from !== m.from;
+      return (
+        <li class:list={['tt__msg', `tt__msg--${m.from}`, { 'tt__msg--tail': last, 'tt__msg--emoji': m.emoji }]} style={`--i:${i}`}>
+          <span class="tt__bubble">{m.text}</span>
+        </li>
+      );
+    })}
+  </ol>
+</figure>
+
+<script>
+  const threads = document.querySelectorAll<HTMLElement>('[data-tt]');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce && 'IntersectionObserver' in window) {
+    threads.forEach((t) => t.classList.add('tt--animate'));
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) { (e.target as HTMLElement).classList.add('tt--in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.35 });
+    threads.forEach((t) => io.observe(t));
+  }
+</script>
+
+<style>
+  .tt { margin: var(--space-md) 0 var(--space-lg); max-width: 560px; background: var(--color-background); border-radius: 22px; padding: 1.25rem 1.1rem 1.5rem; border: 1px solid var(--color-border); }
+  .tt__time { margin: 0 0 0.9rem; text-align: center; font-size: 0.75rem; font-weight: 600; color: #8a9195; letter-spacing: 0.02em; }
+  .tt__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.2rem; }
+  .tt__msg { display: flex; }
+  .tt__msg--tail { margin-bottom: 0.55rem; }
+  .tt__msg:last-child { margin-bottom: 0; }
+  .tt__msg--them { justify-content: flex-start; }
+  .tt__msg--me { justify-content: flex-end; }
+  .tt__bubble { max-width: 78%; padding: 0.6rem 0.95rem; border-radius: 20px; font-family: var(--font-body); font-size: 1rem; line-height: 1.4; }
+  .tt__msg--them .tt__bubble { background: #e6e7e9; color: #1a1a1a; border-bottom-left-radius: 20px; }
+  .tt__msg--me .tt__bubble { background: var(--color-primary); color: #fff; }
+  .tt__msg--them.tt__msg--tail .tt__bubble { border-bottom-left-radius: 6px; }
+  .tt__msg--me.tt__msg--tail .tt__bubble { border-bottom-right-radius: 6px; }
+
+  .tt__msg--emoji .tt__bubble { background: none !important; padding: 0.1rem 0.25rem; font-size: 2.6rem; line-height: 1.1; }
+  .tt--animate .tt__msg { opacity: 0; transform: translateY(8px) scale(0.98); }
+  .tt--animate.tt--in .tt__msg { animation: tt-in 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards; animation-delay: calc(var(--i) * 0.55s); }
+  .tt--animate .tt__msg--me { transform-origin: right bottom; }
+  .tt--animate .tt__msg--them { transform-origin: left bottom; }
+  @keyframes tt-in { to { opacity: 1; transform: none; } }
+
+  @media (max-width: 600px) {
+    .tt { padding: 1rem 0.75rem 1.25rem; border-radius: 18px; }
+    .tt__bubble { max-width: 85%; font-size: 0.95rem; }
+  }
+</style>

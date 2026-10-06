@@ -45,12 +45,18 @@ export const agent = {
   email: 'jacob@selling303.com',
   licenseNumber: 'FA100087287',
   licenseLine: 'CO Lic #FA100087287',
-  // Google Calendar booking links. ⚠️ The site uses four different links —
-  // Jacob to confirm which appointment type each one is.
+  // Google Calendar booking links (confirmed by Jacob 2026-10-03).
   bookingUrls: {
+    // Main link: 30 minutes with Jacob on any topic. Default for general CTAs.
     general: 'https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy',
-    moveUp: 'https://calendar.google.com/appointments/schedules/AcZssZ2UpHf-eRXBp5EhsEaj3h4tdL6UFcyrAVj2Ml1tNyGDAGwLXKSq-61crE41j57Q41IFr7Xj9gyv',
+    // Listing consultation (sellers, move-up pillars).
+    listingConsult: 'https://calendar.google.com/appointments/schedules/AcZssZ2UpHf-eRXBp5EhsEaj3h4tdL6UFcyrAVj2Ml1tNyGDAGwLXKSq-61crE41j57Q41IFr7Xj9gyv',
+    // Buyer consultation (buyers, relocation, new construction).
+    buyerConsult: 'https://calendar.google.com/appointments/schedules/AcZssZ03irZvg3selsSUPuyl2Uzr0LLjppQlnOnenYVDGCT93aX2VbTzRMsaPkj3qzT8YrN6TP9qRTb8',
+    // Showing request ("Schedule a Showing" on neighborhood pages).
+    showing: 'https://calendar.google.com/appointments/schedules/AcZssZ35CgGIsH75xYeJ1Ggzok6fdpJT2KvHfLeE0sxdj89eLwVouLnoQ_9qbRWge_9ik-Ek07111iUJ',
   },
+
   // Updated 2026-09-30 from Jacob's Orchard listing deck (confirmed current).
   stats: {
     salesVolume: '$50M+',
