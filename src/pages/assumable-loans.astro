@@ -83,6 +83,7 @@ const faqSchema = {
         <span class="pillar-toc__label">On This Page</span>
         <ul class="pillar-toc__list">
           <li><a href="#direct-answer" class="pillar-toc__link active">The Short Answer</a></li>
+          <li><a href="#why-now" class="pillar-toc__link">The Numbers</a></li>
           <li><a href="#get-the-list" class="pillar-toc__link">Get the List</a></li>
           <li><a href="#cash-to-close" class="pillar-toc__link">Cash to Close</a></li>
           <li><a href="#finding-one" class="pillar-toc__link">Finding One</a></li>
@@ -100,6 +101,33 @@ const faqSchema = {
         <div class="snippet-block" id="direct-answer">
           <span class="snippet-block__label">The Short Answer</span>
           <p><strong>What is an assumable loan?</strong> An assumable loan lets a buyer take over the seller's existing mortgage, including its interest rate, instead of getting a new one. In the South Denver Metro, these are mostly FHA and VA loans, some from 2020 and 2021 with rates near 3%. The trade-off: you pay the seller for their equity, which can easily mean six figures at closing, and approval takes longer. Jacob Stark, South Denver Metro REALTOR®, helps buyers find homes with assumable loans and run the real numbers first.</p>
+        </div>
+
+        <!-- WHY NOW -->
+        <div id="why-now" style="padding-top: var(--space-2xl);">
+          <span class="section-label">Why Everyone's Asking</span>
+          <h2 class="section-heading">Today's Rates vs. a Seller's 3% Loan</h2>
+          <p>The average 30-year fixed rate hit {rate.value} the week of {rate.week}, {rate.note}, according to Freddie Mac. Many homeowners who bought or refinanced in 2020 and 2021 locked in rates around 3%. If their loan is FHA or VA, a buyer may be able to take it over. Nationally, about 23% of active mortgages are assumable, yet only about 6,400 assumptions were completed in 2023, because most buyers hit the challenges below.</p>
+          <h3>What That Looks Like in Real Dollars</h3>
+          <p>When you assume a loan, you take over what the seller still owes, at their rate. Whatever the price is above that balance is the seller's equity, and you pay it at closing, much like a down payment. Here's the same $600,000 home with two different loan balances, each compared with a brand-new loan using the same cash at closing. The only difference is the rate.</p>
+          <div class="oyh-table-wrap">
+            <table class="oyh-table al-compare">
+              <thead>
+                <tr><th scope="col"></th><th scope="col">Scenario 1: balance is about 92% of the price</th><th scope="col">Scenario 2: balance is 70% of the price</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Purchase price</th><td>$600,000</td><td>$600,000</td></tr>
+                <tr><th scope="row">Seller's loan balance (3%, about 25 years left)</th><td>$550,000</td><td>$420,000</td></tr>
+                <tr><th scope="row">Cash you pay the seller at closing*</th><td>$50,000 (about 8%)</td><td>$180,000 (30%)</td></tr>
+                <tr><th scope="row">Monthly payment if you assume the 3% loan</th><td>$2,608</td><td>$1,992</td></tr>
+                <tr><th scope="row">Monthly payment on a new loan at {rate.value}, same cash down</th><td>$3,763</td><td>$2,874</td></tr>
+                <tr><th scope="row">You save</th><td><strong>About $1,155/mo ($13,900/yr)</strong></td><td><strong>About $880/mo ($10,600/yr)</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="oyh-disclosure">*Before closing costs. Hypothetical illustration, not a loan quote. Principal and interest only; excludes taxes, insurance, and mortgage insurance (FHA mortgage insurance carries over with the assumed loan). Assumed-loan payment is based on the 3% balance paid off over its remaining 25 years; new-loan payment is a 30-year fixed at the Freddie Mac weekly average for {rate.week}. Talk with a lender about your situation.</p>
+          <p><strong>Scenario 1 is the rare one.</strong> It usually means the seller bought recently with a small down payment (common with VA loans) and the home hasn't gained much value since. When it happens, it's close to the best case: modest cash down and a payment that's more than $1,000 a month lower.</p>
+          <p><strong>Scenario 2 is more typical.</strong> The seller has built up equity, so you need a bigger check at closing. If you have the cash, the savings are still real. And either way, you're paying the loan off on the seller's shorter schedule, so you build equity faster.</p>
         </div>
 
         <!-- GATED LIST -->
@@ -156,34 +184,13 @@ const faqSchema = {
           </form>
         </div>
 
-        <!-- WHY NOW -->
-        <div id="why-now" style="padding-top: var(--space-2xl);">
-          <span class="section-label">Why Everyone's Asking</span>
-          <h2 class="section-heading">Today's Rates vs. a Seller's 3% Loan</h2>
-          <p>The average 30-year fixed rate hit {rate.value} the week of {rate.week}, {rate.note}, according to Freddie Mac. Many homeowners who bought or refinanced in 2020 and 2021 locked in rates around 3%. If their loan is FHA or VA, a buyer may be able to take it over. Nationally, about 23% of active mortgages are assumable, yet only about 6,400 assumptions were completed in 2023, because most buyers hit the challenges below.</p>
-        </div>
-
         <!-- CASH TO CLOSE -->
         <div id="cash-to-close" style="padding-top: var(--space-2xl);">
           <span class="section-label">The Part Buyers Overlook</span>
-          <h2 class="section-heading">How Much Cash You'll Really Need at Closing</h2>
-          <p>When you assume a loan, you take over the seller's <em>remaining balance</em>, not the purchase price. Everything above that balance is the seller's equity, and you have to pay it at closing, either in cash or with a second loan at today's rates.</p>
-          <p><strong>Example (hypothetical):</strong> a $650,000 home. The seller took out a $420,000 FHA loan at 3% in 2021. Five years later, about $373,000 is left, so the gap is about $277,000.</p>
-          <div class="oyh-table-wrap">
-            <table class="oyh-table al-compare">
-              <thead>
-                <tr><th scope="col"></th><th scope="col">New loan, 20% down</th><th scope="col">Assume + second loan</th><th scope="col">Assume + all cash</th></tr>
-              </thead>
-              <tbody>
-                <tr><th scope="row">Rate</th><td>{rate.value}</td><td>3% on $373K + 9% on $147K</td><td>3% on $373K</td></tr>
-                <tr><th scope="row">Cash at closing*</th><td>$130,000</td><td>$130,000</td><td>$277,000</td></tr>
-                <tr><th scope="row">Monthly principal &amp; interest</th><td>$3,558</td><td>$2,951</td><td>$1,771</td></tr>
-                <tr><th scope="row">Savings vs. new loan</th><td>—</td><td>About $600/mo</td><td>About $1,790/mo</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="oyh-disclosure">*Before closing costs. Illustration only, not a loan quote. Principal and interest only; excludes taxes, insurance, and mortgage insurance (FHA mortgage insurance carries over with the assumed loan). New-loan rate is the Freddie Mac weekly average for {rate.week}. The 9% second-loan rate is an assumption for illustration; actual second-loan availability, rates, and limits vary by lender and may not be offered for every assumption. Talk with a lender about your situation.</p>
-          <p><strong>The takeaway:</strong> the bigger the seller's equity, the more cash or second-loan debt you need, and the smaller the savings. The sweet spot is usually a home where the loan balance is a large share of the price.</p>
+          <h2 class="section-heading">Don't Have the Cash to Cover the Seller's Equity?</h2>
+          <p>That's where most assumptions fall apart. The gap between the price and the loan balance has to be paid at closing, and in Scenario 2 above that's $180,000 before closing costs. If you don't have it, some lenders offer a second loan to cover part of the gap, but it comes at today's higher rates, and it isn't available for every assumption.</p>
+          <p>A second loan blends your rate upward. Put enough of the gap on a second loan and your total payment can land closer to a new loan than you'd expect. Before you fall for a 3% rate, compare the total monthly payment and the total cash to close side by side.</p>
+          <p><strong>The takeaway:</strong> the bigger the seller's equity, the more cash or second-loan debt you need, and the smaller the savings. The sweet spot is a home where the loan balance is a large share of the price.</p>
         </div>
 
         <!-- FINDING ONE -->
@@ -324,6 +331,15 @@ const faqSchema = {
   .al-form__fine a { color: var(--color-primary); }
   .al-hidden { display: none; }
   .al-compare th[scope='row'] { text-align: left; font-weight: 600; }
+  .al-compare { min-width: 0; }
+  .al-compare td { color: var(--color-dark-text); }
+  #why-now h3 { margin-top: var(--space-xl); margin-bottom: var(--space-sm); }
+  #why-now .oyh-disclosure { margin-bottom: var(--space-lg); }
+  @media (max-width: 600px) {
+    .al-compare { font-size: 0.85rem; }
+    .al-compare th, .al-compare td { padding: 0.6rem 0.45rem; }
+    .al-compare tbody th { width: 38%; }
+  }
   .al-sources { list-style: disc; padding-left: 1.25rem; line-height: 1.7; }
   @media (max-width: 900px) {
     .al-gate { grid-template-columns: 1fr; padding: 1.5rem 1.25rem; }
