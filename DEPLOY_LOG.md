@@ -1,5 +1,11 @@
 # Deploy Log
 
+## 2026-10-07 — merge 8d76a4c (main c6b5209) | Credits used: 15
+
+Assumable loans scenarios update. Verified live: /assumable-loans/ (shows "What That Looks Like in Real Dollars" and both scenarios).
+
+- 2026-10-03 — `/assumable-loans`: "Why Everyone's Asking" moved under the Short Answer (above the list form) with two side-by-side 3%-loan scenarios on a $600K home vs. a new loan at the page's `rate` const, same cash down: balance ~92% ($50K cash, saves ~$1,155/mo) and 70% ($180K cash, saves ~$880/mo). Old 3-column cash-to-close table removed; #cash-to-close now covers second loans. TOC gained "The Numbers". NOTE: scenario payments are hard-coded; recompute if `rate` changes.
+
 ## 2026-10-06 — merge 57deeaa (main f2f5e88) | Credits used: 15
 
 New blog post "Price Cut or 2-1 Buydown?" plus the pending 10-02/10-03 changes on main. Verified live: /blog/price-cut-vs-2-1-buydown-south-denver-metro-2026/ (200, new sub-headline, buydown calculator present), listed on /blog and in sitemap-0.xml.
