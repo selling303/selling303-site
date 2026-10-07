@@ -88,6 +88,8 @@ relatedPosts:
 
 <p>For a buyer doing a search-engine pass from Texas or California, this looks identical on Zillow. Every result says "Littleton, CO." But for property tax, school assignment, water rules, transfer fees, and resale comp sets, the county a Littleton home sits in matters as much as the address itself. The most useful thing you can do before booking a tour is open the Arapahoe, Jefferson, and Douglas county GIS portals. Look up each specific address you are considering. Same mailbox, three different administrative realities.</p>
 
+<p>The split shows up in everyday services too. The City of Littleton's <a href="https://www.littletonco.gov/Government/Departments/Public-Works-Engineering/hazardous-materials-collection" target="_blank" rel="noopener">At Your Door hazardous waste pickup through WM</a>, launched April 1, 2026, is a City program for City of Littleton residents. Homes with a Littleton mailing address in unincorporated Jefferson or Douglas County fall outside it and need their county's options instead. Trash, recycling, and hazardous waste are one more thing to confirm by exact address.</p>
+
 <h2 id="counties-compared">What Does Each Littleton County Actually Mean for Relocation Buyers?</h2>
 
 <p>Most buyers self-select into one of three Littleton segments based on what they want. Walkable downtown. Foothills recreation. Or newer construction with hill-country views. The card grid below maps the three side by side. It draws on April 2026 REcolorado MLS data for all 292 closed Littleton sales plus active inventory current to May 3, 2026.</p>
