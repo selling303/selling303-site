@@ -1,0 +1,26 @@
+---
+// Fires a GA4 conversion event on a form's confirmation page, but only when the
+// visitor actually submitted the form in this browser tab moments ago.
+// The flag is written by the global submit listener in SEO.astro. Bots that POST
+// directly (no JS), page refreshes, and bookmarked visits never fire the event.
+interface Props {
+  eventName?: 'generate_lead' | 'sign_up';
+}
+const { eventName = 'generate_lead' } = Astro.props;
+---
+<script is:inline define:vars={{ eventName }}>
+  (function () {
+    var raw = null;
+    try { raw = sessionStorage.getItem('s303_form_submit'); sessionStorage.removeItem('s303_form_submit'); } catch (e) {}
+    if (!raw) return;
+    var d;
+    try { d = JSON.parse(raw); } catch (e) { return; }
+    if (!d || !d.ts || Date.now() - d.ts > 10 * 60 * 1000) return; // older than 10 min: ignore
+    if (window.s303InitGA) window.s303InitGA(); // make sure GA is configured before the event
+    window.gtag('event', eventName, {
+      form_name: d.form_name || '(unknown)',
+      lead_type: d.lead_type || 'unspecified',
+      form_page: d.page_path || '(unknown)'
+    });
+  })();
+</script>

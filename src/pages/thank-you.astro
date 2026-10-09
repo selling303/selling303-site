@@ -1,0 +1,62 @@
+---
+// Confirmation page for the /contact form (Netlify posts here after a successful submit).
+// noindex + excluded from the sitemap (astro.config.mjs). Fires GA4 generate_lead once
+// via LeadConfirm, only after a real in-browser submit.
+import { agent } from '../data/agent';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LeadConfirm from '../components/LeadConfirm.astro';
+---
+
+<BaseLayout
+  title="Message Received | Selling 303"
+  description="Thanks for reaching out to Jacob Stark. Your message was received."
+  ogUrl="https://selling303.com/thank-you"
+  currentPage="contact"
+  headerVariant="solid"
+>
+  <Fragment slot="head">
+    <meta name="robots" content="noindex, nofollow" />
+  </Fragment>
+
+  <section class="ty">
+    <div class="container ty__inner">
+      <span class="ty__label">Message received</span>
+      <h1>Thanks — I've Got Your Message</h1>
+      <p class="ty__lead">I'll get back to you within a few hours, usually by text or phone.</p>
+
+      <div class="ty__card">
+        <h2>Want to talk sooner?</h2>
+        <p>Grab a time on my calendar, or call or text me directly.</p>
+        <div class="ty__btns">
+          <a href={agent.bookingUrls.general} class="btn btn--primary" target="_blank" rel="noopener">Book 30 Minutes with Jacob</a>
+          <a href={agent.phoneHref} class="btn btn--outline-dark">Call or Text {agent.phone}</a>
+        </div>
+      </div>
+
+      <div class="ty__more">
+        <h2>While you wait</h2>
+        <ul>
+          <li><a href="/move-up-sellers">Outgrown your home? How to buy first and sell later</a></li>
+          <li><a href="/what-to-fix-before-selling">What to fix (and skip) before selling</a></li>
+          <li><a href="/blog">Latest South Denver Metro market insights</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <LeadConfirm eventName="generate_lead" />
+</BaseLayout>
+
+<style>
+  .ty { background: var(--color-background); padding: calc(var(--header-height) + 4rem) 0 5rem; }
+  .ty__inner { max-width: 720px; }
+  .ty__label { display: block; margin-bottom: 0.75rem; font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; color: #8a5a2b; font-weight: 700; }
+  .ty h1 { margin: 0 0 1rem; font-family: var(--font-heading); font-weight: 400; font-size: clamp(2.25rem, 5vw, 3.25rem); line-height: 1.1; color: var(--color-primary); }
+  .ty__lead { font-size: 1.15rem; line-height: 1.6; color: #4a5458; margin: 0; }
+  .ty__card { margin-top: 2.5rem; background: #fff; border: 1px solid var(--color-border); border-radius: 16px; padding: 2rem; }
+  .ty__card h2, .ty__more h2 { margin: 0 0 0.75rem; font-family: var(--font-heading); font-weight: 400; font-size: 1.6rem; color: var(--color-primary); }
+  .ty__card p { color: #3d4549; margin: 0; }
+  .ty__btns { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.25rem; }
+  .ty__more { margin-top: 2.5rem; }
+  .ty__more ul { padding-left: 1.25rem; list-style: disc; line-height: 1.9; }
+  .ty__more a { color: var(--color-primary); }
+</style>
