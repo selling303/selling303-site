@@ -95,13 +95,16 @@ const ogImage = ogImageProp ?? deriveOgImageUrl();
     // "I'm interested in" select.
     document.addEventListener('submit', function (e) {
       var f = e.target;
-      if (!f || !f.hasAttribute || !f.hasAttribute('data-netlify')) return;
+      // Netlify strips data-netlify from deployed HTML, so detect its forms by the
+      // hidden form-name input, which stays.
+      var fn = f && f.querySelector && f.querySelector('input[name="form-name"]');
+      if (!fn) return;
       var interestMap = { buying: 'buyer', selling: 'seller', both: 'move-up', investing: 'investor', valuation: 'valuation', other: 'other' };
       var leadType = f.getAttribute('data-lead-type');
       if (!leadType && f.elements.interest) leadType = interestMap[f.elements.interest.value] || 'unspecified';
       try {
         sessionStorage.setItem('s303_form_submit', JSON.stringify({
-          form_name: f.getAttribute('name') || '',
+          form_name: fn.value || f.getAttribute('name') || '',
           lead_type: leadType || 'unspecified',
           page_path: location.pathname,
           ts: Date.now()
