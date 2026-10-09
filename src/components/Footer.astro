@@ -64,7 +64,7 @@ const neighborhoods = [
       <div>
         <h4 class="footer__heading">Stay in the Loop</h4>
         <p class="footer__newsletter-text">Market updates, real talk, and insights for South Denver buyers and sellers.</p>
-        <form class="footer__newsletter-form" name="newsletter" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+        <form class="footer__newsletter-form" name="newsletter" method="POST" netlify-honeypot="bot-field" data-netlify="true" data-lead-type="newsletter" action="/thank-you-newsletter">
           <input type="hidden" name="form-name" value="newsletter">
           <div style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;" aria-hidden="true">
             <label>Don't fill this out if you're human: <input name="bot-field" type="text" tabindex="-1" autocomplete="off" /></label>

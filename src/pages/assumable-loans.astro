@@ -142,7 +142,7 @@ const faqSchema = {
               <li>A real person (me) to sanity-check the numbers</li>
             </ul>
           </div>
-          <form class="al-form" name="assumable-list" method="POST" action="/assumable-loans/list/" netlify-honeypot="bot-field" data-netlify="true">
+          <form class="al-form" name="assumable-list" method="POST" action="/assumable-loans/list" netlify-honeypot="bot-field" data-netlify="true" data-lead-type="buyer-assumable">
             <input type="hidden" name="form-name" value="assumable-list" />
             <p class="al-hidden"><label>Don't fill this out: <input name="bot-field" /></label></p>
             <label>Name<input type="text" name="name" autocomplete="name" required /></label>

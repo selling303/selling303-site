@@ -88,6 +88,27 @@ const ogImage = ogImageProp ?? deriveOgImageUrl();
       });
     }, { capture: true });
 
+    // Form-submit flag for lead tracking. When a Netlify form is submitted, remember
+    // which form and lead type in this tab. The form's confirmation page
+    // (LeadConfirm.astro) reads the flag and fires generate_lead / sign_up once.
+    // Lead type comes from the form's data-lead-type, or the contact form's
+    // "I'm interested in" select.
+    document.addEventListener('submit', function (e) {
+      var f = e.target;
+      if (!f || !f.hasAttribute || !f.hasAttribute('data-netlify')) return;
+      var interestMap = { buying: 'buyer', selling: 'seller', both: 'move-up', investing: 'investor', valuation: 'valuation', other: 'other' };
+      var leadType = f.getAttribute('data-lead-type');
+      if (!leadType && f.elements.interest) leadType = interestMap[f.elements.interest.value] || 'unspecified';
+      try {
+        sessionStorage.setItem('s303_form_submit', JSON.stringify({
+          form_name: f.getAttribute('name') || '',
+          lead_type: leadType || 'unspecified',
+          page_path: location.pathname,
+          ts: Date.now()
+        }));
+      } catch (err) {}
+    }, { capture: true });
+
     var initialized = false;
     function initGA() {
       if (initialized) return;
@@ -99,6 +120,7 @@ const ogImage = ogImageProp ?? deriveOgImageUrl();
       gtag('js', new Date());
       gtag('config', 'G-WLGW57VN8C');
     }
+    window.s303InitGA = initGA;
 
     // Initialize on first meaningful user interaction
     var events = ['scroll', 'click', 'keydown', 'mousemove', 'touchstart'];

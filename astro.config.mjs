@@ -81,6 +81,7 @@ export default defineConfig({
       filter: (page) =>
         !page.includes('/open-house/') &&
         !page.includes('/assumable-loans/list') &&
+        !page.includes('/thank-you') &&
         !DRAFT_SUCCESS_STORY_SLUGS.some((slug) =>
           page.includes(`/sell/success-stories/${slug}`)
         ),

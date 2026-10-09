@@ -2,6 +2,7 @@
 // Gated destination for the /assumable-loans form. noindex + excluded from sitemap.
 import { agent } from '../../data/agent';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import LeadConfirm from '../../components/LeadConfirm.astro';
 
 const listUrl = 'https://jacobstark.realscout.com/homesearch/shared-searches/U2hhcmVhYmxlU2VhcmNoTGluay0yODQ2Mg==';
 const bookUrl = agent.bookingUrls.buyerConsult;
@@ -44,6 +45,7 @@ const bookUrl = agent.bookingUrls.buyerConsult;
       <p class="al-thanks__back"><a href="/assumable-loans">← Back to the assumable loans guide</a></p>
     </div>
   </section>
+  <LeadConfirm eventName="generate_lead" />
 </BaseLayout>
 
 <style>
