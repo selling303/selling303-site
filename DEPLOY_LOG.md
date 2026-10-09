@@ -1,5 +1,11 @@
 # Deploy Log
 
+## 2026-10-09 (evening) — merge 29e2159 | Credits used: 15
+
+Lead tracking fix live (Jacob approved: "get this fixed and completely done now"). Verified: test lead on /contact (name "TEST LEAD - Claude") landed on /thank-you and fired generate_lead {form_name: contact, lead_type: move-up}. Jacob's own traffic is tagged tt=internal and excluded by GA4's internal-traffic filter, so the test doesn't show in GA4; generate_lead can only be starred as a key event after a non-internal submission reaches GA4.
+
+- 2026-10-09 — FIX: SEO.astro lead listener detects Netlify forms by the hidden form-name input (Netlify strips data-netlify from deployed HTML).
+
 ## 2026-10-09 — merge 03bb3fc (main 35e0716) | Credits used: 15
 
 Lead path fix (Jacob approved launch). Verified live: /thank-you and /thank-you-newsletter (200, noindex, not in sitemap-0.xml), /contact form posts to /thank-you, newsletter posts to /thank-you-newsletter, homepage title "Jacob Stark | Littleton, CO REALTOR® | Outgrown Your Home?". Found after deploy: Netlify strips data-netlify from deployed HTML, so the generate_lead/sign_up listener didn't match live forms; fixed on main (detects the form-name input instead), ships next deploy.
