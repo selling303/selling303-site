@@ -165,7 +165,7 @@ relatedPosts:
 
 <p>Colorado buyers consistently rank trail access and open space as top priorities when choosing a neighborhood. In South Denver, that's not just an abstract preference — it's a measurable feature of the built environment. Highlands Ranch alone maintains over 70 miles of trails across 2,644 acres of open space. Littleton offers direct access to Chatfield State Park and the South Platte River corridor. Few suburban communities anywhere in the Front Range can match that combination.</p>
 
-<p>For move-up buyers especially, the shift from a starter home in a denser area to a property near these trail systems represents a tangible lifestyle upgrade. It's one reason both communities continue to attract families relocating within the metro.</p>
+<p>For <a href="/move-up-sellers">move-up buyers</a> especially, the shift from a starter home in a denser area to a property near these trail systems represents a tangible lifestyle upgrade. It's one reason both communities continue to attract families relocating within the metro.</p>
 
 <h2 id="highlands-ranch-trails">What Are the Best Trails and Parks in Highlands Ranch?</h2>
 

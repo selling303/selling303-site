@@ -173,7 +173,7 @@ relatedPosts:
 
 <h2 id="marketing-gap">Is Your Marketing Reaching Centennial's Actual Buyer Pool?</h2>
 
-<p>Centennial's buyer pool is specific. A significant share of offers on Centennial homes comes from move-up buyers in Arapahoe County, relocation buyers incoming from out of state, and investor buyers looking at the lower-DTC price tiers. If the listing's marketing is limited to MLS syndication and a single open house, it is missing most of that pool.</p>
+<p>Centennial's buyer pool is specific. A significant share of offers on Centennial homes comes from <a href="/move-up-sellers">move-up buyers</a> in Arapahoe County, relocation buyers incoming from out of state, and investor buyers looking at the lower-DTC price tiers. If the listing's marketing is limited to MLS syndication and a single open house, it is missing most of that pool.</p>
 
 <p>The full marketing reach includes targeted social campaigns into relocation buyer zip codes, professional video walkthroughs distributed through YouTube and Instagram, outreach to top-producing buyer agents in Arapahoe and Douglas County, and agent-only previews during the first week on market. Centennial buyers spend their weekends looking at Cherry Creek schools, <a href="/neighborhoods/littleton">Littleton</a> comps, and Highlands Ranch alternatives — so the listing needs to show up in those buyers' search and social feeds, not just wait for them to find it on Zillow.</p>
 
