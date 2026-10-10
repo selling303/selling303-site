@@ -167,7 +167,7 @@ relatedPosts:
 
 <p>Once the family identifies a target home, the offer-to-close mechanics work like this. Jacob coordinates a local inspection. The inspector sends a video walk-through of every flagged item. Jacob then negotiates the inspection objection remotely and coordinates the final walk-through and closing. Douglas County closings can be handled fully remotely in 2026. A notary brings the closing package to wherever the family is located, and the deed records in Parker the same day.</p>
 
-<p>The pattern that works best: families who lock a Parker buyer's agent BEFORE they book the scouting trip. A single weekend of in-person touring with a pre-narrowed list of four to six Parker homes beats two weekends of solo driving with no brief. Jacob's 100.6% sale-to-list average on the seller side translates directly into buyer-side leverage. Knowing what Parker sellers typically accept shapes every offer.</p>
+<p>The pattern that works best: families who lock a Parker buyer's agent BEFORE they book the scouting trip. A single weekend of in-person touring with a pre-narrowed list of four to six Parker homes beats two weekends of solo driving with no brief. Jacob's 101.8% sale-to-list average on the seller side translates directly into buyer-side leverage. Knowing what Parker sellers typically accept shapes every offer.</p>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 

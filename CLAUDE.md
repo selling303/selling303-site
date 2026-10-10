@@ -17,11 +17,11 @@ Every session that edits site files MUST push to `main` before closing. Use the 
 
 ### Deploying to production
 
-**Never push to `live` without Jacob's explicit approval.** Production deploys cost 15 credits each and happen once per day, bundled with the nightly blog post. Use the `deploy-to-netlify` skill to:
+**Never push to `live` without Jacob's explicit approval.** Production deploys cost 15 credits each. There is no nightly blog task (it stopped long ago), so nothing on `main` goes live until someone runs a production deploy. Batch changes and deploy them together. Use the `deploy-to-netlify` skill to:
 1. Merge `main` → `live`
 2. Push `live` to trigger Netlify build
 
-When Jacob confirms changes are "good to go" or "ready to push," that means push to `main` only — not `live`. The nightly blog task handles the production deploy. If Jacob wants something live immediately, he will say so explicitly (e.g., "deploy now," "push this live," "make this live now").
+When Jacob confirms changes are "good to go" or "ready to push," that means push to `main` only — not `live`. Changes stay on `main` until Jacob approves a production deploy (e.g., "deploy now," "push this live," "make this live now"). After pushing to `main`, tell him what's waiting and ask whether to deploy now or batch it with upcoming changes. Never say changes will ship "tonight" or with a nightly post.
 
 **Exception:** if something is visibly broken on the live site, Jacob may approve a standalone production deploy — always confirm with him first.
 

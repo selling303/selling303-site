@@ -185,7 +185,7 @@ relatedPosts:
 
 <p><strong>Three — what does the current price look like next to the comparable active inventory the seller is competing with?</strong> A Highlands Ranch home at $749,000 is in a different position when the closest active comps sit at $720,000 versus $760,000. The right cut, if a cut is the right move at all, is the one that closes the visible gap to those active comps — not a round percentage chosen in isolation. Buyer-search increments around $25,000 / $50,000 boundaries are a secondary consideration on borderline calls; the comp-gap reading is the primary one.</p>
 
-<p>For Highlands Ranch sellers whose listings have stalled — and especially for sellers whose listings have already expired once — the conversation that matters is the diagnostic one. Jacob Stark is a Highlands Ranch listing strategist with $46M+ in South Denver sold and a 100.6% sale-to-list ratio across closed transactions. He brings the diagnosis to the recalibration conversation, not the reflex.</p>
+<p>For Highlands Ranch sellers whose listings have stalled — and especially for sellers whose listings have already expired once — the conversation that matters is the diagnostic one. Jacob Stark is a Highlands Ranch listing strategist with $50M+ in South Denver sold and a 101.8% sale-to-list ratio across closed transactions. He brings the diagnosis to the recalibration conversation, not the reflex.</p>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 

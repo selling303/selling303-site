@@ -202,7 +202,7 @@ relatedPosts:
 
 <p>The honest read on Castle Pines timing in spring 2026: 100 days is the realistic floor for a well-coordinated move-up, and 120 to 150 days is more typical when the buy side is also Castle Pines. Plans built on 60-day timelines tend to compress under pressure and require expensive bridges to recover.</p>
 
-<p>With over $46 million in closed volume and a 100.6 percent sale-to-list ratio across South Denver, Jacob Stark coordinates Castle Pines move-up transactions from initial pricing through both closings — including the contract-side mechanics that protect sellers when the calendar gets tight.</p>
+<p>With over $50 million in closed volume and a 101.8 percent sale-to-list ratio across South Denver, Jacob Stark coordinates Castle Pines move-up transactions from initial pricing through both closings — including the contract-side mechanics that protect sellers when the calendar gets tight.</p>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 

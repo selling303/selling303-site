@@ -77,7 +77,7 @@ relatedPosts:
 
 <p>Buyers shopping <a href="/new-construction">new construction in South Denver</a> often start a Lone Tree search assuming both communities offer real new-build inventory. The Q1 2026 REcolorado MLS data tells a much narrower story — Heritage Hills is essentially built out, and almost every new-construction transaction inside city limits is happening in RidgeGate. That changes the comparison from "two new-build options" to "new construction in one community vs. resale luxury in the other." This guide walks through the actual numbers, the HOA differences, and which buyer profile each community fits in 2026.</p>
 
-<p>Jacob Stark sells across Lone Tree in both segments, with $46M+ sold and a 100.6% sale-to-list ratio on the representation side. The decision between RidgeGate and Heritage Hills is rarely a coin flip — it usually hinges on three or four specific buyer priorities, and the data below makes those priorities easier to weigh.</p>
+<p>Jacob Stark sells across Lone Tree in both segments, with $50M+ sold and a 101.8% sale-to-list ratio on the representation side. The decision between RidgeGate and Heritage Hills is rarely a coin flip — it usually hinges on three or four specific buyer priorities, and the data below makes those priorities easier to weigh.</p>
 
 <h2 id="side-by-side">RidgeGate or Heritage Hills — Which Lone Tree Path Fits You?</h2>
 

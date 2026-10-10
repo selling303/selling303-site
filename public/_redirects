@@ -87,3 +87,36 @@
 /301-w-lehow-ave-14b-englewood-co-80110                  /sell/success-stories  301
 /9559-w-coal-mine-avenue-unit-a-littleton-co-80123       /sell/success-stories  301
 /4360-w-wagon-trail-dr-denver-co-80123                   /sell/success-stories  301
+
+# --- Old URLs still getting visits (404s found in GA4/GSC, 2026-10-09) ---
+/sellers2                             /move-up-sellers                                               301
+/tax-valuations-ridgeview-hills-2023  /blog/2026-notice-of-valuation-protest-playbook-south-denver   301
+
+# --- Duplicate URL variants → clean URL (tested on redirect-test branch deploy, 2026-10-09) ---
+# Netlify serves /x.html and /x/ from the same file as /x (200), so these are forced (!).
+/index.html  /  301!
+/about.html  /about  301!
+/assumable-loans.html  /assumable-loans  301!
+/blog.html  /blog  301!
+/buy-before-you-sell.html  /buy-before-you-sell  301!
+/clientclarity-demo.html  /clientclarity-demo  301!
+/contact.html  /contact  301!
+/expired-listings.html  /expired-listings  301!
+/first-time-homebuyers.html  /first-time-homebuyers  301!
+/first-time-homesellers.html  /first-time-homesellers  301!
+/investor-tools.html  /investor-tools  301!
+/move-up-sellers.html  /move-up-sellers  301!
+/my-seller-promise.html  /my-seller-promise  301!
+/neighborhoods.html  /neighborhoods  301!
+/new-construction.html  /new-construction  301!
+/privacy-policy.html  /privacy-policy  301!
+/properties.html  /properties  301!
+/relocation.html  /relocation  301!
+/renovate-before-selling.html  /renovate-before-selling  301!
+/resources.html  /resources  301!
+/sell.html  /sell  301!
+/terms.html  /terms  301!
+/tools.html  /tools  301!
+/what-to-fix-before-selling.html  /what-to-fix-before-selling  301!
+# Trailing-slash variants are NOT redirected here: Netlify ignores trailing slashes when
+# matching rules, so "/:a/ /:a 301!" loops (tested 2026-10-09). Canonical tags handle them.

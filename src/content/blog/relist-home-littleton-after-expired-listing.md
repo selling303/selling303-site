@@ -128,7 +128,7 @@ relatedPosts:
 
 <p><strong>When to switch:</strong> If your agent was passive on marketing, slow to communicate, didn't push back on your initial price, or didn't provide data-driven feedback on why the listing wasn't attracting offers — those are process failures. An <a href="/expired-listings">expired listing specialist</a> approaches the relist differently from the start: a corrected CMA before the listing goes live, a 30-day marketing launch plan, and weekly performance reviews against showing data and online engagement metrics.</p>
 
-<p>Jacob Stark lists every home in South Denver under a transparent <a href="/my-seller-promise">Seller Promise</a> — a defined set of commitments covering pricing strategy, marketing execution, and communication standards. That approach has produced a 100.6% sale-to-list ratio across $46M+ in closed volume, because the pricing is right before the listing goes active, not corrected after it stalls.</p>
+<p>Jacob Stark lists every home in South Denver under a transparent <a href="/my-seller-promise">Seller Promise</a> — a defined set of commitments covering pricing strategy, marketing execution, and communication standards. That approach has produced a 101.8% sale-to-list ratio across $50M+ in closed volume, because the pricing is right before the listing goes active, not corrected after it stalls.</p>
 
 <h2 id="checklist">What's the Complete Relist Checklist for Littleton Sellers?</h2>
 

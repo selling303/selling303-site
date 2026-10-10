@@ -224,7 +224,7 @@ relatedPosts:
 
 <p>Eight days is fast. For context, the broader Denver metro showed a 16-day median DIM in March 2026 per the DMAR Market Trends Report. Highlands Ranch is running roughly half of metro speed at the median — a function of consistent demand from <a href="/relocation">relocation buyers</a> and move-up families in the $700K–$900K band.</p>
 
-<p>The 99% close-to-list ratio is also worth pausing on. It says listings priced correctly are closing within 1% of asking — a tight band that rewards strategic pricing and punishes either overshoots or under-list "bait" pricing. Jacob Stark's career sale-to-list ratio sits at 100.6%, which means his listings, on average, close above asking. That's the difference between a strategic price and a hopeful one.</p>
+<p>The 99% close-to-list ratio is also worth pausing on. It says listings priced correctly are closing within 1% of asking — a tight band that rewards strategic pricing and punishes either overshoots or under-list "bait" pricing. Jacob Stark's career sale-to-list ratio sits at 101.8%, which means his listings, on average, close above asking. That's the difference between a strategic price and a hopeful one.</p>
 
 <h2 id="failure-rate">Which South Denver Listings Are Failing to Sell — and Why?</h2>
 
@@ -240,7 +240,7 @@ relatedPosts:
 
 <p><strong>First, don't wait for "better" data — the data is already here.</strong> April 2026 closed strong. Pending volume is up. Inventory is tight. The case for waiting until June or July to list weakens with every month the pending pipeline outpaces closings — and the affordability backdrop tracked by <a href="https://www.freddiemac.com/pmms" target="_blank" rel="noopener">Freddie Mac's Primary Mortgage Market Survey</a> isn't shifting in waiters' favor either. If you've been on the fence about a move-up sale, May is the spring window, not later.</p>
 
-<p><strong>Second, price to the 99% close-to-list reality, not the 105% wishful one.</strong> Highlands Ranch sellers got 99% of asking at the median in April. Listings that overshot that band are sitting in the Withdrawn and Expired columns, not the Closed one. Strategic pricing means listing at — or just under — what your home will actually transact at, then letting the offer count drive the final number above asking. That's how Jacob's listings have averaged 100.6% sale-to-list across $46M+ in production.</p>
+<p><strong>Second, price to the 99% close-to-list reality, not the 105% wishful one.</strong> Highlands Ranch sellers got 99% of asking at the median in April. Listings that overshot that band are sitting in the Withdrawn and Expired columns, not the Closed one. Strategic pricing means listing at — or just under — what your home will actually transact at, then letting the offer count drive the final number above asking. That's how Jacob's listings have averaged 101.8% sale-to-list across $50M+ in production.</p>
 
 <p><strong>Third, run the dual-transaction math now, not later.</strong> If you're selling in Centennial and buying in Highlands Ranch, or selling in Littleton and moving up to Castle Pines, the timing logic is harder than it looks. Equity position, contingency mechanics, bridge options, and rent-back terms all interact. Jacob has walked through this with dozens of South Denver families — see the <a href="/blog/selling-centennial-buying-highlands-ranch-coordinate-transactions">dual-transaction coordination playbook</a> or <a href="/blog/move-up-timing-castle-pines-2026">move-up timing for Castle Pines</a> for the move-up framework.</p>
 

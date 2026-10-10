@@ -306,7 +306,7 @@ relatedPosts:
 
 <p><strong>Managing the gap.</strong> Whether it's a rent-back, a bridge loan, or a simultaneous close, the bridge strategy is built into the contract structure from day one. Jacob Stark negotiates post-closing occupancy terms at the time of the Centennial listing agreement, not after you're already under contract.</p>
 
-<p>With over <a href="https://selling303.com">$46M in closed volume</a> and a 100.6% sale-to-list ratio, Jacob Stark has coordinated dual transactions across the South Denver Metro — including the specific Centennial-to-Highlands-Ranch corridor that move-up families commonly follow.</p>
+<p>With over <a href="https://selling303.com">$50M in closed volume</a> and a 101.8% sale-to-list ratio, Jacob Stark has coordinated dual transactions across the South Denver Metro — including the specific Centennial-to-Highlands-Ranch corridor that move-up families commonly follow.</p>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 

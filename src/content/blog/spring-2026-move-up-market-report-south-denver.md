@@ -232,7 +232,7 @@ relatedPosts:
 
 <p><strong>3. Coordination is more critical than the suburb you choose.</strong> Whether you land in Highlands Ranch, Parker, or Castle Pines, the bigger risk is the timing of your sale and your purchase. Bridge loans, contingency offers, rent-back agreements — these mechanics make or break move-up transactions. Get the coordination strategy mapped before you list, not after.</p>
 
-<p>Jacob Stark has helped move-up sellers across South Denver — Centennial to Highlands Ranch, Englewood to Parker, Highlands Ranch to Castle Pines — sell, buy, and coordinate. The 100.6 percent average sale-to-list ratio Jacob has earned for sellers isn't an accident. It's the result of pricing strategy, presentation discipline, and the kind of marketing relaunch playbook that gets your starter home sold so the move-up math actually works.</p>
+<p>Jacob Stark has helped move-up sellers across South Denver — Centennial to Highlands Ranch, Englewood to Parker, Highlands Ranch to Castle Pines — sell, buy, and coordinate. The 101.8 percent average sale-to-list ratio Jacob has earned for sellers isn't an accident. It's the result of pricing strategy, presentation discipline, and the kind of marketing relaunch playbook that gets your starter home sold so the move-up math actually works.</p>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 

@@ -74,7 +74,7 @@ relatedPosts:
 
 <p>Lone Tree is one of the most active new construction markets in South Denver. Shea Homes, Toll Brothers, and a rotating cast of other builders have built and are building across RidgeGate, Heritage Hills, and the eastern expansion areas near Lincoln Station. Per REcolorado MLS data, <a href="/neighborhoods/lone-tree">Lone Tree homes</a> closed in Q1 2026 at a median of $859,500, with 44 active residential listings carrying a median list price of $1,212,500. That is a premium market — and a market where incentives are used aggressively to move standing inventory.</p>
 
-<p>This guide decodes what Lone Tree builder incentives actually mean for a buyer's bottom line. Jacob Stark has negotiated new construction deals across South Denver with $46M+ sold and a 100.6% sale-to-list ratio on the representation side. The goal here is not to talk you out of new construction — it is a great fit for plenty of Lone Tree buyers. The goal is to make sure you understand what you are actually being offered.</p>
+<p>This guide decodes what Lone Tree builder incentives actually mean for a buyer's bottom line. Jacob Stark has negotiated new construction deals across South Denver with $50M+ sold and a 101.8% sale-to-list ratio on the representation side. The goal here is not to talk you out of new construction — it is a great fit for plenty of Lone Tree buyers. The goal is to make sure you understand what you are actually being offered.</p>
 
 <h2 id="lone-tree-market">What Does the Lone Tree New Construction Market Look Like in 2026?</h2>
 

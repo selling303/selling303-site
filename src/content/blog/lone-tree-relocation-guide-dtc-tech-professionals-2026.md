@@ -160,7 +160,7 @@ relatedPosts:
 
 <p>Third, lender pre-approval written for an out-of-state purchase needs to specifically reference a Colorado property and a Colorado underwriter. Most out-of-state lenders can handle this, but the lender that wrote your last refinance in California or Texas is often not the right fit for a Colorado purchase. Front Range lenders experienced with Colorado relocation closings know the local appraisal pace, condo-warrantability checks, and Colorado-specific contract timing — and Jacob Stark is happy to make the introduction.</p>
 
-<p>Jacob Stark has helped tech professionals close on Lone Tree homes from California, Washington, Texas, New York, Massachusetts, and Florida — with $46M+ sold across South Denver and a 100.6 percent sale-to-list ratio on the representation side. The process is well-rehearsed.</p>
+<p>Jacob Stark has helped tech professionals close on Lone Tree homes from California, Washington, Texas, New York, Massachusetts, and Florida — with $50M+ sold across South Denver and a 101.8 percent sale-to-list ratio on the representation side. The process is well-rehearsed.</p>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 
