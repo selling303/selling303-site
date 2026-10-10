@@ -118,7 +118,5 @@
 /terms.html  /terms  301!
 /tools.html  /tools  301!
 /what-to-fix-before-selling.html  /what-to-fix-before-selling  301!
-# Trailing slash → no slash (site uses trailingSlash: 'never')
-/:a/  /:a  301!
-/:a/:b/  /:a/:b  301!
-/:a/:b/:c/  /:a/:b/:c  301!
+# Trailing-slash variants are NOT redirected here: Netlify ignores trailing slashes when
+# matching rules, so "/:a/ /:a 301!" loops (tested 2026-10-09). Canonical tags handle them.
