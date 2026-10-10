@@ -234,7 +234,7 @@ relatedPosts:
 <p>Seller concessions are credits you offer the buyer to cover closing costs, rate buydowns, or repairs. In March 2026, 63.14% of Denver Metro sellers offered some form of concession according to DMAR. Whether you should depends on your pricing strategy, the buyer pool at your price point, and how quickly you need to close.</p>
 
 <blockquote>
-<strong>Selling your first home in Centennial or South Denver?</strong> Jacob Stark lists homes using a data-driven pricing strategy backed by a 100.6% sale-to-list ratio and $46M+ in closed transactions. <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">Schedule a free consultation</a> or call 303-997-0634 to start planning your sale.
+<strong>Selling your first home in Centennial or South Denver?</strong> Jacob Stark lists homes using a data-driven pricing strategy backed by a 101.8% sale-to-list ratio and $50M+ in closed transactions. <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">Schedule a free consultation</a> or call 303-997-0634 to start planning your sale.
 </blockquote>
 
 <p><small><em>Market data sourced from the <a href="https://www.dmarealtors.com" target="_blank" rel="noopener">Denver Metro Association of REALTORS® (DMAR) March 2026 Market Trends Report</a> and Jacob Stark's REcolorado MLS analysis of Centennial closed sales, Q1 2026. Statistics reflect single-family residential transactions in the Denver Metro market area.</em></small></p>

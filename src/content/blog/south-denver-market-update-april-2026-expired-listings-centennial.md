@@ -185,7 +185,7 @@ relatedPosts:
 
 <p>The Centennial sellers who will clear the market in the remainder of this spring share a few characteristics. They recognize that the expired listing record is permanent, but the next 30 days are not. They price to current absorption. They invest in a refreshed presentation that buyers and agents read as a genuine strategic change. And they launch inside the April–May window where DMAR data shows demand is actively moving.</p>
 
-<p>Jacob Stark has worked with move-up sellers, expired-listing sellers, and first-time sellers throughout Centennial, Highlands Ranch, Littleton, and the broader South Denver Metro. Jacob Stark negotiates on a $46M+ career sales base and has delivered a 100.6% sale-to-list ratio across recent client outcomes — a signal that strategic pricing and active marketing, not aggressive list prices, are what actually close deals in this environment.</p>
+<p>Jacob Stark has worked with move-up sellers, expired-listing sellers, and first-time sellers throughout Centennial, Highlands Ranch, Littleton, and the broader South Denver Metro. Jacob Stark negotiates on a $50M+ career sales base and has delivered a 101.8% sale-to-list ratio across recent client outcomes — a signal that strategic pricing and active marketing, not aggressive list prices, are what actually close deals in this environment.</p>
 
 <p>If you are sitting on an expired Centennial listing and weighing whether to relist in April or wait, the data points in one direction. Spring absorption is here. It will not stay strong indefinitely. A specialist pricing analysis, a corrected launch strategy, and a relist inside the next 30–45 days is the path with the strongest odds of clearing the market at a defensible price.</p>
 

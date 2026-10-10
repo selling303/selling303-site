@@ -87,3 +87,7 @@
 /301-w-lehow-ave-14b-englewood-co-80110                  /sell/success-stories  301
 /9559-w-coal-mine-avenue-unit-a-littleton-co-80123       /sell/success-stories  301
 /4360-w-wagon-trail-dr-denver-co-80123                   /sell/success-stories  301
+
+# --- Old URLs still getting visits (404s found in GA4/GSC, 2026-10-09) ---
+/sellers2                             /move-up-sellers                                               301
+/tax-valuations-ridgeview-hills-2023  /blog/2026-notice-of-valuation-protest-playbook-south-denver   301

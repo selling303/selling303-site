@@ -227,7 +227,7 @@ relatedPosts:
 
 <blockquote style="background: #f4f7f9; border-left: 4px solid #002a3a; padding: 1.5rem; margin: 2rem 0; border-radius: 0 8px 8px 0;">
 <p style="margin: 0 0 0.5rem; font-size: 1.1rem;"><strong>Thinking about your first home in Lakewood?</strong></p>
-<p style="margin: 0 0 1rem;">Jacob Stark has sold over $46 million in South Denver and west-side homes and works specifically with first-time buyers navigating their first MLS purchase. Get a clear shopping plan before you start touring — pricing, lender prep, ZIP fit, FHA strategy.</p>
+<p style="margin: 0 0 1rem;">Jacob Stark has sold over $50 million in South Denver and west-side homes and works specifically with first-time buyers navigating their first MLS purchase. Get a clear shopping plan before you start touring — pricing, lender prep, ZIP fit, FHA strategy.</p>
 <p style="margin: 0;"><strong>Call Jacob at 303-997-0634</strong> or <a href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy">book a 30-minute first-time-buyer consultation</a>.</p>
 </blockquote>
 

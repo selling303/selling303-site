@@ -73,7 +73,7 @@ relatedPosts:
 
 <p>This is one of the most common reasons an Englewood listing ends up in the <a href="/expired-listings">expired listings cluster</a>. Photo quality is rarely the first thing a seller looks at after an expiration — most look at price first. But in <a href="/neighborhoods/englewood">Englewood, Colorado</a>'s competitive mid-tier, the data shows photo presentation often does more of the heavy lifting than the listing strategy gets credit for. The audit and benchmarks below come from REcolorado MLS data for April 2026 plus what Jacob Stark sees in real listing appointments across Englewood, Centennial, and the broader South Denver Metro.</p>
 
-<p>Jacob Stark has $46M+ sold and a 100.6% sale-to-list ratio across South Denver representation work, with a recurring pattern across recovered Englewood expirations: the listing that finally closed almost always shipped a different photo set than the original. The 4-question audit on this page is the same diagnostic Jacob runs at every Englewood relist consultation.</p>
+<p>Jacob Stark has $50M+ sold and a 101.8% sale-to-list ratio across South Denver representation work, with a recurring pattern across recovered Englewood expirations: the listing that finally closed almost always shipped a different photo set than the original. The 4-question audit on this page is the same diagnostic Jacob runs at every Englewood relist consultation.</p>
 
 <h2 id="data-gap">What Does the Englewood Sold-vs-Expired Data Actually Show?</h2>
 

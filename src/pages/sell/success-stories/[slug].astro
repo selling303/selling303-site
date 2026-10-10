@@ -130,12 +130,16 @@ const reviewSchema = {
     "itemReviewed": { "@id": "https://selling303.com/#business" },
     "publisher": { "@id": "https://selling303.com/#organization" },
   })),
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": 5,
-    "reviewCount": data.testimonials.length,
-    "bestRating": 5,
-  },
+  // Only emit AggregateRating when the story has at least one review —
+  // reviewCount 0 is invalid and Google flags it ("reviewCount must be positive").
+  ...(data.testimonials.length > 0 ? {
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": 5,
+      "reviewCount": data.testimonials.length,
+      "bestRating": 5,
+    },
+  } : {}),
 };
 
 const articleSchema = {

@@ -1,20 +1,21 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import { execSync } from 'node:child_process';
-import { existsSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
 // Draft success stories — excluded from sitemap (pages render with noindex meta tag).
-// Remove a slug from this list once the story has real content + photos.
-const DRAFT_SUCCESS_STORY_SLUGS = [
-  '8781-flora-ct-arvada',
-  '22461-e-union-circle-aurora',
-  '4360-w-wagon-trail-dr-denver',
-  '9559-w-coal-mine-ave-littleton',
-  '301-w-lehow-ave-englewood',
-  '10315-ravenswood-ln-highlands-ranch',
-];
+// Derived from `draft: true` in each story's frontmatter, so a story leaves the
+// sitemap automatically while it's a draft and returns once the flag is removed.
+const SUCCESS_STORY_DIR = new URL('./src/content/success-stories/', import.meta.url);
+const DRAFT_SUCCESS_STORY_SLUGS = readdirSync(SUCCESS_STORY_DIR)
+  .filter((f) => f.endsWith('.md'))
+  .filter((f) => {
+    const frontmatter = readFileSync(new URL(f, SUCCESS_STORY_DIR), 'utf8').split(/^---\s*$/m)[1] || '';
+    return /^draft:\s*true\s*$/m.test(frontmatter);
+  })
+  .map((f) => f.replace(/\.md$/, ''));
 
 // Build-time fallback for lastmod when git lookup fails (e.g., un-tracked files).
 const BUILD_ISO = new Date().toISOString();
