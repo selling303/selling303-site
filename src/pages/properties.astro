@@ -1,5 +1,5 @@
 ---
-import { agent, brokerage } from '../data/agent';
+import { agent } from '../data/agent';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import RealScoutLoader from '../components/RealScoutLoader.astro';
@@ -50,7 +50,7 @@ import RealScoutLoader from '../components/RealScoutLoader.astro';
            text Google sees an almost empty page. -->
       <div class="properties-intro">
         <h2 class="section-heading">Homes Jacob Stark Has Listed and Sold in the South Denver Metro</h2>
-        <p>These are my current, in-contract, and recently sold listings with {brokerage.name} across Littleton, Highlands Ranch, Centennial, Englewood, Parker, Lakewood, Lone Tree, Castle Pines, and Greenwood Village. I focus on families who've outgrown their home and need to sell one house and buy the next, and every listing starts with a plan for pricing, prep, and timing under my <a href="/my-seller-promise">Seller Promise</a>.</p>
+        <p>These are my current, in-contract, and recently sold listings across Littleton, Highlands Ranch, Centennial, Englewood, Parker, Lakewood, Lone Tree, Castle Pines, and Greenwood Village. I focus on clients who've outgrown their home and need to sell one house and buy the next, and every listing starts with a plan for pricing, prep, and timing under my <a href="/my-seller-promise">Seller Promise</a>.</p>
         <p>Across $50M+ in closed sales, my listings have a 101.8% sale-to-list ratio. Want the story behind a sale? Read my <a href="/sell/success-stories">success stories</a>. Thinking about your next move? See <a href="/buy-before-you-sell">how to buy your next home before selling</a>, or call or text me at <a href={agent.phoneHref}>{agent.phone}</a>.</p>
       </div>
       <realscout-your-listings
