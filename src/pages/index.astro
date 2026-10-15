@@ -49,30 +49,10 @@ const neighborhoods = [
   ['Lone Tree', 'lone-tree'], ['Castle Pines', 'castle-pines'], ['Greenwood Village', 'greenwood-village'],
 ];
 
-// Pull testimonials from all published success stories so the homepage
-// AggregateRating in BaseLayout's RealEstateAgent block is backed by real
-// Review schema entries. Reviews attach to the same @id, so Google merges
-// them with the existing agent profile.
-const successStories = await getCollection('successStories', (entry) => !entry.data.draft);
-const homepageReviewSchema = {
-  "@context": "https://schema.org",
-  "@type": ["Person", "RealEstateAgent"],
-  "@id": "https://selling303.com/#agent",
-  "review": successStories.flatMap((s) =>
-    s.data.testimonials.map((t) => ({
-      "@type": "Review",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": t.rating,
-        "bestRating": 5,
-      },
-      "author": { "@type": "Person", "name": t.name },
-      "reviewBody": t.text,
-      "datePublished": s.data.closeDate,
-      "publisher": { "@id": "https://selling303.com/#organization" },
-    }))
-  ),
-};
+// Review/AggregateRating schema intentionally removed 2026-10-14: Google treats
+// self-hosted reviews on Person/LocalBusiness markup as self-serving (ineligible for
+// stars), and the 8 marked-up reviews weren't visible on the page. Reviews now live as
+// visible text on /reviews.
 
 const ldSchema1 = {
   "@context": "https://schema.org",
@@ -204,15 +184,9 @@ const ldSchema1 = {
       "name": "Denver Metro Association of REALTORS (DMAR)"
     }
   ],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": agent.stats.googleRating,
-    "reviewCount": agent.stats.googleReviewCount,
-    "bestRating": "5"
-  },
   "sameAs": [
     brokerage.agentProfileUrl,
-    "https://www.google.com/maps/place/?q=Jacob+Stark+Real+Estate",
+    agent.googleProfileUrl,
     "https://www.zillow.com/profile/jacobstarkrealtor",
     "https://www.realtor.com/realestateagents/5ef4c015aa95460011ac4a5b",
     "https://www.linkedin.com/in/jacobstark",
@@ -286,9 +260,6 @@ const ldSchema2 = {
          publisher reference across all Article schema. -->
     <script type="application/ld+json" set:html={JSON.stringify(ldSchema2)}></script>
 
-    <!-- Schema: Reviews backing the AggregateRating above, pulled from published
-         success-story testimonials. Same @id as the agent block. -->
-    <script type="application/ld+json" set:html={JSON.stringify(homepageReviewSchema)}></script>
   </Fragment>
 
   <!-- ========== 1 · HERO: THE QUESTION, THEN "DID YOU KNOW YOU CAN" ========== -->
@@ -310,7 +281,7 @@ const ldSchema2 = {
             <a href={bookUrl} class="btn btn--primary btn--lg hp-btn-navy" target="_blank" rel="noopener">Get Your Next-Move Plan</a>
             <a href="#plan" class="btn btn--lg hp-btn-ghost">See How It Works ↓</a>
           </div>
-          <p class="hp-trust">★ {agent.stats.googleRating} from {agent.stats.googleReviewCount} Google reviews · Free 30-minute call</p>
+          <p class="hp-trust"><a href="/reviews" class="hp-trust__link">★ {agent.stats.googleRating} from {agent.stats.googleReviewCount} Google reviews</a> · Free 30-minute call</p>
         </div>
         <div class="hp-hero__visual">
           <figure class="hp-hero__after">
@@ -598,6 +569,7 @@ const ldSchema2 = {
   .hp-cans sup { font-size: 0.8rem; color: #4a5458; }
   .hp-check { flex: none; width: 28px; height: 28px; border-radius: 50%; background: var(--color-accent); color: var(--color-dark-text); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.95rem; }
   .hp-trust { margin: 1.25rem 0 0; font-size: 0.9rem; color: #4a5458; }
+  .hp-trust__link { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
   .hp-hero__visual { position: relative; padding: 0 0 3.5rem 3.5rem; }
   .hp-hero__visual figure { margin: 0; overflow: hidden; }
   .hp-hero__visual :global(img) { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; height: auto; }

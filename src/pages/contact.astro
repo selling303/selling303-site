@@ -1,5 +1,19 @@
 ---
-import { brokerage } from '../data/agent';
+import { agent } from '../data/agent';
+import { Image } from 'astro:assets';
+import jacobHomeSrc from '../assets/images/jacob-lifestyle-home.jpg';
+
+const serviceAreas = [
+  { name: 'Littleton', slug: 'littleton' },
+  { name: 'Highlands Ranch', slug: 'highlands-ranch' },
+  { name: 'Centennial', slug: 'centennial' },
+  { name: 'Englewood', slug: 'englewood' },
+  { name: 'Parker', slug: 'parker' },
+  { name: 'Lakewood', slug: 'lakewood' },
+  { name: 'Lone Tree', slug: 'lone-tree' },
+  { name: 'Castle Pines', slug: 'castle-pines' },
+  { name: 'Greenwood Village', slug: 'greenwood-village' },
+];
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 ---
@@ -33,125 +47,62 @@ import PageHero from '../components/PageHero.astro';
   />
 
   <!-- ========== CONTACT SECTION ========== -->
+  <!-- Text-first layout (2026-10-14): real online leads text, call, or email Jacob
+       directly. The contact form was removed (it only ever received spam). -->
   <section class="section section--white">
     <div class="container">
       <div class="contact-grid">
-        <!-- LEFT: FORM -->
+        <!-- LEFT: DIRECT CONTACT (primary) -->
         <div>
-          <h2 class="section-heading">Send a Message</h2>
-          <p style="margin-bottom: var(--space-lg);">Tell me a bit about your situation and I'll get back to you within a few hours.</p>
-          <form class="form" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" action="/thank-you">
-            <input type="hidden" name="form-name" value="contact">
-            <div style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;" aria-hidden="true">
-              <label>Don't fill this out if you're human: <input name="bot-field" type="text" tabindex="-1" autocomplete="off" /></label>
-            </div>
-            <div class="form__row">
-              <div class="form__group">
-                <label class="form__label" for="contact-name">Name</label>
-                <input
-                  type="text"
-                  id="contact-name"
-                  name="name"
-                  class="form__input"
-                  placeholder="First Last"
-                  required
-                />
-              </div>
-              <div class="form__group">
-                <label class="form__label" for="contact-email">Email</label>
-                <input
-                  type="email"
-                  id="contact-email"
-                  name="email"
-                  class="form__input"
-                  placeholder="you@email.com"
-                  required
-                />
-              </div>
-            </div>
-            <div class="form__group">
-              <label class="form__label" for="contact-phone">Phone</label>
-              <input
-                type="tel"
-                id="contact-phone"
-                name="phone"
-                class="form__input"
-                placeholder="(303) 555-0000"
-              />
-            </div>
-            <div class="form__group">
-              <label class="form__label" for="contact-interest">I'm interested in...</label>
-              <select id="contact-interest" name="interest" class="form__select">
-                <option value="">Select one</option>
-                <option value="buying">Buying a Home</option>
-                <option value="selling">Selling a Home</option>
-                <option value="both">Buying &amp; Selling</option>
-                <option value="investing">Investment Property</option>
-                <option value="valuation">Home Valuation</option>
-                <option value="other">Something Else</option>
-              </select>
-            </div>
-            <div class="form__group">
-              <label class="form__label" for="contact-message">Message</label>
-              <textarea
-                id="contact-message"
-                name="message"
-                class="form__textarea"
-                placeholder="Tell me about your timeline, budget, neighborhood preferences, or anything else that's helpful."
-                rows="5"
-              ></textarea>
-            </div>
-            <button type="submit" class="btn btn--primary btn--lg">Send Message</button>
-          </form>
+          <h2 class="section-heading">The Fastest Way to Reach Me</h2>
+          <p style="margin-bottom: var(--space-lg);">Send me a text. I usually reply within a few hours. Tell me a little about your situation, like where you live now, what you're thinking about, and your rough timing.</p>
+
+          <div class="contact-actions">
+            <a href="sms:+13039970634?&body=Hi%20Jacob%2C%20I%20found%20you%20on%20selling303.com%20and%20" class="btn btn--primary btn--lg">Text Jacob: 303-997-0634</a>
+            <a href={agent.phoneHref} class="btn btn--outline-dark">Call 303-997-0634</a>
+            <a href="mailto:jacob@selling303.com" class="btn btn--outline-dark">Email jacob@selling303.com</a>
+            <a href={agent.bookingUrls.general} class="btn btn--outline-dark" target="_blank" rel="noopener">Book 30 Minutes on My Calendar</a>
+          </div>
+          <p class="contact-google">
+            <a href={agent.googleProfileUrl} target="_blank" rel="noopener">Find me on Google</a>
+            <span aria-hidden="true">·</span>
+            <a href="/reviews">★ {agent.stats.googleRating} from {agent.stats.googleReviewCount} Google reviews</a>
+          </p>
+
         </div>
 
-        <!-- RIGHT: CONTACT INFO -->
-        <div>
-          <h2 class="section-heading">Reach Out Directly</h2>
-
-          <div class="contact-info-item">
-            <div class="contact-info-item__icon">&#x1F4DE;</div>
-            <div>
-              <div class="contact-info-item__label">Phone / Text</div>
-              <div class="contact-info-item__value"><a href="tel:3039970634">303-997-0634</a></div>
-            </div>
-          </div>
-
-          <div class="contact-info-item">
-            <div class="contact-info-item__icon">&#x2709;</div>
-            <div>
-              <div class="contact-info-item__label">Email</div>
-              <div class="contact-info-item__value"><a href="mailto:jacob@selling303.com">jacob@selling303.com</a></div>
-            </div>
-          </div>
-
-          <div class="contact-info-item">
-            <div class="contact-info-item__icon">&#x1F3E2;</div>
-            <div>
-              <div class="contact-info-item__label">Brokerage</div>
-              <div class="contact-info-item__value">{brokerage.name}<br />South Denver Metro</div>
-            </div>
-          </div>
-
-          <div style="margin-top: var(--space-lg);">
-            <h3 style="margin-bottom: var(--space-sm);">Schedule a Call</h3>
-            <p style="margin-bottom: var(--space-sm);">Book a free 15-minute strategy call at a time that works for you.</p>
-            <a
-              href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy"
-              class="btn btn--primary btn--lg"
-              target="_blank"
-              rel="noopener"
-            >
-              Book a Time
-            </a>
-          </div>
-
-          <div style="margin-top: var(--space-lg);">
-            <h3 style="margin-bottom: var(--space-sm);">Service Area</h3>
-            <p>I specialize in 9 South Denver Metro communities: Littleton, Highlands Ranch, Centennial, Englewood, Parker, Lakewood, Lone Tree, Castle Pines, and Greenwood Village. Covering Arapahoe, Douglas, and Jefferson counties.</p>
-          </div>
+        <!-- RIGHT: PHOTO -->
+        <div class="contact-photo">
+          <Image src={jacobHomeSrc} alt="Jacob Stark, South Denver Metro REALTOR, at home in his living room" width={800} format="webp" quality={80} loading="eager" />
         </div>
       </div>
     </div>
   </section>
+
+  <!-- ========== SERVICE AREA (below the fold, local SEO + internal links) ========== -->
+  <section class="section contact-area">
+    <div class="container">
+      <h2 class="contact-area__title">Serving the South Denver Metro</h2>
+      <p class="contact-area__text">Arapahoe, Douglas, and Jefferson counties, including:</p>
+      <ul class="contact-area__list">
+        {serviceAreas.map((a) => (
+          <li><a href={`/neighborhoods/${a.slug}`}>{a.name}</a></li>
+        ))}
+      </ul>
+    </div>
+  </section>
 </BaseLayout>
+
+<style>
+  .contact-actions { display: flex; flex-direction: column; gap: 0.875rem; max-width: 420px; }
+  .contact-google { max-width: 420px; margin: 2rem 0 0; padding-top: 1.25rem; border-top: 1px solid var(--color-border); font-size: 0.95rem; color: #4a5458; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; }
+  .contact-google a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 3px; }
+  .contact-actions .btn { width: 100%; text-align: center; }
+  .contact-photo img { width: 100%; height: 100%; max-height: 520px; object-fit: cover; object-position: 48% 40%; border-radius: 16px; display: block; }
+  .contact-area { background: var(--color-background); padding-top: var(--space-xl); padding-bottom: var(--space-xl); }
+  .contact-area__title { font-family: var(--font-heading); font-weight: 400; font-size: 1.5rem; color: var(--color-primary); margin: 0 0 0.25rem; }
+  .contact-area__text { color: #4a5458; margin: 0 0 1rem; }
+  .contact-area__list { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .contact-area__list a { display: inline-block; padding: 0.4rem 0.9rem; border: 1px solid var(--color-border); border-radius: 999px; background: #fff; color: var(--color-primary); text-decoration: none; font-size: 0.95rem; }
+  .contact-area__list a:hover { border-color: var(--color-primary); }
+</style>

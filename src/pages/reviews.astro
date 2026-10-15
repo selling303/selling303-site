@@ -1,0 +1,165 @@
+---
+// /reviews — every Google review, rendered as static HTML text so all crawlers
+// (including AI answer engines that don't run JavaScript) can read them.
+// Data: src/data/reviews.json (pulled from Google Business Profile Manager).
+// Rating + count read from agent.ts so the number can't drift from the rest of the site.
+// No Review/aggregateRating schema here on purpose: Google treats self-hosted reviews
+// on LocalBusiness/Person markup as self-serving and ineligible for stars.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTABanner from '../components/CTABanner.astro';
+import { agent, brokerage } from '../data/agent';
+import reviews from '../data/reviews.json';
+
+const sorted = [...reviews].sort((a, b) => b.date.localeCompare(a.date));
+const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const fmt = (d: string) => {
+  const [y, m] = d.split('-');
+  return `${months[Number(m) - 1]} ${y}`;
+};
+const initials = (n: string) =>
+  n.replace(/[^A-Za-z&\s]/g, '').trim().split(/\s+/).slice(0, 2).map((w) => w[0]?.toUpperCase()).join('');
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Jacob Stark Reviews",
+  "url": "https://selling303.com/reviews",
+  "about": {
+    "@type": "RealEstateAgent",
+    "name": agent.name,
+    "url": "https://selling303.com",
+    "worksFor": { "@type": "Organization", "name": brokerage.legalName }
+  }
+};
+---
+
+<BaseLayout
+  title={`Jacob Stark Reviews | ${agent.stats.googleRating}★ from ${agent.stats.googleReviewCount} Google Reviews | Selling 303`}
+  description={`Jacob Stark reviews: read all ${agent.stats.googleReviewCount} Google reviews for Jacob Stark, REALTOR® at ${brokerage.name}, rated ${agent.stats.googleRating} stars by buyers and sellers across the South Denver Metro.`}
+  ogUrl="https://selling303.com/reviews"
+  currentPage="reviews"
+  headerVariant="solid"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(pageSchema)} />
+  </Fragment>
+
+  <section class="rv-hero">
+    <div class="container rv-hero__inner">
+      <span class="rv-label">Client reviews</span>
+      <h1>Jacob Stark Reviews: What Clients Say About Working With Jacob</h1>
+      <p class="rv-lead">
+        Jacob Stark, REALTOR® at {brokerage.name}, has a {agent.stats.googleRating}-star rating from
+        {' '}{agent.stats.googleReviewCount} Google reviews. Every review is below, word for word,
+        from buyers and sellers he has worked with across the Denver Metro.
+      </p>
+      <div class="rv-score" aria-label={`${agent.stats.googleRating} out of 5 stars from ${agent.stats.googleReviewCount} Google reviews`}>
+        <span class="rv-score__num">{agent.stats.googleRating}</span>
+        <span class="rv-score__meta">
+          <span class="rv-stars" aria-hidden="true">★★★★★</span>
+          <span>{agent.stats.googleReviewCount} Google reviews</span>
+        </span>
+      </div>
+      <div class="rv-btns">
+        <a href={agent.googleProfileUrl} class="btn btn--primary" target="_blank" rel="noopener">See Them on Google</a>
+        <a href={agent.bookingUrls.general} class="btn btn--outline-dark" target="_blank" rel="noopener">Book 30 Minutes with Jacob</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="rv-list">
+    <div class="container">
+      <div class="rv-grid" id="rv-grid">
+        {sorted.map((r) => (
+          <figure class="rv-card">
+            <div class="rv-card__head">
+              <span class="rv-avatar" aria-hidden="true">{initials(r.name)}</span>
+              <div>
+                <figcaption class="rv-name">{r.name}</figcaption>
+                <span class="rv-meta">
+                  <span class="rv-stars rv-stars--sm" aria-label="5 out of 5 stars">★★★★★</span>
+                  <span>Google · {fmt(r.date)}</span>
+                </span>
+              </div>
+            </div>
+            <blockquote class="rv-text"><p>{r.text}</p></blockquote>
+          </figure>
+        ))}
+      </div>
+      <p class="rv-note">
+        Reviews are shown exactly as written on Jacob's Google Business Profile. Dates are approximate to the month.
+        Some reviews were left while Jacob was with previous brokerages.
+      </p>
+    </div>
+  </section>
+
+  <CTABanner
+    heading="Want an Experience Like This?"
+    subtext="Start with a 30-minute conversation about your move. No pitch, no pressure."
+  />
+  <script>
+    // Masonry that keeps reading order: newest reviews across the top, oldest at the bottom.
+    // Each card (already sorted newest-first in the HTML) goes into the currently shortest
+    // column. Without JS the CSS-columns fallback still renders every review.
+    const grid = document.getElementById('rv-grid');
+    if (grid) {
+      const cards = Array.from(grid.querySelectorAll('.rv-card'));
+      let current = 0;
+      const colCount = () => (grid.clientWidth >= 1000 ? 3 : grid.clientWidth >= 660 ? 2 : 1);
+      const layout = () => {
+        const n = colCount();
+        if (n === current) return;
+        current = n;
+        grid.innerHTML = '';
+        if (n === 1) { grid.classList.remove('is-masonry'); cards.forEach((c) => grid.appendChild(c)); return; }
+        grid.classList.add('is-masonry');
+        const cols = Array.from({ length: n }, () => {
+          const col = document.createElement('div');
+          col.className = 'rv-col';
+          grid.appendChild(col);
+          return col;
+        });
+        cards.forEach((card) => {
+          const shortest = cols.reduce((a, b) => (b.offsetHeight < a.offsetHeight ? b : a));
+          shortest.appendChild(card);
+        });
+      };
+      layout();
+      let t;
+      window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(layout, 150); });
+    }
+  </script>
+</BaseLayout>
+
+<style>
+  .rv-hero { background: var(--color-background); padding: calc(var(--header-height) + 4rem) 0 3rem; }
+  .rv-hero__inner { max-width: 760px; }
+  .rv-label { display: block; margin-bottom: 0.75rem; font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; color: #8a5a2b; font-weight: 700; }
+  .rv-hero h1 { margin: 0 0 1rem; font-family: var(--font-heading); font-weight: 400; font-size: clamp(2.1rem, 5vw, 3.1rem); line-height: 1.12; color: var(--color-primary); }
+  .rv-lead { font-size: 1.1rem; line-height: 1.65; color: #4a5458; margin: 0; }
+  .rv-score { display: flex; align-items: center; gap: 1rem; margin-top: 2rem; }
+  .rv-score__num { font-family: var(--font-heading); font-size: 3.5rem; line-height: 1; color: var(--color-primary); }
+  .rv-score__meta { display: flex; flex-direction: column; gap: 0.2rem; color: #4a5458; font-size: 0.95rem; }
+  .rv-stars { color: #e3a008; letter-spacing: 0.1em; font-size: 1.35rem; line-height: 1; }
+  .rv-stars--sm { font-size: 0.85rem; }
+  .rv-btns { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.75rem; }
+
+  .rv-list { background: var(--color-background); padding: 1rem 0 5rem; }
+  .rv-grid { columns: 3 320px; column-gap: 1.25rem; }
+  .rv-grid.is-masonry { columns: auto; display: flex; gap: 1.25rem; align-items: flex-start; }
+  .rv-grid :global(.rv-col) { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1.25rem; }
+  .rv-grid.is-masonry .rv-card { margin: 0; }
+  .rv-card { break-inside: avoid; margin: 0 0 1.25rem; background: #fff; border: 1px solid var(--color-border); border-radius: 16px; padding: 1.5rem; }
+  .rv-card__head { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.9rem; }
+  .rv-avatar { flex: none; width: 42px; height: 42px; border-radius: 50%; background: var(--color-primary); color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 0.9rem; }
+  .rv-name { font-weight: 700; color: var(--color-primary); }
+  .rv-meta { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; color: #6b7478; }
+  .rv-text { margin: 0; }
+  .rv-text p { margin: 0; line-height: 1.65; color: #3d4549; font-size: 0.98rem; }
+  .rv-note { margin: 1.5rem auto 0; max-width: 680px; text-align: center; font-size: 0.85rem; color: #6b7478; }
+
+  @media (max-width: 600px) {
+    .rv-hero { padding-top: calc(var(--header-height) + 2.5rem); }
+    .rv-btns .btn { width: 100%; text-align: center; }
+  }
+</style>
