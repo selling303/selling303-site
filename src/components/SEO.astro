@@ -73,16 +73,24 @@ const ogImage = ogImageProp ?? deriveOgImageUrl();
     window.dataLayer = window.dataLayer || [];
     window.gtag = function () { dataLayer.push(arguments); };
 
-    // Phone-link click tracking — fires the tel_click conversion event whenever
-    // a user taps any <a href="tel:..."> on the site. Registered globally so it
-    // covers FloatingCTA, Footer, CTABanner, and every pillar/contact page CTA
-    // without per-page changes. Use capture phase so the event queues before
-    // the browser hands the click off to the dialer.
+    // Contact-click tracking. Real leads mostly text, call, email, or book a
+    // time, so each of those taps fires its own GA4 event (mark them as key
+    // events in GA4 once they appear). Registered globally so every page's CTAs
+    // are covered without per-page changes. Capture phase so the event queues
+    // before the browser hands off to the dialer / SMS / mail app.
     document.addEventListener('click', function (e) {
-      var a = e.target && e.target.closest && e.target.closest('a[href^="tel:"]');
+      var a = e.target && e.target.closest && e.target.closest('a[href]');
       if (!a) return;
-      gtag('event', 'tel_click', {
-        link_url: a.href,
+      var href = a.getAttribute('href') || '';
+      var name = null;
+      if (/^tel:/i.test(href)) name = 'tel_click';
+      else if (/^sms:/i.test(href)) name = 'sms_click';
+      else if (/^mailto:/i.test(href)) name = 'email_click';
+      else if (/calendar\.google\.com\/appointments/i.test(href)) name = 'booking_click';
+      if (!name) return;
+      if (window.s303InitGA) window.s303InitGA();
+      gtag('event', name, {
+        link_url: href.slice(0, 100),
         link_text: (a.textContent || '').trim().slice(0, 80),
         page_path: location.pathname
       });
