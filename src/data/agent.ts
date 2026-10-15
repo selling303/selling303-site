@@ -57,6 +57,9 @@ export const agent = {
     showing: 'https://calendar.google.com/appointments/schedules/AcZssZ35CgGIsH75xYeJ1Ggzok6fdpJT2KvHfLeE0sxdj89eLwVouLnoQ_9qbRWge_9ik-Ek07111iUJ',
   },
 
+  // Google Business Profile (Maps CID link, pulled 2026-10-14). Used on /reviews and in sameAs schema.
+  googleProfileUrl: 'https://www.google.com/maps?cid=11441515670220050454',
+
   // Updated 2026-09-30 from Jacob's Orchard listing deck (confirmed current).
   stats: {
     salesVolume: '$50M+',
