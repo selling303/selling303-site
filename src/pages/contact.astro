@@ -1,5 +1,5 @@
 ---
-import { brokerage } from '../data/agent';
+import { agent } from '../data/agent';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 ---
@@ -33,14 +33,34 @@ import PageHero from '../components/PageHero.astro';
   />
 
   <!-- ========== CONTACT SECTION ========== -->
+  <!-- Text-first layout (2026-10-14): real online leads text or email Jacob directly;
+       the form is secondary and protected by Netlify reCAPTCHA. -->
   <section class="section section--white">
     <div class="container">
       <div class="contact-grid">
-        <!-- LEFT: FORM -->
+        <!-- LEFT: DIRECT CONTACT (primary) -->
         <div>
-          <h2 class="section-heading">Send a Message</h2>
-          <p style="margin-bottom: var(--space-lg);">Tell me a bit about your situation and I'll get back to you within a few hours.</p>
-          <form class="form" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" action="/thank-you">
+          <h2 class="section-heading">The Fastest Way to Reach Me</h2>
+          <p style="margin-bottom: var(--space-lg);">Send me a text. I usually reply within a few hours. Tell me a little about your situation, like where you live now, what you're thinking about, and your rough timing.</p>
+
+          <div class="contact-actions">
+            <a href="sms:+13039970634?&body=Hi%20Jacob%2C%20I%20found%20you%20on%20selling303.com%20and%20" class="btn btn--primary btn--lg">Text Jacob: 303-997-0634</a>
+            <a href={agent.phoneHref} class="btn btn--outline-dark">Call 303-997-0634</a>
+            <a href="mailto:jacob@selling303.com" class="btn btn--outline-dark">Email jacob@selling303.com</a>
+            <a href={agent.bookingUrls.general} class="btn btn--outline-dark" target="_blank" rel="noopener">Book 30 Minutes on My Calendar</a>
+          </div>
+
+          <div style="margin-top: var(--space-xl);">
+            <h3 style="margin-bottom: var(--space-sm);">Service Area</h3>
+            <p>I specialize in 9 South Denver Metro communities: Littleton, Highlands Ranch, Centennial, Englewood, Parker, Lakewood, Lone Tree, Castle Pines, and Greenwood Village. Covering Arapahoe, Douglas, and Jefferson counties.</p>
+          </div>
+        </div>
+
+        <!-- RIGHT: FORM (secondary) -->
+        <div class="contact-form-card">
+          <h2 class="section-heading">Prefer to Send a Message?</h2>
+          <p style="margin-bottom: var(--space-lg);">Fill this out and I'll get back to you within a few hours.</p>
+          <form class="form" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" data-netlify-recaptcha="true" action="/thank-you">
             <input type="hidden" name="form-name" value="contact">
             <div style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;" aria-hidden="true">
               <label>Don't fill this out if you're human: <input name="bot-field" type="text" tabindex="-1" autocomplete="off" /></label>
@@ -101,57 +121,18 @@ import PageHero from '../components/PageHero.astro';
                 rows="5"
               ></textarea>
             </div>
-            <button type="submit" class="btn btn--primary btn--lg">Send Message</button>
+            <div class="contact-recaptcha" data-netlify-recaptcha="true"></div>
+            <button type="submit" class="btn btn--primary">Send Message</button>
           </form>
-        </div>
-
-        <!-- RIGHT: CONTACT INFO -->
-        <div>
-          <h2 class="section-heading">Reach Out Directly</h2>
-
-          <div class="contact-info-item">
-            <div class="contact-info-item__icon">&#x1F4DE;</div>
-            <div>
-              <div class="contact-info-item__label">Phone / Text</div>
-              <div class="contact-info-item__value"><a href="tel:3039970634">303-997-0634</a></div>
-            </div>
-          </div>
-
-          <div class="contact-info-item">
-            <div class="contact-info-item__icon">&#x2709;</div>
-            <div>
-              <div class="contact-info-item__label">Email</div>
-              <div class="contact-info-item__value"><a href="mailto:jacob@selling303.com">jacob@selling303.com</a></div>
-            </div>
-          </div>
-
-          <div class="contact-info-item">
-            <div class="contact-info-item__icon">&#x1F3E2;</div>
-            <div>
-              <div class="contact-info-item__label">Brokerage</div>
-              <div class="contact-info-item__value">{brokerage.name}<br />South Denver Metro</div>
-            </div>
-          </div>
-
-          <div style="margin-top: var(--space-lg);">
-            <h3 style="margin-bottom: var(--space-sm);">Schedule a Call</h3>
-            <p style="margin-bottom: var(--space-sm);">Book a free 15-minute strategy call at a time that works for you.</p>
-            <a
-              href="https://calendar.google.com/appointments/schedules/AcZssZ1IQnv63S33Xa9RM4uw0QVo3EfHmxpZeKBQQ33xNKijXnIQ-TXY_DHxc6BdCqpNlrFmGEsaF1gy"
-              class="btn btn--primary btn--lg"
-              target="_blank"
-              rel="noopener"
-            >
-              Book a Time
-            </a>
-          </div>
-
-          <div style="margin-top: var(--space-lg);">
-            <h3 style="margin-bottom: var(--space-sm);">Service Area</h3>
-            <p>I specialize in 9 South Denver Metro communities: Littleton, Highlands Ranch, Centennial, Englewood, Parker, Lakewood, Lone Tree, Castle Pines, and Greenwood Village. Covering Arapahoe, Douglas, and Jefferson counties.</p>
-          </div>
         </div>
       </div>
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .contact-actions { display: flex; flex-direction: column; gap: 0.75rem; max-width: 420px; }
+  .contact-actions .btn { width: 100%; text-align: center; }
+  .contact-form-card { background: var(--color-background); border: 1px solid var(--color-border); border-radius: 16px; padding: 1.75rem; }
+  .contact-recaptcha { margin: 0 0 1rem; }
+</style>
