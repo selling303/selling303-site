@@ -10,6 +10,12 @@ import badgeDmar from '../assets/images/ea25_digitalawards_gold.png';
 import badgeRene from '../assets/images/rene-color.png';
 import badge5280 from '../assets/images/5280-magazine-black.png';
 import badgeRtv from '../assets/images/rtv-black.png';
+import badgeFastExpert from '../assets/images/Fast_Exper_5_star_agent_yellow.svg';
+
+// Approved positioning (2026-10-20). Must match SARA, Orchard, Zillow, Realtor.com,
+// Homes.com, FastExpert, and GBP word-for-word. Used for meta description,
+// hero intro line, and Person schema description.
+const positioningStatement = "Jacob Stark is a South Denver Metro REALTOR® with Orchard who helps families who've outgrown their home buy the next one and sell the current one without the double-move stress.";
 
 const ldSchema1 = {
   "@context": "https://schema.org",
@@ -26,7 +32,7 @@ const ldSchema1 = {
   "image": "https://selling303.com/images/jacob-stark-headshot.png",
   "telephone": "+1-303-997-0634",
   "email": "jacob@selling303.com",
-  "description": "South Denver Metro REALTOR specializing in Littleton, Highlands Ranch, Centennial, Parker, and surrounding communities. Guiding buyers and sellers with clarity, confidence, and control.",
+  "description": positioningStatement,
   "worksFor": {
     "@type": "Organization",
     "name": brokerage.name,
@@ -120,7 +126,11 @@ const ldSchema1 = {
     "South Denver Metro real estate",
     "comparative market analysis",
     "real estate negotiation",
-    "investment property analysis"
+    "investment property analysis",
+    "move-up buyers",
+    "move-up sellers",
+    "buy before you sell",
+    "selling a home and buying the next one"
   ],
   "hasCredential": [
     {
@@ -134,7 +144,8 @@ const ldSchema1 = {
     "DMAR Excellence Award — Gold Level (2025)",
     "DMAR Excellence Award — Silver Level (2026)",
     "5280 Magazine Top Real Estate Producer — Black Diamond",
-    "Real Trends Verified"
+    "Real Trends Verified",
+    "FastExpert 5-Star Agent"
   ],
   "memberOf": [
     {
@@ -144,7 +155,7 @@ const ldSchema1 = {
   ],
   "sameAs": [
     brokerage.agentProfileUrl,
-    agent.googleProfileUrl,
+    "https://maps.app.goo.gl/7deY4WSgVDB9ghyZ7",
     "https://www.zillow.com/profile/jacobstarkrealtor",
     "https://www.realtor.com/realestateagents/5ef4c015aa95460011ac4a5b",
     "https://www.linkedin.com/in/jacobstark",
@@ -189,8 +200,8 @@ const ldSchema2 = {
 ---
 
 <BaseLayout
-  title="About Jacob Stark | Selling 303 — South Denver REALTOR"
-  description="Jacob Stark is your guide through South Denver Metro real estate. Learn how he helps families buy and sell with clarity, confidence, and control."
+  title={`About Jacob Stark | Littleton, CO REALTOR® with ${brokerage.name}`}
+  description={positioningStatement}
   ogType="profile"
   ogUrl="https://selling303.com/about"
   currentPage="about"
@@ -213,8 +224,16 @@ const ldSchema2 = {
   <PageHero
     label="About Jacob"
     heading="Meet Jacob Stark"
-    subtext={`REALTOR® at ${brokerage.name} · Your Guide Through South Denver Metro Real Estate`}
+    subtext={positioningStatement}
   />
+
+  <!-- ========== POSITIONING INTRO (approved copy, keep word-for-word) ========== -->
+  <section class="section about-intro">
+    <div class="container">
+      <p class="about-intro__hook">Most homeowners who've outgrown their house already know they need to move. What keeps them stuck is everything that has to happen first: which repairs matter, what they'll cost, and how to sell one home while buying the next.</p>
+      <p class="about-intro__bio">Jacob Stark is a REALTOR® with {brokerage.name} serving Littleton, Highlands Ranch, Centennial, and the South Denver Metro. He specializes in families who've outgrown their home and need to buy the next one and sell the current one without two moves, two mortgages, or living through showings. A real estate investor since 2015, Jacob knows what a home is worth as-is and which pre-listing fixes pay for themselves. He's a certified Real Estate Negotiation Expert (RENE), RealTrends Verified in the top 1.5% of U.S. agents, and a multi-year DMAR Excellence Award winner.</p>
+    </div>
+  </section>
 
   <!-- ========== BIO SECTION ========== -->
   <section class="section section--white">
@@ -248,11 +267,42 @@ const ldSchema2 = {
           <span class="section-label">The Short Version</span>
           <h2 class="section-heading">Real Estate Done Differently</h2>
           <p>I got into real estate because I watched too many families make one of the biggest financial decisions of their lives without a real guide in their corner. Generic advice, vague timelines, pressure to decide fast. That didn't sit right.</p>
-          <p>Before I became a REALTOR®, I was a marketer. I flipped houses. I learned what it feels like to be on the other side of the table — and I decided that if I was going to do this job, I was going to do it differently. Every decision backed by real data, every update delivered clearly, and every client treated like someone whose future actually matters.</p>
-          <p>I specialize in the South Denver Metro — Littleton, Highlands Ranch, Centennial, Englewood, Parker, Lakewood, Lone Tree, Castle Pines, and Greenwood Village. I know these neighborhoods at the HOA level, the street level, and the comps level. That specificity matters when you're making a $600K+ decision.</p>
-          <p>Whether you're a growing family looking to move up, a seller trying to maximize your net, or an investor running deal numbers — you'll get the same thing from me: honest context, a clear strategy, and someone who actually picks up the phone.</p>
+          <p>Before I became a REALTOR®, I was a marketer, and I've been a real estate investor since 2015. Buying, fixing, and selling my own properties taught me what a home is worth as-is, which repairs actually pay for themselves, and what it feels like to be on the other side of the table — and I decided that if I was going to do this job, I was going to do it differently. Every decision backed by real data, every update delivered clearly, and every client treated like someone whose future actually matters.</p>
+          <p>I specialize in the South Denver Metro — Littleton, Highlands Ranch, Centennial, Englewood, Parker, Lakewood, Lone Tree, Castle Pines, and Greenwood Village. I know these neighborhoods at the HOA level, the street level, and the comps level, from Woodmar Village, Stony Creek, and Dutch Ridge to Lexington Village, Ridgeview Hills South, Nob Hill, and Hidden River. That specificity matters when you're making a $600K+ decision.</p>
+          <p>Most of the people I work with are move-up families who've outgrown their home. Whether that's you, a seller trying to maximize your net, or an investor running deal numbers — you'll get the same thing from me: honest context, a clear strategy, and someone who actually picks up the phone.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ========== BUY & SELL PLAN ========== -->
+  <section class="section section--dark">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">For Move-Up Buyers and Sellers</span>
+        <h2 class="section-heading">The Buy &amp; Sell Plan</h2>
+        <p class="plan-sub">Every move-up comes down to one question: buy first or sell first? I help you pick the order that fits your equity, your loan, and your timeline, then build the rest of the plan around it.</p>
+      </div>
+      <div class="plan-paths">
+        <a href="/buy-before-you-sell" class="plan-card">
+          <h3>Buy first, when it fits</h3>
+          <p>Secure the next home while you still live in the current one. You make a strong offer, move once, and the old house goes on the market empty and staged, so you're not living through showings.</p>
+          <span class="plan-card__more">How to buy before you sell →</span>
+        </a>
+        <a href="/move-up-sellers" class="plan-card">
+          <h3>Sell first, when it doesn't</h3>
+          <p>If buying first would stretch you too thin, we sell first and plan the timing around your next purchase. You'll know exactly what you have to work with, and you won't carry two mortgages.</p>
+          <span class="plan-card__more">The move-up seller's guide →</span>
+        </a>
+      </div>
+      <h3 class="plan-options__heading">Options that make either path work</h3>
+      <ul class="plan-options">
+        <li><a href="/renovate-before-selling"><strong>Prep costs paid at closing.</strong></a> Pre-listing repairs and updates with nothing out of pocket upfront.*</li>
+        <li><strong>Cash offers.</strong> Certainty on your current home when timing matters most.</li>
+        <li><a href="/assumable-loans"><strong>Assumable-loan searches.</strong></a> Homes where you may be able to take over the seller's lower-rate mortgage.</li>
+        <li><strong>Off-market searches.</strong> Homes that fit your plan but aren't on the open market.</li>
+      </ul>
+      <p class="plan-disclosure">*{brokerage.disclosures.renovationFinancingShort}</p>
     </div>
   </section>
 
@@ -326,6 +376,16 @@ const ldSchema2 = {
             loading="lazy"
           />
         </a>
+        <a href="https://www.fastexpert.com/agents/jacob-stark-109720/" target="_blank" rel="noopener" class="badge-item badge-item--fastexpert">
+          <Image
+            src={badgeFastExpert}
+            alt="FastExpert 5-Star Agent badge"
+            width={400}
+            format="webp"
+            quality={85}
+            loading="lazy"
+          />
+        </a>
         <div class="badge-item">
           <Image
             src={badgeRene}
@@ -348,6 +408,121 @@ const ldSchema2 = {
 </BaseLayout>
 
 <style>
+  .about-intro__hook {
+    font-family: var(--font-heading);
+    font-size: clamp(1.3rem, 2.4vw, 1.6rem);
+    line-height: 1.4;
+    color: var(--color-primary);
+    max-width: 760px;
+    margin: 0 auto var(--space-md);
+    text-align: center;
+  }
+
+  .about-intro__bio {
+    max-width: 760px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    text-align: center;
+  }
+
+  .plan-sub {
+    max-width: 640px;
+    margin: 0 auto var(--space-xl);
+  }
+
+  .plan-paths {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+  }
+
+  .plan-card {
+    display: block;
+    padding: var(--space-lg);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.04);
+    transition: border-color var(--transition), background var(--transition);
+  }
+
+  .plan-card:hover {
+    border-color: var(--color-accent);
+    background: rgba(255, 255, 255, 0.07);
+  }
+
+  .plan-card h3 {
+    margin-bottom: var(--space-sm);
+  }
+
+  .plan-card__more {
+    display: inline-block;
+    margin-top: var(--space-sm);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-accent);
+  }
+
+  .plan-options__heading {
+    text-align: center;
+    margin-bottom: var(--space-md);
+  }
+
+  .plan-options {
+    max-width: 760px;
+    margin: 0 auto;
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .plan-options li {
+    color: rgba(255, 255, 255, 0.88);
+    padding-left: 1.25rem;
+    position: relative;
+  }
+
+  .plan-options li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.7em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-accent);
+  }
+
+  .plan-options a {
+    color: var(--color-white);
+    text-decoration: underline;
+    text-decoration-color: rgba(200, 150, 90, 0.6);
+    text-underline-offset: 3px;
+  }
+
+  .plan-options strong {
+    color: var(--color-white);
+    font-weight: 600;
+  }
+
+  .plan-disclosure {
+    max-width: 760px;
+    margin: var(--space-lg) auto 0;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.6) !important;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .plan-paths {
+      grid-template-columns: 1fr;
+    }
+
+    .about-intro__hook,
+    .about-intro__bio {
+      text-align: left;
+    }
+  }
+
   .badges-section {
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
@@ -380,6 +555,10 @@ const ldSchema2 = {
     height: 110px;
   }
 
+  .badge-item--fastexpert img {
+    height: 90px;
+  }
+
   @media (max-width: 768px) {
     .badge-bar {
       gap: 2rem;
@@ -391,6 +570,10 @@ const ldSchema2 = {
 
     .badge-item--dmar img {
       height: 80px;
+    }
+
+    .badge-item--fastexpert img {
+      height: 65px;
     }
   }
 </style>
