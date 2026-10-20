@@ -9,3 +9,5 @@ _(queue cleared after 2026-09-29 production deploy — merge c7353b9, see DEPLOY
 ## Pending
 
 _(queue cleared after 2026-10-20 production deploy — merge fd2506e, see DEPLOY_LOG.md.)_
+
+- 2026-10-20 — /about Person schema sameAs: reverted the GBP entry from the maps.app.goo.gl short link back to agent.googleProfileUrl (Maps CID link). Jacob chose the CID link as the one GBP URL sitewide going forward.
