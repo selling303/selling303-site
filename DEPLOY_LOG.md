@@ -1,5 +1,12 @@
 # Deploy Log
 
+## 2026-10-20 — merge fd2506e (main 5275899) | Credits used: 15
+
+Jacob approved ("deploy to live") after previewing locally. Verified live /about: new title, Buy & Sell Plan section, neighborhoods, "move-up families", GBP short link in sameAs, FastExpert badge + award, "real estate investor since 2015", positioning statement in hero/meta/schema.
+
+- 2026-10-20 — /about positioning alignment (matches SARA, Orchard, Zillow, Realtor.com, Homes.com, FastExpert, GBP): hero subtext → approved one-sentence statement; new intro section with the approved opening hook + core bio (word-for-word); first-person story edited ("real estate investor since 2015" replaces "I flipped houses", seven neighborhoods worked in, "move-up families"); NEW "The Buy & Sell Plan" section (buy first / sell first cards linking /buy-before-you-sell and /move-up-sellers; options: prep costs paid at closing + short financing disclosure, cash offers, assumable-loan searches → /assumable-loans, off-market searches); title → "About Jacob Stark | Littleton, CO REALTOR® with Orchard"; meta description → statement; Person schema description → statement, knowsAbout + move-up buyers/sellers + buy before you sell, sameAs GBP → maps.app.goo.gl/7deY4WSgVDB9ghyZ7, award + "FastExpert 5-Star Agent"; FastExpert 5-star badge added to Awards & Designations (links to FastExpert profile). Homepage untouched. Built locally (114 pages, no errors).
+- Open items flagged to Jacob (not changed): Track Record tiles still show dated stats ($50M+, 84 families, 101.8%, Top 10 RealTrends); schema award years kept (accurate); homepage/footer/contact/reviews still use agent.googleProfileUrl (CID link), not the new maps.app.goo.gl link; meta description is 177 chars (word-for-word per Jacob).
+
 ## 2026-10-14 — merge b882914 | Credits used: 15
 
 Jacob approved ("deploy live"). Verified live: /contact (text-first buttons, no contact form, photo, Google reviews line, service-area band, sms_click tracking in page), /reviews (200), / and /about (200).

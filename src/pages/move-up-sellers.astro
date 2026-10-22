@@ -1,4 +1,5 @@
 ---
+import ReviewQuotes from '../components/ReviewQuotes.astro';
 import TextThread from '../components/TextThread.astro';
 // "Outgrown Your Home?" hub — rewritten 2026-09-30.
 // Messaging source of truth: brain/marketing/outgrown-your-home-messaging.md
@@ -349,6 +350,8 @@ const related = relatedSlugs
   </section>
 
   <!-- FINAL CTA -->
+  <ReviewQuotes names={['Kara Lindenmeyer', 'Jo-Ann McIntosh']} />
+
   <section class="cta-banner" style="background-color: var(--color-white);">
     <div class="container">
       <h2 style="color: var(--color-dark-text);">You Don't Have to Figure This Out Alone</h2>
