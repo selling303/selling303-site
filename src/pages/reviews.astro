@@ -8,16 +8,16 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CTABanner from '../components/CTABanner.astro';
 import { agent, brokerage } from '../data/agent';
-import reviews from '../data/reviews.json';
-
-const sorted = [...reviews].sort((a, b) => b.date.localeCompare(a.date));
-const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-const fmt = (d: string) => {
-  const [y, m] = d.split('-');
-  return `${months[Number(m) - 1]} ${y}`;
-};
-const initials = (n: string) =>
-  n.replace(/[^A-Za-z&\s]/g, '').trim().split(/\s+/).slice(0, 2).map((w) => w[0]?.toUpperCase()).join('');
+import {
+  allReviews as sorted,
+  featuredReviews,
+  dealTypeLabels,
+  formatReviewDate as fmt,
+  reviewAnchor,
+  reviewInitials as initials,
+  excerpt,
+  displayTypes,
+} from '../lib/reviews';
 
 const pageSchema = {
   "@context": "https://schema.org",
@@ -67,11 +67,35 @@ const pageSchema = {
     </div>
   </section>
 
-  <section class="rv-list">
+  {featuredReviews.length > 0 && (
+    <section class="rv-featured" aria-labelledby="rv-featured-heading">
+      <div class="container">
+        <h2 id="rv-featured-heading" class="rv-featured__heading">Featured Reviews From Sellers</h2>
+        <div class="rv-featured__grid">
+          {featuredReviews.map((r) => (
+            <figure class="rv-feat">
+              <span class="rv-stars rv-stars--sm" aria-label="5 out of 5 stars">★★★★★</span>
+              <blockquote class="rv-feat__quote"><p>“{excerpt(r.featuredQuote)}”</p></blockquote>
+              <figcaption class="rv-feat__by">
+                <span class="rv-name">{r.name}</span>
+                <span class="rv-tags">
+                  {displayTypes(r).map((t) => <span class="rv-tag">{dealTypeLabels[t] ?? t}</span>)}
+                  {r.area && <span class="rv-tag rv-tag--area">{r.area}</span>}
+                </span>
+              </figcaption>
+              <a class="rv-feat__more" href={`#${reviewAnchor(r.name)}`}>Read the full review</a>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="rv-list" aria-label="All Google reviews">
     <div class="container">
       <div class="rv-grid" id="rv-grid">
         {sorted.map((r) => (
-          <figure class="rv-card">
+          <figure class="rv-card" id={reviewAnchor(r.name)}>
             <div class="rv-card__head">
               <span class="rv-avatar" aria-hidden="true">{initials(r.name)}</span>
               <div>
@@ -82,6 +106,12 @@ const pageSchema = {
                 </span>
               </div>
             </div>
+            {(r.dealType.length > 0 || r.area) && (
+              <div class="rv-tags rv-tags--card">
+                {displayTypes(r).map((t) => <span class="rv-tag">{dealTypeLabels[t] ?? t}</span>)}
+                {r.area && <span class="rv-tag rv-tag--area">{r.area}</span>}
+              </div>
+            )}
             <blockquote class="rv-text"><p>{r.text}</p></blockquote>
           </figure>
         ))}
@@ -125,6 +155,8 @@ const pageSchema = {
         });
       };
       layout();
+      // Cards move after load, so re-scroll to a linked review (e.g. /reviews#review-dee).
+      if (location.hash) document.getElementById(location.hash.slice(1))?.scrollIntoView();
       let t;
       window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(layout, 150); });
     }
@@ -143,6 +175,23 @@ const pageSchema = {
   .rv-stars { color: #e3a008; letter-spacing: 0.1em; font-size: 1.35rem; line-height: 1; }
   .rv-stars--sm { font-size: 0.85rem; }
   .rv-btns { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.75rem; }
+
+  .rv-featured { background: var(--color-background); padding: 0 0 2.5rem; }
+  .rv-featured__heading { margin: 0 0 1.25rem; font-family: var(--font-heading); font-weight: 400; font-size: clamp(1.5rem, 3vw, 2rem); color: var(--color-primary); }
+  .rv-featured__grid { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+  .rv-feat { flex: 1 1 300px; margin: 0; display: flex; flex-direction: column; gap: 0.85rem; background: var(--color-primary); color: #fff; border-radius: 16px; padding: 1.6rem; }
+  .rv-feat__quote { margin: 0; flex: 1; }
+  .rv-feat__quote p { margin: 0; font-family: var(--font-heading); font-size: 1.2rem; line-height: 1.45; }
+  .rv-feat__by { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+  .rv-feat .rv-name { color: #fff; }
+  .rv-feat .rv-tag { background: rgba(255,255,255,0.14); color: #fff; }
+  .rv-feat__more { color: #e9c99a; font-size: 0.9rem; text-decoration: underline; text-underline-offset: 3px; }
+  .rv-tags { display: inline-flex; flex-wrap: wrap; gap: 0.35rem; }
+  .rv-tags--card { margin: -0.25rem 0 0.8rem; }
+  .rv-tag { display: inline-block; padding: 0.2rem 0.6rem; border-radius: 999px; background: #eef1f2; color: var(--color-primary); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.02em; }
+  .rv-tag--area { background: #f5ead9; color: #6e4a22; }
+  .rv-card:target { outline: 2px solid #c8965a; outline-offset: 3px; }
+  .rv-card, .rv-feat { scroll-margin-top: calc(var(--header-height) + 1.5rem); }
 
   .rv-list { background: var(--color-background); padding: 1rem 0 5rem; }
   .rv-grid { columns: 3 320px; column-gap: 1.25rem; }

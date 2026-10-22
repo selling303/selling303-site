@@ -1,6 +1,7 @@
 ---
 // Pillar 1 of the "Outgrown Your Home?" cluster — created 2026-09-30.
 // Hub: /move-up-sellers. Messaging: brain/marketing/outgrown-your-home-messaging.md
+import ReviewQuotes from '../components/ReviewQuotes.astro';
 import { getCollection } from 'astro:content';
 import { fixOrSkipUrl } from '../data/cluster';
 import { agent, brokerage } from '../data/agent';
@@ -298,6 +299,8 @@ const related = relatedSlugs.map((slug) => allPosts.find((p) => (p.id ?? p.slug)
       </div>
     </div>
   </section>
+
+  <ReviewQuotes names={['Kara Lindenmeyer', 'Mandie Hume']} />
 
   <section class="cta-banner" style="background-color: var(--color-white);">
     <div class="container">

@@ -8,6 +8,9 @@
 // and one-off open-house pages, which are point-in-time content.
 // ─────────────────────────────────────────────────────────────
 import brokerageLogoWhite from '../assets/images/orchard-logo-white.png';
+// Every Google review, verbatim. The review count below is derived from this file,
+// so adding a review here is the only step needed to keep the count current.
+import reviews from './reviews.json';
 
 export const brokerage = {
   name: 'Orchard',
@@ -68,6 +71,8 @@ export const agent = {
     saleToList: '101.8%',
     avgDaysOnMarket: '19',
     googleRating: '5.0',
-    googleReviewCount: '49',
+    googleReviewCount: String(reviews.length),
+    // Date the rating and full review list were last checked against Google Business Profile Manager.
+    reviewsVerifiedOn: '2026-10-14',
   },
 } as const;

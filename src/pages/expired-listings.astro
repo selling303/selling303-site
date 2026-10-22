@@ -1,4 +1,5 @@
 ---
+import ReviewQuotes from '../components/ReviewQuotes.astro';
 import { agent, brokerage } from '../data/agent';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
@@ -317,6 +318,8 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
   </section>
 
   <!-- FINAL CTA -->
+  <ReviewQuotes names={['jordan quinn', 'Dee']} />
+
   <section class="cta-banner" style="background-color: var(--color-white);">
     <div class="container">
       <h2 style="color: var(--color-dark-text);">Ready to Relist and Get It Right?</h2>

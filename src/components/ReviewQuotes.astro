@@ -1,0 +1,54 @@
+---
+// Two short Google review quotes placed directly above a page's main call to action.
+// Pulls from src/data/reviews.json (same source as /reviews), so quotes never drift.
+// Uses each review's featuredQuote (a verbatim excerpt) when set, otherwise the full text.
+import { agent } from '../data/agent';
+import { reviewsByName, dealTypeLabels, reviewAnchor, excerpt, displayTypes } from '../lib/reviews';
+
+interface Props {
+  names: string[];          // exact reviewer names from reviews.json
+  heading?: string;
+}
+const { names, heading = 'What Sellers Say' } = Astro.props;
+const picks = reviewsByName(names);
+---
+
+<section class="rq" aria-labelledby="rq-heading">
+  <div class="container rq__inner">
+    <h2 id="rq-heading" class="rq__heading">{heading}</h2>
+    <div class="rq__grid">
+      {picks.map((r) => (
+        <figure class="rq__card">
+          <span class="rq__stars" aria-label="5 out of 5 stars">★★★★★</span>
+          <blockquote class="rq__quote"><p>“{excerpt(r.featuredQuote ?? r.text)}”</p></blockquote>
+          <figcaption class="rq__by">
+            <span class="rq__name">{r.name}</span>
+            {displayTypes(r).map((t) => <span class="rq__tag">{dealTypeLabels[t] ?? t}</span>)}
+            {r.area && <span class="rq__tag">{r.area}</span>}
+            <span class="rq__src">Google review</span>
+          </figcaption>
+          <a class="rq__more" href={`/reviews#${reviewAnchor(r.name)}`}>Read the full review</a>
+        </figure>
+      ))}
+    </div>
+    <p class="rq__all"><a href="/reviews">See all {agent.stats.googleReviewCount} Google reviews ({agent.stats.googleRating}★)</a></p>
+  </div>
+</section>
+
+<style>
+  .rq { background: var(--color-white, #fff); padding: 3.5rem 0 0; }
+  .rq__inner { max-width: 980px; }
+  .rq__heading { margin: 0 0 1.25rem; text-align: center; font-family: var(--font-heading); font-weight: 400; font-size: clamp(1.5rem, 3vw, 2rem); color: var(--color-primary); }
+  .rq__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 1.25rem; }
+  .rq__card { margin: 0; display: flex; flex-direction: column; gap: 0.75rem; background: var(--color-background); border: 1px solid var(--color-border); border-radius: 16px; padding: 1.5rem; }
+  .rq__stars { color: #e3a008; letter-spacing: 0.1em; font-size: 0.9rem; }
+  .rq__quote { margin: 0; flex: 1; }
+  .rq__quote p { margin: 0; font-family: var(--font-heading); font-size: 1.15rem; line-height: 1.45; color: var(--color-primary); }
+  .rq__by { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: #6b7478; }
+  .rq__name { font-weight: 700; color: var(--color-primary); font-size: 0.95rem; margin-right: 0.15rem; }
+  .rq__tag { padding: 0.15rem 0.55rem; border-radius: 999px; background: #eef1f2; color: var(--color-primary); font-size: 0.72rem; font-weight: 600; }
+  .rq__src { margin-left: 0.15rem; }
+  .rq__more { font-size: 0.88rem; color: var(--color-primary); text-decoration: underline; text-underline-offset: 3px; }
+  .rq__all { margin: 1.25rem 0 0; text-align: center; font-size: 0.95rem; }
+  .rq__all a { color: var(--color-primary); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+</style>
