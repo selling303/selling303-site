@@ -3,7 +3,7 @@
 ## Architecture Overview
 
 **Pillar A (Geographic — "Where"):** 9 neighborhood pages
-**Pillar B (Specialization — "How/Why"):** 5 situational pages
+**Pillar B (Specialization — "How/Why"):** 6 situational pages, plus 3 Outgrown Your Home move-up pillars and /assumable-loans (sections 7–8)
 **Spokes:** Blog posts that bridge one Geographic Pillar + one Specialization Pillar
 
 Every blog post links to exactly **one Geographic Pillar** and **one Specialization Pillar** within the first 200 words.
@@ -43,6 +43,7 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - South Denver April 2026 Closings: What Move-Up Sellers Need to Know Heading Into May (`/blog/south-denver-april-2026-closings-move-up-sellers`)
 - South Denver Homeowner's 2026 Notice of Valuation Protest Playbook (`/blog/2026-notice-of-valuation-protest-playbook-south-denver`)
 - Price Cut or 2-1 Buydown? What South Denver Metro Sellers Should Offer Buyers This Fall (`/blog/price-cut-vs-2-1-buydown-south-denver-metro-2026`) *(published 2026-10-06)*
+- Buy or Sell First? 5 Ways to Move Up in the South Denver Metro (`/blog/buy-or-sell-first-south-denver-move-up`) *(drafted 2026-10-22; metro-wide decision hub — city timing posts link up to it; /buy-before-you-sell is the "how it works" page)*
 - The Greenwood Village Empty-Nester Move: When the Right-Sizing Math Actually Pencils (`/blog/greenwood-village-empty-nester-right-sizing-math-2026`)
 
 ### 3. First-Time Homebuyers (`/first-time-homebuyers`)
@@ -92,6 +93,28 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - RidgeGate vs. Heritage Hills: A Lone Tree New Construction Update for 2026 (`/blog/ridgegate-vs-heritage-hills-lone-tree-new-construction-2026`)
 - Parker New Construction: Buy Off the Shelf or Build It? (`/blog/spec-home-vs-custom-build-parker-2026`)
 - Right-Size Inside Highlands Ranch: 3 New-Build Paths (2026) (`/blog/highlands-ranch-new-construction-empty-nester-right-size-2026`)
+
+### 7. Outgrown Your Home — Move-Up Pillars (children of `/move-up-sellers`)
+These three pages each go deep on one move-up question. Link the one that matches the post's angle instead of (or alongside) `/move-up-sellers`. Still one Specialization link within the first 200 words; a second, contextual link to a pillar below is fine further down.
+
+- **Buy Before You Sell** (`/buy-before-you-sell`) — how to buy the next home first, move once, then sell. Link from posts on timing two transactions, contingencies, bridge financing, or "buy or sell first." *(The blog post `/blog/buy-or-sell-first-south-denver-move-up` is the decision hub; this page is the "how it works" page.)*
+- **Renovate Before Selling** (`/renovate-before-selling`) — managed pre-listing updates paid at closing, no money upfront. Link from posts on prep costs, dated homes, staging, or stalled listings that need updates.
+- **What to Fix Before Selling** (`/what-to-fix-before-selling`) — fix-or-skip method, real South Denver Metro costs. Link from posts on repairs, inspections, ROI on updates, or listing prep.
+
+**Primary geographic ties:** Highlands Ranch, Centennial, Parker, Littleton (same as Move-Up Sellers)
+**Existing blog links:** none yet — add contextual links when touching these posts:
+- Buy or Sell First? (`/blog/buy-or-sell-first-south-denver-move-up`) → `/buy-before-you-sell`
+- Selling in Centennial and Buying in Highlands Ranch (`/blog/selling-centennial-buying-highlands-ranch-coordinate-transactions`) → `/buy-before-you-sell`
+- How to Time Your Move-Up Sale in Castle Pines (`/blog/move-up-timing-castle-pines-2026`) → `/buy-before-you-sell`
+- Cost to Sell a House in Colorado 2026 (`/blog/cost-to-sell-house-colorado-2026`) → `/what-to-fix-before-selling`, `/renovate-before-selling`
+- Englewood Listing Photos: When to Reshoot Before Relisting (`/blog/englewood-listing-photo-audit-photography-2026`) → `/what-to-fix-before-selling`
+
+### 8. Assumable Loans (`/assumable-loans`)
+Explainer for buyers (lower rate, more cash to close) with a sellers section at `/assumable-loans#sellers` (marketing a low-rate FHA/VA loan, release of liability, VA entitlement). Link from posts on rates, payments, affordability, seller concessions, or buydowns. Use `#sellers` when the post is seller-facing.
+**Primary geographic ties:** All 9 neighborhoods (rate-driven, not location-driven)
+**Existing blog links:**
+- Price Cut or 2-1 Buydown? (`/blog/price-cut-vs-2-1-buydown-south-denver-metro-2026`) → `/assumable-loans#sellers` *(added 2026-10-30)*
+**Page links:** `/first-time-homebuyers` (Pre-Approval step) *(added 2026-10-30)*
 
 ---
 
@@ -167,3 +190,7 @@ Each title bridges a geographic pillar and a specialization pillar. Format: [Blo
 | Closing Costs for Colorado Buyers 2026 | First-Time Homebuyers (`/first-time-homebuyers`) |
 | Parker vs. Castle Pines | New Construction, Relocation |
 | When to Sell Your Parker Home and Move Up | Move-Up Sellers, Parker geographic |
+| Buy or Sell First? 5 Ways to Move Up | Buy Before You Sell |
+| Selling in Centennial and Buying in Highlands Ranch | Buy Before You Sell |
+| Cost to Sell a House in Colorado 2026 | What to Fix Before Selling, Renovate Before Selling |
+| Price Cut or 2-1 Buydown? | Assumable Loans (#sellers) — done 2026-10-30 |
