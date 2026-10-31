@@ -603,6 +603,14 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
 
 ---
 
+## Off-Calendar Posts
+
+- [x] **"Buy or Sell First? 5 Ways to Move Up in the South Denver Metro"** *(drafted 2026-10-22)*
+  - Specialization: `/move-up-sellers` | Geographic: `/neighborhoods/littleton`, `/neighborhoods/highlands-ranch`
+  - Post type: Seller advice | Funnel: MOFU (solution-aware)
+  - Angle: Metro-wide decision hub for "should I buy or sell first?" — five paths (sell first + rent-back, §10.7 contingency, HELOC, bridge loan, equity advance) with a Littleton-to-Highlands Ranch worked example. Source: Grok research brief, 2026-10-21. No program or lender brand names.
+  - Target keywords: should I buy or sell my house first, buy before you sell Denver, bridge loan vs HELOC, home sale contingency Colorado
+
 ## How the Nightly Task Uses This Calendar
 
 1. Read this file and find the first unchecked `[ ]` entry

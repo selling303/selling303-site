@@ -8,13 +8,12 @@ _(queue cleared after 2026-09-29 production deploy — merge c7353b9, see DEPLOY
 
 ## Pending
 
-_(queue cleared after 2026-10-20 production deploy — merge fd2506e, see DEPLOY_LOG.md.)_
+_(queue cleared after 2026-10-21 production deploy — merge 54c6025, see DEPLOY_LOG.md.)_
 
-- 2026-10-20 — /about Person schema sameAs: reverted the GBP entry from the maps.app.goo.gl short link back to agent.googleProfileUrl (Maps CID link). Jacob chose the CID link as the one GBP URL sitewide going forward.
-- 2026-10-21 — REVIEWS UPGRADE (Jacob approved featured picks 2026-10-21; pushed to main):
-  - src/data/reviews.json: new fields per review — dealType (array: buyer / seller / move-up / investor / new-construction; set only where the text is clear, 13 left blank for Jacob), area (Jacob supplied 2026-10-21 for all 49 reviews; deal types also updated from his list, move-up reviews show a single "Move-up" pill), featured (5 = Mandie Hume, Dee, Kara Lindenmeyer, Jo-Ann McIntosh, jordan quinn), featuredQuote (verbatim excerpt, build-checked as a substring of the review). Backup of the previous file in _to_delete/reviews.backup-2026-10-21.json.
-  - NEW src/lib/reviews.ts: shared helpers (sorting, featured order seller/move-up first, labels, /reviews#review-<name> anchors, excerpt ellipsis).
-  - /reviews: "Featured Reviews From Sellers" section above the full list; deal-type tags (and area when set) on every card; each card has an id anchor; masonry script re-scrolls to a linked review after layout.
-  - NEW src/components/ReviewQuotes.astro: two verbatim review quotes + "See all 49 Google reviews" link, placed directly above the bottom CTA on /buy-before-you-sell (Kara, Mandie), /move-up-sellers (Kara, Jo-Ann), /expired-listings (jordan, Dee), /first-time-homesellers (Jo-Ann, Mandie). Each links to that review on /reviews.
-  - src/data/agent.ts: googleReviewCount now derived from reviews.json length (adding a review is the only step); new stats.reviewsVerifiedOn '2026-10-14'.
-  - Tested in a stub build (reviews page + quote component, desktop and 390px, all 49 cards, anchors). Full local build still needed on Jacob's Mac.
+- 2026-10-27 scripts/generate-gbp-data-viz.py: removed the hardcoded "Free calculator · 30 seconds" line under the question (left over from the Notice of Valuation post). New optional --tagline flag; --question now required; --headline/--hero-number no longer required. Script-only, no site build impact.
+- 2026-10-30 Outgrown Your Home follow-ups:
+  - src/pages/og/[...slug].png.ts: added buy-before-you-sell, renovate-before-selling, what-to-fix-before-selling, and assumable-loans to OG_STATIC_TITLES (their /og/*.png share images were 404ing).
+  - content-cluster-map.md: added sections 7 (three move-up pillars) and 8 (/assumable-loans) with link-when guidance, plus cross-link table rows. Doc only, no build impact.
+  - src/pages/first-time-homebuyers.astro: contextual /assumable-loans link in the Pre-Approval step.
+  - src/content/blog/price-cut-vs-2-1-buydown-south-denver-metro-2026.md: new short paragraph after the seller recorded-price paragraph linking to /assumable-loans#sellers.
+- 2026-10-30 New blog post: src/content/blog/buy-or-sell-first-south-denver-move-up.md ("Buy or Sell First? 5 Ways to Move Up in the South Denver Metro"). Equity-advance-first decision hub with Tier 2 path-finder tool and cost table. Also content-calendar-2026.md (off-calendar entry), content-cluster-map.md (Move-Up spoke), visual-inventory.md (entry). Follow-up idea: rework /buy-before-you-sell so it doesn't overlap.

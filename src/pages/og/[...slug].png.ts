@@ -39,6 +39,10 @@ const OG_STATIC_TITLES: Record<string, string> = {
   blog: 'Selling 303 Blog',
   'clientclarity-demo': 'ClientClarity Demo',
   'open-house/13611-e-evans': 'Open House — 13611 E Evans Ave',
+  'buy-before-you-sell': 'Buy Before You Sell',
+  'renovate-before-selling': 'Renovate Before Selling',
+  'what-to-fix-before-selling': 'What to Fix Before Selling',
+  'assumable-loans': 'Assumable Loans',
 };
 
 interface PathProps {

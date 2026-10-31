@@ -105,6 +105,7 @@ def render_deadline_spine(
     milestones,
     footer,
     question="",
+    tagline="",
     canvas_width=1200,
     canvas_height=900,
 ):
@@ -121,7 +122,9 @@ def render_deadline_spine(
 
     # === Compute vertically centered stack ===
     # Pre-measure question wrapping so we can size everything together
-    q_text = question if question else "Should you protest your 2026 property tax?"
+    if not question:
+        raise SystemExit("--question is required for deadline-spine")
+    q_text = question
     f_q = ImageFont.truetype(FONT_BOLD, 84)
     q_max_w = int(W * 0.86)
     q_words = q_text.split()
@@ -146,7 +149,8 @@ def render_deadline_spine(
     timeline_block_h = 24 + 12 + 24 + 12 + 24
     gap_timeline_question = 75
     q_block_h = len(q_lines) * line_h
-    sub_block_h = 12 + 4 + 28 + 24
+    # Tagline line under the rule is optional (--tagline)
+    sub_block_h = (12 + 4 + 28 + 24) if tagline else (12 + 4)
     stack_h = timeline_block_h + gap_timeline_question + q_block_h + sub_block_h
 
     stack_top = (H - stack_h) // 2
@@ -250,8 +254,8 @@ def render_deadline_spine(
     rule_y = q_y + 12
     draw.rectangle([((W - rule_w) // 2, rule_y),
                     ((W + rule_w) // 2, rule_y + 4)], fill=GOLD)
-    draw_centered(draw, "Free calculator · 30 seconds",
-                  f_sub, rule_y + 28, GOLD_LIGHT, W)
+    if tagline:
+        draw_centered(draw, tagline, f_sub, rule_y + 28, GOLD_LIGHT, W)
 
     # (No footer band — wordmark up top carries identity. Cleaner image.)
 
@@ -265,12 +269,14 @@ def main():
     p.add_argument("--output", required=True)
     p.add_argument("--template", default="deadline-spine",
                    choices=["deadline-spine"])
-    p.add_argument("--headline", required=True)
-    p.add_argument("--hero-number", required=True)
+    p.add_argument("--headline", default="")  # deprecated for deadline-spine
+    p.add_argument("--hero-number", default="")  # deprecated for deadline-spine
     p.add_argument("--hero-unit", default="days")
     p.add_argument("--milestones", required=True)
     p.add_argument("--footer", default="")
     p.add_argument("--question", default="")
+    p.add_argument("--tagline", default="",
+                   help="Optional gold line under the question (e.g. 'Free calculator · 30 seconds')")
     p.add_argument("--canvas-width", type=int, default=1200)
     p.add_argument("--canvas-height", type=int, default=900)
     args = p.parse_args()
@@ -284,6 +290,7 @@ def main():
             milestones=parse_milestones(args.milestones),
             footer=args.footer,
             question=args.question,
+            tagline=args.tagline,
             canvas_width=args.canvas_width,
             canvas_height=args.canvas_height,
         )

@@ -122,6 +122,8 @@ relatedPosts:
 
 <p>There's one more difference for you as the seller. With a buydown, your recorded sale price stays at $650,000. That number becomes a comparable sale for your neighbors and for any appraisal on your next purchase. A price cut lowers it for good.</p>
 
+<p>If your own mortgage is a low-rate FHA or VA loan, you may have a third option. A buyer may be able to take over your loan, rate included. Here's what <a href="/assumable-loans#sellers">selling a home with an assumable loan</a> involves.</p>
+
 <h2 id="attention">Why Doesn't a Buydown Get Noticed Like a Price Cut?</h2>
 
 <p>Because nothing announces it. When you cut your price, Zillow, Realtor.com, and the MLS send alerts to buyers who saved your home or a matching search. A buydown leaves the list price alone, so none of those alerts go out.</p>
