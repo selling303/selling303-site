@@ -1,5 +1,17 @@
 # Deploy Log
 
+## 2026-10-30 — merge 02a9d14 (main 2b28e2e) | Credits used: 15
+
+Jacob approved ("push live"). Verified live: /blog/buy-or-sell-first-south-denver-move-up returns 200 with the path finder (5 option cards, 3 question groups), FAQPage schema, and the October 30, 2026 date; listed on /blog; /og/buy-before-you-sell.png returns 200.
+
+- 2026-10-27 scripts/generate-gbp-data-viz.py: removed the hardcoded "Free calculator · 30 seconds" line under the question (left over from the Notice of Valuation post). New optional --tagline flag; --question now required; --headline/--hero-number no longer required. Script-only, no site build impact.
+- 2026-10-30 Outgrown Your Home follow-ups:
+  - src/pages/og/[...slug].png.ts: added buy-before-you-sell, renovate-before-selling, what-to-fix-before-selling, and assumable-loans to OG_STATIC_TITLES (their /og/*.png share images were 404ing).
+  - content-cluster-map.md: added sections 7 (three move-up pillars) and 8 (/assumable-loans) with link-when guidance, plus cross-link table rows. Doc only, no build impact.
+  - src/pages/first-time-homebuyers.astro: contextual /assumable-loans link in the Pre-Approval step.
+  - src/content/blog/price-cut-vs-2-1-buydown-south-denver-metro-2026.md: new short paragraph after the seller recorded-price paragraph linking to /assumable-loans#sellers.
+- 2026-10-30 New blog post: src/content/blog/buy-or-sell-first-south-denver-move-up.md ("Buy or Sell First? 5 Ways to Move Up in the South Denver Metro"). Equity-advance-first decision hub with Tier 2 path-finder tool and cost table. Also content-calendar-2026.md (off-calendar entry), content-cluster-map.md (Move-Up spoke), visual-inventory.md (entry). Follow-up idea: rework /buy-before-you-sell so it doesn't overlap.
+
 ## 2026-10-21 — merge 54c6025 (main 408f7f2) | Credits used: 15
 
 Jacob approved ("deploy live"). Verified live: /reviews shows Featured Reviews From Sellers + deal-type and city tags; "What Sellers Say" quotes present on /buy-before-you-sell, /move-up-sellers, /expired-listings, /first-time-homesellers.
