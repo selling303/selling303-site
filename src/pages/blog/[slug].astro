@@ -18,6 +18,21 @@ const { entry } = Astro.props;
 const { data } = entry;
 const { Content } = await render(entry);
 
+// Frontmatter dates are display strings ("October 30, 2026"). Schema.org needs ISO 8601 ("2026-10-30").
+const MONTHS = ['january','february','march','april','may','june','july','august','september','october','november','december'];
+function toIsoDate(s?: string) {
+  if (!s) return s;
+  if (/^\d{4}-\d{2}-\d{2}/.test(s)) return s;
+  const m = s.trim().match(/^([A-Za-z]+)\s+(\d{1,2}),\s*(\d{4})$/);
+  if (!m) return s;
+  const mo = MONTHS.indexOf(m[1].toLowerCase()) + 1;
+  if (!mo) return s;
+  return `${m[3]}-${String(mo).padStart(2, '0')}-${m[2].padStart(2, '0')}`;
+}
+const isoPublished = toIsoDate(data.date);
+const isoModified = toIsoDate(data.dateModified || data.date);
+const showUpdated = !!data.dateModified && data.dateModified !== data.date;
+
 // Resolve related posts from the blog collection at build time
 const allPosts = await getCollection('blog');
 const postsBySlug = new Map(allPosts.map((p) => [p.id, p]));
@@ -72,8 +87,8 @@ const articleSchema: Record<string, any> = {
   // figures sharing the surname (surname-pollution disambiguation, 2026-04-27).
   "author": { "@id": "https://selling303.com/#agent" },
   "publisher": { "@id": "https://selling303.com/#organization" },
-  "datePublished": data.date,
-  "dateModified": data.dateModified || data.date,
+  "datePublished": isoPublished,
+  "dateModified": isoModified,
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": `https://selling303.com/blog/${entry.id}`
@@ -142,8 +157,8 @@ const ogImage = `https://selling303.com/og/blog/${entry.id}.png`;
   <!-- ARTICLE -->
   <article class="article" itemscope itemtype="https://schema.org/Article">
     <meta itemprop="headline" content={data.headline || data.title} />
-    <meta itemprop="datePublished" content={data.date} />
-    <meta itemprop="dateModified" content={data.dateModified || data.date} />
+    <meta itemprop="datePublished" content={isoPublished} />
+    <meta itemprop="dateModified" content={isoModified} />
     {data.aboutPlaces && data.aboutPlaces.map((place: string) => (
       <meta itemprop="about" content={place} />
     ))}
@@ -153,7 +168,7 @@ const ogImage = `https://selling303.com/og/blog/${entry.id}.png`;
       <div>
         <span class="article__author-name" itemprop="name">Jacob Stark</span>
         <meta itemprop="jobTitle" content="REALTOR®" />
-        <span>{data.date} &middot; {data.readTime}</span>
+        <span>{data.date}{showUpdated && <> &middot; Updated {data.dateModified}</>} &middot; {data.readTime}</span>
       </div>
     </div>
 

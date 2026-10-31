@@ -21,8 +21,12 @@ keywords: "should I buy or sell my house first, buy or sell first, buy a house b
 faqSchema:
   - question: "What is an equity advance program?"
     answer: "An equity advance program lets you tap part of your current home's equity before it sells, usually to cover the down payment and closing costs on your next home. You buy first, move once, and then your old home is prepped, listed, and sold, with the advance repaid from the proceeds. Programs typically require at least 20% equity and charge a fee of about 2–3% of the sale price. Some also keep your old mortgage from counting against you when you qualify for the new loan. Jacob Stark, a South Denver Metro REALTOR®, can tell you whether you're likely to qualify."
+  - question: "How much does a buy-before-you-sell program cost?"
+    answer: "Most charge a program fee of about 2–3% of your current home's sale price, on top of normal selling costs. In our Littleton-to-Highlands Ranch example, that fee plus a few months of carrying the old home came to roughly $19,400–$30,400. Many homeowners find the convenience worth it: one move, no showings to live through, and a stronger offer on the next home. Eligibility and terms vary by program."
   - question: "Can I buy a house before selling mine?"
     answer: "Often, yes. You need a way to cover the down payment before your current home sells and a way to qualify for the new mortgage. The usual paths are an equity advance program, a HELOC opened before you list, a bridge loan, or savings. With an equity advance, some programs keep your old mortgage from counting against you when you qualify, which is what makes buying first possible for many homeowners who can't carry two mortgages."
+  - question: "What happens if my house doesn't sell after I buy?"
+    answer: "You keep paying your old home's costs while it's listed, so preparing and pricing it well matters. With an equity advance, programs typically set a deadline of about four months; if the home hasn't sold by then, the program buys it for the amount needed to pay off your loans, and you get any upside when it resells, minus costs. With a HELOC or bridge loan, there's no backstop, so you carry both homes until it sells."
   - question: "Can I rent back my home after selling in Colorado?"
     answer: "Yes, if the buyer agrees. Colorado's standard Post-Closing Occupancy Agreement lets a seller stay up to 60 days after closing when the buyer will live in the home, with rent and deposit negotiated. In a market with plenty of homes for sale, many buyers won't wait that long to move in, so have a backup plan such as a short-term rental."
 relatedPosts:
@@ -403,8 +407,14 @@ render();
 <h3>What is an equity advance program?</h3>
 <p>An equity advance program lets you tap part of your current home's equity before it sells, usually to cover the down payment and closing costs on your next home. You buy first, move once, and then your old home is prepped, listed, and sold, with the advance repaid from the proceeds. Programs typically require at least 20% equity and charge a fee of about 2–3% of the sale price. Some also keep your old mortgage from counting against you when you qualify for the new loan. Jacob Stark, a South Denver Metro REALTOR®, can tell you whether you're likely to qualify.</p>
 
+<h3>How much does a buy-before-you-sell program cost?</h3>
+<p>Most charge a program fee of about 2–3% of your current home's sale price, on top of normal selling costs. In our Littleton-to-Highlands Ranch example, that fee plus a few months of carrying the old home came to roughly $19,400–$30,400. Many homeowners find the convenience worth it: one move, no showings to live through, and a stronger offer on the next home. Eligibility and terms vary by program.</p>
+
 <h3>Can I buy a house before selling mine?</h3>
 <p>Often, yes. You need a way to cover the down payment before your current home sells and a way to qualify for the new mortgage. The usual paths are an equity advance program, a HELOC opened before you list, a bridge loan, or savings. With an equity advance, some programs keep your old mortgage from counting against you when you qualify, which is what makes buying first possible for many homeowners who can't carry two mortgages.</p>
+
+<h3>What happens if my house doesn't sell after I buy?</h3>
+<p>You keep paying your old home's costs while it's listed, so preparing and pricing it well matters. With an equity advance, programs typically set a deadline of about four months; if the home hasn't sold by then, the program buys it for the amount needed to pay off your loans, and you get any upside when it resells, minus costs. With a HELOC or bridge loan, there's no backstop, so you carry both homes until it sells.</p>
 
 <h3>Can I rent back my home after selling in Colorado?</h3>
 <p>Yes, if the buyer agrees. Colorado's standard Post-Closing Occupancy Agreement lets a seller stay up to 60 days after closing when the buyer will live in the home, with rent and deposit negotiated. In a market with plenty of homes for sale, many buyers won't wait that long to move in, so have a backup plan such as a short-term rental.</p>
