@@ -3,7 +3,7 @@ title: "Buy or Sell First? 5 Ways to Move Up in the South Denver Metro"
 headline: "Should You Buy or Sell First? 5 Ways to Move Up in the South Denver Metro, Compared on Cost, Stress, and Timing (2026)"
 description: "Buy first or sell first? Compare equity advances, HELOCs, bridge loans, contingent offers, and rent-backs with real South Denver Metro costs for 2026."
 date: "October 30, 2026"
-dateModified: "October 30, 2026"
+dateModified: "October 31, 2026"
 category: "Comparisons"
 tag: "Selling & Buying"
 readTime: "12 min read"
@@ -22,7 +22,7 @@ faqSchema:
   - question: "What is an equity advance program?"
     answer: "An equity advance program lets you tap part of your current home's equity before it sells, usually to cover the down payment and closing costs on your next home. You buy first, move once, and then your old home is prepped, listed, and sold, with the advance repaid from the proceeds. Programs typically require at least 20% equity and charge a fee of about 2–3% of the sale price. Some also keep your old mortgage from counting against you when you qualify for the new loan. Jacob Stark, a South Denver Metro REALTOR®, can tell you whether you're likely to qualify."
   - question: "How much does a buy-before-you-sell program cost?"
-    answer: "Most charge a program fee of about 2–3% of your current home's sale price, on top of normal selling costs. In our Littleton-to-Highlands Ranch example, that fee plus a few months of carrying the old home came to roughly $19,400–$30,400. Many homeowners find the convenience worth it: one move, no showings to live through, and a stronger offer on the next home. Eligibility and terms vary by program."
+    answer: "Most charge a program fee of about 2–3% of your current home's sale price (some charge up to 5%), on top of normal selling costs. In our Littleton-to-Highlands Ranch example, that fee plus a few months of carrying the old home came to roughly $19,400–$30,400. Many homeowners find the convenience worth it: one move, no showings to live through, and a stronger offer on the next home. Eligibility and terms vary by program."
   - question: "Can I buy a house before selling mine?"
     answer: "Often, yes. You need a way to cover the down payment before your current home sells and a way to qualify for the new mortgage. The usual paths are an equity advance program, a HELOC opened before you list, a bridge loan, or savings. With an equity advance, some programs keep your old mortgage from counting against you when you qualify, which is what makes buying first possible for many homeowners who can't carry two mortgages."
   - question: "What happens if my house doesn't sell after I buy?"
@@ -264,7 +264,7 @@ render();
 
 <p>Here's how it plays out. You make an offer that doesn't depend on selling first, so it competes like a buyer without a home to sell. You close and move in. Your old home is refreshed, cleaned, and staged, then listed and sold, and the advance is repaid from your proceeds. If the old home hasn't sold by the program's deadline (about four months), the program buys it for the amount needed to pay off your loans, and you get any upside when it resells, minus costs.</p>
 
-<p><strong>Best for:</strong> homeowners with at least about 20% equity who want to move once and skip living through showings. <strong>Trade-off:</strong> a program fee of about 2–3% of the sale price, and you keep paying the old mortgage unless the advance has room to cover it. Some programs also exclude FHA loans on the new home. See <a href="/buy-before-you-sell">how buying before you sell works, step by step</a>.</p>
+<p><strong>Best for:</strong> homeowners with at least about 20% equity who want to move once and skip living through showings. <strong>Trade-off:</strong> a program fee of about 2–3% of the sale price (up to 5% with some programs), and you keep paying the old mortgage unless the advance has room to cover it. Some programs also exclude FHA loans on the new home. See <a href="/buy-before-you-sell">how buying before you sell works, step by step</a>, and read <a href="/blog/buy-before-you-sell-programs-honest-catch">the honest catches before you sign up for a program</a>.</p>
 
 <p style="font-size: 0.85rem; color: #555;"><em>Equity advances are offered by third-party partner companies. Equity advance eligibility is subject to approval and is not guaranteed. Advance amounts depend on your home equity and qualification.</em></p>
 
@@ -408,7 +408,7 @@ render();
 <p>An equity advance program lets you tap part of your current home's equity before it sells, usually to cover the down payment and closing costs on your next home. You buy first, move once, and then your old home is prepped, listed, and sold, with the advance repaid from the proceeds. Programs typically require at least 20% equity and charge a fee of about 2–3% of the sale price. Some also keep your old mortgage from counting against you when you qualify for the new loan. Jacob Stark, a South Denver Metro REALTOR®, can tell you whether you're likely to qualify.</p>
 
 <h3>How much does a buy-before-you-sell program cost?</h3>
-<p>Most charge a program fee of about 2–3% of your current home's sale price, on top of normal selling costs. In our Littleton-to-Highlands Ranch example, that fee plus a few months of carrying the old home came to roughly $19,400–$30,400. Many homeowners find the convenience worth it: one move, no showings to live through, and a stronger offer on the next home. Eligibility and terms vary by program.</p>
+<p>Most charge a program fee of about 2–3% of your current home's sale price (some charge up to 5%), on top of normal selling costs. In our Littleton-to-Highlands Ranch example, that fee plus a few months of carrying the old home came to roughly $19,400–$30,400. Many homeowners find the convenience worth it: one move, no showings to live through, and a stronger offer on the next home. Eligibility and terms vary by program.</p>
 
 <h3>Can I buy a house before selling mine?</h3>
 <p>Often, yes. You need a way to cover the down payment before your current home sells and a way to qualify for the new mortgage. The usual paths are an equity advance program, a HELOC opened before you list, a bridge loan, or savings. With an equity advance, some programs keep your old mortgage from counting against you when you qualify, which is what makes buying first possible for many homeowners who can't carry two mortgages.</p>
