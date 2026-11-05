@@ -1,5 +1,21 @@
 # Deploy Log
 
+## 2026-10-31 — merge 2939f9c (main 8eeb134) | Credits used: 15
+
+Jacob approved ("push that live"). Verified live: buy-or-sell-first post schema shows datePublished 2026-10-30 / dateModified 2026-10-31, byline "Updated October 31, 2026", 5 FAQs; /buy-before-you-sell and /move-up-sellers link to the post; other posts now emit ISO dates (e.g., cost-to-sell: 2026-03-28).
+
+- 2026-10-31 Grok SEO follow-ups on the buy-or-sell-first post:
+  - src/pages/blog/[slug].astro: Article schema + microdata datePublished/dateModified now ISO 8601 (2026-10-30) via toIsoDate(); visible byline shows "Updated [date]" only when dateModified differs from date. Affects all blog posts.
+  - src/pages/buy-before-you-sell.astro: link to /blog/buy-or-sell-first-south-denver-move-up/ under the buy-first vs sell-first table.
+  - src/pages/move-up-sellers.astro: same link under the Your Options table.
+  - src/content/blog/buy-or-sell-first-south-denver-move-up.md: 2 new FAQs (program cost; what if my house doesn't sell), visible + faqSchema. Bump dateModified on the live-deploy day.
+- 2026-10-31 New blog post + cross-links (VOC mining follow-up):
+  - src/content/blog/buy-before-you-sell-programs-honest-catch.md: new post "What's the Catch With Buy-Before-You-Sell Programs?" — 5 catches, Tier 2 fee-vs-sell-first calculator, 4 FAQs (incl. FHA). Fee wording "about 2–3%, up to 5% with some programs" + minimum-fee note.
+  - src/content/blog/buy-or-sell-first-south-denver-move-up.md: fee wording aligned ("up to 5% with some programs"); link to the new post in the equity advance section.
+  - src/pages/buy-before-you-sell.astro: link to the new post under "Program terms vary."
+  - Also logged: content-calendar-2026.md (off-calendar entry), content-cluster-map.md, visual-inventory.md.
+- 2026-10-31 buy-or-sell-first post: dateModified bumped to October 31, 2026 for this deploy.
+
 ## 2026-10-30 — merge 02a9d14 (main 2b28e2e) | Credits used: 15
 
 Jacob approved ("push live"). Verified live: /blog/buy-or-sell-first-south-denver-move-up returns 200 with the path finder (5 option cards, 3 question groups), FAQPage schema, and the October 30, 2026 date; listed on /blog; /og/buy-before-you-sell.png returns 200.
