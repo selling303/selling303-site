@@ -610,6 +610,11 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
   - Post type: Seller advice | Funnel: MOFU (solution-aware)
   - Angle: Metro-wide decision hub for "should I buy or sell first?" — five paths (sell first + rent-back, §10.7 contingency, HELOC, bridge loan, equity advance) with a Littleton-to-Highlands Ranch worked example. Source: Grok research brief, 2026-10-21. No program or lender brand names.
   - Target keywords: should I buy or sell my house first, buy before you sell Denver, bridge loan vs HELOC, home sale contingency Colorado
+- [x] **"What's the Catch With Buy-Before-You-Sell Programs?"** *(drafted 2026-10-31; published 2026-11-05)*
+  - Specialization: `/move-up-sellers` (+ `/buy-before-you-sell`) | Geographic: `/neighborhoods/littleton`, `/neighborhoods/highlands-ranch`
+  - Post type: Seller advice | Funnel: BOFU (skeptic, about to choose a program or agent)
+  - Angle: The 5 honest catches (fees, loan approval/DTI, guaranteed offers, pricing the old home, late fall-through), when buying first is worth it, and 6 questions to ask before signing. Source: Move-Up VOC Bank (Flyhomes/Orchard/HomeLight review mining, Oct 2026). No program or brand names.
+  - Target keywords: buy before you sell program catch, buy before you sell downsides, equity advance fees, is buy before you sell worth it
 
 ## How the Nightly Task Uses This Calendar
 
@@ -618,3 +623,7 @@ The original April 4 – May 3 plan ran out on Day 30. Posts below were added ad
 3. Follow content-cluster-map.md for internal linking rules (link to both pillars within first 200 words)
 4. Apply the Noun/Verb/Modifier framework for entity density
 5. After the draft is written and reviewed, mark the entry `[x]`
+
+- [x] **"October 2026 Market Wrapped: South Denver Metro"** *(drafted 2026-11-04)* *(off-calendar)*
+  - Type: Market update | Funnel: TOFU/MOFU | Specialization: Move-Up Sellers | Geographic: Littleton (all 9 cities)
+  - Angle: October DMAR + REcolorado data, Wrapped story cards, city x price-band "Where Do I Stand?" tool; sell-tight/buy-soft move-up framing

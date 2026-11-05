@@ -44,7 +44,10 @@ Every blog post links to exactly **one Geographic Pillar** and **one Specializat
 - South Denver Homeowner's 2026 Notice of Valuation Protest Playbook (`/blog/2026-notice-of-valuation-protest-playbook-south-denver`)
 - Price Cut or 2-1 Buydown? What South Denver Metro Sellers Should Offer Buyers This Fall (`/blog/price-cut-vs-2-1-buydown-south-denver-metro-2026`) *(published 2026-10-06)*
 - Buy or Sell First? 5 Ways to Move Up in the South Denver Metro (`/blog/buy-or-sell-first-south-denver-move-up`) *(drafted 2026-10-22; metro-wide decision hub — city timing posts link up to it; /buy-before-you-sell is the "how it works" page)*
+- What's the Catch With Buy-Before-You-Sell Programs? (`/blog/buy-before-you-sell-programs-honest-catch`) *(published 2026-11-05; BOFU skeptic companion to the buy-or-sell-first hub; links /buy-before-you-sell)*
+- Selling Your House With Kids at Home: How to Make It Easier (`/blog/selling-house-with-kids-at-home-south-denver-metro`) *(drafted 2026-10-31; ON HOLD, not live; VOC-sourced problem-aware spoke, Highlands Ranch geo; links /buy-before-you-sell and /what-to-fix-before-selling)*
 - The Greenwood Village Empty-Nester Move: When the Right-Sizing Math Actually Pencils (`/blog/greenwood-village-empty-nester-right-sizing-math-2026`)
+- October 2026 Market Wrapped: South Denver Metro (`/blog/south-denver-metro-market-october-2026`) *(drafted 2026-11-04; monthly market update; Tier 2 Wrapped story cards + "Where Do I Stand?" city/price-band tool with text capture; geo: Littleton + all 9 cities)*
 
 ### 3. First-Time Homebuyers (`/first-time-homebuyers`)
 **Primary geographic ties:** Littleton, Englewood, Centennial (most affordable entry points in the metro)
