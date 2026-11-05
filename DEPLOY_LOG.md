@@ -1,5 +1,11 @@
 # Deploy Log
 
+## 2026-11-05 — merge 09bebe6 (main a80c27b) | Credits used: 15
+
+Jacob approved ("launch live"). Verified live: /blog/buy-before-you-sell-programs-honest-catch returns 200, title "What's the Catch With Buy-Before-You-Sell Programs?", datePublished 2026-11-05, 4 FAQ questions in schema, fee calculator present; /buy-before-you-sell and /blog/buy-or-sell-first-south-denver-move-up both link to it (the buy-or-sell-first link was a 404 since 2026-10-31; now resolves).
+
+- 2026-11-05 PUBLISH (Jacob approved): src/content/blog/buy-before-you-sell-programs-honest-catch.md — new post "What's the Catch With Buy-Before-You-Sell Programs?", date set to November 5, 2026. Cross-link added on src/pages/buy-before-you-sell.astro ("Program terms vary"). The buy-or-sell-first link to this post was already on main/live (was a 404 until now). Calendar, cluster map, visual inventory updated.
+
 ## 2026-10-31 — merge 2939f9c (main 8eeb134) | Credits used: 15
 
 Jacob approved ("push that live"). Verified live: buy-or-sell-first post schema shows datePublished 2026-10-30 / dateModified 2026-10-31, byline "Updated October 31, 2026", 5 FAQs; /buy-before-you-sell and /move-up-sellers link to the post; other posts now emit ISO dates (e.g., cost-to-sell: 2026-03-28).
@@ -9,7 +15,7 @@ Jacob approved ("push that live"). Verified live: buy-or-sell-first post schema 
   - src/pages/buy-before-you-sell.astro: link to /blog/buy-or-sell-first-south-denver-move-up/ under the buy-first vs sell-first table.
   - src/pages/move-up-sellers.astro: same link under the Your Options table.
   - src/content/blog/buy-or-sell-first-south-denver-move-up.md: 2 new FAQs (program cost; what if my house doesn't sell), visible + faqSchema. Bump dateModified on the live-deploy day.
-- 2026-10-31 New blog post + cross-links (VOC mining follow-up):
+- 2026-10-31 New blog post + cross-links (VOC mining follow-up) — CORRECTION (verified via raw.githubusercontent.com): the post file and the /buy-before-you-sell link were NOT pushed and are NOT live. Only the buy-or-sell-first edits shipped, including a link to the unpublished post (404 on live). That link was removed locally 2026-10-31; live fix pending:
   - src/content/blog/buy-before-you-sell-programs-honest-catch.md: new post "What's the Catch With Buy-Before-You-Sell Programs?" — 5 catches, Tier 2 fee-vs-sell-first calculator, 4 FAQs (incl. FHA). Fee wording "about 2–3%, up to 5% with some programs" + minimum-fee note.
   - src/content/blog/buy-or-sell-first-south-denver-move-up.md: fee wording aligned ("up to 5% with some programs"); link to the new post in the equity advance section.
   - src/pages/buy-before-you-sell.astro: link to the new post under "Program terms vary."
